@@ -162,7 +162,8 @@ function Busca({ municipios, aoEscolher }: { municipios: Municipio[] | null; aoE
         id={id}
         className="entrada"
         type="search"
-        placeholder="Ex.: Campinas"
+        placeholder="Ex.: Campinas…"
+        spellCheck={false}
         autoComplete="off"
         role="combobox"
         aria-expanded={aberta && achados.length > 0}

@@ -61,6 +61,7 @@ body {
 }
 button, input, select { font: inherit; color: inherit; }
 button { cursor: pointer; }
+button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -140,6 +141,9 @@ button { cursor: pointer; }
 
 .painel-topo { padding: 18px 20px 14px; display: flex; flex-direction: column; gap: 12px; }
 .trilha { display: flex; flex-wrap: wrap; gap: 4px; font-size: var(--fs-2); color: var(--muted); }
+.trilha a, .uf-bloco h3 a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); padding: 4px 0; }
+.uf-bloco h3 a { color: var(--text); }
+.trilha a:hover { color: var(--text); }
 .trilha button { border: 0; background: none; padding: 0; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
 .trilha button:hover { color: var(--text); }
 .titulo { margin: 0; font-size: var(--fs-6); line-height: 1.05; font-weight: 650; font-variation-settings: 'wdth' 112; letter-spacing: -0.015em; text-wrap: balance; }
@@ -215,11 +219,11 @@ button { cursor: pointer; }
 .preferencias { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
 .alternador { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: var(--fs-2); }
 .alternador button {
-  width: 40px; height: 22px; border-radius: 11px; border: 1px solid var(--line); background: var(--surface-2); position: relative; padding: 0;
+  width: 44px; height: 24px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); position: relative; padding: 0;
 }
-.alternador button::after { content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); transition: transform 180ms var(--ease), background 180ms; }
+.alternador button::after { content: ''; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: var(--muted); transition: transform 180ms var(--ease), background 180ms; }
 .alternador button[aria-checked='true'] { background: color-mix(in srgb, var(--confirma) 35%, var(--surface-2)); }
-.alternador button[aria-checked='true']::after { transform: translateX(18px); background: var(--text); }
+.alternador button[aria-checked='true']::after { transform: translateX(20px); background: var(--text); }
 
 /* ------------------------------------------------------------ mapa: dica e carregamento */
 .dica-mapa {
@@ -253,6 +257,7 @@ button { cursor: pointer; }
   .filtros .marca-sub, .filtros .legenda-bloco, .filtros .preferencias { display: none; }
   .filtros .marca b, .filtros .marca span { font-size: var(--fs-4); }
   .filtros .campo { flex: 1 1 140px; }
+  .select, .entrada { font-size: 16px; } /* evita zoom automático no iOS */
   .filtros .campo > label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .mapa { grid-row: 2; }
   .painel {

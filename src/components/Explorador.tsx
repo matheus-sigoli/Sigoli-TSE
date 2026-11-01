@@ -151,11 +151,11 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
   }, [mun, reg, abr, indiceMunicipios, regioes.dados]);
 
   const trilha = useMemo(() => {
-    const itens: { rotulo: string; acao: () => void }[] = [];
-    if (abr !== 'br') itens.push({ rotulo: 'Brasil', acao: () => irPara('br') });
+    const itens: { rotulo: string; acao: () => void; href?: string }[] = [];
+    if (abr !== 'br') itens.push({ rotulo: 'Brasil', acao: () => irPara('br'), href: `${rotaDe('br', cargoSlug)}${turno === 2 ? '?t=2' : ''}` });
     if ((mun || reg) && abr !== 'br') itens.push({ rotulo: nomeAbrangencia(abr), acao: () => atualizarBusca({ mun: null, reg: null, foco: null }) });
     return itens;
-  }, [abr, mun, reg, irPara, atualizarBusca]);
+  }, [abr, mun, reg, irPara, atualizarBusca, cargoSlug, turno]);
 
   // ---- interações do mapa
   const aoSelecionar = useCallback(
@@ -228,7 +228,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
             descrever={descreverFeicao}
           />
         ) : null}
-        {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()} — ${nomeAbrangencia(abr)}`} /> : null}
+        {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">Malha: IBGE 2025 · Resultados: TSE</p>
       </main>
       <Painel
@@ -247,7 +247,6 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
         turnoPossivel={(t) => turnoDisponivel(cargo, abr, t)}
         aoMudarTurno={(t) => atualizarBusca({ t: t === 2 ? '2' : null, foco: null })}
         aoFocar={(chave) => atualizarBusca({ foco: chave && params.get('foco') !== chave ? chave : null })}
-        aoAbrirUf={(uf) => irPara(uf)}
       />
     </div>
   );

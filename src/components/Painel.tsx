@@ -12,7 +12,7 @@ interface Props {
   abr: string;
   turno: Turno;
   nomeRecorte: string;
-  trilha: { rotulo: string; acao: () => void }[];
+  trilha: { rotulo: string; acao: () => void; href?: string }[];
   visao: Visao | null;
   arquivo: Arquivo | null;
   foco: Foco;
@@ -23,7 +23,6 @@ interface Props {
   turnoPossivel: (t: Turno) => boolean;
   aoMudarTurno: (t: Turno) => void;
   aoFocar: (chave: string | null) => void;
-  aoAbrirUf: (uf: string) => void;
 }
 
 const POR_PAGINA = 40;
@@ -101,7 +100,7 @@ function Painel(p: Props) {
             {p.trilha.map((t, i) => (
               <span key={t.rotulo}>
                 {i > 0 ? ' / ' : null}
-                <button onClick={t.acao}>{t.rotulo}</button>
+                {t.href ? <Link href={t.href} scroll={false}>{t.rotulo}</Link> : <button onClick={t.acao}>{t.rotulo}</button>}
               </span>
             ))}
           </nav>
@@ -150,7 +149,7 @@ function Painel(p: Props) {
       ) : null}
 
       {visao?.tipo === 'resumo' && visao.eleitosPorUf ? (
-        <Resumo visao={visao} cargo={cargo} aoAbrirUf={p.aoAbrirUf} />
+        <Resumo visao={visao} cargo={cargo} turno={turno} />
       ) : visao ? (
         <>
           {prop ? (
@@ -228,7 +227,7 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: 
   );
 });
 
-function Resumo({ visao, cargo, aoAbrirUf }: { visao: Visao; cargo: Cargo; aoAbrirUf: (uf: string) => void }) {
+function Resumo({ visao, cargo, turno }: { visao: Visao; cargo: Cargo; turno: Turno }) {
   const prop = cargo.tipo === 'prop';
   const eleitos = visao.eleitosPorUf!;
   const ordemUfs = Object.keys(eleitos).sort((a, b) => (UFS[a] ?? a).localeCompare(UFS[b] ?? b, 'pt-BR'));
@@ -251,7 +250,7 @@ function Resumo({ visao, cargo, aoAbrirUf }: { visao: Visao; cargo: Cargo; aoAbr
       <h2 className="secao-titulo">{prop ? 'Eleitos por estado' : cargo.slug === 'senador' ? 'Senadores eleitos por estado' : 'Resultado por estado'}</h2>
       {ordemUfs.map((uf) => (
         <section key={uf} className="uf-bloco">
-          <h3><button onClick={() => aoAbrirUf(uf)}>{UFS[uf]}</button></h3>
+          <h3><Link href={`/2026/${uf}/${cargo.slug}${turno === 2 ? '?t=2' : ''}`} scroll={false}>{UFS[uf]}</Link></h3>
           {prop ? (
             <p className="linha-meta" style={{ margin: 0, whiteSpace: 'normal' }}>
               {bancada({ [uf]: eleitos[uf] }).map(([sg, n]) => `${sg} ${n}`).join(', ')}

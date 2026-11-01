@@ -201,7 +201,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
   return (
     <>
       <div ref={div} className="mapa-canvas" />
-      {desenhando ? <Carregando texto="Desenhando o mapa" /> : null}
+      {desenhando ? <Carregando texto="Desenhando o mapa…" /> : null}
       {dica ? (
         <div className="dica-mapa" style={{ left: dica.x, top: dica.y }} role="status">
           <strong>{dica.titulo}</strong>
