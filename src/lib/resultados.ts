@@ -25,6 +25,7 @@ export interface Linha {
   eleito?: boolean;
   segundoTurno?: boolean;
   vices?: { tipo: string; nome: string; partido: string }[];
+  anulado?: string;
   coligacao?: string;
   composicao?: string;
   /** federação do partido (proporcional) */
@@ -127,7 +128,7 @@ function visaoCompleta(
       const c = arq.cands[i];
       return {
         chave: `c:${i}`, numero: c.n, nome: c.nome, partido: c.partido, votos: votosC[i], pct: votosC[i] / validos,
-        eleito: c.eleito, segundoTurno: /2º turno/i.test(c.situacao), vices: c.vices, coligacao: c.col, composicao: c.comp, faixas: coresC[i],
+        eleito: c.eleito, segundoTurno: /2º turno/i.test(c.situacao), vices: c.vices, anulado: c.anulado, coligacao: c.col, composicao: c.comp, faixas: coresC[i],
       };
     });
   const partidos: Linha[] = prop
@@ -151,7 +152,10 @@ function visaoCompleta(
     }
     const lista = prop ? r.p! : r.c;
     let idx = -1, max = 0;
-    for (let i = 0; i < lista.length; i++) if (lista[i] > max) { max = lista[i]; idx = i; }
+    for (let i = 0; i < lista.length; i++) {
+      if (!prop && arq.cands[i]?.anulado) continue; // votos anulados não vencem
+      if (lista[i] > max) { max = lista[i]; idx = i; }
+    }
     if (idx < 0) return SEM_DADOS;
     return corDaFaixa(prop ? coresP[idx] : coresC[idx], max / v);
   };

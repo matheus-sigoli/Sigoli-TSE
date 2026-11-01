@@ -149,6 +149,7 @@ function somarLinha(E, f, c) {
     a = {
       b, zonas: new Map(), locais: new Map(),
       idxC: new Map(b.cands.map((x, i) => [String(num(x.n)), i])),
+      anulados: new Set(b.cands.filter((x) => x.anulado).map((x) => String(num(x.n)))),
       idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
       prop: b.tipo === 'prop', vagas: cargo === 'senador' ? Math.max(1, b.vagas || 1) : 1,
     };
@@ -175,12 +176,13 @@ function somarLinha(E, f, c) {
     if (votavel === 95) r.t[4] += votos;
     else if (votavel === 96 || votavel === 97) r.t[5] += votos;
     else if (a.prop) {
+      if (a.anulados.has(String(votavel))) continue; // votos anulados ficam fora dos válidos
       const partido = String(votavel).length <= 2 ? String(votavel) : String(votavel).slice(0, 2);
       const i = a.idxP.get(partido);
       if (i !== undefined) { r.p[i] += votos; r.t[3] += votos; }
     } else {
       const i = a.idxC.get(String(votavel));
-      if (i !== undefined) { r.c[i] += votos; r.t[3] += votos; }
+      if (i !== undefined) { r.c[i] += votos; if (!a.anulados.has(String(votavel))) r.t[3] += votos; }
     }
   }
 }
@@ -199,7 +201,10 @@ for (const E of estados.values()) {
     const id = `${mun}-${zona}-${nr}`;
     const chave = `${turno}|${mun}-${zona}-${secao}`;
     E.secaoLocal.set(chave, id);
-    E.eleitoradoSecao.set(chave, num(f[c.QT_ELEITOR_SECAO]));
+    // seção agregada vota junto com a principal: soma o eleitorado na principal
+    const principal = num(f[c.NR_SECAO_PRINCIPAL]);
+    const chaveVoto = principal > 0 ? `${turno}|${mun}-${zona}-${principal}` : chave;
+    E.eleitoradoSecao.set(chaveVoto, (E.eleitoradoSecao.get(chaveVoto) ?? 0) + num(f[c.QT_ELEITOR_SECAO]));
     if (turno !== 1 && E.locais.has(id)) return;
     let l = E.locais.get(id);
     if (!l) {
@@ -241,7 +246,6 @@ for (const E of estados.values()) {
         const t = [...r.t];
         t[1] = Math.round(r.votosTotais / a.vagas); // comparecimento (Senado 2026: 2 votos por eleitor)
         t[2] = Math.max(0, t[0] - t[1]);
-        if (a.vagas > 1) { t[4] = Math.round(t[4] / a.vagas); t[5] = Math.round(t[5] / a.vagas); }
         const reg = { t, c: a.prop ? [] : r.c };
         if (a.prop) reg.p = r.p;
         mun[id] = reg;

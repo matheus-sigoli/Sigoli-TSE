@@ -65,6 +65,8 @@ export interface Candidato {
   situacao: string;
   /** vice (tipo 'v') ou suplentes de senador ('s1', 's2') */
   vices?: { tipo: string; nome: string; partido: string }[];
+  /** destinação do voto quando NÃO é válido (ex.: "Anulado sub judice"): votos não contam */
+  anulado?: string;
   /** coligação (nome) e composição, quando houver */
   col?: string;
   comp?: string;

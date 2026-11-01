@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { CARGOS, ehEleito, montarArquivo, montarResumoBrasil, normalizar, urlResultado, vencedor } from '../lib/nucleo.mjs';
+import { CARGOS, ehEleito, votoValido, montarArquivo, montarResumoBrasil, normalizar, urlResultado, vencedor } from '../lib/nucleo.mjs';
 
 // Arquivo -u.json mínimo no formato do TSE
 const bruto = (abr, votos, st = ['2º turno', '2º turno', 'Não eleito']) => ({
@@ -49,4 +49,12 @@ test('resumo nacional lista quem disputa o 2º turno', () => {
   assert.equal(r.eleitos.ac.length, 2);
   assert.ok(r.eleitos.ac.every((e) => !e.eleito && e.situacao === '2º turno'));
   assert.equal(r.partidos[r.mun['1200401'][0]], 'PL');
+});
+
+test('votos anulados não contam como válidos', () => {
+  assert.equal(votoValido('Válido'), true);
+  assert.equal(votoValido('Válido (legenda)'), true);
+  assert.equal(votoValido('Anulado sub judice'), false);
+  assert.equal(votoValido('Anulado'), false);
+  assert.equal(votoValido(undefined), true);
 });

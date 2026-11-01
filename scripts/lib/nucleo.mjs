@@ -54,6 +54,9 @@ export function urlResultado(eleicao, cdCargo, uf, munTse = '') {
 /** "Eleito", "Eleito por QP", "Eleito por média" → true; "2º turno", "Não eleito", "Suplente" → false */
 export const ehEleito = (situacao = '') => /^eleit/i.test(situacao.trim());
 
+/** Destinação do voto: só "Válido" e "Válido (legenda)" contam; ausente = válido (arquivos antigos). */
+export const votoValido = (dvt) => !dvt || /^v[aá]lido/i.test(String(dvt).normalize('NFC'));
+
 const int = (s) => (s === undefined || s === null || s === '' ? 0 : parseInt(String(s), 10) || 0);
 
 /**
@@ -74,7 +77,9 @@ export function normalizar(raw) {
       let nominais = 0;
       for (const c of par.cand ?? []) {
         const votos = int(c.vap);
-        nominais += votos;
+        // votos "Anulado", "Anulado sub judice" etc. não são válidos: ficam fora da soma do partido
+        const valido = votoValido(c.dvt);
+        if (valido) nominais += votos;
         candidatos.push({
           id: c.sqcand,
           n: c.n,
@@ -83,6 +88,7 @@ export function normalizar(raw) {
           partido: par.sg,
           // o TSE marca e='s' também para quem foi ao 2º turno; a situação é a fonte confiável
           eleito: ehEleito(c.st),
+          ...(valido ? {} : { anulado: c.dvt || 'Anulado' }),
           situacao: c.st ?? '',
           // vice (tp 'v') ou suplentes de senador (tp 's1', 's2')
           vices: (c.vs ?? []).map((v) => ({ tipo: v.tp, nome: v.nmu || v.nm, partido: v.sgp ?? '' })),
@@ -173,6 +179,7 @@ export function montarArquivo(cargo, turno, abr, total, municipios) {
       eleito: c.eleito,
       situacao: c.situacao,
       ...(c.vices?.length ? { vices: c.vices } : {}),
+      ...(c.anulado ? { anulado: c.anulado } : {}),
       ...(c.col ? { col: c.col, comp: c.comp } : {}),
     })),
     partidos: parts.map((p) => ({ sg: p.sg, n: p.n, ...(p.fed ? { fed: p.fed } : {}), ...(p.coligacao ? { col: p.coligacao } : {}) })),
@@ -191,7 +198,10 @@ export function vencedor(arquivo, reg) {
   if (!validos) return null;
   const v = arquivo.tipo === 'prop' ? reg.p : reg.c;
   let idx = -1, max = -1;
-  for (let i = 0; i < v.length; i++) if (v[i] > max) { max = v[i]; idx = i; }
+  for (let i = 0; i < v.length; i++) {
+    if (arquivo.tipo !== 'prop' && arquivo.cands[i]?.anulado) continue; // votos anulados não vencem
+    if (v[i] > max) { max = v[i]; idx = i; }
+  }
   return idx < 0 || max <= 0 ? null : { idx, votos: max, pct: max / validos };
 }
 

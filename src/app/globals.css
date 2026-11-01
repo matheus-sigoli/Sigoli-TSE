@@ -199,6 +199,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 
 .selo { display: inline-flex; align-items: center; gap: 5px; font-size: var(--fs-1); font-weight: 600; padding: 1px 7px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; }
 .selo.eleito { background: color-mix(in srgb, var(--confirma) 22%, transparent); color: var(--confirma); }
+.selo.anulado { background: var(--surface-3); color: var(--muted); }
 .selo.segundo { background: color-mix(in srgb, var(--corrige) 22%, transparent); color: var(--corrige); }
 
 .secao-titulo { margin: 0; padding: 14px 20px 4px; font-size: var(--fs-2); color: var(--muted); font-weight: 600; }
