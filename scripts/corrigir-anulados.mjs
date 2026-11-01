@@ -63,7 +63,9 @@ function corrigir(arq, oficial) {
     if (o.col) { c.col = o.col; c.comp = o.comp; }
   });
   let mudados = 0;
-  if (arq.tipo === 'prop' && anulados.size) {
+  // idempotente: os votos anulados só saem dos partidos uma vez
+  if (arq.tipo === 'prop' && anulados.size && !arq.anuladosAplicados) {
+    arq.anuladosAplicados = true;
     const idxP = new Map(arq.partidos.map((p, i) => [p.sg, i]));
     for (const reg of Object.values(arq.mun)) {
       for (let k = 0; k < reg.c.length; k += 2) {
