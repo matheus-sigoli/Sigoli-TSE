@@ -8,6 +8,8 @@
     "node": ">=20"
   },
   "scripts": {
+    "predev": "node scripts/copiar-maplibre.mjs",
+    "prebuild": "node scripts/copiar-maplibre.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve out",

@@ -5,7 +5,7 @@
  * trocar de cargo/turno não recria a fonte de dados.
  */
 import {
-  LngLatBounds, Map as MapaGL, NavigationControl,
+  LngLatBounds, Map as MapaGL, NavigationControl, setWorkerUrl,
   type GeoJSONSource, type MapLayerMouseEvent, type MapMouseEvent,
 } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -24,6 +24,9 @@ interface Props {
   aoSelecionar: (id: string | null) => void;
   descrever: (id: string) => { titulo: string; linha: string } | null;
 }
+
+// worker do MapLibre servido em /maplibre (copiado por scripts/copiar-maplibre.mjs)
+setWorkerUrl('/maplibre/maplibre-gl-worker.mjs');
 
 const VAZIO: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
