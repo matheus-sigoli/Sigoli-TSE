@@ -11,7 +11,7 @@
     90,
     100
   ],
-  "nota": "Escala por % de votos válidos do vencedor no município: usa a faixa floor(pct/10)*10 (mínimo 10). 50% = cor-base do partido. Extraída da tabela enviada em 31/10/2026.",
+  "nota": "Escala por % de votos válidos do vencedor no município: faixa floor(pct/10)*10 (mínimo 10). 50% = cor-base. Tabela completa (30 partidos) enviada em 01/11/2026; metade esquerda = cor principal, metade direita = cor extra.",
   "partidos": [
     {
       "chave": "PL",
@@ -311,6 +311,342 @@
         "80": "#270040",
         "90": "#1D002F",
         "100": "#0F0018"
+      }
+    },
+    {
+      "chave": "PDT",
+      "sigla": "PDT",
+      "numero": 12,
+      "nome": "Partido Democrático Trabalhista",
+      "principal": {
+        "10": "#FFE9E2",
+        "20": "#FFD2C5",
+        "30": "#FEBBA8",
+        "40": "#FEA58A",
+        "50": "#FE8E6D",
+        "60": "#D8795D",
+        "70": "#B1634C",
+        "80": "#8B4E3C",
+        "90": "#66392C",
+        "100": "#331D16"
+      },
+      "extra": {
+        "10": "#FFD3E6",
+        "20": "#FFA6CD",
+        "30": "#FF79B4",
+        "40": "#FF4C9A",
+        "50": "#FF1F81",
+        "60": "#D91B6E",
+        "70": "#B2165A",
+        "80": "#8C1147",
+        "90": "#660D34",
+        "100": "#33071A"
+      }
+    },
+    {
+      "chave": "PSTU",
+      "sigla": "PSTU",
+      "numero": 16,
+      "nome": "Partido Socialista dos Trabalhadores Unificado",
+      "principal": {
+        "10": "#FCF9D2",
+        "20": "#F8F2A5",
+        "30": "#F4EB78",
+        "40": "#F0E44B",
+        "50": "#ECDE1D",
+        "60": "#C9BD19",
+        "70": "#A59B15",
+        "80": "#827A10",
+        "90": "#5F590C",
+        "100": "#302D06"
+      }
+    },
+    {
+      "chave": "REDE",
+      "sigla": "REDE",
+      "numero": 18,
+      "nome": "Rede Sustentabilidade",
+      "principal": {
+        "10": "#CCF3F2",
+        "20": "#99E7E4",
+        "30": "#66DAD6",
+        "40": "#33CEC9",
+        "50": "#00C2BB",
+        "60": "#00A59F",
+        "70": "#008783",
+        "80": "#006B67",
+        "90": "#004E4B",
+        "100": "#002726"
+      }
+    },
+    {
+      "chave": "PCB",
+      "sigla": "PCB",
+      "numero": 21,
+      "nome": "Partido Comunista Brasileiro",
+      "principal": {
+        "10": "#FFCCCC",
+        "20": "#FF9999",
+        "30": "#FE6666",
+        "40": "#FE3333",
+        "50": "#FE0000",
+        "60": "#D80000",
+        "70": "#B10000",
+        "80": "#8B0000",
+        "90": "#660000",
+        "100": "#330000"
+      }
+    },
+    {
+      "chave": "CIDADANIA",
+      "sigla": "CIDADANIA",
+      "numero": 23,
+      "nome": "Cidadania",
+      "principal": {
+        "10": "#FFF5CC",
+        "20": "#FFEB99",
+        "30": "#FFE066",
+        "40": "#FFD633",
+        "50": "#FFCC00",
+        "60": "#D9AD00",
+        "70": "#B28E00",
+        "80": "#8C7000",
+        "90": "#665200",
+        "100": "#332900"
+      },
+      "extra": {
+        "10": "#FCCCE8",
+        "20": "#F899D1",
+        "30": "#F466BA",
+        "40": "#F033A3",
+        "50": "#EC008C",
+        "60": "#C90077",
+        "70": "#A50062",
+        "80": "#82004D",
+        "90": "#5F0038",
+        "100": "#30001C"
+      }
+    },
+    {
+      "chave": "PRD",
+      "sigla": "PRD",
+      "numero": 25,
+      "nome": "Partido Renovação Democrática",
+      "principal": {
+        "10": "#CCE7DA",
+        "20": "#99CEB5",
+        "30": "#66B590",
+        "40": "#339D6A",
+        "50": "#008445",
+        "60": "#00703B",
+        "70": "#005C30",
+        "80": "#004926",
+        "90": "#00351C",
+        "100": "#001B0E"
+      }
+    },
+    {
+      "chave": "DC",
+      "sigla": "DC",
+      "numero": 27,
+      "nome": "Democracia Cristã",
+      "principal": {
+        "10": "#CCCFEE",
+        "20": "#999EDC",
+        "30": "#666DCA",
+        "40": "#333CB9",
+        "50": "#000BA7",
+        "60": "#000A8E",
+        "70": "#000875",
+        "80": "#00075C",
+        "90": "#000543",
+        "100": "#000322"
+      }
+    },
+    {
+      "chave": "PRTB",
+      "sigla": "PRTB",
+      "numero": 28,
+      "nome": "Partido Renovador Trabalhista Brasileiro",
+      "principal": {
+        "10": "#D1DBEA",
+        "20": "#A2B7D5",
+        "30": "#7393C0",
+        "40": "#446FAA",
+        "50": "#154B95",
+        "60": "#12407F",
+        "70": "#0F3568",
+        "80": "#0C2A52",
+        "90": "#091E3C",
+        "100": "#050F1E"
+      }
+    },
+    {
+      "chave": "PCO",
+      "sigla": "PCO",
+      "numero": 29,
+      "nome": "Partido da Causa Operária",
+      "principal": {
+        "10": "#ECCDCE",
+        "20": "#D99B9D",
+        "30": "#C6686C",
+        "40": "#B2363B",
+        "50": "#9F030A",
+        "60": "#870309",
+        "70": "#6F0307",
+        "80": "#570206",
+        "90": "#400204",
+        "100": "#200102"
+      }
+    },
+    {
+      "chave": "MOBILIZA",
+      "sigla": "MOBILIZA",
+      "numero": 33,
+      "nome": "Mobiliza",
+      "principal": {
+        "10": "#F9D7D7",
+        "20": "#F2AEAE",
+        "30": "#EB8585",
+        "40": "#E45C5C",
+        "50": "#DD3333",
+        "60": "#BC2C2C",
+        "70": "#9A2424",
+        "80": "#791C1C",
+        "90": "#591515",
+        "100": "#2D0B0B"
+      }
+    },
+    {
+      "chave": "DEMOCRATA",
+      "sigla": "DEMOCRATA",
+      "numero": 35,
+      "nome": "Democrata",
+      "principal": {
+        "10": "#E9D5DC",
+        "20": "#D2AAB9",
+        "30": "#BB8095",
+        "40": "#A55572",
+        "50": "#8E2A4E",
+        "60": "#792443",
+        "70": "#631E37",
+        "80": "#4E172B",
+        "90": "#391120",
+        "100": "#1D0910"
+      }
+    },
+    {
+      "chave": "AGIR",
+      "sigla": "AGIR",
+      "numero": 36,
+      "nome": "Agir",
+      "principal": {
+        "10": "#CCD7ED",
+        "20": "#99AEDA",
+        "30": "#6685C7",
+        "40": "#335CB4",
+        "50": "#0033A1",
+        "60": "#002C89",
+        "70": "#002470",
+        "80": "#001C59",
+        "90": "#001541",
+        "100": "#000B21"
+      }
+    },
+    {
+      "chave": "PV",
+      "sigla": "PV",
+      "numero": 43,
+      "nome": "Partido Verde",
+      "principal": {
+        "10": "#CCE1CC",
+        "20": "#99C299",
+        "30": "#66A366",
+        "40": "#338533",
+        "50": "#006600",
+        "60": "#005700",
+        "70": "#004700",
+        "80": "#003800",
+        "90": "#002900",
+        "100": "#001500"
+      }
+    },
+    {
+      "chave": "PCDOB",
+      "sigla": "PCdoB",
+      "numero": 65,
+      "nome": "Partido Comunista do Brasil",
+      "principal": {
+        "10": "#FFFDD1",
+        "20": "#FFFAA3",
+        "30": "#FFF774",
+        "40": "#FFF446",
+        "50": "#FFF117",
+        "60": "#D9CD14",
+        "70": "#B2A810",
+        "80": "#8C840D",
+        "90": "#66610A",
+        "100": "#333105"
+      },
+      "extra": {
+        "10": "#F8D4D2",
+        "20": "#F0A8A5",
+        "30": "#E97D77",
+        "40": "#E1514A",
+        "50": "#DA251C",
+        "60": "#B92018",
+        "70": "#981A14",
+        "80": "#781510",
+        "90": "#570F0C",
+        "100": "#2C0806"
+      }
+    },
+    {
+      "chave": "SOLIDARIEDADE",
+      "sigla": "SOLIDARIEDADE",
+      "numero": 77,
+      "nome": "Solidariedade",
+      "principal": {
+        "10": "#D2D1DB",
+        "20": "#A5A3B7",
+        "30": "#787592",
+        "40": "#4B476E",
+        "50": "#1D1849",
+        "60": "#19153E",
+        "70": "#151133",
+        "80": "#100E28",
+        "90": "#0C0A1E",
+        "100": "#06050F"
+      },
+      "extra": {
+        "10": "#FFE6CC",
+        "20": "#FFCC99",
+        "30": "#FFB366",
+        "40": "#FF9933",
+        "50": "#FF8000",
+        "60": "#D96D00",
+        "70": "#B25900",
+        "80": "#8C4600",
+        "90": "#663300",
+        "100": "#331A00"
+      }
+    },
+    {
+      "chave": "UP",
+      "sigla": "UP",
+      "numero": 80,
+      "nome": "Unidade Popular",
+      "principal": {
+        "10": "#D5D5D5",
+        "20": "#AAAAAA",
+        "30": "#7F7F7F",
+        "40": "#545454",
+        "50": "#292929",
+        "60": "#232323",
+        "70": "#1D1D1D",
+        "80": "#171717",
+        "90": "#111111",
+        "100": "#090909"
       }
     }
   ],

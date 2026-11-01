@@ -1,7 +1,7 @@
 /**
  * Cores por partido (ADR 0004).
  * - Paleta oficial do projeto: config/paleta-partidos.json (10 faixas, 50% = cor-base).
- * - Partidos fora da tabela: cor original, faixas geradas por mistura com branco/preto.
+ * - A tabela cobre os 30 partidos de 2026; um partido novo ganha uma cor derivada da sigla.
  * - Cor extra só quando dois concorrentes do mesmo mapa ficam parecidos demais.
  * - Modo daltônico: paleta categórica Okabe-Ito por ordem de votos.
  */
@@ -26,14 +26,8 @@ const normaliza = (sg: string) =>
 const TABELA = new Map<string, EntradaPaleta>();
 for (const p of paleta.partidos) TABELA.set(normaliza(p.sigla), { principal: p.principal, extra: p.extra });
 // apelidos usados pelo TSE
-const APELIDOS: Record<string, string> = { PODEMOS: 'PODE', UNIAOBRASIL: 'UNIAO', PROGRESSISTAS: 'PP', MISSAO: 'MISSAO' };
+const APELIDOS: Record<string, string> = { PODEMOS: 'PODE', UNIAOBRASIL: 'UNIAO', PROGRESSISTAS: 'PP', SD: 'SOLIDARIEDADE' };
 
-/** Cores originais (aprox.) dos partidos fora da tabela; 50% = esta cor. */
-const ORIGINAIS: Record<string, string> = {
-  PDT: '#D7261E', PCDOB: '#A3001D', PV: '#3C9A3C', REDE: '#2FA5A0', CIDADANIA: '#EC008C',
-  SOLIDARIEDADE: '#F37021', PRD: '#1C3F94', AGIR: '#19A7DC', DC: '#1F6F3F', PMB: '#8B1E8B',
-  PCB: '#B01E1E', PCO: '#7A0A0A', PSTU: '#D1001F', UP: '#E1251B', MOBILIZA: '#0091D2', PRTB: '#1B8A3A',
-};
 
 // ------------------------------------------------------------------ utilidades de cor
 const hexToRgb = (h: string) => {
@@ -76,7 +70,8 @@ export function paletaDoPartido(sigla: string): EntradaPaleta {
   if (direto) return direto;
   let gerado = cacheGerado.get(k);
   if (!gerado) {
-    gerado = { principal: gerarFaixas(ORIGINAIS[k] ?? hashHue(k)) };
+    // partido novo, fora da tabela: cor estável derivada da sigla
+    gerado = { principal: gerarFaixas(hashHue(k)) };
     cacheGerado.set(k, gerado);
   }
   return gerado;

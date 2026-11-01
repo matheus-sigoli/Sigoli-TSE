@@ -13,14 +13,15 @@
   (PSD: laranja/verde-limão; Avante: turquesa/coral; Podemos: verde/roxo; PSOL: amarelo/roxo).
   A extra só é usada quando, **no mesmo mapa**, o adversário tem cor principal muito parecida
   (distância de cor ΔE < limite, calculada automaticamente) — nunca por escolha aleatória.
-- Partidos fora da tabela usam a **cor original do partido**, com a mesma regra de 10 faixas
-  gerada automaticamente (mistura com branco abaixo de 50%, com preto acima).
+- A tabela cobre **os 30 partidos** que disputaram 2026 (conferido contra as siglas do TSE).
+  Só um partido novo, fora da tabela, recebe cor gerada a partir da sigla, com as mesmas 10 faixas.
 - Coluna neutra (cinza → preto) da tabela: usada para empate, sem votos e "outros".
 - Cada partido mantém a mesma cor em todos os cargos. Federações usam a cor do partido líder.
 
-## Partidos da tabela
-PL (22), PT (13), Missão (14), PSD (55), Avante (70), Novo (30), União Brasil (44), PP (11),
-Republicanos (10), PSDB (45), MDB (15), Podemos (20), PSB (40), PSOL (50).
+## Partidos da tabela (atualizada em 01/11/2026)
+PL, PT, Missão, PSD*, Avante*, Novo, União, PP, Republicanos, PSDB, MDB, Podemos*, PSB, PSOL*, PDT*,
+PSTU, Rede, PCB, Cidadania*, PRD, DC, PRTB, PCO, Mobiliza, Democrata, Agir, PV, PCdoB*, Solidariedade*, UP.
+(* = tem cor extra para conflitos.) A cinza→preto passou a ser a cor da UP; "sem dados" segue cinza médio.
 
 ## Contraste (decidido em 31/10/2026)
 As faixas 80–100% são quase pretas (ex.: PL 100% = `#0A0A16`). Para não sumirem no tema escuro:
