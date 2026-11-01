@@ -32,6 +32,12 @@ O TSE não publica o contorno das zonas.
 6. A interface ganha o seletor **Ver por: Municípios | Zonas | Locais**, só dentro de uma UF.
    O filtro de região fica desligado fora do nível municipal.
 
+7. **Onde roda**: no GitHub Actions (`.github/workflows/dados-zonas-locais.yml`), que baixa os ~3 GB do TSE,
+   roda `corrigir-anulados` e `zonas-locais` e grava os arquivos gerados no próprio branch. Assim a Vercel
+   continua publicando a partir do git, e o processamento pode ser repetido por qualquer pessoa.
+   `corrigir-anulados` é idempotente (marca `anuladosAplicados` no arquivo) e aceita `--de arquivo.json`
+   quando o TSE limita as requisições (HTTP 429) da máquina que processa.
+
 ## Consequências
 - Mais ~2 arquivos de dados por cargo/turno/UF; o processamento precisa de uma máquina com 8 GB
   (o arquivo BR de Presidente tem dezenas de milhões de linhas).
