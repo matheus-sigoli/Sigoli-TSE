@@ -52,8 +52,10 @@ export function buscarMalha(abr: string): Promise<Malha> {
       const nomes = Object.keys(topo.objects);
       const area = nomes.includes('municipios') ? 'municipios' : nomes[0];
       const linha = nomes.find((n) => n !== area);
+      const municipios = toGeoJSON(topo, area);
+      if (abr === 'exterior') desembrulharAntimeridiano(municipios);
       return {
-        municipios: toGeoJSON(topo, area),
+        municipios,
         linhas: linha ? toGeoJSON(topo, linha) : { type: 'FeatureCollection', features: [] },
         bbox: topo.bbox,
       };
@@ -100,3 +102,20 @@ export const useMunicipios = () =>
 
 export interface Regiao { tipo: 'imediata' | 'intermediaria'; nome: string; uf: string; pai?: string }
 export const useRegioes = () => useArquivo<Record<string, Regiao>>(() => buscar('/geo/regioes.json'), 'regioes');
+
+/**
+ * Países que cruzam a linha de data (Rússia, Fiji) têm anéis que saltam de +180 para -180,
+ * o que desenha uma faixa horizontal no mapa. Desloca a parte oeste em +360°.
+ */
+function desembrulharAntimeridiano(fc: GeoJSON.FeatureCollection) {
+  const anel = (r: GeoJSON.Position[]) => {
+    const temLeste = r.some(([x]) => x > 150);
+    const temOeste = r.some(([x]) => x < -150);
+    if (temLeste && temOeste) for (const p of r) if (p[0] < 0) p[0] += 360;
+  };
+  for (const f of fc.features) {
+    const g = f.geometry;
+    if (g.type === 'Polygon') g.coordinates.forEach(anel);
+    else if (g.type === 'MultiPolygon') g.coordinates.forEach((p) => p.forEach(anel));
+  }
+}

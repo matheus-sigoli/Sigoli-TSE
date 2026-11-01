@@ -83,7 +83,7 @@ function Filtros(p: Props) {
 
       {p.legenda.length ? (
         <div className="campo legenda-bloco">
-          <span className="campo-rotulo">{p.modoCalor ? '% de votos no município' : 'Vencedor no município'}</span>
+          <span className="campo-rotulo">{p.abr === 'exterior' ? (p.modoCalor ? '% de votos no país' : 'Vencedor no país') : p.modoCalor ? '% de votos no município' : 'Vencedor no município'}</span>
           <div className="legenda">
             {(p.modoCalor ? p.legenda.slice(0, 0) : p.legenda).map((l) => (
               <div key={l.rotulo} className="legenda-item">

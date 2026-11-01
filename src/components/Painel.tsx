@@ -109,7 +109,7 @@ function Painel(p: Props) {
         <h1 className="titulo">{p.nomeRecorte}</h1>
         <p className="subtitulo">
           {cargo.nome}, {turno}º turno
-          {arquivo && !arquivo.resumo && arquivo.atualizado ? `. Totalizado em ${arquivo.atualizado.split(' ')[0]}` : ''}
+          {arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
         </p>
         {cargo.turnos.length > 1 ? (
           <div className="segmentado" role="group" aria-label="Turno">

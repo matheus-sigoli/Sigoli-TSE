@@ -152,7 +152,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     (m.getSource('areas') as GeoJSONSource).setData(malha.municipios);
     (m.getSource('linhas') as GeoJSONSource).setData(malha.linhas);
     coresAplicadas.current.clear();
-    const [x0, y0, x1, y1] = mundo ? [-120, -45, 150, 65] : malha.bbox;
+    const [x0, y0, x1, y1] = mundo ? [-125, -45, 160, 66] : malha.bbox;
     m.fitBounds([[x0, y0], [x1, y1]], { padding: margem(24), animate: false });
     m.setMinZoom(Math.max(0, m.getZoom() - 1));
     // eslint-disable-next-line react-hooks/exhaustive-deps
