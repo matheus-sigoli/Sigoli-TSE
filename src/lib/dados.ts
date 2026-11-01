@@ -111,7 +111,8 @@ function desembrulharAntimeridiano(fc: GeoJSON.FeatureCollection) {
   const anel = (r: GeoJSON.Position[]) => {
     const temLeste = r.some(([x]) => x > 150);
     const temOeste = r.some(([x]) => x < -150);
-    if (temLeste && temOeste) for (const p of r) if (p[0] < 0) p[0] += 360;
+    // cria pontos novos: as posições são compartilhadas entre arcos vizinhos
+    if (temLeste && temOeste) for (let i = 0; i < r.length; i++) if (r[i][0] < 0) r[i] = [r[i][0] + 360, r[i][1]];
   };
   for (const f of fc.features) {
     const g = f.geometry;
