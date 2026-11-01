@@ -185,6 +185,15 @@ function Painel(p: Props) {
   );
 }
 
+const ROTULO_VICE: Record<string, string> = { v: 'Vice', s1: '1º suplente', s2: '2º suplente' };
+
+/** Iniciais para o avatar: "GERALDO ALCKMIN" → "GA"; partido usa a sigla. */
+const iniciais = (l: Linha) => {
+  if (l.chave.startsWith('p')) return l.partido.replace(/[^A-Za-zÀ-ú0-9]/g, '').slice(0, 3);
+  const p = l.nome.split(/\s+/).filter((x) => !/^(DA|DE|DO|DAS|DOS|E)$/.test(x));
+  return ((p[0]?.[0] ?? '') + (p.length > 1 ? p[p.length - 1][0] : '')).toUpperCase();
+};
+
 const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: {
   linhas: Linha[];
   focoChave: string | null;
@@ -195,26 +204,37 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: 
     <ul className="lista">
       {linhas.map((l) => {
         const cor = l.faixas['50'];
+        const candidato = l.chave.startsWith('c');
         return (
           <li key={l.chave}>
             <button className="linha" aria-pressed={focoChave === l.chave} onClick={() => aoFocar(l.chave)}>
-              <span className="tecla" style={{ '--cor': cor, color: textoSobre(cor) } as React.CSSProperties} aria-hidden={!l.numero}>
-                {l.numero || l.partido.slice(0, 3)}
+              <span className="avatar" style={{ '--cor': cor, color: textoSobre(cor) } as React.CSSProperties} aria-hidden>
+                {iniciais(l)}
               </span>
-              <span style={{ minWidth: 0 }}>
+              <span className="numero num" style={{ color: cor }} aria-label={`número ${l.numero}`}>{l.numero}</span>
+              <span className="linha-info">
                 <span className="linha-nome">
-                  {l.numero && l.chave.startsWith('c') ? titulo(l.nome) : l.nome}
+                  {candidato ? `${titulo(l.nome)} (${l.partido})` : l.partido}
                   {mostrarSelos && l.eleito ? <span className="selo eleito">Eleito</span> : null}
                   {mostrarSelos && !l.eleito && l.segundoTurno ? <span className="selo segundo">2º turno</span> : null}
                 </span>
-                <span className="linha-meta" style={{ display: 'block' }}>
-                  {l.chave.startsWith('c') ? l.partido : 'Nominais + legenda'}
-                  {l.vice ? `, vice ${titulo(l.vice)}` : ''}
+                <span className="linha-meta">
+                  {candidato ? `${l.partido} / ${l.numero}` : l.federacao ? `${l.federacao} / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
                 </span>
+                {l.vices?.length ? (
+                  <span className="linha-meta">
+                    {l.vices.map((v) => `${ROTULO_VICE[v.tipo] ?? 'Vice'}: ${titulo(v.nome)}${v.partido ? ` (${v.partido})` : ''}`).join(' · ')}
+                  </span>
+                ) : null}
+                {l.coligacao ? (
+                  <span className="linha-meta linha-col" title={l.composicao}>
+                    Coligação {titulo(l.coligacao)}{l.composicao ? `: ${l.composicao}` : ''}
+                  </span>
+                ) : null}
               </span>
               <span className="linha-num">
-                <span className="num linha-pct" style={{ display: 'block' }}>{pct(l.pct, 2)}</span>
-                <span className="num linha-votos" style={{ display: 'block' }}>{votos(l.votos)} votos</span>
+                <span className="num linha-pct">{pct(l.pct, 2)}</span>
+                <span className="num linha-votos">{votos(l.votos)} votos</span>
               </span>
               <span className="barra" aria-hidden>
                 <i style={{ background: cor, transform: `scaleX(${Math.min(1, l.pct)})` }} />
@@ -258,7 +278,7 @@ function Resumo({ visao, cargo, turno }: { visao: Visao; cargo: Cargo; turno: Tu
           ) : (
             eleitos[uf].map((e) => (
               <div key={e.n + e.nome} className="eleito-mini">
-                <span className="tecla pequena" style={{ '--cor': corDe.get(e.partido) ?? '#888', color: textoSobre(corDe.get(e.partido) ?? '#888') } as React.CSSProperties}>{e.n}</span>
+                <span className="numero num pequeno" style={{ color: corDe.get(e.partido) ?? 'var(--muted)' }}>{e.n}</span>
                 <span style={{ flex: 1 }}>
                   {titulo(e.nome)} <span className="linha-meta">{e.partido}</span>
                   {e.eleito ? <span className="selo eleito">Eleito</span> : <span className="selo segundo">2º turno</span>}

@@ -63,7 +63,11 @@ export interface Candidato {
   partido: string;
   eleito: boolean;
   situacao: string;
-  vice?: string;
+  /** vice (tipo 'v') ou suplentes de senador ('s1', 's2') */
+  vices?: { tipo: string; nome: string; partido: string }[];
+  /** coligação (nome) e composição, quando houver */
+  col?: string;
+  comp?: string;
 }
 
 export interface Partido {

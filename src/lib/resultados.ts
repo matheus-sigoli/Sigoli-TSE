@@ -24,7 +24,11 @@ export interface Linha {
   pct: number; // sobre válidos
   eleito?: boolean;
   segundoTurno?: boolean;
-  vice?: string;
+  vices?: { tipo: string; nome: string; partido: string }[];
+  coligacao?: string;
+  composicao?: string;
+  /** federação do partido (proporcional) */
+  federacao?: string;
   faixas: Faixas;
 }
 
@@ -123,13 +127,13 @@ function visaoCompleta(
       const c = arq.cands[i];
       return {
         chave: `c:${i}`, numero: c.n, nome: c.nome, partido: c.partido, votos: votosC[i], pct: votosC[i] / validos,
-        eleito: c.eleito, segundoTurno: /2º turno/i.test(c.situacao), vice: c.vice, faixas: coresC[i],
+        eleito: c.eleito, segundoTurno: /2º turno/i.test(c.situacao), vices: c.vices, coligacao: c.col, composicao: c.comp, faixas: coresC[i],
       };
     });
   const partidos: Linha[] = prop
     ? ordemP.filter((i) => votosP[i] > 0).map((i) => {
         const p = arq.partidos[i];
-        return { chave: `p:${i}`, numero: p.n, nome: p.fed ? `${p.sg} (${p.fed})` : p.sg, partido: p.sg, votos: votosP[i], pct: votosP[i] / validos, faixas: coresP[i] };
+        return { chave: `p:${i}`, numero: p.n, nome: p.sg, partido: p.sg, federacao: p.fed, votos: votosP[i], pct: votosP[i] / validos, faixas: coresP[i] };
       })
     : [];
 

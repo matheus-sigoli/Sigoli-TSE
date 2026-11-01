@@ -84,7 +84,10 @@ export function normalizar(raw) {
           // o TSE marca e='s' também para quem foi ao 2º turno; a situação é a fonte confiável
           eleito: ehEleito(c.st),
           situacao: c.st ?? '',
-          vice: c.vs?.[0]?.nmu ?? '',
+          // vice (tp 'v') ou suplentes de senador (tp 's1', 's2')
+          vices: (c.vs ?? []).map((v) => ({ tipo: v.tp, nome: v.nmu || v.nm, partido: v.sgp ?? '' })),
+          col: agr.tp === 'c' ? agr.nm : '',
+          comp: agr.tp === 'c' ? agr.com ?? '' : '',
           votos,
         });
       }
@@ -169,7 +172,8 @@ export function montarArquivo(cargo, turno, abr, total, municipios) {
       partido: c.partido,
       eleito: c.eleito,
       situacao: c.situacao,
-      ...(c.vice ? { vice: c.vice } : {}),
+      ...(c.vices?.length ? { vices: c.vices } : {}),
+      ...(c.col ? { col: c.col, comp: c.comp } : {}),
     })),
     partidos: parts.map((p) => ({ sg: p.sg, n: p.n, ...(p.fed ? { fed: p.fed } : {}), ...(p.coligacao ? { col: p.coligacao } : {}) })),
     total: { t: T(total.totais), c: cands.map((c) => c.votos), p: parts.map((p) => p.votos) },
