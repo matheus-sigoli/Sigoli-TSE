@@ -263,7 +263,8 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
   // largura das bordas cresce devagar com o zoom
   const z = vista.k / (kBase.current || 1);
   const traco = Math.min(1.4, (areas.length > 2000 ? 0.12 : 0.35) * Math.sqrt(z));
-  const raioPx = (e: number) => Math.max(3, Math.min(26, 0.22 * Math.sqrt(e) * Math.min(2.2, Math.sqrt(z))));
+  // área do círculo ∝ eleitorado; pequeno na cidade inteira, cresce com o zoom para separar os vizinhos
+  const raioPx = (e: number) => Math.max(2.5, Math.min(24, 0.045 * Math.sqrt(e) * Math.min(4, Math.sqrt(z))));
 
   const dHover = hover ? dPorId.get(hover) : undefined;
   const dSel = selecionado ? dPorId.get(selecionado) : undefined;
@@ -306,7 +307,7 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
                   cy={c.cy}
                   r={raioPx(c.e) / vista.k}
                   fill={cores?.get(c.id) ?? SEM_DADOS}
-                  fillOpacity={0.95}
+                  fillOpacity={0.88}
                 />
               ))}
             </g>
