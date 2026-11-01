@@ -90,12 +90,69 @@ export function useArquivo<T>(carregar: (() => Promise<T>) | null, chave: string
   return estado;
 }
 
-export const useResultado = (cargo: CargoSlug, turno: Turno, abr: string) => {
-  const url = urlResultadoParaTela(cargo, turno, abr);
+/** Nível do mapa numa UF (ADR 0008). */
+export type Nivel = 'municipios' | 'zonas' | 'locais';
+export const lerNivel = (s: string | null, abr: string): Nivel =>
+  abr !== 'br' && abr !== 'exterior' && (s === 'zonas' || s === 'locais') ? s : 'municipios';
+
+export const urlResultadoNivel = (cargo: CargoSlug, turno: Turno, abr: string, nivel: Nivel) =>
+  nivel === 'municipios' ? urlResultadoParaTela(cargo, turno, abr) : `/data/2026/${cargo}/${turno}/${nivel}/${abr}.json`;
+
+export const useResultado = (cargo: CargoSlug, turno: Turno, abr: string, nivel: Nivel = 'municipios') => {
+  const url = urlResultadoNivel(cargo, turno, abr, nivel);
   return useArquivo<Arquivo>(() => buscar<Arquivo>(url), url);
 };
 
-export const useMalha = (abr: string) => useArquivo<Malha>(() => buscarMalha(abr), `malha:${abr}`);
+/** Áreas das zonas eleitorais da UF, com as divisas dos municípios por cima. */
+function buscarMalhaZonas(uf: string): Promise<Malha> {
+  const k = `zonas:${uf}`;
+  let p = malhas.get(k);
+  if (!p) {
+    p = Promise.all([buscar<Topology>(`/geo/zonas/${uf}.json`), buscarMalha(uf)]).then(([topo, base]) => ({
+      municipios: toGeoJSON(topo, 'zonas'),
+      linhas: base.municipios, // contorno dos municípios
+      bbox: base.bbox,
+    }));
+    p.catch(() => malhas.delete(k));
+    malhas.set(k, p);
+  }
+  return p;
+}
+
+export const useMalha = (abr: string, nivel: Nivel = 'municipios') =>
+  useArquivo<Malha>(() => (nivel === 'zonas' ? buscarMalhaZonas(abr) : buscarMalha(abr)), `malha:${abr}:${nivel === 'zonas' ? 'z' : 'm'}`);
+
+/** Local de votação (cadastro do TSE). */
+export interface Local { id: string; ibge: string; zona: string; nome: string; bairro: string; lon: number | null; lat: number | null; eleitorado: number }
+export interface Locais { lista: Local[]; porId: Map<string, Local>; pontos: GeoJSON.FeatureCollection }
+
+const locaisCache = new Map<string, Promise<Locais>>();
+function buscarLocais(uf: string): Promise<Locais> {
+  let p = locaisCache.get(uf);
+  if (!p) {
+    p = buscar<{ campos: string[]; l: (string | number | null)[][] }>(`/geo/locais/${uf}.json`).then(({ l }) => {
+      const lista: Local[] = l.map(([id, ibge, zona, nome, bairro, lon, lat, eleitorado]) => ({
+        id: String(id), ibge: String(ibge), zona: String(zona), nome: String(nome), bairro: String(bairro ?? ''),
+        lon: lon as number | null, lat: lat as number | null, eleitorado: Number(eleitorado) || 0,
+      }));
+      const pontos: GeoJSON.FeatureCollection = {
+        type: 'FeatureCollection',
+        features: lista
+          .filter((x) => x.lon !== null && x.lat !== null)
+          // maiores primeiro: os pequenos ficam por cima e continuam clicáveis
+          .sort((a, b) => b.eleitorado - a.eleitorado)
+          .map((x) => ({ type: 'Feature', id: x.id, properties: { id: x.id, eleitorado: x.eleitorado }, geometry: { type: 'Point', coordinates: [x.lon!, x.lat!] } })),
+      };
+      return { lista, porId: new Map(lista.map((x) => [x.id, x])), pontos };
+    });
+    p.catch(() => locaisCache.delete(uf));
+    locaisCache.set(uf, p);
+  }
+  return p;
+}
+
+export const useLocais = (uf: string | null) =>
+  useArquivo<Locais>(uf ? () => buscarLocais(uf) : null, `locais:${uf ?? '-'}`);
 
 export const useMunicipios = () =>
   useArquivo<Municipio[]>(() => buscar<Municipio[]>('/data/2026/municipios.json'), 'municipios');

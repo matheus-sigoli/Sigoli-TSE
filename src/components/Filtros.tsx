@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { memo, useDeferredValue, useId, useMemo, useRef, useState } from 'react';
 import { FAIXAS_LEGENDA, type Faixas } from '@/lib/cores';
-import type { Malha, Regiao } from '@/lib/dados';
+import type { Malha, Nivel, Regiao } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
@@ -24,7 +24,16 @@ interface Props {
   aoEscolherMunicipio: (m: Municipio) => void;
   aoAlternarTema: () => void;
   aoAlternarDaltonico: () => void;
+  nivel: Nivel;
+  aoMudarNivel: (n: Nivel) => void;
 }
+
+const NIVEIS: { n: Nivel; rotulo: string }[] = [
+  { n: 'municipios', rotulo: 'Municípios' },
+  { n: 'zonas', rotulo: 'Zonas' },
+  { n: 'locais', rotulo: 'Locais' },
+];
+const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na zona', locais: 'no local' };
 
 const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
 
@@ -64,7 +73,19 @@ function Filtros(p: Props) {
         </select>
       </div>
 
-      {opcoesRegiao ? (
+      {p.abr !== 'br' && p.abr !== 'exterior' ? (
+        <div className="campo">
+          <span className="campo-rotulo" id="rot-nivel">Ver por</span>
+          <div className="segmentado" role="group" aria-labelledby="rot-nivel">
+            {NIVEIS.map(({ n, rotulo }) => (
+              <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
+            ))}
+          </div>
+          {p.nivel === 'locais' ? <p className="marca-sub" style={{ marginTop: 6 }}>Círculo maior, mais eleitores no local.</p> : null}
+        </div>
+      ) : null}
+
+      {opcoesRegiao && p.nivel === 'municipios' ? (
         <div className="campo">
           <label htmlFor={idReg}>Região</label>
           <select id={idReg} className="select" value={p.regiaoSelecionada ?? ''} onChange={(e) => p.aoMudarRegiao(e.target.value || null)}>
@@ -83,7 +104,7 @@ function Filtros(p: Props) {
 
       {p.legenda.length ? (
         <div className="campo legenda-bloco">
-          <span className="campo-rotulo">{p.abr === 'exterior' ? (p.modoCalor ? '% de votos no país' : 'Vencedor no país') : p.modoCalor ? '% de votos no município' : 'Vencedor no município'}</span>
+          <span className="campo-rotulo">{p.abr === 'exterior' ? (p.modoCalor ? '% de votos no país' : 'Vencedor no país') : p.modoCalor ? `% de votos ${UNIDADE[p.nivel]}` : `Vencedor ${UNIDADE[p.nivel]}`}</span>
           <div className="legenda">
             {(p.modoCalor ? p.legenda.slice(0, 0) : p.legenda).map((l) => (
               <div key={l.rotulo} className="legenda-item">

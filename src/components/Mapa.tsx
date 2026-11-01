@@ -6,7 +6,7 @@
  */
 import {
   LngLatBounds, Map as MapaGL, NavigationControl,
-  type GeoJSONSource, type MapLayerMouseEvent, type MapMouseEvent,
+  type GeoJSONSource, type MapMouseEvent,
 } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { memo, useEffect, useRef, useState } from 'react';
@@ -22,6 +22,8 @@ interface Props {
   selecionado: string | null;
   destaque: Set<string> | null;
   mundo: boolean;
+  /** locais de votação (círculos); quando presentes, são eles que recebem cor e clique */
+  pontos?: GeoJSON.FeatureCollection | null;
   aoSelecionar: (id: string | null) => void;
   descrever: (id: string) => { titulo: string; linha: string } | null;
 }
@@ -34,15 +36,16 @@ const margem = (base: number) =>
 
 const VAZIO: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
-function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar, descrever }: Props) {
+function Mapa({ chave, malha, cores, selecionado, destaque, mundo, pontos = null, aoSelecionar, descrever }: Props) {
+  const alvo = pontos ? 'pontos' : 'areas';
   const div = useRef<HTMLDivElement>(null);
   const mapa = useRef<MapaGL | null>(null);
   const [pronto, setPronto] = useState(false);
   const [desenhando, setDesenhando] = useState(true);
   const [dica, setDica] = useState<{ x: number; y: number; titulo: string; linha: string } | null>(null);
   // callbacks mais recentes sem re-registrar eventos
-  const cb = useRef({ aoSelecionar, descrever });
-  cb.current = { aoSelecionar, descrever };
+  const cb = useRef({ aoSelecionar, descrever, alvo });
+  cb.current = { aoSelecionar, descrever, alvo };
   const coresAplicadas = useRef(new Set<string>());
 
   // ---- cria o mapa uma vez
@@ -55,6 +58,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
         sources: {
           areas: { type: 'geojson', data: VAZIO, promoteId: 'id' },
           linhas: { type: 'geojson', data: VAZIO },
+          pontos: { type: 'geojson', data: VAZIO, promoteId: 'id' },
         },
         layers: [
           { id: 'fundo', type: 'background', paint: { 'background-color': FUNDO_MAPA } },
@@ -101,6 +105,24 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
               'line-width': ['case', ['boolean', ['feature-state', 'sel'], false], 3.2, 0],
             },
           },
+          {
+            id: 'pontos',
+            type: 'circle',
+            source: 'pontos',
+            paint: {
+              'circle-color': ['coalesce', ['feature-state', 'cor'], SEM_DADOS],
+              // área do círculo proporcional ao eleitorado do local
+              'circle-radius': [
+                'interpolate', ['linear'], ['zoom'],
+                4, ['max', 1, ['*', 0.025, ['sqrt', ['get', 'eleitorado']]]],
+                8, ['max', 2, ['*', 0.09, ['sqrt', ['get', 'eleitorado']]]],
+                12, ['max', 4, ['*', 0.4, ['sqrt', ['get', 'eleitorado']]]],
+              ],
+              'circle-stroke-color': ['case', ['boolean', ['feature-state', 'sel'], false], '#111317', ['boolean', ['feature-state', 'hover'], false], '#111317', BORDA_MUNICIPIO],
+              'circle-stroke-width': ['case', ['boolean', ['feature-state', 'sel'], false], 2.6, ['boolean', ['feature-state', 'hover'], false], 2, ['interpolate', ['linear'], ['zoom'], 5, 0.3, 10, 1]],
+              'circle-opacity': ['case', ['boolean', ['feature-state', 'apagado'], false], 0.25, 0.95],
+            },
+          },
         ],
       },
       attributionControl: false,
@@ -114,28 +136,30 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     m.keyboard.disableRotation();
     m.addControl(new NavigationControl({ showCompass: false }), 'bottom-right');
 
-    let hoverId: string | number | null = null;
+    // passa o mouse / clica na camada ativa (áreas, ou círculos dos locais)
+    let hover: { fonte: string; id: string | number } | null = null;
     const limparHover = () => {
-      if (hoverId !== null) m.setFeatureState({ source: 'areas', id: hoverId }, { hover: false });
-      hoverId = null;
+      if (hover && m.getSource(hover.fonte)) m.setFeatureState({ source: hover.fonte, id: hover.id }, { hover: false });
+      hover = null;
       m.getCanvas().style.cursor = '';
       setDica(null);
     };
-    m.on('mousemove', 'areas', (e: MapLayerMouseEvent) => {
-      const f = e.features?.[0];
-      if (!f || f.id === undefined) return;
-      if (f.id !== hoverId) {
-        if (hoverId !== null) m.setFeatureState({ source: 'areas', id: hoverId }, { hover: false });
-        hoverId = f.id;
-        m.setFeatureState({ source: 'areas', id: hoverId }, { hover: true });
+    m.on('mousemove', (e: MapMouseEvent) => {
+      const fonte = cb.current.alvo;
+      const f = m.queryRenderedFeatures(e.point, { layers: [fonte] })[0];
+      if (!f || f.id === undefined) return limparHover();
+      if (!hover || hover.id !== f.id || hover.fonte !== fonte) {
+        limparHover();
+        hover = { fonte, id: f.id };
+        m.setFeatureState({ source: fonte, id: f.id }, { hover: true });
       }
       m.getCanvas().style.cursor = 'pointer';
       const d = cb.current.descrever(String(f.id));
       setDica(d ? { x: e.point.x, y: e.point.y, ...d } : null);
     });
-    m.on('mouseleave', 'areas', limparHover);
+    m.on('mouseout', limparHover);
     m.on('click', (e: MapMouseEvent) => {
-      const f = m.queryRenderedFeatures(e.point, { layers: ['areas'] })[0];
+      const f = m.queryRenderedFeatures(e.point, { layers: [cb.current.alvo] })[0];
       cb.current.aoSelecionar(f && f.id !== undefined ? String(f.id) : null);
     });
     m.on('load', () => setPronto(true));
@@ -152,29 +176,40 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     (m.getSource('areas') as GeoJSONSource).setData(malha.municipios);
     (m.getSource('linhas') as GeoJSONSource).setData(malha.linhas);
     coresAplicadas.current.clear();
+    m.removeFeatureState({ source: 'areas' });
     const [x0, y0, x1, y1] = mundo ? [-125, -45, 160, 66] : malha.bbox;
     m.fitBounds([[x0, y0], [x1, y1]], { padding: margem(24), animate: false });
     m.setMinZoom(Math.max(0, m.getZoom() - 1));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chave, pronto]);
 
-  // ---- cores (feature-state)
+  // ---- círculos dos locais de votação
+  useEffect(() => {
+    const m = mapa.current;
+    if (!m || !pronto) return;
+    m.removeFeatureState({ source: 'pontos' });
+    m.removeFeatureState({ source: 'areas' }); // as cores mudam de camada
+    (m.getSource('pontos') as GeoJSONSource).setData(pontos ?? VAZIO);
+    coresAplicadas.current.clear();
+  }, [pontos, pronto]);
+
+  // ---- cores (feature-state) na camada ativa; nos locais as áreas ficam neutras
   useEffect(() => {
     const m = mapa.current;
     if (!m || !pronto || !cores) return;
     const anteriores = coresAplicadas.current;
-    for (const id of anteriores) if (!cores.has(id)) m.removeFeatureState({ source: 'areas', id }, 'cor');
-    for (const [id, cor] of cores) m.setFeatureState({ source: 'areas', id }, { cor });
+    for (const id of anteriores) if (!cores.has(id)) m.removeFeatureState({ source: alvo, id }, 'cor');
+    for (const [id, cor] of cores) m.setFeatureState({ source: alvo, id }, { cor });
     coresAplicadas.current = new Set(cores.keys());
-  }, [cores, pronto, chave]);
+  }, [cores, pronto, chave, alvo, pontos]);
 
   // ---- seleção
   useEffect(() => {
     const m = mapa.current;
     if (!m || !pronto || !selecionado) return;
-    m.setFeatureState({ source: 'areas', id: selecionado }, { sel: true });
-    return () => { if (m.getSource('areas')) m.setFeatureState({ source: 'areas', id: selecionado }, { sel: false }); };
-  }, [selecionado, pronto, chave]);
+    m.setFeatureState({ source: alvo, id: selecionado }, { sel: true });
+    return () => { if (m.getSource(alvo)) m.setFeatureState({ source: alvo, id: selecionado }, { sel: false }); };
+  }, [selecionado, pronto, chave, alvo, pontos]);
 
   // ---- região: apaga o que está fora e enquadra
   useEffect(() => {

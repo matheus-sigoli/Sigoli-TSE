@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { textoSobre } from '@/lib/cores';
-import { preCarregar, urlResultadoParaTela } from '@/lib/dados';
+import { preCarregar, urlResultadoNivel, type Nivel } from '@/lib/dados';
 import { CARGOS, UFS, type Arquivo, type Cargo, type CargoSlug, type Turno } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
 import { bancada, type Foco, type Linha, type Visao } from '@/lib/resultados';
@@ -12,6 +12,9 @@ interface Props {
   abr: string;
   turno: Turno;
   nomeRecorte: string;
+  /** bairro, município, zona: linha abaixo do título no nível zonas/locais */
+  contexto?: string | null;
+  nivel: Nivel;
   trilha: { rotulo: string; acao: () => void; href?: string }[];
   visao: Visao | null;
   arquivo: Arquivo | null;
@@ -26,6 +29,7 @@ interface Props {
 }
 
 const POR_PAGINA = 40;
+const UNIDADE: Record<Nivel, string> = { municipios: 'município', zonas: 'zona', locais: 'local de votação' };
 
 function Painel(p: Props) {
   const { cargo, abr, turno, visao, arquivo, foco } = p;
@@ -60,6 +64,8 @@ function Painel(p: Props) {
 
   const focoChave = foco ? `${foco.tipo}:${foco.idx}` : null;
   const prop = visao?.tipo === 'prop';
+  const porPartido = p.nivel !== 'municipios';
+  const abaAtiva = porPartido ? 'partidos' : aba;
   const t = visao?.totais;
 
   return (
@@ -87,7 +93,7 @@ function Painel(p: Props) {
             href={p.hrefCargo(c.slug)}
             aria-current={c.slug === cargo.slug ? 'page' : undefined}
             scroll={false}
-            onMouseEnter={() => preCarregar(urlResultadoParaTela(c.slug, 1, abr === 'exterior' ? 'br' : abr))}
+            onMouseEnter={() => preCarregar(urlResultadoNivel(c.slug, 1, abr === 'exterior' ? 'br' : abr, p.nivel))}
           >
             {c.curto}
           </Link>
@@ -106,6 +112,7 @@ function Painel(p: Props) {
           </nav>
         ) : null}
         <h1 className="titulo">{p.nomeRecorte}</h1>
+        {p.contexto ? <p className="contexto">{p.contexto}</p> : null}
         <p className="subtitulo">
           {cargo.nome}, {turno}º turno
           {arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
@@ -152,7 +159,11 @@ function Painel(p: Props) {
         <Resumo visao={visao} cargo={cargo} turno={turno} />
       ) : visao ? (
         <>
-          {prop ? (
+          {prop && porPartido ? (
+            <p className="dica">
+              Nas zonas e locais de votação, os deputados aparecem por partido. O voto em cada candidato está no mapa por município.
+            </p>
+          ) : prop ? (
             <div style={{ padding: '14px 20px 0' }}>
               <div className="segmentado" role="group" aria-label="Agrupar por">
                 <button aria-pressed={aba === 'partidos'} onClick={() => setAba('partidos')}>Partidos</button>
@@ -161,17 +172,17 @@ function Painel(p: Props) {
             </div>
           ) : null}
           <p className="dica">
-            {focoChave ? 'Mapa mostrando o % deste concorrente em cada município. Clique de novo para voltar.' : 'Clique num nome para ver onde ele teve mais votos.'}
+            {focoChave ? `Mapa mostrando o % deste concorrente em cada ${UNIDADE[p.nivel]}. Clique de novo para voltar.` : 'Clique num nome para ver onde ele teve mais votos.'}
           </p>
           <Lista
-            linhas={(prop && aba === 'partidos' ? visao.partidos : visao.candidatos).slice(0, limite)}
+            linhas={(prop && abaAtiva === 'partidos' ? visao.partidos : visao.candidatos).slice(0, limite)}
             focoChave={focoChave}
             aoFocar={p.aoFocar}
             mostrarSelos={!p.temSelecao}
           />
-          {(prop && aba === 'partidos' ? visao.partidos : visao.candidatos).length > limite ? (
+          {(prop && abaAtiva === 'partidos' ? visao.partidos : visao.candidatos).length > limite ? (
             <button className="mais" onClick={() => setLimite((l) => l + POR_PAGINA)}>
-              Mostrar mais {Math.min(POR_PAGINA, (aba === 'partidos' && prop ? visao.partidos : visao.candidatos).length - limite)}
+              Mostrar mais {Math.min(POR_PAGINA, (abaAtiva === 'partidos' && prop ? visao.partidos : visao.candidatos).length - limite)}
             </button>
           ) : null}
         </>
