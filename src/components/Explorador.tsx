@@ -205,6 +205,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
         regioes={regioes.dados}
         municipios={municipios.dados}
         legenda={visao?.legenda ?? []}
+        escalaFoco={foco && visao ? [...visao.candidatos, ...visao.partidos].find((l) => l.chave === `${foco.tipo}:${foco.idx}`) ?? null : null}
         modoCalor={!!foco}
         tema={tema}
         daltonico={daltonico}

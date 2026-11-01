@@ -12,6 +12,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { memo, useEffect, useRef, useState } from 'react';
 import { BORDA_MUNICIPIO, FUNDO_MAPA, SEM_DADOS } from '@/lib/cores';
 import type { Malha } from '@/lib/dados';
+import Carregando from './Carregando';
 
 interface Props {
   /** muda quando a malha muda (abrangência) */
@@ -31,6 +32,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
   const div = useRef<HTMLDivElement>(null);
   const mapa = useRef<MapaGL | null>(null);
   const [pronto, setPronto] = useState(false);
+  const [desenhando, setDesenhando] = useState(true);
   const [dica, setDica] = useState<{ x: number; y: number; titulo: string; linha: string } | null>(null);
   // callbacks mais recentes sem re-registrar eventos
   const cb = useRef({ aoSelecionar, descrever });
@@ -132,7 +134,6 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     });
     m.on('load', () => setPronto(true));
     mapa.current = m;
-    if (window.location.search.includes('debug')) (window as unknown as { __mapa: MapaGL }).__mapa = m;
     return () => { m.remove(); mapa.current = null; };
   }, []);
 
@@ -140,6 +141,8 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
   useEffect(() => {
     const m = mapa.current;
     if (!m || !pronto) return;
+    setDesenhando(true);
+    m.once('idle', () => setDesenhando(false));
     (m.getSource('areas') as GeoJSONSource).setData(malha.municipios);
     (m.getSource('linhas') as GeoJSONSource).setData(malha.linhas);
     coresAplicadas.current.clear();
@@ -192,6 +195,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
   return (
     <>
       <div ref={div} className="mapa-canvas" />
+      {desenhando ? <Carregando texto="Desenhando o mapa" /> : null}
       {dica ? (
         <div className="dica-mapa" style={{ left: dica.x, top: dica.y }} role="status">
           <strong>{dica.titulo}</strong>

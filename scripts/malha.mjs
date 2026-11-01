@@ -27,7 +27,7 @@ const OUT_DIR = args.out ?? 'public/geo';
 
 // Tolerâncias em graus (≈ 111 km por grau).
 const TOL_UF = Number(args['tol-uf'] ?? 0.0006); // ~65 m
-const TOL_BR = Number(args['tol-br'] ?? 0.006); // ~650 m
+const TOL_BR = Number(args['tol-br'] ?? 0.01); // ~1,1 km (visão Brasil; o detalhe fica nos arquivos por UF)
 const QUANT = 1e5;
 // Grade usada só para identificar pontos idênticos (1e-6° ≈ 10 cm).
 // Faixa do Brasil: lon -80..-20, lat -40..10 → chave < 2^53 (inteiro exato).

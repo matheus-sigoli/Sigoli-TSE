@@ -47,7 +47,7 @@ function Painel(p: Props) {
   const aoMover = useCallback((e: React.PointerEvent) => {
     if (!inicio.current || !ref.current) return;
     const dy = e.clientY - inicio.current.y;
-    const base = inicio.current.aberta ? 0 : ref.current.offsetHeight - 196;
+    const base = inicio.current.aberta ? 0 : ref.current.offsetHeight - 300;
     ref.current.style.transform = `translateY(${Math.max(0, base + dy)}px)`;
   }, []);
   const aoSoltar = useCallback((e: React.PointerEvent) => {

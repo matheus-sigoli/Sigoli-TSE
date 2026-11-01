@@ -4,6 +4,7 @@ import { memo, useDeferredValue, useId, useMemo, useRef, useState } from 'react'
 import { FAIXAS_LEGENDA, type Faixas } from '@/lib/cores';
 import type { Malha, Regiao } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
+import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
 
 interface Props {
@@ -15,6 +16,7 @@ interface Props {
   municipios: Municipio[] | null;
   legenda: { rotulo: string; faixas: Faixas }[];
   modoCalor: boolean;
+  escalaFoco: Linha | null;
   tema: 'escuro' | 'claro';
   daltonico: boolean;
   aoMudarAbrangencia: (abr: string) => void;
@@ -90,10 +92,13 @@ function Filtros(p: Props) {
               </div>
             ))}
           </div>
+          {p.modoCalor && p.escalaFoco ? (
+            <div className="legenda-item"><i style={{ background: p.escalaFoco.faixas['50'] }} /><span>{p.escalaFoco.chave.startsWith('c') ? titulo(p.escalaFoco.nome) : p.escalaFoco.nome}</span></div>
+          ) : null}
           {p.legenda[0] ? (
             <div>
               <div className="escala" aria-hidden>
-                {FAIXAS_LEGENDA.map((k) => <i key={k} style={{ background: p.legenda[0].faixas[k] }} />)}
+                {FAIXAS_LEGENDA.map((k) => <i key={k} style={{ background: (p.modoCalor && p.escalaFoco ? p.escalaFoco.faixas : p.legenda[0].faixas)[k] }} />)}
               </div>
               <div className="escala-rotulos"><span>10%</span><span>50%</span><span>100%</span></div>
               <p className="marca-sub" style={{ marginTop: 6 }}>
