@@ -10,7 +10,9 @@
  *   - refaz o resumo nacional dos cargos estaduais.
  *
  * Educado com o servidor: 2 requisições por vez e espera longa em HTTP 429.
- * Uso: node scripts/corrigir-anulados.mjs
+ * Uso: node scripts/corrigir-anulados.mjs [--de oficiais.json]
+ *   --de: usa um arquivo já baixado ({ "cargo/turno/abr": { candidatos, partidos } }),
+ *         útil quando o TSE limita as requisições (HTTP 429) da máquina que processa.
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -20,6 +22,8 @@ import {
 } from './lib/nucleo.mjs';
 
 const DADOS = 'public/data/2026';
+const iDe = process.argv.indexOf('--de');
+const PRONTOS = iDe > 0 ? JSON.parse(await readFile(process.argv[iDe + 1], 'utf8')) : null;
 const espera = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function baixar(url) {
@@ -78,9 +82,15 @@ const resumoAnulados = [];
 for (const cargo of CARGOS) {
   for (const turno of cargo.turnos) {
     const eleicao = ELEICOES[cargo.eleicao][turno];
-    const cfg = await baixar(urlConfigMunicipios(eleicao));
-    if (!cfg) continue;
-    const ufs = cfg.abr.map((a) => a.cd).filter((u) => u !== 'zz' || cargo.slug === 'presidente');
+    let ufs;
+    if (PRONTOS) {
+      const pre = `${cargo.slug}/${turno}/`;
+      ufs = Object.keys(PRONTOS).filter((k) => k.startsWith(pre)).map((k) => k.slice(pre.length)).filter((a) => a !== 'br');
+    } else {
+      const cfg = await baixar(urlConfigMunicipios(eleicao));
+      if (!cfg) continue;
+      ufs = cfg.abr.map((a) => a.cd).filter((u) => u !== 'zz' || cargo.slug === 'presidente');
+    }
     const arquivosUf = [];
     // 2 por vez
     const fila = [...ufs];
@@ -90,11 +100,16 @@ for (const cargo of CARGOS) {
         const abr = fila.shift();
         const rel = `${cargo.slug}/${turno}/${abr}.json`;
         if (!existsSync(join(DADOS, rel))) continue;
-        const cd = abr === 'br' ? cargo.cd : codigoCargo(cargo, abr);
-        const raw = await baixar(urlResultado(eleicao, cd, abr));
-        if (!raw) { console.warn(`  sem arquivo oficial: ${rel}`); continue; }
+        let oficial;
+        if (PRONTOS) oficial = PRONTOS[`${cargo.slug}/${turno}/${abr}`];
+        else {
+          const cd = abr === 'br' ? cargo.cd : codigoCargo(cargo, abr);
+          const raw = await baixar(urlResultado(eleicao, cd, abr));
+          oficial = raw && normalizar(raw);
+        }
+        if (!oficial) { console.warn(`  sem arquivo oficial: ${rel}`); continue; }
         const arq = await lerJson(rel);
-        const r = corrigir(arq, normalizar(raw));
+        const r = corrigir(arq, oficial);
         await gravar(rel, arq);
         if (abr !== 'br' && abr !== 'zz') arquivosUf.push(arq);
         if (r.anulados) resumoAnulados.push(`${rel}: ${r.anulados} candidatos com votos anulados, ${r.mudados} ajustes`);
