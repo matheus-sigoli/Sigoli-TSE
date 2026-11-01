@@ -23,7 +23,7 @@
  *
  * Uso: node scripts/zonas-locais.mjs [--uf sp --uf rj] [--baixar]
  */
-import { createWriteStream, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { createWriteStream, existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
@@ -52,12 +52,26 @@ function cargoDe(eleicao, cdCargo) {
 }
 
 // ------------------------------------------------------------------ utilidades de arquivo
+/** Baixa para `.parcial` e só renomeia no fim: um download interrompido nunca passa por arquivo completo. */
 async function baixar(url, destino) {
   if (existsSync(destino)) return;
   mkdirSync(join(destino, '..'), { recursive: true });
-  const r = await fetch(url);
-  if (!r.ok) throw new Error(`HTTP ${r.status} em ${url}`);
-  await pipeline(Readable.fromWeb(r.body), createWriteStream(destino));
+  const parcial = `${destino}.parcial`;
+  for (let tentativa = 1; ; tentativa++) {
+    try {
+      const r = await fetch(url);
+      if (!r.ok) throw new Error(`HTTP ${r.status} em ${url}`);
+      await pipeline(Readable.fromWeb(r.body), createWriteStream(parcial));
+      renameSync(parcial, destino);
+      return;
+    } catch (e) {
+      rmSync(parcial, { force: true });
+      if (tentativa >= 6) throw e;
+      const espera = 15 * tentativa;
+      console.warn(`  falha ao baixar ${url.split('/').pop()} (${e.message}); nova tentativa em ${espera}s`);
+      await new Promise((ok) => setTimeout(ok, espera * 1000));
+    }
+  }
 }
 
 /** Lê uma entrada (CSV latin1) de um zip, linha a linha, entregando campos já separados. */
