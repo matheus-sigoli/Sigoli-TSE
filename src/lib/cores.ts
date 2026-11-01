@@ -112,7 +112,14 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false): Fai
     const pal = paletaDoPartido(sg);
     let escolhida = pal.principal;
     const conflita = (f: Faixas) => usadas.some((u) => deltaE(u, f['50']) < LIMITE_PARECIDO);
-    if (conflita(escolhida) && pal.extra && !conflita(pal.extra)) escolhida = pal.extra;
+    if (conflita(escolhida)) {
+      if (pal.extra && !conflita(pal.extra)) escolhida = pal.extra;
+      else {
+        // sem cor extra (ex.: dois senadores do PL no mesmo estado): primeira cor livre da paleta segura
+        const livre = DALTONICO.map(gerarFaixas).find((f) => !conflita(f));
+        if (livre) escolhida = livre;
+      }
+    }
     usadas.push(escolhida['50']);
     return escolhida;
   });
