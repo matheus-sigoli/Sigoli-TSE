@@ -26,6 +26,12 @@ interface Props {
   descrever: (id: string) => { titulo: string; linha: string } | null;
 }
 
+/** No celular a gaveta cobre a parte de baixo do mapa (ver --espiada no CSS). */
+const margem = (base: number) =>
+  typeof window !== 'undefined' && window.innerWidth < 1100
+    ? { top: base, left: base, right: base, bottom: 300 + base }
+    : base;
+
 const VAZIO: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
 function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar, descrever }: Props) {
@@ -147,7 +153,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     (m.getSource('linhas') as GeoJSONSource).setData(malha.linhas);
     coresAplicadas.current.clear();
     const [x0, y0, x1, y1] = mundo ? [-120, -45, 150, 65] : malha.bbox;
-    m.fitBounds([[x0, y0], [x1, y1]], { padding: 24, animate: false });
+    m.fitBounds([[x0, y0], [x1, y1]], { padding: margem(24), animate: false });
     m.setMinZoom(Math.max(0, m.getZoom() - 1));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chave, pronto]);
@@ -184,10 +190,10 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     if (alvo?.length) {
       const b = new LngLatBounds();
       for (const f of alvo) percorrer(f.geometry, (x, y) => b.extend([x, y]));
-      m.fitBounds(b, { padding: 40, duration: 500 });
+      m.fitBounds(b, { padding: margem(40), duration: 500 });
     } else if (!destaque && !mundo) {
       const [x0, y0, x1, y1] = malha.bbox;
-      m.fitBounds([[x0, y0], [x1, y1]], { padding: 24, duration: 400 });
+      m.fitBounds([[x0, y0], [x1, y1]], { padding: margem(24), duration: 400 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [destaque, pronto, chave]);
