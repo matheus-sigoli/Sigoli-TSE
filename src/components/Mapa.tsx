@@ -132,6 +132,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     });
     m.on('load', () => setPronto(true));
     mapa.current = m;
+    if (window.location.search.includes('debug')) (window as unknown as { __mapa: MapaGL }).__mapa = m;
     return () => { m.remove(); mapa.current = null; };
   }, []);
 
