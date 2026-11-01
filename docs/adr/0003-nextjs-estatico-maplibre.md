@@ -17,3 +17,9 @@
 ## Consequências
 - Páginas pré-geradas no build para cada combinação UF × cargo (27 UFs × 5 cargos + Brasil/Presidente).
 - O mapa e o painel de resultados são componentes de cliente; os dados vêm de `/data/...` estático.
+
+## Atualização (31/10/2026) — versões
+- Next.js **16.4.3**, React **19.3.1** (a 15.1.6 inicial tinha a vulnerabilidade CVE-2025-66478).
+- MapLibre GL fixado na linha **5.x (5.24.0)**: a 6.x carrega o worker como módulo separado,
+  e o Turbopack não emite esse arquivo na exportação estática (mapa em branco). A 5.x embute o worker.
+  Reavaliar a 6.x quando o Next/Turbopack suportar o worker dela no `output: 'export'`.

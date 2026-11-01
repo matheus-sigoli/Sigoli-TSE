@@ -5,7 +5,7 @@
  * trocar de cargo/turno não recria a fonte de dados.
  */
 import {
-  LngLatBounds, Map as MapaGL, NavigationControl, setWorkerUrl,
+  LngLatBounds, Map as MapaGL, NavigationControl,
   type GeoJSONSource, type MapLayerMouseEvent, type MapMouseEvent,
 } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -40,9 +40,6 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
   // ---- cria o mapa uma vez
   useEffect(() => {
     if (!div.current) return;
-    // worker do MapLibre servido pela própria origem (copiado por scripts/copiar-maplibre.mjs);
-    // URL absoluta porque o bundler reescreve import.meta.url
-    setWorkerUrl(new URL('/maplibre/maplibre-gl-worker.mjs', window.location.origin).href);
     const m = new MapaGL({
       container: div.current,
       style: {

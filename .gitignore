@@ -7,4 +7,3 @@ shp/*.zip
 next-env.d.ts
 .vercel
 .env*
-public/maplibre/
