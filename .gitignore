@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+.cache/
+shp/*.zip
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+.env*

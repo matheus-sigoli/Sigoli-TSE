@@ -1,0 +1,206 @@
+'use client';
+/**
+ * Mapa coroplético com MapLibre GL, sem mapa de fundo: só a malha do IBGE
+ * sobre o cinza #666666 (ADR 0004). Cores entram por feature-state, então
+ * trocar de cargo/turno não recria a fonte de dados.
+ */
+import maplibregl, { type GeoJSONSource, type MapLayerMouseEvent } from 'maplibre-gl';
+import 'maplibre-gl/dist/maplibre-gl.css';
+import { memo, useEffect, useRef, useState } from 'react';
+import { BORDA_MUNICIPIO, FUNDO_MAPA, SEM_DADOS } from '@/lib/cores';
+import type { Malha } from '@/lib/dados';
+
+interface Props {
+  /** muda quando a malha muda (abrangência) */
+  chave: string;
+  malha: Malha;
+  cores: Map<string, string> | null;
+  selecionado: string | null;
+  destaque: Set<string> | null;
+  mundo: boolean;
+  aoSelecionar: (id: string | null) => void;
+  descrever: (id: string) => { titulo: string; linha: string } | null;
+}
+
+const VAZIO: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
+
+function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar, descrever }: Props) {
+  const div = useRef<HTMLDivElement>(null);
+  const mapa = useRef<maplibregl.Map | null>(null);
+  const [pronto, setPronto] = useState(false);
+  const [dica, setDica] = useState<{ x: number; y: number; titulo: string; linha: string } | null>(null);
+  // callbacks mais recentes sem re-registrar eventos
+  const cb = useRef({ aoSelecionar, descrever });
+  cb.current = { aoSelecionar, descrever };
+  const coresAplicadas = useRef(new Set<string>());
+
+  // ---- cria o mapa uma vez
+  useEffect(() => {
+    if (!div.current) return;
+    const m = new maplibregl.Map({
+      container: div.current,
+      style: {
+        version: 8,
+        sources: {
+          areas: { type: 'geojson', data: VAZIO, promoteId: 'id' },
+          linhas: { type: 'geojson', data: VAZIO },
+        },
+        layers: [
+          { id: 'fundo', type: 'background', paint: { 'background-color': FUNDO_MAPA } },
+          {
+            id: 'areas',
+            type: 'fill',
+            source: 'areas',
+            paint: {
+              'fill-color': ['coalesce', ['feature-state', 'cor'], SEM_DADOS],
+              'fill-opacity': ['case', ['boolean', ['feature-state', 'apagado'], false], 0.28, 1],
+            },
+          },
+          {
+            id: 'bordas',
+            type: 'line',
+            source: 'areas',
+            paint: {
+              'line-color': BORDA_MUNICIPIO,
+              'line-width': ['interpolate', ['linear'], ['zoom'], 3, 0.15, 6, 0.5, 9, 1.1],
+              'line-opacity': ['interpolate', ['linear'], ['zoom'], 3, 0.5, 7, 0.9],
+            },
+          },
+          {
+            id: 'divisas',
+            type: 'line',
+            source: 'linhas',
+            paint: { 'line-color': BORDA_MUNICIPIO, 'line-width': ['interpolate', ['linear'], ['zoom'], 3, 1, 8, 2.4] },
+          },
+          {
+            id: 'hover',
+            type: 'line',
+            source: 'areas',
+            paint: {
+              'line-color': '#111317',
+              'line-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2, 0],
+            },
+          },
+          {
+            id: 'selecao',
+            type: 'line',
+            source: 'areas',
+            paint: {
+              'line-color': '#111317',
+              'line-width': ['case', ['boolean', ['feature-state', 'sel'], false], 3.2, 0],
+            },
+          },
+        ],
+      },
+      attributionControl: false,
+      dragRotate: false,
+      pitchWithRotate: false,
+      renderWorldCopies: false,
+      fadeDuration: 0,
+      maxZoom: 12,
+    });
+    m.touchZoomRotate.disableRotation();
+    m.keyboard.disableRotation();
+    m.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
+
+    let hoverId: string | number | null = null;
+    const limparHover = () => {
+      if (hoverId !== null) m.setFeatureState({ source: 'areas', id: hoverId }, { hover: false });
+      hoverId = null;
+      m.getCanvas().style.cursor = '';
+      setDica(null);
+    };
+    m.on('mousemove', 'areas', (e: MapLayerMouseEvent) => {
+      const f = e.features?.[0];
+      if (!f || f.id === undefined) return;
+      if (f.id !== hoverId) {
+        if (hoverId !== null) m.setFeatureState({ source: 'areas', id: hoverId }, { hover: false });
+        hoverId = f.id;
+        m.setFeatureState({ source: 'areas', id: hoverId }, { hover: true });
+      }
+      m.getCanvas().style.cursor = 'pointer';
+      const d = cb.current.descrever(String(f.id));
+      setDica(d ? { x: e.point.x, y: e.point.y, ...d } : null);
+    });
+    m.on('mouseleave', 'areas', limparHover);
+    m.on('click', (e) => {
+      const f = m.queryRenderedFeatures(e.point, { layers: ['areas'] })[0];
+      cb.current.aoSelecionar(f && f.id !== undefined ? String(f.id) : null);
+    });
+    m.on('load', () => setPronto(true));
+    mapa.current = m;
+    return () => { m.remove(); mapa.current = null; };
+  }, []);
+
+  // ---- troca de malha
+  useEffect(() => {
+    const m = mapa.current;
+    if (!m || !pronto) return;
+    (m.getSource('areas') as GeoJSONSource).setData(malha.municipios);
+    (m.getSource('linhas') as GeoJSONSource).setData(malha.linhas);
+    coresAplicadas.current.clear();
+    const [x0, y0, x1, y1] = mundo ? [-120, -45, 150, 65] : malha.bbox;
+    m.fitBounds([[x0, y0], [x1, y1]], { padding: 24, animate: false });
+    m.setMinZoom(Math.max(0, m.getZoom() - 1));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chave, pronto]);
+
+  // ---- cores (feature-state)
+  useEffect(() => {
+    const m = mapa.current;
+    if (!m || !pronto || !cores) return;
+    const anteriores = coresAplicadas.current;
+    for (const id of anteriores) if (!cores.has(id)) m.removeFeatureState({ source: 'areas', id }, 'cor');
+    for (const [id, cor] of cores) m.setFeatureState({ source: 'areas', id }, { cor });
+    coresAplicadas.current = new Set(cores.keys());
+  }, [cores, pronto, chave]);
+
+  // ---- seleção
+  useEffect(() => {
+    const m = mapa.current;
+    if (!m || !pronto || !selecionado) return;
+    m.setFeatureState({ source: 'areas', id: selecionado }, { sel: true });
+    return () => { if (m.getSource('areas')) m.setFeatureState({ source: 'areas', id: selecionado }, { sel: false }); };
+  }, [selecionado, pronto, chave]);
+
+  // ---- região: apaga o que está fora e enquadra
+  useEffect(() => {
+    const m = mapa.current;
+    if (!m || !pronto) return;
+    const ids: string[] = [];
+    for (const f of malha.municipios.features) {
+      const id = String(f.id);
+      ids.push(id);
+      m.setFeatureState({ source: 'areas', id }, { apagado: !!destaque && !destaque.has(id) });
+    }
+    const alvo = destaque ? malha.municipios.features.filter((f) => destaque.has(String(f.id))) : null;
+    if (alvo?.length) {
+      const b = new maplibregl.LngLatBounds();
+      for (const f of alvo) percorrer(f.geometry, (x, y) => b.extend([x, y]));
+      m.fitBounds(b, { padding: 40, duration: 500 });
+    } else if (!destaque && !mundo) {
+      const [x0, y0, x1, y1] = malha.bbox;
+      m.fitBounds([[x0, y0], [x1, y1]], { padding: 24, duration: 400 });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [destaque, pronto, chave]);
+
+  return (
+    <>
+      <div ref={div} className="mapa-canvas" />
+      {dica ? (
+        <div className="dica-mapa" style={{ left: dica.x, top: dica.y }} role="status">
+          <strong>{dica.titulo}</strong>
+          <span>{dica.linha}</span>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+function percorrer(g: GeoJSON.Geometry, fn: (x: number, y: number) => void) {
+  if (g.type === 'Polygon') for (const r of g.coordinates) for (const [x, y] of r) fn(x, y);
+  else if (g.type === 'MultiPolygon') for (const p of g.coordinates) for (const r of p) for (const [x, y] of r) fn(x, y);
+}
+
+export default memo(Mapa);
