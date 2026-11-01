@@ -115,19 +115,81 @@ const municipios = JSON.parse(readFileSync(join(DADOS, 'municipios.json'), 'utf8
 const ibgeDe = new Map(municipios.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m.ibge]));
 
 const zipLocais = join(CACHE, 'eleitorado_local_votacao_2026.zip');
+const zipVotos = (UF) => join(CACHE, `votacao_secao_2026_${UF}.zip`);
 if (argv.includes('--baixar')) {
   await baixar(`${CDN}/eleitorado_locais_votacao/eleitorado_local_votacao_2026.zip`, zipLocais);
-  for (const uf of UFS) await baixar(`${CDN}/votacao_secao/votacao_secao_2026_${uf.toUpperCase()}.zip`, join(CACHE, `votacao_secao_2026_${uf.toUpperCase()}.zip`));
+  // BR = Presidente (todas as UFs); cada UF = cargos estaduais
+  for (const UF of ['BR', ...UFS.map((u) => u.toUpperCase())]) await baixar(`${CDN}/votacao_secao/votacao_secao_2026_${UF}.zip`, zipVotos(UF));
 }
 
-for (const uf of UFS) {
-  const t0 = Date.now();
-  const UF = uf.toUpperCase();
+/** Estado de processamento de uma UF. */
+function novaUf(uf) {
+  return { uf, locais: new Map(), secaoLocal: new Map(), eleitoradoSecao: new Map(), base: new Map(), acc: new Map(), contadas: new Set() };
+}
 
-  // 1) locais e seções (1º turno define o cadastro; eleitorado por seção)
-  const locais = new Map(); // id → {id, mun, ibge, zona, nr, nome, bairro, lon, lat, eleitorado}
-  const secaoLocal = new Map(); // `${turno}|${mun}-${zona}-${secao}` → localId
-  const eleitoradoSecao = new Map(); // mesma chave → eleitores
+function lerBase(E, cargo, t) {
+  const k = `${cargo}/${t}`;
+  if (!E.base.has(k)) {
+    const p = join(DADOS, cargo, String(t), cargo === 'presidente' ? 'br.json' : `${E.uf}.json`);
+    E.base.set(k, existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : null);
+  }
+  return E.base.get(k);
+}
+
+/** Soma uma linha de votação por seção nos acumuladores da UF. */
+function somarLinha(E, f, c) {
+  const cg = cargoDe(num(f[c.CD_ELEICAO]), num(f[c.CD_CARGO]));
+  if (!cg) return;
+  const [cargo, t] = cg;
+  const chaveCargo = `${cargo}/${t}`;
+  let a = E.acc.get(chaveCargo);
+  if (!a) {
+    const b = lerBase(E, cargo, t);
+    if (!b) return;
+    a = {
+      b, zonas: new Map(), locais: new Map(),
+      idxC: new Map(b.cands.map((x, i) => [String(num(x.n)), i])),
+      idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
+      prop: b.tipo === 'prop', vagas: cargo === 'senador' ? Math.max(1, b.vagas || 1) : 1,
+    };
+    E.acc.set(chaveCargo, a);
+  }
+  const turno = num(f[c.NR_TURNO]);
+  const mun = pad5(f[c.CD_MUNICIPIO]);
+  const zona = num(f[c.NR_ZONA]);
+  const secao = num(f[c.NR_SECAO]);
+  const chaveSecao = `${turno}|${mun}-${zona}-${secao}`;
+  const localId = E.secaoLocal.get(chaveSecao) ?? `${mun}-${zona}-${num(f[c.NR_LOCAL_VOTACAO])}`;
+  const votavel = num(f[c.NR_VOTAVEL]);
+  const votos = num(f[c.QT_VOTOS]);
+  for (const [mapa, id] of [[a.zonas, String(zona)], [a.locais, localId]]) {
+    let r = mapa.get(id);
+    if (!r) {
+      r = { t: [0, 0, 0, 0, 0, 0], c: a.prop ? null : new Array(a.b.cands.length).fill(0), p: a.prop ? new Array(a.b.partidos.length).fill(0) : null, votosTotais: 0 };
+      mapa.set(id, r);
+    }
+    // o eleitorado de cada seção entra uma vez por cargo e unidade
+    const marca = `${chaveCargo}|${mapa === a.zonas ? 'z' : 'l'}|${chaveSecao}`;
+    if (!E.contadas.has(marca)) { E.contadas.add(marca); r.t[0] += E.eleitoradoSecao.get(chaveSecao) ?? 0; }
+    r.votosTotais += votos;
+    if (votavel === 95) r.t[4] += votos;
+    else if (votavel === 96 || votavel === 97) r.t[5] += votos;
+    else if (a.prop) {
+      const partido = String(votavel).length <= 2 ? String(votavel) : String(votavel).slice(0, 2);
+      const i = a.idxP.get(partido);
+      if (i !== undefined) { r.p[i] += votos; r.t[3] += votos; }
+    } else {
+      const i = a.idxC.get(String(votavel));
+      if (i !== undefined) { r.c[i] += votos; r.t[3] += votos; }
+    }
+  }
+}
+
+const estados = new Map(UFS.map((uf) => [uf, novaUf(uf)]));
+
+// 1) cadastro de locais e seções de cada UF
+for (const E of estados.values()) {
+  const UF = E.uf.toUpperCase();
   await lerCsvDoZip(zipLocais, (n) => n.endsWith(`_${UF}.csv`), (f, c) => {
     const turno = num(f[c.NR_TURNO]);
     const mun = pad5(f[c.CD_MUNICIPIO]);
@@ -136,95 +198,54 @@ for (const uf of UFS) {
     const nr = num(f[c.NR_LOCAL_VOTACAO]);
     const id = `${mun}-${zona}-${nr}`;
     const chave = `${turno}|${mun}-${zona}-${secao}`;
-    secaoLocal.set(chave, id);
-    eleitoradoSecao.set(chave, num(f[c.QT_ELEITOR_SECAO]));
-    if (turno !== 1 && locais.has(id)) return;
-    let l = locais.get(id);
+    E.secaoLocal.set(chave, id);
+    E.eleitoradoSecao.set(chave, num(f[c.QT_ELEITOR_SECAO]));
+    if (turno !== 1 && E.locais.has(id)) return;
+    let l = E.locais.get(id);
     if (!l) {
       l = { id, mun, ibge: ibgeDe.get(mun) ?? '', zona, nr, nome: f[c.NM_LOCAL_VOTACAO], bairro: f[c.NM_BAIRRO], lon: coord(f[c.NR_LONGITUDE]), lat: coord(f[c.NR_LATITUDE]), eleitorado: 0 };
-      locais.set(id, l);
+      E.locais.set(id, l);
     }
     if (turno === 1) l.eleitorado += num(f[c.QT_ELEITOR_SECAO]);
   });
+}
 
-  // 2) votos por seção → acumuladores por (cargo, turno) × (zona | local)
-  const base = new Map(); // `${cargo}/${t}` → arquivo base (candidatos/partidos)
-  const lerBase = (cargo, t) => {
-    const k = `${cargo}/${t}`;
-    if (!base.has(k)) {
-      const p = join(DADOS, cargo, String(t), cargo === 'presidente' ? 'br.json' : `${uf}.json`);
-      base.set(k, existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : null);
-    }
-    return base.get(k);
-  };
-  const acc = new Map(); // `${cargo}/${t}` → { zonas: Map, locais: Map, idxC: Map, idxP: Map, prop, vagas }
-  const secoesContadas = new Map(); // eleitorado por unidade conta cada seção uma vez por cargo
-  await lerCsvDoZip(join(CACHE, `votacao_secao_2026_${UF}.zip`), (n) => n.endsWith('.csv'), (f, c) => {
-    const cg = cargoDe(num(f[c.CD_ELEICAO]), num(f[c.CD_CARGO]));
-    if (!cg) return;
-    const [cargo, t] = cg;
-    const chaveCargo = `${cargo}/${t}`;
-    let a = acc.get(chaveCargo);
-    if (!a) {
-      const b = lerBase(cargo, t);
-      if (!b) return;
-      a = {
-        b, zonas: new Map(), locais: new Map(),
-        idxC: new Map(b.cands.map((x, i) => [String(num(x.n)), i])),
-        idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
-        prop: b.tipo === 'prop', vagas: cargo === 'senador' ? Math.max(1, b.vagas || 1) : 1,
-      };
-      acc.set(chaveCargo, a);
-    }
-    const turno = num(f[c.NR_TURNO]);
-    const mun = pad5(f[c.CD_MUNICIPIO]);
-    const zona = num(f[c.NR_ZONA]);
-    const secao = num(f[c.NR_SECAO]);
-    const chaveSecao = `${turno}|${mun}-${zona}-${secao}`;
-    const localId = secaoLocal.get(chaveSecao) ?? `${mun}-${zona}-${num(f[c.NR_LOCAL_VOTACAO])}`;
-    const votavel = num(f[c.NR_VOTAVEL]);
-    const votos = num(f[c.QT_VOTOS]);
-    for (const [mapa, id] of [[a.zonas, String(zona)], [a.locais, localId]]) {
-      let r = mapa.get(id);
-      if (!r) {
-        r = { t: [0, 0, 0, 0, 0, 0], c: a.prop ? null : new Array(a.b.cands.length).fill(0), p: a.prop ? new Array(a.b.partidos.length).fill(0) : null, votosTotais: 0 };
-        mapa.set(id, r);
-      }
-      const marca = `${chaveCargo}|${id}|${chaveSecao}`;
-      if (!secoesContadas.has(marca)) { secoesContadas.set(marca, 1); r.t[0] += eleitoradoSecao.get(chaveSecao) ?? 0; }
-      r.votosTotais += votos;
-      if (votavel === 95) r.t[4] += votos;
-      else if (votavel === 96 || votavel === 97) r.t[5] += votos;
-      else if (a.prop) {
-        const partido = String(votavel).length <= 2 ? String(votavel) : String(votavel).slice(0, 2);
-        const i = a.idxP.get(partido);
-        if (i !== undefined) { r.p[i] += votos; r.t[3] += votos; }
-      } else {
-        const i = a.idxC.get(String(votavel));
-        if (i !== undefined) { r.c[i] += votos; r.t[3] += votos; }
-      }
-    }
+// 2) cargos estaduais: um arquivo por UF
+for (const E of estados.values()) {
+  await lerCsvDoZip(zipVotos(E.uf.toUpperCase()), (n) => n.endsWith('.csv'), (f, c) => somarLinha(E, f, c));
+}
+
+// 3) Presidente: arquivo nacional, lido uma vez e distribuído por UF
+if (existsSync(zipVotos('BR'))) {
+  await lerCsvDoZip(zipVotos('BR'), (n) => n.endsWith('.csv'), (f, c) => {
+    const E = estados.get(String(f[c.SG_UF]).toLowerCase());
+    if (E) somarLinha(E, f, c);
   });
-  secoesContadas.clear();
+} else console.warn('votacao_secao_2026_BR.zip ausente: Presidente fica sem zonas e locais');
 
-  // 3) grava resultados
+// 4) grava tudo por UF
+for (const E of estados.values()) {
+  const t0 = Date.now();
+  const uf = E.uf;
+  E.contadas.clear();
   const gravar = (rel, obj) => {
     const p = join(DADOS, rel);
     mkdirSync(join(p, '..'), { recursive: true });
     writeFileSync(p, JSON.stringify(obj));
   };
-  for (const [chaveCargo, a] of acc) {
+  for (const [chaveCargo, a] of E.acc) {
     for (const nivel of ['zonas', 'locais']) {
       const mun = {};
       const tot = { t: [0, 0, 0, 0, 0, 0], c: new Array(a.b.cands.length).fill(0), p: new Array(a.b.partidos.length).fill(0) };
       for (const [id, r] of a[nivel]) {
-        r.t[1] = Math.round(r.votosTotais / a.vagas); // comparecimento
-        r.t[2] = Math.max(0, r.t[0] - r.t[1]); // abstenção
-        if (a.vagas > 1) { r.t[4] = Math.round(r.t[4] / a.vagas); r.t[5] = Math.round(r.t[5] / a.vagas); }
-        const reg = { t: r.t, c: a.prop ? [] : r.c };
+        const t = [...r.t];
+        t[1] = Math.round(r.votosTotais / a.vagas); // comparecimento (Senado 2026: 2 votos por eleitor)
+        t[2] = Math.max(0, t[0] - t[1]);
+        if (a.vagas > 1) { t[4] = Math.round(t[4] / a.vagas); t[5] = Math.round(t[5] / a.vagas); }
+        const reg = { t, c: a.prop ? [] : r.c };
         if (a.prop) reg.p = r.p;
         mun[id] = reg;
-        r.t.forEach((x, i) => (tot.t[i] += x));
+        t.forEach((x, i) => (tot.t[i] += x));
         if (!a.prop) r.c.forEach((x, i) => (tot.c[i] += x));
         else r.p.forEach((x, i) => (tot.p[i] += x));
       }
@@ -234,15 +255,22 @@ for (const uf of UFS) {
     }
   }
 
-  // 4) cadastro dos locais (pontos)
-  const lista = [...locais.values()].sort((x, y) => x.id.localeCompare(y.id));
+  // cadastro dos locais (pontos)
+  const lista = [...E.locais.values()].sort((x, y) => x.id.localeCompare(y.id));
   mkdirSync('public/geo/locais', { recursive: true });
   writeFileSync(`public/geo/locais/${uf}.json`, JSON.stringify({
     campos: ['id', 'ibge', 'zona', 'nome', 'bairro', 'lon', 'lat', 'eleitorado'],
     l: lista.map((l) => [l.id, l.ibge, l.zona, l.nome, l.bairro, l.lon === null ? null : +l.lon.toFixed(5), l.lat === null ? null : +l.lat.toFixed(5), l.eleitorado]),
   }));
 
-  // 5) áreas das zonas: município inteiro quando tem uma zona; Voronoi dos locais recortado quando tem várias
+  // áreas das zonas
+  const nZonas = desenharZonas(uf, lista);
+  console.log(`${uf}: ${E.locais.size} locais, ${nZonas} zonas, ${E.acc.size} cargos/turnos (${((Date.now() - t0) / 1000).toFixed(0)}s)`);
+  E.locais.clear(); E.secaoLocal.clear(); E.eleitoradoSecao.clear(); E.acc.clear();
+}
+
+/** Município inteiro quando tem uma zona; Voronoi dos locais recortado pelo município quando tem várias. */
+function desenharZonas(uf, lista) {
   const topoUf = JSON.parse(readFileSync(`public/geo/uf/${uf}.json`, 'utf8'));
   const muniFc = feature(topoUf, topoUf.objects.municipios);
   const porMunicipio = new Map();
@@ -250,7 +278,7 @@ for (const uf of UFS) {
     if (!porMunicipio.has(l.ibge)) porMunicipio.set(l.ibge, []);
     porMunicipio.get(l.ibge).push(l);
   }
-  const partesZona = new Map(); // zona → array de polígonos (coords polygon-clipping)
+  const partesZona = new Map();
   const addParte = (zona, geom) => {
     if (!partesZona.has(zona)) partesZona.set(zona, []);
     partesZona.get(zona).push(geom);
@@ -261,7 +289,6 @@ for (const uf of UFS) {
     const zonas = [...new Set(ls.map((l) => l.zona))];
     if (!zonas.length) continue; // lagoas e afins
     if (zonas.length === 1) { addParte(zonas[0], geom); continue; }
-    // eleitorado por zona no município (zona sem coordenada válida herda nada; recebe área só se tiver pontos)
     const pontos = [], zonaDoPonto = [];
     const vistos = new Set();
     for (const l of ls) {
@@ -272,17 +299,17 @@ for (const uf of UFS) {
       pontos.push([l.lon, l.lat]);
       zonaDoPonto.push(l.zona);
     }
-    const zonasComPonto = new Set(zonaDoPonto);
-    if (zonasComPonto.size <= 1) {
-      // sem como separar: município vai para a zona com mais eleitores
+    if (new Set(zonaDoPonto).size <= 1) {
+      // sem como separar: o município vai para a zona com mais eleitores
       const elet = new Map();
       for (const l of ls) elet.set(l.zona, (elet.get(l.zona) ?? 0) + l.eleitorado);
       addParte([...elet.entries()].sort((a, b) => b[1] - a[1])[0][0], geom);
       continue;
     }
     let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
-    for (const p of geom) for (const r of p) for (const [x, y] of r) { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); }
-    for (const [x, y] of pontos) { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); }
+    const estica = ([x, y]) => { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); };
+    for (const p of geom) for (const r of p) r.forEach(estica);
+    pontos.forEach(estica);
     const vor = Delaunay.from(pontos).voronoi([x0 - 0.01, y0 - 0.01, x1 + 0.01, y1 + 0.01]);
     const celulasPorZona = new Map();
     pontos.forEach((_, i) => {
@@ -307,6 +334,5 @@ for (const uf of UFS) {
   topoZ.bbox = topoUf.bbox;
   mkdirSync('public/geo/zonas', { recursive: true });
   writeFileSync(`public/geo/zonas/${uf}.json`, JSON.stringify(topoZ));
-
-  console.log(`${uf}: ${locais.size} locais, ${partesZona.size} zonas, ${acc.size} cargos/turnos (${((Date.now() - t0) / 1000).toFixed(0)}s)`);
+  return partesZona.size;
 }
