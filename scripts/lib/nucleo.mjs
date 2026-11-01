@@ -51,6 +51,9 @@ export function urlResultado(eleicao, cdCargo, uf, munTse = '') {
 }
 
 // ------------------------------------------------------------------ leitura
+/** "Eleito", "Eleito por QP", "Eleito por média" → true; "2º turno", "Não eleito", "Suplente" → false */
+export const ehEleito = (situacao = '') => /^eleit/i.test(situacao.trim());
+
 const int = (s) => (s === undefined || s === null || s === '' ? 0 : parseInt(String(s), 10) || 0);
 
 /**
@@ -78,7 +81,8 @@ export function normalizar(raw) {
           nome: c.nmu || c.nm,
           nomeCompleto: c.nm,
           partido: par.sg,
-          eleito: c.e === 's',
+          // o TSE marca e='s' também para quem foi ao 2º turno; a situação é a fonte confiável
+          eleito: ehEleito(c.st),
           situacao: c.st ?? '',
           vice: c.vs?.[0]?.nmu ?? '',
           votos,

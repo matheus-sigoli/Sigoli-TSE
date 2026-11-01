@@ -16,7 +16,7 @@
     "coletar": "node scripts/coletar-tse.mjs",
     "processar": "node scripts/processar-tse.mjs",
     "dados": "npm run coletar && npm run processar",
-    "test": "node --test scripts/test/"
+    "test": "node --test scripts/test/*.test.mjs"
   },
   "dependencies": {
     "lottie-web": "5.13.0",
