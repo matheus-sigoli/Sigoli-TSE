@@ -28,7 +28,7 @@ npm run malha        # gera public/geo/br.json, public/geo/uf/*.json e public/ge
 ```
 
 ## Publicar
-`git push` na branch principal: a Vercel faz o build (`next build` → `out/`) e publica.
+`git push` na branch `main`: a Vercel (projeto `sigoli-tse`, ligado ao GitHub) faz o build e publica.
 Cabeçalhos de segurança e cache estão em `vercel.json`.
 
 ## Fontes
