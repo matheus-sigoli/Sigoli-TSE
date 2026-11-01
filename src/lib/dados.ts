@@ -163,7 +163,8 @@ function buscarMalhaCidade(uf: string, ibge: string): Promise<MalhaCidade> {
     p = Promise.all([
       buscarMalha(uf),
       buscar<Record<string, number>>(`/geo/bairros/${uf}/cidades.json`).catch(() => ({} as Record<string, number>)),
-      buscarBairros(uf),
+      // sem o cadastro de bairros (dados ainda não gerados) a malha da cidade aparece mesmo assim
+      buscarBairros(uf).catch((): Bairros => ({ lista: [], porId: new Map(), porCidade: new Map() })),
     ]).then(async ([base, comMalha, bairros]) => {
       const cidade = base.municipios.features.filter((f) => String(f.id) === ibge);
       const fundo: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: cidade };
