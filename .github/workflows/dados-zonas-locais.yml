@@ -9,6 +9,12 @@ name: Dados de zonas e locais
 
 on:
   workflow_dispatch:
+  # também quando o próprio processamento muda (o commit de dados só mexe em public/, então não entra em laço)
+  push:
+    paths:
+      - .github/workflows/dados-zonas-locais.yml
+      - scripts/zonas-locais.mjs
+      - scripts/corrigir-anulados.mjs
 
 permissions:
   contents: write
