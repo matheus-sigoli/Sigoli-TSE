@@ -25,9 +25,6 @@ interface Props {
   descrever: (id: string) => { titulo: string; linha: string } | null;
 }
 
-// worker do MapLibre servido em /maplibre (copiado por scripts/copiar-maplibre.mjs)
-setWorkerUrl('/maplibre/maplibre-gl-worker.mjs');
-
 const VAZIO: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
 function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar, descrever }: Props) {
@@ -43,6 +40,9 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
   // ---- cria o mapa uma vez
   useEffect(() => {
     if (!div.current) return;
+    // worker do MapLibre servido pela própria origem (copiado por scripts/copiar-maplibre.mjs);
+    // URL absoluta porque o bundler reescreve import.meta.url
+    setWorkerUrl(new URL('/maplibre/maplibre-gl-worker.mjs', window.location.origin).href);
     const m = new MapaGL({
       container: div.current,
       style: {
