@@ -4,12 +4,13 @@
   "private": true,
   "description": "Sigoli.TSE — resultados das Eleições 2026 por município, com dados oficiais do TSE.",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve out",
-    "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "malha": "node --max-old-space-size=6144 scripts/malha.mjs",
     "coletar": "node scripts/coletar-tse.mjs",
@@ -18,17 +19,17 @@
     "test": "node --test scripts/test/"
   },
   "dependencies": {
-    "lottie-web": "5.12.2",
-    "maplibre-gl": "4.7.1",
-    "next": "15.1.6",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "lottie-web": "5.13.0",
+    "maplibre-gl": "6.16.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@types/geojson": "7946.0.14",
-    "@types/node": "22.10.2",
-    "@types/react": "19.0.2",
-    "@types/react-dom": "19.0.2",
-    "typescript": "5.7.2"
+    "@types/geojson": "7946.0.16",
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
   }
 }

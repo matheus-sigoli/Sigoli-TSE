@@ -5,6 +5,5 @@ const nextConfig = {
   images: { unoptimized: true },
   reactStrictMode: true,
   poweredByHeader: false,
-  experimental: { optimizePackageImports: [] },
 };
 export default nextConfig;

@@ -4,7 +4,10 @@
  * sobre o cinza #666666 (ADR 0004). Cores entram por feature-state, então
  * trocar de cargo/turno não recria a fonte de dados.
  */
-import maplibregl, { type GeoJSONSource, type MapLayerMouseEvent } from 'maplibre-gl';
+import {
+  LngLatBounds, Map as MapaGL, NavigationControl,
+  type GeoJSONSource, type MapLayerMouseEvent, type MapMouseEvent,
+} from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { memo, useEffect, useRef, useState } from 'react';
 import { BORDA_MUNICIPIO, FUNDO_MAPA, SEM_DADOS } from '@/lib/cores';
@@ -26,7 +29,7 @@ const VAZIO: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: 
 
 function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar, descrever }: Props) {
   const div = useRef<HTMLDivElement>(null);
-  const mapa = useRef<maplibregl.Map | null>(null);
+  const mapa = useRef<MapaGL | null>(null);
   const [pronto, setPronto] = useState(false);
   const [dica, setDica] = useState<{ x: number; y: number; titulo: string; linha: string } | null>(null);
   // callbacks mais recentes sem re-registrar eventos
@@ -37,7 +40,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
   // ---- cria o mapa uma vez
   useEffect(() => {
     if (!div.current) return;
-    const m = new maplibregl.Map({
+    const m = new MapaGL({
       container: div.current,
       style: {
         version: 8,
@@ -101,7 +104,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     });
     m.touchZoomRotate.disableRotation();
     m.keyboard.disableRotation();
-    m.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
+    m.addControl(new NavigationControl({ showCompass: false }), 'bottom-right');
 
     let hoverId: string | number | null = null;
     const limparHover = () => {
@@ -123,7 +126,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
       setDica(d ? { x: e.point.x, y: e.point.y, ...d } : null);
     });
     m.on('mouseleave', 'areas', limparHover);
-    m.on('click', (e) => {
+    m.on('click', (e: MapMouseEvent) => {
       const f = m.queryRenderedFeatures(e.point, { layers: ['areas'] })[0];
       cb.current.aoSelecionar(f && f.id !== undefined ? String(f.id) : null);
     });
@@ -175,7 +178,7 @@ function Mapa({ chave, malha, cores, selecionado, destaque, mundo, aoSelecionar,
     }
     const alvo = destaque ? malha.municipios.features.filter((f) => destaque.has(String(f.id))) : null;
     if (alvo?.length) {
-      const b = new maplibregl.LngLatBounds();
+      const b = new LngLatBounds();
       for (const f of alvo) percorrer(f.geometry, (x, y) => b.extend([x, y]));
       m.fitBounds(b, { padding: 40, duration: 500 });
     } else if (!destaque && !mundo) {
