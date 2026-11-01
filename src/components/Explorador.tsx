@@ -2,7 +2,7 @@
 /**
  * Tela principal: filtros | mapa | painel.
  * Estado na URL: caminho = /2026/{abr}/{cargo}; busca = ?t=2&mun=3550308&reg=350001&foco=c:1&nivel=zonas
- * No nível zonas/locais, `mun` guarda a zona ou o local selecionado.
+ * No nível zonas, `mun` guarda a zona; no nível bairros, `cid` é a cidade (IBGE) e `mun` o bairro.
  */
 import dynamic from 'next/dynamic';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
@@ -12,7 +12,9 @@ import {
   type ArquivoResultado, type CargoSlug, type Turno,
 } from '@/lib/dominio';
 import { pct, titulo } from '@/lib/formato';
-import { ArquivoAusente, lerNivel, useLocais, useMalha, useMunicipios, useRegioes, useResultado, type Nivel } from '@/lib/dados';
+import {
+  ArquivoAusente, lerNivel, useBairros, useLocais, useMalha, useMalhaCidade, useMunicipios, useRegioes, useResultado, type Nivel,
+} from '@/lib/dados';
 import { calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
 import Filtros from './Filtros';
 import Painel from './Painel';
@@ -94,20 +96,28 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
       const p = new URLSearchParams();
       if (turno === 2 && turnoDisponivel(destino, a, 2)) p.set('t', '2');
       if (nivel !== 'municipios') p.set('nivel', nivel);
+      const cidade = params.get('cid');
+      if (nivel === 'bairros' && cidade) p.set('cid', cidade);
       const q = p.toString();
       return `${rotaDe(a, c)}${q ? `?${q}` : ''}`;
     },
-    [abr, turno, nivel],
+    [abr, turno, nivel, params],
   );
 
   // ---- dados
-  const resultado = useResultado(cargoSlug, turno, abr, nivel);
-  const malha = useMalha(abr, nivel);
-  const locais = useLocais(nivel !== 'municipios' ? abr : null);
+  // Bairros: sem cidade escolhida, o mapa mostra os municípios do estado para escolher uma (ADR 0009)
+  const cid = nivel === 'bairros' ? params.get('cid') : null;
+  const nivelDados: Nivel = nivel === 'bairros' && !cid ? 'municipios' : nivel;
+  const resultado = useResultado(cargoSlug, turno, abr, nivelDados);
+  const malhaUf = useMalha(abr, nivelDados === 'zonas' ? 'zonas' : 'municipios');
+  const malhaCidade = useMalhaCidade(cid ? abr : null, cid);
+  const malha = cid ? { dados: malhaCidade.dados?.malha ?? null, carregando: malhaCidade.carregando } : malhaUf;
+  const bairros = useBairros(nivel === 'bairros' ? abr : null);
+  const locais = useLocais(nivel === 'zonas' || (cid && mun) ? abr : null);
   // zona → municípios que ela cobre (para os nomes)
   const municipiosDaZona = useMemo(() => {
     const m = new Map<string, Set<string>>();
-    for (const l of locais.dados?.lista ?? []) {
+    for (const l of locais.dados ?? []) {
       if (!m.has(l.zona)) m.set(l.zona, new Set());
       m.get(l.zona)!.add(l.ibge);
     }
@@ -128,25 +138,32 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     }
     return { porIbge, porPais };
   }, [municipios.dados]);
+  const nomeCidade = (ibge: string) => titulo(indiceMunicipios.porIbge.get(ibge)?.nome ?? 'Cidade');
 
   // municípios da região escolhida (a partir das propriedades da malha da UF)
   const municipiosRegiao = useMemo(() => {
-    if (!reg || !malha.dados || abr === 'br' || abr === 'exterior' || nivel !== 'municipios') return null;
+    if (!reg || !malhaUf.dados || abr === 'br' || abr === 'exterior' || nivelDados !== 'municipios' || cid) return null;
     const s = new Set<string>();
-    for (const f of malha.dados.municipios.features) {
+    for (const f of malhaUf.dados.municipios.features) {
       const pr = f.properties as { id: string; rgi?: string; rgint?: string };
       if (pr.rgi === reg || pr.rgint === reg) s.add(pr.id);
     }
     return s.size ? s : null;
-  }, [reg, malha.dados, abr, nivel]);
+  }, [reg, malhaUf.dados, abr, nivelDados, cid]);
+
+  const bairrosDaCidade = useMemo(
+    () => (cid ? new Set((bairros.dados?.porCidade.get(cid) ?? []).map((b) => b.id)) : null),
+    [cid, bairros.dados],
+  );
 
   const recorteMunicipios = useMemo(() => {
     if (mun) {
       if (abr === 'exterior') return new Set(indiceMunicipios.porPais.get(mun)?.cidades ?? []);
       return new Set([mun]);
     }
+    if (cid) return bairrosDaCidade ?? new Set<string>();
     return municipiosRegiao;
-  }, [mun, abr, municipiosRegiao, indiceMunicipios]);
+  }, [mun, abr, cid, bairrosDaCidade, municipiosRegiao, indiceMunicipios]);
 
   const visao = useMemo(() => {
     if (!resultado.dados) return null;
@@ -165,10 +182,14 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     },
     [municipiosDaZona, indiceMunicipios],
   );
+  const nomeBairro = (id: string) => {
+    const b = bairros.dados?.porId.get(id);
+    return b ? (b.origem === 't' ? titulo(b.nome) : b.nome) : 'Bairro';
+  };
 
   const nomeRecorte = useMemo(() => {
     if (mun && nivel === 'zonas') return `Zona ${mun}`;
-    if (mun && nivel === 'locais') return titulo(locais.dados?.porId.get(mun)?.nome ?? 'Local de votação');
+    if (cid) return mun ? nomeBairro(mun) : nomeCidade(cid);
     if (mun) {
       if (abr === 'exterior') return indiceMunicipios.porPais.get(mun)?.nome ?? 'País';
       const m = indiceMunicipios.porIbge.get(mun);
@@ -176,28 +197,51 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     }
     if (reg && regioes.dados?.[reg]) return regioes.dados[reg].nome;
     return nomeAbrangencia(abr);
-  }, [mun, reg, abr, indiceMunicipios, regioes.dados, nivel, locais.dados]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mun, reg, abr, cid, indiceMunicipios, regioes.dados, nivel, bairros.dados]);
 
-  // linha de contexto abaixo do título, para zona e local
+  // linha de contexto abaixo do título
   const contexto = useMemo(() => {
-    if (!mun || nivel === 'municipios') return null;
-    if (nivel === 'zonas') return nomeZona(mun) || null;
-    const l = locais.dados?.porId.get(mun);
-    if (!l) return null;
-    const cidade = indiceMunicipios.porIbge.get(l.ibge)?.nome;
-    return [l.bairro && titulo(l.bairro), cidade && titulo(cidade), `Zona ${l.zona}`, `${l.eleitorado.toLocaleString('pt-BR')} eleitores`].filter(Boolean).join(' · ');
-  }, [mun, nivel, nomeZona, locais.dados, indiceMunicipios]);
+    if (nivel === 'zonas') return mun ? nomeZona(mun) || null : null;
+    if (nivel !== 'bairros') return null;
+    if (!cid) return 'Escolha uma cidade no mapa para ver os bairros.';
+    if (!mun) {
+      const lista = bairros.dados?.porCidade.get(cid) ?? [];
+      const comArea = lista.filter((b) => b.origem === 'i').length;
+      return `${lista.length} bairros${comArea ? `, ${comArea} com área do IBGE` : ''}`;
+    }
+    const b = bairros.dados?.porId.get(mun);
+    if (!b) return null;
+    return [
+      nomeCidade(b.ibge),
+      `${b.locais} ${b.locais === 1 ? 'local' : 'locais'} de votação`,
+      `${b.eleitorado.toLocaleString('pt-BR')} eleitores`,
+      b.origem === 'i' ? 'área do IBGE' : 'bairro informado pelo TSE',
+    ].join(' · ');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mun, nivel, cid, nomeZona, bairros.dados, indiceMunicipios]);
+
+  const locaisDoBairro = useMemo(
+    () => (cid && mun ? (locais.dados ?? []).filter((l) => l.idBairro === mun).sort((a, b) => b.eleitorado - a.eleitorado) : null),
+    [cid, mun, locais.dados],
+  );
 
   const trilha = useMemo(() => {
     const itens: { rotulo: string; acao: () => void; href?: string }[] = [];
     if (abr !== 'br') itens.push({ rotulo: 'Brasil', acao: () => irPara('br'), href: `${rotaDe('br', cargoSlug)}${turno === 2 ? '?t=2' : ''}` });
-    if ((mun || reg) && abr !== 'br') itens.push({ rotulo: nomeAbrangencia(abr), acao: () => atualizarBusca({ mun: null, reg: null, foco: null }) });
+    if ((mun || reg || cid) && abr !== 'br') itens.push({ rotulo: nomeAbrangencia(abr), acao: () => atualizarBusca({ mun: null, reg: null, cid: null, foco: null }) });
+    if (cid && mun) itens.push({ rotulo: nomeCidade(cid), acao: () => atualizarBusca({ mun: null, foco: null }) });
     return itens;
-  }, [abr, mun, reg, irPara, atualizarBusca, cargoSlug, turno]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [abr, mun, reg, cid, irPara, atualizarBusca, cargoSlug, turno, indiceMunicipios]);
 
   // ---- interações do mapa
   const aoSelecionar = useCallback(
     (id: string | null) => {
+      if (nivel === 'bairros' && !cid) {
+        // escolher a cidade abre os bairros dela
+        return id ? atualizarBusca({ cid: id, mun: null, reg: null, foco: null }) : undefined;
+      }
       if (!id) return atualizarBusca({ mun: null });
       if (abr === 'br') {
         // na visão Brasil, clicar num município abre o estado já com ele selecionado
@@ -206,22 +250,19 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
       }
       atualizarBusca({ mun: id === mun ? null : id });
     },
-    [abr, mun, cargoSlug, irPara, atualizarBusca],
+    [abr, mun, cid, nivel, cargoSlug, irPara, atualizarBusca],
   );
 
   const descreverFeicao = useCallback(
     (id: string): { titulo: string; linha: string } | null => {
       const arq = resultado.dados;
       if (!arq) return null;
-      if (nivel !== 'municipios' && !arq.resumo) {
+      if (nivelDados !== 'municipios' && !arq.resumo) {
         let tituloDica: string;
-        if (nivel === 'zonas') {
+        if (nivelDados === 'zonas') {
           const nomes = nomeZona(id);
           tituloDica = `Zona ${id}${nomes ? ` · ${nomes}` : ''}`;
-        } else {
-          const l = locais.dados?.porId.get(id);
-          tituloDica = l ? `${titulo(l.nome)}${l.bairro ? ` · ${titulo(l.bairro)}` : ''}` : 'Local de votação';
-        }
+        } else tituloDica = nomeBairro(id);
         const r = arq.mun[id];
         return { titulo: tituloDica, linha: r ? linhaVencedor(arq, [r]) : 'Sem votos neste cargo' };
       }
@@ -237,18 +278,20 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
       }
       const regs = abr === 'exterior' ? (indiceMunicipios.porPais.get(id)?.cidades ?? []).map((c) => arq.mun[c]).filter(Boolean) : [arq.mun[id]].filter(Boolean);
       if (!regs.length) return { titulo: nome, linha: 'Sem votos neste cargo' };
-      return { titulo: nome, linha: linhaVencedor(arq, regs) };
+      return { titulo: nome, linha: linhaVencedor(arq, regs) + (nivel === 'bairros' ? ' · clique para ver os bairros' : '') };
     },
-    [resultado.dados, abr, indiceMunicipios, nivel, nomeZona, locais.dados],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [resultado.dados, abr, indiceMunicipios, nivel, nivelDados, nomeZona, bairros.dados],
   );
 
   const mudarNivel = useCallback(
-    (n: Nivel) => atualizarBusca({ nivel: n === 'municipios' ? null : n, mun: null, reg: null, foco: null }),
+    (n: Nivel) => atualizarBusca({ nivel: n === 'municipios' ? null : n, mun: null, reg: null, cid: null, foco: null }),
     [atualizarBusca],
   );
 
-  const carregando = resultado.carregando || malha.carregando || locais.carregando;
+  const carregando = resultado.carregando || malha.carregando || bairros.carregando || (nivel === 'zonas' && locais.carregando);
   const ausente = resultado.erro instanceof ArquivoAusente;
+  const chaveMapa = cid ? `${abr}:b:${cid}` : nivelDados === 'zonas' ? `${abr}:zonas` : abr;
 
   return (
     <div className="app">
@@ -256,7 +299,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
         abr={abr}
         cargo={cargo}
         regiaoSelecionada={reg}
-        malha={malha.dados}
+        malha={malhaUf.dados}
         regioes={regioes.dados}
         municipios={municipios.dados}
         legenda={visao?.legenda ?? []}
@@ -266,18 +309,24 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
         daltonico={daltonico}
         aoMudarAbrangencia={(a) => irPara(a)}
         aoMudarRegiao={(r) => atualizarBusca({ reg: r, mun: null })}
-        aoEscolherMunicipio={(m) => (m.uf === abr ? atualizarBusca({ mun: m.ibge, reg: null, nivel: null }) : irPara(m.uf, cargoSlug, { mun: m.ibge }))}
+        aoEscolherMunicipio={(m) => {
+          if (m.uf !== abr) return irPara(m.uf, cargoSlug, nivel === 'bairros' ? { nivel: 'bairros', cid: m.ibge } : { mun: m.ibge });
+          if (nivel === 'bairros') return atualizarBusca({ cid: m.ibge, mun: null, reg: null });
+          atualizarBusca({ mun: m.ibge, reg: null, nivel: null });
+        }}
         nivel={nivel}
+        unidade={nivelDados}
         aoMudarNivel={mudarNivel}
         aoAlternarTema={alternarTema}
         aoAlternarDaltonico={alternarDaltonico}
       />
-      <main className="mapa" aria-label={`Mapa de ${cargo.nome} — ${nomeAbrangencia(abr)}`}>
+      <main className="mapa" aria-label={`Mapa de ${cargo.nome} — ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}`}>
         {malha.dados ? (
           <Mapa
-            chave={nivel === 'zonas' ? `${abr}:zonas` : abr}
+            chave={chaveMapa}
             malha={malha.dados}
-            pontos={nivel === 'locais' ? locais.dados?.pontos ?? null : null}
+            fundo={cid ? malhaCidade.dados?.fundo ?? null : null}
+            pontos={cid ? malhaCidade.dados?.pontos ?? null : null}
             cores={visao?.cores ?? null}
             selecionado={mun}
             destaque={municipiosRegiao}
@@ -286,9 +335,11 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
             descrever={descreverFeicao}
           />
         ) : null}
-        {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${nomeAbrangencia(abr)}…`} /> : null}
+        {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">
-          Malha: IBGE 2025 · Resultados: TSE{nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
+          Malha: IBGE{cid ? ' (bairros: Censo 2022)' : ' 2025'} · Resultados: TSE
+          {nivelDados === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
+          {cid ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}
         </p>
       </main>
       <Painel
@@ -297,7 +348,8 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
         turno={turno}
         nomeRecorte={nomeRecorte}
         contexto={contexto}
-        nivel={nivel}
+        nivel={nivelDados}
+        locais={locaisDoBairro}
         trilha={trilha}
         visao={visao}
         arquivo={resultado.dados}

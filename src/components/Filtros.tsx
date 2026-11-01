@@ -25,15 +25,17 @@ interface Props {
   aoAlternarTema: () => void;
   aoAlternarDaltonico: () => void;
   nivel: Nivel;
+  /** unidade pintada no mapa agora (no nível bairros, sem cidade escolhida, ainda são municípios) */
+  unidade?: Nivel;
   aoMudarNivel: (n: Nivel) => void;
 }
 
 const NIVEIS: { n: Nivel; rotulo: string }[] = [
   { n: 'municipios', rotulo: 'Municípios' },
   { n: 'zonas', rotulo: 'Zonas' },
-  { n: 'locais', rotulo: 'Locais' },
+  { n: 'bairros', rotulo: 'Bairros' },
 ];
-const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na zona', locais: 'no local' };
+const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na zona', bairros: 'no bairro' };
 
 const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
 
@@ -81,7 +83,11 @@ function Filtros(p: Props) {
               <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
             ))}
           </div>
-          {p.nivel === 'locais' ? <p className="marca-sub" style={{ marginTop: 6 }}>Círculo maior, mais eleitores no local.</p> : null}
+          {p.nivel === 'bairros' ? (
+            <p className="marca-sub" style={{ marginTop: 6 }}>
+              Clique numa cidade. Bairros com área vêm do IBGE; os demais aparecem como círculos, pelo tamanho do eleitorado.
+            </p>
+          ) : null}
         </div>
       ) : null}
 
@@ -104,7 +110,7 @@ function Filtros(p: Props) {
 
       {p.legenda.length ? (
         <div className="campo legenda-bloco">
-          <span className="campo-rotulo">{p.abr === 'exterior' ? (p.modoCalor ? '% de votos no país' : 'Vencedor no país') : p.modoCalor ? `% de votos ${UNIDADE[p.nivel]}` : `Vencedor ${UNIDADE[p.nivel]}`}</span>
+          <span className="campo-rotulo">{p.abr === 'exterior' ? (p.modoCalor ? '% de votos no país' : 'Vencedor no país') : p.modoCalor ? `% de votos ${UNIDADE[p.unidade ?? p.nivel]}` : `Vencedor ${UNIDADE[p.unidade ?? p.nivel]}`}</span>
           <div className="legenda">
             {(p.modoCalor ? p.legenda.slice(0, 0) : p.legenda).map((l) => (
               <div key={l.rotulo} className="legenda-item">

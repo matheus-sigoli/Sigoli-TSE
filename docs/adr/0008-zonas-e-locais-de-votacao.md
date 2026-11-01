@@ -43,3 +43,6 @@ O TSE não publica o contorno das zonas.
   (o arquivo BR de Presidente tem dezenas de milhões de linhas).
 - A forma das zonas em capitais é aproximada; os totais por zona são exatos.
 - Conferência: somar as zonas de uma UF bate com o total oficial da UF (válidos e comparecimento).
+
+## Atualização (01/11/2026)
+O nível **Locais** (círculos por local de votação) foi substituído pelos **Bairros** (ADR 0009). As zonas continuam.

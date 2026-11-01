@@ -7,3 +7,4 @@ shp/*.zip
 next-env.d.ts
 .vercel
 .env*
+shp/bairros/*.zip

@@ -87,7 +87,30 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 .filtros { border-right: 1px solid var(--line); padding: 18px 18px 24px; display: flex; flex-direction: column; gap: 22px; }
 .painel { border-left: 1px solid var(--line); display: flex; flex-direction: column; }
 .mapa { position: relative; background: var(--map); min-width: 0; }
-.mapa .mapa-canvas { position: absolute; inset: 0; } /* vence o position: relative de .maplibregl-map */
+.mapa .mapa-canvas { position: absolute; inset: 0; overflow: hidden; }
+
+/* ------------------------------------------------------------ mapa SVG (ADR 0010) */
+.mapa-svg { display: block; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
+.mapa-svg:active { cursor: grabbing; }
+.mapa-svg:focus-visible { outline: 2px solid var(--text); outline-offset: -2px; }
+.mapa-svg path, .mapa-svg circle { vector-effect: non-scaling-stroke; }
+.mapa-areas path, .mapa-pontos circle { cursor: pointer; stroke-linejoin: round; }
+.mapa-fundo { fill: #7a7a7a; stroke: #fff; stroke-width: 1.2px; stroke-opacity: 0.9; }
+.mapa-linhas { fill: none; stroke-linejoin: round; pointer-events: none; }
+.mapa-hover, .mapa-selecao { fill: none; stroke: #111317; pointer-events: none; stroke-linejoin: round; }
+.mapa-hover { stroke-width: 2px; }
+.mapa-selecao { stroke-width: 3.2px; }
+.mapa-zoom {
+  position: absolute; right: 12px; bottom: 28px; z-index: 4; display: grid;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-1); box-shadow: var(--shadow); overflow: hidden;
+}
+.mapa-zoom button {
+  width: 34px; height: 34px; display: grid; place-items: center; border: 0; background: transparent; color: var(--text);
+  font-size: 18px; line-height: 1; cursor: pointer;
+}
+.mapa-zoom button + button { border-top: 1px solid var(--line); }
+.mapa-zoom button:hover { background: var(--surface-2); }
+.mapa-zoom button:focus-visible { outline: 2px solid var(--text); outline-offset: -2px; }
 
 /* ------------------------------------------------------------ marca */
 .marca { display: flex; align-items: baseline; gap: 2px; text-decoration: none; color: var(--text); }
@@ -219,6 +242,11 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 .bancada span { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px 3px 3px; border-radius: 6px; background: var(--surface-2); font-size: var(--fs-2); }
 
 .rodape { margin-top: auto; padding: 16px 20px 20px; color: var(--muted); font-size: var(--fs-1); border-top: 1px solid var(--line); }
+.locais-bairro { margin: 8px 20px 4px; border: 1px solid var(--line); border-radius: var(--r-1); }
+.locais-bairro summary { padding: 10px 12px; cursor: pointer; font-size: var(--fs-2); font-weight: 600; }
+.locais-bairro ul { list-style: none; margin: 0; padding: 0 12px 10px; display: grid; gap: 8px; max-height: 280px; overflow: auto; }
+.locais-bairro li { display: grid; gap: 2px; font-size: var(--fs-2); }
+.locais-bairro li .num { color: var(--muted); font-size: var(--fs-1); }
 .rodape a { color: inherit; }
 
 /* ------------------------------------------------------------ legenda */
@@ -253,10 +281,6 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 }
 .carregando-anim { width: 120px; height: 90px; }
 .creditos-mapa { position: absolute; right: 8px; bottom: 6px; z-index: 4; font-size: 11px; color: rgb(255 255 255 / 0.85); text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
-.maplibregl-ctrl-group { background: var(--surface) !important; border: 1px solid var(--line); box-shadow: var(--shadow) !important; }
-.maplibregl-ctrl-group button + button { border-top: 1px solid var(--line) !important; }
-.maplibregl-ctrl-icon { filter: var(--icone-filtro, invert(1)); }
-:root[data-theme='claro'] { --icone-filtro: none; }
 
 /* ------------------------------------------------------------ celular: mapa + gaveta */
 .puxador { display: none; }
@@ -294,7 +318,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   .titulo { font-size: var(--fs-5); }
   .indicadores dd { font-size: var(--fs-3); }
   .creditos-mapa { bottom: calc(var(--espiada, 300px) + 6px); }
-  .maplibregl-ctrl-bottom-right { bottom: var(--espiada, 300px); }
+  .mapa-zoom { bottom: calc(var(--espiada, 300px) + 28px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { textoSobre } from '@/lib/cores';
-import { preCarregar, urlResultadoNivel, type Nivel } from '@/lib/dados';
+import { preCarregar, urlResultadoNivel, type Local, type Nivel } from '@/lib/dados';
 import { CARGOS, UFS, type Arquivo, type Cargo, type CargoSlug, type Turno } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
 import { bancada, type Foco, type Linha, type Visao } from '@/lib/resultados';
@@ -15,6 +15,8 @@ interface Props {
   /** bairro, município, zona: linha abaixo do título no nível zonas/locais */
   contexto?: string | null;
   nivel: Nivel;
+  /** locais de votação do bairro selecionado */
+  locais?: Local[] | null;
   trilha: { rotulo: string; acao: () => void; href?: string }[];
   visao: Visao | null;
   arquivo: Arquivo | null;
@@ -29,7 +31,7 @@ interface Props {
 }
 
 const POR_PAGINA = 40;
-const UNIDADE: Record<Nivel, string> = { municipios: 'município', zonas: 'zona', locais: 'local de votação' };
+const UNIDADE: Record<Nivel, string> = { municipios: 'município', zonas: 'zona', bairros: 'bairro' };
 
 function Painel(p: Props) {
   const { cargo, abr, turno, visao, arquivo, foco } = p;
@@ -161,7 +163,7 @@ function Painel(p: Props) {
         <>
           {prop && porPartido ? (
             <p className="dica">
-              Nas zonas e locais de votação, os deputados aparecem por partido. O voto em cada candidato está no mapa por município.
+              Nas zonas e nos bairros, os deputados aparecem por partido. O voto em cada candidato está no mapa por município.
             </p>
           ) : prop ? (
             <div style={{ padding: '14px 20px 0' }}>
@@ -186,6 +188,20 @@ function Painel(p: Props) {
             </button>
           ) : null}
         </>
+      ) : null}
+
+      {p.locais?.length ? (
+        <details className="locais-bairro">
+          <summary>{p.locais.length} {p.locais.length === 1 ? 'local de votação' : 'locais de votação'} neste bairro</summary>
+          <ul>
+            {p.locais.map((l) => (
+              <li key={l.id}>
+                <span>{titulo(l.nome)}</span>
+                <span className="num">Zona {l.zona} · {votos(l.eleitorado)} eleitores</span>
+              </li>
+            ))}
+          </ul>
+        </details>
       ) : null}
 
       <footer className="rodape">

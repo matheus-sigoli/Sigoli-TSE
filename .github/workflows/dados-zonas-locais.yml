@@ -3,7 +3,8 @@
 #
 # Passos:
 #   1. corrigir-anulados: marca votos anulados, vices e coligações a partir do TSE (só ~120 arquivos);
-#   2. zonas-locais: baixa os dados abertos por seção do TSE (~3 GB) e soma por zona e por local;
+#   2. zonas-locais: baixa os dados abertos por seção do TSE (~3 GB) e soma por zona e por bairro
+#      (bairros do IBGE em public/geo/bairros, gerados por scripts/bairros.mjs; nas outras cidades, o bairro do TSE);
 #   3. testes e commit dos arquivos gerados em public/.
 name: Dados de zonas e locais
 
@@ -14,6 +15,8 @@ on:
     paths:
       - .github/workflows/dados-zonas-locais.yml
       - scripts/zonas-locais.mjs
+      - scripts/lib/texto.mjs
+      - public/geo/bairros/**
       - scripts/corrigir-anulados.mjs
 
 permissions:
@@ -40,8 +43,10 @@ jobs:
       - name: Corrigir votos anulados, vices e coligações
         run: node scripts/corrigir-anulados.mjs
 
-      - name: Zonas eleitorais e locais de votação
-        run: node --max-old-space-size=10000 scripts/zonas-locais.mjs --baixar
+      - name: Zonas eleitorais e bairros
+        run: |
+          rm -rf public/data/2026/*/*/locais   # resultados por local foram substituídos pelos bairros (ADR 0009)
+          node --max-old-space-size=10000 scripts/zonas-locais.mjs --baixar
 
       - name: Testes
         run: npm test
@@ -50,7 +55,7 @@ jobs:
         run: |
           git config user.name "Matheus Sigoli"
           git config user.email "dev.matheussigoli@gmail.com"
-          git add public/data public/geo/zonas public/geo/locais
+          git add -A public/data public/geo/zonas public/geo/locais
           if git diff --cached --quiet; then echo "Nada mudou."; exit 0; fi
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
             commit --author="Matheus Sigoli <dev.matheussigoli@gmail.com>" \

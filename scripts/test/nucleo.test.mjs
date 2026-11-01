@@ -58,3 +58,10 @@ test('votos anulados não contam como válidos', () => {
   assert.equal(votoValido('Anulado'), false);
   assert.equal(votoValido(undefined), true);
 });
+
+import { normalizar as chaveNome } from '../lib/texto.mjs';
+test('nome de bairro normalizado para comparar IBGE × TSE', () => {
+  assert.equal(chaveNome('Jardim São José'), 'JARDIM SAO JOSE');
+  assert.equal(chaveNome('  JD. SÃO  JOSÉ '), 'JD SAO JOSE');
+  assert.equal(chaveNome(''), '');
+});

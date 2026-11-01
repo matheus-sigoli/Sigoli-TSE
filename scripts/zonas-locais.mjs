@@ -1,15 +1,21 @@
 #!/usr/bin/env node
 /**
- * Sigoli.TSE — resultados por ZONA ELEITORAL e por LOCAL DE VOTAÇÃO (ADR 0008).
+ * Sigoli.TSE — resultados por ZONA ELEITORAL e por BAIRRO (ADRs 0008 e 0009).
  *
  * Fontes (Portal de Dados Abertos do TSE, baixadas para .cache/dadosabertos/):
  *   - votacao_secao/votacao_secao_2026_{UF}.zip              votos por seção, todos os cargos
  *   - eleitorado_locais_votacao/eleitorado_local_votacao_2026.zip   locais, endereço, lat/lon, eleitorado por seção
- * Malha: public/geo/uf/{uf}.json (gerada por scripts/malha.mjs).
+ * Malha: public/geo/uf/{uf}.json (scripts/malha.mjs) e public/geo/bairros/{uf}/{ibge}.json (scripts/bairros.mjs).
+ *
+ * Bairro de cada local de votação:
+ *   1. cidade com malha do IBGE: o polígono que contém o ponto do local;
+ *   2. sem ponto ou fora dos polígonos: bairro do IBGE com o mesmo nome do cadastro do TSE;
+ *   3. cidade sem malha (ou nada casou): o nome de bairro do cadastro do TSE (id `{ibge}-t-{nome}`).
  *
  * Saída:
  *   public/data/2026/{cargo}/{turno}/zonas/{uf}.json   resultado por zona (mesmo formato dos arquivos por UF)
- *   public/data/2026/{cargo}/{turno}/locais/{uf}.json  resultado por local de votação
+ *   public/data/2026/{cargo}/{turno}/bairros/{uf}.json resultado por bairro
+ *   public/data/2026/bairros/{uf}.json                 cadastro dos bairros (nome, cidade, origem, centro, eleitorado)
  *   public/geo/locais/{uf}.json                        cadastro dos locais (ponto, nome, bairro, eleitorado)
  *   public/geo/zonas/{uf}.json                         TopoJSON das áreas das zonas
  *
@@ -27,6 +33,7 @@ import { Delaunay } from 'd3-delaunay';
 import polygonClipping from 'polygon-clipping';
 import { topology } from 'topojson-server';
 import { feature } from 'topojson-client';
+import { normalizar as semAcento } from './lib/texto.mjs';
 const argv = process.argv.slice(2);
 const opt = (k) => argv.flatMap((a, i) => (a === `--${k}` ? [argv[i + 1]] : []));
 const CACHE = '.cache/dadosabertos';
@@ -124,7 +131,10 @@ if (argv.includes('--baixar')) {
 
 /** Estado de processamento de uma UF. */
 function novaUf(uf) {
-  return { uf, locais: new Map(), secaoLocal: new Map(), eleitoradoSecao: new Map(), base: new Map(), acc: new Map(), contadas: new Set() };
+  return {
+    uf, locais: new Map(), secaoLocal: new Map(), eleitoradoSecao: new Map(), base: new Map(), acc: new Map(), contadas: new Set(),
+    bairroDoLocal: new Map(), bairros: new Map(),
+  };
 }
 
 function lerBase(E, cargo, t) {
@@ -147,7 +157,7 @@ function somarLinha(E, f, c) {
     const b = lerBase(E, cargo, t);
     if (!b) return;
     a = {
-      b, zonas: new Map(), locais: new Map(),
+      b, zonas: new Map(), bairros: new Map(),
       idxC: new Map(b.cands.map((x, i) => [String(num(x.n)), i])),
       anulados: new Set(b.cands.filter((x) => x.anulado).map((x) => String(num(x.n)))),
       idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
@@ -163,14 +173,15 @@ function somarLinha(E, f, c) {
   const localId = E.secaoLocal.get(chaveSecao) ?? `${mun}-${zona}-${num(f[c.NR_LOCAL_VOTACAO])}`;
   const votavel = num(f[c.NR_VOTAVEL]);
   const votos = num(f[c.QT_VOTOS]);
-  for (const [mapa, id] of [[a.zonas, String(zona)], [a.locais, localId]]) {
+  const bairroId = E.bairroDoLocal.get(localId) ?? `${ibgeDe.get(mun) ?? mun}-t-sem-bairro`;
+  for (const [mapa, id] of [[a.zonas, String(zona)], [a.bairros, bairroId]]) {
     let r = mapa.get(id);
     if (!r) {
       r = { t: [0, 0, 0, 0, 0, 0], c: a.prop ? null : new Array(a.b.cands.length).fill(0), p: a.prop ? new Array(a.b.partidos.length).fill(0) : null, votosTotais: 0 };
       mapa.set(id, r);
     }
     // o eleitorado de cada seção entra uma vez por cargo e unidade
-    const marca = `${chaveCargo}|${mapa === a.zonas ? 'z' : 'l'}|${chaveSecao}`;
+    const marca = `${chaveCargo}|${mapa === a.zonas ? 'z' : 'b'}|${chaveSecao}`;
     if (!E.contadas.has(marca)) { E.contadas.add(marca); r.t[0] += E.eleitoradoSecao.get(chaveSecao) ?? 0; }
     r.votosTotais += votos;
     if (votavel === 95) r.t[4] += votos;
@@ -215,6 +226,9 @@ for (const E of estados.values()) {
   });
 }
 
+// 1b) bairro de cada local
+for (const E of estados.values()) atribuirBairros(E);
+
 // 2) cargos estaduais: um arquivo por UF
 for (const E of estados.values()) {
   await lerCsvDoZip(zipVotos(E.uf.toUpperCase()), (n) => n.endsWith('.csv'), (f, c) => somarLinha(E, f, c));
@@ -239,7 +253,7 @@ for (const E of estados.values()) {
     writeFileSync(p, JSON.stringify(obj));
   };
   for (const [chaveCargo, a] of E.acc) {
-    for (const nivel of ['zonas', 'locais']) {
+    for (const nivel of ['zonas', 'bairros']) {
       const mun = {};
       const tot = { t: [0, 0, 0, 0, 0, 0], c: new Array(a.b.cands.length).fill(0), p: new Array(a.b.partidos.length).fill(0) };
       for (const [id, r] of a[nivel]) {
@@ -263,14 +277,87 @@ for (const E of estados.values()) {
   const lista = [...E.locais.values()].sort((x, y) => x.id.localeCompare(y.id));
   mkdirSync('public/geo/locais', { recursive: true });
   writeFileSync(`public/geo/locais/${uf}.json`, JSON.stringify({
-    campos: ['id', 'ibge', 'zona', 'nome', 'bairro', 'lon', 'lat', 'eleitorado'],
-    l: lista.map((l) => [l.id, l.ibge, l.zona, l.nome, l.bairro, l.lon === null ? null : +l.lon.toFixed(5), l.lat === null ? null : +l.lat.toFixed(5), l.eleitorado]),
+    campos: ['id', 'ibge', 'zona', 'nome', 'bairro', 'lon', 'lat', 'eleitorado', 'idBairro'],
+    l: lista.map((l) => [l.id, l.ibge, l.zona, l.nome, l.bairro, l.lon === null ? null : +l.lon.toFixed(5), l.lat === null ? null : +l.lat.toFixed(5), l.eleitorado, E.bairroDoLocal.get(l.id) ?? '']),
   }));
+
+  // cadastro dos bairros: origem 'i' (polígono do IBGE) ou 't' (nome do TSE, sem área), centro ponderado pelo eleitorado
+  const bairros = [...E.bairros.values()].sort((x, y) => x.id.localeCompare(y.id));
+  gravar(`bairros/${uf}.json`, {
+    campos: ['id', 'ibge', 'nome', 'origem', 'lon', 'lat', 'eleitorado', 'locais'],
+    b: bairros.map((b) => [b.id, b.ibge, b.nome, b.origem, b.w ? +(b.sx / b.w).toFixed(5) : null, b.w ? +(b.sy / b.w).toFixed(5) : null, b.eleitorado, b.locais]),
+  });
 
   // áreas das zonas
   const nZonas = desenharZonas(uf, lista);
-  console.log(`${uf}: ${E.locais.size} locais, ${nZonas} zonas, ${E.acc.size} cargos/turnos (${((Date.now() - t0) / 1000).toFixed(0)}s)`);
-  E.locais.clear(); E.secaoLocal.clear(); E.eleitoradoSecao.clear(); E.acc.clear();
+  const nIbge = bairros.filter((b) => b.origem === 'i').length;
+  console.log(`${uf}: ${E.locais.size} locais, ${nZonas} zonas, ${bairros.length} bairros (${nIbge} com área do IBGE), ${E.acc.size} cargos/turnos (${((Date.now() - t0) / 1000).toFixed(0)}s)`);
+  E.locais.clear(); E.secaoLocal.clear(); E.eleitoradoSecao.clear(); E.acc.clear(); E.bairroDoLocal.clear(); E.bairros.clear();
+}
+
+/**
+ * Atribui cada local de votação a um bairro (ver cabeçalho). Preenche E.bairroDoLocal e E.bairros.
+ */
+function atribuirBairros(E) {
+  const dir = join('public/geo/bairros', E.uf);
+  const comMalha = existsSync(join(dir, 'cidades.json')) ? JSON.parse(readFileSync(join(dir, 'cidades.json'), 'utf8')) : {};
+  const malhas = new Map(); // ibge → [{id, nome, chave, bbox, polys}]
+  const malhaDe = (ibge) => {
+    if (!(ibge in comMalha)) return null;
+    if (!malhas.has(ibge)) {
+      const topo = JSON.parse(readFileSync(join(dir, `${ibge}.json`), 'utf8'));
+      const fc = feature(topo, topo.objects.bairros);
+      malhas.set(ibge, fc.features.map((f) => {
+        const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+        let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+        for (const p of polys) for (const [x, y] of p[0]) { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); }
+        return { id: String(f.id), nome: f.properties.n, chave: semAcento(f.properties.n), bbox: [x0, y0, x1, y1], polys };
+      }));
+    }
+    return malhas.get(ibge);
+  };
+  const dentro = (x, y, anel) => {
+    let d = false;
+    for (let i = 0, j = anel.length - 1; i < anel.length; j = i++) {
+      const [xi, yi] = anel[i], [xj, yj] = anel[j];
+      if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) d = !d;
+    }
+    return d;
+  };
+  const contem = (b, x, y) => x >= b.bbox[0] && x <= b.bbox[2] && y >= b.bbox[1] && y <= b.bbox[3]
+    && b.polys.some((p) => dentro(x, y, p[0]) && !p.slice(1).some((h) => dentro(x, y, h)));
+
+  const nomesTse = new Map(); // id → contagem de grafias, para escolher a mais comum
+  for (const l of E.locais.values()) {
+    const ibge = l.ibge || l.mun;
+    const malha = malhaDe(ibge);
+    const chaveNome = semAcento(l.bairro);
+    let b = null;
+    if (malha) {
+      if (l.lon !== null && l.lat !== null) b = malha.find((m) => contem(m, l.lon, l.lat));
+      if (!b && chaveNome) b = malha.find((m) => m.chave === chaveNome);
+    }
+    let id, nome, origem;
+    if (b) { id = b.id; nome = b.nome; origem = 'i'; }
+    else {
+      id = `${ibge}-t-${chaveNome.replace(/\s+/g, '-') || 'sem-bairro'}`;
+      origem = 't';
+      const g = nomesTse.get(id) ?? new Map();
+      const grafia = l.bairro?.trim() || 'Sem bairro informado';
+      g.set(grafia, (g.get(grafia) ?? 0) + 1);
+      nomesTse.set(id, g);
+    }
+    E.bairroDoLocal.set(l.id, id);
+    let r = E.bairros.get(id);
+    if (!r) { r = { id, ibge, nome, origem, sx: 0, sy: 0, w: 0, eleitorado: 0, locais: 0 }; E.bairros.set(id, r); }
+    r.eleitorado += l.eleitorado;
+    r.locais++;
+    if (l.lon !== null && l.lat !== null) {
+      const w = Math.max(1, l.eleitorado);
+      r.sx += l.lon * w; r.sy += l.lat * w; r.w += w;
+    }
+  }
+  for (const [id, g] of nomesTse) E.bairros.get(id).nome = [...g.entries()].sort((a, b) => b[1] - a[1])[0][0];
 }
 
 /** Município inteiro quando tem uma zona; Voronoi dos locais recortado pelo município quando tem várias. */

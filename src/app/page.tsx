@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import paleta from '@config/paleta-partidos.json';
+import { ELEICOES } from '@/lib/anos';
 import type { ArquivoResultado, ArquivoResumo } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
 import './inicio.css';
@@ -104,6 +105,7 @@ export default function Inicio() {
         <nav aria-label="Principal">
           <a href="#como-funciona">Como funciona</a>
           <a href="#como-ler">Como ler o mapa</a>
+          <a href="#outros-anos">Outros anos</a>
           <Link href="/2026/br/presidente?t=2" className="botao">Abrir o mapa</Link>
         </nav>
       </header>
@@ -115,7 +117,7 @@ export default function Inicio() {
             <h1>O voto de cada município do Brasil, num mapa só.</h1>
             <p className="abertura-lead">
               Resultados oficiais do TSE para Presidente, Governador, Senador e Deputados, dos {votos(n.municipios)} municípios
-              até cada zona eleitoral e local de votação.
+              até cada zona eleitoral e bairro.
             </p>
             <div className="acoes">
               <Link href="/2026/br/presidente?t=2" className="botao grande">Ver o mapa do 2º turno</Link>
@@ -218,11 +220,40 @@ export default function Inicio() {
               <h3>Clique para aprofundar</h3>
               <p>
                 Clique num nome para ver onde ele foi mais votado. Clique num município para abrir o resultado dele. Troque o
-                nível para zonas eleitorais ou locais de votação.
+                nível para zonas eleitorais ou para os bairros de uma cidade.
               </p>
             </div>
           </div>
           <Link href="/2026/br/presidente" className="botao grande">Abrir o mapa</Link>
+        </section>
+
+        <section id="outros-anos" className="anos" aria-labelledby="t-anos">
+          <h2 id="t-anos">Outras eleições</h2>
+          <p className="intro">
+            O mesmo mapa, município por município, para as eleições gerais anteriores. Os anos chegam aos poucos, com os
+            dados oficiais do TSE de cada um.
+          </p>
+          <ul className="anos-lista">
+            {ELEICOES.map((e) => (
+              <li key={e.ano} className="ano" data-disponivel={e.disponivel}>
+                {e.disponivel && e.rota ? (
+                  <Link href={e.rota} className="ano-cartao">
+                    <span className="ano-num num">{e.ano}</span>
+                    <span className="ano-titulo">{e.titulo}</span>
+                    <span className="ano-meta">{e.datas} · {e.cargos}</span>
+                    <span className="ano-selo">Ver o mapa</span>
+                  </Link>
+                ) : (
+                  <div className="ano-cartao" aria-disabled="true">
+                    <span className="ano-num num">{e.ano}</span>
+                    <span className="ano-titulo">{e.titulo}</span>
+                    <span className="ano-meta">{e.datas} · {e.cargos}</span>
+                    <span className="ano-selo">Em breve</span>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
         </section>
       </main>
 

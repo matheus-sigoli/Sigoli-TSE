@@ -10,8 +10,9 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 - Ano: **2026** (Eleições Gerais).
 - Cargos: **Presidente, Governador, Senador, Deputado Federal, Deputado Estadual** (e Distrital no DF).
 - Granularidade geográfica: **Brasil → UF → Município**, mais **Exterior por país** (Presidente).
-- Dentro de uma UF, o mapa também mostra **zonas eleitorais** (áreas) e **locais de votação** (círculos) (ADR 0008).
-- Página inicial (`/`) explica a eleição e leva ao mapa.
+- Dentro de uma UF, o mapa também mostra **zonas eleitorais** (áreas, ADR 0008) e os **bairros** de cada cidade (ADR 0009).
+- Mapas desenhados em **SVG** (ADR 0010).
+- Página inicial (`/`) explica a eleição, mostra o resultado de 2026 e lista os outros anos (em breve).
 - Turnos: 1º e 2º (Presidente e Governador nas UFs que tiveram 2º turno).
 
 ### Fora da v1 (decidido em 31/10/2026)
@@ -37,7 +38,9 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 | 0005 | Visão Brasil municipal para todos os cargos; exterior pintado por país |
 | 0006 | Layout 3 colunas + gaveta no celular; painel por município; tema escuro/claro + daltônico |
 | 0007 | Formato compacto dos dados (`public/data/2026/`) |
-| 0008 | Zonas (áreas Voronoi) e locais (círculos) a partir dos dados abertos por seção |
+| 0008 | Zonas (áreas Voronoi) a partir dos dados abertos por seção |
+| 0009 | Bairros: malha do IBGE (Censo 2022) e, sem ela, o bairro do cadastro do TSE |
+| 0010 | Mapa em SVG, sem biblioteca de mapas |
 
 ## Glossário
 
@@ -100,15 +103,21 @@ do % do vencedor. 50% = cor-base.
 
 **Cor extra** — Segunda cor de alguns partidos, usada só quando o adversário no mesmo mapa tem cor parecida.
 
-**Nível do mapa** — Unidade pintada dentro de uma UF: **Municípios** (padrão), **Zonas** ou **Locais**.
-Na URL: `?nivel=zonas` ou `?nivel=locais`.
+**Nível do mapa** — Unidade pintada dentro de uma UF: **Municípios** (padrão), **Zonas** ou **Bairros**.
+Na URL: `?nivel=zonas` ou `?nivel=bairros&cid={IBGE da cidade}`.
 
 **Zona eleitoral** — Circunscrição do cartório eleitoral; numerada dentro de cada UF. Pode cobrir vários
 municípios ou ser uma parte de um município grande. O TSE não publica o contorno: o Sigoli.TSE desenha
 a área a partir dos locais de votação (ADR 0008).
 
-**Local de votação** — Escola ou prédio onde ficam as seções. Tem coordenadas e eleitorado no cadastro
+**Local de votação** — Escola ou prédio onde ficam as seções. Tem coordenadas, bairro e eleitorado no cadastro
 do TSE. Id no projeto: `{município TSE}-{zona}-{número do local}`.
+
+**Bairro** — Agrupamento de locais de votação dentro de uma cidade. Origem **IBGE** (polígono do Censo 2022,
+quando a cidade tem bairros oficiais) ou **TSE** (nome de bairro do cadastro do local, sem área: aparece como círculo).
+
+**Outros anos** — Eleições gerais anteriores (2022, 2018, 2014, 2010) com a mesma estrutura de mapa.
+A lista fica em `src/lib/anos.ts`; um ano entra no ar quando tiver dados em `public/data/{ano}/` e rotas `/{ano}/...`.
 
 **Votos anulados** — Votos dados a candidato com registro indeferido (destinação "Anulado sub judice" etc.).
 Não entram nos válidos e o candidato não vence município.

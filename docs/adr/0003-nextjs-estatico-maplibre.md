@@ -23,3 +23,6 @@
 - MapLibre GL fixado na linha **5.x (5.24.0)**: a 6.x carrega o worker como módulo separado,
   e o Turbopack não emite esse arquivo na exportação estática (mapa em branco). A 5.x embute o worker.
   Reavaliar a 6.x quando o Next/Turbopack suportar o worker dela no `output: 'export'`.
+
+## Atualização (01/11/2026)
+- A parte do **MapLibre GL** foi substituída pela ADR 0010 (mapa em SVG). O resto desta ADR continua valendo.
