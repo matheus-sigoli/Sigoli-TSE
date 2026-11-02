@@ -203,7 +203,7 @@ function Painel(p: Props) {
       {p.locais?.length ? (
         <details className="locais-bairro">
           <summary>
-            {p.locais.length} {p.locais.length === 1 ? 'local de votação' : 'locais de votação'} {p.nivel === 'zonas' ? 'nesta zona' : 'neste bairro'}
+            {p.locais.length} {p.locais.length === 1 ? 'local de votação' : 'locais de votação'} {p.nivel === 'zonas' ? 'nesta zona' : p.nivel === 'locais' ? 'nesta área' : 'neste bairro'}
           </summary>
           <ul>
             {p.locais.map((l) => (

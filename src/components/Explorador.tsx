@@ -16,7 +16,7 @@ import {
   ArquivoAusente, lerNivel, useBairros, useLocais, useMalha, useMalhaCidade, useMunicipios, useRegioes, useResultado,
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
-import { calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
+import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
 import Filtros from './Filtros';
 import Painel from './Painel';
 import Carregando from './Carregando';
@@ -171,15 +171,26 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     return municipiosRegiao;
   }, [mun, abr, cid, unidadesDaCidade, municipiosRegiao, indiceMunicipios]);
 
+  // áreas do Atlas que reúnem vários locais (properties.inclui): área → locais incluídos
+  const gruposAreas = useMemo(() => {
+    const g = new Map<string, string[]>();
+    if (!cid || nivel !== 'locais') return g;
+    for (const f of malhaCidade.dados?.malha.municipios.features ?? []) {
+      const inc = (f.properties as { inclui?: string[] } | null)?.inclui;
+      if (inc?.length) g.set(String(f.id), inc);
+    }
+    return g;
+  }, [cid, nivel, malhaCidade.dados]);
+
   const visao = useMemo(() => {
     if (!resultado.dados) return null;
     // o foco aponta para índices do arquivo atual; ignora se não couber
-    const arq = resultado.dados;
+    const arq = !resultado.dados.resumo && gruposAreas.size ? agruparLocais(resultado.dados, gruposAreas) : resultado.dados;
     const focoValido = foco && !arq.resumo && (foco.tipo === 'c' ? foco.idx < arq.cands.length : foco.idx < arq.partidos.length) ? foco : null;
     const base = resultadoEstado.dados;
     const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p } : undefined;
     return calcularVisao(arq, { abr, municipios: recorteMunicipios }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
-  }, [resultado.dados, resultadoEstado.dados, abr, recorteMunicipios, daltonico, foco, municipios.dados]);
+  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados]);
 
   // ---- nomes
   const nomeZona = useCallback(
@@ -238,13 +249,18 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mun, nivel, cid, abr, unidadesDaCidade, nomeZona, bairros.dados, locais.dados, indiceMunicipios]);
 
-  // locais de votação da zona ou do bairro selecionado (lista no painel)
+  // locais de votação da zona, do bairro ou da área do Atlas selecionada (lista no painel)
   const locaisDaUnidade = useMemo(() => {
-    if (!cid || !mun || nivel === 'locais') return null;
+    if (!cid || !mun) return null;
+    if (nivel === 'locais') {
+      const inc = gruposAreas.get(mun);
+      if (!inc) return null;
+      return [mun, ...inc].map((id) => locais.dados?.porId.get(id)).filter((l): l is Local => !!l).sort((a, b) => b.eleitorado - a.eleitorado);
+    }
     const ls = locais.dados?.porCidade.get(cid) ?? [];
     const filtro = nivel === 'zonas' ? (l: Local) => l.zona === mun.split('-')[1] : (l: Local) => l.idBairro === mun;
     return ls.filter(filtro).sort((a, b) => b.eleitorado - a.eleitorado);
-  }, [cid, mun, nivel, locais.dados]);
+  }, [cid, mun, nivel, locais.dados, gruposAreas]);
 
   const trilha = useMemo(() => {
     const itens: { rotulo: string; acao: () => void; href?: string }[] = [];

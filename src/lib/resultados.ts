@@ -235,3 +235,28 @@ export function bancada(eleitos: ArquivoResumo['eleitos']) {
   for (const lista of Object.values(eleitos)) for (const e of lista) if (e.eleito) cont.set(e.partido, (cont.get(e.partido) ?? 0) + 1);
   return [...cont.entries()].sort((a, b) => b[1] - a[1]);
 }
+
+/**
+ * Áreas do Atlas que reúnem mais de um local de votação (ADR 0012): soma os locais incluídos na área
+ * e tira os incluídos do arquivo, para o total da cidade não contar duas vezes.
+ */
+export function agruparLocais(arq: ArquivoResultado, grupos: Map<string, string[]>): ArquivoResultado {
+  if (!grupos.size) return arq;
+  const mun = { ...arq.mun };
+  for (const [area, membros] of grupos) {
+    const base = mun[area];
+    const regs = [base, ...membros.map((m) => mun[m])].filter(Boolean);
+    if (!regs.length) continue;
+    const t = [0, 0, 0, 0, 0, 0] as Totais;
+    const c = new Array(regs[0].c.length).fill(0);
+    const p = regs[0].p ? new Array(regs[0].p.length).fill(0) : undefined;
+    for (const r of regs) {
+      r.t.forEach((v, i) => (t[i] += v));
+      if (arq.tipo !== 'prop') r.c.forEach((v, i) => (c[i] += v));
+      r.p?.forEach((v, i) => (p![i] += v));
+    }
+    mun[area] = { t, c: arq.tipo === 'prop' ? [] : c, ...(p ? { p } : {}) };
+    for (const m of membros) delete mun[m];
+  }
+  return { ...arq, mun };
+}

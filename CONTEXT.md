@@ -43,6 +43,7 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 | 0009 | Bairros: malha do IBGE (Censo 2022) e, sem ela, o bairro do cadastro do TSE |
 | 0010 | Mapa em SVG, sem biblioteca de mapas |
 | 0011 | Visão da cidade (duplo clique): zonas, bairros e locais de votação |
+| 0012 | Áreas dos locais de votação do Atlas Eleitoral 2026 (sem círculos) |
 
 ## Glossário
 
@@ -111,6 +112,9 @@ do % do vencedor. 50% = cor-base.
 **Zona eleitoral** — Circunscrição do cartório eleitoral; numerada dentro de cada UF. Pode cobrir vários
 municípios ou ser uma parte de um município grande. O TSE não publica o contorno: o Sigoli.TSE desenha
 a área a partir dos locais de votação (ADR 0008).
+
+**Área do local** — Região atendida por um local de votação, do Atlas Eleitoral 2026 (@mroctoz). Uma área pode
+reunir locais que o Atlas não desenhou (ADR 0012).
 
 **Local de votação** — Escola ou prédio onde ficam as seções. Tem coordenadas, bairro e eleitorado no cadastro
 do TSE. Id no projeto: `{município TSE}-{zona}-{número do local}`.
