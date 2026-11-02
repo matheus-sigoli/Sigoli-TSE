@@ -45,6 +45,7 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 | 0011 | Visão da cidade (duplo clique): zonas, bairros e locais de votação |
 | 0012 | Áreas dos locais de votação do Atlas Eleitoral 2026 (sem círculos) |
 | 0013 | Zonas do DF a partir do DF.svg do usuário; DF abre direto na visão da cidade |
+| 0014 | Regras de cores pelos confrontos reais: só quem pinta o mapa, CIEDE2000, extra antes das reservas |
 
 ## Glossário
 
@@ -105,7 +106,20 @@ da malha), usados como filtro de região.
 **Faixa de intensidade** — Um dos 10 tons (10%…100%) da cor do partido; o tom do município é a faixa
 do % do vencedor. 50% = cor-base.
 
-**Cor extra** — Segunda cor de alguns partidos, usada só quando o adversário no mesmo mapa tem cor parecida.
+**Cor extra** — Segunda cor oficial de alguns partidos (tabela do usuário), usada só quando o adversário no mesmo
+mapa tem cor parecida. Vem antes das reservas.
+
+**Reserva** — Até 2 cores de cada partido (uma clara, uma escura, da mesma família), usadas depois da extra. Ficam em
+`reservas` na paleta.
+
+**Pintar o mapa** — Vencer ao menos uma área em algum nível (município, zona, bairro ou local de votação). Só quem
+pinta disputa cor (`pintam` no arquivo do estado, ADR 0014).
+
+**Confronto / conflito de cor** — Dois concorrentes que pintam o mesmo mapa com cores-base a menos de 17,3 de
+distância (CIEDE2000), salvo pares compatíveis (PP × PL, PP × PSDB).
+
+**Busca de local** — Na visão da cidade, campo que acha o local de votação pelo nome (ou pelo bairro) e abre o
+nível Locais com ele selecionado.
 
 **Nível do mapa** — No estado: **Municípios** (padrão) ou **Zonas** (`?nivel=zonas`). Na visão da cidade
 (`?cid={IBGE}`): **Zonas**, **Bairros** ou **Locais** (`&nivel=zonas|bairros|locais`).

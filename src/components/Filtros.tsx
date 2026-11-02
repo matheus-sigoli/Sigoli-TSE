@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { memo, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { FAIXAS_LEGENDA, type Faixas } from '@/lib/cores';
-import type { Malha, Nivel, Regiao } from '@/lib/dados';
+import type { Local, Malha, Nivel, Regiao } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
@@ -30,6 +30,9 @@ interface Props {
   /** ausente quando a UF é uma cidade só (DF): não há estado para voltar */
   aoFecharCidade?: () => void;
   aoMudarNivel: (n: Nivel) => void;
+  /** locais de votação da cidade aberta (busca por local) */
+  locaisDaCidade: Local[] | null;
+  aoEscolherLocal: (id: string) => void;
 }
 
 const NIVEIS_ESTADO: { n: Nivel; rotulo: string }[] = [
@@ -53,6 +56,20 @@ const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1]
 function Filtros(p: Props) {
   const idAbr = useId();
   const idReg = useId();
+  const itensMunicipios = useMemo<ItemBusca[] | null>(
+    () => p.municipios?.filter((m) => m.uf !== 'zz').map((m) => ({ id: m.ibge, nome: titulo(m.nome), detalhe: m.uf.toUpperCase(), chave: semAcento(m.nome), uf: m.uf })) ?? null,
+    [p.municipios],
+  );
+  const itensLocais = useMemo<ItemBusca[] | null>(
+    () => p.locaisDaCidade?.map((l) => ({
+      id: l.id,
+      nome: titulo(l.nome),
+      detalhe: `Zona ${l.zona}${l.bairro ? ` · ${titulo(l.bairro)}` : ''}`,
+      chave: semAcento(l.nome),
+      extra: semAcento(l.bairro),
+    })) ?? null,
+    [p.locaisDaCidade],
+  );
 
   // regiões presentes na malha da UF
   const opcoesRegiao = useMemo(() => {
@@ -122,7 +139,26 @@ function Filtros(p: Props) {
         </div>
       ) : null}
 
-      {p.abr !== 'exterior' ? <Busca municipios={p.municipios} aoEscolher={p.aoEscolherMunicipio} /> : null}
+      {p.cidade && p.locaisDaCidade ? (
+        <Busca
+          rotulo="Buscar local de votação"
+          placeholder="Nome da escola ou bairro"
+          itens={itensLocais}
+          vazio="Nenhum local de votação com esse nome nesta cidade"
+          aoEscolher={p.aoEscolherLocal}
+        />
+      ) : null}
+
+      {p.abr !== 'exterior' ? (
+        <Busca
+          rotulo="Buscar município"
+          placeholder="Ex.: São Gonçalo RJ"
+          itens={itensMunicipios}
+          vazio="Nenhum município com esse nome"
+          filtroUf
+          aoEscolher={(ibge) => { const m = p.municipios?.find((x) => x.ibge === ibge); if (m) p.aoEscolherMunicipio(m); }}
+        />
+      ) : null}
 
       {p.legenda.length ? (
         <div className="campo legenda-bloco">
@@ -171,7 +207,17 @@ function Filtros(p: Props) {
   );
 }
 
-function Busca({ municipios, aoEscolher }: { municipios: Municipio[] | null; aoEscolher: (m: Municipio) => void }) {
+interface ItemBusca { id: string; nome: string; detalhe: string; chave: string; /** texto extra que também casa (ex.: bairro) */ extra?: string; uf?: string }
+
+const ordenarPorNome = (a: ItemBusca, b: ItemBusca) => a.nome.localeCompare(b.nome, 'pt-BR') || a.detalhe.localeCompare(b.detalhe, 'pt-BR');
+
+/**
+ * Campo de busca com lista rolável: exatos primeiro, depois os que começam com o termo, os que contêm
+ * e, por fim, os que casam só pelo texto extra. Com `filtroUf`, a UF no fim filtra o estado ("sao goncalo rj").
+ */
+function Busca({ rotulo, placeholder, itens, vazio, filtroUf, aoEscolher }: {
+  rotulo: string; placeholder: string; itens: ItemBusca[] | null; vazio: string; filtroUf?: boolean; aoEscolher: (id: string) => void;
+}) {
   const id = useId();
   const [texto, setTexto] = useState('');
   const [aberta, setAberta] = useState(false);
@@ -179,36 +225,32 @@ function Busca({ municipios, aoEscolher }: { municipios: Municipio[] | null; aoE
   const termo = useDeferredValue(texto);
   const entrada = useRef<HTMLInputElement>(null);
 
-  const indice = useMemo(
-    () => (municipios ?? []).filter((m) => m.uf !== 'zz').map((m) => ({ m, chave: semAcento(m.nome) })),
-    [municipios],
-  );
-  // todos os que casam (há muitos nomes repetidos, ex.: São Gonçalo): exatos, depois os que começam, depois os que contêm.
-  // A UF no fim filtra o estado: "sao goncalo rj".
   const achados = useMemo(() => {
     let q = semAcento(termo.trim());
     let uf: string | null = null;
-    const m = q.match(/^(.*\S)(?:\s+|\s*[-(,/]\s*)\(?([a-z]{2})\)?$/);
-    if (m && m[2] in UFS && m[1].length >= 2) { q = m[1].replace(/[-(,/]\s*$/, '').trim(); uf = m[2]; }
-    if (q.length < 2) return [];
-    const exato: Municipio[] = [], comeca: Municipio[] = [], contem: Municipio[] = [];
-    for (const { m: mu, chave } of indice) {
-      if (uf && mu.uf !== uf) continue;
-      if (chave === q) exato.push(mu);
-      else if (chave.startsWith(q)) comeca.push(mu);
-      else if (chave.includes(q)) contem.push(mu);
+    if (filtroUf) {
+      const m = q.match(/^(.*\S)(?:\s+|\s*[-(,/]\s*)\(?([a-z]{2})\)?$/);
+      if (m && m[2] in UFS && m[1].length >= 2) { q = m[1].replace(/[-(,/]\s*$/, '').trim(); uf = m[2]; }
     }
-    const porNome = (a: Municipio, b: Municipio) => a.nome.localeCompare(b.nome, 'pt-BR') || a.uf.localeCompare(b.uf);
-    return [...exato.sort(porNome), ...comeca.sort(porNome), ...contem.sort(porNome)].slice(0, 200);
-  }, [termo, indice]);
+    if (q.length < 2) return [];
+    const exato: ItemBusca[] = [], comeca: ItemBusca[] = [], contem: ItemBusca[] = [], pelaExtra: ItemBusca[] = [];
+    for (const it of itens ?? []) {
+      if (uf && it.uf !== uf) continue;
+      if (it.chave === q) exato.push(it);
+      else if (it.chave.startsWith(q)) comeca.push(it);
+      else if (it.chave.includes(q)) contem.push(it);
+      else if (it.extra?.includes(q)) pelaExtra.push(it);
+    }
+    return [...exato.sort(ordenarPorNome), ...comeca.sort(ordenarPorNome), ...contem.sort(ordenarPorNome), ...pelaExtra.sort(ordenarPorNome)].slice(0, 200);
+  }, [termo, itens, filtroUf]);
   const lista = useRef<HTMLUListElement>(null);
   // setas do teclado: mantém a opção ativa visível na lista rolável
   useEffect(() => {
     lista.current?.querySelector('[aria-selected="true"]')?.scrollIntoView({ block: 'nearest' });
   }, [ativo]);
 
-  const escolher = (m: Municipio) => {
-    aoEscolher(m);
+  const escolher = (it: ItemBusca) => {
+    aoEscolher(it.id);
     setTexto('');
     setAberta(false);
     entrada.current?.blur();
@@ -216,19 +258,19 @@ function Busca({ municipios, aoEscolher }: { municipios: Municipio[] | null; aoE
 
   return (
     <div className="campo busca">
-      <label htmlFor={id}>Buscar município</label>
+      <label htmlFor={id}>{rotulo}</label>
       <input
         ref={entrada}
         id={id}
         className="entrada"
         type="search"
-        placeholder="Ex.: São Gonçalo RJ"
+        placeholder={placeholder}
         spellCheck={false}
         autoComplete="off"
         role="combobox"
         aria-expanded={aberta && achados.length > 0}
         aria-controls={`${id}-lista`}
-        aria-activedescendant={achados[ativo] ? `${id}-${achados[ativo].ibge}` : undefined}
+        aria-activedescendant={achados[ativo] ? `${id}-${achados[ativo].id}` : undefined}
         value={texto}
         onChange={(e) => { setTexto(e.target.value); setAberta(true); setAtivo(0); }}
         onFocus={() => setAberta(true)}
@@ -241,23 +283,23 @@ function Busca({ municipios, aoEscolher }: { municipios: Municipio[] | null; aoE
         }}
       />
       {aberta && achados.length ? (
-        <ul ref={lista} className="busca-lista" id={`${id}-lista`} role="listbox" aria-label={`${achados.length} municípios encontrados`}>
-          {achados.map((m, i) => (
+        <ul ref={lista} className="busca-lista" id={`${id}-lista`} role="listbox" aria-label={`${achados.length} resultados`}>
+          {achados.map((it, i) => (
             <li
-              key={m.ibge}
-              id={`${id}-${m.ibge}`}
+              key={it.id}
+              id={`${id}-${it.id}`}
               role="option"
               aria-selected={i === ativo}
-              onMouseDown={(e) => { e.preventDefault(); escolher(m); }}
+              onMouseDown={(e) => { e.preventDefault(); escolher(it); }}
             >
-              <span>{titulo(m.nome)}</span>
-              <small>{m.uf.toUpperCase()}</small>
+              <span>{it.nome}</span>
+              <small>{it.detalhe}</small>
             </li>
           ))}
         </ul>
-      ) : aberta && termo.trim().length >= 2 && municipios ? (
-        <ul className="busca-lista" role="listbox" aria-label="Municípios encontrados">
-          <li aria-disabled="true"><span>Nenhum município com esse nome</span></li>
+      ) : aberta && termo.trim().length >= 2 && itens ? (
+        <ul className="busca-lista" role="listbox" aria-label="Nenhum resultado">
+          <li aria-disabled="true"><span>{vazio}</span></li>
         </ul>
       ) : null}
     </div>

@@ -185,6 +185,11 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     }
     return g;
   }, [cid, nivel, malhaCidade.dados]);
+  // local escolhido na busca que o Atlas juntou a outra área: seleciona a área que o contém
+  useEffect(() => {
+    if (nivel !== 'locais' || !mun || !gruposAreas.size || gruposAreas.has(mun)) return;
+    for (const [area, inc] of gruposAreas) if (inc.includes(mun)) return atualizarBusca({ mun: area });
+  }, [nivel, mun, gruposAreas, atualizarBusca]);
 
   const visao = useMemo(() => {
     if (!resultado.dados) return null;
@@ -192,7 +197,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     const arq = !resultado.dados.resumo && gruposAreas.size ? agruparLocais(resultado.dados, gruposAreas) : resultado.dados;
     const focoValido = foco && !arq.resumo && (foco.tipo === 'c' ? foco.idx < arq.cands.length : foco.idx < arq.partidos.length) ? foco : null;
     const base = resultadoEstado.dados;
-    const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p } : undefined;
+    const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p, pintam: base.pintam } : undefined;
     return calcularVisao(arq, { abr, municipios: recorteMunicipios }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
   }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados]);
 
@@ -370,6 +375,8 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
         nivel={nivel}
         cidade={cid ? nomeCidade(cid) : null}
         aoMudarNivel={mudarNivel}
+        locaisDaCidade={cid ? locais.dados?.porCidade.get(cid) ?? null : null}
+        aoEscolherLocal={(id) => atualizarBusca({ nivel: 'locais', mun: id, foco: null })}
         aoFecharCidade={cidadeUnica ? undefined : () => atualizarBusca({ cid: null, nivel: null, mun: cid, foco: null })}
         aoAlternarTema={alternarTema}
         aoAlternarDaltonico={alternarDaltonico}

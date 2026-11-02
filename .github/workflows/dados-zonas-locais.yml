@@ -5,7 +5,8 @@
 #   1. corrigir-anulados: marca votos anulados, vices e coligações a partir do TSE (só ~120 arquivos);
 #   2. zonas-locais: baixa os dados abertos por seção do TSE (~3 GB) e soma por zona e por bairro
 #      (bairros do IBGE em public/geo/bairros, gerados por scripts/bairros.mjs; nas outras cidades, o bairro do TSE);
-#   3. testes e commit dos arquivos gerados em public/.
+#   3. pintam: quem vence ao menos uma área em algum nível (regras de cores, ADR 0014);
+#   4. testes e commit dos arquivos gerados em public/.
 name: Dados de zonas e locais
 
 on:
@@ -19,6 +20,7 @@ on:
       - public/geo/bairros/**
       - data/zonas/**
       - scripts/corrigir-anulados.mjs
+      - scripts/pintam.mjs
 
 permissions:
   contents: write
@@ -48,6 +50,9 @@ jobs:
         run: |
           rm -rf public/data/2026/*/*/locais public/data/2026/*/*/zonas-cidade   # recriados pelo script
           node --max-old-space-size=10000 scripts/zonas-locais.mjs --baixar
+
+      - name: Quem pinta o mapa (regras de cores, ADR 0014)
+        run: node scripts/pintam.mjs
 
       - name: Testes
         run: npm test

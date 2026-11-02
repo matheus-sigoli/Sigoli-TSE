@@ -71,7 +71,7 @@ export function calcularVisao(
   opcoes: {
     daltonico: boolean; foco: Foco; municipios?: Municipio[];
     /** totais do arquivo que o mapa do estado usa (mesma lista de candidatos): define a ordem das cores */
-    totalCores?: { c: number[]; p: number[] };
+    totalCores?: { c: number[]; p: number[]; pintam?: { c: number[]; p: number[] } };
   },
 ): Visao {
   if (arq.resumo) return visaoResumo(arq, recorte, opcoes.daltonico);
@@ -81,7 +81,7 @@ export function calcularVisao(
 function visaoCompleta(
   arq: ArquivoResultado,
   recorte: Recorte,
-  { daltonico, foco, municipios, totalCores }: { daltonico: boolean; foco: Foco; municipios?: Municipio[]; totalCores?: { c: number[]; p: number[] } },
+  { daltonico, foco, municipios, totalCores }: { daltonico: boolean; foco: Foco; municipios?: Municipio[]; totalCores?: { c: number[]; p: number[]; pintam?: { c: number[]; p: number[] } } },
 ): Visao {
   const prop = arq.tipo === 'prop';
   const chavesTela = chavesDaAbrangencia(arq, recorte.abr);
@@ -118,17 +118,21 @@ function visaoCompleta(
   // ---- cores: pela ordem no arquivo inteiro (estado ou país), para cada candidato manter a mesma cor
   // em qualquer cidade, zona, bairro ou local. Majoritário por candidato (cor do partido), proporcional por partido.
   const tc = totalCores && totalCores.c.length === arq.cands.length && totalCores.p.length === arq.partidos.length ? totalCores : arq.total;
+  // só quem pinta o mapa em algum nível disputa cor (ADR 0014); arquivo antigo sem a lista: todos disputam
+  const pintam = tc === arq.total ? arq.pintam : totalCores?.pintam;
+  const pintaC = pintam ? new Set(pintam.c) : null;
+  const pintaP = pintam ? new Set(pintam.p) : null;
   const corOrdemC = arq.cands.map((_, i) => i).sort((a, b) => (tc.c[b] ?? 0) - (tc.c[a] ?? 0));
   const corOrdemP = arq.partidos.map((_, i) => i).sort((a, b) => (tc.p[b] ?? 0) - (tc.p[a] ?? 0));
   const coresC: Faixas[] = new Array(arq.cands.length);
   const coresP: Faixas[] = new Array(arq.partidos.length);
   if (prop) {
-    atribuirCores(corOrdemP.map((i) => arq.partidos[i].sg), daltonico).forEach((f, k) => (coresP[corOrdemP[k]] = f));
+    atribuirCores(corOrdemP.map((i) => arq.partidos[i].sg), daltonico, pintaP ? corOrdemP.map((i) => pintaP.has(i)) : undefined).forEach((f, k) => (coresP[corOrdemP[k]] = f));
     // candidato herda a cor do partido
     const porSigla = new Map(arq.partidos.map((p, i) => [p.sg, coresP[i]]));
     arq.cands.forEach((c, i) => (coresC[i] = porSigla.get(c.partido) ?? NEUTRO));
   } else {
-    atribuirCores(corOrdemC.map((i) => arq.cands[i].partido), daltonico).forEach((f, k) => (coresC[corOrdemC[k]] = f));
+    atribuirCores(corOrdemC.map((i) => arq.cands[i].partido), daltonico, pintaC ? corOrdemC.map((i) => pintaC.has(i)) : undefined).forEach((f, k) => (coresC[corOrdemC[k]] = f));
   }
 
   const candidatos: Linha[] = ordemC
@@ -209,7 +213,7 @@ function visaoResumo(arq: ArquivoResumo, recorte: Recorte, daltonico: boolean): 
   for (const m of Object.values(arq.mun)) vitorias[m[0]]++;
   const ordem = arq.partidos.map((_, i) => i).sort((a, b) => vitorias[b] - vitorias[a]);
   const faixas: Faixas[] = new Array(arq.partidos.length);
-  atribuirCores(ordem.map((i) => arq.partidos[i]), daltonico).forEach((f, k) => (faixas[ordem[k]] = f));
+  atribuirCores(ordem.map((i) => arq.partidos[i]), daltonico, ordem.map((i) => vitorias[i] > 0)).forEach((f, k) => (faixas[ordem[k]] = f));
   const cores = new Map<string, string>();
   for (const [ibge, [p, pct]] of Object.entries(arq.mun)) {
     if (recorte.municipios && !recorte.municipios.has(ibge)) continue;
