@@ -81,10 +81,11 @@ jobs:
 
       - name: Gravar no branch
         run: |
+          # o bot é quem grava (committer); o autor é o dono do projeto. A identidade vale também para o rebase.
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A public/data/$ANO public/geo/$ANO
           if git diff --cached --quiet; then echo "Nada mudou."; exit 0; fi
-          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-            commit --author="Matheus Sigoli <dev.matheussigoli@gmail.com>" \
-            -m "Dados: eleições de $ANO (gerado pelo GitHub Actions)"
-          git pull --rebase --autostash
+          git commit --author="Matheus Sigoli <dev.matheussigoli@gmail.com>" -m "Dados: eleições de $ANO (gerado pelo GitHub Actions)"
+          git pull --rebase
           git push
