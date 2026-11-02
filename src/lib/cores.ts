@@ -38,6 +38,8 @@ for (const p of paleta.partidos as { sigla: string; principal: Faixas; extra?: F
 const APELIDOS: Record<string, string> = {
   PODEMOS: 'PODE', UNIAOBRASIL: 'UNIAO', PROGRESSISTAS: 'PP', SD: 'SOLIDARIEDADE', PMN: 'MOBILIZA', PMB: 'DEMOCRATA',
   PR: 'PL', PRB: 'REPUBLICANOS', PPS: 'CIDADANIA', PTC: 'AGIR', PATRI: 'PATRIOTA',
+  // 2014: PMDB, PSDC, PEN, PTN e PT do B são os partidos que hoje se chamam MDB, DC, PATRIOTA, PODE e AVANTE
+  PMDB: 'MDB', PSDC: 'DC', PEN: 'PATRIOTA', PTN: 'PODE', PTDOB: 'AVANTE',
 };
 
 
