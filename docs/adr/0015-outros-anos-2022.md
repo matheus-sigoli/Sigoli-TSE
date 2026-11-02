@@ -33,3 +33,11 @@ não existe mais para 2022 (404).
 - Para outro ano (2018…): cadastrar os códigos das eleições em `zonas-locais.mjs` e `UFS_2T_GOVERNADOR`, rodar o
   workflow com o ano e marcar `disponivel` em `src/lib/anos.ts`.
 - Os totais vêm do detalhe oficial; os votos por candidato, da totalização por município — os mesmos do TSE.
+
+## Adendo — 2018 (02/11/2026)
+- Cores dos partidos de 2018 pela tabela "Degradê Sigoli" do usuário (página 3), com as 10 faixas como estão nela:
+  PSL #203B78 (extra #34C934), DEM #8CC63E, PHS #841619, PRP #00A0E3 (extra #263A2C), PPL #006E3C (extra #FFEC30).
+  PTB passa a ter #624C4C como cor extra (era reserva). Marcados `ano: 2018`.
+- Mesmos partidos com outro nome usam a cor de hoje: PR → PL, PRB → REPUBLICANOS, PPS → CIDADANIA, PTC → AGIR,
+  PATRI → PATRIOTA (apelidos em `cores.ts`).
+- O ano do workflow vem de `.github/ano-dados` (cada branch de ano grava o seu) ou da aba Actions.

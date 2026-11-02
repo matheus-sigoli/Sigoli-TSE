@@ -25,6 +25,7 @@ on:
       - scripts/zonas-locais.mjs
       - data/exterior/cidades-pais.csv
       - data/zonas/ZMBRA_*
+      - .github/ano-dados
 
 permissions:
   contents: write
@@ -33,8 +34,6 @@ concurrency:
   group: dados-${{ github.ref }}
   cancel-in-progress: false
 
-env:
-  ANO: ${{ github.event.inputs.ano || '2022' }}
 
 jobs:
   dados:
@@ -42,6 +41,10 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+
+      # ano: o informado na aba Actions; no push, o de .github/ano-dados (cada branch de ano grava o seu)
+      - name: Ano
+        run: echo "ANO=${{ github.event.inputs.ano }}" >> $GITHUB_ENV; [ -n "${{ github.event.inputs.ano }}" ] || echo "ANO=$(cat .github/ano-dados 2>/dev/null || echo 2022)" >> $GITHUB_ENV
 
       - uses: actions/setup-node@v4
         with:

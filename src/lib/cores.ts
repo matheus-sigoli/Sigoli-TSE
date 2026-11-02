@@ -34,7 +34,11 @@ for (const p of paleta.partidos as { sigla: string; principal: Faixas; extra?: F
 }
 // apelidos usados pelo TSE
 // PMN e PMB (2022) são os mesmos partidos que MOBILIZA e DEMOCRATA (2026): mesma cor, pedido do usuário
-const APELIDOS: Record<string, string> = { PODEMOS: 'PODE', UNIAOBRASIL: 'UNIAO', PROGRESSISTAS: 'PP', SD: 'SOLIDARIEDADE', PMN: 'MOBILIZA', PMB: 'DEMOCRATA' };
+// 2018: PR, PRB, PPS, PTC e PATRI são os partidos que hoje se chamam PL, REPUBLICANOS, CIDADANIA, AGIR e PATRIOTA
+const APELIDOS: Record<string, string> = {
+  PODEMOS: 'PODE', UNIAOBRASIL: 'UNIAO', PROGRESSISTAS: 'PP', SD: 'SOLIDARIEDADE', PMN: 'MOBILIZA', PMB: 'DEMOCRATA',
+  PR: 'PL', PRB: 'REPUBLICANOS', PPS: 'CIDADANIA', PTC: 'AGIR', PATRI: 'PATRIOTA',
+};
 
 
 // ------------------------------------------------------------------ utilidades de cor
