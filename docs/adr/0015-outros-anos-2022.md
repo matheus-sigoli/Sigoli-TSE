@@ -41,3 +41,10 @@ não existe mais para 2022 (404).
 - Mesmos partidos com outro nome usam a cor de hoje: PR → PL, PRB → REPUBLICANOS, PPS → CIDADANIA, PTC → AGIR,
   PATRI → PATRIOTA (apelidos em `cores.ts`).
 - O ano do workflow vem de `.github/ano-dados` (cada branch de ano grava o seu) ou da aba Actions.
+
+## Adendo — 2014 (02/11/2026)
+- Todos os partidos de 2014 já estão na paleta, alguns com outro nome: PMDB → MDB, PSDC → DC, PEN → PATRIOTA,
+  PTN → PODE, PT do B → AVANTE (além dos de 2018). Apelidos em `cores.ts`.
+- **Eleições suplementares**: os arquivos de um ano trazem também as suplementares do mesmo mandato (no de 2014,
+  governador do AM em 2017 e do TO em 2018; no de 2018, senador do MT em 2020). `ano-tse.mjs` e `zonas-locais.mjs`
+  ficam só com a eleição geral de outubro do ano (DT_ELEICAO); 2014 e 2018 foram refeitos.
