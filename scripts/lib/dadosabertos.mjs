@@ -92,5 +92,5 @@ export function lerCsvDoZip(zip, filtroNome, aoLinha) {
 
 export const num = (s) => { const n = parseInt(s, 10); return Number.isFinite(n) ? n : 0; };
 export const pad5 = (s) => String(num(s)).padStart(5, '0');
-/** "#NULO", "#NE" e vazio viram '' */
-export const texto = (s) => (s === undefined || s === null || /^#(NULO|NE)$/i.test(s) || s === '-1' ? '' : String(s).trim());
+/** "#NULO", "#NULO#" (arquivos de 2018), "#NE" e vazio viram '' */
+export const texto = (s) => (s === undefined || s === null || /^#(NULO|NE)#?$/i.test(s) || s === '-1' ? '' : String(s).trim());
