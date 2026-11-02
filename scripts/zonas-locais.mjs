@@ -410,6 +410,26 @@ function atribuirBairros(E) {
 }
 
 /** Município inteiro quando tem uma zona; Voronoi dos locais recortado pelo município quando tem várias. */
+/**
+ * Recorte do desenho pela cidade. O polygon-clipping às vezes falha com vértices quase coincidentes (desenhos de
+ * fontes diferentes); tenta de novo com as coordenadas arredondadas (~1 cm) e, se ainda falhar, usa o desenho inteiro.
+ */
+function recortar(a, b) {
+  try { return polygonClipping.intersection(a, b); } catch { /* tenta arredondado */ }
+  const r = (g) => g.map((p) => p.map((anel) => anel.map(([x, y]) => [Math.round(x * 1e7) / 1e7, Math.round(y * 1e7) / 1e7])));
+  try { return polygonClipping.intersection(r(a), r(b)); } catch (e) {
+    console.warn(`  recorte falhou (${e.message.slice(0, 60)}…); usa o desenho sem recortar`);
+    return a;
+  }
+}
+
+/** União das partes de uma zona; se o polygon-clipping falhar, arredonda e tenta de novo, senão só junta os polígonos. */
+function unir(partes) {
+  try { return polygonClipping.union(...partes); } catch { /* tenta arredondado */ }
+  const r = (g) => g.map((p) => p.map((anel) => anel.map(([x, y]) => [Math.round(x * 1e7) / 1e7, Math.round(y * 1e7) / 1e7])));
+  try { return polygonClipping.union(...partes.map(r)); } catch { return partes.flat(); }
+}
+
 function desenharZonas(uf, lista) {
   // malha do ano quando difere da de 2025 (scripts/malha-ano.mjs: municípios criados depois voltam à origem)
   const malhaAno = `public/geo/${ANO}/uf/${uf}.json`;
@@ -472,7 +492,7 @@ function desenharZonas(uf, lista) {
     if (desenho && zonas.every((z) => desenho.some((d) => d.zona === z))) {
       for (const d of desenho) {
         if (!zonas.includes(d.zona)) continue;
-        const recorte = polygonClipping.intersection(d.coords, geom);
+        const recorte = recortar(d.coords, geom);
         if (recorte.length) addParte(d.zona, recorte);
       }
       usouZmbra++;
@@ -517,7 +537,7 @@ function desenharZonas(uf, lista) {
   }
   const zonasFc = { type: 'FeatureCollection', features: [] };
   for (const [z, partes] of partesZona) {
-    const mp = partes.length === 1 ? partes[0] : polygonClipping.union(...partes);
+    const mp = partes.length === 1 ? partes[0] : unir(partes);
     zonasFc.features.push({ type: 'Feature', id: String(z), properties: { id: String(z) }, geometry: { type: 'MultiPolygon', coordinates: mp } });
   }
   const topoZ = topology({ zonas: zonasFc }, 1e5);
@@ -528,7 +548,7 @@ function desenharZonas(uf, lista) {
   // zonas dentro de cada cidade (visão da cidade): id `${ibge}-${zona}`
   const cidadeFc = { type: 'FeatureCollection', features: [] };
   for (const [k, partes] of partesCidade) {
-    const mp = partes.length === 1 ? partes[0] : polygonClipping.union(...partes);
+    const mp = partes.length === 1 ? partes[0] : unir(partes);
     const [ibge, zona] = k.split('-');
     cidadeFc.features.push({ type: 'Feature', id: k, properties: { id: k, ibge, zona }, geometry: { type: 'MultiPolygon', coordinates: mp } });
   }
