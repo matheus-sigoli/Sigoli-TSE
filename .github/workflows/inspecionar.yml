@@ -1,0 +1,38 @@
+# Diagnóstico: lista as entradas e o cabeçalho dos arquivos de dados abertos do TSE de um ano.
+name: Inspecionar dados abertos
+on:
+  workflow_dispatch:
+    inputs:
+      ano:
+        description: Ano da eleição
+        default: '2022'
+jobs:
+  inspecionar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Cabeçalhos
+        run: |
+          A=${{ github.event.inputs.ano }}
+          B=https://cdn.tse.jus.br/estatistica/sead/odsele
+          for u in \
+            votacao_candidato_munzona/votacao_candidato_munzona_$A.zip \
+            votacao_partido_munzona/votacao_partido_munzona_$A.zip \
+            detalhe_votacao_munzona/detalhe_votacao_munzona_$A.zip \
+            consulta_cand/consulta_cand_$A.zip \
+            eleitorado_locais_votacao/eleitorado_local_votacao_$A.zip \
+            votacao_secao/votacao_secao_${A}_AC.zip \
+            votacao_secao/votacao_secao_${A}_BR.zip; do
+            f=$(basename $u)
+            echo "=== $u"; curl -sSfL -o $f $B/$u || { echo "FALHOU"; continue; }
+            ls -la $f
+            unzip -l $f | head -40
+            first=$(unzip -Z1 $f | grep -i '\.csv$' | head -1)
+            echo "--- cabeçalho de $first"
+            unzip -p $f "$first" | head -3 | iconv -f latin1 -t utf8
+          done
+          echo "=== amostras"
+          unzip -p votacao_candidato_munzona_$A.zip "$(unzip -Z1 votacao_candidato_munzona_$A.zip | grep -i 'BR' | head -1)" | iconv -f latin1 -t utf8 | grep -i '"PRESIDENTE"' | head -3
+          unzip -p votacao_candidato_munzona_$A.zip "$(unzip -Z1 votacao_candidato_munzona_$A.zip | grep -i 'BR' | head -1)" | iconv -f latin1 -t utf8 | grep -i 'ZZ' | head -3
+          unzip -p consulta_cand_$A.zip "$(unzip -Z1 consulta_cand_$A.zip | grep -i 'AC' | head -1)" | iconv -f latin1 -t utf8 | grep -i 'VICE\|SUPLENTE' | head -3
+          for f in votacao_candidato_munzona_$A.zip; do unzip -p $f "$(unzip -Z1 $f | grep -i 'BR' | head -1)" | iconv -f latin1 -t utf8 | awk -F'";"' '{print $NF}' | sort | uniq -c | sort -rn | head; done
