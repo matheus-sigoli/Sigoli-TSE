@@ -176,7 +176,7 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
 
   // ---- arrastar, pinça, hover e clique
   const ponteiros = useRef(new Map<number, { x: number; y: number }>());
-  const gesto = useRef<{ x: number; y: number; v: Vista; moveu: boolean; dist?: number; meio?: { x: number; y: number } } | null>(null);
+  const gesto = useRef<{ x: number; y: number; v: Vista; moveu: boolean; dist?: number; meio?: { x: number; y: number }; id?: string | null } | null>(null);
 
   const idSob = (t: EventTarget | null) => (t instanceof Element ? t.closest('[data-id]')?.getAttribute('data-id') ?? null : null);
   const local = (e: React.PointerEvent) => {
@@ -193,7 +193,7 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
     if (ponteiros.current.size === 2) {
       const [a, b] = [...ponteiros.current.values()];
       gesto.current = { x: p.x, y: p.y, v: vistaRef.current, moveu: true, dist: Math.hypot(a.x - b.x, a.y - b.y), meio: { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 } };
-    } else gesto.current = { x: p.x, y: p.y, v: vistaRef.current, moveu: false };
+    } else gesto.current = { x: p.x, y: p.y, v: vistaRef.current, moveu: false, id: idSob(e.target) };
   };
 
   const aoMover = (e: React.PointerEvent) => {
@@ -227,7 +227,9 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
     if (ponteiros.current.size > 0) return;
     gesto.current = null;
     if (g && !g.moveu) {
-      const id = idSob(e.target);
+      // a área vem do momento em que o botão desceu: com a captura do ponteiro, o evento de soltar
+      // chega pelo <svg> inteiro (no mouse), e não pela área clicada
+      const id = g.id ?? null;
       const agora = performance.now();
       const duplo = id !== null && ultimoClique.current.id === id && agora - ultimoClique.current.t < 420;
       ultimoClique.current = { id, t: duplo ? 0 : agora };

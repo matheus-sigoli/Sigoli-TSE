@@ -18,6 +18,7 @@
     "dados": "npm run coletar && npm run processar",
     "test": "node --test scripts/test/*.test.mjs",
     "bairros": "node --max-old-space-size=6144 scripts/bairros.mjs",
+    "areas": "node --max-old-space-size=6144 scripts/areas-locais.mjs --de locais/saida_sigoli",
     "zonas": "node --max-old-space-size=6144 scripts/zonas-locais.mjs --baixar"
   },
   "dependencies": {

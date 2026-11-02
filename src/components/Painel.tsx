@@ -235,7 +235,7 @@ function Painel(p: Props) {
 
 const ROTULO_VICE: Record<string, string> = { v: 'Vice', s1: '1º suplente', s2: '2º suplente' };
 
-/** Iniciais para o avatar: "GERALDO ALCKMIN" → "GA"; partido usa a sigla. */
+/** Reserva do avatar quando não há número (ex.: resumo nacional por partido): sigla ou iniciais. */
 const iniciais = (l: Linha) => {
   if (l.chave.startsWith('p')) return l.partido.replace(/[^A-Za-zÀ-ú0-9]/g, '').slice(0, 3);
   const p = l.nome.split(/\s+/).filter((x) => !/^(DA|DE|DO|DAS|DOS|E)$/.test(x));
@@ -256,10 +256,14 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: 
         return (
           <li key={l.chave}>
             <button className="linha" aria-pressed={focoChave === l.chave} onClick={() => aoFocar(l.chave)}>
-              <span className="avatar" style={{ '--cor': cor, color: textoSobre(cor) } as React.CSSProperties} aria-hidden>
-                {iniciais(l)}
+              <span
+                className="avatar num"
+                data-digitos={Math.min(5, (l.numero || iniciais(l)).length)}
+                style={{ '--cor': cor, color: textoSobre(cor) } as React.CSSProperties}
+                aria-label={l.numero ? `número ${l.numero}` : undefined}
+              >
+                {l.numero || iniciais(l)}
               </span>
-              <span className="numero num" style={{ color: cor }} aria-label={`número ${l.numero}`}>{l.numero}</span>
               <span className="linha-info">
                 <span className="linha-nome">
                   {candidato ? `${titulo(l.nome)} (${l.partido})` : l.partido}

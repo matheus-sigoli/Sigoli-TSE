@@ -194,7 +194,13 @@ function buscarMalhaCidade(uf: string, ibge: string, nivel: 'zonas' | 'bairros' 
             .map((x) => ponto(x.id, x.lon!, x.lat!, x.eleitorado)),
         };
       } else {
-        // locais de votação em círculos, com os bairros do IBGE como referência
+        // locais de votação: áreas do Atlas Eleitoral 2026 (ADR 0012); sem elas, círculos sobre os bairros do IBGE
+        const comAreas = await buscar<Record<string, number>>(`/geo/locais-areas/${uf}/cidades.json`).catch(() => ({} as Record<string, number>));
+        if (ibge in comAreas) {
+          areas = toGeoJSON(await buscar<Topology>(`/geo/locais-areas/${uf}/${ibge}.json`), 'locais');
+          const bbox = caixaGeo({ type: 'FeatureCollection', features: [...cidade, ...areas.features] });
+          return { malha: { municipios: areas, linhas, bbox }, fundo, pontos };
+        }
         const ib = await bairrosIbge();
         linhas = ib;
         const locais = await buscarLocais(uf);

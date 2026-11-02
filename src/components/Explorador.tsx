@@ -110,6 +110,8 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
   // Na visão da cidade, cada nível tem seu arquivo por UF: zonas-cidade, bairros ou locais (ADRs 0009 e 0011)
   const nivelArquivo: NivelArquivo = cid ? (nivel === 'zonas' ? 'zonas-cidade' : nivel === 'locais' ? 'locais' : 'bairros') : nivel === 'zonas' ? 'zonas' : 'municipios';
   const resultado = useResultado(cargoSlug, turno, abr, nivelArquivo);
+  // arquivo do mapa do estado: a ordem das cores sai dele, para cada candidato ter a mesma cor em todos os níveis
+  const resultadoEstado = useResultado(cargoSlug, turno, abr, 'municipios');
   const malhaUf = useMalha(abr, !cid && nivel === 'zonas' ? 'zonas' : 'municipios');
   const malhaCidade = useMalhaCidade(cid ? abr : null, cid, cid ? (nivel as 'zonas' | 'bairros' | 'locais') : 'bairros');
   const malha = cid ? { dados: malhaCidade.dados?.malha ?? null, carregando: malhaCidade.carregando } : malhaUf;
@@ -174,8 +176,10 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     // o foco aponta para índices do arquivo atual; ignora se não couber
     const arq = resultado.dados;
     const focoValido = foco && !arq.resumo && (foco.tipo === 'c' ? foco.idx < arq.cands.length : foco.idx < arq.partidos.length) ? foco : null;
-    return calcularVisao(arq, { abr, municipios: recorteMunicipios }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined });
-  }, [resultado.dados, abr, recorteMunicipios, daltonico, foco, municipios.dados]);
+    const base = resultadoEstado.dados;
+    const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p } : undefined;
+    return calcularVisao(arq, { abr, municipios: recorteMunicipios }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
+  }, [resultado.dados, resultadoEstado.dados, abr, recorteMunicipios, daltonico, foco, municipios.dados]);
 
   // ---- nomes
   const nomeZona = useCallback(
@@ -371,7 +375,11 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
           Malha: IBGE{cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ' 2025'} · Resultados: TSE
           {nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
           {cid && nivel === 'bairros' ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}
-          {cid && nivel === 'locais' ? ' · Círculos: locais de votação, pelo tamanho do eleitorado' : ''}
+          {cid && nivel === 'locais'
+            ? malhaCidade.dados?.pontos.features.length
+              ? ' · Círculos: locais de votação, pelo tamanho do eleitorado'
+              : ' · Áreas dos locais: Atlas Eleitoral 2026 (@mroctoz)'
+            : ''}
         </p>
       </main>
       <Painel

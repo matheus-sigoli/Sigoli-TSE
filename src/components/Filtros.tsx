@@ -43,7 +43,7 @@ const NIVEIS_CIDADE: { n: Nivel; rotulo: string }[] = [
 const DICA_CIDADE: Record<string, string> = {
   zonas: 'Zonas eleitorais dentro da cidade. Clique numa zona para ver o resultado dela.',
   bairros: 'Bairros com área vêm do IBGE; os demais, do cadastro do TSE, aparecem como círculos.',
-  locais: 'Cada círculo é um local de votação; quanto maior, mais eleitores.',
+  locais: 'Cada área é a região atendida por um local de votação (Atlas Eleitoral 2026). Clique para ver o resultado dele.',
 };
 const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na zona', bairros: 'no bairro', locais: 'no local' };
 

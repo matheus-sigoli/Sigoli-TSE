@@ -97,27 +97,36 @@ const LIMITE_PARECIDO = 22;
 const DALTONICO = ['#E69F00', '#0072B2', '#009E73', '#CC79A7', '#56B4E9', '#D55E00', '#F0E442', '#999999'];
 
 /**
- * Atribui faixas de cor a uma lista de concorrentes (em ordem de votos).
+ * Atribui faixas de cor a uma lista de concorrentes (em ordem de votos no estado/país).
  * Concorrentes podem ser candidatos (cor do partido) ou partidos.
+ *
+ * Conflito (cores parecidas demais), pela tabela do usuário (ADR 0004):
+ *   1. quem tem cor extra troca para ela — mesmo que seja o mais votado (ex.: no Pará, PODE vira roxo
+ *      e o MDB, que não tem extra, fica com o verde);
+ *   2. sem cor extra dos dois lados, o menos votado recebe uma cor livre da paleta segura.
  */
 export function atribuirCores(partidosEmOrdem: string[], daltonico = false): Faixas[] {
   if (daltonico) return partidosEmOrdem.map((_, i) => gerarFaixas(DALTONICO[i % DALTONICO.length]));
-  const usadas: string[] = [];
-  return partidosEmOrdem.map((sg) => {
-    const pal = paletaDoPartido(sg);
-    let escolhida = pal.principal;
-    const conflita = (f: Faixas) => usadas.some((u) => deltaE(u, f['50']) < LIMITE_PARECIDO);
-    if (conflita(escolhida)) {
-      if (pal.extra && !conflita(pal.extra)) escolhida = pal.extra;
-      else {
-        // sem cor extra (ex.: dois senadores do PL no mesmo estado): primeira cor livre da paleta segura
-        const livre = DALTONICO.map(gerarFaixas).find((f) => !conflita(f));
-        if (livre) escolhida = livre;
-      }
+  const pals = partidosEmOrdem.map(paletaDoPartido);
+  const escolha: Faixas[] = [];
+  const conflitaCom = (f: Faixas, ignorar: number, ate: number) => {
+    for (let k = 0; k < ate; k++) if (k !== ignorar && deltaE(escolha[k]['50'], f['50']) < LIMITE_PARECIDO) return k;
+    return -1;
+  };
+  for (let i = 0; i < pals.length; i++) {
+    escolha[i] = pals[i].principal;
+    const j = conflitaCom(escolha[i], i, i);
+    if (j < 0) continue;
+    const extraI = pals[i].extra;
+    const extraJ = pals[j].extra;
+    if (extraI && conflitaCom(extraI, i, i) < 0) escolha[i] = extraI;
+    else if (extraJ && escolha[j] === pals[j].principal && conflitaCom(extraJ, j, i) < 0 && conflitaCom(escolha[i], j, i) < 0) escolha[j] = extraJ;
+    else {
+      const livre = DALTONICO.map(gerarFaixas).find((f) => conflitaCom(f, i, i) < 0);
+      if (livre) escolha[i] = livre;
     }
-    usadas.push(escolhida['50']);
-    return escolhida;
-  });
+  }
+  return escolha;
 }
 
 /** Faixa pela regra da tabela: floor(pct × 10) × 10, entre 10 e 100. */

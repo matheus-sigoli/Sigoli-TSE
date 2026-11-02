@@ -8,3 +8,5 @@ next-env.d.ts
 .vercel
 .env*
 shp/bairros/*.zip
+locais/
+saida_sigoli/

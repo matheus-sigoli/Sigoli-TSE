@@ -180,7 +180,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 
 .lista { list-style: none; margin: 0; padding: 6px 8px 16px; }
 .linha {
-  display: grid; grid-template-columns: 40px auto minmax(0, 1fr) auto; align-items: start; gap: 4px 10px;
+  display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: start; gap: 4px 12px;
   width: 100%; padding: 10px 12px; border: 0; border-radius: var(--r-2); background: transparent; text-align: left;
   content-visibility: auto; contain-intrinsic-size: auto 92px;
 }
@@ -190,10 +190,14 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 .linha-nome { font-weight: 600; font-size: var(--fs-3); line-height: 1.25; text-wrap: balance; }
 .avatar {
   --cor: #888;
-  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--cor); font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.02em;
-  font-variation-settings: 'wdth' 85; box-shadow: inset 0 0 0 2px rgb(255 255 255 / 0.12);
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--cor); font-weight: 760; font-size: 1.125rem; letter-spacing: -0.01em; line-height: 1;
+  font-variation-settings: 'wdth' 72; box-shadow: inset 0 0 0 2px rgb(255 255 255 / 0.12);
 }
+/* número do candidato dentro do círculo: diminui conforme a quantidade de dígitos */
+.avatar[data-digitos='3'] { font-size: 0.9375rem; }
+.avatar[data-digitos='4'] { font-size: 0.8125rem; font-variation-settings: 'wdth' 62; }
+.avatar[data-digitos='5'] { font-size: 0.6875rem; font-variation-settings: 'wdth' 58; }
 .numero { font-size: 1.625rem; line-height: 40px; font-variation-settings: 'wdth' 68; font-weight: 760; letter-spacing: -0.01em; min-width: 1.6ch; }
 .numero.pequeno { font-size: 1.125rem; line-height: 1.4; min-width: 2.4ch; }
 .linha-col { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
