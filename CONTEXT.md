@@ -46,6 +46,7 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 | 0012 | Áreas dos locais de votação do Atlas Eleitoral 2026 (sem círculos) |
 | 0013 | Zonas do DF a partir do DF.svg do usuário; DF abre direto na visão da cidade |
 | 0014 | Regras de cores pelos confrontos reais: só quem pinta o mapa, CIEDE2000, extra antes das reservas |
+| 0015 | Outros anos: 2022 pelos dados abertos do TSE, rotas e arquivos por ano, áreas do Atlas reaproveitadas |
 
 ## Glossário
 
@@ -140,7 +141,10 @@ do TSE. Id no projeto: `{município TSE}-{zona}-{número do local}`.
 quando a cidade tem bairros oficiais) ou **TSE** (nome de bairro do cadastro do local, sem área: aparece como círculo).
 
 **Outros anos** — Eleições gerais anteriores (2022, 2018, 2014, 2010) com a mesma estrutura de mapa.
-A lista fica em `src/lib/anos.ts`; um ano entra no ar quando tiver dados em `public/data/{ano}/` e rotas `/{ano}/...`.
+A lista fica em `src/lib/anos.ts`; um ano entra no ar com dados em `public/data/{ano}/` e `public/geo/{ano}/`
+(workflow "Dados de outro ano") e `disponivel: true`. 2022 no ar desde 02/11/2026 (ADR 0015).
+
+**Seletor de ano** — No topo dos filtros do mapa: troca o ano mantendo cargo, lugar, turno e nível.
 
 **Votos anulados** — Votos dados a candidato com registro indeferido (destinação "Anulado sub judice" etc.).
 Não entram nos válidos e o candidato não vence município.
