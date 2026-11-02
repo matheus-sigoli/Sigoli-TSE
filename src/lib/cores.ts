@@ -33,7 +33,8 @@ for (const p of paleta.partidos as { sigla: string; principal: Faixas; extra?: F
   RESERVAS_BASE.set(normaliza(p.sigla), p.reservas ?? []);
 }
 // apelidos usados pelo TSE
-const APELIDOS: Record<string, string> = { PODEMOS: 'PODE', UNIAOBRASIL: 'UNIAO', PROGRESSISTAS: 'PP', SD: 'SOLIDARIEDADE' };
+// PMN e PMB (2022) são os mesmos partidos que MOBILIZA e DEMOCRATA (2026): mesma cor, pedido do usuário
+const APELIDOS: Record<string, string> = { PODEMOS: 'PODE', UNIAOBRASIL: 'UNIAO', PROGRESSISTAS: 'PP', SD: 'SOLIDARIEDADE', PMN: 'MOBILIZA', PMB: 'DEMOCRATA' };
 
 
 // ------------------------------------------------------------------ utilidades de cor

@@ -739,6 +739,86 @@
         "100": "#090909"
       },
       "reservas": []
+    },
+    {
+      "chave": "PTB",
+      "sigla": "PTB",
+      "numero": 14,
+      "nome": "Partido Trabalhista Brasileiro",
+      "principal": {
+        "10": "#D4F6FF",
+        "20": "#AAEEFF",
+        "30": "#7FE5FF",
+        "40": "#55DDFF",
+        "50": "#2AD4FF",
+        "60": "#24B4D9",
+        "70": "#1D94B3",
+        "80": "#17758C",
+        "90": "#115566",
+        "100": "#082A33"
+      },
+      "reservas": [],
+      "ano": 2022
+    },
+    {
+      "chave": "PATRIOTA",
+      "sigla": "PATRIOTA",
+      "numero": 51,
+      "nome": "Patriota",
+      "principal": {
+        "10": "#CCE9CC",
+        "20": "#99D399",
+        "30": "#66BE66",
+        "40": "#33A833",
+        "50": "#009200",
+        "60": "#007C00",
+        "70": "#006600",
+        "80": "#005000",
+        "90": "#003A00",
+        "100": "#001D00"
+      },
+      "reservas": [],
+      "ano": 2022
+    },
+    {
+      "chave": "PSC",
+      "sigla": "PSC",
+      "numero": 20,
+      "nome": "Partido Social Cristão",
+      "principal": {
+        "10": "#CCE2D9",
+        "20": "#99C5B3",
+        "30": "#66A98D",
+        "40": "#338C67",
+        "50": "#006F41",
+        "60": "#005E37",
+        "70": "#004E2E",
+        "80": "#003D24",
+        "90": "#002C1A",
+        "100": "#00160D"
+      },
+      "reservas": [],
+      "ano": 2022
+    },
+    {
+      "chave": "PROS",
+      "sigla": "PROS",
+      "numero": 90,
+      "nome": "Partido Republicano da Ordem Social",
+      "principal": {
+        "10": "#FDE8D3",
+        "20": "#FBD1A7",
+        "30": "#F8BA7C",
+        "40": "#F6A350",
+        "50": "#F48C24",
+        "60": "#CF771F",
+        "70": "#AB6219",
+        "80": "#864D14",
+        "90": "#62380E",
+        "100": "#311C07"
+      },
+      "reservas": [],
+      "ano": 2022
     }
   ],
   "neutro": {
