@@ -22,6 +22,8 @@ on:
       - scripts/areas-ano.mjs
       - scripts/lib/dadosabertos.mjs
       - scripts/malha-ano.mjs
+      - scripts/zonas-locais.mjs
+      - data/exterior/cidades-pais.csv
       - data/zonas/ZMBRA_*
       - .github/ano-dados
 

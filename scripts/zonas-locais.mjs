@@ -48,6 +48,21 @@ const CDN = 'https://cdn.tse.jus.br/estatistica/sead/odsele';
 const TODAS = ['ac', 'al', 'am', 'ap', 'ba', 'ce', 'df', 'es', 'go', 'ma', 'mg', 'ms', 'mt', 'pa', 'pb', 'pe', 'pi', 'pr', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp', 'to'];
 const UFS = opt('uf').length ? opt('uf').map((u) => u.toLowerCase()) : TODAS;
 
+// zonas desenhadas por cidade para um ano (ZMBRA_{ano}.json, enviado pelo usuário: cada feição = zona × município,
+// nas cidades com mais de uma zona). Onde cobre todas as zonas da cidade, substitui o Voronoi.
+const ZMBRA = (() => {
+  const p = `data/zonas/ZMBRA_${ANO}.json`;
+  if (!existsSync(p)) return null;
+  const m = new Map(); // ibge → [{zona, coords}]
+  for (const f of JSON.parse(readFileSync(p, 'utf8')).features) {
+    const ibge = String(f.properties.CD_MUN_I);
+    if (!m.has(ibge)) m.set(ibge, []);
+    m.get(ibge).push({ zona: Number(f.properties.ZE_NUM), uf: String(f.properties.SG_UF).toLowerCase(), coords: f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates });
+  }
+  console.log(`${p}: zonas desenhadas em ${m.size} cidades`);
+  return m;
+})();
+
 // código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)
 function cargoDe(cdCargo, turno) {
   const c = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
@@ -395,21 +410,6 @@ function atribuirBairros(E) {
 }
 
 /** Município inteiro quando tem uma zona; Voronoi dos locais recortado pelo município quando tem várias. */
-// zonas desenhadas por cidade para um ano (ZMBRA_{ano}.json, enviado pelo usuário: cada feição = zona × município,
-// nas cidades com mais de uma zona). Onde cobre todas as zonas da cidade, substitui o Voronoi.
-const ZMBRA = (() => {
-  const p = `data/zonas/ZMBRA_${ANO}.json`;
-  if (!existsSync(p)) return null;
-  const m = new Map(); // ibge → [{zona, coords}]
-  for (const f of JSON.parse(readFileSync(p, 'utf8')).features) {
-    const ibge = String(f.properties.CD_MUN_I);
-    if (!m.has(ibge)) m.set(ibge, []);
-    m.get(ibge).push({ zona: Number(f.properties.ZE_NUM), uf: String(f.properties.SG_UF).toLowerCase(), coords: f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates });
-  }
-  console.log(`${p}: zonas desenhadas em ${m.size} cidades`);
-  return m;
-})();
-
 function desenharZonas(uf, lista) {
   // malha do ano quando difere da de 2025 (scripts/malha-ano.mjs: municípios criados depois voltam à origem)
   const malhaAno = `public/geo/${ANO}/uf/${uf}.json`;
