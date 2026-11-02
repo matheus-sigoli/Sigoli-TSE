@@ -59,9 +59,11 @@ async function baixar(url, destino) {
   const parcial = `${destino}.parcial`;
   for (let tentativa = 1; ; tentativa++) {
     try {
-      const r = await fetch(url);
+      // limite por arquivo: uma conexão parada vira nova tentativa em vez de travar o processo
+      const r = await fetch(url, { signal: AbortSignal.timeout(15 * 60 * 1000) });
       if (!r.ok) throw new Error(`HTTP ${r.status} em ${url}`);
       await pipeline(Readable.fromWeb(r.body), createWriteStream(parcial));
+      console.log(`  baixado ${url.split('/').pop()}`);
       renameSync(parcial, destino);
       return;
     } catch (e) {
