@@ -1,6 +1,8 @@
 # Diagnóstico: lista as entradas e o cabeçalho dos arquivos de dados abertos do TSE de um ano.
 name: Inspecionar dados abertos
 on:
+  push:
+    paths: [.github/workflows/inspecionar.yml]
   workflow_dispatch:
     inputs:
       ano:
@@ -13,7 +15,7 @@ jobs:
     steps:
       - name: Cabeçalhos
         run: |
-          A=${{ github.event.inputs.ano }}
+          A=${{ github.event.inputs.ano || '2022' }}
           B=https://cdn.tse.jus.br/estatistica/sead/odsele
           for u in \
             votacao_candidato_munzona/votacao_candidato_munzona_$A.zip \
