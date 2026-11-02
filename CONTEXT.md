@@ -47,6 +47,7 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 | 0013 | Zonas do DF a partir do DF.svg do usuário; DF abre direto na visão da cidade |
 | 0014 | Regras de cores pelos confrontos reais: só quem pinta o mapa, CIEDE2000, extra antes das reservas |
 | 0015 | Outros anos: 2022 pelos dados abertos do TSE, rotas e arquivos por ano, áreas do Atlas reaproveitadas |
+| 0016 | Locais sem coordenadas: ponto pelo cadastro de outros anos ou pelo centro do bairro/zona |
 
 ## Glossário
 

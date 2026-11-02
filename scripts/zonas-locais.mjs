@@ -37,6 +37,7 @@ import polygonClipping from 'polygon-clipping';
 import { topology } from 'topojson-server';
 import { feature } from 'topojson-client';
 import { normalizar as semAcento } from './lib/texto.mjs';
+import { geocodificar } from './lib/geocodificar.mjs';
 const argv = process.argv.slice(2);
 const opt = (k) => argv.flatMap((a, i) => (a === `--${k}` ? [argv[i + 1]] : []));
 const CACHE = '.cache/dadosabertos';
@@ -280,6 +281,23 @@ if (ANO === 2026) {
   });
 }
 
+// 1a) locais sem latitude/longitude: ponto pelo cadastro de outros anos ou pelo centro do bairro/zona (ADR 0016)
+for (const E of estados.values()) {
+  const refs = [2026, 2022, 2018, 2014, 2010].filter((y) => y !== ANO)
+    .map((y) => (y === 2026 ? `public/geo/locais/${E.uf}.json` : `public/geo/${y}/locais/${E.uf}.json`))
+    .filter((p) => existsSync(p))
+    .map((p) => {
+      const { campos, l } = JSON.parse(readFileSync(p, 'utf8'));
+      const c = Object.fromEntries(campos.map((n, i) => [n, i]));
+      return l.map((r) => ({ id: String(r[c.id]), ibge: String(r[c.ibge]), zona: r[c.zona], nome: r[c.nome], bairro: r[c.bairro], lon: r[c.lon], lat: r[c.lat], aprox: c.aprox !== undefined && r[c.aprox] === 1 }));
+    });
+  const lista = [...E.locais.values()];
+  const antes = lista.filter((l) => l.lon === null || l.lat === null).length;
+  if (!antes) continue;
+  const conta = geocodificar(lista, refs);
+  console.log(`${E.uf}: ${antes} locais sem ponto → ${Object.entries(conta).filter(([, n]) => n).map(([k, n]) => `${k} ${n}`).join(', ')}`);
+}
+
 // 1b) bairro de cada local
 for (const E of estados.values()) atribuirBairros(E);
 
@@ -331,8 +349,9 @@ for (const E of estados.values()) {
   const lista = [...E.locais.values()].sort((x, y) => x.id.localeCompare(y.id));
   mkdirSync(GEO('locais'), { recursive: true });
   writeFileSync(`${GEO('locais')}/${uf}.json`, JSON.stringify({
-    campos: ['id', 'ibge', 'zona', 'nome', 'bairro', 'lon', 'lat', 'eleitorado', 'idBairro'],
-    l: lista.map((l) => [l.id, l.ibge, l.zona, l.nome, l.bairro, l.lon === null ? null : +l.lon.toFixed(5), l.lat === null ? null : +l.lat.toFixed(5), l.eleitorado, E.bairroDoLocal.get(l.id) ?? '']),
+    // aprox = 1: ponto estimado (centro do bairro ou da zona), não o do prédio (ADR 0016)
+    campos: ['id', 'ibge', 'zona', 'nome', 'bairro', 'lon', 'lat', 'eleitorado', 'idBairro', 'aprox'],
+    l: lista.map((l) => [l.id, l.ibge, l.zona, l.nome, l.bairro, l.lon === null ? null : +l.lon.toFixed(5), l.lat === null ? null : +l.lat.toFixed(5), l.eleitorado, E.bairroDoLocal.get(l.id) ?? '', l.aprox ? 1 : 0]),
   }));
 
   // cadastro dos bairros: origem 'i' (polígono do IBGE) ou 't' (nome do TSE, sem área), centro ponderado pelo eleitorado
@@ -388,8 +407,10 @@ function atribuirBairros(E) {
     const chaveNome = semAcento(l.bairro);
     let b = null;
     if (malha) {
-      if (l.lon !== null && l.lat !== null) b = malha.find((m) => contem(m, l.lon, l.lat));
+      // ponto estimado (ADR 0016): o nome do bairro vale mais que o ponto
+      if (l.lon !== null && l.lat !== null && !l.aprox) b = malha.find((m) => contem(m, l.lon, l.lat));
       if (!b && chaveNome) b = malha.find((m) => m.chave === chaveNome);
+      if (!b && l.aprox) b = malha.find((m) => contem(m, l.lon, l.lat));
     }
     let id, nome, origem;
     if (b) { id = b.id; nome = b.nome; origem = 'i'; }
