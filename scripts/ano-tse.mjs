@@ -34,6 +34,12 @@ const ARQ = {
 const zip = (k) => join(CACHE, ARQ[k][1]);
 if (argv.includes('--baixar')) for (const k of Object.keys(ARQ)) await baixar(`${CDN}/${ARQ[k][0]}/${ARQ[k][1]}`, zip(k));
 
+/**
+ * Só a eleição geral de outubro do ano. Os arquivos de um ano trazem também as eleições suplementares do mesmo
+ * mandato (ex.: no de 2014, governador do AM em 2017 e do TO em 2018; no de 2018, senador do MT em 2020).
+ */
+const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
+
 /** entradas por UF (e BR); o _BRASIL repete tudo */
 const porUf = (n) => /_[A-Z]{2}\.csv$/i.test(n);
 
@@ -85,6 +91,7 @@ const vices = new Map(); // `${ue}|${cargoTitular}|${numero}` → [{tipo, nome, 
 const vistosVice = new Set();
 const TITULAR = { 2: [1, 'v'], 4: [3, 'v'], 9: [5, 's1'], 10: [5, 's2'] };
 await lerCsvDoZip(zip('cons'), porUf, (f, c) => {
+  if (!ordinaria(f[c.DT_ELEICAO])) return;
   const t = TITULAR[num(f[c.CD_CARGO])];
   if (!t || vistosVice.has(f[c.SQ_CANDIDATO])) return;
   vistosVice.add(f[c.SQ_CANDIDATO]);
@@ -97,6 +104,7 @@ console.log(`vices e suplentes: ${vistosVice.size}`);
 
 // 2) votos dos candidatos
 await lerCsvDoZip(zip('cand'), porUf, (f, c) => {
+  if (!ordinaria(f[c.DT_ELEICAO])) return;
   const cd = num(f[c.CD_CARGO]);
   const slug = SLUG[cd];
   if (!slug) return;
@@ -135,6 +143,7 @@ console.log(`candidatos lidos: ${grupos.size} cargos/turnos/UFs`);
 
 // 3) votos dos partidos (legenda + nominais válidos)
 await lerCsvDoZip(zip('part'), porUf, (f, c) => {
+  if (!ordinaria(f[c.DT_ELEICAO])) return;
   const slug = SLUG[num(f[c.CD_CARGO])];
   if (!slug) return;
   const uf = f[c.SG_UF].toLowerCase();
@@ -156,6 +165,7 @@ await lerCsvDoZip(zip('part'), porUf, (f, c) => {
 
 // 4) totais: [aptos, comparecimento, abstenção, válidos, brancos, nulos]
 await lerCsvDoZip(zip('det'), porUf, (f, c) => {
+  if (!ordinaria(f[c.DT_ELEICAO])) return;
   const slug = SLUG[num(f[c.CD_CARGO])];
   if (!slug) return;
   const uf = f[c.SG_UF].toLowerCase();

@@ -63,6 +63,9 @@ const ZMBRA = (() => {
   return m;
 })();
 
+/** só a eleição geral de outubro do ano (os arquivos trazem também as suplementares do mesmo mandato) */
+const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
+
 // código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)
 function cargoDe(cdCargo, turno) {
   const c = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
@@ -182,6 +185,7 @@ function lerBase(E, cargo, t) {
 
 /** Soma uma linha de votação por seção nos acumuladores da UF. */
 function somarLinha(E, f, c) {
+  if (!ordinaria(f[c.DT_ELEICAO])) return;
   const cg = cargoDe(num(f[c.CD_CARGO]), num(f[c.NR_TURNO]));
   if (!cg) return;
   const [cargo, t] = cg;
@@ -244,6 +248,7 @@ const estados = new Map(UFS.map((uf) => [uf, novaUf(uf)]));
 
 // 1) cadastro de locais e seções de cada UF
 function lerLocal(E, f, c) {
+  if (c.DT_ELEICAO !== undefined && !ordinaria(f[c.DT_ELEICAO])) return;
   const turno = num(f[c.NR_TURNO]);
   const mun = pad5(f[c.CD_MUNICIPIO]);
   const zona = num(f[c.NR_ZONA]);
