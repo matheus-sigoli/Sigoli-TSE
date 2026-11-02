@@ -49,10 +49,7 @@
         "90": "#4F0712",
         "100": "#280409"
       },
-      "reservas": [
-        "#D79DB2",
-        "#591A17"
-      ]
+      "reservas": []
     },
     {
       "chave": "MISSAO",
@@ -71,10 +68,7 @@
         "90": "#654C10",
         "100": "#332608"
       },
-      "reservas": [
-        "#FDE3A0",
-        "#8C7230"
-      ]
+      "reservas": []
     },
     {
       "chave": "PSD",
@@ -765,7 +759,7 @@
     "nota": "Definido pelo dono do projeto em 31/10/2026, vale nos temas claro e escuro."
   },
   "conflito": {
-    "nota": "Regras de conflito de cores (ADR 0014). Duas cores conflitam quando a distância CIEDE2000 entre as cores-base (50%) é menor que o limite, salvo os pares compatíveis. Só disputam cor os concorrentes que pintam o mapa (vencem ao menos uma área em algum nível).",
+    "nota": "Regras de conflito de cores (ADR 0014). Duas cores conflitam quando a distância CIEDE2000 entre as cores-base (50%) é menor que o limite, salvo os pares compatíveis. Só disputam cor os concorrentes que pintam o mapa (vencem ao menos uma área em algum nível). Partidos fixos nunca trocam de cor: no conflito, troca o outro.",
     "limite_ciede2000": 17.3,
     "compativeis": [
       [
@@ -776,6 +770,11 @@
         "PP",
         "PSDB"
       ]
+    ],
+    "fixos": [
+      "PL",
+      "PT",
+      "MISSÃO"
     ]
   },
   "nota_reservas": "reservas: cores-base (hex, 50%) de reserva do partido, em ordem; as 10 faixas são geradas a partir delas. Ordem de troca: principal → extra → reservas → paleta neutra."

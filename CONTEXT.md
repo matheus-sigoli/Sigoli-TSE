@@ -109,6 +109,8 @@ do % do vencedor. 50% = cor-base.
 **Cor extra** — Segunda cor oficial de alguns partidos (tabela do usuário), usada só quando o adversário no mesmo
 mapa tem cor parecida. Vem antes das reservas.
 
+**Partido fixo** — PL, PT e MISSÃO: nunca trocam de cor quando pintam o mapa; no conflito, troca o outro (ADR 0014).
+
 **Reserva** — Até 2 cores de cada partido (uma clara, uma escura, da mesma família), usadas depois da extra. Ficam em
 `reservas` na paleta.
 

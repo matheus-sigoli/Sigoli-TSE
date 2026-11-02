@@ -22,7 +22,11 @@ Com a regra da ADR 0004 (distância CIE76 < 22 entre todos os concorrentes do ar
    REPUBLICANOS × AVANTE (14,6), PSB × NOVO (13,8), PT × PSB (14,8), PODE × PRD (16,6), UNIÃO × AVANTE (17,1) — e
    os que convivem. Como PP × PSDB (16,0) e PP × PL (17,4) convivem apesar do limite, ficam em
    `conflito.compativeis` da paleta (vale só com as duas cores principais).
-3. **PL fica sempre com a cor da tabela** (#2E2E6B) e o **PP com o azul** (#295CA8). O PL não tem extra nem reservas.
+3. **Partidos fixos — PL, PT e MISSÃO** (`conflito.fixos`, pedido do usuário em 02/11/2026): ficam sempre com a
+   cor principal quando pintam o mapa. No conflito, troca o outro partido, mesmo sendo o mais votado (extra,
+   reservas ou paleta neutra). Ex.: deputado federal PE, PT vermelho e PSB amarelo (reserva). Eles não têm reservas.
+   A única exceção é o 2º candidato do mesmo partido no Senado (PL × PL, PT × PT), que ganha outro tom para o mapa
+   continuar legível. O PP fica com o azul (#295CA8): PP × PL é par compatível.
 4. **Quem troca**: quem tem alternativa, mesmo sendo o mais votado. Ordem: extra do menos votado, extra do mais
    votado, reservas do menos votado, reservas do mais votado. A extra (2ª cor oficial) vem antes das reservas:
    no governo do Pará, PODE vira roxo e o MDB segue verde.
@@ -33,8 +37,11 @@ Com a regra da ADR 0004 (distância CIE76 < 22 entre todos os concorrentes do ar
 7. **Último recurso**: paleta neutra (Okabe-Ito).
 
 ## Consequências
-- Paleta neutra usada 38 vezes (eram 137); conflitos sem solução em 8 mapas (eram 22), todos de deputado com 15 ou
-  mais partidos pintando — não há cores distintas para todos.
+- Paleta neutra usada 65 vezes (eram 137 antes da ADR; o aumento em relação às reservas sozinhas vem dos partidos
+  fixos, que empurram o outro lado); conflitos sem solução em 9 mapas (eram 22), todos de deputado com 15 ou mais
+  partidos pintando — não há cores distintas para todos.
+- Reservas definidas pelo usuário em 02/11/2026: PP #5F747A, PSB #FECD00, MDB #FFC401, REPUBLICANOS #0066CC,
+  REDE #7E6597 (as demais, propostas e aprovadas).
 - Arquivos sem `pintam` (antigos) continuam funcionando: todos disputam cor.
-- Testes em `scripts/test/cores.test.mjs` com os confrontos reais (SP, PA, PL × PL, PT × PSB, PRTB fora do mapa).
+- Testes em `scripts/test/cores.test.mjs` com os confrontos reais (SP, PA, PL × PL, PSB × PT com PT fixo, PRTB fora do mapa).
 - Para mudar uma reserva ou um par compatível, basta editar `config/paleta-partidos.json`.

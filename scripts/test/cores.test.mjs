@@ -39,8 +39,14 @@ test('mesmo partido duas vezes (Senado com 2 vagas): o segundo ganha outro tom, 
   assert.notEqual(b, a);
 });
 
-test('vermelhos parecidos: o menos votado usa a reserva do partido, não a paleta neutra', () => {
+test('PT, PL e MISSÃO nunca trocam: no conflito, troca o outro, mesmo sendo o mais votado (PE: PSB × PT)', () => {
   const [psb, pt] = cores(['PSB', 'PT']);
-  assert.equal(psb, base('PSB'));
-  assert.equal(pt, paletaDoPartido('PT').reservas[0]['50']);
+  assert.equal(pt, base('PT'));
+  assert.equal(psb, paletaDoPartido('PSB').reservas[0]['50']);
+});
+
+test('sem fixo no confronto, o menos votado usa a reserva do partido (REPUBLICANOS × AVANTE)', () => {
+  const [rep, av] = cores(['REPUBLICANOS', 'AVANTE']);
+  assert.equal(rep, base('REPUBLICANOS'));
+  assert.notEqual(av, base('AVANTE'));
 });

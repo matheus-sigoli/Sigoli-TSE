@@ -132,6 +132,8 @@ export function deltaE2000(h1: string, h2: string) {
 // ------------------------------------------------------------------ regras de conflito (ADR 0014)
 const LIMITE = paleta.conflito.limite_ciede2000;
 /** pares de partidos que convivem com as cores principais, mesmo abaixo do limite (decisão do usuário) */
+/** partidos que nunca trocam de cor: no conflito, quem troca é o outro (decisão do usuário) */
+const FIXOS = new Set(paleta.conflito.fixos.map(chavePartido));
 const COMPATIVEIS = new Set(paleta.conflito.compativeis.flatMap(([a, b]) => [`${chavePartido(a)}|${chavePartido(b)}`, `${chavePartido(b)}|${chavePartido(a)}`]));
 
 // Okabe-Ito (seguro para daltonismo), sem o preto — também é a paleta neutra do último recurso
@@ -154,6 +156,8 @@ function outroTom(f: Faixas): Faixas {
  *  - no conflito, troca quem tem alternativa — mesmo o mais votado. Ordem: extra de i, extra de j,
  *    reservas de i, reservas de j (a extra é a 2ª cor oficial da tabela; as reservas, o último recurso do partido);
  *    se nenhum dos dois tem, troca o menos votado;
+ *  - PL, PT e MISSÃO (`conflito.fixos`) ficam sempre com a cor principal: no conflito, troca o outro,
+ *    mesmo sendo o mais votado (extra, reservas ou paleta neutra);
  *  - mesmo partido duas vezes: a cor extra; sem extra, outro tom da mesma cor;
  *  - sem alternativa: paleta neutra (até o usuário preencher as reservas do partido).
  */
@@ -171,14 +175,39 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
   /** primeiro concorrente (≠ ignorar) que fica parecido com a cor f, se o concorrente `quem` a usar */
   const conflito = (f: Faixas, quem: number, ignorar = -1) => ativos.find((k) => k !== quem && k !== ignorar && parecidas(f, quem, escolha[k], k)) ?? -1;
 
+  /** j (já decidido) troca para a extra, uma reserva ou a paleta neutra, sem bater com ninguém; false se não há cor livre */
+  const tirarDoCaminho = (j: number) => {
+    const pj = pals[j];
+    const livre = (f: Faixas) => f !== escolha[j] && conflito(f, j) < 0;
+    const nova = [...(pj.extra ? [pj.extra] : []), ...pj.reservas, ...NEUTRAS].find(livre);
+    if (nova) escolha[j] = nova;
+    return !!nova;
+  };
+
   for (let i = 0; i < pals.length; i++) {
     if (pinta && !pinta[i]) continue;
+    if (FIXOS.has(chaves[i])) {
+      // partido fixo: quem está no caminho sai (cada um uma vez); o mesmo partido de novo ganha outro tom
+      ativos.push(i);
+      const tentados = new Set<number>();
+      for (let j = conflito(escolha[i], i); j >= 0 && !tentados.has(j); j = conflito(escolha[i], i)) {
+        tentados.add(j);
+        if (FIXOS.has(chaves[j])) {
+          if (chaves[j] !== chaves[i]) break; // dois fixos parecidos: não acontece com a paleta atual
+          const tom = outroTom(escolha[j]);
+          if (conflito(tom, i) < 0) escolha[i] = tom;
+          break;
+        }
+        tirarDoCaminho(j);
+      }
+      continue;
+    }
     const j = conflito(escolha[i], i);
     if (j >= 0) {
       const mesmo = chaves[i] === chaves[j];
       const livreI = (f: Faixas) => f !== escolha[j] && conflito(f, i) < 0;
       // j troca só se ainda está na principal e a nova cor não bate com ninguém (nem com i)
-      const livreJ = (f: Faixas) => !mesmo && escolha[j] === pals[j].principal && conflito(f, j) < 0 && !parecidas(f, j, escolha[i], i) && conflito(escolha[i], i, j) < 0;
+      const livreJ = (f: Faixas) => !mesmo && !FIXOS.has(chaves[j]) && escolha[j] === pals[j].principal && conflito(f, j) < 0 && !parecidas(f, j, escolha[i], i) && conflito(escolha[i], i, j) < 0;
       // a cor extra (2ª cor oficial da tabela) vem antes das reservas, dos dois lados:
       // no Pará, PODE vira roxo e o MDB segue verde, mesmo o MDB tendo reservas
       const exI = pals[i].extra, exJ = pals[j].extra;
