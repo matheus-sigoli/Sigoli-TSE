@@ -173,7 +173,7 @@ function somarLinha(E, f, c) {
     const b = lerBase(E, cargo, t);
     if (!b) return;
     a = {
-      b, zonas: new Map(), bairros: new Map(),
+      b, zonas: new Map(), zonasCidade: new Map(), bairros: new Map(), locais: new Map(),
       idxC: new Map(b.cands.map((x, i) => [String(num(x.n)), i])),
       anulados: new Set(b.cands.filter((x) => x.anulado).map((x) => String(num(x.n)))),
       idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
@@ -190,14 +190,16 @@ function somarLinha(E, f, c) {
   const votavel = num(f[c.NR_VOTAVEL]);
   const votos = num(f[c.QT_VOTOS]);
   const bairroId = E.bairroDoLocal.get(localId) ?? `${ibgeDe.get(mun) ?? mun}-t-sem-bairro`;
-  for (const [mapa, id] of [[a.zonas, String(zona)], [a.bairros, bairroId]]) {
+  const ibgeMun = ibgeDe.get(mun) ?? mun;
+  const unidades = [['z', a.zonas, String(zona)], ['zc', a.zonasCidade, `${ibgeMun}-${zona}`], ['b', a.bairros, bairroId], ['l', a.locais, localId]];
+  for (const [sigla, mapa, id] of unidades) {
     let r = mapa.get(id);
     if (!r) {
       r = { t: [0, 0, 0, 0, 0, 0], c: a.prop ? null : new Array(a.b.cands.length).fill(0), p: a.prop ? new Array(a.b.partidos.length).fill(0) : null, votosTotais: 0 };
       mapa.set(id, r);
     }
     // o eleitorado de cada seção entra uma vez por cargo e unidade
-    const marca = `${chaveCargo}|${mapa === a.zonas ? 'z' : 'b'}|${chaveSecao}`;
+    const marca = `${chaveCargo}|${sigla}|${chaveSecao}`;
     if (!E.contadas.has(marca)) { E.contadas.add(marca); r.t[0] += E.eleitoradoSecao.get(chaveSecao) ?? 0; }
     r.votosTotais += votos;
     if (votavel === 95) r.t[4] += votos;
@@ -275,10 +277,10 @@ for (const E of estados.values()) {
     writeFileSync(p, JSON.stringify(obj));
   };
   for (const [chaveCargo, a] of E.acc) {
-    for (const nivel of ['zonas', 'bairros']) {
+    for (const [nivel, chaveAcc] of [['zonas', 'zonas'], ['zonas-cidade', 'zonasCidade'], ['bairros', 'bairros'], ['locais', 'locais']]) {
       const mun = {};
       const tot = { t: [0, 0, 0, 0, 0, 0], c: new Array(a.b.cands.length).fill(0), p: new Array(a.b.partidos.length).fill(0) };
-      for (const [id, r] of a[nivel]) {
+      for (const [id, r] of a[chaveAcc]) {
         const t = [...r.t];
         t[1] = Math.round(r.votosTotais / a.vagas); // comparecimento (Senado 2026: 2 votos por eleitor)
         t[2] = Math.max(0, t[0] - t[1]);
@@ -392,12 +394,18 @@ function desenharZonas(uf, lista) {
     porMunicipio.get(l.ibge).push(l);
   }
   const partesZona = new Map();
+  const partesCidade = new Map(); // `${ibge}-${zona}` → partes (a zona recortada pela cidade)
+  let ibgeAtual = '';
   const addParte = (zona, geom) => {
     if (!partesZona.has(zona)) partesZona.set(zona, []);
     partesZona.get(zona).push(geom);
+    const k = `${ibgeAtual}-${zona}`;
+    if (!partesCidade.has(k)) partesCidade.set(k, []);
+    partesCidade.get(k).push(geom);
   };
   for (const f of muniFc.features) {
-    const ls = porMunicipio.get(String(f.id)) ?? [];
+    ibgeAtual = String(f.id);
+    const ls = porMunicipio.get(ibgeAtual) ?? [];
     const geom = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
     const zonas = [...new Set(ls.map((l) => l.zona))];
     if (!zonas.length) continue; // lagoas e afins
@@ -447,5 +455,17 @@ function desenharZonas(uf, lista) {
   topoZ.bbox = topoUf.bbox;
   mkdirSync('public/geo/zonas', { recursive: true });
   writeFileSync(`public/geo/zonas/${uf}.json`, JSON.stringify(topoZ));
+
+  // zonas dentro de cada cidade (visão da cidade): id `${ibge}-${zona}`
+  const cidadeFc = { type: 'FeatureCollection', features: [] };
+  for (const [k, partes] of partesCidade) {
+    const mp = partes.length === 1 ? partes[0] : polygonClipping.union(...partes);
+    const [ibge, zona] = k.split('-');
+    cidadeFc.features.push({ type: 'Feature', id: k, properties: { id: k, ibge, zona }, geometry: { type: 'MultiPolygon', coordinates: mp } });
+  }
+  const topoC = topology({ zonas: cidadeFc }, 1e5);
+  topoC.bbox = topoUf.bbox;
+  mkdirSync('public/geo/zonas-cidade', { recursive: true });
+  writeFileSync(`public/geo/zonas-cidade/${uf}.json`, JSON.stringify(topoC));
   return partesZona.size;
 }
