@@ -24,6 +24,8 @@ interface Props {
   destaque: Set<string> | null;
   mundo: boolean;
   aoSelecionar: (id: string | null) => void;
+  /** duplo clique (ou toque duplo) numa área: abrir o detalhe dela */
+  aoAbrir?: (id: string) => void;
   descrever: (id: string) => { titulo: string; linha: string } | null;
 }
 
@@ -43,7 +45,7 @@ const margens = () =>
 const reduzirMovimento = () =>
   typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
-function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, destaque, mundo, aoSelecionar, descrever }: Props) {
+function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, destaque, mundo, aoSelecionar, aoAbrir, descrever }: Props) {
   const raiz = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const [tam, setTam] = useState({ w: 0, h: 0 });
@@ -52,8 +54,9 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
   vistaRef.current = vista;
   const [hover, setHover] = useState<string | null>(null);
   const [dica, setDica] = useState<{ x: number; y: number; titulo: string; linha: string } | null>(null);
-  const cb = useRef({ aoSelecionar, descrever });
-  cb.current = { aoSelecionar, descrever };
+  const cb = useRef({ aoSelecionar, aoAbrir, descrever });
+  cb.current = { aoSelecionar, aoAbrir, descrever };
+  const ultimoClique = useRef<{ id: string | null; t: number }>({ id: null, t: 0 });
 
   // ---- tamanho do quadro
   useEffect(() => {
@@ -223,7 +226,15 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
     ponteiros.current.delete(e.pointerId);
     if (ponteiros.current.size > 0) return;
     gesto.current = null;
-    if (g && !g.moveu) cb.current.aoSelecionar(idSob(e.target));
+    if (g && !g.moveu) {
+      const id = idSob(e.target);
+      const agora = performance.now();
+      const duplo = id !== null && ultimoClique.current.id === id && agora - ultimoClique.current.t < 420;
+      ultimoClique.current = { id, t: duplo ? 0 : agora };
+      // o 1º clique seleciona; o 2º, logo em seguida e na mesma área, abre o detalhe
+      if (duplo && cb.current.aoAbrir) cb.current.aoAbrir(id);
+      else cb.current.aoSelecionar(id);
+    }
   };
 
   // ---- teclado: + − 0 e setas

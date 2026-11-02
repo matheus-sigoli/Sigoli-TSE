@@ -15,8 +15,12 @@ interface Props {
   /** bairro, município, zona: linha abaixo do título no nível zonas/locais */
   contexto?: string | null;
   nivel: Nivel;
-  /** locais de votação do bairro selecionado */
+  /** locais de votação da zona ou do bairro selecionado */
   locais?: Local[] | null;
+  /** município selecionado no estado: botão para abrir a visão da cidade */
+  aoAbrirCidade?: () => void;
+  /** clicar num local da lista abre ele no nível Locais */
+  aoEscolherLocal?: (id: string) => void;
   trilha: { rotulo: string; acao: () => void; href?: string }[];
   visao: Visao | null;
   arquivo: Arquivo | null;
@@ -31,7 +35,7 @@ interface Props {
 }
 
 const POR_PAGINA = 40;
-const UNIDADE: Record<Nivel, string> = { municipios: 'município', zonas: 'zona', bairros: 'bairro' };
+const UNIDADE: Record<Nivel, string> = { municipios: 'município', zonas: 'zona', bairros: 'bairro', locais: 'local de votação' };
 
 function Painel(p: Props) {
   const { cargo, abr, turno, visao, arquivo, foco } = p;
@@ -115,6 +119,12 @@ function Painel(p: Props) {
         ) : null}
         <h1 className="titulo">{p.nomeRecorte}</h1>
         {p.contexto ? <p className="contexto">{p.contexto}</p> : null}
+        {p.aoAbrirCidade ? (
+          <button type="button" className="abrir-cidade" onClick={p.aoAbrirCidade}>
+            Abrir detalhamento da cidade
+            <span>zonas, bairros e locais de votação</span>
+          </button>
+        ) : null}
         <p className="subtitulo">
           {cargo.nome}, {turno}º turno
           {arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
@@ -163,7 +173,7 @@ function Painel(p: Props) {
         <>
           {prop && porPartido ? (
             <p className="dica">
-              Nas zonas e nos bairros, os deputados aparecem por partido. O voto em cada candidato está no mapa por município.
+              Nas zonas, bairros e locais, os deputados aparecem por partido. O voto em cada candidato está no mapa por município.
             </p>
           ) : prop ? (
             <div style={{ padding: '14px 20px 0' }}>
@@ -192,12 +202,23 @@ function Painel(p: Props) {
 
       {p.locais?.length ? (
         <details className="locais-bairro">
-          <summary>{p.locais.length} {p.locais.length === 1 ? 'local de votação' : 'locais de votação'} neste bairro</summary>
+          <summary>
+            {p.locais.length} {p.locais.length === 1 ? 'local de votação' : 'locais de votação'} {p.nivel === 'zonas' ? 'nesta zona' : 'neste bairro'}
+          </summary>
           <ul>
             {p.locais.map((l) => (
               <li key={l.id}>
-                <span>{titulo(l.nome)}</span>
-                <span className="num">Zona {l.zona} · {votos(l.eleitorado)} eleitores</span>
+                {p.aoEscolherLocal ? (
+                  <button type="button" onClick={() => p.aoEscolherLocal!(l.id)}>
+                    <span>{titulo(l.nome)}</span>
+                    <span className="num">Zona {l.zona} · {votos(l.eleitorado)} eleitores</span>
+                  </button>
+                ) : (
+                  <>
+                    <span>{titulo(l.nome)}</span>
+                    <span className="num">Zona {l.zona} · {votos(l.eleitorado)} eleitores</span>
+                  </>
+                )}
               </li>
             ))}
           </ul>

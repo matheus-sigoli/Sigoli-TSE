@@ -257,6 +257,21 @@ export default function Inicio() {
         </section>
       </main>
 
+      <section className="autor" aria-labelledby="t-autor">
+        <img src="/autor.webp" alt="Matheus Sigoli" width={160} height={160} className="autor-foto" loading="lazy" />
+        <div>
+          <p className="autor-rotulo">Quem fez</p>
+          <h2 id="t-autor">Matheus Sigoli</h2>
+          <p>
+            O Sigoli.TSE é um projeto independente de Matheus Sigoli: os resultados oficiais do TSE em mapas, do Brasil inteiro até o
+            local de votação. O código está aberto no GitHub.
+          </p>
+          <a href="https://github.com/matheus-sigoli/Sigoli-TSE" target="_blank" rel="noreferrer" className="link-secundario">
+            Ver o projeto no GitHub
+          </a>
+        </div>
+      </section>
+
       <footer className="inicio-rodape">
         <p>
           Dados: <a href="https://resultados.tse.jus.br" target="_blank" rel="noreferrer">TSE, resultados oficiais</a> e{' '}

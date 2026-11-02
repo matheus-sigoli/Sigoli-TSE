@@ -247,6 +247,28 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 .locais-bairro ul { list-style: none; margin: 0; padding: 0 12px 10px; display: grid; gap: 8px; max-height: 280px; overflow: auto; }
 .locais-bairro li { display: grid; gap: 2px; font-size: var(--fs-2); }
 .locais-bairro li .num { color: var(--muted); font-size: var(--fs-1); }
+.locais-bairro li button {
+  display: grid; gap: 2px; width: 100%; padding: 4px 6px; margin: -4px -6px; border: 0; border-radius: var(--r-1);
+  background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer;
+}
+.locais-bairro li button:hover { background: var(--surface-2); }
+.locais-bairro li button:focus-visible { outline: 2px solid var(--text); outline-offset: 0; }
+.abrir-cidade {
+  display: grid; gap: 2px; justify-items: start; width: 100%; margin-top: 4px; padding: 10px 12px;
+  border: 1px solid var(--line); border-radius: var(--r-2); background: var(--surface-2); color: var(--text);
+  font: inherit; font-weight: 650; text-align: left; cursor: pointer;
+}
+.abrir-cidade span { color: var(--muted); font-weight: 400; font-size: var(--fs-1); }
+.abrir-cidade:hover { border-color: var(--text); }
+.abrir-cidade:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.autor-mini { display: flex; align-items: center; gap: 10px; margin-top: auto; color: var(--muted); font-size: var(--fs-2); text-decoration: none; }
+.autor-mini img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+.autor-mini strong { color: var(--text); font-weight: 600; }
+.autor-mini:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+.cidade-aberta { display: grid; gap: 2px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.cidade-aberta strong { font-size: var(--fs-4); }
+.link-botao { justify-self: start; padding: 0; border: 0; background: none; color: var(--muted); font: inherit; font-size: var(--fs-2); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.link-botao:hover { color: var(--text); }
 .rodape a { color: inherit; }
 
 /* ------------------------------------------------------------ legenda */
@@ -257,6 +279,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 .escala i { height: 10px; border-radius: 2px; }
 .escala-rotulos { display: flex; justify-content: space-between; font-size: var(--fs-1); color: var(--muted); }
 .preferencias { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+.autor-mini + .preferencias { margin-top: 0; }
 .alternador { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: var(--fs-2); }
 .alternador button {
   width: 44px; height: 24px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); position: relative; padding: 0;
@@ -290,7 +313,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
     grid-row: 1; border-right: 0; border-bottom: 1px solid var(--line);
     padding: 10px 12px; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 10px; overflow: visible; z-index: 10;
   }
-  .filtros .marca-sub, .filtros .legenda-bloco, .filtros .preferencias { display: none; }
+  .filtros .marca-sub, .filtros .legenda-bloco, .filtros .preferencias, .filtros .autor-mini { display: none; }
   .filtros .marca b, .filtros .marca span { font-size: var(--fs-4); }
   .filtros .campo { flex: 1 1 140px; }
   .select, .entrada { font-size: 16px; } /* evita zoom automático no iOS */

@@ -25,17 +25,27 @@ interface Props {
   aoAlternarTema: () => void;
   aoAlternarDaltonico: () => void;
   nivel: Nivel;
-  /** unidade pintada no mapa agora (no nível bairros, sem cidade escolhida, ainda são municípios) */
-  unidade?: Nivel;
+  /** nome da cidade aberta (visão da cidade) */
+  cidade: string | null;
+  aoFecharCidade: () => void;
   aoMudarNivel: (n: Nivel) => void;
 }
 
-const NIVEIS: { n: Nivel; rotulo: string }[] = [
+const NIVEIS_ESTADO: { n: Nivel; rotulo: string }[] = [
   { n: 'municipios', rotulo: 'Municípios' },
   { n: 'zonas', rotulo: 'Zonas' },
-  { n: 'bairros', rotulo: 'Bairros' },
 ];
-const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na zona', bairros: 'no bairro' };
+const NIVEIS_CIDADE: { n: Nivel; rotulo: string }[] = [
+  { n: 'zonas', rotulo: 'Zonas' },
+  { n: 'bairros', rotulo: 'Bairros' },
+  { n: 'locais', rotulo: 'Locais' },
+];
+const DICA_CIDADE: Record<string, string> = {
+  zonas: 'Zonas eleitorais dentro da cidade. Clique numa zona para ver o resultado dela.',
+  bairros: 'Bairros com área vêm do IBGE; os demais, do cadastro do TSE, aparecem como círculos.',
+  locais: 'Cada círculo é um local de votação; quanto maior, mais eleitores.',
+};
+const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na zona', bairros: 'no bairro', locais: 'no local' };
 
 const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
 
@@ -77,21 +87,26 @@ function Filtros(p: Props) {
 
       {p.abr !== 'br' && p.abr !== 'exterior' ? (
         <div className="campo">
+          {p.cidade ? (
+            <div className="cidade-aberta">
+              <span className="campo-rotulo">Cidade</span>
+              <strong>{p.cidade}</strong>
+              <button type="button" className="link-botao" onClick={p.aoFecharCidade}>Voltar ao estado</button>
+            </div>
+          ) : null}
           <span className="campo-rotulo" id="rot-nivel">Ver por</span>
           <div className="segmentado" role="group" aria-labelledby="rot-nivel">
-            {NIVEIS.map(({ n, rotulo }) => (
+            {(p.cidade ? NIVEIS_CIDADE : NIVEIS_ESTADO).map(({ n, rotulo }) => (
               <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
             ))}
           </div>
-          {p.nivel === 'bairros' ? (
-            <p className="marca-sub" style={{ marginTop: 6 }}>
-              Clique numa cidade. Bairros com área vêm do IBGE; os demais aparecem como círculos, pelo tamanho do eleitorado.
-            </p>
-          ) : null}
+          <p className="marca-sub" style={{ marginTop: 6 }}>
+            {p.cidade ? DICA_CIDADE[p.nivel] : 'Dois cliques num município abrem as zonas, os bairros e os locais de votação dele.'}
+          </p>
         </div>
       ) : null}
 
-      {opcoesRegiao && p.nivel === 'municipios' ? (
+      {opcoesRegiao && p.nivel === 'municipios' && !p.cidade ? (
         <div className="campo">
           <label htmlFor={idReg}>Região</label>
           <select id={idReg} className="select" value={p.regiaoSelecionada ?? ''} onChange={(e) => p.aoMudarRegiao(e.target.value || null)}>
@@ -110,7 +125,7 @@ function Filtros(p: Props) {
 
       {p.legenda.length ? (
         <div className="campo legenda-bloco">
-          <span className="campo-rotulo">{p.abr === 'exterior' ? (p.modoCalor ? '% de votos no país' : 'Vencedor no país') : p.modoCalor ? `% de votos ${UNIDADE[p.unidade ?? p.nivel]}` : `Vencedor ${UNIDADE[p.unidade ?? p.nivel]}`}</span>
+          <span className="campo-rotulo">{p.abr === 'exterior' ? (p.modoCalor ? '% de votos no país' : 'Vencedor no país') : p.modoCalor ? `% de votos ${UNIDADE[p.nivel]}` : `Vencedor ${UNIDADE[p.nivel]}`}</span>
           <div className="legenda">
             {(p.modoCalor ? p.legenda.slice(0, 0) : p.legenda).map((l) => (
               <div key={l.rotulo} className="legenda-item">
@@ -135,6 +150,11 @@ function Filtros(p: Props) {
           ) : null}
         </div>
       ) : null}
+
+      <a className="autor-mini" href="/#t-autor">
+        <img src="/autor-96.webp" alt="" width={32} height={32} />
+        <span>por <strong>Matheus Sigoli</strong></span>
+      </a>
 
       <div className="preferencias">
         <div className="alternador">

@@ -10,7 +10,8 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 - Ano: **2026** (Eleições Gerais).
 - Cargos: **Presidente, Governador, Senador, Deputado Federal, Deputado Estadual** (e Distrital no DF).
 - Granularidade geográfica: **Brasil → UF → Município**, mais **Exterior por país** (Presidente).
-- Dentro de uma UF, o mapa também mostra **zonas eleitorais** (áreas, ADR 0008) e os **bairros** de cada cidade (ADR 0009).
+- Dentro de uma UF, o mapa também mostra **zonas eleitorais** (áreas, ADR 0008). Dois cliques num município abrem a
+  **visão da cidade**, por zona, bairro (ADR 0009) e local de votação (ADR 0011).
 - Mapas desenhados em **SVG** (ADR 0010).
 - Página inicial (`/`) explica a eleição, mostra o resultado de 2026 e lista os outros anos (em breve).
 - Turnos: 1º e 2º (Presidente e Governador nas UFs que tiveram 2º turno).
@@ -18,7 +19,7 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 ### Fora da v1 (decidido em 31/10/2026)
 - Comparação/swing com 2022 ou outros anos.
 - Seções eleitorais individuais (abaixo do local de votação).
-- Fotos de candidatos (decidido em 01/11/2026: o card usa iniciais na cor do partido).
+- Fotos de candidatos (o card usa iniciais na cor do partido). O autor do projeto aparece com foto na página inicial.
 - Camadas demográficas do Censo.
 - Simulador de 2º turno.
 
@@ -41,6 +42,7 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 | 0008 | Zonas (áreas Voronoi) a partir dos dados abertos por seção |
 | 0009 | Bairros: malha do IBGE (Censo 2022) e, sem ela, o bairro do cadastro do TSE |
 | 0010 | Mapa em SVG, sem biblioteca de mapas |
+| 0011 | Visão da cidade (duplo clique): zonas, bairros e locais de votação |
 
 ## Glossário
 
@@ -103,8 +105,8 @@ do % do vencedor. 50% = cor-base.
 
 **Cor extra** — Segunda cor de alguns partidos, usada só quando o adversário no mesmo mapa tem cor parecida.
 
-**Nível do mapa** — Unidade pintada dentro de uma UF: **Municípios** (padrão), **Zonas** ou **Bairros**.
-Na URL: `?nivel=zonas` ou `?nivel=bairros&cid={IBGE da cidade}`.
+**Nível do mapa** — No estado: **Municípios** (padrão) ou **Zonas** (`?nivel=zonas`). Na visão da cidade
+(`?cid={IBGE}`): **Zonas**, **Bairros** ou **Locais** (`&nivel=zonas|bairros|locais`).
 
 **Zona eleitoral** — Circunscrição do cartório eleitoral; numerada dentro de cada UF. Pode cobrir vários
 municípios ou ser uma parte de um município grande. O TSE não publica o contorno: o Sigoli.TSE desenha

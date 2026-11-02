@@ -91,15 +91,23 @@ export function useArquivo<T>(carregar: (() => Promise<T>) | null, chave: string
   return estado;
 }
 
-/** Nível do mapa numa UF (ADRs 0008 e 0009). */
-export type Nivel = 'municipios' | 'zonas' | 'bairros';
-export const lerNivel = (s: string | null, abr: string): Nivel =>
-  abr !== 'br' && abr !== 'exterior' && (s === 'zonas' || s === 'bairros') ? s : 'municipios';
+/**
+ * Nível do mapa. No estado: municipios | zonas. Na visão da cidade (?cid=): zonas | bairros | locais (ADR 0011).
+ */
+export type Nivel = 'municipios' | 'zonas' | 'bairros' | 'locais';
+/** Arquivo de resultado por UF de cada nível. */
+export type NivelArquivo = 'municipios' | 'zonas' | 'zonas-cidade' | 'bairros' | 'locais';
 
-export const urlResultadoNivel = (cargo: CargoSlug, turno: Turno, abr: string, nivel: Nivel) =>
+export const lerNivel = (s: string | null, abr: string, cidade: boolean): Nivel => {
+  if (abr === 'br' || abr === 'exterior') return 'municipios';
+  if (cidade) return s === 'bairros' || s === 'locais' ? s : 'zonas';
+  return s === 'zonas' ? 'zonas' : 'municipios';
+};
+
+export const urlResultadoNivel = (cargo: CargoSlug, turno: Turno, abr: string, nivel: NivelArquivo) =>
   nivel === 'municipios' ? urlResultadoParaTela(cargo, turno, abr) : `/data/2026/${cargo}/${turno}/${nivel}/${abr}.json`;
 
-export const useResultado = (cargo: CargoSlug, turno: Turno, abr: string, nivel: Nivel = 'municipios') => {
+export const useResultado = (cargo: CargoSlug, turno: Turno, abr: string, nivel: NivelArquivo = 'municipios') => {
   const url = urlResultadoNivel(cargo, turno, abr, nivel);
   return useArquivo<Arquivo>(() => buscar<Arquivo>(url), url);
 };
@@ -120,7 +128,7 @@ function buscarMalhaZonas(uf: string): Promise<Malha> {
   return p;
 }
 
-export const useMalha = (abr: string, nivel: Nivel = 'municipios') =>
+export const useMalha = (abr: string, nivel: 'municipios' | 'zonas' = 'municipios') =>
   useArquivo<Malha>(() => (nivel === 'zonas' ? buscarMalhaZonas(abr) : buscarMalha(abr)), `malha:${abr}:${nivel === 'zonas' ? 'z' : 'm'}`);
 
 // ------------------------------------------------------------------ bairros (ADR 0009)
@@ -152,58 +160,91 @@ function buscarBairros(uf: string): Promise<Bairros> {
 export const useBairros = (uf: string | null) =>
   useArquivo<Bairros>(uf ? () => buscarBairros(uf) : null, `bairros:${uf ?? '-'}`);
 
-/** Malha de uma cidade no nível bairros: áreas do IBGE (se houver) + a cidade como fundo + círculos dos bairros sem área. */
+/** Malha de uma cidade: áreas do nível (zonas recortadas, bairros do IBGE) + a cidade como fundo + círculos (bairros do TSE ou locais). */
 export interface MalhaCidade { malha: Malha; fundo: GeoJSON.FeatureCollection; pontos: GeoJSON.FeatureCollection }
+const VAZIA: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
 const cidadesCache = new Map<string, Promise<MalhaCidade>>();
-function buscarMalhaCidade(uf: string, ibge: string): Promise<MalhaCidade> {
-  const k = `${uf}:${ibge}`;
+function buscarMalhaCidade(uf: string, ibge: string, nivel: 'zonas' | 'bairros' | 'locais'): Promise<MalhaCidade> {
+  const k = `${uf}:${ibge}:${nivel}`;
   let p = cidadesCache.get(k);
   if (!p) {
-    p = Promise.all([
-      buscarMalha(uf),
-      buscar<Record<string, number>>(`/geo/bairros/${uf}/cidades.json`).catch(() => ({} as Record<string, number>)),
-      // sem o cadastro de bairros (dados ainda não gerados) a malha da cidade aparece mesmo assim
-      buscarBairros(uf).catch((): Bairros => ({ lista: [], porId: new Map(), porCidade: new Map() })),
-    ]).then(async ([base, comMalha, bairros]) => {
+    p = (async () => {
+      const base = await buscarMalha(uf);
       const cidade = base.municipios.features.filter((f) => String(f.id) === ibge);
       const fundo: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: cidade };
-      const areas: GeoJSON.FeatureCollection = ibge in comMalha
-        ? toGeoJSON(await buscar<Topology>(`/geo/bairros/${uf}/${ibge}.json`), 'bairros')
-        : { type: 'FeatureCollection', features: [] };
-      const pontos: GeoJSON.FeatureCollection = {
-        type: 'FeatureCollection',
-        features: (bairros.porCidade.get(ibge) ?? [])
-          .filter((x) => x.origem === 't' && x.lon !== null && x.lat !== null)
-          .sort((a, b) => b.eleitorado - a.eleitorado) // maiores embaixo
-          .map((x) => ({ type: 'Feature', id: x.id, properties: { id: x.id, eleitorado: x.eleitorado }, geometry: { type: 'Point', coordinates: [x.lon!, x.lat!] } })),
-      };
+      const comMalha = await buscar<Record<string, number>>(`/geo/bairros/${uf}/cidades.json`).catch(() => ({} as Record<string, number>));
+      const bairrosIbge = async () => (ibge in comMalha ? toGeoJSON(await buscar<Topology>(`/geo/bairros/${uf}/${ibge}.json`), 'bairros') : VAZIA);
+      let areas = VAZIA, linhas = VAZIA, pontos = VAZIA;
+      const ponto = (id: string, lon: number, lat: number, eleitorado: number): GeoJSON.Feature =>
+        ({ type: 'Feature', id, properties: { id, eleitorado }, geometry: { type: 'Point', coordinates: [lon, lat] } });
+
+      if (nivel === 'zonas') {
+        const topo = await buscar<Topology>(`/geo/zonas-cidade/${uf}.json`);
+        const todas = toGeoJSON(topo, 'zonas');
+        areas = { type: 'FeatureCollection', features: todas.features.filter((f) => String(f.properties?.ibge) === ibge) };
+      } else if (nivel === 'bairros') {
+        areas = await bairrosIbge();
+        const bairros = await buscarBairros(uf).catch((): Bairros => ({ lista: [], porId: new Map(), porCidade: new Map() }));
+        pontos = {
+          type: 'FeatureCollection',
+          features: (bairros.porCidade.get(ibge) ?? [])
+            .filter((x) => x.origem === 't' && x.lon !== null && x.lat !== null)
+            .sort((a, b) => b.eleitorado - a.eleitorado) // maiores embaixo
+            .map((x) => ponto(x.id, x.lon!, x.lat!, x.eleitorado)),
+        };
+      } else {
+        // locais de votação em círculos, com os bairros do IBGE como referência
+        const ib = await bairrosIbge();
+        linhas = ib;
+        const locais = await buscarLocais(uf);
+        pontos = {
+          type: 'FeatureCollection',
+          features: (locais.porCidade.get(ibge) ?? [])
+            .filter((l) => l.lon !== null && l.lat !== null)
+            .sort((a, b) => b.eleitorado - a.eleitorado)
+            .map((l) => ponto(l.id, l.lon!, l.lat!, l.eleitorado)),
+        };
+      }
       const bbox = caixaGeo({ type: 'FeatureCollection', features: [...cidade, ...areas.features, ...pontos.features] });
-      return { malha: { municipios: areas, linhas: { type: 'FeatureCollection', features: [] }, bbox }, fundo, pontos };
-    });
+      return { malha: { municipios: areas, linhas, bbox }, fundo, pontos };
+    })();
     p.catch(() => cidadesCache.delete(k));
     cidadesCache.set(k, p);
   }
   return p;
 }
-export const useMalhaCidade = (uf: string | null, ibge: string | null) =>
-  useArquivo<MalhaCidade>(uf && ibge ? () => buscarMalhaCidade(uf, ibge) : null, `cidade:${uf}:${ibge}`);
+export const useMalhaCidade = (uf: string | null, ibge: string | null, nivel: 'zonas' | 'bairros' | 'locais') =>
+  useArquivo<MalhaCidade>(uf && ibge ? () => buscarMalhaCidade(uf, ibge, nivel) : null, `cidade:${uf}:${ibge}:${nivel}`);
 
-/** Locais de votação de um bairro (cadastro do TSE), para a lista no painel. */
-export interface Local { id: string; ibge: string; nome: string; eleitorado: number; idBairro: string; zona: string }
-const locaisCache = new Map<string, Promise<Local[]>>();
-function buscarLocais(uf: string): Promise<Local[]> {
+/** Local de votação (cadastro do TSE). */
+export interface Local {
+  id: string; ibge: string; zona: string; nome: string; bairro: string;
+  lon: number | null; lat: number | null; eleitorado: number; idBairro: string;
+}
+export interface Locais { lista: Local[]; porId: Map<string, Local>; porCidade: Map<string, Local[]> }
+const locaisCache = new Map<string, Promise<Locais>>();
+function buscarLocais(uf: string): Promise<Locais> {
   let p = locaisCache.get(uf);
   if (!p) {
-    p = buscar<{ l: (string | number | null)[][] }>(`/geo/locais/${uf}.json`).then(({ l }) =>
-      l.map((r) => ({ id: String(r[0]), ibge: String(r[1]), zona: String(r[2]), nome: String(r[3]), eleitorado: Number(r[7]) || 0, idBairro: String(r[8] ?? '') })),
-    );
+    p = buscar<{ l: (string | number | null)[][] }>(`/geo/locais/${uf}.json`).then(({ l }) => {
+      const lista: Local[] = l.map((r) => ({
+        id: String(r[0]), ibge: String(r[1]), zona: String(r[2]), nome: String(r[3]), bairro: String(r[4] ?? ''),
+        lon: r[5] as number | null, lat: r[6] as number | null, eleitorado: Number(r[7]) || 0, idBairro: String(r[8] ?? ''),
+      }));
+      const porCidade = new Map<string, Local[]>();
+      for (const x of lista) {
+        if (!porCidade.has(x.ibge)) porCidade.set(x.ibge, []);
+        porCidade.get(x.ibge)!.push(x);
+      }
+      return { lista, porId: new Map(lista.map((x) => [x.id, x])), porCidade };
+    });
     p.catch(() => locaisCache.delete(uf));
     locaisCache.set(uf, p);
   }
   return p;
 }
-export const useLocais = (uf: string | null) => useArquivo<Local[]>(uf ? () => buscarLocais(uf) : null, `locais:${uf ?? '-'}`);
+export const useLocais = (uf: string | null) => useArquivo<Locais>(uf ? () => buscarLocais(uf) : null, `locais:${uf ?? '-'}`);
 
 export const useMunicipios = () =>
   useArquivo<Municipio[]>(() => buscar<Municipio[]>('/data/2026/municipios.json'), 'municipios');
