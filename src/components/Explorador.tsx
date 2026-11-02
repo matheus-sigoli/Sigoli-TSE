@@ -375,7 +375,8 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
           <Mapa
             chave={chaveMapa}
             malha={malha.dados}
-            fundo={cid ? malhaCidade.dados?.fundo ?? null : null}
+            // no nível Locais as áreas do Atlas cobrem a cidade inteira: sem o contorno do município por baixo
+            fundo={cid && !(nivel === 'locais' && !malhaCidade.dados?.pontos.features.length) ? malhaCidade.dados?.fundo ?? null : null}
             pontos={cid ? malhaCidade.dados?.pontos ?? null : null}
             cores={visao?.cores ?? null}
             selecionado={mun}

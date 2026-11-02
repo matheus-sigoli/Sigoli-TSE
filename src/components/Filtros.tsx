@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { memo, useDeferredValue, useId, useMemo, useRef, useState } from 'react';
+import { memo, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { FAIXAS_LEGENDA, type Faixas } from '@/lib/cores';
 import type { Malha, Nivel, Regiao } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
@@ -182,17 +182,29 @@ function Busca({ municipios, aoEscolher }: { municipios: Municipio[] | null; aoE
     () => (municipios ?? []).filter((m) => m.uf !== 'zz').map((m) => ({ m, chave: semAcento(m.nome) })),
     [municipios],
   );
+  // todos os que casam (há muitos nomes repetidos, ex.: São Gonçalo): exatos, depois os que começam, depois os que contêm.
+  // A UF no fim filtra o estado: "sao goncalo rj".
   const achados = useMemo(() => {
-    const q = semAcento(termo.trim());
+    let q = semAcento(termo.trim());
+    let uf: string | null = null;
+    const m = q.match(/^(.*\S)(?:\s+|\s*[-(,/]\s*)\(?([a-z]{2})\)?$/);
+    if (m && m[2] in UFS && m[1].length >= 2) { q = m[1].replace(/[-(,/]\s*$/, '').trim(); uf = m[2]; }
     if (q.length < 2) return [];
-    const comeca: Municipio[] = [], contem: Municipio[] = [];
-    for (const { m, chave } of indice) {
-      if (chave.startsWith(q)) comeca.push(m);
-      else if (chave.includes(q)) contem.push(m);
-      if (comeca.length >= 8) break;
+    const exato: Municipio[] = [], comeca: Municipio[] = [], contem: Municipio[] = [];
+    for (const { m: mu, chave } of indice) {
+      if (uf && mu.uf !== uf) continue;
+      if (chave === q) exato.push(mu);
+      else if (chave.startsWith(q)) comeca.push(mu);
+      else if (chave.includes(q)) contem.push(mu);
     }
-    return [...comeca, ...contem].slice(0, 8);
+    const porNome = (a: Municipio, b: Municipio) => a.nome.localeCompare(b.nome, 'pt-BR') || a.uf.localeCompare(b.uf);
+    return [...exato.sort(porNome), ...comeca.sort(porNome), ...contem.sort(porNome)].slice(0, 200);
   }, [termo, indice]);
+  const lista = useRef<HTMLUListElement>(null);
+  // setas do teclado: mantém a opção ativa visível na lista rolável
+  useEffect(() => {
+    lista.current?.querySelector('[aria-selected="true"]')?.scrollIntoView({ block: 'nearest' });
+  }, [ativo]);
 
   const escolher = (m: Municipio) => {
     aoEscolher(m);
@@ -209,7 +221,7 @@ function Busca({ municipios, aoEscolher }: { municipios: Municipio[] | null; aoE
         id={id}
         className="entrada"
         type="search"
-        placeholder="Ex.: Campinas…"
+        placeholder="Ex.: São Gonçalo RJ"
         spellCheck={false}
         autoComplete="off"
         role="combobox"
@@ -228,7 +240,7 @@ function Busca({ municipios, aoEscolher }: { municipios: Municipio[] | null; aoE
         }}
       />
       {aberta && achados.length ? (
-        <ul className="busca-lista" id={`${id}-lista`} role="listbox" aria-label="Municípios encontrados">
+        <ul ref={lista} className="busca-lista" id={`${id}-lista`} role="listbox" aria-label={`${achados.length} municípios encontrados`}>
           {achados.map((m, i) => (
             <li
               key={m.ibge}
