@@ -181,8 +181,9 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
       const livreJ = (f: Faixas) => !mesmo && escolha[j] === pals[j].principal && conflito(f, j) < 0 && !parecidas(f, j, escolha[i], i) && conflito(escolha[i], i, j) < 0;
       // a cor extra (2ª cor oficial da tabela) vem antes das reservas, dos dois lados:
       // no Pará, PODE vira roxo e o MDB segue verde, mesmo o MDB tendo reservas
-      const extraI = pals[i].extra && livreI(pals[i].extra) ? pals[i].extra : null;
-      const extraJ = !extraI && pals[j].extra && livreJ(pals[j].extra) ? pals[j].extra : null;
+      const exI = pals[i].extra, exJ = pals[j].extra;
+      const extraI = exI && livreI(exI) ? exI : null;
+      const extraJ = !extraI && exJ && livreJ(exJ) ? exJ : null;
       const resI = !extraI && !extraJ ? pals[i].reservas.find(livreI) : undefined;
       const resJ = !extraI && !extraJ && !resI ? pals[j].reservas.find(livreJ) : undefined;
       if (extraI) escolha[i] = extraI;
