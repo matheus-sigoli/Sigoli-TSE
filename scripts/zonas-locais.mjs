@@ -203,16 +203,18 @@ function somarLinha(E, f, c) {
     if (votavel === 95) r.t[4] += votos;
     else if (votavel === 96 || votavel === 97) r.t[5] += votos;
     else if (a.prop) {
-      if (a.anulados.has(String(votavel))) { r.t[5] += votos; continue; } // anulados: o TSE soma nos nulos
+      // anulados (registro indeferido): o TSE os deixa fora de válidos e de nulos
+      if (a.anulados.has(String(votavel))) continue;
       const partido = String(votavel).length <= 2 ? String(votavel) : String(votavel).slice(0, 2);
       const i = a.idxP.get(partido);
       if (i !== undefined) { r.p[i] += votos; r.t[3] += votos; }
+      else r.t[5] += votos; // número que não está na disputa: nulo
     } else {
       const i = a.idxC.get(String(votavel));
-      if (i !== undefined) {
+      if (i === undefined) r.t[5] += votos; // candidatura cancelada antes da eleição: o TSE conta como nulo
+      else {
         r.c[i] += votos;
-        if (a.anulados.has(String(votavel))) r.t[5] += votos; // anulados: o TSE soma nos nulos
-        else r.t[3] += votos;
+        if (!a.anulados.has(String(votavel))) r.t[3] += votos; // anulados ficam fora de válidos e de nulos
       }
     }
   }
