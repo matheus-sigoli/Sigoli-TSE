@@ -747,20 +747,30 @@
       "nome": "Partido Trabalhista Brasileiro",
       "principal": {
         "10": "#D4F6FF",
-        "20": "#AAEEFF",
+        "20": "#A9EDFF",
         "30": "#7FE5FF",
-        "40": "#55DDFF",
+        "40": "#54DCFF",
         "50": "#2AD4FF",
-        "60": "#24B4D9",
-        "70": "#1D94B3",
-        "80": "#17758C",
-        "90": "#115566",
+        "60": "#23B4D9",
+        "70": "#1D93B2",
+        "80": "#17748C",
+        "90": "#105466",
         "100": "#082A33"
       },
-      "reservas": [
-        "#624C4C"
-      ],
-      "ano": 2022
+      "reservas": [],
+      "ano": 2022,
+      "extra": {
+        "10": "#DFDBDB",
+        "20": "#C0B7B7",
+        "30": "#A09393",
+        "40": "#816F6F",
+        "50": "#624C4C",
+        "60": "#534040",
+        "70": "#443535",
+        "80": "#352929",
+        "90": "#271E1E",
+        "100": "#130F0F"
+      }
     },
     {
       "chave": "PATRIOTA",
@@ -770,11 +780,11 @@
       "principal": {
         "10": "#CCE9CC",
         "20": "#99D399",
-        "30": "#66BE66",
-        "40": "#33A833",
+        "30": "#66BD66",
+        "40": "#33A733",
         "50": "#009200",
         "60": "#007C00",
-        "70": "#006600",
+        "70": "#006500",
         "80": "#005000",
         "90": "#003A00",
         "100": "#001D00"
@@ -790,12 +800,12 @@
       "principal": {
         "10": "#CCE2D9",
         "20": "#99C5B3",
-        "30": "#66A98D",
-        "40": "#338C67",
+        "30": "#66A88D",
+        "40": "#338B67",
         "50": "#006F41",
         "60": "#005E37",
-        "70": "#004E2E",
-        "80": "#003D24",
+        "70": "#004D2D",
+        "80": "#003C23",
         "90": "#002C1A",
         "100": "#00160D"
       },
@@ -808,19 +818,155 @@
       "numero": 90,
       "nome": "Partido Republicano da Ordem Social",
       "principal": {
-        "10": "#FDE8D3",
-        "20": "#FBD1A7",
-        "30": "#F8BA7C",
-        "40": "#F6A350",
+        "10": "#FCE8D3",
+        "20": "#FAD1A7",
+        "30": "#F8BA7B",
+        "40": "#F6A34F",
         "50": "#F48C24",
-        "60": "#CF771F",
-        "70": "#AB6219",
-        "80": "#864D14",
-        "90": "#62380E",
-        "100": "#311C07"
+        "60": "#CF771E",
+        "70": "#AA6119",
+        "80": "#854C13",
+        "90": "#61380E",
+        "100": "#301C07"
       },
       "reservas": [],
       "ano": 2022
+    },
+    {
+      "chave": "PSL",
+      "sigla": "PSL",
+      "numero": 17,
+      "nome": "Partido Social Liberal",
+      "principal": {
+        "10": "#D2D7E4",
+        "20": "#A5B0C9",
+        "30": "#7989AE",
+        "40": "#4C6293",
+        "50": "#203B78",
+        "60": "#1B3266",
+        "70": "#162953",
+        "80": "#112041",
+        "90": "#0C1730",
+        "100": "#060B18"
+      },
+      "extra": {
+        "10": "#D6F4D6",
+        "20": "#ADE9AD",
+        "30": "#85DE85",
+        "40": "#5CD35C",
+        "50": "#34C934",
+        "60": "#2CAB2C",
+        "70": "#248C24",
+        "80": "#1C6E1C",
+        "90": "#145014",
+        "100": "#0A280A"
+      },
+      "reservas": [],
+      "ano": 2018
+    },
+    {
+      "chave": "DEM",
+      "sigla": "DEM",
+      "numero": 25,
+      "nome": "Democratas",
+      "principal": {
+        "10": "#E8F3D8",
+        "20": "#D1E8B1",
+        "30": "#BADC8B",
+        "40": "#A3D164",
+        "50": "#8CC63E",
+        "60": "#77A834",
+        "70": "#618A2B",
+        "80": "#4C6C22",
+        "90": "#384F18",
+        "100": "#1C270C"
+      },
+      "reservas": [],
+      "ano": 2018
+    },
+    {
+      "chave": "PHS",
+      "sigla": "PHS",
+      "numero": 31,
+      "nome": "Partido Humanista da Solidariedade",
+      "principal": {
+        "10": "#E6D0D1",
+        "20": "#CDA1A3",
+        "30": "#B57375",
+        "40": "#9C4447",
+        "50": "#841619",
+        "60": "#701215",
+        "70": "#5C0F11",
+        "80": "#480C0D",
+        "90": "#34080A",
+        "100": "#1A0405"
+      },
+      "reservas": [],
+      "ano": 2018
+    },
+    {
+      "chave": "PRP",
+      "sigla": "PRP",
+      "numero": 44,
+      "nome": "Partido Republicano Progressista",
+      "principal": {
+        "10": "#CCECF9",
+        "20": "#99D9F3",
+        "30": "#66C6EE",
+        "40": "#33B3E8",
+        "50": "#00A0E3",
+        "60": "#0088C1",
+        "70": "#006F9E",
+        "80": "#00577C",
+        "90": "#00405A",
+        "100": "#00202D"
+      },
+      "extra": {
+        "10": "#D3D7D4",
+        "20": "#A8B0AA",
+        "30": "#7C8880",
+        "40": "#516156",
+        "50": "#263A2C",
+        "60": "#203125",
+        "70": "#1A281E",
+        "80": "#141F18",
+        "90": "#0F1711",
+        "100": "#070B08"
+      },
+      "reservas": [],
+      "ano": 2018
+    },
+    {
+      "chave": "PPL",
+      "sigla": "PPL",
+      "numero": 54,
+      "nome": "Partido Pátria Livre",
+      "principal": {
+        "10": "#CCE2D8",
+        "20": "#99C5B1",
+        "30": "#66A88A",
+        "40": "#338B63",
+        "50": "#006E3C",
+        "60": "#005D33",
+        "70": "#004C29",
+        "80": "#003C20",
+        "90": "#002C18",
+        "100": "#00160C"
+      },
+      "extra": {
+        "10": "#FFFBD5",
+        "20": "#FFF7AC",
+        "30": "#FFF382",
+        "40": "#FFEF59",
+        "50": "#FFEC30",
+        "60": "#D9C828",
+        "70": "#B2A421",
+        "80": "#8C811A",
+        "90": "#665E13",
+        "100": "#332F09"
+      },
+      "reservas": [],
+      "ano": 2018
     }
   ],
   "neutro": {
@@ -859,5 +1005,6 @@
       "MISSÃO"
     ]
   },
-  "nota_reservas": "reservas: cores-base (hex, 50%) de reserva do partido, em ordem; as 10 faixas são geradas a partir delas. Ordem de troca: principal → extra → reservas → paleta neutra."
+  "nota_reservas": "reservas: cores-base (hex, 50%) de reserva do partido, em ordem; as 10 faixas são geradas a partir delas. Ordem de troca: principal → extra → reservas → paleta neutra.",
+  "nota_anos": "Partidos marcados com \"ano\" só existiram até aquela eleição (tabela \"Degradê Sigoli\" do usuário, 02/11/2026, página 3)."
 }
