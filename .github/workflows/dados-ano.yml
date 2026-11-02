@@ -3,7 +3,8 @@
 #
 # Passos:
 #   1. ano-tse: resultados por município (votação por município/zona, partidos, totais, vices);
-#   2. zonas-locais --ano: zonas, bairros e locais de votação (votação por seção);
+#   2. malha-ano: malha municipal do ano (municípios criados depois voltam à origem);
+#      zonas-locais --ano: zonas (desenho data/zonas/ZMBRA_{ano}.json quando houver), bairros e locais (votação por seção);
 #   3. areas-ano: casa os locais do ano com as áreas do Atlas Eleitoral 2026;
 #   4. pintam --ano: quem pinta o mapa (regras de cores, ADR 0014);
 #   5. testes e commit de public/data/{ano} e public/geo/{ano}.
@@ -20,6 +21,8 @@ on:
       - scripts/ano-tse.mjs
       - scripts/areas-ano.mjs
       - scripts/lib/dadosabertos.mjs
+      - scripts/malha-ano.mjs
+      - data/zonas/ZMBRA_*
 
 permissions:
   contents: write
@@ -66,6 +69,9 @@ jobs:
           for (const l of Object.values(d.eleitos)) for (const e of l) if (e.eleito) m.set(e.partido, (m.get(e.partido) ?? 0) + 1);
           console.log('Deputados federais eleitos:', [...m].sort((a, b) => b[1] - a[1]).map(([p, n]) => p + ' ' + n).join(', '), '| total', [...m.values()].reduce((a, b) => a + b, 0));
           "
+
+      - name: Malha municipal do ano (municípios criados depois voltam à origem)
+        run: node scripts/malha-ano.mjs --ano $ANO
 
       - name: Zonas, bairros e locais de votação
         run: node --max-old-space-size=12000 scripts/zonas-locais.mjs --ano $ANO --baixar

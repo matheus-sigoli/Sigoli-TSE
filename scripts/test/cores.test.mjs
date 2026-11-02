@@ -33,10 +33,13 @@ test('quem não pinta o mapa não faz ninguém trocar de cor', () => {
   assert.notEqual(cores(['PRTB', 'PP'])[1], base('PP'));
 });
 
-test('mesmo partido duas vezes (Senado com 2 vagas): o segundo ganha outro tom, nunca a mesma cor', () => {
+test('mesmo partido duas vezes (Senado com 2 vagas): o mais votado fica com a cor do partido, o outro roxo ou amarelo', () => {
   const [a, b] = cores(['PL', 'PL']);
   assert.equal(a, base('PL'));
-  assert.notEqual(b, a);
+  assert.ok(['#7B2CBF', '#F5C400'].includes(b), b);
+  const [c, d] = cores(['PT', 'PT']);
+  assert.equal(c, base('PT'));
+  assert.ok(['#7B2CBF', '#F5C400'].includes(d), d);
 });
 
 test('PT, PL e MISSÃO nunca trocam: no conflito, troca o outro, mesmo sendo o mais votado (PE: PSB × PT)', () => {

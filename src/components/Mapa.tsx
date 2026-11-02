@@ -17,13 +17,18 @@ interface Props {
   malha: Malha;
   /** geometria de apoio pintada em cinza por baixo (ex.: a cidade, no nível bairros) */
   fundo?: GeoJSON.FeatureCollection | null;
+  /** fundo sem a linha externa (bairros: o contorno da cidade não aparece) */
+  semContornoFundo?: boolean;
   /** unidades sem área (bairros do cadastro do TSE): círculos com área ∝ properties.eleitorado */
   pontos?: GeoJSON.FeatureCollection | null;
   cores: Map<string, string> | null;
   selecionado: string | null;
+  /** várias unidades somadas (shift + clique): todas ganham o contorno de seleção */
+  selecionados?: string[];
   destaque: Set<string> | null;
   mundo: boolean;
-  aoSelecionar: (id: string | null) => void;
+  /** somar = shift + clique: põe ou tira a unidade da soma */
+  aoSelecionar: (id: string | null, somar?: boolean) => void;
   /** duplo clique (ou toque duplo) numa área: abrir o detalhe dela */
   aoAbrir?: (id: string) => void;
   descrever: (id: string) => { titulo: string; linha: string } | null;
@@ -45,7 +50,7 @@ const margens = () =>
 const reduzirMovimento = () =>
   typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
-function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, destaque, mundo, aoSelecionar, aoAbrir, descrever }: Props) {
+function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, selecionados, destaque, mundo, semContornoFundo = false, aoSelecionar, aoAbrir, descrever }: Props) {
   const raiz = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const [tam, setTam] = useState({ w: 0, h: 0 });
@@ -234,8 +239,8 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
       const duplo = id !== null && ultimoClique.current.id === id && agora - ultimoClique.current.t < 420;
       ultimoClique.current = { id, t: duplo ? 0 : agora };
       // o 1º clique seleciona; o 2º, logo em seguida e na mesma área, abre o detalhe
-      if (duplo && cb.current.aoAbrir) cb.current.aoAbrir(id);
-      else cb.current.aoSelecionar(id);
+      if (duplo && !e.shiftKey && cb.current.aoAbrir) cb.current.aoAbrir(id);
+      else cb.current.aoSelecionar(id, e.shiftKey);
     }
   };
 
@@ -280,7 +285,8 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
   const raioPx = (e: number) => Math.max(2.5, Math.min(24, 0.045 * Math.sqrt(e) * Math.min(4, Math.sqrt(z))));
 
   const dHover = hover ? dPorId.get(hover) : undefined;
-  const dSel = selecionado ? dPorId.get(selecionado) : undefined;
+  const dSel = selecionados?.length ? selecionados.map((s) => dPorId.get(s) ?? '').join('') : selecionado ? dPorId.get(selecionado) : undefined;
+  const cSels = selecionados?.length ? circulos.filter((c) => selecionados.includes(c.id)) : [];
   const cHover = hover ? circulos.find((c) => c.id === hover) : undefined;
   const cSel = selecionado ? circulos.find((c) => c.id === selecionado) : undefined;
 
@@ -305,7 +311,7 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
       >
         <rect width="100%" height="100%" fill={FUNDO_MAPA} />
         <g transform={`translate(${vista.x},${vista.y}) scale(${vista.k})`}>
-          {fundoD ? <path className="mapa-fundo" d={fundoD} /> : null}
+          {fundoD ? <path className={semContornoFundo ? 'mapa-fundo sem-contorno' : 'mapa-fundo'} d={fundoD} /> : null}
           <g className="mapa-areas" stroke={BORDA_MUNICIPIO} strokeWidth={traco} strokeOpacity={areas.length > 2000 ? 0.75 : 0.95}>
             {camadaAreas}
           </g>
@@ -329,6 +335,7 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, d
           {cHover && hover !== selecionado ? <circle className="mapa-hover" cx={cHover.cx} cy={cHover.cy} r={raioPx(cHover.e) / vista.k} /> : null}
           {dSel ? <path className="mapa-selecao" d={dSel} /> : null}
           {cSel ? <circle className="mapa-selecao" cx={cSel.cx} cy={cSel.cy} r={raioPx(cSel.e) / vista.k} /> : null}
+          {cSels.map((c) => <circle key={c.id} className="mapa-selecao" cx={c.cx} cy={c.cy} r={raioPx(c.e) / vista.k} />)}
         </g>
       </svg>
 

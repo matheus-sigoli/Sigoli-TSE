@@ -141,11 +141,11 @@ const COMPATIVEIS = new Set(paleta.conflito.compativeis.flatMap(([a, b]) => [`${
 const DALTONICO = ['#E69F00', '#0072B2', '#009E73', '#CC79A7', '#56B4E9', '#D55E00', '#F0E442', '#999999'];
 const NEUTRAS = DALTONICO.map(gerarFaixas);
 
-/** Mesmo partido de novo no mapa (Senado com 2 vagas): um tom bem diferente da mesma cor. */
-function outroTom(f: Faixas): Faixas {
-  const [l] = toLab(f['50']);
-  return gerarFaixas(l < 50 ? mix(f['50'], '#FFFFFF', 0.45) : mix(f['50'], '#000000', 0.4));
-}
+/**
+ * Mesmo partido de novo no mapa (ex.: dois do PL no Senado): o mais votado fica com a cor do partido e o
+ * segundo ganha uma cor de fora da paleta dos partidos — roxo, depois amarelo (pedido do usuário).
+ */
+const EXTERNAS = ['#7B2CBF', '#F5C400'].map(gerarFaixas);
 
 /**
  * Atribui faixas de cor a uma lista de concorrentes (em ordem de votos no estado/país).
@@ -159,7 +159,7 @@ function outroTom(f: Faixas): Faixas {
  *    se nenhum dos dois tem, troca o menos votado;
  *  - PL, PT e MISSÃO (`conflito.fixos`) ficam sempre com a cor principal: no conflito, troca o outro,
  *    mesmo sendo o mais votado (extra, reservas ou paleta neutra);
- *  - mesmo partido duas vezes: a cor extra; sem extra, outro tom da mesma cor;
+ *  - mesmo partido duas vezes: o mais votado com a cor do partido; o outro, cor externa (roxo, depois amarelo);
  *  - sem alternativa: paleta neutra (até o usuário preencher as reservas do partido).
  */
 export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pinta?: boolean[]): Faixas[] {
@@ -187,18 +187,19 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
 
   for (let i = 0; i < pals.length; i++) {
     if (pinta && !pinta[i]) continue;
+    if (ativos.some((k) => chaves[k] === chaves[i])) {
+      // o partido já está no mapa com um candidato mais votado: este ganha uma cor externa
+      escolha[i] = [...EXTERNAS, ...NEUTRAS].find((f) => conflito(f, i) < 0) ?? EXTERNAS[0];
+      ativos.push(i);
+      continue;
+    }
     if (FIXOS.has(chaves[i])) {
-      // partido fixo: quem está no caminho sai (cada um uma vez); o mesmo partido de novo ganha outro tom
+      // partido fixo: quem está no caminho sai (cada um uma vez)
       ativos.push(i);
       const tentados = new Set<number>();
       for (let j = conflito(escolha[i], i); j >= 0 && !tentados.has(j); j = conflito(escolha[i], i)) {
         tentados.add(j);
-        if (FIXOS.has(chaves[j])) {
-          if (chaves[j] !== chaves[i]) break; // dois fixos parecidos: não acontece com a paleta atual
-          const tom = outroTom(escolha[j]);
-          if (conflito(tom, i) < 0) escolha[i] = tom;
-          break;
-        }
+        if (FIXOS.has(chaves[j])) break; // dois fixos parecidos: não acontece com a paleta atual
         tirarDoCaminho(j);
       }
       continue;
@@ -220,11 +221,7 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
       else if (extraJ) escolha[j] = extraJ;
       else if (resI) escolha[i] = resI;
       else if (resJ) escolha[j] = resJ;
-      else {
-        // mesmo partido: outro tom da mesma cor; senão, paleta neutra
-        const tom = mesmo ? outroTom(escolha[j]) : null;
-        escolha[i] = (tom && conflito(tom, i) < 0 ? tom : NEUTRAS.find((f) => conflito(f, i) < 0)) ?? escolha[i];
-      }
+      else escolha[i] = NEUTRAS.find((f) => conflito(f, i) < 0) ?? escolha[i]; // paleta neutra
     }
     ativos.push(i);
   }

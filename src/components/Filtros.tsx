@@ -136,6 +136,7 @@ function Filtros(p: Props) {
           </div>
           <p className="marca-sub" style={{ marginTop: 6 }}>
             {p.cidade ? DICA_CIDADE[p.nivel] : 'Dois cliques num município abrem as zonas, os bairros e os locais de votação dele.'}
+            {' '}Shift + clique soma várias áreas.
           </p>
         </div>
       ) : null}

@@ -96,6 +96,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 .mapa-svg path, .mapa-svg circle { vector-effect: non-scaling-stroke; }
 .mapa-areas path, .mapa-pontos circle { cursor: pointer; stroke-linejoin: round; }
 .mapa-fundo { fill: #7a7a7a; stroke: #fff; stroke-width: 1.2px; stroke-opacity: 0.9; }
+.mapa-fundo.sem-contorno { stroke: none; }
 .mapa-linhas { fill: none; stroke-linejoin: round; pointer-events: none; }
 .mapa-hover, .mapa-selecao { fill: none; stroke: #111317; pointer-events: none; stroke-linejoin: round; }
 .mapa-hover { stroke-width: 2px; }

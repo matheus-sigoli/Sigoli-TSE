@@ -44,21 +44,14 @@ const ANO = Number(opt('ano')[0] ?? 2026);
 const DADOS = `public/data/${ANO}`;
 /** malhas que dependem do cadastro de locais do ano: public/geo/{nome} em 2026, public/geo/{ano}/{nome} nos outros */
 const GEO = (nome) => (ANO === 2026 ? `public/geo/${nome}` : `public/geo/${ANO}/${nome}`);
-// códigos TSE das eleições: federal (Presidente) e estadual, por turno
-const ELEICOES = { 2026: { federal: [6257, 6258], estadual: [6259, 6260] }, 2022: { federal: [544, 545], estadual: [546, 547] } }[ANO];
-if (!ELEICOES) throw new Error(`códigos das eleições de ${ANO} não cadastrados`);
 const CDN = 'https://cdn.tse.jus.br/estatistica/sead/odsele';
 const TODAS = ['ac', 'al', 'am', 'ap', 'ba', 'ce', 'df', 'es', 'go', 'ma', 'mg', 'ms', 'mt', 'pa', 'pb', 'pe', 'pi', 'pr', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp', 'to'];
 const UFS = opt('uf').length ? opt('uf').map((u) => u.toLowerCase()) : TODAS;
 
-// eleição TSE + código do cargo → [slug, turno]
-function cargoDe(eleicao, cdCargo) {
-  if (eleicao === ELEICOES.federal[0]) return ['presidente', 1];
-  if (eleicao === ELEICOES.federal[1]) return ['presidente', 2];
-  if (!ELEICOES.estadual.includes(eleicao)) return null;
-  const t = eleicao === ELEICOES.estadual[1] ? 2 : 1;
-  const c = { 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
-  return c ? [c, t] : null;
+// código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)
+function cargoDe(cdCargo, turno) {
+  const c = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
+  return c && (turno === 1 || turno === 2) ? [c, turno] : null;
 }
 
 // ------------------------------------------------------------------ utilidades de arquivo
@@ -174,7 +167,7 @@ function lerBase(E, cargo, t) {
 
 /** Soma uma linha de votação por seção nos acumuladores da UF. */
 function somarLinha(E, f, c) {
-  const cg = cargoDe(num(f[c.CD_ELEICAO]), num(f[c.CD_CARGO]));
+  const cg = cargoDe(num(f[c.CD_CARGO]), num(f[c.NR_TURNO]));
   if (!cg) return;
   const [cargo, t] = cg;
   const chaveCargo = `${cargo}/${t}`;
@@ -402,8 +395,25 @@ function atribuirBairros(E) {
 }
 
 /** Município inteiro quando tem uma zona; Voronoi dos locais recortado pelo município quando tem várias. */
+// zonas desenhadas por cidade para um ano (ZMBRA_{ano}.json, enviado pelo usuário: cada feição = zona × município,
+// nas cidades com mais de uma zona). Onde cobre todas as zonas da cidade, substitui o Voronoi.
+const ZMBRA = (() => {
+  const p = `data/zonas/ZMBRA_${ANO}.json`;
+  if (!existsSync(p)) return null;
+  const m = new Map(); // ibge → [{zona, coords}]
+  for (const f of JSON.parse(readFileSync(p, 'utf8')).features) {
+    const ibge = String(f.properties.CD_MUN_I);
+    if (!m.has(ibge)) m.set(ibge, []);
+    m.get(ibge).push({ zona: Number(f.properties.ZE_NUM), uf: String(f.properties.SG_UF).toLowerCase(), coords: f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates });
+  }
+  console.log(`${p}: zonas desenhadas em ${m.size} cidades`);
+  return m;
+})();
+
 function desenharZonas(uf, lista) {
-  const topoUf = JSON.parse(readFileSync(`public/geo/uf/${uf}.json`, 'utf8'));
+  // malha do ano quando difere da de 2025 (scripts/malha-ano.mjs: municípios criados depois voltam à origem)
+  const malhaAno = `public/geo/${ANO}/uf/${uf}.json`;
+  const topoUf = JSON.parse(readFileSync(ANO !== 2026 && existsSync(malhaAno) ? malhaAno : `public/geo/uf/${uf}.json`, 'utf8'));
   const muniFc = feature(topoUf, topoUf.objects.municipios);
 
   // zonas desenhadas à mão (ADR 0013, ex.: DF a partir de DF.svg): usa o desenho e só recorta por cidade.
@@ -412,7 +422,8 @@ function desenharZonas(uf, lista) {
   const zonasFixas = existsSync(fixo) ? JSON.parse(readFileSync(fixo, 'utf8')) : null;
   const mesmasZonas = zonasFixas && [...new Set(lista.map((l) => String(l.zona)))].sort().join() === zonasFixas.features.map((z) => String(z.id)).sort().join();
   if (zonasFixas && !mesmasZonas) console.warn(`${uf}: as zonas de ${ANO} não são as do desenho em ${fixo}; usa as áreas pelos locais`);
-  if (zonasFixas && mesmasZonas) {
+  const zmbraNaUf = ZMBRA && [...ZMBRA.values()].some((l) => l[0].uf === uf);
+  if (zonasFixas && mesmasZonas && !zmbraNaUf) {
     const zonasFc = zonasFixas;
     const cidadeFc = { type: 'FeatureCollection', features: [] };
     for (const z of zonasFc.features) {
@@ -439,6 +450,7 @@ function desenharZonas(uf, lista) {
     if (!porMunicipio.has(l.ibge)) porMunicipio.set(l.ibge, []);
     porMunicipio.get(l.ibge).push(l);
   }
+  let usouZmbra = 0;
   const partesZona = new Map();
   const partesCidade = new Map(); // `${ibge}-${zona}` → partes (a zona recortada pela cidade)
   let ibgeAtual = '';
@@ -456,6 +468,17 @@ function desenharZonas(uf, lista) {
     const zonas = [...new Set(ls.map((l) => l.zona))];
     if (!zonas.length) continue; // lagoas e afins
     if (zonas.length === 1) { addParte(zonas[0], geom); continue; }
+    const desenho = ZMBRA?.get(ibgeAtual);
+    if (desenho && zonas.every((z) => desenho.some((d) => d.zona === z))) {
+      for (const d of desenho) {
+        if (!zonas.includes(d.zona)) continue;
+        const recorte = polygonClipping.intersection(d.coords, geom);
+        if (recorte.length) addParte(d.zona, recorte);
+      }
+      usouZmbra++;
+      continue;
+    }
+    if (desenho) console.warn(`${uf} ${ibgeAtual}: o desenho de ${ANO} não tem todas as zonas da cidade (${zonas.join(',')}); usa as áreas pelos locais`);
     const pontos = [], zonaDoPonto = [];
     const vistos = new Set();
     for (const l of ls) {
@@ -513,5 +536,6 @@ function desenharZonas(uf, lista) {
   topoC.bbox = topoUf.bbox;
   mkdirSync(GEO('zonas-cidade'), { recursive: true });
   writeFileSync(`${GEO('zonas-cidade')}/${uf}.json`, JSON.stringify(topoC));
+  if (usouZmbra) console.log(`${uf}: ${usouZmbra} cidades com as zonas desenhadas de ${ANO}`);
   return partesZona.size;
 }

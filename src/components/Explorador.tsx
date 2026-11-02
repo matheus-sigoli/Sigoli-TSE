@@ -38,7 +38,11 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
 
   const turnoPedido = (Number(params.get('t')) === 2 ? 2 : 1) as Turno;
   const turno: Turno = turnoDisponivel(cargo, abr, turnoPedido, ano) ? turnoPedido : 1;
-  const mun = params.get('mun');
+  // seleção: uma unidade (?mun=id) ou várias somadas com shift + clique (?mun=id1,id2,...)
+  const munParam = params.get('mun');
+  const selecao = useMemo(() => (munParam ? munParam.split(',').filter(Boolean) : []), [munParam]);
+  const mun = selecao.length === 1 ? selecao[0] : null;
+  const multi = selecao.length > 1;
   const reg = params.get('reg');
   const foco = lerFoco(params.get('foco'));
   // visão da cidade (duplo clique num município): ?cid={ibge}&nivel=zonas|bairros|locais
@@ -179,13 +183,14 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   }, [cid, nivel, bairros.dados, locais.dados, malhaCidade.dados]);
 
   const recorteMunicipios = useMemo(() => {
+    if (multi) return new Set(selecao); // soma das unidades selecionadas
     if (mun) {
       if (abr === 'exterior') return new Set(indiceMunicipios.porPais.get(mun)?.cidades ?? []);
       return new Set([mun]);
     }
     if (cid) return unidadesDaCidade ?? new Set<string>();
     return municipiosRegiao;
-  }, [mun, abr, cid, unidadesDaCidade, municipiosRegiao, indiceMunicipios]);
+  }, [mun, multi, selecao, abr, cid, unidadesDaCidade, municipiosRegiao, indiceMunicipios]);
 
   // áreas do Atlas que reúnem vários locais (properties.inclui): área → locais incluídos
   const gruposAreas = useMemo(() => {
@@ -233,6 +238,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   };
 
   const nomeRecorte = useMemo(() => {
+    if (multi) {
+      const rotulo = cid ? { zonas: 'zonas', bairros: 'bairros', locais: 'locais de votação' }[nivel as 'zonas' | 'bairros' | 'locais'] : nivel === 'zonas' ? 'zonas' : 'municípios';
+      return `${selecao.length} ${rotulo} somados`;
+    }
     if (cid) return mun ? nomeUnidade(mun) : nomeCidade(cid);
     if (mun && nivel === 'zonas') return `Zona ${mun}`;
     if (mun) {
@@ -243,10 +252,14 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     if (reg && regioes.dados?.[reg]) return regioes.dados[reg].nome;
     return nomeAbrangencia(abr);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mun, reg, abr, cid, nivel, indiceMunicipios, regioes.dados, bairros.dados, locais.dados]);
+  }, [mun, multi, selecao, reg, abr, cid, nivel, indiceMunicipios, regioes.dados, bairros.dados, locais.dados]);
 
   // linha de contexto abaixo do título
   const contexto = useMemo(() => {
+    if (multi) {
+      const nomes = selecao.map((id) => (cid || nivel === 'zonas' ? nomeUnidade(id) : titulo(indiceMunicipios.porIbge.get(id)?.nome ?? id)));
+      return `${nomes.slice(0, 6).join(' + ')}${nomes.length > 6 ? ` e mais ${nomes.length - 6}` : ''} · shift + clique para tirar ou pôr`;
+    }
     if (!cid) return nivel === 'zonas' && mun ? nomeZona(mun) || null : null;
     const qtd = unidadesDaCidade?.size ?? 0;
     const rotulo = { zonas: ['zona eleitoral', 'zonas eleitorais'], bairros: ['bairro', 'bairros'], locais: ['local de votação', 'locais de votação'] }[nivel as 'zonas' | 'bairros' | 'locais'];
@@ -268,29 +281,30 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     return [b ? (b.origem === 't' ? titulo(b.nome) : b.nome) : l.bairro && titulo(l.bairro), nomeCidade(l.ibge), `Zona ${l.zona}`, `${votos(l.eleitorado)} eleitores`]
       .filter(Boolean).join(' · ');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mun, nivel, cid, abr, unidadesDaCidade, nomeZona, bairros.dados, locais.dados, indiceMunicipios]);
+  }, [mun, multi, selecao, nivel, cid, abr, unidadesDaCidade, nomeZona, bairros.dados, locais.dados, indiceMunicipios]);
 
   // locais de votação da zona, do bairro ou da área do Atlas selecionada (lista no painel)
   const locaisDaUnidade = useMemo(() => {
-    if (!cid || !mun) return null;
+    if (!cid || !selecao.length) return null;
     if (nivel === 'locais') {
-      const inc = gruposAreas.get(mun);
-      if (!inc) return null;
-      return [mun, ...inc].map((id) => locais.dados?.porId.get(id)).filter((l): l is Local => !!l).sort((a, b) => b.eleitorado - a.eleitorado);
+      const ids = selecao.flatMap((id) => [id, ...(gruposAreas.get(id) ?? [])]);
+      if (ids.length < 2) return null;
+      return ids.map((id) => locais.dados?.porId.get(id)).filter((l): l is Local => !!l).sort((a, b) => b.eleitorado - a.eleitorado);
     }
     const ls = locais.dados?.porCidade.get(cid) ?? [];
-    const filtro = nivel === 'zonas' ? (l: Local) => l.zona === mun.split('-')[1] : (l: Local) => l.idBairro === mun;
+    const sel = new Set(nivel === 'zonas' ? selecao.map((id) => id.split('-')[1]) : selecao);
+    const filtro = nivel === 'zonas' ? (l: Local) => sel.has(l.zona) : (l: Local) => sel.has(l.idBairro);
     return ls.filter(filtro).sort((a, b) => b.eleitorado - a.eleitorado);
-  }, [cid, mun, nivel, locais.dados, gruposAreas]);
+  }, [cid, selecao, nivel, locais.dados, gruposAreas]);
 
   const trilha = useMemo(() => {
     const itens: { rotulo: string; acao: () => void; href?: string }[] = [];
     if (abr !== 'br') itens.push({ rotulo: 'Brasil', acao: () => irPara('br'), href: `${rotaDe('br', cargoSlug, ano)}${turno === 2 ? '?t=2' : ''}` });
-    if ((mun || reg || cid) && abr !== 'br') itens.push({ rotulo: nomeAbrangencia(abr), acao: () => atualizarBusca({ mun: null, reg: null, cid: null, nivel: null, foco: null }) });
-    if (cid && mun && cid !== cidadeUnica) itens.push({ rotulo: nomeCidade(cid), acao: () => atualizarBusca({ mun: null, foco: null }) });
+    if ((selecao.length || reg || cid) && abr !== 'br') itens.push({ rotulo: nomeAbrangencia(abr), acao: () => atualizarBusca({ mun: null, reg: null, cid: null, nivel: null, foco: null }) });
+    if (cid && selecao.length && cid !== cidadeUnica) itens.push({ rotulo: nomeCidade(cid), acao: () => atualizarBusca({ mun: null, foco: null }) });
     return itens;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [abr, mun, reg, cid, irPara, atualizarBusca, cargoSlug, turno, indiceMunicipios]);
+  }, [abr, selecao, reg, cid, irPara, atualizarBusca, cargoSlug, turno, indiceMunicipios]);
 
   // ---- interações do mapa
   const abrirCidade = useCallback(
@@ -299,8 +313,13 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   );
 
   const aoSelecionar = useCallback(
-    (id: string | null) => {
+    (id: string | null, somar = false) => {
       if (!id) return atualizarBusca({ mun: null });
+      // shift + clique: põe ou tira a unidade da soma (não vale na visão Brasil nem no exterior, que agrupa por país)
+      if (somar && abr !== 'br' && abr !== 'exterior') {
+        const nova = selecao.includes(id) ? selecao.filter((x) => x !== id) : [...selecao, id];
+        return atualizarBusca({ mun: nova.length ? nova.join(',') : null, foco: null });
+      }
       if (abr === 'br') {
         // na visão Brasil, clicar num município abre o estado já com ele selecionado
         const uf = ufDoIbge(id);
@@ -308,7 +327,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       atualizarBusca({ mun: id === mun ? null : id });
     },
-    [abr, mun, cargoSlug, irPara, atualizarBusca],
+    [abr, mun, selecao, cargoSlug, irPara, atualizarBusca],
   );
 
   // duplo clique num município (estado, sem zonas) abre a visão da cidade
@@ -405,6 +424,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
             pontos={cid ? malhaCidade.dados?.pontos ?? null : null}
             cores={visao?.cores ?? null}
             selecionado={mun}
+            selecionados={multi ? selecao : undefined}
+            semContornoFundo={nivel === 'bairros'}
             destaque={municipiosRegiao}
             mundo={abr === 'exterior'}
             aoSelecionar={aoSelecionar}

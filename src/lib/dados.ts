@@ -47,16 +47,26 @@ export const urlResultado = (ano: number, cargo: CargoSlug, turno: Turno, abr: s
 export const urlResultadoParaTela = (ano: number, cargo: CargoSlug, turno: Turno, abr: string) =>
   cargo === 'presidente' && abr !== 'exterior' ? urlResultado(ano, cargo, turno, 'br') : urlResultado(ano, cargo, turno, abr);
 
-export const urlMalha = (abr: string) =>
-  abr === 'br' ? '/geo/br.json' : abr === 'exterior' ? '/geo/mundo.json' : `/geo/uf/${abr}.json`;
+const arquivoMalha = (abr: string) => (abr === 'br' ? 'br.json' : abr === 'exterior' ? 'mundo.json' : `uf/${abr}.json`);
+/**
+ * Malha municipal do ano: a do IBGE 2025, salvo onde um município novo ainda não existia (ex.: Boa Esperança do Norte
+ * junto de Nova Ubiratã até 2022). scripts/malha-ano.mjs grava as trocadas em /geo/{ano}/ e lista em malhas.json.
+ */
+async function urlMalha(abr: string, ano: number) {
+  const arq = arquivoMalha(abr);
+  if (ano === 2026) return `/geo/${arq}`;
+  const trocadas = await buscar<string[]>(`/geo/${ano}/malhas.json`).catch((): string[] => []);
+  return trocadas.includes(arq) ? `/geo/${ano}/${arq}` : `/geo/${arq}`;
+}
 
 export type Malha = { municipios: GeoJSON.FeatureCollection; linhas: GeoJSON.FeatureCollection; bbox: [number, number, number, number] };
 
 const malhas = new Map<string, Promise<Malha>>();
-export function buscarMalha(abr: string): Promise<Malha> {
-  let p = malhas.get(abr);
+export function buscarMalha(abr: string, ano = 2026): Promise<Malha> {
+  const k = `${ano}:${abr}`;
+  let p = malhas.get(k);
   if (!p) {
-    p = buscar<Topology>(urlMalha(abr)).then((topo) => {
+    p = urlMalha(abr, ano).then((url) => buscar<Topology>(url)).then((topo) => {
       const nomes = Object.keys(topo.objects);
       const area = nomes.includes('municipios') ? 'municipios' : nomes[0];
       const linha = nomes.find((n) => n !== area);
@@ -68,8 +78,8 @@ export function buscarMalha(abr: string): Promise<Malha> {
         bbox: topo.bbox,
       };
     });
-    p.catch(() => malhas.delete(abr));
-    malhas.set(abr, p);
+    p.catch(() => malhas.delete(k));
+    malhas.set(k, p);
   }
   return p;
 }
@@ -124,7 +134,7 @@ function buscarMalhaZonas(ano: number, uf: string): Promise<Malha> {
   const k = `zonas:${ano}:${uf}`;
   let p = malhas.get(k);
   if (!p) {
-    p = Promise.all([buscar<Topology>(`${geoDoAno(ano, 'zonas')}/${uf}.json`), buscarMalha(uf)]).then(([topo, base]) => ({
+    p = Promise.all([buscar<Topology>(`${geoDoAno(ano, 'zonas')}/${uf}.json`), buscarMalha(uf, ano)]).then(([topo, base]) => ({
       municipios: toGeoJSON(topo, 'zonas'),
       linhas: base.municipios, // contorno dos municípios
       bbox: base.bbox,
@@ -136,7 +146,7 @@ function buscarMalhaZonas(ano: number, uf: string): Promise<Malha> {
 }
 
 export const useMalha = (ano: number, abr: string, nivel: 'municipios' | 'zonas' = 'municipios') =>
-  useArquivo<Malha>(() => (nivel === 'zonas' ? buscarMalhaZonas(ano, abr) : buscarMalha(abr)), `malha:${abr}:${nivel === 'zonas' ? `z${ano}` : 'm'}`);
+  useArquivo<Malha>(() => (nivel === 'zonas' ? buscarMalhaZonas(ano, abr) : buscarMalha(abr, ano)), `malha:${ano}:${abr}:${nivel === 'zonas' ? 'z' : 'm'}`);
 
 // ------------------------------------------------------------------ bairros (ADR 0009)
 /** Bairro: área do IBGE (origem 'i') ou nome do cadastro do TSE, sem área (origem 't'). */
@@ -197,7 +207,7 @@ function buscarMalhaCidade(ano: number, uf: string, ibge: string, nivel: 'zonas'
   let p = cidadesCache.get(k);
   if (!p) {
     p = (async () => {
-      const base = await buscarMalha(uf);
+      const base = await buscarMalha(uf, ano);
       const cidade = base.municipios.features.filter((f) => String(f.id) === ibge);
       const fundo: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: cidade };
       const comMalha = await buscar<Record<string, number>>(`/geo/bairros/${uf}/cidades.json`).catch(() => ({} as Record<string, number>));
