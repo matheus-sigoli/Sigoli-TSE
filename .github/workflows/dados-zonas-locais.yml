@@ -17,6 +17,7 @@ on:
       - scripts/zonas-locais.mjs
       - scripts/lib/texto.mjs
       - public/geo/bairros/**
+      - data/zonas/**
       - scripts/corrigir-anulados.mjs
 
 permissions:

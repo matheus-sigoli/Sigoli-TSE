@@ -44,6 +44,7 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 | 0010 | Mapa em SVG, sem biblioteca de mapas |
 | 0011 | Visão da cidade (duplo clique): zonas, bairros e locais de votação |
 | 0012 | Áreas dos locais de votação do Atlas Eleitoral 2026 (sem círculos) |
+| 0013 | Zonas do DF a partir do DF.svg do usuário; DF abre direto na visão da cidade |
 
 ## Glossário
 

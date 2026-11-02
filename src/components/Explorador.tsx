@@ -42,7 +42,10 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
   const reg = params.get('reg');
   const foco = lerFoco(params.get('foco'));
   // visão da cidade (duplo clique num município): ?cid={ibge}&nivel=zonas|bairros|locais
-  const cid = abr !== 'br' && abr !== 'exterior' ? params.get('cid') : null;
+  // o DF é um município só (Brasília): abre direto na visão da cidade, com as zonas do DF.svg (ADR 0013)
+  const CIDADE_UNICA: Record<string, string> = { df: '5300108' };
+  const cidadeUnica = CIDADE_UNICA[abr] ?? null;
+  const cid = abr !== 'br' && abr !== 'exterior' ? params.get('cid') ?? cidadeUnica : null;
   const nivel = lerNivel(params.get('nivel'), abr, !!cid);
 
   // preferências (o script do <head> já aplicou no <html>)
@@ -141,7 +144,8 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     }
     return { porIbge, porPais };
   }, [municipios.dados]);
-  const nomeCidade = (ibge: string) => titulo(indiceMunicipios.porIbge.get(ibge)?.nome ?? 'Cidade');
+  // no DF a "cidade" é a UF inteira: mostra "Distrito Federal", não "Brasília"
+  const nomeCidade = (ibge: string) => (ibge === cidadeUnica ? nomeAbrangencia(abr) : titulo(indiceMunicipios.porIbge.get(ibge)?.nome ?? 'Cidade'));
 
   // municípios da região escolhida (a partir das propriedades da malha da UF)
   const municipiosRegiao = useMemo(() => {
@@ -266,7 +270,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     const itens: { rotulo: string; acao: () => void; href?: string }[] = [];
     if (abr !== 'br') itens.push({ rotulo: 'Brasil', acao: () => irPara('br'), href: `${rotaDe('br', cargoSlug)}${turno === 2 ? '?t=2' : ''}` });
     if ((mun || reg || cid) && abr !== 'br') itens.push({ rotulo: nomeAbrangencia(abr), acao: () => atualizarBusca({ mun: null, reg: null, cid: null, nivel: null, foco: null }) });
-    if (cid && mun) itens.push({ rotulo: nomeCidade(cid), acao: () => atualizarBusca({ mun: null, foco: null }) });
+    if (cid && mun && cid !== cidadeUnica) itens.push({ rotulo: nomeCidade(cid), acao: () => atualizarBusca({ mun: null, foco: null }) });
     return itens;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [abr, mun, reg, cid, irPara, atualizarBusca, cargoSlug, turno, indiceMunicipios]);
@@ -366,7 +370,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
         nivel={nivel}
         cidade={cid ? nomeCidade(cid) : null}
         aoMudarNivel={mudarNivel}
-        aoFecharCidade={() => atualizarBusca({ cid: null, nivel: null, mun: cid, foco: null })}
+        aoFecharCidade={cidadeUnica ? undefined : () => atualizarBusca({ cid: null, nivel: null, mun: cid, foco: null })}
         aoAlternarTema={alternarTema}
         aoAlternarDaltonico={alternarDaltonico}
       />

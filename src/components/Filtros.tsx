@@ -27,7 +27,8 @@ interface Props {
   nivel: Nivel;
   /** nome da cidade aberta (visão da cidade) */
   cidade: string | null;
-  aoFecharCidade: () => void;
+  /** ausente quando a UF é uma cidade só (DF): não há estado para voltar */
+  aoFecharCidade?: () => void;
   aoMudarNivel: (n: Nivel) => void;
 }
 
@@ -91,7 +92,7 @@ function Filtros(p: Props) {
             <div className="cidade-aberta">
               <span className="campo-rotulo">Cidade</span>
               <strong>{p.cidade}</strong>
-              <button type="button" className="link-botao" onClick={p.aoFecharCidade}>Voltar ao estado</button>
+              {p.aoFecharCidade ? <button type="button" className="link-botao" onClick={p.aoFecharCidade}>Voltar ao estado</button> : null}
             </div>
           ) : null}
           <span className="campo-rotulo" id="rot-nivel">Ver por</span>

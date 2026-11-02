@@ -388,6 +388,31 @@ function atribuirBairros(E) {
 function desenharZonas(uf, lista) {
   const topoUf = JSON.parse(readFileSync(`public/geo/uf/${uf}.json`, 'utf8'));
   const muniFc = feature(topoUf, topoUf.objects.municipios);
+
+  // zonas desenhadas à mão (ADR 0013, ex.: DF a partir de DF.svg): usa o desenho e só recorta por cidade
+  const fixo = `data/zonas/${uf}.geojson`;
+  if (existsSync(fixo)) {
+    const zonasFc = JSON.parse(readFileSync(fixo, 'utf8'));
+    const cidadeFc = { type: 'FeatureCollection', features: [] };
+    for (const z of zonasFc.features) {
+      for (const m of muniFc.features) {
+        const geomM = m.geometry.type === 'Polygon' ? [m.geometry.coordinates] : m.geometry.coordinates;
+        const recorte = polygonClipping.intersection(z.geometry.coordinates, geomM);
+        if (!recorte.length) continue;
+        const k = `${m.id}-${z.id}`;
+        cidadeFc.features.push({ type: 'Feature', id: k, properties: { id: k, ibge: String(m.id), zona: String(z.id) }, geometry: { type: 'MultiPolygon', coordinates: recorte } });
+      }
+    }
+    const topoZ = topology({ zonas: { type: 'FeatureCollection', features: zonasFc.features } }, 1e5);
+    topoZ.bbox = topoUf.bbox;
+    const topoC = topology({ zonas: cidadeFc }, 1e5);
+    topoC.bbox = topoUf.bbox;
+    mkdirSync('public/geo/zonas', { recursive: true });
+    mkdirSync('public/geo/zonas-cidade', { recursive: true });
+    writeFileSync(`public/geo/zonas/${uf}.json`, JSON.stringify(topoZ));
+    writeFileSync(`public/geo/zonas-cidade/${uf}.json`, JSON.stringify(topoC));
+    return zonasFc.features.length;
+  }
   const porMunicipio = new Map();
   for (const l of lista) {
     if (!porMunicipio.has(l.ibge)) porMunicipio.set(l.ibge, []);
