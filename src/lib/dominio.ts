@@ -23,8 +23,11 @@ export const CARGOS: Cargo[] = [
 
 export const cargoPorSlug = (s: string) => CARGOS.find((c) => c.slug === s);
 
-/** UFs que tiveram 2º turno para governador em 2026 (config 6260 do TSE). */
-export const UFS_2T_GOVERNADOR = ['ac', 'am', 'df', 'es', 'rn', 'to'];
+/** UFs que tiveram 2º turno para governador, por ano (2026: config 6260 do TSE; 2022: resultado oficial). */
+export const UFS_2T_GOVERNADOR: Record<number, string[]> = {
+  2026: ['ac', 'am', 'df', 'es', 'rn', 'to'],
+  2022: ['al', 'am', 'ba', 'es', 'ms', 'pb', 'pe', 'ro', 'rs', 'sc', 'se', 'sp'],
+};
 
 export const UFS: Record<string, string> = {
   ac: 'Acre', al: 'Alagoas', ap: 'Amapá', am: 'Amazonas', ba: 'Bahia', ce: 'Ceará',
@@ -44,13 +47,13 @@ export const nomeAbrangencia = (abr: string) =>
 export const abrangenciaValida = (abr: string, cargo: Cargo) =>
   abr === 'br' || (abr === 'exterior' ? cargo.slug === 'presidente' : abr in UFS);
 
-export const turnoDisponivel = (cargo: Cargo, abr: string, turno: Turno) => {
+export const turnoDisponivel = (cargo: Cargo, abr: string, turno: Turno, ano = 2026) => {
   if (!cargo.turnos.includes(turno)) return false;
-  if (turno === 2 && cargo.slug === 'governador' && abr !== 'br') return UFS_2T_GOVERNADOR.includes(abr);
+  if (turno === 2 && cargo.slug === 'governador' && abr !== 'br') return (UFS_2T_GOVERNADOR[ano] ?? []).includes(abr);
   return true;
 };
 
-export const rotaDe = (abr: string, cargo: CargoSlug) => `/2026/${abr}/${cargo}`;
+export const rotaDe = (abr: string, cargo: CargoSlug, ano = 2026) => `/${ano}/${abr}/${cargo}`;
 
 // ------------------------------------------------------------------ arquivos de dados (ADR 0007)
 /** [eleitorado, comparecimento, abstenção, válidos, brancos, nulos] */

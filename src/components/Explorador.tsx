@@ -1,7 +1,7 @@
 'use client';
 /**
  * Tela principal: filtros | mapa | painel.
- * Estado na URL: caminho = /2026/{abr}/{cargo}; busca = ?t=2&mun=3550308&reg=350001&foco=c:1&nivel=zonas
+ * Estado na URL: caminho = /{ano}/{abr}/{cargo}; busca = ?t=2&mun=3550308&reg=350001&foco=c:1&nivel=zonas
  * Visão da cidade: `cid` é a cidade (IBGE), `nivel` = zonas|bairros|locais e `mun` a unidade selecionada.
  */
 import dynamic from 'next/dynamic';
@@ -29,7 +29,7 @@ function lerFoco(s: string | null): Foco {
   return m ? { tipo: m[1] as 'c' | 'p', idx: Number(m[2]) } : null;
 }
 
-export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; cargo: CargoSlug }) {
+export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number; abr: string; cargo: CargoSlug }) {
   const cargo = cargoPorSlug(cargoSlug)!;
   const router = useRouter();
   const caminho = usePathname();
@@ -37,7 +37,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
   const [, iniciarTransicao] = useTransition();
 
   const turnoPedido = (Number(params.get('t')) === 2 ? 2 : 1) as Turno;
-  const turno: Turno = turnoDisponivel(cargo, abr, turnoPedido) ? turnoPedido : 1;
+  const turno: Turno = turnoDisponivel(cargo, abr, turnoPedido, ano) ? turnoPedido : 1;
   const mun = params.get('mun');
   const reg = params.get('reg');
   const foco = lerFoco(params.get('foco'));
@@ -91,35 +91,47 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
       if (nivel === 'zonas' && !cid && novaAbr !== 'br' && novaAbr !== 'exterior' && !extra.mun && !extra.cid) p.set('nivel', 'zonas');
       for (const [k, v] of Object.entries(extra)) p.set(k, v);
       const q = p.toString();
-      iniciarTransicao(() => router.push(`${rotaDe(novaAbr, novoCargo)}${q ? `?${q}` : ''}`, { scroll: false }));
+      iniciarTransicao(() => router.push(`${rotaDe(novaAbr, novoCargo, ano)}${q ? `?${q}` : ''}`, { scroll: false }));
     },
-    [cargoSlug, turno, router, nivel, cid],
+    [cargoSlug, turno, router, nivel, cid, ano],
   );
   const hrefCargo = useCallback(
     (c: CargoSlug) => {
       const destino = cargoPorSlug(c)!;
       const a = abr === 'exterior' && c !== 'presidente' ? 'br' : abr;
       const p = new URLSearchParams();
-      if (turno === 2 && turnoDisponivel(destino, a, 2)) p.set('t', '2');
+      if (turno === 2 && turnoDisponivel(destino, a, 2, ano)) p.set('t', '2');
       if (cid && a === abr) p.set('cid', cid);
       if (nivel !== 'municipios' && a === abr) p.set('nivel', nivel);
       const q = p.toString();
-      return `${rotaDe(a, c)}${q ? `?${q}` : ''}`;
+      return `${rotaDe(a, c, ano)}${q ? `?${q}` : ''}`;
     },
-    [abr, turno, nivel, cid],
+    [abr, turno, nivel, cid, ano],
+  );
+  // outro ano: mesmo cargo, lugar e nível; a seleção (mun, foco) é do arquivo do ano e fica para trás
+  const hrefAno = useCallback(
+    (outro: number) => {
+      const p = new URLSearchParams();
+      if (turno === 2 && turnoDisponivel(cargo, abr, 2, outro)) p.set('t', '2');
+      if (cid && cid !== cidadeUnica) p.set('cid', cid);
+      if (nivel !== 'municipios') p.set('nivel', nivel);
+      const q = p.toString();
+      return `${rotaDe(abr, cargoSlug, outro)}${q ? `?${q}` : ''}`;
+    },
+    [abr, cargo, cargoSlug, turno, nivel, cid, cidadeUnica],
   );
 
   // ---- dados
   // Na visão da cidade, cada nível tem seu arquivo por UF: zonas-cidade, bairros ou locais (ADRs 0009 e 0011)
   const nivelArquivo: NivelArquivo = cid ? (nivel === 'zonas' ? 'zonas-cidade' : nivel === 'locais' ? 'locais' : 'bairros') : nivel === 'zonas' ? 'zonas' : 'municipios';
-  const resultado = useResultado(cargoSlug, turno, abr, nivelArquivo);
+  const resultado = useResultado(ano, cargoSlug, turno, abr, nivelArquivo);
   // arquivo do mapa do estado: a ordem das cores sai dele, para cada candidato ter a mesma cor em todos os níveis
-  const resultadoEstado = useResultado(cargoSlug, turno, abr, 'municipios');
-  const malhaUf = useMalha(abr, !cid && nivel === 'zonas' ? 'zonas' : 'municipios');
-  const malhaCidade = useMalhaCidade(cid ? abr : null, cid, cid ? (nivel as 'zonas' | 'bairros' | 'locais') : 'bairros');
+  const resultadoEstado = useResultado(ano, cargoSlug, turno, abr, 'municipios');
+  const malhaUf = useMalha(ano, abr, !cid && nivel === 'zonas' ? 'zonas' : 'municipios');
+  const malhaCidade = useMalhaCidade(ano, cid ? abr : null, cid, cid ? (nivel as 'zonas' | 'bairros' | 'locais') : 'bairros');
   const malha = cid ? { dados: malhaCidade.dados?.malha ?? null, carregando: malhaCidade.carregando } : malhaUf;
-  const bairros = useBairros(cid ? abr : null);
-  const locais = useLocais(nivel === 'zonas' || cid ? abr : null);
+  const bairros = useBairros(ano, cid ? abr : null);
+  const locais = useLocais(ano, nivel === 'zonas' || cid ? abr : null);
   // zona → municípios que ela cobre (para os nomes)
   const municipiosDaZona = useMemo(() => {
     const m = new Map<string, Set<string>>();
@@ -129,7 +141,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
     }
     return m;
   }, [locais.dados]);
-  const municipios = useMunicipios();
+  const municipios = useMunicipios(ano);
   const regioes = useRegioes();
 
   const indiceMunicipios = useMemo(() => {
@@ -273,7 +285,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
 
   const trilha = useMemo(() => {
     const itens: { rotulo: string; acao: () => void; href?: string }[] = [];
-    if (abr !== 'br') itens.push({ rotulo: 'Brasil', acao: () => irPara('br'), href: `${rotaDe('br', cargoSlug)}${turno === 2 ? '?t=2' : ''}` });
+    if (abr !== 'br') itens.push({ rotulo: 'Brasil', acao: () => irPara('br'), href: `${rotaDe('br', cargoSlug, ano)}${turno === 2 ? '?t=2' : ''}` });
     if ((mun || reg || cid) && abr !== 'br') itens.push({ rotulo: nomeAbrangencia(abr), acao: () => atualizarBusca({ mun: null, reg: null, cid: null, nivel: null, foco: null }) });
     if (cid && mun && cid !== cidadeUnica) itens.push({ rotulo: nomeCidade(cid), acao: () => atualizarBusca({ mun: null, foco: null }) });
     return itens;
@@ -354,6 +366,8 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
   return (
     <div className="app">
       <Filtros
+        ano={ano}
+        hrefAno={hrefAno}
         abr={abr}
         cargo={cargo}
         regiaoSelecionada={reg}
@@ -406,11 +420,12 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
           {cid && nivel === 'locais'
             ? malhaCidade.dados?.pontos.features.length
               ? ' · Círculos: locais de votação, pelo tamanho do eleitorado'
-              : ' · Áreas dos locais: Atlas Eleitoral 2026 (@mroctoz)'
+              : ` · Áreas dos locais: Atlas Eleitoral 2026 (@mroctoz)${ano !== 2026 ? `, casadas com os locais de ${ano}` : ''}`
             : ''}
         </p>
       </main>
       <Painel
+        ano={ano}
         cargo={cargo}
         abr={abr}
         turno={turno}
@@ -428,7 +443,7 @@ export default function Explorador({ abr, cargo: cargoSlug }: { abr: string; car
         erro={resultado.erro && !ausente ? resultado.erro.message : null}
         temSelecao={!!mun}
         hrefCargo={hrefCargo}
-        turnoPossivel={(t) => turnoDisponivel(cargo, abr, t)}
+        turnoPossivel={(t) => turnoDisponivel(cargo, abr, t, ano)}
         aoMudarTurno={(t) => atualizarBusca({ t: t === 2 ? '2' : null, foco: null })}
         aoFocar={(chave) => atualizarBusca({ foco: chave && params.get('foco') !== chave ? chave : null })}
       />

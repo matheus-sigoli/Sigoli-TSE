@@ -13,6 +13,7 @@ on:
   workflow_dispatch:
   # também quando o próprio processamento muda (o commit de dados só mexe em public/, então não entra em laço)
   push:
+    branches: [main, df-zonas]
     paths:
       - .github/workflows/dados-zonas-locais.yml
       - scripts/zonas-locais.mjs

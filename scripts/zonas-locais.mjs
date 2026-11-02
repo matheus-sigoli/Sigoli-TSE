@@ -21,7 +21,10 @@
  *
  * Deputados ficam por partido (nominais + legenda) nesses níveis; por candidato só no nível município.
  *
- * Uso: node scripts/zonas-locais.mjs [--uf sp --uf rj] [--baixar]
+ * Outros anos (ADR 0015): --ano 2022 lê os arquivos daquele ano e grava em public/data/{ano}/ e public/geo/{ano}/
+ * (os arquivos por município do ano vêm antes, de scripts/ano-tse.mjs).
+ *
+ * Uso: node scripts/zonas-locais.mjs [--ano 2022] [--uf sp --uf rj] [--baixar]
  */
 import { createWriteStream, existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -37,16 +40,23 @@ import { normalizar as semAcento } from './lib/texto.mjs';
 const argv = process.argv.slice(2);
 const opt = (k) => argv.flatMap((a, i) => (a === `--${k}` ? [argv[i + 1]] : []));
 const CACHE = '.cache/dadosabertos';
-const DADOS = 'public/data/2026';
+const ANO = Number(opt('ano')[0] ?? 2026);
+const DADOS = `public/data/${ANO}`;
+/** malhas que dependem do cadastro de locais do ano: public/geo/{nome} em 2026, public/geo/{ano}/{nome} nos outros */
+const GEO = (nome) => (ANO === 2026 ? `public/geo/${nome}` : `public/geo/${ANO}/${nome}`);
+// códigos TSE das eleições: federal (Presidente) e estadual, por turno
+const ELEICOES = { 2026: { federal: [6257, 6258], estadual: [6259, 6260] }, 2022: { federal: [544, 545], estadual: [546, 547] } }[ANO];
+if (!ELEICOES) throw new Error(`códigos das eleições de ${ANO} não cadastrados`);
 const CDN = 'https://cdn.tse.jus.br/estatistica/sead/odsele';
 const TODAS = ['ac', 'al', 'am', 'ap', 'ba', 'ce', 'df', 'es', 'go', 'ma', 'mg', 'ms', 'mt', 'pa', 'pb', 'pe', 'pi', 'pr', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp', 'to'];
 const UFS = opt('uf').length ? opt('uf').map((u) => u.toLowerCase()) : TODAS;
 
 // eleição TSE + código do cargo → [slug, turno]
 function cargoDe(eleicao, cdCargo) {
-  if (eleicao === 6257) return ['presidente', 1];
-  if (eleicao === 6258) return ['presidente', 2];
-  const t = eleicao === 6260 ? 2 : 1;
+  if (eleicao === ELEICOES.federal[0]) return ['presidente', 1];
+  if (eleicao === ELEICOES.federal[1]) return ['presidente', 2];
+  if (!ELEICOES.estadual.includes(eleicao)) return null;
+  const t = eleicao === ELEICOES.estadual[1] ? 2 : 1;
   const c = { 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
   return c ? [c, t] : null;
 }
@@ -137,12 +147,12 @@ const pad5 = (s) => String(num(s)).padStart(5, '0');
 const municipios = JSON.parse(readFileSync(join(DADOS, 'municipios.json'), 'utf8'));
 const ibgeDe = new Map(municipios.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m.ibge]));
 
-const zipLocais = join(CACHE, 'eleitorado_local_votacao_2026.zip');
-const zipVotos = (UF) => join(CACHE, `votacao_secao_2026_${UF}.zip`);
+const zipLocais = join(CACHE, `eleitorado_local_votacao_${ANO}.zip`);
+const zipVotos = (UF) => join(CACHE, `votacao_secao_${ANO}_${UF}.zip`);
 if (argv.includes('--baixar')) {
-  await baixar(`${CDN}/eleitorado_locais_votacao/eleitorado_local_votacao_2026.zip`, zipLocais);
+  await baixar(`${CDN}/eleitorado_locais_votacao/eleitorado_local_votacao_${ANO}.zip`, zipLocais);
   // BR = Presidente (todas as UFs); cada UF = cargos estaduais
-  for (const UF of ['BR', ...UFS.map((u) => u.toUpperCase())]) await baixar(`${CDN}/votacao_secao/votacao_secao_2026_${UF}.zip`, zipVotos(UF));
+  for (const UF of ['BR', ...UFS.map((u) => u.toUpperCase())]) await baixar(`${CDN}/votacao_secao/votacao_secao_${ANO}_${UF}.zip`, zipVotos(UF));
 }
 
 /** Estado de processamento de uma UF. */
@@ -225,28 +235,35 @@ function somarLinha(E, f, c) {
 const estados = new Map(UFS.map((uf) => [uf, novaUf(uf)]));
 
 // 1) cadastro de locais e seções de cada UF
-for (const E of estados.values()) {
-  const UF = E.uf.toUpperCase();
-  await lerCsvDoZip(zipLocais, (n) => n.endsWith(`_${UF}.csv`), (f, c) => {
-    const turno = num(f[c.NR_TURNO]);
-    const mun = pad5(f[c.CD_MUNICIPIO]);
-    const zona = num(f[c.NR_ZONA]);
-    const secao = num(f[c.NR_SECAO]);
-    const nr = num(f[c.NR_LOCAL_VOTACAO]);
-    const id = `${mun}-${zona}-${nr}`;
-    const chave = `${turno}|${mun}-${zona}-${secao}`;
-    E.secaoLocal.set(chave, id);
-    // seção agregada vota junto com a principal: soma o eleitorado na principal
-    const principal = num(f[c.NR_SECAO_PRINCIPAL]);
-    const chaveVoto = principal > 0 ? `${turno}|${mun}-${zona}-${principal}` : chave;
-    E.eleitoradoSecao.set(chaveVoto, (E.eleitoradoSecao.get(chaveVoto) ?? 0) + num(f[c.QT_ELEITOR_SECAO]));
-    if (turno !== 1 && E.locais.has(id)) return;
-    let l = E.locais.get(id);
-    if (!l) {
-      l = { id, mun, ibge: ibgeDe.get(mun) ?? '', zona, nr, nome: f[c.NM_LOCAL_VOTACAO], bairro: f[c.NM_BAIRRO], lon: coord(f[c.NR_LONGITUDE]), lat: coord(f[c.NR_LATITUDE]), eleitorado: 0 };
-      E.locais.set(id, l);
-    }
-    if (turno === 1) l.eleitorado += num(f[c.QT_ELEITOR_SECAO]);
+function lerLocal(E, f, c) {
+  const turno = num(f[c.NR_TURNO]);
+  const mun = pad5(f[c.CD_MUNICIPIO]);
+  const zona = num(f[c.NR_ZONA]);
+  const secao = num(f[c.NR_SECAO]);
+  const nr = num(f[c.NR_LOCAL_VOTACAO]);
+  const id = `${mun}-${zona}-${nr}`;
+  const chave = `${turno}|${mun}-${zona}-${secao}`;
+  E.secaoLocal.set(chave, id);
+  // seção agregada vota junto com a principal: soma o eleitorado na principal
+  const principal = num(f[c.NR_SECAO_PRINCIPAL]);
+  const chaveVoto = principal > 0 ? `${turno}|${mun}-${zona}-${principal}` : chave;
+  E.eleitoradoSecao.set(chaveVoto, (E.eleitoradoSecao.get(chaveVoto) ?? 0) + num(f[c.QT_ELEITOR_SECAO]));
+  if (turno !== 1 && E.locais.has(id)) return;
+  let l = E.locais.get(id);
+  if (!l) {
+    l = { id, mun, ibge: ibgeDe.get(mun) ?? '', zona, nr, nome: f[c.NM_LOCAL_VOTACAO], bairro: f[c.NM_BAIRRO], lon: coord(f[c.NR_LONGITUDE]), lat: coord(f[c.NR_LATITUDE]), eleitorado: 0 };
+    E.locais.set(id, l);
+  }
+  if (turno === 1) l.eleitorado += num(f[c.QT_ELEITOR_SECAO]);
+}
+if (ANO === 2026) {
+  // 2026: um CSV por UF
+  for (const E of estados.values()) await lerCsvDoZip(zipLocais, (n) => n.endsWith(`_${E.uf.toUpperCase()}.csv`), (f, c) => lerLocal(E, f, c));
+} else {
+  // anos anteriores: um CSV só, lido uma vez e distribuído por SG_UF
+  await lerCsvDoZip(zipLocais, (n) => n.endsWith('.csv'), (f, c) => {
+    const E = estados.get(String(f[c.SG_UF]).toLowerCase());
+    if (E) lerLocal(E, f, c);
   });
 }
 
@@ -264,7 +281,7 @@ if (existsSync(zipVotos('BR'))) {
     const E = estados.get(String(f[c.SG_UF]).toLowerCase());
     if (E) somarLinha(E, f, c);
   });
-} else console.warn('votacao_secao_2026_BR.zip ausente: Presidente fica sem zonas e locais');
+} else console.warn(`votacao_secao_${ANO}_BR.zip ausente: Presidente fica sem zonas e locais`);
 
 // 4) grava tudo por UF
 for (const E of estados.values()) {
@@ -299,8 +316,8 @@ for (const E of estados.values()) {
 
   // cadastro dos locais (pontos)
   const lista = [...E.locais.values()].sort((x, y) => x.id.localeCompare(y.id));
-  mkdirSync('public/geo/locais', { recursive: true });
-  writeFileSync(`public/geo/locais/${uf}.json`, JSON.stringify({
+  mkdirSync(GEO('locais'), { recursive: true });
+  writeFileSync(`${GEO('locais')}/${uf}.json`, JSON.stringify({
     campos: ['id', 'ibge', 'zona', 'nome', 'bairro', 'lon', 'lat', 'eleitorado', 'idBairro'],
     l: lista.map((l) => [l.id, l.ibge, l.zona, l.nome, l.bairro, l.lon === null ? null : +l.lon.toFixed(5), l.lat === null ? null : +l.lat.toFixed(5), l.eleitorado, E.bairroDoLocal.get(l.id) ?? '']),
   }));
@@ -389,10 +406,14 @@ function desenharZonas(uf, lista) {
   const topoUf = JSON.parse(readFileSync(`public/geo/uf/${uf}.json`, 'utf8'));
   const muniFc = feature(topoUf, topoUf.objects.municipios);
 
-  // zonas desenhadas à mão (ADR 0013, ex.: DF a partir de DF.svg): usa o desenho e só recorta por cidade
+  // zonas desenhadas à mão (ADR 0013, ex.: DF a partir de DF.svg): usa o desenho e só recorta por cidade.
+  // Em outro ano, só se as zonas forem as mesmas do desenho.
   const fixo = `data/zonas/${uf}.geojson`;
-  if (existsSync(fixo)) {
-    const zonasFc = JSON.parse(readFileSync(fixo, 'utf8'));
+  const zonasFixas = existsSync(fixo) ? JSON.parse(readFileSync(fixo, 'utf8')) : null;
+  const mesmasZonas = zonasFixas && [...new Set(lista.map((l) => String(l.zona)))].sort().join() === zonasFixas.features.map((z) => String(z.id)).sort().join();
+  if (zonasFixas && !mesmasZonas) console.warn(`${uf}: as zonas de ${ANO} não são as do desenho em ${fixo}; usa as áreas pelos locais`);
+  if (zonasFixas && mesmasZonas) {
+    const zonasFc = zonasFixas;
     const cidadeFc = { type: 'FeatureCollection', features: [] };
     for (const z of zonasFc.features) {
       for (const m of muniFc.features) {
@@ -407,10 +428,10 @@ function desenharZonas(uf, lista) {
     topoZ.bbox = topoUf.bbox;
     const topoC = topology({ zonas: cidadeFc }, 1e5);
     topoC.bbox = topoUf.bbox;
-    mkdirSync('public/geo/zonas', { recursive: true });
-    mkdirSync('public/geo/zonas-cidade', { recursive: true });
-    writeFileSync(`public/geo/zonas/${uf}.json`, JSON.stringify(topoZ));
-    writeFileSync(`public/geo/zonas-cidade/${uf}.json`, JSON.stringify(topoC));
+    mkdirSync(GEO('zonas'), { recursive: true });
+    mkdirSync(GEO('zonas-cidade'), { recursive: true });
+    writeFileSync(`${GEO('zonas')}/${uf}.json`, JSON.stringify(topoZ));
+    writeFileSync(`${GEO('zonas-cidade')}/${uf}.json`, JSON.stringify(topoC));
     return zonasFc.features.length;
   }
   const porMunicipio = new Map();
@@ -478,8 +499,8 @@ function desenharZonas(uf, lista) {
   }
   const topoZ = topology({ zonas: zonasFc }, 1e5);
   topoZ.bbox = topoUf.bbox;
-  mkdirSync('public/geo/zonas', { recursive: true });
-  writeFileSync(`public/geo/zonas/${uf}.json`, JSON.stringify(topoZ));
+  mkdirSync(GEO('zonas'), { recursive: true });
+  writeFileSync(`${GEO('zonas')}/${uf}.json`, JSON.stringify(topoZ));
 
   // zonas dentro de cada cidade (visão da cidade): id `${ibge}-${zona}`
   const cidadeFc = { type: 'FeatureCollection', features: [] };
@@ -490,7 +511,7 @@ function desenharZonas(uf, lista) {
   }
   const topoC = topology({ zonas: cidadeFc }, 1e5);
   topoC.bbox = topoUf.bbox;
-  mkdirSync('public/geo/zonas-cidade', { recursive: true });
-  writeFileSync(`public/geo/zonas-cidade/${uf}.json`, JSON.stringify(topoC));
+  mkdirSync(GEO('zonas-cidade'), { recursive: true });
+  writeFileSync(`${GEO('zonas-cidade')}/${uf}.json`, JSON.stringify(topoC));
   return partesZona.size;
 }

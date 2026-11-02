@@ -6,8 +6,12 @@ import type { Local, Malha, Nivel, Regiao } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
+import { ELEICOES } from '@/lib/anos';
 
 interface Props {
+  ano: number;
+  /** link para o mesmo mapa em outro ano */
+  hrefAno: (ano: number) => string;
   abr: string;
   cargo: Cargo;
   regiaoSelecionada: string | null;
@@ -51,6 +55,7 @@ const DICA_CIDADE: Record<string, string> = {
 };
 const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na zona', bairros: 'no bairro', locais: 'no local' };
 
+const ANOS_NO_AR = ELEICOES.filter((e) => e.disponivel).map((e) => e.ano);
 const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
 
 function Filtros(p: Props) {
@@ -91,8 +96,19 @@ function Filtros(p: Props) {
         <Link href="/" className="marca" aria-label="Sigoli.TSE, página inicial">
           <b>Sigoli</b><span>.TSE</span>
         </Link>
-        <p className="marca-sub">Eleições 2026, município por município</p>
+        <p className="marca-sub">Eleições {p.ano}, município por município</p>
       </div>
+
+      {ANOS_NO_AR.length > 1 ? (
+        <div className="campo">
+          <span className="campo-rotulo" id="rot-ano">Eleição</span>
+          <div className="segmentado" role="group" aria-labelledby="rot-ano">
+            {ANOS_NO_AR.map((a) => (
+              <Link key={a} href={p.hrefAno(a)} aria-current={a === p.ano ? 'page' : undefined} scroll={false} prefetch={false}>{a}</Link>
+            ))}
+          </div>
+        </div>
+      ) : null}
 
       <div className="campo">
         <label htmlFor={idAbr}>Onde</label>

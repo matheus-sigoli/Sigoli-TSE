@@ -8,6 +8,7 @@ import { pct, titulo, votos } from '@/lib/formato';
 import { bancada, type Foco, type Linha, type Visao } from '@/lib/resultados';
 
 interface Props {
+  ano: number;
   cargo: Cargo;
   abr: string;
   turno: Turno;
@@ -99,7 +100,7 @@ function Painel(p: Props) {
             href={p.hrefCargo(c.slug)}
             aria-current={c.slug === cargo.slug ? 'page' : undefined}
             scroll={false}
-            onMouseEnter={() => preCarregar(urlResultadoNivel(c.slug, 1, abr === 'exterior' ? 'br' : abr, p.nivel))}
+            onMouseEnter={() => preCarregar(urlResultadoNivel(p.ano, c.slug, 1, abr === 'exterior' ? 'br' : abr, p.nivel))}
           >
             {c.curto}
           </Link>
@@ -168,7 +169,7 @@ function Painel(p: Props) {
       ) : null}
 
       {visao?.tipo === 'resumo' && visao.eleitosPorUf ? (
-        <Resumo visao={visao} cargo={cargo} turno={turno} />
+        <Resumo ano={p.ano} visao={visao} cargo={cargo} turno={turno} />
       ) : visao ? (
         <>
           {prop && porPartido ? (
@@ -226,7 +227,7 @@ function Painel(p: Props) {
       ) : null}
 
       <footer className="rodape">
-        Fonte: <a href="https://resultados.tse.jus.br" target="_blank" rel="noreferrer">TSE, resultados oficiais 2026</a>.
+        Fonte: {p.ano === 2026 ? <a href="https://resultados.tse.jus.br" target="_blank" rel="noreferrer">TSE, resultados oficiais 2026</a> : <a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noreferrer">TSE, dados abertos {p.ano}</a>}.
         Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.
       </footer>
     </aside>
@@ -300,7 +301,7 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: 
   );
 });
 
-function Resumo({ visao, cargo, turno }: { visao: Visao; cargo: Cargo; turno: Turno }) {
+function Resumo({ ano, visao, cargo, turno }: { ano: number; visao: Visao; cargo: Cargo; turno: Turno }) {
   const prop = cargo.tipo === 'prop';
   const eleitos = visao.eleitosPorUf!;
   const ordemUfs = Object.keys(eleitos).sort((a, b) => (UFS[a] ?? a).localeCompare(UFS[b] ?? b, 'pt-BR'));
@@ -323,7 +324,7 @@ function Resumo({ visao, cargo, turno }: { visao: Visao; cargo: Cargo; turno: Tu
       <h2 className="secao-titulo">{prop ? 'Eleitos por estado' : cargo.slug === 'senador' ? 'Senadores eleitos por estado' : 'Resultado por estado'}</h2>
       {ordemUfs.map((uf) => (
         <section key={uf} className="uf-bloco">
-          <h3><Link href={`/2026/${uf}/${cargo.slug}${turno === 2 ? '?t=2' : ''}`} scroll={false}>{UFS[uf]}</Link></h3>
+          <h3><Link href={`/${ano}/${uf}/${cargo.slug}${turno === 2 ? '?t=2' : ''}`} scroll={false}>{UFS[uf]}</Link></h3>
           {prop ? (
             <p className="linha-meta" style={{ margin: 0, whiteSpace: 'normal' }}>
               {bancada({ [uf]: eleitos[uf] }).map(([sg, n]) => `${sg} ${n}`).join(', ')}

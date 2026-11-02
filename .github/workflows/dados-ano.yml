@@ -1,0 +1,90 @@
+# Gera os dados de uma eleição anterior (ADR 0015) a partir dos dados abertos do TSE e grava no próprio branch.
+# Roda no push destes arquivos (ano padrão abaixo) ou pela aba Actions, depois que estiver no main.
+#
+# Passos:
+#   1. ano-tse: resultados por município (votação por município/zona, partidos, totais, vices);
+#   2. zonas-locais --ano: zonas, bairros e locais de votação (votação por seção);
+#   3. areas-ano: casa os locais do ano com as áreas do Atlas Eleitoral 2026;
+#   4. pintam --ano: quem pinta o mapa (regras de cores, ADR 0014);
+#   5. testes e commit de public/data/{ano} e public/geo/{ano}.
+name: Dados de outro ano
+on:
+  workflow_dispatch:
+    inputs:
+      ano:
+        description: Ano da eleição
+        default: '2022'
+  push:
+    paths:
+      - .github/workflows/dados-ano.yml
+      - scripts/ano-tse.mjs
+      - scripts/areas-ano.mjs
+      - scripts/lib/dadosabertos.mjs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dados-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  ANO: ${{ github.event.inputs.ano || '2022' }}
+
+jobs:
+  dados:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Dependências
+        run: npm install --no-audit --no-fund
+
+      - name: Resultados por município
+        run: node --max-old-space-size=10000 scripts/ano-tse.mjs --ano $ANO --baixar
+
+      - name: Conferência (totais nacionais e estaduais)
+        run: |
+          node -e "
+          const ler = (p) => JSON.parse(require('fs').readFileSync('public/data/$ANO/' + p, 'utf8'));
+          for (const t of [1, 2]) {
+            const a = ler('presidente/' + t + '/br.json');
+            console.log('Presidente', t, 'turno: válidos', a.total.t[3], '| comparecimento', a.total.t[1], '| brancos', a.total.t[4], '| nulos', a.total.t[5]);
+            a.cands.slice(0, 4).forEach((c, i) => console.log('  ', c.nome, c.partido, a.total.c[i], (100 * a.total.c[i] / a.total.t[3]).toFixed(2) + '%', c.situacao));
+          }
+          for (const uf of ['sp', 'mg', 'rj']) {
+            const g = ler('governador/1/' + uf + '.json');
+            console.log('Governador', uf, g.cands.slice(0, 3).map((c, i) => c.nome + ' ' + (100 * g.total.c[i] / g.total.t[3]).toFixed(2) + '% ' + c.situacao).join(' | '));
+          }
+          const d = ler('deputado-federal/1/br.json');
+          const m = new Map();
+          for (const l of Object.values(d.eleitos)) for (const e of l) if (e.eleito) m.set(e.partido, (m.get(e.partido) ?? 0) + 1);
+          console.log('Deputados federais eleitos:', [...m].sort((a, b) => b[1] - a[1]).map(([p, n]) => p + ' ' + n).join(', '), '| total', [...m.values()].reduce((a, b) => a + b, 0));
+          "
+
+      - name: Zonas, bairros e locais de votação
+        run: node --max-old-space-size=12000 scripts/zonas-locais.mjs --ano $ANO --baixar
+
+      - name: Áreas dos locais (Atlas 2026)
+        run: node scripts/areas-ano.mjs --ano $ANO
+
+      - name: Quem pinta o mapa
+        run: node scripts/pintam.mjs --ano $ANO
+
+      - name: Testes
+        run: npm test
+
+      - name: Gravar no branch
+        run: |
+          git add -A public/data/$ANO public/geo/$ANO
+          if git diff --cached --quiet; then echo "Nada mudou."; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit --author="Matheus Sigoli <dev.matheussigoli@gmail.com>" \
+            -m "Dados: eleições de $ANO (gerado pelo GitHub Actions)"
+          git pull --rebase --autostash
+          git push

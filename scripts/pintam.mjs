@@ -11,12 +11,14 @@
  * Majoritário: vencedor por candidato (c). Proporcional: vencedor por partido (p) — é o que o mapa pinta.
  * Os arquivos dos níveis são casados pelo id do candidato / sigla do partido, não pela posição.
  *
- * Uso: node scripts/pintam.mjs   (depois de scripts/zonas-locais.mjs; idempotente)
+ * Uso: node scripts/pintam.mjs [--ano 2022]   (depois de scripts/zonas-locais.mjs; idempotente)
  */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const BASE = 'public/data/2026';
+const argv = process.argv.slice(2);
+const ANO = argv.includes('--ano') ? Number(argv[argv.indexOf('--ano') + 1]) : 2026;
+const BASE = `public/data/${ANO}`;
 const NIVEIS = ['zonas', 'zonas-cidade', 'bairros', 'locais'];
 
 /** Índice do maior valor; -1 se tudo zero. Aceita vetor denso. */
