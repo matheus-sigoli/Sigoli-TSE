@@ -1,13 +1,13 @@
 name: Sondar arquivos do TSE
 on:
-  workflow_dispatch:
-    inputs:
-      caminhos: { description: 'caminhos sob odsele, separados por espaço', required: true }
+  push:
+    paths: ['.github/sondar.txt']
 jobs:
   sondar:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
-          for c in ${{ inputs.caminhos }}; do
+          for c in $(cat .github/sondar.txt); do
             echo "$c $(curl -sI https://cdn.tse.jus.br/estatistica/sead/odsele/$c | grep -iE '^(HTTP|content-length)' | tr -d '\r' | tr '\n' ' ')"
           done
