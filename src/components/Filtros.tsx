@@ -102,7 +102,7 @@ function Filtros(p: Props) {
       {ANOS_NO_AR.length > 1 ? (
         <div className="campo">
           <span className="campo-rotulo" id="rot-ano">Eleição</span>
-          <div className="segmentado" role="group" aria-labelledby="rot-ano">
+          <div className="segmentado anos" role="group" aria-labelledby="rot-ano">
             {ANOS_NO_AR.map((a) => (
               <Link key={a} href={p.hrefAno(a)} aria-current={a === p.ano ? 'page' : undefined} scroll={false} prefetch={false}>{a}</Link>
             ))}

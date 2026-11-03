@@ -148,6 +148,8 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 
 /* segmentado (turno, partidos/candidatos) */
 .segmentado { display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-1); padding: 3px; gap: 3px; }
+/* anos: três por linha, os seguintes descem (não estica para o lado) */
+.segmentado.anos { display: grid; grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); }
 .segmentado button, .segmentado a {
   text-align: center; text-decoration: none;
   border: 0; background: transparent; padding: 6px 12px; border-radius: 4px; color: var(--muted); font-weight: 500; font-size: var(--fs-2); white-space: nowrap;

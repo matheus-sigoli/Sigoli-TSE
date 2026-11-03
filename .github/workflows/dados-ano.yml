@@ -69,10 +69,6 @@ jobs:
             const g = ler('governador/1/' + uf + '.json');
             console.log('Governador', uf, g.cands.slice(0, 3).map((c, i) => c.nome + ' ' + (100 * g.total.c[i] / g.total.t[3]).toFixed(2) + '% ' + c.situacao).join(' | '));
           }
-          const d = ler('deputado-federal/1/br.json');
-          const m = new Map();
-          for (const l of Object.values(d.eleitos)) for (const e of l) if (e.eleito) m.set(e.partido, (m.get(e.partido) ?? 0) + 1);
-          console.log('Deputados federais eleitos:', [...m].sort((a, b) => b[1] - a[1]).map(([p, n]) => p + ' ' + n).join(', '), '| total', [...m.values()].reduce((a, b) => a + b, 0));
           "
 
       - name: Malha municipal do ano (municípios criados depois voltam à origem)

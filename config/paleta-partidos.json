@@ -967,6 +967,46 @@
       },
       "reservas": [],
       "ano": 2018
+    },
+    {
+      "chave": "PRONA",
+      "sigla": "PRONA",
+      "numero": 56,
+      "nome": "Partido de Reedificação da Ordem Nacional",
+      "principal": {
+        "10": "#CCE5CF",
+        "20": "#99CC9F",
+        "30": "#66B26E",
+        "40": "#33993E",
+        "50": "#007F0E",
+        "60": "#006C0C",
+        "70": "#00590A",
+        "80": "#004608",
+        "90": "#003306",
+        "100": "#001903"
+      },
+      "reservas": [],
+      "ano": 2006
+    },
+    {
+      "chave": "PAN",
+      "sigla": "PAN",
+      "numero": 26,
+      "nome": "Partido dos Aposentados da Nação",
+      "principal": {
+        "10": "#FFFFD2",
+        "20": "#FFFFA5",
+        "30": "#FFFF79",
+        "40": "#FFFF4C",
+        "50": "#FFFF1F",
+        "60": "#D9D91A",
+        "70": "#B3B316",
+        "80": "#8C8C11",
+        "90": "#66660C",
+        "100": "#333306"
+      },
+      "reservas": [],
+      "ano": 2006
     }
   ],
   "neutro": {

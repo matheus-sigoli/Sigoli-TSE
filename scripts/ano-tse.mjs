@@ -19,6 +19,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { CARGOS, ehEleito, montarArquivo, montarResumoBrasil, votoValido } from './lib/nucleo.mjs';
 import { CDN, baixar, lerCsvDoZip, num, pad5, texto } from './lib/dadosabertos.mjs';
+import { normalizar } from './lib/texto.mjs';
 
 const argv = process.argv.slice(2);
 const ANO = Number(argv[argv.indexOf('--ano') + 1]);
@@ -61,6 +62,13 @@ const mun2026 = JSON.parse(readFileSync('public/data/2026/municipios.json', 'utf
 const ibgeDe = new Map(mun2026.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m.ibge]));
 const paises = new Map(readFileSync('data/exterior/cidades-pais.csv', 'utf8').split(/\r?\n/).slice(1).filter(Boolean)
   .map((l) => l.split(';')).map(([tse, , iso, pais, n]) => [pad5(tse), { pais: iso, paisNum: n, nomePais: pais }]));
+// 2006: o exterior vem por país (o "município" é o próprio país): casa pelo nome do país da tabela
+const PAIS_APELIDO = {
+  INGLATERRA: 'REINO UNIDO', COREIA: 'COREIA DO SUL', CHECOSLOVAQUIA: 'TCHEQUIA', 'EMIRADOS ARABES': 'EMIRADOS ARABES UNIDOS',
+  'HONG KONG': 'CHINA', 'GUIANA FRANCESA': 'FRANCA', CINGAPURA: 'SINGAPURA', KENIA: 'QUENIA', IUGOSLAVIA: 'SERVIA', HOLANDA: 'PAISES BAIXOS',
+};
+const paisPorNome = new Map([...paises.values()].map((p) => [normalizar(p.nomePais), p]));
+const paisDoNome = (nome) => { const n = normalizar(nome); return paisPorNome.get(PAIS_APELIDO[n] ?? n); };
 const cidadesExterior = new Map();
 /**
  * Chave do município nos arquivos: IBGE no Brasil, código TSE no exterior. Voto em trânsito (2010: urnas nas
@@ -216,7 +224,7 @@ const gravar = (rel, obj) => {
 
 // municipios.json: os do Brasil (mesmos de 2026) + as cidades do exterior desta eleição
 const exterior = [...cidadesExterior].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')).map(([tse, nome]) => {
-  const p = paises.get(tse);
+  const p = paises.get(tse) ?? paisDoNome(nome);
   if (!p) console.warn(`cidade do exterior sem país em data/exterior/cidades-pais.csv: ${tse} ${nome}`);
   return { tse, ibge: '', nome, uf: 'zz', ...(p ?? {}) };
 });
