@@ -63,3 +63,7 @@ não existe mais para 2022 (404).
 - Nazária (PI), instalada em 2009, volta para Teresina no mapa de 2006.
 - O exterior de 2006 vem por país (o "município" é o país): casado pelo nome do país da tabela de cidades.
 - Branches de dados (`ano-*`, `pontos-*`) não geram deployment na Vercel (`git.deploymentEnabled` no vercel.json).
+- 2006 não tem cadastro de locais no TSE (`eleitorado_local_votacao` começa em 2010). As seções, o local de cada seção
+  (NR_LOCAL_VOTACAO) e os aptos vêm do detalhe da votação por seção; o nome, o bairro e o ponto vêm do local com o
+  mesmo código no cadastro mais próximo (2010, depois 2014…). Local sem código correspondente fica "LOCAL n (ZONA z)",
+  com o ponto no centro da zona (aproximado).

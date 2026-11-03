@@ -160,10 +160,13 @@ const pad5 = (s) => String(num(s)).padStart(5, '0');
 const municipios = JSON.parse(readFileSync(join(DADOS, 'municipios.json'), 'utf8'));
 const ibgeDe = new Map(municipios.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m.ibge]));
 
-const zipLocais = join(CACHE, `eleitorado_local_votacao_${ANO}.zip`);
+// 2006: o TSE não publica o cadastro de locais (eleitorado_local_votacao começa em 2010); as seções e os
+// locais vêm do detalhe da votação por seção (QT_APTOS, NR_LOCAL_VOTACAO) e o nome/ponto do mesmo código em 2010+
+const SEM_CADASTRO = ANO < 2010;
+const zipLocais = SEM_CADASTRO ? join(CACHE, `detalhe_votacao_secao_${ANO}.zip`) : join(CACHE, `eleitorado_local_votacao_${ANO}.zip`);
 const zipVotos = (UF) => join(CACHE, `votacao_secao_${ANO}_${UF}.zip`);
 if (argv.includes('--baixar')) {
-  await baixar(`${CDN}/eleitorado_locais_votacao/eleitorado_local_votacao_${ANO}.zip`, zipLocais);
+  await baixar(SEM_CADASTRO ? `${CDN}/detalhe_votacao_secao/detalhe_votacao_secao_${ANO}.zip` : `${CDN}/eleitorado_locais_votacao/eleitorado_local_votacao_${ANO}.zip`, zipLocais);
   // BR = Presidente (todas as UFs); cada UF = cargos estaduais
   for (const UF of ['BR', ...UFS.map((u) => u.toUpperCase())]) await baixar(`${CDN}/votacao_secao/votacao_secao_${ANO}_${UF}.zip`, zipVotos(UF));
 }
@@ -271,7 +274,52 @@ function lerLocal(E, f, c) {
   }
   if (turno === 1) l.eleitorado += num(f[c.QT_ELEITOR_SECAO]);
 }
-if (ANO === 2026) {
+/** 2006: uma linha por seção e cargo; o Governador (todas as UFs têm) dá a seção, o local e os aptos. */
+function lerSecaoSemCadastro(E, f, c) {
+  if (!ordinaria(f[c.DT_ELEICAO]) || num(f[c.CD_CARGO]) !== 3) return;
+  const turno = num(f[c.NR_TURNO]);
+  const mun = pad5(f[c.CD_MUNICIPIO]);
+  const zona = num(f[c.NR_ZONA]);
+  const secao = num(f[c.NR_SECAO]);
+  const nr = num(f[c.NR_LOCAL_VOTACAO]);
+  const id = `${mun}-${zona}-${nr}`;
+  const chave = `${turno}|${mun}-${zona}-${secao}`;
+  E.secaoLocal.set(chave, id);
+  E.eleitoradoSecao.set(chave, num(f[c.QT_APTOS]));
+  // 2º turno de Governador só em 10 UFs: as outras seções do 2º turno (Presidente) repetem o 1º
+  if (turno === 1) E.secaoLocal.set(`2|${mun}-${zona}-${secao}`, id), E.eleitoradoSecao.set(`2|${mun}-${zona}-${secao}`, num(f[c.QT_APTOS]));
+  let l = E.locais.get(id);
+  if (!l) {
+    l = { id, mun, ibge: ibgeDe.get(mun) ?? '', zona, nr, nome: '', bairro: '', lon: null, lat: null, eleitorado: 0 };
+    E.locais.set(id, l);
+  }
+  if (turno === 1) l.eleitorado += num(f[c.QT_APTOS]);
+}
+if (SEM_CADASTRO) {
+  await lerCsvDoZip(zipLocais, (n) => /_[A-Z]{2}\.csv$/i.test(n) && !/_(BR|ZZ|VT)\.csv$/i.test(n), (f, c) => {
+    const E = estados.get(String(f[c.SG_UF]).toLowerCase());
+    if (E) lerSecaoSemCadastro(E, f, c);
+  });
+  // nome, bairro e ponto: o local com o mesmo código no cadastro mais próximo (2010, depois 2014…)
+  for (const E of estados.values()) {
+    const conta = { codigo: 0, sem: 0 };
+    for (const y of [2010, 2014, 2018, 2022, 2026]) {
+      const p = y === 2026 ? `public/geo/locais/${E.uf}.json` : `public/geo/${y}/locais/${E.uf}.json`;
+      if (!existsSync(p)) continue;
+      const { campos, l: linhas } = JSON.parse(readFileSync(p, 'utf8'));
+      const ci = Object.fromEntries(campos.map((n, i) => [n, i]));
+      for (const r of linhas) {
+        const l = E.locais.get(String(r[ci.id]));
+        if (!l || l.nome) continue;
+        l.nome = r[ci.nome]; l.bairro = r[ci.bairro] ?? '';
+        if (r[ci.lon] !== null && r[ci.lat] !== null) { l.lon = r[ci.lon]; l.lat = r[ci.lat]; l.aprox = ci.aprox !== undefined && r[ci.aprox] === 1; }
+        conta.codigo++;
+      }
+    }
+    for (const l of E.locais.values()) if (!l.nome) { l.nome = `LOCAL ${l.nr} (ZONA ${l.zona})`; conta.sem++; }
+    console.log(`${E.uf}: ${E.locais.size} locais de ${ANO}; ${conta.codigo} com nome e ponto do mesmo código em outro ano, ${conta.sem} sem`);
+  }
+} else if (ANO === 2026) {
   // 2026: um CSV por UF
   for (const E of estados.values()) await lerCsvDoZip(zipLocais, (n) => n.endsWith(`_${E.uf.toUpperCase()}.csv`), (f, c) => lerLocal(E, f, c));
 } else {
