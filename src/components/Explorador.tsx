@@ -372,7 +372,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       const regs = abr === 'exterior' ? (indiceMunicipios.porPais.get(id)?.cidades ?? []).map((c) => arq.mun[c]).filter(Boolean) : [arq.mun[id]].filter(Boolean);
       if (!regs.length) return { titulo: nome, linha: 'Sem votos neste cargo' };
-      const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: locais de votação' : '';
+      const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: zonas e locais' : '';
       return { titulo: nome, linha: linhaVencedor(arq, regs) + dica };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps

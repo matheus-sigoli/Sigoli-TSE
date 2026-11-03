@@ -117,8 +117,8 @@ export type NivelArquivo = 'municipios' | 'zonas' | 'zonas-cidade' | 'bairros' |
 
 export const lerNivel = (s: string | null, abr: string, cidade: boolean): Nivel => {
   if (abr === 'br' || abr === 'exterior') return 'municipios';
-  // visão da cidade: só locais de votação; zonas só no DF (desenho do DF.svg/ZMBRA). Bairros saíram (ADR 0018)
-  if (cidade) return abr === 'df' && s !== 'locais' ? 'zonas' : 'locais';
+  // visão da cidade: zonas ou locais de votação (bairros saíram, ADR 0018)
+  if (cidade) return s === 'locais' ? 'locais' : 'zonas';
   return s === 'zonas' ? 'zonas' : 'municipios';
 };
 
