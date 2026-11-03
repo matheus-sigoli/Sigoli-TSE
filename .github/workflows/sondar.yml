@@ -1,13 +1,10 @@
 name: Sondar arquivos do TSE
 on:
   push:
-    paths: ['.github/sondar.txt']
+    paths: ['.github/sondar.sh']
 jobs:
   sondar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          for c in $(cat .github/sondar.txt); do
-            echo "$c $(curl -sI https://cdn.tse.jus.br/estatistica/sead/odsele/$c | grep -iE '^(HTTP|content-length)' | tr -d '\r' | tr '\n' ' ')"
-          done
+      - run: bash .github/sondar.sh
