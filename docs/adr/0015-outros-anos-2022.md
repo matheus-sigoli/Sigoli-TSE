@@ -48,3 +48,12 @@ não existe mais para 2022 (404).
 - **Eleições suplementares**: os arquivos de um ano trazem também as suplementares do mesmo mandato (no de 2014,
   governador do AM em 2017 e do TO em 2018; no de 2018, senador do MT em 2020). `ano-tse.mjs` e `zonas-locais.mjs`
   ficam só com a eleição geral de outubro do ano (DT_ELEICAO); 2014 e 2018 foram refeitos.
+
+## Adendo — 2010 (02/11/2026)
+- Municípios instalados em 2013 voltam à origem no mapa de 2010 (`scripts/lib/fusoes.mjs`): Pescaria Brava → Laguna,
+  Balneário Rincão → Içara (SC), Mojuí dos Campos → Santarém (PA), Pinto Bandeira → Bento Gonçalves (RS),
+  Paraíso das Águas → Costa Rica (MS). As áreas do Atlas do município novo entram na cidade de origem (`f` na
+  correspondência das áreas).
+- Particularidades do arquivo de 2010: eleito pela média aparece como "MÉDIA"; Presidente sem situação (calculada
+  pelo resultado nacional); voto em trânsito nas capitais (SG_UF "VT") entra no total nacional, sem lugar no mapa.
+- Conferência: Dilma 47.651.434 / 55.752.529 e Serra 33.132.283 / 43.711.388 (1º/2º turno), iguais ao TSE.

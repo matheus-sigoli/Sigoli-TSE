@@ -30,5 +30,8 @@ export const ELEICOES: Eleicao[] = [
     ano: 2014, titulo: 'Eleições Gerais 2014', datas: '5 e 26 de outubro',
     cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2014/br/presidente?t=2',
   },
-  { ano: 2010, titulo: 'Eleições Gerais 2010', datas: '3 e 31 de outubro', cargos: 'Presidente, Governador, Senador, Deputados', disponivel: false },
+  {
+    ano: 2010, titulo: 'Eleições Gerais 2010', datas: '3 e 31 de outubro',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2010/br/presidente?t=2',
+  },
 ];
