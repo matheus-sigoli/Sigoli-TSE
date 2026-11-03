@@ -1,0 +1,33 @@
+# Refaz só a correspondência das áreas do Atlas com os locais de um ano (scripts/areas-ano.mjs), sem baixar nada.
+name: Áreas de outro ano
+on:
+  workflow_dispatch:
+    inputs:
+      ano:
+        description: Ano da eleição
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: dados-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  areas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: node scripts/areas-ano.mjs --ano ${{ github.event.inputs.ano }}
+      - name: Gravar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/geo/${{ github.event.inputs.ano }}/locais-areas
+          if git diff --cached --quiet; then echo "Nada mudou."; exit 0; fi
+          git commit --author="Matheus Sigoli <dev.matheussigoli@gmail.com>" -m "Áreas dos locais de ${{ github.event.inputs.ano }} (gerado pelo GitHub Actions) [skip ci]"
+          git pull --rebase
+          git push

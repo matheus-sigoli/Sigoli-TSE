@@ -183,7 +183,8 @@ export interface MalhaCidade { malha: Malha; fundo: GeoJSON.FeatureCollection; p
 const VAZIA: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
 /** Áreas de 2026 com os ids do local de outro ano; áreas que foram para o mesmo local viram uma só feição. */
-type TrocaAreas = { a: Record<string, string>; i?: Record<string, string[]> };
+/** a: área de 2026 → local do ano; i: locais incluídos; f: cidades criadas depois cujas áreas entram nesta */
+type TrocaAreas = { a: Record<string, string>; i?: Record<string, string[]>; f?: string[] };
 function trocarIds(fc: GeoJSON.FeatureCollection, troca: TrocaAreas): GeoJSON.FeatureCollection {
   const porId = new Map<string, GeoJSON.Position[][][]>();
   for (const f of fc.features) {
@@ -238,6 +239,10 @@ function buscarMalhaCidade(ano: number, uf: string, ibge: string, nivel: 'zonas'
           : (await buscar<Record<string, TrocaAreas>>(`${geoDoAno(ano, 'locais-areas')}/${uf}.json`).catch(() => ({} as Record<string, TrocaAreas>)))[ibge];
         if (ibge in comAreas && (ano === 2026 || troca)) {
           areas = toGeoJSON(await buscar<Topology>(`/geo/locais-areas/${uf}/${ibge}.json`), 'locais');
+          for (const cod of troca?.f ?? []) {
+            const anexa = toGeoJSON(await buscar<Topology>(`/geo/locais-areas/${uf}/${cod}.json`), 'locais');
+            areas = { type: 'FeatureCollection', features: [...areas.features, ...anexa.features] };
+          }
           if (troca) areas = trocarIds(areas, troca);
           const bbox = caixaGeo({ type: 'FeatureCollection', features: [...cidade, ...areas.features] });
           return { malha: { municipios: areas, linhas, bbox }, fundo, pontos };

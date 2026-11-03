@@ -13,18 +13,13 @@
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { mergeArcs } from 'topojson-client';
+import { fusoesDoAno } from './lib/fusoes.mjs';
 
 const argv = process.argv.slice(2);
 const ANO = Number(argv[argv.indexOf('--ano') + 1]);
 if (!argv.includes('--ano') || !ANO) throw new Error('uso: node scripts/malha-ano.mjs --ano 2022');
 
-/** município criado depois → município de origem (IBGE), por ano em que ainda não existia */
-const FUSOES = [
-  // Boa Esperança do Norte (MT) foi desmembrado de Nova Ubiratã; instalado em 2025, vota separado a partir de 2026
-  { uf: 'mt', novo: '5101837', origem: '5106240', ateAno: 2025 },
-];
-
-const fusoes = FUSOES.filter((f) => ANO <= f.ateAno);
+const fusoes = fusoesDoAno(ANO);
 const trocados = [];
 function fundir(caminho, destino, objeto) {
   const topo = JSON.parse(readFileSync(caminho, 'utf8'));

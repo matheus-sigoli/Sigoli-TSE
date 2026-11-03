@@ -29,6 +29,7 @@ export const UFS_2T_GOVERNADOR: Record<number, string[]> = {
   2022: ['al', 'am', 'ba', 'es', 'ms', 'pb', 'pe', 'ro', 'rs', 'sc', 'se', 'sp'],
   2018: ['am', 'ap', 'df', 'mg', 'ms', 'pa', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp'],
   2014: ['ac', 'am', 'ap', 'ce', 'df', 'go', 'ms', 'pa', 'pb', 'rj', 'rn', 'ro', 'rr', 'rs'],
+  2010: ['al', 'ap', 'df', 'go', 'pa', 'pb', 'pi', 'ro', 'rr'],
 };
 
 export const UFS: Record<string, string> = {

@@ -22,6 +22,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { feature } from 'topojson-client';
 import { normalizar } from './lib/texto.mjs';
+import { fusoesDoAno } from './lib/fusoes.mjs';
 
 const argv = process.argv.slice(2);
 const opt = (k) => { const i = argv.indexOf(`--${k}`); return i >= 0 ? argv[i + 1] : null; };
@@ -67,11 +68,17 @@ for (const uf of UFS) {
   }
   const indice = {};
   const c = { areas: 0, codigo: 0, nome: 0, ponto: 0, inclui: 0 };
+  // município criado depois do ano: as áreas dele vão para a cidade de origem (o site lê os dois arquivos)
+  const anexas = new Map();
+  for (const f of fusoesDoAno(ANO).filter((x) => x.uf === uf && x.novo in cidades)) anexas.set(f.origem, [...(anexas.get(f.origem) ?? []), f.novo]);
   for (const ibge of Object.keys(cidades)) {
     const locais = porCidade.get(ibge) ?? [];
     if (!locais.length) continue;
-    const topo = JSON.parse(readFileSync(join(dir26, `${ibge}.json`), 'utf8'));
-    const areas = feature(topo, topo.objects.locais).features.map((f) => {
+    const feicoes = [ibge, ...(anexas.get(ibge) ?? [])].flatMap((cod) => {
+      const topo = JSON.parse(readFileSync(join(dir26, `${cod}.json`), 'utf8'));
+      return feature(topo, topo.objects.locais).features;
+    });
+    const areas = feicoes.map((f) => {
       const polys = poligonos(f.geometry);
       return { id: String(f.id), polys, centro: centro(polys) };
     });
@@ -110,7 +117,7 @@ for (const uf of UFS) {
       (inclui[a.id] ??= []).push(l.id);
       c.inclui++;
     }
-    indice[ibge] = { a: a2l, ...(Object.keys(inclui).length ? { i: inclui } : {}) };
+    indice[ibge] = { a: a2l, ...(Object.keys(inclui).length ? { i: inclui } : {}), ...(anexas.has(ibge) ? { f: anexas.get(ibge) } : {}) };
     c.areas += alvos.length;
   }
   mkdirSync(`public/geo/${ANO}/locais-areas`, { recursive: true });
