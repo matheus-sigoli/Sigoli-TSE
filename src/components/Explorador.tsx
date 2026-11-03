@@ -133,8 +133,16 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const resultadoEstado = useResultado(ano, cargoSlug, turno, abr, 'municipios');
   const malhaUf = useMalha(ano, abr, !cid && nivel === 'zonas' ? 'zonas' : 'municipios');
   const malhaCidade = useMalhaCidade(ano, cid ? abr : null, cid, cid ? (nivel as 'zonas' | 'bairros' | 'locais') : 'bairros');
-  const malha = cid ? { dados: malhaCidade.dados?.malha ?? null, carregando: malhaCidade.carregando } : malhaUf;
-  const bairros = useBairros(ano, cid ? abr : null);
+  // mapa dos municípios de um estado: sem a linha externa (contorno do estado)
+  const malhaEstado = useMemo(
+    () => (malhaUf.dados && abr !== 'br' && abr !== 'exterior' && nivel === 'municipios'
+      ? { ...malhaUf.dados, linhas: { type: 'FeatureCollection' as const, features: [] } }
+      : malhaUf.dados),
+    [malhaUf.dados, abr, nivel],
+  );
+  const malha = cid ? { dados: malhaCidade.dados?.malha ?? null, carregando: malhaCidade.carregando } : { dados: malhaEstado, carregando: malhaUf.carregando };
+  // bairros saíram do site (ADR 0018): sem cadastro, os nomes vêm do cadastro dos locais
+  const bairros = useBairros(ano, null);
   const locais = useLocais(ano, nivel === 'zonas' || cid ? abr : null);
   // zona → municípios que ela cobre (para os nomes)
   const municipiosDaZona = useMemo(() => {
@@ -308,7 +316,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
 
   // ---- interações do mapa
   const abrirCidade = useCallback(
-    (ibge: string) => atualizarBusca({ cid: ibge, nivel: 'zonas', mun: null, reg: null, foco: null }),
+    (ibge: string) => atualizarBusca({ cid: ibge, nivel: null, mun: null, reg: null, foco: null }),
     [atualizarBusca],
   );
 
@@ -364,7 +372,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       const regs = abr === 'exterior' ? (indiceMunicipios.porPais.get(id)?.cidades ?? []).map((c) => arq.mun[c]).filter(Boolean) : [arq.mun[id]].filter(Boolean);
       if (!regs.length) return { titulo: nome, linha: 'Sem votos neste cargo' };
-      const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: zonas, bairros e locais' : '';
+      const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: locais de votação' : '';
       return { titulo: nome, linha: linhaVencedor(arq, regs) + dica };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps

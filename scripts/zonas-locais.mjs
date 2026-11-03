@@ -67,6 +67,9 @@ const ZMBRA = (() => {
 /** só a eleição geral de outubro do ano (os arquivos trazem também as suplementares do mesmo mandato) */
 const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
 
+/** UFs que são uma cidade só: a visão da cidade mostra as zonas (DF). Nas outras, só locais (ADR 0018). */
+const UF_UMA_CIDADE = new Set(['df']);
+
 // código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)
 function cargoDe(cdCargo, turno) {
   // deputados ficam de fora (ADR 0017)
@@ -326,7 +329,9 @@ for (const E of estados.values()) {
     writeFileSync(p, JSON.stringify(obj));
   };
   for (const [chaveCargo, a] of E.acc) {
-    for (const [nivel, chaveAcc] of [['zonas', 'zonas'], ['zonas-cidade', 'zonasCidade'], ['bairros', 'bairros'], ['locais', 'locais']]) {
+    // ADR 0018: sem bairros; zonas por cidade só onde a UF é uma cidade só (DF)
+    const niveis = [['zonas', 'zonas'], ...(UF_UMA_CIDADE.has(uf) ? [['zonas-cidade', 'zonasCidade']] : []), ['locais', 'locais']];
+    for (const [nivel, chaveAcc] of niveis) {
       const mun = {};
       const tot = { t: [0, 0, 0, 0, 0, 0], c: new Array(a.b.cands.length).fill(0), p: new Array(a.b.partidos.length).fill(0) };
       for (const [id, r] of a[chaveAcc]) {
@@ -357,10 +362,7 @@ for (const E of estados.values()) {
 
   // cadastro dos bairros: origem 'i' (polígono do IBGE) ou 't' (nome do TSE, sem área), centro ponderado pelo eleitorado
   const bairros = [...E.bairros.values()].sort((x, y) => x.id.localeCompare(y.id));
-  gravar(`bairros/${uf}.json`, {
-    campos: ['id', 'ibge', 'nome', 'origem', 'lon', 'lat', 'eleitorado', 'locais'],
-    b: bairros.map((b) => [b.id, b.ibge, b.nome, b.origem, b.w ? +(b.sx / b.w).toFixed(5) : null, b.w ? +(b.sy / b.w).toFixed(5) : null, b.eleitorado, b.locais]),
-  });
+  // (o cadastro dos bairros, public/data/{ano}/bairros, saiu do site — ADR 0018)
 
   // áreas das zonas
   const nZonas = desenharZonas(uf, lista);
@@ -489,7 +491,7 @@ function desenharZonas(uf, lista) {
     mkdirSync(GEO('zonas'), { recursive: true });
     mkdirSync(GEO('zonas-cidade'), { recursive: true });
     writeFileSync(`${GEO('zonas')}/${uf}.json`, JSON.stringify(topoZ));
-    writeFileSync(`${GEO('zonas-cidade')}/${uf}.json`, JSON.stringify(topoC));
+    if (UF_UMA_CIDADE.has(uf)) writeFileSync(`${GEO('zonas-cidade')}/${uf}.json`, JSON.stringify(topoC));
     return zonasFc.features.length;
   }
   const porMunicipio = new Map();
@@ -582,7 +584,7 @@ function desenharZonas(uf, lista) {
   const topoC = topology({ zonas: cidadeFc }, 1e5);
   topoC.bbox = topoUf.bbox;
   mkdirSync(GEO('zonas-cidade'), { recursive: true });
-  writeFileSync(`${GEO('zonas-cidade')}/${uf}.json`, JSON.stringify(topoC));
+  if (UF_UMA_CIDADE.has(uf)) writeFileSync(`${GEO('zonas-cidade')}/${uf}.json`, JSON.stringify(topoC));
   if (usouZmbra) console.log(`${uf}: ${usouZmbra} cidades com as zonas desenhadas de ${ANO}`);
   return partesZona.size;
 }

@@ -43,9 +43,9 @@ const NIVEIS_ESTADO: { n: Nivel; rotulo: string }[] = [
   { n: 'municipios', rotulo: 'Municípios' },
   { n: 'zonas', rotulo: 'Zonas' },
 ];
+// visão da cidade: locais de votação; zonas só no DF (ADR 0018)
 const NIVEIS_CIDADE: { n: Nivel; rotulo: string }[] = [
   { n: 'zonas', rotulo: 'Zonas' },
-  { n: 'bairros', rotulo: 'Bairros' },
   { n: 'locais', rotulo: 'Locais' },
 ];
 const DICA_CIDADE: Record<string, string> = {
@@ -130,12 +130,12 @@ function Filtros(p: Props) {
           ) : null}
           <span className="campo-rotulo" id="rot-nivel">Ver por</span>
           <div className="segmentado" role="group" aria-labelledby="rot-nivel">
-            {(p.cidade ? NIVEIS_CIDADE : NIVEIS_ESTADO).map(({ n, rotulo }) => (
+            {(p.cidade ? NIVEIS_CIDADE.filter((x) => x.n === 'locais' || p.abr === 'df') : NIVEIS_ESTADO).map(({ n, rotulo }) => (
               <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
             ))}
           </div>
           <p className="marca-sub" style={{ marginTop: 6 }}>
-            {p.cidade ? DICA_CIDADE[p.nivel] : 'Dois cliques num município abrem as zonas, os bairros e os locais de votação dele.'}
+            {p.cidade ? DICA_CIDADE[p.nivel] : 'Dois cliques num município abrem os locais de votação dele.'}
             {' '}Shift + clique soma várias áreas.
           </p>
         </div>
