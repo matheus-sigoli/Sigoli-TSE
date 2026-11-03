@@ -50,6 +50,8 @@ const CARGO = Object.fromEntries(CARGOS.map((c) => [c.slug, c]));
 const SITUACAO = {
   'ELEITO': 'Eleito', 'ELEITO POR QP': 'Eleito por QP', 'ELEITO POR MÉDIA': 'Eleito por média', 'ELEITO POR MEDIA': 'Eleito por média',
   '2º TURNO': '2º turno', 'NÃO ELEITO': 'Não eleito', 'NAO ELEITO': 'Não eleito', 'SUPLENTE': 'Suplente',
+  // 2010: eleito pela média aparece só como "MÉDIA"
+  'MÉDIA': 'Eleito por média', 'MEDIA': 'Eleito por média',
 };
 const situacao = (s) => SITUACAO[texto(s).toUpperCase()] ?? (texto(s) ? texto(s)[0] + texto(s).slice(1).toLowerCase() : '');
 
@@ -59,9 +61,13 @@ const ibgeDe = new Map(mun2026.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m
 const paises = new Map(readFileSync('data/exterior/cidades-pais.csv', 'utf8').split(/\r?\n/).slice(1).filter(Boolean)
   .map((l) => l.split(';')).map(([tse, , iso, pais, n]) => [pad5(tse), { pais: iso, paisNum: n, nomePais: pais }]));
 const cidadesExterior = new Map();
-/** chave do município nos arquivos: IBGE no Brasil, código TSE no exterior */
+/**
+ * Chave do município nos arquivos: IBGE no Brasil, código TSE no exterior. Voto em trânsito (2010: urnas nas
+ * capitais, SG_UF "VT"): conta no total nacional de Presidente, mas não tem lugar no mapa.
+ */
 const chaveMun = (uf, cdTse, nome) => {
   const tse = pad5(cdTse);
+  if (uf === 'vt') return `vt${tse}`;
   if (uf !== 'zz') return ibgeDe.get(tse) ?? null;
   if (!cidadesExterior.has(tse)) cidadesExterior.set(tse, nome);
   return tse;
@@ -226,13 +232,30 @@ for (const slug of [...new Set(ordem.map((g) => g.slug))]) {
       // um grupo só (UF "BR" na entrada, separada aqui por SG_UF): junta o Brasil e o exterior
       const brasil = { slug, turno, uf: 'br', cands: new Map(), partidos: new Map(), mun: new Map(), atualizado: gs[0].atualizado };
       const zz = gs.find((g) => g.uf === 'zz');
+      const vt = gs.find((g) => g.uf === 'vt');
       for (const g of gs) {
         for (const [id, k] of g.cands) { const x = brasil.cands.get(id); if (x) x.votos += k.votos; else brasil.cands.set(id, { ...k }); }
         for (const [sg, p] of g.partidos) { const x = brasil.partidos.get(sg); if (x) x.votos += p.votos; else brasil.partidos.set(sg, { ...p }); }
-        if (g !== zz) for (const [ch, m] of g.mun) brasil.mun.set(ch, m);
+        if (g !== zz && g !== vt) for (const [ch, m] of g.mun) brasil.mun.set(ch, m);
       }
-      // total nacional com o exterior (como o TSE); o mapa do Brasil só tem os municípios
+      // sem situação no arquivo (2010): calcula pelo resultado nacional — 1º turno: maioria absoluta ou os dois
+      // primeiros vão ao 2º turno; 2º turno: o mais votado é eleito
+      const lista = [...brasil.cands.values()].sort((a, b) => b.votos - a.votos);
+      if (lista.every((k) => !k.situacao)) {
+        const validos = lista.filter((k) => !k.anulado).reduce((t, k) => t + k.votos, 0);
+        lista.forEach((k, i) => {
+          k.situacao = turno === 2 ? (i === 0 ? 'Eleito' : 'Não eleito')
+            : lista[0].votos > validos / 2 ? (i === 0 ? 'Eleito' : 'Não eleito') : i < 2 ? '2º turno' : 'Não eleito';
+          k.eleito = k.situacao === 'Eleito';
+        });
+        for (const g of gs) for (const [id, k] of g.cands) Object.assign(k, { situacao: brasil.cands.get(id).situacao, eleito: brasil.cands.get(id).eleito });
+      }
+      // total nacional com o exterior e o voto em trânsito (como o TSE); o mapa do Brasil só tem os municípios
       const nBr = normalizado(brasil);
+      if (vt) {
+        const nVt = normalizado(vt);
+        for (const k of Object.keys(nBr.total.totais)) nBr.total.totais[k] += nVt.total.totais[k];
+      }
       if (zz) {
         const nZz = normalizado(zz);
         for (const k of Object.keys(nBr.total.totais)) nBr.total.totais[k] += nZz.total.totais[k];
