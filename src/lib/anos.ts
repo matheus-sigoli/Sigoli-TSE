@@ -36,6 +36,6 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 2006, titulo: 'Eleições Gerais 2006', datas: '1º e 29 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: false,
+    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/2006/br/presidente?t=2',
   },
 ];
