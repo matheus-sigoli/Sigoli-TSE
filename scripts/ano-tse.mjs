@@ -44,7 +44,8 @@ const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim(
 const porUf = (n) => /_[A-Z]{2}\.csv$/i.test(n);
 
 // código TSE do cargo → slug (8 = deputado distrital, no DF)
-const SLUG = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' };
+// deputados (6, 7, 8) ficam de fora: saíram do site para caber no armazenamento da Vercel (ADR 0017)
+const SLUG = { 1: 'presidente', 3: 'governador', 5: 'senador' };
 const CARGO = Object.fromEntries(CARGOS.map((c) => [c.slug, c]));
 
 const SITUACAO = {

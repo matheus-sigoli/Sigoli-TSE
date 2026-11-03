@@ -69,7 +69,8 @@ const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim(
 
 // código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)
 function cargoDe(cdCargo, turno) {
-  const c = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
+  // deputados ficam de fora (ADR 0017)
+  const c = { 1: 'presidente', 3: 'governador', 5: 'senador' }[cdCargo];
   return c && (turno === 1 || turno === 2) ? [c, turno] : null;
 }
 

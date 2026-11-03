@@ -17,8 +17,7 @@ export const CARGOS: Cargo[] = [
   { slug: 'presidente', nome: 'Presidente', curto: 'Presidente', tipo: 'maj', turnos: [1, 2], federal: true },
   { slug: 'governador', nome: 'Governador', curto: 'Governador', tipo: 'maj', turnos: [1, 2], federal: false },
   { slug: 'senador', nome: 'Senador', curto: 'Senador', tipo: 'maj', turnos: [1], federal: false },
-  { slug: 'deputado-federal', nome: 'Deputado Federal', curto: 'Dep. Federal', tipo: 'prop', turnos: [1], federal: false },
-  { slug: 'deputado-estadual', nome: 'Deputado Estadual', curto: 'Dep. Estadual', tipo: 'prop', turnos: [1], federal: false },
+  // Deputados (federal e estadual) saíram do mapa em 02/11/2026 para caber no limite de armazenamento da Vercel (ADR 0017)
 ];
 
 export const cargoPorSlug = (s: string) => CARGOS.find((c) => c.slug === s);

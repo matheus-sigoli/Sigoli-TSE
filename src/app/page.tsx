@@ -12,7 +12,7 @@ import './inicio.css';
 export const metadata: Metadata = {
   title: { absolute: 'Sigoli.TSE — Eleições 2026, município por município' },
   description:
-    'Entenda como funcionam as eleições brasileiras e veja o resultado de 2026 para Presidente, Governador, Senador e Deputados em cada município, com dados oficiais do TSE.',
+    'Entenda como funcionam as eleições brasileiras e veja o resultado de 2026 para Presidente, Governador e Senador em cada município, com dados oficiais do TSE.',
 };
 
 // Lido no build (página estática): números sempre iguais aos arquivos publicados.
@@ -21,7 +21,6 @@ const ler = <T,>(rel: string): T => JSON.parse(readFileSync(join(process.cwd(), 
 function numeros() {
   const p1 = ler<ArquivoResultado>('presidente/1/br.json');
   const p2 = ler<ArquivoResultado>('presidente/2/br.json');
-  const dep = ler<ArquivoResumo>('deputado-federal/1/br.json');
   const gov = ler<ArquivoResumo>('governador/1/br.json');
   const sen = ler<ArquivoResumo>('senador/1/br.json');
 
@@ -43,7 +42,8 @@ function numeros() {
     segundo, primeiro, vencedoresMun,
     comparecimento2: p2.total.t[1] / p2.total.t[0],
     eleitorado: p2.total.t[0],
-    camara: contar(dep),
+    // composição da Câmara: resumo guardado em camara.json (os arquivos de deputado saíram do site, ADR 0017)
+    camara: ler<{ partidos: [string, number][] }>('camara.json').partidos,
     governadores1t: Object.values(gov.eleitos).filter((l) => l.some((e) => e.eleito)).length,
     ufs2t,
     senadores: contar(sen).reduce((s, [, n]) => s + n, 0),
@@ -82,6 +82,7 @@ const CARGOS = [
     regra: 'Sistema proporcional: as cadeiras vão primeiro para partidos e federações, conforme os votos de todos os seus candidatos e de legenda; depois, para os mais votados de cada lista.',
     mandato: '4 anos',
     vagas: '513 vagas, divididas entre os estados',
+    semMapa: true,
   },
   {
     slug: 'deputado-estadual',
@@ -89,6 +90,7 @@ const CARGOS = [
     regra: 'Mesmo sistema proporcional, para as Assembleias Legislativas. No DF o cargo se chama Deputado Distrital.',
     mandato: '4 anos',
     vagas: '1.059 vagas nas 27 assembleias',
+    semMapa: true,
   },
 ];
 
@@ -116,7 +118,7 @@ export default function Inicio() {
             <p className="abertura-data">Eleições gerais de 4 e 25 de outubro de 2026</p>
             <h1>O voto de cada município do Brasil, num mapa só.</h1>
             <p className="abertura-lead">
-              Resultados oficiais do TSE para Presidente, Governador, Senador e Deputados, dos {votos(n.municipios)} municípios
+              Resultados oficiais do TSE para Presidente, Governador e Senador, dos {votos(n.municipios)} municípios
               até cada zona eleitoral e bairro.
             </p>
             <div className="acoes">
@@ -192,7 +194,7 @@ export default function Inicio() {
                 <h3>{c.nome}</h3>
                 <p>{c.regra}</p>
                 <p className="cargo-meta">{c.vagas}, mandato de {c.mandato}</p>
-                <Link href={`/2026/br/${c.slug}`}>Ver no mapa</Link>
+                {'semMapa' in c ? <span className="cargo-meta">Sem mapa no site</span> : <Link href={`/2026/br/${c.slug}`}>Ver no mapa</Link>}
               </li>
             ))}
           </ol>
@@ -204,8 +206,7 @@ export default function Inicio() {
             <div>
               <h3>A cor é de quem venceu</h3>
               <p>
-                Cada partido tem uma cor fixa. Nos cargos de deputado, a cor é do partido mais votado no lugar, somando
-                candidatos e votos de legenda.
+                Cada partido tem uma cor fixa. A cor de cada lugar é a do candidato mais votado ali.
               </p>
             </div>
             <div>

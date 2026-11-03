@@ -48,6 +48,7 @@ com dados oficiais do TSE. Referência de produto: electomaps.com.br.
 | 0014 | Regras de cores pelos confrontos reais: só quem pinta o mapa, CIEDE2000, extra antes das reservas |
 | 0015 | Outros anos: 2022 pelos dados abertos do TSE, rotas e arquivos por ano, áreas do Atlas reaproveitadas |
 | 0016 | Locais sem coordenadas: ponto pelo cadastro de outros anos ou pelo centro do bairro/zona |
+| 0017 | Deputados (federal e estadual) fora do site, para caber no armazenamento da Vercel |
 
 ## Glossário
 
