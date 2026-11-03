@@ -50,5 +50,11 @@
         }
       ]
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "ano-*": false,
+      "pontos-*": false
+    }
+  }
 }

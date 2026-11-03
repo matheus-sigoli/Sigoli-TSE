@@ -5,6 +5,8 @@
 export const FUSOES = [
   // Boa Esperança do Norte (MT): desmembrado de Nova Ubiratã, instalado em 2025
   { uf: 'mt', novo: '5101837', origem: '5106240', ateAno: 2025 },
+  // Nazária (PI): criado em 1995, instalado em 2009 (primeira eleição municipal em 2008); em 2006 votava em Teresina
+  { uf: 'pi', novo: '2206720', origem: '2211001', ateAno: 2007 },
   // criados em 2013 (primeira eleição municipal em 2012): em 2010 ainda votavam na origem
   { uf: 'sc', novo: '4212650', origem: '4209409', ateAno: 2011 }, // Pescaria Brava ← Laguna
   { uf: 'sc', novo: '4220000', origem: '4207007', ateAno: 2011 }, // Balneário Rincão ← Içara
