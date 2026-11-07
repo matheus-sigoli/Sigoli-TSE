@@ -7,6 +7,11 @@ export const FUSOES = [
   { uf: 'mt', novo: '5101837', origem: '5106240', ateAno: 2025 },
   // Nazária (PI): criado em 1995, instalado em 2009 (primeira eleição municipal em 2008); em 2006 votava em Teresina
   { uf: 'pi', novo: '2206720', origem: '2211001', ateAno: 2007 },
+  // instalados em 2005 (primeira eleição municipal em 2004): em 2002 ainda votavam na origem
+  { uf: 'pi', novo: '2200954', origem: '2208007', ateAno: 2003 }, // Aroeiras do Itaim ← Picos
+  { uf: 'ms', novo: '5003900', origem: '5002605', ateAno: 2003 }, // Figueirão ← Camapuã
+  { uf: 'mt', novo: '5104526', origem: '5108006', ateAno: 2003 }, // Ipiranga do Norte ← Tapurah
+  { uf: 'mt', novo: '5104542', origem: '5108006', ateAno: 2003 }, // Itanhangá ← Tapurah
   // criados em 2013 (primeira eleição municipal em 2012): em 2010 ainda votavam na origem
   { uf: 'sc', novo: '4212650', origem: '4209409', ateAno: 2011 }, // Pescaria Brava ← Laguna
   { uf: 'sc', novo: '4220000', origem: '4207007', ateAno: 2011 }, // Balneário Rincão ← Içara
