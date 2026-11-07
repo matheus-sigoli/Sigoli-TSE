@@ -44,7 +44,7 @@ const ZOOM_MAX = 80;
 /** No celular a gaveta cobre a parte de baixo do mapa (ver --espiada no CSS). */
 const margens = () =>
   typeof window !== 'undefined' && window.innerWidth < 1100
-    ? { t: 16, r: 16, b: 300 + 16, l: 16 }
+    ? { t: 12, r: 12, b: 12, l: 12 } // o quadro já termina acima da gaveta (CSS: .mapa-canvas { bottom: --espiada })
     : { t: 24, r: 24, b: 24, l: 24 };
 
 const reduzirMovimento = () =>
