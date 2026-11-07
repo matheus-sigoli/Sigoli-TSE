@@ -77,3 +77,12 @@ não existe mais para 2022 (404).
   39.454.760 no 1º turno (oficial 39.455.233); a votação por seção soma o oficial de Lula e Serra, mas troca ~667
   votos entre Garotinho e Ciro. O site usa a votação por município/zona, como nos outros anos (diferença < 0,002%).
 - Cores do usuário para partidos que só existiram até 2002: PGT #2EAA3F, PST #9370DB.
+
+## Adendo — mesmo resultado em Municípios, Zonas e Locais (07/11/2026)
+- Na visão da cidade, o total em Zonas soma todas as zonas da cidade no arquivo de resultados, inclusive as sem desenho
+  (2002: zonas extintas depois, cujos locais não têm ponto conhecido — Cuiabá tinha 11 zonas e só 6 desenháveis).
+- Candidatura INAPTO com 0 votos na totalização final (2014, sem coluna de destinação): os votos dele nas urnas viram
+  nulos também nas zonas e nos locais (ex.: Antônio Gomide, GO 2014; o mesmo em MT, DF e no Senado de PR, RJ, RN, SP).
+- Substituído com o mesmo número do substituto: o arquivo por município repete os votos nos dois; ficam só no
+  substituto (RJ 2002 governador, RJ 2006 senador).
+- 2006/2002: o cadastro montado pelo detalhe por seção também lê o Presidente (seções só do 2º turno).

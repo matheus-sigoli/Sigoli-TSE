@@ -187,8 +187,13 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     if (!cid) return null;
     if (nivel === 'bairros') return new Set((bairros.dados?.porCidade.get(cid) ?? []).map((b) => b.id));
     if (nivel === 'locais') return new Set((locais.dados?.porCidade.get(cid) ?? []).map((l) => l.id));
-    return new Set((malhaCidade.dados?.malha.municipios.features ?? []).map((f) => String(f.id)));
-  }, [cid, nivel, bairros.dados, locais.dados, malhaCidade.dados]);
+    // zonas: todas as zonas da cidade no arquivo de resultados, mesmo as sem desenho (zona extinta depois, sem
+    // local com ponto conhecido) — o total da cidade fica igual nas visões Zonas e Locais
+    const ids = new Set((malhaCidade.dados?.malha.municipios.features ?? []).map((f) => String(f.id)));
+    const arq = resultado.dados;
+    if (arq && !arq.resumo) for (const k of Object.keys(arq.mun)) if (k.startsWith(`${cid}-`)) ids.add(k);
+    return ids;
+  }, [cid, nivel, bairros.dados, locais.dados, malhaCidade.dados, resultado.dados]);
 
   const recorteMunicipios = useMemo(() => {
     if (multi) return new Set(selecao); // soma das unidades selecionadas

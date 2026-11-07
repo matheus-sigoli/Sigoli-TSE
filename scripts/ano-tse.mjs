@@ -147,6 +147,9 @@ await lerCsvDoZip(zip('cand'), porUf, (f, c) => {
       votos: 0,
     };
     k.eleito = ehEleito(k.situacao);
+    // sem coluna de destinação (2014 e antes): candidatura INAPTO com 0 votos na totalização final — os votos dele
+    // nas urnas viraram nulos na retotalização (ex.: Antônio Gomide, GO 2014). Marcado no fim da leitura.
+    if (c.NM_TIPO_DESTINACAO_VOTOS === undefined && /INAPTO/i.test(texto(f[c.DS_SITUACAO_CANDIDATURA]))) k.inapto = true;
     g.cands.set(id, k);
   }
   const v = num(f[c.QT_VOTOS_NOMINAIS]);
@@ -154,6 +157,24 @@ await lerCsvDoZip(zip('cand'), porUf, (f, c) => {
   const m = munDe(g, chave);
   m.c.set(id, (m.c.get(id) ?? 0) + v);
 });
+// substituído (renúncia/falecimento) com o mesmo número do substituto: o arquivo repete os votos nos dois
+// (RJ 2002 governador: Cobbett e Gezilda, 8.100 cada; RJ 2006 senador: Tunico e Pingo). Os votos são do substituto.
+for (const g of grupos.values()) {
+  const porNr = new Map();
+  for (const k of g.cands.values()) porNr.set(k.n, [...(porNr.get(k.n) ?? []), k]);
+  for (const ks of porNr.values()) {
+    if (ks.length < 2) continue;
+    for (const k of ks) if (/substitui/i.test(k.situacao) && ks.some((x) => x !== k && !/substitui/i.test(x.situacao))) {
+      g.cands.delete(k.id);
+      for (const m of g.mun.values()) m.c.delete(k.id);
+      console.log(`  substituído, votos do substituto: ${g.slug}/${g.turno}/${g.uf} ${k.n} ${k.nome}`);
+    }
+  }
+}
+for (const g of grupos.values()) for (const k of g.cands.values()) {
+  if (k.inapto && k.votos === 0) { k.anulado = 'Nulo (candidatura indeferida, votos retotalizados como nulos)'; console.log(`  inapto, votos nulos: ${g.slug}/${g.turno}/${g.uf} ${k.n} ${k.nome}`); }
+  delete k.inapto;
+}
 console.log(`candidatos lidos: ${grupos.size} cargos/turnos/UFs`);
 
 // 3) votos dos partidos (legenda + nominais válidos)

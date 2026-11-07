@@ -203,6 +203,8 @@ function somarLinha(E, f, c) {
       b, zonas: new Map(), zonasCidade: new Map(), bairros: new Map(), locais: new Map(),
       idxC: new Map(b.cands.map((x, i) => [String(num(x.n)), i])),
       anulados: new Set(b.cands.filter((x) => x.anulado).map((x) => String(num(x.n)))),
+      // candidatura indeferida retotalizada (2014 e antes): na totalização final os votos dele são nulos
+      nulos: new Set(b.cands.filter((x) => x.anulado?.startsWith('Nulo')).map((x) => String(num(x.n)))),
       idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
       prop: b.tipo === 'prop', vagas: cargo === 'senador' ? Math.max(1, b.vagas || 1) : 1,
     };
@@ -231,6 +233,7 @@ function somarLinha(E, f, c) {
     r.votosTotais += votos;
     if (votavel === 95) r.t[4] += votos;
     else if (votavel === 96 || votavel === 97) r.t[5] += votos;
+    else if (!a.prop && a.nulos.has(String(votavel))) r.t[5] += votos;
     else if (a.prop) {
       // anulados (registro indeferido): o TSE os deixa fora de válidos e de nulos
       if (a.anulados.has(String(votavel))) continue;
@@ -274,9 +277,12 @@ function lerLocal(E, f, c) {
   }
   if (turno === 1) l.eleitorado += num(f[c.QT_ELEITOR_SECAO]);
 }
-/** 2006: uma linha por seção e cargo; o Governador (todas as UFs têm) dá a seção, o local e os aptos. */
+/** 2006 e 2002: uma linha por seção e cargo; Governador (arquivos das UFs) e Presidente (arquivo BR) dão a seção,
+ * o local e os aptos — o Presidente cobre as seções que só funcionaram no 2º turno. */
+const secoesContadas = new Set();
 function lerSecaoSemCadastro(E, f, c) {
-  if (!ordinaria(f[c.DT_ELEICAO]) || num(f[c.CD_CARGO]) !== 3) return;
+  const cargo = num(f[c.CD_CARGO]);
+  if (!ordinaria(f[c.DT_ELEICAO]) || (cargo !== 3 && cargo !== 1)) return;
   const turno = num(f[c.NR_TURNO]);
   const mun = pad5(f[c.CD_MUNICIPIO]);
   const zona = num(f[c.NR_ZONA]);
@@ -293,10 +299,10 @@ function lerSecaoSemCadastro(E, f, c) {
     l = { id, mun, ibge: ibgeDe.get(mun) ?? '', zona, nr, nome: '', bairro: '', lon: null, lat: null, eleitorado: 0 };
     E.locais.set(id, l);
   }
-  if (turno === 1) l.eleitorado += num(f[c.QT_APTOS]);
+  if (turno === 1 && !secoesContadas.has(chave)) { secoesContadas.add(chave); l.eleitorado += num(f[c.QT_APTOS]); }
 }
 if (SEM_CADASTRO) {
-  await lerCsvDoZip(zipLocais, (n) => /_[A-Z]{2}\.csv$/i.test(n) && !/_(BR|ZZ|VT)\.csv$/i.test(n), (f, c) => {
+  await lerCsvDoZip(zipLocais, (n) => /_[A-Z]{2}\.csv$/i.test(n) && !/_(ZZ|VT)\.csv$/i.test(n), (f, c) => {
     const E = estados.get(String(f[c.SG_UF]).toLowerCase());
     if (E) lerSecaoSemCadastro(E, f, c);
   });

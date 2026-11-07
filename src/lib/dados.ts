@@ -6,6 +6,7 @@
 import { useEffect, useState } from 'react';
 import type { Arquivo, CargoSlug, Municipio, Turno } from './dominio';
 import { caixaGeo } from './projecao';
+import polygonClipping from 'polygon-clipping';
 import { toGeoJSON, type Topology } from './topojson';
 
 const cache = new Map<string, Promise<unknown>>();
@@ -187,17 +188,28 @@ const VAZIA: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: 
 /** a: área de 2026 → local do ano; i: locais incluídos; f: cidades criadas depois cujas áreas entram nesta */
 type TrocaAreas = { a: Record<string, string>; i?: Record<string, string[]>; f?: string[] };
 function trocarIds(fc: GeoJSON.FeatureCollection, troca: TrocaAreas): GeoJSON.FeatureCollection {
-  const porId = new Map<string, GeoJSON.Position[][][]>();
+  const porId = new Map<string, GeoJSON.Position[][][][]>(); // local do ano → multipolígonos das áreas de 2026
   for (const f of fc.features) {
     const id = troca.a[String(f.id)];
     if (!id) continue;
     const g = f.geometry;
     const polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
-    porId.set(id, [...(porId.get(id) ?? []), ...polys]);
+    porId.set(id, [...(porId.get(id) ?? []), polys]);
   }
+  // áreas de 2026 que eram um local só no ano: une num desenho só, sem a linha entre elas
+  const unir = (partes: GeoJSON.Position[][][][]): GeoJSON.Position[][][] => {
+    if (partes.length === 1) return partes[0];
+    try {
+      type MP = [number, number][][][];
+      const [a, ...resto] = partes as unknown as MP[];
+      return polygonClipping.union(a, ...resto) as unknown as GeoJSON.Position[][][];
+    } catch {
+      return partes.flat();
+    }
+  };
   return {
     type: 'FeatureCollection',
-    features: [...porId].map(([id, coordinates]) => ({
+    features: [...porId].map(([id, partes]) => [id, unir(partes)] as const).map(([id, coordinates]) => ({
       type: 'Feature', id, properties: troca.i?.[id] ? { inclui: troca.i[id] } : {}, geometry: { type: 'MultiPolygon', coordinates },
     })),
   };
