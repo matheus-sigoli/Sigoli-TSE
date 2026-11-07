@@ -92,7 +92,7 @@ function Filtros(p: Props) {
 
   return (
     <aside className="filtros" aria-label="Filtros">
-      <div>
+      <div className="bloco-marca">
         <Link href="/" className="marca" aria-label="Sigoli.TSE, página inicial">
           <b>Sigoli</b><span>.TSE</span>
         </Link>
@@ -100,7 +100,7 @@ function Filtros(p: Props) {
       </div>
 
       {ANOS_NO_AR.length > 1 ? (
-        <div className="campo">
+        <div className="campo campo-ano">
           <span className="campo-rotulo" id="rot-ano">Eleição</span>
           <div className="segmentado anos" role="group" aria-labelledby="rot-ano">
             {ANOS_NO_AR.map((a) => (
@@ -110,7 +110,7 @@ function Filtros(p: Props) {
         </div>
       ) : null}
 
-      <div className="campo">
+      <div className="campo campo-onde">
         <label htmlFor={idAbr}>Onde</label>
         <select id={idAbr} className="select" value={p.abr} onChange={(e) => p.aoMudarAbrangencia(e.target.value)}>
           <option value="br">Brasil</option>
@@ -120,7 +120,7 @@ function Filtros(p: Props) {
       </div>
 
       {p.abr !== 'br' && p.abr !== 'exterior' ? (
-        <div className="campo">
+        <div className="campo campo-nivel">
           {p.cidade ? (
             <div className="cidade-aberta">
               <span className="campo-rotulo">Cidade</span>
@@ -129,12 +129,12 @@ function Filtros(p: Props) {
             </div>
           ) : null}
           <span className="campo-rotulo" id="rot-nivel">Ver por</span>
-          <div className="segmentado" role="group" aria-labelledby="rot-nivel">
+          <div className="segmentado nivel" role="group" aria-labelledby="rot-nivel">
             {(p.cidade ? NIVEIS_CIDADE : NIVEIS_ESTADO).map(({ n, rotulo }) => (
               <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
             ))}
           </div>
-          <p className="marca-sub" style={{ marginTop: 6 }}>
+          <p className="marca-sub dica-nivel" style={{ marginTop: 6 }}>
             {p.cidade ? DICA_CIDADE[p.nivel] : 'Dois cliques num município abrem as zonas e os locais de votação dele.'}
             {' '}Shift + clique soma várias áreas.
           </p>
@@ -142,7 +142,7 @@ function Filtros(p: Props) {
       ) : null}
 
       {opcoesRegiao && p.nivel === 'municipios' && !p.cidade ? (
-        <div className="campo">
+        <div className="campo campo-regiao">
           <label htmlFor={idReg}>Região</label>
           <select id={idReg} className="select" value={p.regiaoSelecionada ?? ''} onChange={(e) => p.aoMudarRegiao(e.target.value || null)}>
             <option value="">Estado inteiro</option>
@@ -163,6 +163,7 @@ function Filtros(p: Props) {
           itens={itensLocais}
           vazio="Nenhum local de votação com esse nome nesta cidade"
           aoEscolher={p.aoEscolherLocal}
+          classe="busca-local"
         />
       ) : null}
 
@@ -173,6 +174,7 @@ function Filtros(p: Props) {
           itens={itensMunicipios}
           vazio="Nenhum município com esse nome"
           filtroUf
+          classe="busca-municipio"
           aoEscolher={(ibge) => { const m = p.municipios?.find((x) => x.ibge === ibge); if (m) p.aoEscolherMunicipio(m); }}
         />
       ) : null}
@@ -232,8 +234,8 @@ const ordenarPorNome = (a: ItemBusca, b: ItemBusca) => a.nome.localeCompare(b.no
  * Campo de busca com lista rolável: exatos primeiro, depois os que começam com o termo, os que contêm
  * e, por fim, os que casam só pelo texto extra. Com `filtroUf`, a UF no fim filtra o estado ("sao goncalo rj").
  */
-function Busca({ rotulo, placeholder, itens, vazio, filtroUf, aoEscolher }: {
-  rotulo: string; placeholder: string; itens: ItemBusca[] | null; vazio: string; filtroUf?: boolean; aoEscolher: (id: string) => void;
+function Busca({ rotulo, placeholder, itens, vazio, filtroUf, aoEscolher, classe }: {
+  rotulo: string; placeholder: string; itens: ItemBusca[] | null; vazio: string; filtroUf?: boolean; aoEscolher: (id: string) => void; classe?: string;
 }) {
   const id = useId();
   const [texto, setTexto] = useState('');
@@ -274,7 +276,7 @@ function Busca({ rotulo, placeholder, itens, vazio, filtroUf, aoEscolher }: {
   };
 
   return (
-    <div className="campo busca">
+    <div className={`campo busca ${classe ?? ''}`}>
       <label htmlFor={id}>{rotulo}</label>
       <input
         ref={entrada}

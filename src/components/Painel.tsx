@@ -57,7 +57,9 @@ function Painel(p: Props) {
   const aoMover = useCallback((e: React.PointerEvent) => {
     if (!inicio.current || !ref.current) return;
     const dy = e.clientY - inicio.current.y;
-    const base = inicio.current.aberta ? 0 : ref.current.offsetHeight - 300;
+    // altura da gaveta recolhida: a mesma do CSS (--espiada, menor no celular)
+    const espiada = parseFloat(getComputedStyle(ref.current).getPropertyValue('--espiada')) || 300;
+    const base = inicio.current.aberta ? 0 : ref.current.offsetHeight - espiada;
     ref.current.style.transform = `translateY(${Math.max(0, base + dy)}px)`;
   }, []);
   const aoSoltar = useCallback((e: React.PointerEvent) => {

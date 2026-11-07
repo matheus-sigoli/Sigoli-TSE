@@ -317,7 +317,9 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 /* ------------------------------------------------------------ celular: mapa + gaveta */
 .puxador { display: none; }
 @media (max-width: 1099px) {
-  .app { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .app { grid-template-columns: 1fr; grid-template-rows: auto 1fr; --espiada: 300px; }
+  /* o desenho cabe na parte visível do mapa, acima da gaveta recolhida */
+  .mapa .mapa-canvas { bottom: var(--espiada); }
   .filtros {
     grid-row: 1; border-right: 0; border-bottom: 1px solid var(--line);
     padding: 10px 12px; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 10px; overflow: visible; z-index: 10;
@@ -338,7 +340,6 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   }
   .painel[data-aberta='true'] { transform: translateY(0); }
   .painel[data-arrastando='true'] { transition: none; }
-  .painel { --espiada: 300px; }
   .painel > .indicadores { order: 5; }
   .painel > .mais { order: 6; }
   .painel > .rodape { order: 7; }
@@ -351,6 +352,50 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   .indicadores dd { font-size: var(--fs-3); }
   .creditos-mapa { bottom: calc(var(--espiada, 300px) + 6px); }
   .mapa-zoom { bottom: calc(var(--espiada, 300px) + 28px); }
+}
+
+/* ------------------------------------------------------------ celular (até 700px): topo compacto, mapa em destaque
+   Topo em 6 colunas: marca + anos numa linha; estado + busca de município; cidade aberta + Zonas/Locais numa linha;
+   busca de local. A gaveta recolhida mostra só cargos, trilha e título (--espiada menor), e o mapa ocupa o resto. */
+@media (max-width: 700px) {
+  .app { --espiada: 176px; }
+  .filtros {
+    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: center;
+    gap: 8px; padding: 8px 12px 10px;
+  }
+  .filtros > * { grid-column: span 6; min-width: 0; }
+  .filtros .bloco-marca { grid-column: span 2; }
+  .filtros .campo-ano { grid-column: span 4; }
+  .filtros .campo-onde, .filtros .busca-municipio { grid-column: span 3; }
+  .filtros .bloco-marca { order: 1; } .filtros .campo-ano { order: 2; } .filtros .campo-onde { order: 3; }
+  .filtros .busca-municipio { order: 4; } .filtros .campo-nivel { order: 5; } .filtros .campo-regiao { order: 6; } .filtros .busca-local { order: 7; }
+  .filtros .campo-rotulo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .filtros .campo { gap: 0; }
+  .segmentado.anos { grid-template-columns: repeat(6, 1fr); padding: 2px; gap: 2px; }
+  .segmentado.anos a { padding: 5px 0; font-size: 12px; }
+  .select, .entrada { height: 38px; padding-left: 10px; }
+  .select { padding-right: 28px; background-position: calc(100% - 15px) 16px, calc(100% - 10px) 16px; }
+  /* cidade aberta: nome e "voltar" à esquerda, Zonas/Locais à direita, tudo numa linha */
+  .filtros .campo-nivel { flex-direction: row; align-items: center; gap: 10px; }
+  .filtros .cidade-aberta {
+    flex: 1 1 auto; min-width: 0; margin: 0; padding: 0; border: 0;
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .filtros .cidade-aberta strong { font-size: var(--fs-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  .filtros .cidade-aberta .link-botao { flex-shrink: 0; font-size: var(--fs-1); }
+  .filtros .cidade-aberta .link-botao::before { content: '← '; }
+  .filtros .segmentado.nivel { flex-shrink: 0; margin-left: auto; }
+  .filtros .campo-nivel:not(:has(.cidade-aberta)) .segmentado.nivel { margin-left: 0; width: 100%; }
+  .filtros .segmentado.nivel button { padding: 6px 14px; }
+  .busca-lista { max-height: 50dvh; }
+  /* gaveta recolhida mais baixa */
+  .painel-topo { padding: 4px 16px 6px; gap: 4px; }
+  .puxador { height: 22px; }
+  .abas a { padding: 8px 10px 10px; }
+  .titulo { font-size: var(--fs-5); }
+  .creditos-mapa { left: 8px; right: 56px; font-size: 10px; text-align: right; line-height: 1.3; }
+  .mapa-zoom { right: 10px; }
+  .mapa-zoom button { width: 38px; height: 38px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
