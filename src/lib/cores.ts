@@ -42,6 +42,8 @@ const APELIDOS: Record<string, string> = {
   PMDB: 'MDB', PSDC: 'DC', PEN: 'PATRIOTA', PTN: 'PODE', PTDOB: 'AVANTE',
   // 2006: o PFL é o partido que em 2007 passou a se chamar DEM
   PFL: 'DEM',
+  // 2002: o PPB é o partido que em 2003 passou a se chamar PP
+  PPB: 'PP',
 };
 
 

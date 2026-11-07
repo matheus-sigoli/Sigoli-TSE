@@ -1007,6 +1007,46 @@
       },
       "reservas": [],
       "ano": 2006
+    },
+    {
+      "chave": "PGT",
+      "sigla": "PGT",
+      "numero": 30,
+      "nome": "Partido Geral dos Trabalhadores",
+      "principal": {
+        "10": "#D5EED9",
+        "20": "#ABDDB2",
+        "30": "#82CC8C",
+        "40": "#58BB65",
+        "50": "#2EAA3F",
+        "60": "#279136",
+        "70": "#20772C",
+        "80": "#195E23",
+        "90": "#124419",
+        "100": "#09220D"
+      },
+      "reservas": [],
+      "ano": 2002
+    },
+    {
+      "chave": "PST",
+      "sigla": "PST",
+      "numero": 18,
+      "nome": "Partido Social Trabalhista",
+      "principal": {
+        "10": "#E9E2F8",
+        "20": "#D4C6F1",
+        "30": "#BEA9E9",
+        "40": "#A98DE2",
+        "50": "#9370DB",
+        "60": "#7D5FBA",
+        "70": "#674E99",
+        "80": "#513E78",
+        "90": "#3B2D58",
+        "100": "#1D162C"
+      },
+      "reservas": [],
+      "ano": 2002
     }
   ],
   "neutro": {
