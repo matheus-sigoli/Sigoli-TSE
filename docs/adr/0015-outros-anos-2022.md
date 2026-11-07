@@ -76,3 +76,4 @@ não existe mais para 2022 (404).
 - Os arquivos do TSE de 2002 divergem por poucas centenas de votos entre si: a votação por município/zona dá Lula
   39.454.760 no 1º turno (oficial 39.455.233); a votação por seção soma o oficial de Lula e Serra, mas troca ~667
   votos entre Garotinho e Ciro. O site usa a votação por município/zona, como nos outros anos (diferença < 0,002%).
+- Cores do usuário para partidos que só existiram até 2002: PGT #2EAA3F, PST #9370DB.
