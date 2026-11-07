@@ -67,3 +67,12 @@ não existe mais para 2022 (404).
   (NR_LOCAL_VOTACAO) e os aptos vêm do detalhe da votação por seção; o nome, o bairro e o ponto vêm do local com o
   mesmo código no cadastro mais próximo (2010, depois 2014…). Local sem código correspondente fica "LOCAL n (ZONA z)",
   com o ponto no centro da zona (aproximado).
+
+## Adendo — 2002 (07/11/2026)
+- Mesmo caminho de 2006: sem cadastro de locais no TSE; seções e locais pelo detalhe da votação por seção.
+- Municípios instalados em 2005 voltam à origem no mapa: Aroeiras do Itaim → Picos (PI), Figueirão → Camapuã (MS),
+  Ipiranga do Norte e Itanhangá → Tapurah (MT).
+- PPB usa a cor do PP (mesmo partido, renomeado em 2003).
+- Os arquivos do TSE de 2002 divergem por poucas centenas de votos entre si: a votação por município/zona dá Lula
+  39.454.760 no 1º turno (oficial 39.455.233); a votação por seção soma o oficial de Lula e Serra, mas troca ~667
+  votos entre Garotinho e Ciro. O site usa a votação por município/zona, como nos outros anos (diferença < 0,002%).

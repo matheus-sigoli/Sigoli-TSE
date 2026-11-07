@@ -30,6 +30,7 @@ export const UFS_2T_GOVERNADOR: Record<number, string[]> = {
   2014: ['ac', 'am', 'ap', 'ce', 'df', 'go', 'ms', 'pa', 'pb', 'rj', 'rn', 'ro', 'rr', 'rs'],
   2010: ['al', 'ap', 'df', 'go', 'pa', 'pb', 'pi', 'ro', 'rr'],
   2006: ['go', 'ma', 'pa', 'pb', 'pe', 'pr', 'rj', 'rn', 'rs', 'sc'],
+  2002: ['ap', 'ce', 'df', 'ms', 'pa', 'pb', 'pr', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp'],
 };
 
 export const UFS: Record<string, string> = {
