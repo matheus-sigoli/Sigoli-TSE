@@ -98,3 +98,5 @@ não existe mais para 2022 (404).
   QT_VOTOS_NOMINAIS_VALIDOS.
 - 43 municípios instalados em 2001 voltam à origem (genealogia do IBGE e da SPGG-RS; com várias origens, a que tinha a
   zona eleitoral do município novo — `propor-fusoes.mjs`).
+- A votação por candidato e por partido de 1998 não tem o arquivo do DF: o DF sai da votação por seção (com os dados
+  do candidato do cadastro); os totais, do detalhe por município, que tem o DF.
