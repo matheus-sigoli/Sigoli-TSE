@@ -61,6 +61,7 @@ jobs:
           node -e "
           const ler = (p) => JSON.parse(require('fs').readFileSync('public/data/$ANO/' + p, 'utf8'));
           for (const t of [1, 2]) {
+            if (!require('fs').existsSync('public/data/$ANO/presidente/' + t + '/br.json')) continue;
             const a = ler('presidente/' + t + '/br.json');
             console.log('Presidente', t, 'turno: válidos', a.total.t[3], '| comparecimento', a.total.t[1], '| brancos', a.total.t[4], '| nulos', a.total.t[5]);
             a.cands.slice(0, 4).forEach((c, i) => console.log('  ', c.nome, c.partido, a.total.c[i], (100 * a.total.c[i] / a.total.t[3]).toFixed(2) + '%', c.situacao));
@@ -71,13 +72,26 @@ jobs:
           }
           "
 
+      # anos sem votação por seção com local (1998): zonas pela votação por município e zona
+      - name: Zonas pela votação por município e zona (anos sem locais)
+        if: ${{ env.ANO < 2002 }}
+        run: |
+          node --max-old-space-size=10000 scripts/ano-tse.mjs --ano $ANO --zonas
+          node scripts/propor-fusoes.mjs --ano $ANO --depois 2002
+
       - name: Malha municipal do ano (municípios criados depois voltam à origem)
         run: node scripts/malha-ano.mjs --ano $ANO
 
+      - name: Desenho das zonas a partir de 2002 (anos sem locais)
+        if: ${{ env.ANO < 2002 }}
+        run: node scripts/zonas-de-outro-ano.mjs --ano $ANO --de 2002
+
       - name: Zonas, bairros e locais de votação
+        if: ${{ env.ANO >= 2002 }}
         run: node --max-old-space-size=12000 scripts/zonas-locais.mjs --ano $ANO --baixar
 
       - name: Áreas dos locais (Atlas 2026)
+        if: ${{ env.ANO >= 2002 }}
         run: node scripts/areas-ano.mjs --ano $ANO
 
       - name: Quem pinta o mapa

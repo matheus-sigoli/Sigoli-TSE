@@ -371,9 +371,9 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   .filtros .busca-municipio { order: 4; } .filtros .campo-nivel { order: 5; } .filtros .campo-regiao { order: 6; } .filtros .busca-local { order: 7; }
   .filtros .campo-rotulo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .filtros .campo { gap: 0; }
-  /* todos os anos numa linha só, ao lado da marca */
-  .segmentado.anos { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); padding: 2px; gap: 1px; }
-  .segmentado.anos a { padding: 5px 0; font-size: 11.5px; letter-spacing: -0.01em; font-variation-settings: 'wdth' 88; }
+  /* anos em duas linhas de 4, ao lado da marca */
+  .segmentado.anos { grid-template-columns: repeat(4, 1fr); padding: 2px; gap: 1px; }
+  .segmentado.anos a { padding: 4px 0; font-size: 12px; }
   .select, .entrada { height: 38px; padding-left: 10px; }
   .select { padding-right: 28px; background-position: calc(100% - 15px) 16px, calc(100% - 10px) 16px; }
   /* cidade aberta: nome e "voltar" à esquerda, Zonas/Locais à direita, tudo numa linha */

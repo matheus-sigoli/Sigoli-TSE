@@ -6,7 +6,7 @@ import type { Local, Malha, Nivel, Regiao } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
-import { ELEICOES } from '@/lib/anos';
+import { ELEICOES, temLocais } from '@/lib/anos';
 
 interface Props {
   ano: number;
@@ -130,7 +130,7 @@ function Filtros(p: Props) {
           ) : null}
           <span className="campo-rotulo" id="rot-nivel">Ver por</span>
           <div className="segmentado nivel" role="group" aria-labelledby="rot-nivel">
-            {(p.cidade ? NIVEIS_CIDADE : NIVEIS_ESTADO).map(({ n, rotulo }) => (
+            {(p.cidade ? NIVEIS_CIDADE.filter((x) => x.n !== 'locais' || temLocais(p.ano)) : NIVEIS_ESTADO).map(({ n, rotulo }) => (
               <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
             ))}
           </div>
