@@ -74,14 +74,19 @@ const cidadesExterior = new Map();
  * Chave do município nos arquivos: IBGE no Brasil, código TSE no exterior. Voto em trânsito (2010: urnas nas
  * capitais, SG_UF "VT"): conta no total nacional de Presidente, mas não tem lugar no mapa.
  */
+// --zonas (1998: sem votação por seção com locais): as mesmas contas por município e zona → zonas-cidade
+const ZONAS = process.argv.includes('--zonas');
+let zonaAtual = '';
 const chaveMun = (uf, cdTse, nome) => {
   const tse = pad5(cdTse);
+  if (ZONAS) { if (uf === 'zz' || uf === 'vt') return null; const ib = ibgeDe.get(tse); return ib ? `${ib}-${zonaAtual}` : null; }
   if (uf === 'vt') return `vt${tse}`;
   if (uf !== 'zz') return ibgeDe.get(tse) ?? null;
   if (!cidadesExterior.has(tse)) cidadesExterior.set(tse, nome);
   return tse;
 };
 
+const lerCsv = (zipPath, filtro, fn) => lerCsvDoZip(zipPath, filtro, (f, c, n) => { if (ZONAS) zonaAtual = String(num(f[c.NR_ZONA])); fn(f, c, n); });
 // ------------------------------------------------------------------ acumuladores por cargo/turno/UF
 const grupos = new Map(); // `${slug}/${turno}/${uf}` → grupo
 function grupo(slug, turno, uf) {
@@ -105,8 +110,20 @@ const avisar = (uf, cd, nome) => naoMapeados.set(`${uf}-${pad5(cd)}`, nome);
 const vices = new Map(); // `${ue}|${cargoTitular}|${numero}` → [{tipo, nome, partido}]
 const vistosVice = new Set();
 const TITULAR = { 2: [1, 'v'], 4: [3, 'v'], 9: [5, 's1'], 10: [5, 's2'] };
+// 1998: a votação por candidato não traz o Presidente; ele sai da votação por partido (nominais válidos do
+// partido do candidato) com os dados do candidato do cadastro (consulta_cand)
+const presCons = new Map(); // `${turno}|${nr partido}` → candidato
 await lerCsvDoZip(zip('cons'), porUf, (f, c) => {
   if (!ordinaria(f[c.DT_ELEICAO])) return;
+  if (num(f[c.CD_CARGO]) === 1) {
+    const coligacao = /colig/i.test(f[c.TP_AGREMIACAO]);
+    presCons.set(`${num(f[c.NR_TURNO])}|${num(f[c.NR_PARTIDO])}`, {
+      id: f[c.SQ_CANDIDATO], n: String(num(f[c.NR_CANDIDATO])),
+      nome: texto(f[c.NM_URNA_CANDIDATO]) || texto(f[c.NM_CANDIDATO]), partido: texto(f[c.SG_PARTIDO]),
+      situacao: situacao(f[c.DS_SIT_TOT_TURNO]),
+      col: coligacao ? texto(f[c.NM_COLIGACAO]) : '', comp: coligacao ? texto(f[c.DS_COMPOSICAO_COLIGACAO]) : '',
+    });
+  }
   const t = TITULAR[num(f[c.CD_CARGO])];
   if (!t || vistosVice.has(f[c.SQ_CANDIDATO])) return;
   vistosVice.add(f[c.SQ_CANDIDATO]);
@@ -118,7 +135,7 @@ for (const l of vices.values()) l.sort((a, b) => a.tipo.localeCompare(b.tipo));
 console.log(`vices e suplentes: ${vistosVice.size}`);
 
 // 2) votos dos candidatos
-await lerCsvDoZip(zip('cand'), porUf, (f, c) => {
+await lerCsv(zip('cand'), porUf, (f, c) => {
   if (!ordinaria(f[c.DT_ELEICAO])) return;
   const cd = num(f[c.CD_CARGO]);
   const slug = SLUG[cd];
@@ -176,13 +193,36 @@ for (const g of grupos.values()) for (const k of g.cands.values()) {
   delete k.inapto;
 }
 console.log(`candidatos lidos: ${grupos.size} cargos/turnos/UFs`);
+const presPorPartido = ![...grupos.values()].some((g) => g.slug === 'presidente');
+if (presPorPartido) console.log(`sem Presidente na votação por candidato: vem da votação por partido (${presCons.size} candidatos no cadastro)`);
 
 // 3) votos dos partidos (legenda + nominais válidos)
-await lerCsvDoZip(zip('part'), porUf, (f, c) => {
+await lerCsv(zip('part'), porUf, (f, c) => {
   if (!ordinaria(f[c.DT_ELEICAO])) return;
   const slug = SLUG[num(f[c.CD_CARGO])];
   if (!slug) return;
   const uf = f[c.SG_UF].toLowerCase();
+  if (slug === 'presidente' && presPorPartido) {
+    const turno = num(f[c.NR_TURNO]);
+    const kc = presCons.get(`${turno}|${num(f[c.NR_PARTIDO])}`);
+    const chaveP = chaveMun(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
+    if (!chaveP) return avisar(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
+    const gp = grupo('presidente', turno, uf);
+    gp.atualizado ||= `${f[c.DT_GERACAO]} ${f[c.HH_GERACAO]}`;
+    munDe(gp, chaveP);
+    if (kc) {
+      let k = gp.cands.get(kc.id);
+      if (!k) {
+        k = { ...kc, vices: vices.get(`BR|1|${kc.n}`) ?? [], votos: 0 };
+        k.eleito = ehEleito(k.situacao);
+        gp.cands.set(kc.id, k);
+      }
+      const v = num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]);
+      k.votos += v;
+      const m = munDe(gp, chaveP);
+      m.c.set(kc.id, (m.c.get(kc.id) ?? 0) + v);
+    }
+  }
   const g = grupos.get(`${slug}/${num(f[c.NR_TURNO])}/${uf}`);
   if (!g) return;
   const chave = chaveMun(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
@@ -200,7 +240,7 @@ await lerCsvDoZip(zip('part'), porUf, (f, c) => {
 });
 
 // 4) totais: [aptos, comparecimento, abstenção, válidos, brancos, nulos]
-await lerCsvDoZip(zip('det'), porUf, (f, c) => {
+await lerCsv(zip('det'), porUf, (f, c) => {
   if (!ordinaria(f[c.DT_ELEICAO])) return;
   const slug = SLUG[num(f[c.CD_CARGO])];
   if (!slug) return;
@@ -243,6 +283,27 @@ const gravar = (rel, obj) => {
   return (txt.length / 1024).toFixed(0);
 };
 
+if (ZONAS) {
+  // zonas-cidade por UF (Presidente também, separado por UF) e a zona inteira (soma das cidades da zona)
+  const somarZona = (arq) => {
+    const mun = {};
+    for (const [k, r] of Object.entries(arq.mun)) {
+      const z = k.split('-')[1];
+      const a = (mun[z] ??= { t: [0, 0, 0, 0, 0, 0], c: new Array(r.c.length).fill(0) });
+      r.t.forEach((x, i) => (a.t[i] += x));
+      r.c.forEach((x, i) => (a.c[i] += x));
+    }
+    return { ...arq, mun };
+  };
+  for (const g of grupos.values()) {
+    if (g.uf === 'zz' || g.uf === 'vt' || !g.mun.size) continue;
+    const n = normalizado(g);
+    const arq = montarArquivo(CARGO[g.slug], g.turno, g.uf, n.total, n.regs);
+    console.log(`${g.slug}/${g.turno}/zonas-cidade/${g.uf}.json  ${n.regs.size} zonas-cidade  ${gravar(`${g.slug}/${g.turno}/zonas-cidade/${g.uf}.json`, arq)} KB`);
+    gravar(`${g.slug}/${g.turno}/zonas/${g.uf}.json`, somarZona(arq));
+  }
+  process.exit(0);
+}
 // municipios.json: os do Brasil (mesmos de 2026) + as cidades do exterior desta eleição
 const exterior = [...cidadesExterior].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')).map(([tse, nome]) => {
   const p = paises.get(tse) ?? paisDoNome(nome);
