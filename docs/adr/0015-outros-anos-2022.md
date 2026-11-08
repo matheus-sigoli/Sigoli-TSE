@@ -86,3 +86,15 @@ não existe mais para 2022 (404).
 - Substituído com o mesmo número do substituto: o arquivo por município repete os votos nos dois; ficam só no
   substituto (RJ 2002 governador, RJ 2006 senador).
 - 2006/2002: o cadastro montado pelo detalhe por seção também lê o Presidente (seções só do 2º turno).
+
+## Adendo — 1998 (08/11/2026)
+- Os dados abertos do TSE de 1998 não trazem o Presidente por município: nem a votação por candidato nem a por partido
+  têm o cargo 1, e a votação por seção do Presidente só cobre as urnas eletrônicas (~1/4 dos votos). O detalhe por
+  município tem só os totais. 1998 entra com Governador e Senador; a aba Presidente some nesse ano.
+- Sem locais de votação: a votação por seção de 1998 tem NR_LOCAL_VOTACAO = -3. As zonas vêm da votação por
+  município e zona (`ano-tse.mjs --zonas`) e o desenho, das zonas de 2002 (`zonas-de-outro-ano.mjs`); a cidade só tem
+  a visão Zonas.
+- O arquivo por candidato de 1998 (refeito em 2023) traz QT_VOTOS_NOMINAIS = 0; os votos estão em
+  QT_VOTOS_NOMINAIS_VALIDOS.
+- 43 municípios instalados em 2001 voltam à origem (genealogia do IBGE e da SPGG-RS; com várias origens, a que tinha a
+  zona eleitoral do município novo — `propor-fusoes.mjs`).

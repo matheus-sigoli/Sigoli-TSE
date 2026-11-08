@@ -110,20 +110,8 @@ const avisar = (uf, cd, nome) => naoMapeados.set(`${uf}-${pad5(cd)}`, nome);
 const vices = new Map(); // `${ue}|${cargoTitular}|${numero}` → [{tipo, nome, partido}]
 const vistosVice = new Set();
 const TITULAR = { 2: [1, 'v'], 4: [3, 'v'], 9: [5, 's1'], 10: [5, 's2'] };
-// 1998: a votação por candidato não traz o Presidente; ele sai da votação por partido (nominais válidos do
-// partido do candidato) com os dados do candidato do cadastro (consulta_cand)
-const presCons = new Map(); // `${turno}|${nr partido}` → candidato
 await lerCsvDoZip(zip('cons'), porUf, (f, c) => {
   if (!ordinaria(f[c.DT_ELEICAO])) return;
-  if (num(f[c.CD_CARGO]) === 1) {
-    const coligacao = /colig/i.test(f[c.TP_AGREMIACAO]);
-    presCons.set(`${num(f[c.NR_TURNO])}|${num(f[c.NR_PARTIDO])}`, {
-      id: f[c.SQ_CANDIDATO], n: String(num(f[c.NR_CANDIDATO])),
-      nome: texto(f[c.NM_URNA_CANDIDATO]) || texto(f[c.NM_CANDIDATO]), partido: texto(f[c.SG_PARTIDO]),
-      situacao: situacao(f[c.DS_SIT_TOT_TURNO]),
-      col: coligacao ? texto(f[c.NM_COLIGACAO]) : '', comp: coligacao ? texto(f[c.DS_COMPOSICAO_COLIGACAO]) : '',
-    });
-  }
   const t = TITULAR[num(f[c.CD_CARGO])];
   if (!t || vistosVice.has(f[c.SQ_CANDIDATO])) return;
   vistosVice.add(f[c.SQ_CANDIDATO]);
@@ -169,7 +157,8 @@ await lerCsv(zip('cand'), porUf, (f, c) => {
     if (c.NM_TIPO_DESTINACAO_VOTOS === undefined && /INAPTO/i.test(texto(f[c.DS_SITUACAO_CANDIDATURA]))) k.inapto = true;
     g.cands.set(id, k);
   }
-  const v = num(f[c.QT_VOTOS_NOMINAIS]);
+  // 1998 (arquivo refeito em 2023): QT_VOTOS_NOMINAIS vem 0 e os votos estão em QT_VOTOS_NOMINAIS_VALIDOS
+  const v = Math.max(num(f[c.QT_VOTOS_NOMINAIS]), num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]));
   k.votos += v;
   const m = munDe(g, chave);
   m.c.set(id, (m.c.get(id) ?? 0) + v);
@@ -193,8 +182,6 @@ for (const g of grupos.values()) for (const k of g.cands.values()) {
   delete k.inapto;
 }
 console.log(`candidatos lidos: ${grupos.size} cargos/turnos/UFs`);
-const presPorPartido = ![...grupos.values()].some((g) => g.slug === 'presidente');
-if (presPorPartido) console.log(`sem Presidente na votação por candidato: vem da votação por partido (${presCons.size} candidatos no cadastro)`);
 
 // 3) votos dos partidos (legenda + nominais válidos)
 await lerCsv(zip('part'), porUf, (f, c) => {
@@ -202,27 +189,6 @@ await lerCsv(zip('part'), porUf, (f, c) => {
   const slug = SLUG[num(f[c.CD_CARGO])];
   if (!slug) return;
   const uf = f[c.SG_UF].toLowerCase();
-  if (slug === 'presidente' && presPorPartido) {
-    const turno = num(f[c.NR_TURNO]);
-    const kc = presCons.get(`${turno}|${num(f[c.NR_PARTIDO])}`);
-    const chaveP = chaveMun(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
-    if (!chaveP) return avisar(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
-    const gp = grupo('presidente', turno, uf);
-    gp.atualizado ||= `${f[c.DT_GERACAO]} ${f[c.HH_GERACAO]}`;
-    munDe(gp, chaveP);
-    if (kc) {
-      let k = gp.cands.get(kc.id);
-      if (!k) {
-        k = { ...kc, vices: vices.get(`BR|1|${kc.n}`) ?? [], votos: 0 };
-        k.eleito = ehEleito(k.situacao);
-        gp.cands.set(kc.id, k);
-      }
-      const v = num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]);
-      k.votos += v;
-      const m = munDe(gp, chaveP);
-      m.c.set(kc.id, (m.c.get(kc.id) ?? 0) + v);
-    }
-  }
   const g = grupos.get(`${slug}/${num(f[c.NR_TURNO])}/${uf}`);
   if (!g) return;
   const chave = chaveMun(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);

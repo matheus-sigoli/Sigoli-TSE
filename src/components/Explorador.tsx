@@ -17,6 +17,7 @@ import {
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
+import { temLocais, temPresidente } from '@/lib/anos';
 import Filtros from './Filtros';
 import Painel from './Painel';
 import Carregando from './Carregando';
@@ -50,7 +51,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const CIDADE_UNICA: Record<string, string> = { df: '5300108' };
   const cidadeUnica = CIDADE_UNICA[abr] ?? null;
   const cid = abr !== 'br' && abr !== 'exterior' ? params.get('cid') ?? cidadeUnica : null;
-  const nivel = lerNivel(params.get('nivel'), abr, !!cid);
+  const nivelUrl = lerNivel(params.get('nivel'), abr, !!cid);
+  // ano sem locais (1998): a cidade abre por zonas
+  const nivel: Nivel = nivelUrl === 'locais' && !temLocais(ano) ? 'zonas' : nivelUrl;
 
   // preferências (o script do <head> já aplicou no <html>)
   const [daltonico, setDaltonico] = useState(false);
@@ -120,6 +123,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       if (cid && cid !== cidadeUnica) p.set('cid', cid);
       if (nivel !== 'municipios') p.set('nivel', nivel);
       const q = p.toString();
+      // 1998 não tem Presidente: vai para Governador (no Brasil, São Paulo)
+      if (cargoSlug === 'presidente' && !temPresidente(outro)) return `${rotaDe(abr === 'br' || abr === 'exterior' ? 'sp' : abr, 'governador', outro)}${q ? `?${q}` : ''}`;
       return `${rotaDe(abr, cargoSlug, outro)}${q ? `?${q}` : ''}`;
     },
     [abr, cargo, cargoSlug, turno, nivel, cid, cidadeUnica],

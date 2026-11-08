@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { textoSobre } from '@/lib/cores';
 import { preCarregar, urlResultadoNivel, type Local, type Nivel } from '@/lib/dados';
+import { temPresidente } from '@/lib/anos';
 import { CARGOS, UFS, type Arquivo, type Cargo, type CargoSlug, type Turno } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
 import { bancada, type Foco, type Linha, type Visao } from '@/lib/resultados';
@@ -96,7 +97,7 @@ function Painel(p: Props) {
       />
 
       <nav className="abas" aria-label="Cargo">
-        {CARGOS.map((c) => (
+        {CARGOS.filter((c) => c.slug !== 'presidente' || temPresidente(p.ano)).map((c) => (
           <Link
             key={c.slug}
             href={p.hrefCargo(c.slug)}

@@ -11,6 +11,10 @@ export interface Eleicao {
   disponivel: boolean;
   /** destino do card quando disponível */
   rota?: string;
+  /** sem locais de votação no TSE (1998): a cidade só tem a visão por zonas */
+  semLocais?: boolean;
+  /** sem Presidente por município nos dados abertos do TSE (1998) */
+  semPresidente?: boolean;
 }
 
 export const ELEICOES: Eleicao[] = [
@@ -44,6 +48,12 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1998, titulo: 'Eleições Gerais 1998', datas: '4 e 25 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: false,
+    cargos: 'Governador e Senador', disponivel: false, semLocais: true, semPresidente: true,
   },
 ];
+
+/** o ano tem locais de votação (visão Locais na cidade) */
+export const temLocais = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semLocais;
+
+/** o ano tem o Presidente por município */
+export const temPresidente = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semPresidente;
