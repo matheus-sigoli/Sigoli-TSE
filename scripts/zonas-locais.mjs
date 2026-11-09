@@ -67,10 +67,10 @@ const ZMBRA = (() => {
 /** só a eleição geral de outubro do ano (os arquivos trazem também as suplementares do mesmo mandato) */
 const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
 
+
 // código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)
 function cargoDe(cdCargo, turno) {
-  // deputados ficam de fora (ADR 0017)
-  const c = { 1: 'presidente', 3: 'governador', 5: 'senador' }[cdCargo];
+  const c = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
   return c && (turno === 1 || turno === 2) ? [c, turno] : null;
 }
 
@@ -416,9 +416,7 @@ for (const E of estados.values()) {
     writeFileSync(p, JSON.stringify(obj));
   };
   for (const [chaveCargo, a] of E.acc) {
-    // ADR 0018: sem bairros
-    const niveis = [['zonas', 'zonas'], ['zonas-cidade', 'zonasCidade'], ['locais', 'locais']];
-    for (const [nivel, chaveAcc] of niveis) {
+    for (const [nivel, chaveAcc] of [['zonas', 'zonas'], ['zonas-cidade', 'zonasCidade'], ['bairros', 'bairros'], ['locais', 'locais']]) {
       const mun = {};
       const tot = { t: [0, 0, 0, 0, 0, 0], c: new Array(a.b.cands.length).fill(0), p: new Array(a.b.partidos.length).fill(0) };
       for (const [id, r] of a[chaveAcc]) {
@@ -449,7 +447,10 @@ for (const E of estados.values()) {
 
   // cadastro dos bairros: origem 'i' (polígono do IBGE) ou 't' (nome do TSE, sem área), centro ponderado pelo eleitorado
   const bairros = [...E.bairros.values()].sort((x, y) => x.id.localeCompare(y.id));
-  // (o cadastro dos bairros, public/data/{ano}/bairros, saiu do site — ADR 0018)
+  gravar(`bairros/${uf}.json`, {
+    campos: ['id', 'ibge', 'nome', 'origem', 'lon', 'lat', 'eleitorado', 'locais'],
+    b: bairros.map((b) => [b.id, b.ibge, b.nome, b.origem, b.w ? +(b.sx / b.w).toFixed(5) : null, b.w ? +(b.sy / b.w).toFixed(5) : null, b.eleitorado, b.locais]),
+  });
 
   // áreas das zonas
   const nZonas = desenharZonas(uf, lista);

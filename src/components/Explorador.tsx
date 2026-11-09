@@ -52,8 +52,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const cidadeUnica = CIDADE_UNICA[abr] ?? null;
   const cid = abr !== 'br' && abr !== 'exterior' ? params.get('cid') ?? cidadeUnica : null;
   const nivelUrl = lerNivel(params.get('nivel'), abr, !!cid);
-  // ano sem locais (1998): a cidade abre por zonas
-  const nivel: Nivel = nivelUrl === 'locais' && !temLocais(ano) ? 'zonas' : nivelUrl;
+  // ano sem locais (1998): a cidade abre por zonas (sem locais, sem bairros)
+  const nivel: Nivel = (nivelUrl === 'locais' || nivelUrl === 'bairros') && !temLocais(ano) ? 'zonas' : nivelUrl;
 
   // preferências (o script do <head> já aplicou no <html>)
   const [daltonico, setDaltonico] = useState(false);
@@ -146,8 +146,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     [malhaUf.dados, abr, nivel],
   );
   const malha = cid ? { dados: malhaCidade.dados?.malha ?? null, carregando: malhaCidade.carregando } : { dados: malhaEstado, carregando: malhaUf.carregando };
-  // bairros saíram do site (ADR 0018): sem cadastro, os nomes vêm do cadastro dos locais
-  const bairros = useBairros(ano, null);
+  const bairros = useBairros(ano, cid ? abr : null);
   const locais = useLocais(ano, nivel === 'zonas' || cid ? abr : null);
   // zona → municípios que ela cobre (para os nomes)
   const municipiosDaZona = useMemo(() => {
@@ -382,7 +381,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       const regs = abr === 'exterior' ? (indiceMunicipios.porPais.get(id)?.cidades ?? []).map((c) => arq.mun[c]).filter(Boolean) : [arq.mun[id]].filter(Boolean);
       if (!regs.length) return { titulo: nome, linha: 'Sem votos neste cargo' };
-      const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: zonas e locais' : '';
+      const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: zonas, bairros e locais' : '';
       return { titulo: nome, linha: linhaVencedor(arq, regs) + dica };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps

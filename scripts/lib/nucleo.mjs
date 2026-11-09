@@ -25,7 +25,8 @@ export const CARGOS = [
   { slug: 'presidente', nome: 'Presidente', cd: 1, eleicao: 'federal', tipo: 'maj', turnos: [1, 2] },
   { slug: 'governador', nome: 'Governador', cd: 3, eleicao: 'estadual', tipo: 'maj', turnos: [1, 2] },
   { slug: 'senador', nome: 'Senador', cd: 5, eleicao: 'estadual', tipo: 'maj', turnos: [1] },
-  // deputados (federal e estadual) saíram do site em 02/11/2026 (ADR 0017)
+  { slug: 'deputado-federal', nome: 'Deputado Federal', cd: 6, eleicao: 'estadual', tipo: 'prop', turnos: [1] },
+  { slug: 'deputado-estadual', nome: 'Deputado Estadual', cd: 7, cdDF: 8, eleicao: 'estadual', tipo: 'prop', turnos: [1] },
 ];
 
 export const UFS = [

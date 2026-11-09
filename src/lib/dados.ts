@@ -118,8 +118,7 @@ export type NivelArquivo = 'municipios' | 'zonas' | 'zonas-cidade' | 'bairros' |
 
 export const lerNivel = (s: string | null, abr: string, cidade: boolean): Nivel => {
   if (abr === 'br' || abr === 'exterior') return 'municipios';
-  // visão da cidade: zonas ou locais de votação (bairros saíram, ADR 0018)
-  if (cidade) return s === 'locais' ? 'locais' : 'zonas';
+  if (cidade) return s === 'bairros' || s === 'locais' ? s : 'zonas';
   return s === 'zonas' ? 'zonas' : 'municipios';
 };
 
@@ -186,7 +185,7 @@ const VAZIA: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: 
 
 /** Áreas de 2026 com os ids do local de outro ano; áreas que foram para o mesmo local viram uma só feição. */
 /** a: área de 2026 → local do ano; i: locais incluídos; f: cidades criadas depois cujas áreas entram nesta */
-type TrocaAreas = { a: Record<string, string>; i?: Record<string, string[]>; f?: string[] };
+type TrocaAreas = { a: Record<string, string>; i?: Record<string, string[]>; f?: string[]; d?: string[] };
 function trocarIds(fc: GeoJSON.FeatureCollection, troca: TrocaAreas): GeoJSON.FeatureCollection {
   const porId = new Map<string, GeoJSON.Position[][][][]>(); // local do ano → multipolígonos das áreas de 2026
   for (const f of fc.features) {
@@ -257,6 +256,15 @@ function buscarMalhaCidade(ano: number, uf: string, ibge: string, nivel: 'zonas'
             areas = { type: 'FeatureCollection', features: [...areas.features, ...anexa.features] };
           }
           if (troca) areas = trocarIds(areas, troca);
+          if (troca?.d?.length) {
+            // área de 2026 com mais de um local do ano: os pedaços repartidos (scripts/areas-ano.mjs)
+            const div = toGeoJSON(await buscar<Topology>(`${geoDoAno(ano, 'locais-areas')}/${uf}-div.json`), 'locais');
+            const ds = new Set(troca.d);
+            const pedacos = div.features.filter((f) => ds.has(String(f.id))).map((f) => ({
+              ...f, properties: { ...f.properties, ...(troca.i?.[String(f.id)] ? { inclui: troca.i[String(f.id)] } : {}) },
+            }));
+            areas = { type: 'FeatureCollection', features: [...areas.features.filter((f) => !ds.has(String(f.id))), ...pedacos] };
+          }
           const bbox = caixaGeo({ type: 'FeatureCollection', features: [...cidade, ...areas.features] });
           return { malha: { municipios: areas, linhas, bbox }, fundo, pontos };
         }

@@ -1,6 +1,6 @@
 # ADR 0018 — Bairros fora da visão da cidade
 
-- Status: Aceita (substitui as partes de bairros da ADR 0009 e da ADR 0011)
+- Status: Substituída pela ADR 0019
 - Data: 02/11/2026
 
 ## Contexto
