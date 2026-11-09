@@ -48,7 +48,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1998, titulo: 'Eleições Gerais 1998', datas: '4 e 25 de outubro',
-    cargos: 'Governador e Senador', disponivel: true, rota: '/1998/sp/governador?t=2', semLocais: true, semPresidente: true,
+    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/1998/br/presidente', semLocais: true,
   },
 ];
 
