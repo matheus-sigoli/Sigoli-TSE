@@ -192,6 +192,7 @@ for (const g of grupos.values()) for (const k of g.cands.values()) {
   const comCand = new Set([...grupos.values()].map((g) => g.uf));
   const faltam = [];
   await lerCsvDoZip(zip('det'), porUf, (f, c) => { const uf = String(f[c.SG_UF]).toLowerCase(); if (uf !== 'br' && uf !== 'zz' && uf !== 'vt' && SLUG[num(f[c.CD_CARGO])] && SLUG[num(f[c.CD_CARGO])] !== 'presidente' && !comCand.has(uf) && !faltam.includes(uf)) faltam.push(uf); });
+  const porPartido = new Map();
   for (const uf of faltam) {
     const z = join(CACHE, `votacao_secao_${ANO}_${uf.toUpperCase()}.zip`);
     await baixar(`${CDN}/votacao_secao/votacao_secao_${ANO}_${uf.toUpperCase()}.zip`, z);
@@ -205,8 +206,13 @@ for (const g of grupos.values()) for (const k of g.cands.values()) {
       if (nr === 95 || nr === 96 || nr === 97) return; // brancos e nulos vêm do detalhe
       const turno = num(f[c.NR_TURNO]);
       const cad = titulares.get(`${uf}|${cd}|${turno}|${nr}`) ?? titulares.get(`${uf}|${cd}|1|${nr}`); // cadastro só do 1º turno
-      if (!cad) return; // voto de legenda (proporcional) ou número sem candidato
       const chave = chaveMun(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
+      // proporcional: voto de legenda e voto nominal também contam para o partido (resolvido no fim, pelo número)
+      if (CARGO[slug].tipo === 'prop' && chave) {
+        const pk = `${slug}|${turno}|${uf}|${chave}|${String(nr).slice(0, 2)}`;
+        porPartido.set(pk, (porPartido.get(pk) ?? 0) + num(f[c.QT_VOTOS]));
+      }
+      if (!cad) return; // voto de legenda (proporcional) ou número sem candidato
       if (!chave) return avisar(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
       const g = grupo(slug, turno, uf);
       const fc = cad.f, cc = cad.c;
@@ -230,6 +236,19 @@ for (const g of grupos.values()) for (const k of g.cands.values()) {
       linhas++;
     });
     console.log(`${uf}: sem votação por candidato no arquivo do ano; somada a votação por seção (${linhas} linhas)`);
+    // votos dos partidos (o arquivo de partidos também não tem a UF): número do partido → sigla pelos candidatos
+    for (const [pk, v] of porPartido) {
+      const [slug, turno, u, chave, pn] = pk.split('|');
+      if (u !== uf) continue;
+      const g = grupos.get(`${slug}/${turno}/${uf}`);
+      const k = g && [...g.cands.values()].find((x) => x.n.slice(0, 2) === pn);
+      if (!k) continue;
+      let pp = g.partidos.get(k.partido);
+      if (!pp) g.partidos.set(k.partido, (pp = { sg: k.partido, n: pn, fed: '', coligacao: k.col, votos: 0 }));
+      pp.votos += v;
+      const m = munDe(g, chave);
+      m.p.set(k.partido, (m.p.get(k.partido) ?? 0) + v);
+    }
     // 2º turno com o cadastro do 1º: o mais votado é eleito
     for (const g of grupos.values()) if (g.uf === uf && g.turno === 2) {
       [...g.cands.values()].sort((x, y) => y.votos - x.votos).forEach((k, i) => { k.situacao = i === 0 ? 'Eleito' : 'Não eleito'; k.eleito = i === 0; });

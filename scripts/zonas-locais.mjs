@@ -210,6 +210,7 @@ function somarLinha(E, f, c) {
       // candidatura indeferida retotalizada (2014 e antes): na totalização final os votos dele são nulos
       nulos: new Set(b.cands.filter((x) => x.anulado?.startsWith('Nulo')).map((x) => String(num(x.n)))),
       idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
+      validoC: new Set(b.cands.filter((x, i) => (b.total?.c?.[i] ?? 1) > 0).map((x) => String(num(x.n)))),
       prop: b.tipo === 'prop', vagas: cargo === 'senador' ? Math.max(1, b.vagas || 1) : 1,
     };
     E.acc.set(chaveCargo, a);
@@ -241,8 +242,9 @@ function somarLinha(E, f, c) {
     else if (a.prop) {
       // anulados (registro indeferido): o TSE os deixa fora de válidos e de nulos
       if (a.anulados.has(String(votavel))) continue;
-      // candidato fora do arquivo do município (votos não válidos na totalização: indeferido, nulo): nulo, como no TSE
-      if (String(votavel).length > 2 && !a.idxC.has(String(votavel))) { r.t[5] += votos; continue; }
+      // candidato fora do arquivo do município ou com 0 voto na totalização (indeferido, renúncia, nulo): os votos
+      // dele na urna são nulos, como no TSE
+      if (String(votavel).length > 2 && !a.validoC.has(String(votavel))) { r.t[5] += votos; continue; }
       const partido = String(votavel).length <= 2 ? String(votavel) : String(votavel).slice(0, 2);
       const i = a.idxP.get(partido);
       if (i !== undefined) { r.p[i] += votos; r.t[3] += votos; }
