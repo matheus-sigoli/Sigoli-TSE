@@ -298,7 +298,9 @@ await lerCsv(zip('det'), porUf, (f, c) => {
   // 1994: válidos, legenda e QT_TOTAL_VOTOS_NULOS vêm 0 → nulos = QT_VOTOS_NULOS e válidos = comparecimento − brancos − nulos
   const nulos = num(f[c.QT_TOTAL_VOTOS_NULOS]) || num(f[c.QT_VOTOS_NULOS]);
   const leg = num(f[c.QT_TOTAL_VOTOS_LEG_VALIDOS]), tot = num(f[c.QT_TOTAL_VOTOS_VALIDOS]);
-  t[3] += !tot && !leg ? num(f[c.QT_COMPARECIMENTO]) - num(f[c.QT_VOTOS_BRANCOS]) - nulos : Math.max(tot, num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]) + leg);
+  // senador em 1994: 2 vagas, cada eleitor deu 2 votos (brancos e nulos já contam os 2) → válidos = 2 × comparecimento − brancos − nulos
+  const votosPorEleitor = ANO === 1994 && slug === 'senador' ? 2 : 1;
+  t[3] += !tot && !leg ? votosPorEleitor * num(f[c.QT_COMPARECIMENTO]) - num(f[c.QT_VOTOS_BRANCOS]) - nulos : Math.max(tot, num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]) + leg);
   t[4] += num(f[c.QT_VOTOS_BRANCOS]); t[5] += nulos;
 });
 if (naoMapeados.size) console.warn(`municípios sem código IBGE (fora dos mapas): ${[...naoMapeados].slice(0, 20).map(([k, n]) => `${k} ${n}`).join(', ')}`);
