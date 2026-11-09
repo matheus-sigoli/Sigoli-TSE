@@ -59,6 +59,8 @@ const situacao = (s) => SITUACAO[texto(s).toUpperCase()] ?? (texto(s) ? texto(s)
 // ------------------------------------------------------------------ municípios (IBGE) e exterior (país)
 const mun2026 = JSON.parse(readFileSync('public/data/2026/municipios.json', 'utf8'));
 const ibgeDe = new Map(mun2026.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m.ibge]));
+// Boa Esperança do Norte (MT) de 2001 a 2004, extinto depois (o de 2025 tem outro código no TSE): área de Nova Ubiratã
+if (!ibgeDe.has('91065')) ibgeDe.set('91065', '5106240');
 const paises = new Map(readFileSync('data/exterior/cidades-pais.csv', 'utf8').split(/\r?\n/).slice(1).filter(Boolean)
   .map((l) => l.split(';')).map(([tse, , iso, pais, n]) => [pad5(tse), { pais: iso, paisNum: n, nomePais: pais }]));
 // 2006: o exterior vem por país (o "município" é o próprio país): casa pelo nome do país da tabela

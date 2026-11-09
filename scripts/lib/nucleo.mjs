@@ -127,6 +127,17 @@ export function normalizar(raw) {
 }
 
 // ------------------------------------------------------------------ montagem
+/**
+ * Proporcional: válidos = soma dos partidos (nominais + legenda), para as fatias somarem 100% e zonas, bairros e
+ * locais baterem com o município. O total de válidos do TSE às vezes difere por votos sub judice (até ~0,5%);
+ * diferença maior (1994: arquivo de partidos sem a legenda em SP, SC, SE e TO) fica como está. Altera t no lugar.
+ */
+export function validosDosPartidos(t, p) {
+  if (!t || !Array.isArray(p)) return;
+  const sp = p.reduce((s, x) => s + x, 0);
+  const d = sp - t[3];
+  if (sp > 0 && d && Math.abs(d) <= 0.02 * t[3]) { t[3] = sp; t[5] = Math.max(0, t[5] - d); }
+}
 const T = (t) => [t.eleitorado, t.comparecimento, t.abstencao, t.validos, t.brancos, t.nulos];
 
 /**
@@ -156,6 +167,7 @@ export function montarArquivo(cargo, turno, abr, total, municipios) {
       reg.c = c; // esparso: [índice, votos, índice, votos, ...]
       reg.p = new Array(parts.length).fill(0);
       for (const p of m.partidos) if (idxP.has(p.sg)) reg.p[idxP.get(p.sg)] = p.votos;
+      validosDosPartidos(reg.t, reg.p);
     } else {
       reg.c = new Array(cands.length).fill(0);
       for (const x of m.candidatos) if (idxC.has(x.id)) reg.c[idxC.get(x.id)] = x.votos;
@@ -183,7 +195,11 @@ export function montarArquivo(cargo, turno, abr, total, municipios) {
       ...(c.col ? { col: c.col, comp: c.comp } : {}),
     })),
     partidos: parts.map((p) => ({ sg: p.sg, n: p.n, ...(p.fed ? { fed: p.fed } : {}), ...(p.coligacao ? { col: p.coligacao } : {}) })),
-    total: { t: T(total.totais), c: cands.map((c) => c.votos), p: parts.map((p) => p.votos) },
+    total: (() => {
+      const t = T(total.totais), p = parts.map((x) => x.votos);
+      if (prop) validosDosPartidos(t, p);
+      return { t, c: cands.map((c) => c.votos), p };
+    })(),
     mun,
   };
 }
