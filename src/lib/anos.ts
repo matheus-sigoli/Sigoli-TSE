@@ -54,7 +54,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1994, titulo: 'Eleições Gerais 1994', datas: '3 de outubro e 15 de novembro',
-    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: false, semLocais: true, semZonas: true,
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/1994/br/presidente', semLocais: true, semZonas: true,
   },
 ];
 
