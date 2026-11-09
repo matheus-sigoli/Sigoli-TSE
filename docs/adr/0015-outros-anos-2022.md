@@ -113,3 +113,4 @@ não existe mais para 2022 (404).
   scripts/zonas-svg-ano.mjs; a zona vem do rótulo). Zona do desenho que não existe no ano entra na zona onde cai o
   centro dela (desenho anterior ou zonas de 2022): 2006 tem 17 zonas (18–21 voltam a 2, 3, 12 e 13); em 2018 a 7 e a 12
   entram na 16. 2022 continua pelo ZMBRA_2022 e 2026 pelo DF.svg.
+- As zonas (recortadas pela malha fina) passam por scripts/simplificar-topo.mjs (~65 m, Douglas-Peucker por arco) para o site não crescer: 325 → 137 MB.

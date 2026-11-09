@@ -52,6 +52,9 @@ jobs:
           rm -rf public/data/2026/*/*/locais public/data/2026/*/*/zonas-cidade   # recriados pelo script
           node --max-old-space-size=10000 scripts/zonas-locais.mjs --baixar
 
+      - name: Simplificar as bordas das zonas (~65 m)
+        run: node scripts/simplificar-topo.mjs --tol 0.0006 public/geo/zonas/*.json public/geo/zonas-cidade/*.json
+
       - name: Quem pinta o mapa (regras de cores, ADR 0014)
         run: node scripts/pintam.mjs
 

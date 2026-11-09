@@ -91,6 +91,9 @@ jobs:
         if: ${{ env.ANO >= 2002 }}
         run: node --max-old-space-size=12000 scripts/zonas-locais.mjs --ano $ANO --baixar
 
+      - name: Simplificar as bordas das zonas (~65 m)
+        run: node scripts/simplificar-topo.mjs --tol 0.0006 public/geo/$ANO/zonas/*.json public/geo/$ANO/zonas-cidade/*.json
+
       - name: Áreas dos locais (Atlas 2026)
         if: ${{ env.ANO >= 2002 }}
         run: node scripts/areas-ano.mjs --ano $ANO
