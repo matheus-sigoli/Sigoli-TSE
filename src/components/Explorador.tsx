@@ -17,6 +17,7 @@ import {
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
+import { definirAnoCores } from '@/lib/cores';
 import { temLocais, temPresidente, temZonas } from '@/lib/anos';
 import Filtros from './Filtros';
 import Painel from './Painel';
@@ -234,8 +235,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     const focoValido = foco && !arq.resumo && (foco.tipo === 'c' ? foco.idx < arq.cands.length : foco.idx < arq.partidos.length) ? foco : null;
     const base = resultadoEstado.dados;
     const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p, pintam: base.pintam } : undefined;
+    definirAnoCores(ano);
     return calcularVisao(arq, { abr, municipios: recorteMunicipios }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
-  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados]);
+  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados, ano]);
 
   // ---- nomes
   const nomeZona = useCallback(

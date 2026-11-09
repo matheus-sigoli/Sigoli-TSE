@@ -44,7 +44,14 @@ const APELIDOS: Record<string, string> = {
   PFL: 'DEM',
   // 2002: o PPB é o partido que em 2003 passou a se chamar PP
   PPB: 'PP',
+  // 1994: PTRB e PDC com as cores de PRTB e DC (pedido do usuário); PPR, PRN, PTR e o PSD antigo têm cor própria
+  PTRB: 'PRTB', PDC: 'DC',
 };
+
+// O PSD de antes de 2011 (número 41, incorporado ao PTB em 2003) não é o PSD de hoje (55): cor própria.
+let anoCores = 2026;
+/** Ano da eleição exibida (as siglas que mudaram de partido com o tempo dependem dele). */
+export const definirAnoCores = (ano: number) => { anoCores = ano; };
 
 
 // ------------------------------------------------------------------ utilidades de cor
@@ -83,7 +90,11 @@ function hashHue(s: string) {
 
 const cacheGerado = new Map<string, EntradaPaleta>();
 /** Sigla canônica (apelidos do TSE resolvidos): é o que identifica "o mesmo partido". */
-export const chavePartido = (sigla: string) => { const k = normaliza(sigla); return APELIDOS[k] ?? k; };
+export const chavePartido = (sigla: string) => {
+  const k = normaliza(sigla);
+  if (k === 'PSD' && anoCores < 2011) return 'PSD41';
+  return APELIDOS[k] ?? k;
+};
 
 export function paletaDoPartido(sigla: string): EntradaPaleta {
   const k = chavePartido(sigla);
