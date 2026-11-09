@@ -6,7 +6,7 @@ import type { Local, Malha, Nivel, Regiao } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
-import { ELEICOES, temLocais } from '@/lib/anos';
+import { ELEICOES, temLocais, temZonas } from '@/lib/anos';
 
 interface Props {
   ano: number;
@@ -43,9 +43,9 @@ const NIVEIS_ESTADO: { n: Nivel; rotulo: string }[] = [
   { n: 'municipios', rotulo: 'Municípios' },
   { n: 'zonas', rotulo: 'Zonas' },
 ];
-// visão da cidade: zonas e locais de votação (bairros saíram, ADR 0018)
 const NIVEIS_CIDADE: { n: Nivel; rotulo: string }[] = [
   { n: 'zonas', rotulo: 'Zonas' },
+  { n: 'bairros', rotulo: 'Bairros' },
   { n: 'locais', rotulo: 'Locais' },
 ];
 const DICA_CIDADE: Record<string, string> = {
@@ -119,7 +119,7 @@ function Filtros(p: Props) {
         </select>
       </div>
 
-      {p.abr !== 'br' && p.abr !== 'exterior' ? (
+      {p.abr !== 'br' && p.abr !== 'exterior' && temZonas(p.ano) ? (
         <div className="campo campo-nivel">
           {p.cidade ? (
             <div className="cidade-aberta">
@@ -130,12 +130,12 @@ function Filtros(p: Props) {
           ) : null}
           <span className="campo-rotulo" id="rot-nivel">Ver por</span>
           <div className="segmentado nivel" role="group" aria-labelledby="rot-nivel">
-            {(p.cidade ? NIVEIS_CIDADE.filter((x) => x.n !== 'locais' || temLocais(p.ano)) : NIVEIS_ESTADO).map(({ n, rotulo }) => (
+            {(p.cidade ? NIVEIS_CIDADE.filter((x) => x.n === 'zonas' || temLocais(p.ano)) : NIVEIS_ESTADO).map(({ n, rotulo }) => (
               <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
             ))}
           </div>
           <p className="marca-sub dica-nivel" style={{ marginTop: 6 }}>
-            {p.cidade ? DICA_CIDADE[p.nivel] : 'Dois cliques num município abrem as zonas e os locais de votação dele.'}
+            {p.cidade ? DICA_CIDADE[p.nivel] : 'Dois cliques num município abrem as zonas, os bairros e os locais de votação dele.'}
             {' '}Shift + clique soma várias áreas.
           </p>
         </div>

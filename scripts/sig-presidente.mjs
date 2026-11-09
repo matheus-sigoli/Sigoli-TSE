@@ -34,7 +34,7 @@ const zipCons = join(CACHE, `consulta_cand_${ANO}.zip`);
 await baixar(`${CDN}/detalhe_votacao_munzona/detalhe_votacao_munzona_${ANO}.zip`, zipDet);
 await baixar(`${CDN}/consulta_cand/consulta_cand_${ANO}.zip`, zipCons);
 const cargo = CARGOS.find((c) => c.slug === 'presidente');
-const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
+const ordinaria = (dt) => new RegExp(`^\\d{2}/${ANO === 1994 ? "1[01]" : "10"}/${ANO}$`).test(String(dt).trim()); // 1994: 2º turno em 15/11
 
 /** CSV do SIG (latin1, ";", sem aspas; alguns nomes têm quebra de linha no meio): junta até ter todos os campos */
 function lerSig(zip) {
@@ -66,6 +66,8 @@ function lerSig(zip) {
 // municípios: IBGE pelo código TSE; nomes do detalhe (o SIG só tem o nome)
 const mun2026 = JSON.parse(readFileSync('public/data/2026/municipios.json', 'utf8'));
 const ibgeDe = new Map(mun2026.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m.ibge]));
+// Boa Esperança do Norte (MT) de 2001 a 2004, extinto depois (o de 2025 tem outro código no TSE): área de Nova Ubiratã
+if (!ibgeDe.has('91065')) ibgeDe.set('91065', '5106240');
 const origem = new Map(fusoesDoAno(ANO).map((f) => [f.novo, f.origem]));
 const porNome = new Map(); // `${uf}|${nome}` → chave (IBGE no Brasil, código TSE no exterior)
 const totMun = new Map(), totPar = new Map(); // chave → [6], `${ibge}-${zona}` → [6]

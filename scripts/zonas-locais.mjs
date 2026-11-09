@@ -65,12 +65,12 @@ const ZMBRA = (() => {
 })();
 
 /** só a eleição geral de outubro do ano (os arquivos trazem também as suplementares do mesmo mandato) */
-const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
+const ordinaria = (dt) => new RegExp(`^\\d{2}/${ANO === 1994 ? "1[01]" : "10"}/${ANO}$`).test(String(dt).trim()); // 1994: 2º turno em 15/11
+
 
 // código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)
 function cargoDe(cdCargo, turno) {
-  // deputados ficam de fora (ADR 0017)
-  const c = { 1: 'presidente', 3: 'governador', 5: 'senador' }[cdCargo];
+  const c = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
   return c && (turno === 1 || turno === 2) ? [c, turno] : null;
 }
 
@@ -159,6 +159,8 @@ const pad5 = (s) => String(num(s)).padStart(5, '0');
 // ------------------------------------------------------------------ principal
 const municipios = JSON.parse(readFileSync(join(DADOS, 'municipios.json'), 'utf8'));
 const ibgeDe = new Map(municipios.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m.ibge]));
+// Boa Esperança do Norte (MT) de 2001 a 2004, extinto depois (o de 2025 tem outro código no TSE): área de Nova Ubiratã
+if (!ibgeDe.has('91065')) ibgeDe.set('91065', '5106240');
 
 // 2006: o TSE não publica o cadastro de locais (eleitorado_local_votacao começa em 2010); as seções e os
 // locais vêm do detalhe da votação por seção (QT_APTOS, NR_LOCAL_VOTACAO) e o nome/ponto do mesmo código em 2010+
@@ -210,6 +212,7 @@ function somarLinha(E, f, c) {
       // candidatura indeferida retotalizada (2014 e antes): na totalização final os votos dele são nulos
       nulos: new Set(b.cands.filter((x) => x.anulado?.startsWith('Nulo')).map((x) => String(num(x.n)))),
       idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
+      validoC: new Set(b.cands.filter((x, i) => (b.total?.c?.[i] ?? 1) > 0).map((x) => String(num(x.n)))),
       prop: b.tipo === 'prop', vagas: cargo === 'senador' ? Math.max(1, b.vagas || 1) : 1,
     };
     E.acc.set(chaveCargo, a);
@@ -229,6 +232,7 @@ function somarLinha(E, f, c) {
     let r = mapa.get(id);
     if (!r) {
       r = { t: [0, 0, 0, 0, 0, 0], c: a.prop ? null : new Array(a.b.cands.length).fill(0), p: a.prop ? new Array(a.b.partidos.length).fill(0) : null, votosTotais: 0 };
+      if (a.prop) { r.an = new Array(a.b.partidos.length).fill(0); r.mun = sigla === 'z' ? 'UF' : ibgeMun; }
       mapa.set(id, r);
     }
     // o eleitorado de cada seção entra uma vez por cargo e unidade
@@ -240,7 +244,16 @@ function somarLinha(E, f, c) {
     else if (!a.prop && a.nulos.has(String(votavel))) r.t[5] += votos;
     else if (a.prop) {
       // anulados (registro indeferido): o TSE os deixa fora de válidos e de nulos
-      if (a.anulados.has(String(votavel))) continue;
+      if (a.anulados.has(String(votavel))) {
+        // guardado para a conciliação: quando a totalização deu estes votos à legenda (art. 175, § 4º, do Código
+        // Eleitoral), o partido no município tem mais votos que a soma das urnas e a diferença vem daqui
+        const ia = a.idxP.get(String(votavel).slice(0, 2));
+        if (ia !== undefined) r.an[ia] += votos;
+        continue;
+      }
+      // candidato fora do arquivo do município ou com 0 voto na totalização (indeferido, renúncia, nulo): os votos
+      // dele na urna são nulos, como no TSE
+      if (String(votavel).length > 2 && !a.validoC.has(String(votavel))) { r.t[5] += votos; continue; }
       const partido = String(votavel).length <= 2 ? String(votavel) : String(votavel).slice(0, 2);
       const i = a.idxP.get(partido);
       if (i !== undefined) { r.p[i] += votos; r.t[3] += votos; }
@@ -416,9 +429,8 @@ for (const E of estados.values()) {
     writeFileSync(p, JSON.stringify(obj));
   };
   for (const [chaveCargo, a] of E.acc) {
-    // ADR 0018: sem bairros
-    const niveis = [['zonas', 'zonas'], ['zonas-cidade', 'zonasCidade'], ['locais', 'locais']];
-    for (const [nivel, chaveAcc] of niveis) {
+    for (const [nivel, chaveAcc] of [['zonas', 'zonas'], ['zonas-cidade', 'zonasCidade'], ['bairros', 'bairros'], ['locais', 'locais']]) {
+      if (a.prop) conciliar(a, a[chaveAcc]);
       const mun = {};
       const tot = { t: [0, 0, 0, 0, 0, 0], c: new Array(a.b.cands.length).fill(0), p: new Array(a.b.partidos.length).fill(0) };
       for (const [id, r] of a[chaveAcc]) {
@@ -449,13 +461,54 @@ for (const E of estados.values()) {
 
   // cadastro dos bairros: origem 'i' (polígono do IBGE) ou 't' (nome do TSE, sem área), centro ponderado pelo eleitorado
   const bairros = [...E.bairros.values()].sort((x, y) => x.id.localeCompare(y.id));
-  // (o cadastro dos bairros, public/data/{ano}/bairros, saiu do site — ADR 0018)
+  gravar(`bairros/${uf}.json`, {
+    campos: ['id', 'ibge', 'nome', 'origem', 'lon', 'lat', 'eleitorado', 'locais'],
+    b: bairros.map((b) => [b.id, b.ibge, b.nome, b.origem, b.w ? +(b.sx / b.w).toFixed(5) : null, b.w ? +(b.sy / b.w).toFixed(5) : null, b.eleitorado, b.locais]),
+  });
 
   // áreas das zonas
   const nZonas = desenharZonas(uf, lista);
   const nIbge = bairros.filter((b) => b.origem === 'i').length;
   console.log(`${uf}: ${E.locais.size} locais, ${nZonas} zonas, ${bairros.length} bairros (${nIbge} com área do IBGE), ${E.acc.size} cargos/turnos (${((Date.now() - t0) / 1000).toFixed(0)}s)`);
   E.locais.clear(); E.secaoLocal.clear(); E.eleitoradoSecao.clear(); E.acc.clear(); E.bairroDoLocal.clear(); E.bairros.clear();
+}
+
+/**
+ * Deputados: os votos de cada partido nas unidades (zonas, bairros, locais) de um município passam a somar os do
+ * município na totalização. A urna e a totalização diferem quando o TSE muda o destino de votos depois da eleição:
+ * candidato indeferido cujos votos foram para a legenda (vêm dos anulados da unidade), partido com o registro
+ * cassado (os votos dele viram nulos) e votos sub judice. A diferença é repartida pelas unidades na proporção dos
+ * anulados do partido (quando entram votos e há anulados) ou dos votos do partido, pelo método dos maiores restos.
+ */
+function conciliar(a, mapa) {
+  const grupos = new Map();
+  for (const r of mapa.values()) {
+    if (!grupos.has(r.mun)) grupos.set(r.mun, []);
+    grupos.get(r.mun).push(r);
+  }
+  for (const [mun, us] of grupos) {
+    const alvo = mun === 'UF' ? a.b.total?.p : a.b.mun?.[mun]?.p;
+    if (!alvo) continue;
+    for (let i = 0; i < a.b.partidos.length; i++) {
+      const d = (alvo[i] ?? 0) - us.reduce((s, u) => s + u.p[i], 0);
+      if (!d) continue;
+      const dosAnulados = d > 0 && us.some((u) => u.an[i] > 0);
+      let w = us.map((u) => (dosAnulados ? u.an[i] : u.p[i]));
+      if (!w.some((x) => x > 0)) w = us.map((u) => Math.max(1, u.t[3]));
+      const sw = w.reduce((s, x) => s + x, 0);
+      const ab = Math.abs(d), sinal = Math.sign(d);
+      const partes = w.map((x) => (ab * x) / sw);
+      const inteiras = partes.map(Math.floor);
+      let resto = ab - inteiras.reduce((s, x) => s + x, 0);
+      partes.map((x, j) => [x - inteiras[j], j]).sort((x, y) => y[0] - x[0]).forEach(([, j]) => { if (resto > 0) { inteiras[j]++; resto--; } });
+      us.forEach((u, j) => {
+        const q = sinal * inteiras[j];
+        if (!q) return;
+        u.p[i] += q; u.t[3] += q;
+        if (!dosAnulados) u.t[5] = Math.max(0, u.t[5] - q);
+      });
+    }
+  }
 }
 
 /**

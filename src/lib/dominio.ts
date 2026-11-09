@@ -17,7 +17,8 @@ export const CARGOS: Cargo[] = [
   { slug: 'presidente', nome: 'Presidente', curto: 'Presidente', tipo: 'maj', turnos: [1, 2], federal: true },
   { slug: 'governador', nome: 'Governador', curto: 'Governador', tipo: 'maj', turnos: [1, 2], federal: false },
   { slug: 'senador', nome: 'Senador', curto: 'Senador', tipo: 'maj', turnos: [1], federal: false },
-  // Deputados (federal e estadual) saíram do mapa em 02/11/2026 para caber no limite de armazenamento da Vercel (ADR 0017)
+  { slug: 'deputado-federal', nome: 'Deputado Federal', curto: 'Dep. Federal', tipo: 'prop', turnos: [1], federal: false },
+  { slug: 'deputado-estadual', nome: 'Deputado Estadual', curto: 'Dep. Estadual', tipo: 'prop', turnos: [1], federal: false },
 ];
 
 export const cargoPorSlug = (s: string) => CARGOS.find((c) => c.slug === s);
@@ -30,6 +31,7 @@ export const UFS_2T_GOVERNADOR: Record<number, string[]> = {
   2014: ['ac', 'am', 'ap', 'ce', 'df', 'go', 'ms', 'pa', 'pb', 'rj', 'rn', 'ro', 'rr', 'rs'],
   2010: ['al', 'ap', 'df', 'go', 'pa', 'pb', 'pi', 'ro', 'rr'],
   2006: ['go', 'ma', 'pa', 'pb', 'pe', 'pr', 'rj', 'rn', 'rs', 'sc'],
+  1994: ['ac', 'ap', 'ba', 'df', 'es', 'go', 'ma', 'mg', 'pa', 'pb', 'pi', 'rj', 'ro', 'rr', 'rs', 'sc', 'se', 'sp'],
   1998: ['ap', 'df', 'go', 'mg', 'ms', 'pa', 'pi', 'rj', 'ro', 'rr', 'rs', 'se', 'sp'],
   2002: ['ap', 'ce', 'df', 'ms', 'pa', 'pb', 'pr', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp'],
 };
@@ -55,8 +57,8 @@ export const abrangenciaValida = (abr: string, cargo: Cargo) =>
 export const turnoDisponivel = (cargo: Cargo, abr: string, turno: Turno, ano = 2026) => {
   if (!cargo.turnos.includes(turno)) return false;
   if (turno === 2 && cargo.slug === 'governador' && abr !== 'br') return (UFS_2T_GOVERNADOR[ano] ?? []).includes(abr);
-  // 1998: Fernando Henrique eleito no 1º turno, sem 2º turno de Presidente
-  if (turno === 2 && cargo.slug === 'presidente' && ano === 1998) return false;
+  // 1994 e 1998: Fernando Henrique eleito no 1º turno, sem 2º turno de Presidente
+  if (turno === 2 && cargo.slug === 'presidente' && (ano === 1998 || ano === 1994)) return false;
   return true;
 };
 

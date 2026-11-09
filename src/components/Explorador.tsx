@@ -17,7 +17,8 @@ import {
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
-import { temLocais, temPresidente } from '@/lib/anos';
+import { definirAnoCores } from '@/lib/cores';
+import { temLocais, temPresidente, temZonas } from '@/lib/anos';
 import Filtros from './Filtros';
 import Painel from './Painel';
 import Carregando from './Carregando';
@@ -50,10 +51,12 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // o DF é um município só (Brasília): abre direto na visão da cidade, com as zonas do DF.svg (ADR 0013)
   const CIDADE_UNICA: Record<string, string> = { df: '5300108' };
   const cidadeUnica = CIDADE_UNICA[abr] ?? null;
-  const cid = abr !== 'br' && abr !== 'exterior' ? params.get('cid') ?? cidadeUnica : null;
+  // ano sem zonas (1994): só municípios, sem visão da cidade
+  const comZonas = temZonas(ano);
+  const cid = abr !== 'br' && abr !== 'exterior' && comZonas ? params.get('cid') ?? cidadeUnica : null;
   const nivelUrl = lerNivel(params.get('nivel'), abr, !!cid);
-  // ano sem locais (1998): a cidade abre por zonas
-  const nivel: Nivel = nivelUrl === 'locais' && !temLocais(ano) ? 'zonas' : nivelUrl;
+  // ano sem locais (1998): a cidade abre por zonas (sem locais, sem bairros)
+  const nivel: Nivel = !comZonas ? 'municipios' : (nivelUrl === 'locais' || nivelUrl === 'bairros') && !temLocais(ano) ? 'zonas' : nivelUrl;
 
   // preferências (o script do <head> já aplicou no <html>)
   const [daltonico, setDaltonico] = useState(false);
@@ -146,8 +149,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     [malhaUf.dados, abr, nivel],
   );
   const malha = cid ? { dados: malhaCidade.dados?.malha ?? null, carregando: malhaCidade.carregando } : { dados: malhaEstado, carregando: malhaUf.carregando };
-  // bairros saíram do site (ADR 0018): sem cadastro, os nomes vêm do cadastro dos locais
-  const bairros = useBairros(ano, null);
+  const bairros = useBairros(ano, cid ? abr : null);
   const locais = useLocais(ano, nivel === 'zonas' || cid ? abr : null);
   // zona → municípios que ela cobre (para os nomes)
   const municipiosDaZona = useMemo(() => {
@@ -233,8 +235,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     const focoValido = foco && !arq.resumo && (foco.tipo === 'c' ? foco.idx < arq.cands.length : foco.idx < arq.partidos.length) ? foco : null;
     const base = resultadoEstado.dados;
     const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p, pintam: base.pintam } : undefined;
+    definirAnoCores(ano);
     return calcularVisao(arq, { abr, municipios: recorteMunicipios }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
-  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados]);
+  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados, ano]);
 
   // ---- nomes
   const nomeZona = useCallback(
@@ -351,10 +354,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // duplo clique num município (estado, sem zonas) abre a visão da cidade
   const aoAbrir = useCallback(
     (id: string) => {
-      if (cid || abr === 'br' || abr === 'exterior' || nivel !== 'municipios') return;
+      if (cid || abr === 'br' || abr === 'exterior' || nivel !== 'municipios' || !comZonas) return;
       abrirCidade(id);
     },
-    [cid, abr, nivel, abrirCidade],
+    [cid, abr, nivel, abrirCidade, comZonas],
   );
 
   const descreverFeicao = useCallback(
@@ -382,7 +385,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       const regs = abr === 'exterior' ? (indiceMunicipios.porPais.get(id)?.cidades ?? []).map((c) => arq.mun[c]).filter(Boolean) : [arq.mun[id]].filter(Boolean);
       if (!regs.length) return { titulo: nome, linha: 'Sem votos neste cargo' };
-      const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: zonas e locais' : '';
+      const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: zonas, bairros e locais' : '';
       return { titulo: nome, linha: linhaVencedor(arq, regs) + dica };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -472,7 +475,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         contexto={contexto}
         nivel={nivelArquivo === 'municipios' ? 'municipios' : nivel}
         locais={locaisDaUnidade}
-        aoAbrirCidade={cidadeSelecionada ? () => abrirCidade(cidadeSelecionada) : undefined}
+        aoAbrirCidade={cidadeSelecionada && comZonas ? () => abrirCidade(cidadeSelecionada) : undefined}
         aoEscolherLocal={cid && nivel !== 'locais' ? (id) => atualizarBusca({ nivel: 'locais', mun: id }) : undefined}
         trilha={trilha}
         visao={visao}

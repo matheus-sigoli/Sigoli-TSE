@@ -15,45 +15,54 @@ export interface Eleicao {
   semLocais?: boolean;
   /** sem Presidente por município nos dados abertos do TSE (1998) */
   semPresidente?: boolean;
+  /** sem zona eleitoral nos dados do TSE (1994: NR_ZONA = -3): só a visão por municípios */
+  semZonas?: boolean;
 }
 
 export const ELEICOES: Eleicao[] = [
   {
     ano: 2026, titulo: 'Eleições Gerais 2026', datas: '4 e 25 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/2026/br/presidente?t=2',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2026/br/presidente?t=2',
   },
   {
     ano: 2022, titulo: 'Eleições Gerais 2022', datas: '2 e 30 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/2022/br/presidente?t=2',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2022/br/presidente?t=2',
   },
   {
     ano: 2018, titulo: 'Eleições Gerais 2018', datas: '7 e 28 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/2018/br/presidente?t=2',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2018/br/presidente?t=2',
   },
   {
     ano: 2014, titulo: 'Eleições Gerais 2014', datas: '5 e 26 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/2014/br/presidente?t=2',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2014/br/presidente?t=2',
   },
   {
     ano: 2010, titulo: 'Eleições Gerais 2010', datas: '3 e 31 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/2010/br/presidente?t=2',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2010/br/presidente?t=2',
   },
   {
     ano: 2006, titulo: 'Eleições Gerais 2006', datas: '1º e 29 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/2006/br/presidente?t=2',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2006/br/presidente?t=2',
   },
   {
     ano: 2002, titulo: 'Eleições Gerais 2002', datas: '6 e 27 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/2002/br/presidente?t=2',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2002/br/presidente?t=2',
   },
   {
     ano: 1998, titulo: 'Eleições Gerais 1998', datas: '4 e 25 de outubro',
-    cargos: 'Presidente, Governador e Senador', disponivel: true, rota: '/1998/br/presidente', semLocais: true,
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/1998/br/presidente', semLocais: true,
+  },
+  {
+    ano: 1994, titulo: 'Eleições Gerais 1994', datas: '3 de outubro e 15 de novembro',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/1994/br/presidente', semLocais: true, semZonas: true,
   },
 ];
 
 /** o ano tem locais de votação (visão Locais na cidade) */
 export const temLocais = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semLocais;
+
+/** o ano tem as zonas eleitorais (visão Zonas e a visão da cidade) */
+export const temZonas = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semZonas;
 
 /** o ano tem o Presidente por município */
 export const temPresidente = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semPresidente;

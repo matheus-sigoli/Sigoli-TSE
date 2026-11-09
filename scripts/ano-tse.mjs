@@ -39,14 +39,13 @@ if (argv.includes('--baixar')) for (const k of Object.keys(ARQ)) await baixar(`$
  * Só a eleição geral de outubro do ano. Os arquivos de um ano trazem também as eleições suplementares do mesmo
  * mandato (ex.: no de 2014, governador do AM em 2017 e do TO em 2018; no de 2018, senador do MT em 2020).
  */
-const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
+const ordinaria = (dt) => new RegExp(`^\\d{2}/${ANO === 1994 ? "1[01]" : "10"}/${ANO}$`).test(String(dt).trim()); // 1994: 2º turno em 15/11
 
 /** entradas por UF (e BR); o _BRASIL repete tudo */
 const porUf = (n) => /_[A-Z]{2}\.csv$/i.test(n);
 
 // código TSE do cargo → slug (8 = deputado distrital, no DF)
-// deputados (6, 7, 8) ficam de fora: saíram do site para caber no armazenamento da Vercel (ADR 0017)
-const SLUG = { 1: 'presidente', 3: 'governador', 5: 'senador' };
+const SLUG = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' };
 const CARGO = Object.fromEntries(CARGOS.map((c) => [c.slug, c]));
 
 const SITUACAO = {
@@ -60,6 +59,8 @@ const situacao = (s) => SITUACAO[texto(s).toUpperCase()] ?? (texto(s) ? texto(s)
 // ------------------------------------------------------------------ municípios (IBGE) e exterior (país)
 const mun2026 = JSON.parse(readFileSync('public/data/2026/municipios.json', 'utf8'));
 const ibgeDe = new Map(mun2026.filter((m) => m.uf !== 'zz').map((m) => [m.tse, m.ibge]));
+// Boa Esperança do Norte (MT) de 2001 a 2004, extinto depois (o de 2025 tem outro código no TSE): área de Nova Ubiratã
+if (!ibgeDe.has('91065')) ibgeDe.set('91065', '5106240');
 const paises = new Map(readFileSync('data/exterior/cidades-pais.csv', 'utf8').split(/\r?\n/).slice(1).filter(Boolean)
   .map((l) => l.split(';')).map(([tse, , iso, pais, n]) => [pad5(tse), { pais: iso, paisNum: n, nomePais: pais }]));
 // 2006: o exterior vem por país (o "município" é o próprio país): casa pelo nome do país da tabela
@@ -193,6 +194,7 @@ for (const g of grupos.values()) for (const k of g.cands.values()) {
   const comCand = new Set([...grupos.values()].map((g) => g.uf));
   const faltam = [];
   await lerCsvDoZip(zip('det'), porUf, (f, c) => { const uf = String(f[c.SG_UF]).toLowerCase(); if (uf !== 'br' && uf !== 'zz' && uf !== 'vt' && SLUG[num(f[c.CD_CARGO])] && SLUG[num(f[c.CD_CARGO])] !== 'presidente' && !comCand.has(uf) && !faltam.includes(uf)) faltam.push(uf); });
+  const porPartido = new Map();
   for (const uf of faltam) {
     const z = join(CACHE, `votacao_secao_${ANO}_${uf.toUpperCase()}.zip`);
     await baixar(`${CDN}/votacao_secao/votacao_secao_${ANO}_${uf.toUpperCase()}.zip`, z);
@@ -206,8 +208,13 @@ for (const g of grupos.values()) for (const k of g.cands.values()) {
       if (nr === 95 || nr === 96 || nr === 97) return; // brancos e nulos vêm do detalhe
       const turno = num(f[c.NR_TURNO]);
       const cad = titulares.get(`${uf}|${cd}|${turno}|${nr}`) ?? titulares.get(`${uf}|${cd}|1|${nr}`); // cadastro só do 1º turno
-      if (!cad) return; // voto de legenda (proporcional) ou número sem candidato
       const chave = chaveMun(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
+      // proporcional: voto de legenda e voto nominal também contam para o partido (resolvido no fim, pelo número)
+      if (CARGO[slug].tipo === 'prop' && chave) {
+        const pk = `${slug}|${turno}|${uf}|${chave}|${String(nr).slice(0, 2)}`;
+        porPartido.set(pk, (porPartido.get(pk) ?? 0) + num(f[c.QT_VOTOS]));
+      }
+      if (!cad) return; // voto de legenda (proporcional) ou número sem candidato
       if (!chave) return avisar(uf, f[c.CD_MUNICIPIO], f[c.NM_MUNICIPIO]);
       const g = grupo(slug, turno, uf);
       const fc = cad.f, cc = cad.c;
@@ -231,6 +238,19 @@ for (const g of grupos.values()) for (const k of g.cands.values()) {
       linhas++;
     });
     console.log(`${uf}: sem votação por candidato no arquivo do ano; somada a votação por seção (${linhas} linhas)`);
+    // votos dos partidos (o arquivo de partidos também não tem a UF): número do partido → sigla pelos candidatos
+    for (const [pk, v] of porPartido) {
+      const [slug, turno, u, chave, pn] = pk.split('|');
+      if (u !== uf) continue;
+      const g = grupos.get(`${slug}/${turno}/${uf}`);
+      const k = g && [...g.cands.values()].find((x) => x.n.slice(0, 2) === pn);
+      if (!k) continue;
+      let pp = g.partidos.get(k.partido);
+      if (!pp) g.partidos.set(k.partido, (pp = { sg: k.partido, n: pn, fed: '', coligacao: k.col, votos: 0 }));
+      pp.votos += v;
+      const m = munDe(g, chave);
+      m.p.set(k.partido, (m.p.get(k.partido) ?? 0) + v);
+    }
     // 2º turno com o cadastro do 1º: o mais votado é eleito
     for (const g of grupos.values()) if (g.uf === uf && g.turno === 2) {
       [...g.cands.values()].sort((x, y) => y.votos - x.votos).forEach((k, i) => { k.situacao = i === 0 ? 'Eleito' : 'Não eleito'; k.eleito = i === 0; });
@@ -255,7 +275,8 @@ await lerCsv(zip('part'), porUf, (f, c) => {
     p = { sg, n: String(num(f[c.NR_PARTIDO])), fed: texto(f[c.SG_FEDERACAO]), coligacao: /colig/i.test(f[c.TP_AGREMIACAO]) ? texto(f[c.NM_COLIGACAO]) : '', votos: 0 };
     g.partidos.set(sg, p);
   }
-  const v = num(f[c.QT_TOTAL_VOTOS_LEG_VALIDOS]) + num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]);
+  // 2014 e antes: o arquivo traz QT_VOTOS_NOMINAIS e QT_VOTOS_LEGENDA (sem as colunas *_VALIDOS)
+  const v = (num(f[c.QT_TOTAL_VOTOS_LEG_VALIDOS]) + num(f[c.QT_VOTOS_NOMINAIS_VALIDOS])) || (num(f[c.QT_VOTOS_NOMINAIS]) + num(f[c.QT_VOTOS_LEGENDA]));
   p.votos += v;
   const m = munDe(g, chave);
   m.p.set(sg, (m.p.get(sg) ?? 0) + v);
@@ -273,7 +294,12 @@ await lerCsv(zip('det'), porUf, (f, c) => {
   if (!chave) return;
   const t = munDe(g, chave).t;
   t[0] += num(f[c.QT_APTOS]); t[1] += num(f[c.QT_COMPARECIMENTO]); t[2] += num(f[c.QT_ABSTENCOES]);
-  t[3] += num(f[c.QT_TOTAL_VOTOS_VALIDOS]); t[4] += num(f[c.QT_VOTOS_BRANCOS]); t[5] += num(f[c.QT_TOTAL_VOTOS_NULOS]);
+  // 2002–2014: QT_TOTAL_VOTOS_VALIDOS só tem os nominais → soma a legenda (QT_TOTAL_VOTOS_LEG_VALIDOS).
+  // 1994: válidos, legenda e QT_TOTAL_VOTOS_NULOS vêm 0 → nulos = QT_VOTOS_NULOS e válidos = comparecimento − brancos − nulos
+  const nulos = num(f[c.QT_TOTAL_VOTOS_NULOS]) || num(f[c.QT_VOTOS_NULOS]);
+  const leg = num(f[c.QT_TOTAL_VOTOS_LEG_VALIDOS]), tot = num(f[c.QT_TOTAL_VOTOS_VALIDOS]);
+  t[3] += !tot && !leg ? num(f[c.QT_COMPARECIMENTO]) - num(f[c.QT_VOTOS_BRANCOS]) - nulos : Math.max(tot, num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]) + leg);
+  t[4] += num(f[c.QT_VOTOS_BRANCOS]); t[5] += nulos;
 });
 if (naoMapeados.size) console.warn(`municípios sem código IBGE (fora dos mapas): ${[...naoMapeados].slice(0, 20).map(([k, n]) => `${k} ${n}`).join(', ')}`);
 

@@ -1,6 +1,6 @@
 # ADR 0017 — Deputados fora do site
 
-- Status: Aceita
+- Status: Substituída pela ADR 0019
 - Data: 02/11/2026
 
 ## Contexto

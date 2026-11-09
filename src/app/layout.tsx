@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://sigoli-tse.vercel.app'),
   title: { default: 'Sigoli.TSE — Eleições 2026 por município', template: '%s · Sigoli.TSE' },
   description:
-    'Resultados das Eleições 2026 para Presidente, Governador e Senador, município por município, com dados oficiais do TSE.',
+    'Resultados das Eleições 2026 para Presidente, Governador, Senador e Deputados, município por município, com dados oficiais do TSE.',
   openGraph: { type: 'website', locale: 'pt_BR', siteName: 'Sigoli.TSE' },
   icons: { icon: '/icon.svg' },
 };
