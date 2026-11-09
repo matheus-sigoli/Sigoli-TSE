@@ -55,6 +55,8 @@ export const abrangenciaValida = (abr: string, cargo: Cargo) =>
 export const turnoDisponivel = (cargo: Cargo, abr: string, turno: Turno, ano = 2026) => {
   if (!cargo.turnos.includes(turno)) return false;
   if (turno === 2 && cargo.slug === 'governador' && abr !== 'br') return (UFS_2T_GOVERNADOR[ano] ?? []).includes(abr);
+  // 1998: Fernando Henrique eleito no 1º turno, sem 2º turno de Presidente
+  if (turno === 2 && cargo.slug === 'presidente' && ano === 1998) return false;
   return true;
 };
 

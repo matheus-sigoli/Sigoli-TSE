@@ -90,7 +90,9 @@ não existe mais para 2022 (404).
 ## Adendo — 1998 (08/11/2026)
 - Os dados abertos do TSE de 1998 não trazem o Presidente por município: nem a votação por candidato nem a por partido
   têm o cargo 1, e a votação por seção do Presidente só cobre as urnas eletrônicas (~1/4 dos votos). O detalhe por
-  município tem só os totais. 1998 entra com Governador e Senador; a aba Presidente some nesse ano.
+  município tem só os totais. O Presidente vem do SIG Eleição do TSE (painel Votação nominal, arquivos gerados no
+  próprio CDN do TSE, endereços em data/sig/1998.json): votos por município (pelo nome) e por zona (UF + zona); as
+  zonas da cidade saem exatas porque o grafo município × zona de 1998 não tem ciclos (scripts/sig-presidente.mjs).
 - Sem locais de votação: a votação por seção de 1998 tem NR_LOCAL_VOTACAO = -3. As zonas vêm da votação por
   município e zona (`ano-tse.mjs --zonas`) e o desenho, das zonas de 2002 (`zonas-de-outro-ano.mjs`); a cidade só tem
   a visão Zonas.
