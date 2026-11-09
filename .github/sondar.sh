@@ -1,20 +1,12 @@
-B=https://cdn.tse.jus.br/estatistica/sead/odsele
-curl -s -o d.zip $B/detalhe_votacao_munzona/detalhe_votacao_munzona_1994.zip
+curl -sL https://www.ipea.gov.br/geobr/metadata/metadata_1.7.0_gpkg.csv | grep -i "amc" | grep -E "/199|/1980" 
+U=https://www.ipea.gov.br/geobr/data_gpkg/amc/1991/AMC_1991_2000_simplified.gpkg
+curl -sL -o a.gpkg $U; ls -la a.gpkg
 python3 - <<'PY'
-import csv,io,zipfile,collections
-z=zipfile.ZipFile('d.zip'); print(z.namelist())
-S=collections.defaultdict(collections.Counter)
-for n in z.namelist():
-    if not n.lower().endswith('.csv'): continue
-    r=csv.reader(io.TextIOWrapper(z.open(n),encoding='latin1'),delimiter=';'); h=next(r)
-    shown=False
-    for row in r:
-        d=dict(zip(h,row)); k=(n[-6:-4],d['CD_CARGO'],d['NR_TURNO'])
-        if not shown and d['CD_CARGO'] in('1','3'): print(n, d); shown=True
-        for c in h[18:-2]:
-            try: S[(d['CD_CARGO'],d['NR_TURNO'])][c]+=int(d[c])
-            except: pass
-for k,v in sorted(S.items()): print(k, dict(v))
+import sqlite3
+c=sqlite3.connect('a.gpkg')
+t=[r[0] for r in c.execute("select table_name from gpkg_contents")]; print(t)
+cols=[r[1] for r in c.execute(f"pragma table_info('{t[0]}')")]; print(cols)
+nongeo=[x for x in cols if x not in('geom','geometry')]
+for r in c.execute(f"select {','.join(nongeo)} from '{t[0]}'"):
+    print('AMC|'+'|'.join(map(str,r)))
 PY
-echo "== geobr metadata"
-for u in https://www.ipea.gov.br/geobr/metadata/metadata_1.7.0_gpkg.csv https://www.ipea.gov.br/geobr/metadata/metadata_gpkg.csv; do curl -sL $u | grep -i amc | head -20; done
