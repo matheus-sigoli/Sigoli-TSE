@@ -39,7 +39,7 @@ if (argv.includes('--baixar')) for (const k of Object.keys(ARQ)) await baixar(`$
  * Só a eleição geral de outubro do ano. Os arquivos de um ano trazem também as eleições suplementares do mesmo
  * mandato (ex.: no de 2014, governador do AM em 2017 e do TO em 2018; no de 2018, senador do MT em 2020).
  */
-const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
+const ordinaria = (dt) => new RegExp(`^\\d{2}/${ANO === 1994 ? "1[01]" : "10"}/${ANO}$`).test(String(dt).trim()); // 1994: 2º turno em 15/11
 
 /** entradas por UF (e BR); o _BRASIL repete tudo */
 const porUf = (n) => /_[A-Z]{2}\.csv$/i.test(n);

@@ -34,7 +34,7 @@ const zipCons = join(CACHE, `consulta_cand_${ANO}.zip`);
 await baixar(`${CDN}/detalhe_votacao_munzona/detalhe_votacao_munzona_${ANO}.zip`, zipDet);
 await baixar(`${CDN}/consulta_cand/consulta_cand_${ANO}.zip`, zipCons);
 const cargo = CARGOS.find((c) => c.slug === 'presidente');
-const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
+const ordinaria = (dt) => new RegExp(`^\\d{2}/${ANO === 1994 ? "1[01]" : "10"}/${ANO}$`).test(String(dt).trim()); // 1994: 2º turno em 15/11
 
 /** CSV do SIG (latin1, ";", sem aspas; alguns nomes têm quebra de linha no meio): junta até ter todos os campos */
 function lerSig(zip) {

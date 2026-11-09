@@ -65,7 +65,7 @@ const ZMBRA = (() => {
 })();
 
 /** só a eleição geral de outubro do ano (os arquivos trazem também as suplementares do mesmo mandato) */
-const ordinaria = (dt) => new RegExp(`^\\d{2}/10/${ANO}$`).test(String(dt).trim());
+const ordinaria = (dt) => new RegExp(`^\\d{2}/${ANO === 1994 ? "1[01]" : "10"}/${ANO}$`).test(String(dt).trim()); // 1994: 2º turno em 15/11
 
 
 // código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)

@@ -78,7 +78,7 @@ jobs:
         run: |
           node --max-old-space-size=10000 scripts/ano-tse.mjs --ano $ANO --zonas
           [ -f data/sig/$ANO.json ] && node --max-old-space-size=6000 scripts/sig-presidente.mjs --ano $ANO
-          node scripts/propor-fusoes.mjs --ano $ANO --depois 2002
+          node scripts/propor-fusoes.mjs --ano $ANO --depois $([ "$ANO" = 1994 ] && echo 1998 || echo 2002)
 
       - name: Malha municipal do ano (municípios criados depois voltam à origem)
         run: node scripts/malha-ano.mjs --ano $ANO

@@ -50,6 +50,10 @@ export const ELEICOES: Eleicao[] = [
     ano: 1998, titulo: 'Eleições Gerais 1998', datas: '4 e 25 de outubro',
     cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/1998/br/presidente', semLocais: true,
   },
+  {
+    ano: 1994, titulo: 'Eleições Gerais 1994', datas: '3 de outubro e 15 de novembro',
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: false, semLocais: true,
+  },
 ];
 
 /** o ano tem locais de votação (visão Locais na cidade) */
