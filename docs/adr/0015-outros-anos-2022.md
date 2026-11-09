@@ -102,3 +102,14 @@ não existe mais para 2022 (404).
   zona eleitoral do município novo — `propor-fusoes.mjs`).
 - A votação por candidato e por partido de 1998 não tem o arquivo do DF: o DF sai da votação por seção (com os dados
   do candidato do cadastro); os totais, do detalhe por município, que tem o DF.
+
+## Adendo — malha fina, locais geocodificados e zonas do DF por ano (08/11/2026)
+- Malha dos estados refeita do SHP do IBGE 2025 com tolerância de ~11 m (antes ~65 m), para o desenho bater com o SHP.
+- Locais de 2006 a 2022: nome, bairro e ponto da base de locais geocodificados de Hidalgo et al. (v0.16,
+  github.com/fdhidalgo/geocode_br_polling_stations), casada pelo código município-zona-local de cada eleição. Ponto do
+  TSE quando há; senão o do modelo (aproximado se o erro estimado passa de 2 km). Em 2006 (sem cadastro do TSE), o nome
+  e o bairro também vêm de lá; 2002 usa os de 2006 pelo mesmo código.
+- Zonas do DF desenhadas pelo usuário por período (data/zonas/df/{ano}.svg → data/zonas/df-{ano}.geojson,
+  scripts/zonas-svg-ano.mjs; a zona vem do rótulo). Zona do desenho que não existe no ano entra na zona onde cai o
+  centro dela (desenho anterior ou zonas de 2022): 2006 tem 17 zonas (18–21 voltam a 2, 3, 12 e 13); em 2018 a 7 e a 12
+  entram na 16. 2022 continua pelo ZMBRA_2022 e 2026 pelo DF.svg.
