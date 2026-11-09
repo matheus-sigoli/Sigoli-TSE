@@ -254,7 +254,8 @@ await lerCsv(zip('part'), porUf, (f, c) => {
     p = { sg, n: String(num(f[c.NR_PARTIDO])), fed: texto(f[c.SG_FEDERACAO]), coligacao: /colig/i.test(f[c.TP_AGREMIACAO]) ? texto(f[c.NM_COLIGACAO]) : '', votos: 0 };
     g.partidos.set(sg, p);
   }
-  const v = num(f[c.QT_TOTAL_VOTOS_LEG_VALIDOS]) + num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]);
+  // 2014 e antes: o arquivo traz QT_VOTOS_NOMINAIS e QT_VOTOS_LEGENDA (sem as colunas *_VALIDOS)
+  const v = (num(f[c.QT_TOTAL_VOTOS_LEG_VALIDOS]) + num(f[c.QT_VOTOS_NOMINAIS_VALIDOS])) || (num(f[c.QT_VOTOS_NOMINAIS]) + num(f[c.QT_VOTOS_LEGENDA]));
   p.votos += v;
   const m = munDe(g, chave);
   m.p.set(sg, (m.p.get(sg) ?? 0) + v);
@@ -272,9 +273,11 @@ await lerCsv(zip('det'), porUf, (f, c) => {
   if (!chave) return;
   const t = munDe(g, chave).t;
   t[0] += num(f[c.QT_APTOS]); t[1] += num(f[c.QT_COMPARECIMENTO]); t[2] += num(f[c.QT_ABSTENCOES]);
-  // 1994: QT_TOTAL_VOTOS_VALIDOS e QT_TOTAL_VOTOS_NULOS vêm 0 → nulos = QT_VOTOS_NULOS e válidos = comparecimento − brancos − nulos
+  // 2002–2014: QT_TOTAL_VOTOS_VALIDOS só tem os nominais → soma a legenda (QT_TOTAL_VOTOS_LEG_VALIDOS).
+  // 1994: válidos, legenda e QT_TOTAL_VOTOS_NULOS vêm 0 → nulos = QT_VOTOS_NULOS e válidos = comparecimento − brancos − nulos
   const nulos = num(f[c.QT_TOTAL_VOTOS_NULOS]) || num(f[c.QT_VOTOS_NULOS]);
-  t[3] += num(f[c.QT_TOTAL_VOTOS_VALIDOS]) || num(f[c.QT_COMPARECIMENTO]) - num(f[c.QT_VOTOS_BRANCOS]) - nulos;
+  const leg = num(f[c.QT_TOTAL_VOTOS_LEG_VALIDOS]), tot = num(f[c.QT_TOTAL_VOTOS_VALIDOS]);
+  t[3] += !tot && !leg ? num(f[c.QT_COMPARECIMENTO]) - num(f[c.QT_VOTOS_BRANCOS]) - nulos : Math.max(tot, num(f[c.QT_VOTOS_NOMINAIS_VALIDOS]) + leg);
   t[4] += num(f[c.QT_VOTOS_BRANCOS]); t[5] += nulos;
 });
 if (naoMapeados.size) console.warn(`municípios sem código IBGE (fora dos mapas): ${[...naoMapeados].slice(0, 20).map(([k, n]) => `${k} ${n}`).join(', ')}`);

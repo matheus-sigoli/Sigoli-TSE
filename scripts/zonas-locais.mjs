@@ -241,6 +241,8 @@ function somarLinha(E, f, c) {
     else if (a.prop) {
       // anulados (registro indeferido): o TSE os deixa fora de válidos e de nulos
       if (a.anulados.has(String(votavel))) continue;
+      // candidato fora do arquivo do município (votos não válidos na totalização: indeferido, nulo): nulo, como no TSE
+      if (String(votavel).length > 2 && !a.idxC.has(String(votavel))) { r.t[5] += votos; continue; }
       const partido = String(votavel).length <= 2 ? String(votavel) : String(votavel).slice(0, 2);
       const i = a.idxP.get(partido);
       if (i !== undefined) { r.p[i] += votos; r.t[3] += votos; }
