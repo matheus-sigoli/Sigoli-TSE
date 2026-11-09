@@ -28,7 +28,7 @@ const SHP_DIR = args.shp ?? 'shp';
 const OUT_DIR = args.out ?? 'public/geo';
 
 // Tolerâncias em graus (≈ 111 km por grau).
-const TOL_UF = Number(args['tol-uf'] ?? 0.0006); // ~65 m
+const TOL_UF = Number(args['tol-uf'] ?? 0.0001); // ~11 m (fiel ao SHP do IBGE na visão do estado)
 const TOL_BR = Number(args['tol-br'] ?? 0.01); // ~1,1 km (visão Brasil; o detalhe fica nos arquivos por UF)
 // ---------------------------------------------------------------- principal
 const zips = readdirSync(SHP_DIR).filter((f) => /_Municipios_\d{4}\.zip$/i.test(f)).sort();

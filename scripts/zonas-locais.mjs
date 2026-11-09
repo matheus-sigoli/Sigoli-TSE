@@ -170,6 +170,10 @@ if (argv.includes('--baixar')) {
   // BR = Presidente (todas as UFs); cada UF = cargos estaduais
   for (const UF of ['BR', ...UFS.map((u) => u.toUpperCase())]) await baixar(`${CDN}/votacao_secao/votacao_secao_${ANO}_${UF}.zip`, zipVotos(UF));
 }
+// locais geocodificados de 2006 a 2024 (Hidalgo et al., github.com/fdhidalgo/geocode_br_polling_stations, v0.16):
+// nome, endereço e ponto de cada local por eleição — ponto do TSE quando há, senão o do modelo (conf_dist_km = erro)
+const GEOCODE = join(CACHE, 'geocoded_polling_stations_v0.16.csv.gz');
+if (argv.includes('--baixar') && ANO >= 2002 && ANO <= 2024) await baixar('https://github.com/fdhidalgo/geocode_br_polling_stations/releases/download/v0.16/geocoded_polling_stations.csv.gz', GEOCODE);
 
 /** Estado de processamento de uma UF. */
 function novaUf(uf) {
@@ -334,6 +338,38 @@ if (SEM_CADASTRO) {
     const E = estados.get(String(f[c.SG_UF]).toLowerCase());
     if (E) lerLocal(E, f, c);
   });
+}
+
+// 1·) locais geocodificados (2006–2024): ponto de quem não tem o do TSE; em 2006 (sem cadastro do TSE) também o nome
+// e o bairro. 2002: o local de mesmo código em 2006 (nome e ponto), como faz o cadastro de outros anos
+if (existsSync(GEOCODE)) {
+  const anoGeo = ANO === 2002 ? 2006 : ANO;
+  const { createGunzip } = await import('node:zlib');
+  const { createReadStream } = await import('node:fs');
+  const csv = (l) => { const o = []; let v = '', q = false; for (let i = 0; i < l.length; i++) { const ch = l[i]; if (q) { if (ch === '"' && l[i + 1] === '"') { v += '"'; i++; } else if (ch === '"') q = false; else v += ch; } else if (ch === '"') q = true; else if (ch === ',') { o.push(v); v = ''; } else v += ch; } o.push(v); return o; };
+  const geo = new Map();
+  let cab = null;
+  for await (const l of createInterface({ input: createReadStream(GEOCODE).pipe(createGunzip()), crlfDelay: Infinity })) {
+    const f = csv(l);
+    if (!cab) { cab = Object.fromEntries(f.map((n, i) => [n, i])); continue; }
+    if (Number(f[cab.ano]) !== anoGeo) continue;
+    const lon = Number(f[cab.long]), lat = Number(f[cab.lat]);
+    geo.set(`${pad5(f[cab.cd_localidade_tse])}-${num(f[cab.nr_zona])}-${num(f[cab.nr_locvot])}`, {
+      nome: f[cab.nm_locvot], bairro: f[cab.ds_bairro], lon: Number.isFinite(lon) && f[cab.long] !== '' ? lon : null, lat: Number.isFinite(lat) && f[cab.lat] !== '' ? lat : null,
+      conf: Number(f[cab.conf_dist_km]) || 0,
+    });
+  }
+  const tot = { locais: 0, casados: 0, ponto: 0, nome: 0 };
+  for (const E of estados.values()) for (const l of E.locais.values()) {
+    tot.locais++;
+    const g = geo.get(l.id);
+    if (!g) continue;
+    tot.casados++;
+    if (SEM_CADASTRO && g.nome) { l.nome = g.nome; if (g.bairro) l.bairro = g.bairro; tot.nome++; }
+    const semPontoProprio = l.lon === null || l.lat === null || l.aprox;
+    if (semPontoProprio && g.lon !== null && g.lat !== null) { l.lon = g.lon; l.lat = g.lat; l.aprox = g.conf > 2; tot.ponto++; }
+  }
+  console.log(`locais geocodificados (${anoGeo}): ${geo.size} no arquivo; ${tot.casados} de ${tot.locais} locais casados; ${tot.ponto} ganharam ponto, ${tot.nome} nome`);
 }
 
 // 1a) locais sem latitude/longitude: ponto pelo cadastro de outros anos ou pelo centro do bairro/zona (ADR 0016)
@@ -518,9 +554,11 @@ function desenharZonas(uf, lista) {
 
   // zonas desenhadas à mão (ADR 0013, ex.: DF a partir de DF.svg): usa o desenho e só recorta por cidade.
   // Em outro ano, só se as zonas forem as mesmas do desenho.
-  const fixo = `data/zonas/${uf}.geojson`;
+  // desenho do ano (data/zonas/{uf}-{ano}.geojson, scripts/zonas-svg-ano.mjs) vale como está; o geral, só se as zonas forem as mesmas
+  const doAno = `data/zonas/${uf}-${ANO}.geojson`;
+  const fixo = ANO !== 2026 && existsSync(doAno) ? doAno : `data/zonas/${uf}.geojson`;
   const zonasFixas = existsSync(fixo) ? JSON.parse(readFileSync(fixo, 'utf8')) : null;
-  const mesmasZonas = zonasFixas && [...new Set(lista.map((l) => String(l.zona)))].sort().join() === zonasFixas.features.map((z) => String(z.id)).sort().join();
+  const mesmasZonas = zonasFixas && (fixo === doAno || [...new Set(lista.map((l) => String(l.zona)))].sort().join() === zonasFixas.features.map((z) => String(z.id)).sort().join());
   if (zonasFixas && !mesmasZonas) console.warn(`${uf}: as zonas de ${ANO} não são as do desenho em ${fixo}; usa as áreas pelos locais`);
   const zmbraNaUf = ZMBRA && [...ZMBRA.values()].some((l) => l[0].uf === uf);
   if (zonasFixas && mesmasZonas && !zmbraNaUf) {
@@ -529,13 +567,21 @@ function desenharZonas(uf, lista) {
     for (const z of zonasFc.features) {
       for (const m of muniFc.features) {
         const geomM = m.geometry.type === 'Polygon' ? [m.geometry.coordinates] : m.geometry.coordinates;
-        const recorte = polygonClipping.intersection(z.geometry.coordinates, geomM);
+        let recorte = polygonClipping.intersection(z.geometry.coordinates, geomM);
+        try { recorte = polygonClipping.union(recorte); } catch { /* fica como está */ }
         if (!recorte.length) continue;
         const k = `${m.id}-${z.id}`;
         cidadeFc.features.push({ type: 'Feature', id: k, properties: { id: k, ibge: String(m.id), zona: String(z.id) }, geometry: { type: 'MultiPolygon', coordinates: recorte } });
       }
     }
-    const topoZ = topology({ zonas: { type: 'FeatureCollection', features: zonasFc.features } }, 1e5);
+    // a zona do estado é a soma dos recortes por cidade (o desenho pode passar da divisa)
+    const zonasRecortadas = zonasFc.features.map((z) => {
+      const partes = cidadeFc.features.filter((c) => c.properties.zona === String(z.id)).map((c) => c.geometry.coordinates);
+      if (!partes.length) return null;
+      let geom; try { geom = polygonClipping.union(...partes); } catch { geom = partes.flat(); }
+      return { type: 'Feature', id: z.id, properties: { id: String(z.id), zona: String(z.id) }, geometry: { type: 'MultiPolygon', coordinates: geom } };
+    }).filter(Boolean);
+    const topoZ = topology({ zonas: { type: 'FeatureCollection', features: zonasRecortadas } }, 1e5);
     topoZ.bbox = topoUf.bbox;
     const topoC = topology({ zonas: cidadeFc }, 1e5);
     topoC.bbox = topoUf.bbox;

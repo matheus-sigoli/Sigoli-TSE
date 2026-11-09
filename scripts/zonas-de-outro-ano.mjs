@@ -7,6 +7,9 @@
  * Uso: node scripts/zonas-de-outro-ano.mjs --ano 1998 --de 2002
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import polygonClipping from 'polygon-clipping';
+import { topology } from 'topojson-server';
+import { feature } from 'topojson-client';
 import { fusoesDoAno } from './lib/fusoes.mjs';
 
 const argv = process.argv.slice(2);
@@ -41,4 +44,36 @@ for (const nivel of ['zonas', 'zonas-cidade']) {
     writeFileSync(`public/geo/${ANO}/${nivel}/${arq}`, JSON.stringify(topo));
     console.log(`${nivel}/${uf}: ${Object.values(topo.objects)[0].geometries.length} áreas${semDado ? `, ${semDado} de ${DE} sem zona em ${ANO}` : ''}`);
   }
+}
+
+// UF com as zonas do ano desenhadas à mão (data/zonas/{uf}-{ano}.geojson, ex.: DF 1998): usa o desenho, recortado
+// pelas cidades da malha do ano, no lugar das zonas copiadas
+for (const arq of readdirSync('data/zonas').filter((n) => n.endsWith(`-${ANO}.geojson`))) {
+  const uf = arq.slice(0, 2);
+  const fc = JSON.parse(readFileSync(`data/zonas/${arq}`, 'utf8'));
+  const pMalha = existsSync(`public/geo/${ANO}/uf/${uf}.json`) ? `public/geo/${ANO}/uf/${uf}.json` : `public/geo/uf/${uf}.json`;
+  const topoUf = JSON.parse(readFileSync(pMalha, 'utf8'));
+  const muni = feature(topoUf, topoUf.objects.municipios).features;
+  const cidade = [], zonas = [];
+  for (const z of fc.features) {
+    const partes = [];
+    for (const m of muni) {
+      const gm = m.geometry.type === 'Polygon' ? [m.geometry.coordinates] : m.geometry.coordinates;
+      let r = polygonClipping.intersection(z.geometry.coordinates, gm);
+      if (!r.length) continue;
+      try { r = polygonClipping.union(r); } catch { /* como está */ }
+      const k = `${m.id}-${z.id}`;
+      cidade.push({ type: 'Feature', id: k, properties: { id: k, ibge: String(m.id), zona: String(z.id) }, geometry: { type: 'MultiPolygon', coordinates: r } });
+      partes.push(r);
+    }
+    if (!partes.length) continue;
+    let g; try { g = polygonClipping.union(...partes); } catch { g = partes.flat(); }
+    zonas.push({ type: 'Feature', id: String(z.id), properties: { id: String(z.id), zona: String(z.id) }, geometry: { type: 'MultiPolygon', coordinates: g } });
+  }
+  for (const [nivel, feats] of [['zonas', zonas], ['zonas-cidade', cidade]]) {
+    const t = topology({ zonas: { type: 'FeatureCollection', features: feats } }, 1e5);
+    t.bbox = topoUf.bbox;
+    writeFileSync(`public/geo/${ANO}/${nivel}/${uf}.json`, JSON.stringify(t));
+  }
+  console.log(`${uf}: zonas de ${ANO} pelo desenho ${arq} (${zonas.length} zonas)`);
 }
