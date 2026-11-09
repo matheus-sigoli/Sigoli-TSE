@@ -114,3 +114,14 @@ não existe mais para 2022 (404).
   centro dela (desenho anterior ou zonas de 2022): 2006 tem 17 zonas (18–21 voltam a 2, 3, 12 e 13); em 2018 a 7 e a 12
   entram na 16. 2022 continua pelo ZMBRA_2022 e 2026 pelo DF.svg.
 - As zonas (recortadas pela malha fina) passam por scripts/simplificar-topo.mjs (~65 m, Douglas-Peucker por arco) para o site não crescer: 325 → 137 MB.
+
+## Adendo — 1994 (09/11/2026)
+- Dados abertos do TSE (munzona) com Presidente, Governador (2º turno em 15/11), Senador e Deputados. O detalhe de 1994
+  traz `QT_TOTAL_VOTOS_VALIDOS` e `QT_TOTAL_VOTOS_NULOS` zerados: nulos = `QT_VOTOS_NULOS` e válidos = comparecimento −
+  brancos − nulos (no Presidente, igual à soma dos votos nominais).
+- Não há zona eleitoral em 1994 (`NR_ZONA = -3` no TSE e no SIG, que avisa que os dados de 1994 e 1996 são incompletos):
+  o ano é só por municípios (`semZonas` em src/lib/anos.ts), sem visão da cidade. O desenho do DF de 1994 fica guardado.
+- Os 498 municípios instalados em 1997 voltam à origem (`ateAno: 1996`). A origem é o município de 1994 do mesmo grupo
+  de Áreas Mínimas Comparáveis 1991–2000 (IBGE/Ipea, via geobr; data/amc/1991-2000.txt); com mais de um no grupo, o da
+  zona eleitoral do município novo em 1998 ou o de maior fronteira (`propor-fusoes.mjs --amc`). Origem que também é
+  nova segue a cadeia (`fusoesDoAno`).

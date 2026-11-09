@@ -17,7 +17,7 @@ import {
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
-import { temLocais, temPresidente } from '@/lib/anos';
+import { temLocais, temPresidente, temZonas } from '@/lib/anos';
 import Filtros from './Filtros';
 import Painel from './Painel';
 import Carregando from './Carregando';
@@ -50,10 +50,12 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // o DF é um município só (Brasília): abre direto na visão da cidade, com as zonas do DF.svg (ADR 0013)
   const CIDADE_UNICA: Record<string, string> = { df: '5300108' };
   const cidadeUnica = CIDADE_UNICA[abr] ?? null;
-  const cid = abr !== 'br' && abr !== 'exterior' ? params.get('cid') ?? cidadeUnica : null;
+  // ano sem zonas (1994): só municípios, sem visão da cidade
+  const comZonas = temZonas(ano);
+  const cid = abr !== 'br' && abr !== 'exterior' && comZonas ? params.get('cid') ?? cidadeUnica : null;
   const nivelUrl = lerNivel(params.get('nivel'), abr, !!cid);
   // ano sem locais (1998): a cidade abre por zonas (sem locais, sem bairros)
-  const nivel: Nivel = (nivelUrl === 'locais' || nivelUrl === 'bairros') && !temLocais(ano) ? 'zonas' : nivelUrl;
+  const nivel: Nivel = !comZonas ? 'municipios' : (nivelUrl === 'locais' || nivelUrl === 'bairros') && !temLocais(ano) ? 'zonas' : nivelUrl;
 
   // preferências (o script do <head> já aplicou no <html>)
   const [daltonico, setDaltonico] = useState(false);
@@ -350,10 +352,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // duplo clique num município (estado, sem zonas) abre a visão da cidade
   const aoAbrir = useCallback(
     (id: string) => {
-      if (cid || abr === 'br' || abr === 'exterior' || nivel !== 'municipios') return;
+      if (cid || abr === 'br' || abr === 'exterior' || nivel !== 'municipios' || !comZonas) return;
       abrirCidade(id);
     },
-    [cid, abr, nivel, abrirCidade],
+    [cid, abr, nivel, abrirCidade, comZonas],
   );
 
   const descreverFeicao = useCallback(
@@ -471,7 +473,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         contexto={contexto}
         nivel={nivelArquivo === 'municipios' ? 'municipios' : nivel}
         locais={locaisDaUnidade}
-        aoAbrirCidade={cidadeSelecionada ? () => abrirCidade(cidadeSelecionada) : undefined}
+        aoAbrirCidade={cidadeSelecionada && comZonas ? () => abrirCidade(cidadeSelecionada) : undefined}
         aoEscolherLocal={cid && nivel !== 'locais' ? (id) => atualizarBusca({ nivel: 'locais', mun: id }) : undefined}
         trilha={trilha}
         visao={visao}

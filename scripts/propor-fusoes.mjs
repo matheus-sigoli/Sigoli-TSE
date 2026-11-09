@@ -4,7 +4,8 @@
  * Origem = vizinho (fronteira em comum na malha IBGE) que, no ano, tinha votos na mesma zona eleitoral em que o
  * município novo vota no ano seguinte (zonas-cidade de --depois); entre eles, o de maior fronteira em comum.
  * Só imprime: a lista revisada vai para scripts/lib/fusoes.mjs.
- * Uso: node scripts/propor-fusoes.mjs --ano 1998 --depois 2002
+ * Com --amc (data/amc/1991-2000.txt), a origem sai do mesmo grupo de Áreas Mínimas Comparáveis.
+ * Uso: node scripts/propor-fusoes.mjs --ano 1998 --depois 2002 [--amc data/amc/1991-2000.txt]
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { fusoesDoAno } from './lib/fusoes.mjs';
@@ -14,6 +15,11 @@ const opt = (k) => { const i = argv.indexOf(`--${k}`); return i >= 0 ? argv[i + 
 const ANO = Number(opt('ano')), DEPOIS = Number(opt('depois'));
 const jaFundidos = new Set(fusoesDoAno(ANO).map((f) => f.novo));
 const nomes = new Map(JSON.parse(readFileSync('public/data/2026/municipios.json', 'utf8')).map((m) => [m.ibge, m.nome]));
+// Áreas Mínimas Comparáveis 1991–2000 (IBGE/Ipea, via geobr): uma linha por AMC com os municípios de 2000
+const amc = new Map();
+if (opt('amc')) readFileSync(opt('amc'), 'utf8').trim().split('\n').forEach((l, i) => l.split(',').forEach((m) => amc.set(m.trim(), i)));
+const grupo = new Map();
+for (const [m, g] of amc) (grupo.get(g) ?? grupo.set(g, []).get(g)).push(m);
 const saida = [];
 const origem = new Map(); const pendentes = [];
 for (const arq of readdirSync('public/geo/uf').filter((n) => /^[a-z]{2}\.json$/.test(n))) {
@@ -44,12 +50,15 @@ for (const arq of readdirSync('public/geo/uf').filter((n) => /^[a-z]{2}\.json$/.
     const viz = new Map();
     for (const [a, ds] of donos) if (ds.has(ib)) for (const d of ds) if (d !== ib) viz.set(d, (viz.get(d) ?? 0) + tam[a]);
     const zd = zonasDepois.get(ib) ?? new Set();
-    const cands = [...viz].filter(([d]) => comResultado.has(d)).map(([d, f]) => ({ d, f, zona: [...zd].some((z) => zonasAno.get(d)?.has(z)) }))
+    if (!nomes.has(ib)) continue; // lagoas (4300001/4300002) não são municípios
+    const doAmc = amc.has(ib) ? grupo.get(amc.get(ib)).filter((d) => comResultado.has(d)) : [];
+    const base = doAmc.length ? doAmc.map((d) => [d, viz.get(d) ?? 0]) : [...viz].filter(([d]) => comResultado.has(d));
+    const cands = base.map(([d, f]) => ({ d, f, zona: [...zd].some((z) => zonasAno.get(d)?.has(z)), amc: doAmc.length > 0 }))
       .sort((a, b) => Number(b.zona) - Number(a.zona) || b.f - a.f);
     if (!cands.length) { pendentes.push({ uf, ib, viz, zd }); continue; }
     const o = cands[0];
     origem.set(ib, o.d);
-    saida.push(`${uf};${ib};${nomes.get(ib)};${o?.d ?? '?'};${o ? nomes.get(o.d) : '?'};${o?.zona ? 'zona' : 'fronteira'};${cands.slice(1, 3).map((c) => `${nomes.get(c.d)}${c.zona ? '*' : ''}`).join('/')}`);
+    saida.push(`${uf};${ib};${nomes.get(ib)};${o?.d ?? '?'};${o ? nomes.get(o.d) : '?'};${o?.amc ? (doAmc.length === 1 ? 'amc' : `amc+${o.zona ? 'zona' : 'fronteira'}`) : o?.zona ? 'zona' : 'fronteira'};${cands.slice(1, 3).map((c) => `${nomes.get(c.d)}${c.zona ? '*' : ''}`).join('/')}`);
   }
 }
 // novos cujos vizinhos também são novos: herdam a origem do vizinho novo da mesma zona (ou de maior fronteira)

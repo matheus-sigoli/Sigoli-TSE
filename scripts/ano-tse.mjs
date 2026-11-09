@@ -272,7 +272,10 @@ await lerCsv(zip('det'), porUf, (f, c) => {
   if (!chave) return;
   const t = munDe(g, chave).t;
   t[0] += num(f[c.QT_APTOS]); t[1] += num(f[c.QT_COMPARECIMENTO]); t[2] += num(f[c.QT_ABSTENCOES]);
-  t[3] += num(f[c.QT_TOTAL_VOTOS_VALIDOS]); t[4] += num(f[c.QT_VOTOS_BRANCOS]); t[5] += num(f[c.QT_TOTAL_VOTOS_NULOS]);
+  // 1994: QT_TOTAL_VOTOS_VALIDOS e QT_TOTAL_VOTOS_NULOS vêm 0 → nulos = QT_VOTOS_NULOS e válidos = comparecimento − brancos − nulos
+  const nulos = num(f[c.QT_TOTAL_VOTOS_NULOS]) || num(f[c.QT_VOTOS_NULOS]);
+  t[3] += num(f[c.QT_TOTAL_VOTOS_VALIDOS]) || num(f[c.QT_COMPARECIMENTO]) - num(f[c.QT_VOTOS_BRANCOS]) - nulos;
+  t[4] += num(f[c.QT_VOTOS_BRANCOS]); t[5] += nulos;
 });
 if (naoMapeados.size) console.warn(`municípios sem código IBGE (fora dos mapas): ${[...naoMapeados].slice(0, 20).map(([k, n]) => `${k} ${n}`).join(', ')}`);
 

@@ -6,7 +6,7 @@ import type { Local, Malha, Nivel, Regiao } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
-import { ELEICOES, temLocais } from '@/lib/anos';
+import { ELEICOES, temLocais, temZonas } from '@/lib/anos';
 
 interface Props {
   ano: number;
@@ -119,7 +119,7 @@ function Filtros(p: Props) {
         </select>
       </div>
 
-      {p.abr !== 'br' && p.abr !== 'exterior' ? (
+      {p.abr !== 'br' && p.abr !== 'exterior' && temZonas(p.ano) ? (
         <div className="campo campo-nivel">
           {p.cidade ? (
             <div className="cidade-aberta">

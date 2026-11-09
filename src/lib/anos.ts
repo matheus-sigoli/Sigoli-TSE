@@ -15,6 +15,8 @@ export interface Eleicao {
   semLocais?: boolean;
   /** sem Presidente por município nos dados abertos do TSE (1998) */
   semPresidente?: boolean;
+  /** sem zona eleitoral nos dados do TSE (1994: NR_ZONA = -3): só a visão por municípios */
+  semZonas?: boolean;
 }
 
 export const ELEICOES: Eleicao[] = [
@@ -52,12 +54,15 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1994, titulo: 'Eleições Gerais 1994', datas: '3 de outubro e 15 de novembro',
-    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: false, semLocais: true,
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: false, semLocais: true, semZonas: true,
   },
 ];
 
 /** o ano tem locais de votação (visão Locais na cidade) */
 export const temLocais = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semLocais;
+
+/** o ano tem as zonas eleitorais (visão Zonas e a visão da cidade) */
+export const temZonas = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semZonas;
 
 /** o ano tem o Presidente por município */
 export const temPresidente = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semPresidente;
