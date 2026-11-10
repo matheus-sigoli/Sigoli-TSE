@@ -1,0 +1,36 @@
+# Malha municipal de um ano (municípios criados depois voltam à origem, scripts/lib/fusoes.mjs) e quem pinta o mapa.
+# Roda no push destes arquivos; o ano vem de .github/ano-malha.
+name: Malha de outro ano
+on:
+  push:
+    paths:
+      - .github/workflows/malha-ano.yml
+      - .github/ano-malha
+permissions:
+  contents: write
+concurrency:
+  group: malha-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  malha:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Dependências
+        run: npm install --no-audit --no-fund
+      - name: Malha e cores
+        run: |
+          ANO=$(cat .github/ano-malha)
+          echo "ANO=$ANO" >> $GITHUB_ENV
+          node --max-old-space-size=8000 scripts/malha-ano.mjs --ano $ANO
+          node scripts/pintam.mjs --ano $ANO
+      - name: Gravar
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/geo/$ANO public/data/$ANO
+          git diff --cached --quiet && exit 0
+          git commit -m "Malha de $ANO [skip ci]" && git push

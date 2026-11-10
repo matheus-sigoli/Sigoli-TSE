@@ -1,6 +1,7 @@
 /**
  * Municípios criados depois de uma eleição (ADR 0015): no mapa daquele ano, a área volta para o município de origem.
  * `ateAno`: último ano de eleição em que o município novo ainda não existia (o eleitor votava na origem).
+ * `desdeAno`: primeiro ano em que a fusão vale (quando num ano mais antigo o município tinha resultado próprio).
  */
 export const FUSOES = [
   // Boa Esperança do Norte (MT): desmembrado de Nova Ubiratã, instalado em 2025
@@ -271,19 +272,19 @@ export const FUSOES = [
   { uf: 'mt', novo: '5107875', origem: '5102637', ateAno: 1996 }, // Sapezal ← Campo Novo do Parecis
   { uf: 'mt', novo: '5108303', origem: '5103056', ateAno: 1996 }, // União do Sul ← Cláudia
   { uf: 'pa', novo: '1500859', origem: '1505486', ateAno: 1996 }, // Anapu ← Pacajá
-  { uf: 'pa', novo: '1501253', origem: '1502764', ateAno: 1996 }, // Bannach ← Cumaru do Norte
+  { uf: 'pa', novo: '1501253', origem: '1502764', ateAno: 1996, desdeAno: 1994 }, // Bannach ← Cumaru do Norte
   { uf: 'pa', novo: '1501451', origem: '1506807', ateAno: 1996 }, // Belterra ← Santarém
   { uf: 'pa', novo: '1501956', origem: '1508308', ateAno: 1996 }, // Cachoeira do Piriá ← Viseu
   { uf: 'pa', novo: '1502152', origem: '1505536', ateAno: 1996 }, // Canaã dos Carajás ← Parauapebas
   { uf: 'pa', novo: '1502855', origem: '1500404', ateAno: 1996 }, // Curuá ← Alenquer
   { uf: 'pa', novo: '1504422', origem: '1501501', ateAno: 1996 }, // Marituba ← Benevides
-  { uf: 'pa', novo: '1505437', origem: '1502764', ateAno: 1996 }, // Ourilândia do Norte ← Cumaru do Norte
+  { uf: 'pa', novo: '1505437', origem: '1502764', ateAno: 1996, desdeAno: 1994 }, // Ourilândia do Norte ← Cumaru do Norte
   { uf: 'pa', novo: '1505635', origem: '1507458', ateAno: 1996 }, // Piçarra ← São Geraldo do Araguaia
   { uf: 'pa', novo: '1506112', origem: '1506104', ateAno: 1996 }, // Quatipuru ← Primavera
   { uf: 'pa', novo: '1507755', origem: '1508407', ateAno: 1996 }, // Sapucaia ← Xinguara
   { uf: 'pa', novo: '1507466', origem: '1507102', ateAno: 1996 }, // São João da Ponta ← São Caetano de Odivelas
   { uf: 'pa', novo: '1508035', origem: '1501709', ateAno: 1996 }, // Tracuateua ← Bragança
-  { uf: 'pa', novo: '1508084', origem: '1507300', ateAno: 1996 }, // Tucumã ← São Félix do Xingu
+  { uf: 'pa', novo: '1508084', origem: '1507300', ateAno: 1996, desdeAno: 1994 }, // Tucumã ← São Félix do Xingu
   { uf: 'pb', novo: '2500536', origem: '2502508', ateAno: 1996 }, // Alcantil ← Boqueirão
   { uf: 'pb', novo: '2500577', origem: '2512705', ateAno: 1996 }, // Algodão de Jandaíra ← Remígio
   { uf: 'pb', novo: '2500734', origem: '2516300', ateAno: 1996 }, // Amparo ← Sumé
@@ -558,6 +559,547 @@ export const FUSOES = [
   { uf: 'to', novo: '1720002', origem: '1713809', ateAno: 1996 }, // Santa Terezinha do Tocantins ← Palmeiras do Tocantins
   { uf: 'to', novo: '1720978', origem: '1700707', ateAno: 1996 }, // Talismã ← Alvorada
   { uf: 'to', novo: '1721257', origem: '1709302', ateAno: 1996 }, // Tupirama ← Guaraí
+  // instalados em 1993 (primeira eleição municipal em 1992): em 1989 ainda votavam na origem. Origem pelo grupo de
+  // Áreas Mínimas Comparáveis 1991–2000; com mais de uma origem no grupo, a da zona eleitoral de 1998 ou a de maior
+  // fronteira (scripts/propor-fusoes.mjs --ano 1989 --depois 1998 --amc); revisados à mão os marcados
+  { uf: 'ac', novo: '1200013', origem: '1200450', ateAno: 1992 }, // Acrelândia ← Senador Guiomard
+  { uf: 'ac', novo: '1200138', origem: '1200401', ateAno: 1992 }, // Bujari ← Rio Branco
+  { uf: 'ac', novo: '1200179', origem: '1200401', ateAno: 1992 }, // Capixaba ← Rio Branco
+  { uf: 'ac', novo: '1200252', origem: '1200104', ateAno: 1992 }, // Epitaciolândia ← Brasiléia
+  { uf: 'ac', novo: '1200328', origem: '1200609', ateAno: 1992 }, // Jordão ← Tarauacá
+  { uf: 'ac', novo: '1200351', origem: '1200203', ateAno: 1992 }, // Marechal Thaumaturgo ← Cruzeiro do Sul
+  { uf: 'ac', novo: '1200393', origem: '1200203', ateAno: 1992 }, // Porto Walter ← Cruzeiro do Sul
+  { uf: 'ac', novo: '1200427', origem: '1200203', ateAno: 1992 }, // Rodrigues Alves ← Cruzeiro do Sul
+  { uf: 'ac', novo: '1200435', origem: '1200344', ateAno: 1992 }, // Santa Rosa do Purus ← Manoel Urbano
+  { uf: 'ac', novo: '1200807', origem: '1200401', ateAno: 1992 }, // Porto Acre ← Rio Branco
+  { uf: 'al', novo: '2702553', origem: '2706307', ateAno: 1992 }, // Estrela de Alagoas ← Palmeira dos Índios
+  { uf: 'al', novo: '2706422', origem: '2700102', ateAno: 1992 }, // Pariconha ← Água Branca
+  { uf: 'al', novo: '2706448', origem: '2700508', ateAno: 1992 }, // Paripueira ← Barra de Santo Antônio
+  { uf: 'ap', novo: '1600055', origem: '1600303', ateAno: 1992 }, // Serra do Navio ← Macapá (revisado)
+  { uf: 'ap', novo: '1600154', origem: '1600303', ateAno: 1992 }, // Pedra Branca do Amapari ← Macapá (revisado)
+  { uf: 'ap', novo: '1600212', origem: '1600303', ateAno: 1992 }, // Cutias ← Macapá
+  { uf: 'ap', novo: '1600253', origem: '1600303', ateAno: 1992 }, // Itaubal ← Macapá
+  { uf: 'ap', novo: '1600535', origem: '1600238', ateAno: 1992 }, // Porto Grande ← Ferreira Gomes
+  { uf: 'ap', novo: '1600550', origem: '1600105', ateAno: 1992 }, // Pracuúba ← Amapá
+  { uf: 'ce', novo: '2301257', origem: '2309300', ateAno: 1992 }, // Ararendá ← Nova Russas
+  { uf: 'ce', novo: '2303659', origem: '2312205', ateAno: 1992 }, // Catunda ← Santa Quitéria
+  { uf: 'ce', novo: '2303931', origem: '2311306', ateAno: 1992 }, // Choró ← Quixadá
+  { uf: 'ce', novo: '2304459', origem: '2301109', ateAno: 1992 }, // Fortim ← Aracati
+  { uf: 'ce', novo: '2306256', origem: '2309706', ateAno: 1992 }, // Itaitinga ← Pacatuba
+  { uf: 'ce', novo: '2307254', origem: '2304251', ateAno: 1992 }, // Jijoca de Jericoacoara ← Cruz
+  { uf: 'es', novo: '3202652', origem: '3203007', ateAno: 1992 }, // Irupi ← Iúna
+  { uf: 'es', novo: '3203346', origem: '3201902', ateAno: 1992 }, // Marechal Floriano ← Domingos Martins
+  { uf: 'es', novo: '3204658', origem: '3201506', ateAno: 1992 }, // São Domingos do Norte ← Colatina
+  { uf: 'es', novo: '3205150', origem: '3203908', ateAno: 1992 }, // Vila Pavão ← Nova Venécia
+  { uf: 'go', novo: '5200555', origem: '5212808', ateAno: 1992 }, // Alto Horizonte ← Mara Rosa
+  { uf: 'go', novo: '5201454', origem: '5211909', ateAno: 1992 }, // Aparecida do Rio Doce ← Jataí
+  { uf: 'go', novo: '5203939', origem: '5213905', ateAno: 1992 }, // Buriti de Goiás ← Mossâmedes
+  { uf: 'go', novo: '5203962', origem: '5212709', ateAno: 1992 }, // Buritinópolis ← Mambaí
+  { uf: 'go', novo: '5204557', origem: '5203302', ateAno: 1992 }, // Caldazinha ← Bela Vista de Goiás
+  { uf: 'go', novo: '5205059', origem: '5218805', ateAno: 1992 }, // Castelândia ← Rio Verde
+  { uf: 'go', novo: '5205471', origem: '5201504', ateAno: 1992 }, // Chapadão do Céu ← Aporé
+  { uf: 'go', novo: '5205497', origem: '5212501', ateAno: 1992 }, // Cidade Ocidental ← Luziânia
+  { uf: 'go', novo: '5205513', origem: '5205802', ateAno: 1992 }, // Cocalzinho de Goiás ← Corumbá de Goiás
+  { uf: 'go', novo: '5209291', origem: '5211206', ateAno: 1992 }, // Guaraíta ← Itapuranga
+  { uf: 'go', novo: '5209937', origem: '5211503', ateAno: 1992 }, // Inaciolândia ← Itumbiara
+  { uf: 'go', novo: '5212055', origem: '5219902', ateAno: 1992 }, // Jesúpolis ← São Francisco de Goiás
+  { uf: 'go', novo: '5213772', origem: '5221452', ateAno: 1992 }, // Montividiu do Norte ← Trombas
+  { uf: 'go', novo: '5214879', origem: '5212808', ateAno: 1992 }, // Nova Iguaçu de Goiás ← Mara Rosa
+  { uf: 'go', novo: '5216452', origem: '5211909', ateAno: 1992 }, // Perolândia ← Jataí
+  { uf: 'go', novo: '5218391', origem: '5217104', ateAno: 1992 }, // Professor Jamil ← Piracanjuba
+  { uf: 'go', novo: '5219712', origem: '5218805', ateAno: 1992 }, // Santo Antônio da Barra ← Rio Verde
+  { uf: 'go', novo: '5219738', origem: '5208806', ateAno: 1992 }, // Santo Antônio de Goiás ← Goianira
+  { uf: 'go', novo: '5221197', origem: '5208400', ateAno: 1992 }, // Terezópolis de Goiás ← Goianápolis
+  { uf: 'go', novo: '5221577', origem: '5206404', ateAno: 1992 }, // Uirapuru ← Crixás
+  { uf: 'go', novo: '5222203', origem: '5208004', ateAno: 1992 }, // Vila Boa ← Formosa
+  { uf: 'mg', novo: '3101631', origem: '3154408', ateAno: 1992 }, // Alfredo Vasconcelos ← Ressaquinha
+  { uf: 'mg', novo: '3103751', origem: '3169604', ateAno: 1992 }, // Araporã ← Tupaciguara
+  { uf: 'mg', novo: '3112653', origem: '3133204', ateAno: 1992 }, // Capitão Andrade ← Itanhomi
+  { uf: 'mg', novo: '3114550', origem: '3134400', ateAno: 1992 }, // Carneirinho ← Iturama
+  { uf: 'mg', novo: '3115458', origem: '3132305', ateAno: 1992 }, // Catuji ← Itaipé
+  { uf: 'mg', novo: '3122454', origem: '3101706', ateAno: 1992 }, // Divisópolis ← Almenara
+  { uf: 'mg', novo: '3123528', origem: '3139508', ateAno: 1992 }, // Durandé ← Manhumirim
+  { uf: 'mg', novo: '3123858', origem: '3113404', ateAno: 1992 }, // Entre Folhas ← Caratinga
+  { uf: 'mg', novo: '3125952', origem: '3113305', ateAno: 1992 }, // Fervedouro ← Carangola
+  { uf: 'mg', novo: '3130051', origem: '3161106', ateAno: 1992 }, // Icaraí de Minas ← São Francisco
+  { uf: 'mg', novo: '3131158', origem: '3113404', ateAno: 1992 }, // Ipaba ← Caratinga
+  { uf: 'mg', novo: '3135050', origem: '3139300', ateAno: 1992 }, // Jaíba ← Manga
+  { uf: 'mg', novo: '3135076', origem: '3110806', ateAno: 1992 }, // Jampruca ← Campanário
+  { uf: 'mg', novo: '3136652', origem: '3140704', ateAno: 1992 }, // Juatuba ← Mateus Leme
+  { uf: 'mg', novo: '3137536', origem: '3153400', ateAno: 1992 }, // Lagoa Grande ← Presidente Olegário
+  { uf: 'mg', novo: '3138625', origem: '3134400', ateAno: 1992 }, // Limeira do Oeste ← Iturama
+  { uf: 'mg', novo: '3138658', origem: '3162401', ateAno: 1992 }, // Lontra ← São João da Ponte
+  { uf: 'mg', novo: '3139250', origem: '3124302', ateAno: 1992 }, // Mamonas ← Espinosa
+  { uf: 'mg', novo: '3140555', origem: '3101706', ateAno: 1992 }, // Mata Verde ← Almenara
+  { uf: 'mg', novo: '3140852', origem: '3139300', ateAno: 1992 }, // Matias Cardoso ← Manga
+  { uf: 'mg', novo: '3143450', origem: '3155603', ateAno: 1992 }, // Montezuma ← Rio Pardo de Minas
+  { uf: 'mg', novo: '3146750', origem: '3155108', ateAno: 1992 }, // Palmópolis ← Rio do Prado
+  { uf: 'mg', novo: '3149150', origem: '3135209', ateAno: 1992 }, // Pedras de Maria da Cruz ← Januária
+  { uf: 'mg', novo: '3154457', origem: '3164209', ateAno: 1992 }, // Riachinho ← São Romão
+  { uf: 'mg', novo: '3157252', origem: '3113404', ateAno: 1992 }, // Santa Bárbara do Leste ← Caratinga
+  { uf: 'mg', novo: '3158953', origem: '3141702', ateAno: 1992 }, // Santana do Paraíso ← Mesquita
+  { uf: 'mg', novo: '3159357', origem: '3113404', ateAno: 1992 }, // Santa Rita de Minas ← Caratinga
+  { uf: 'mg', novo: '3162559', origem: '3139409', ateAno: 1992 }, // São João do Manhuaçu ← Manhuaçu
+  { uf: 'mg', novo: '3162575', origem: '3139607', ateAno: 1992 }, // São João do Manteninha ← Mantena
+  { uf: 'mg', novo: '3162955', origem: '3171204', ateAno: 1992 }, // São José da Lapa ← Vespasiano
+  { uf: 'mg', novo: '3165578', origem: '3110608', ateAno: 1992 }, // Senador Amaral ← Cambuí
+  { uf: 'mg', novo: '3170057', origem: '3113404', ateAno: 1992 }, // Ubaporanga ← Caratinga
+  { uf: 'mg', novo: '3170529', origem: '3161106', ateAno: 1992 }, // Urucuia ← São Francisco
+  { uf: 'ms', novo: '5000252', origem: '5003306', ateAno: 1992 }, // Alcinópolis ← Coxim
+  { uf: 'ms', novo: '5004809', origem: '5005681', ateAno: 1992 }, // Japorã ← Mundo Novo
+  { uf: 'ms', novo: '5005251', origem: '5006606', ateAno: 1992 }, // Laguna Carapã ← Ponta Porã
+  { uf: 'ms', novo: '5006002', origem: '5007208', ateAno: 1992 }, // Nova Alvorada do Sul ← Rio Brilhante
+  { uf: 'ms', novo: '5006259', origem: '5004700', ateAno: 1992 }, // Novo Horizonte do Sul ← Ivinhema
+  { uf: 'mt', novo: '5100359', origem: '5107859', ateAno: 1992 }, // Alto Boa Vista ← São Félix do Araguaia
+  { uf: 'mt', novo: '5102694', origem: '5107859', ateAno: 1992 }, // Canabrava do Norte ← São Félix do Araguaia
+  { uf: 'mt', novo: '5103353', origem: '5107776', ateAno: 1992 }, // Confresa ← Santa Terezinha
+  { uf: 'mt', novo: '5103379', origem: '5105176', ateAno: 1992 }, // Cotriguaçu ← Juruena
+  { uf: 'mt', novo: '5103957', origem: '5105622', ateAno: 1992 }, // Glória d'Oeste ← Mirassol d'Oeste
+  { uf: 'mt', novo: '5105234', origem: '5102504', ateAno: 1992 }, // Lambari d'Oeste ← Cáceres
+  { uf: 'mt', novo: '5106158', origem: '5100805', ateAno: 1992 }, // Nova Bandeirantes ← Apiacás
+  { uf: 'mt', novo: '5106455', origem: '5106208', ateAno: 1992 }, // Planalto da Serra ← Nova Brasilândia
+  { uf: 'mt', novo: '5106653', origem: '5108204', ateAno: 1992 }, // Pontal do Araguaia ← Torixoréu
+  { uf: 'mt', novo: '5106851', origem: '5101704', ateAno: 1992 }, // Porto Estrela ← Barra do Bugres
+  { uf: 'mt', novo: '5107065', origem: '5102702', ateAno: 1992 }, // Querência ← Canarana
+  { uf: 'mt', novo: '5107198', origem: '5106703', ateAno: 1992 }, // Ribeirãozinho ← Ponte Branca
+  { uf: 'mt', novo: '5107248', origem: '5107909', ateAno: 1992 }, // Santa Carmem ← Sinop
+  { uf: 'mt', novo: '5107263', origem: '5101308', ateAno: 1992 }, // Santo Afonso ← Arenápolis
+  { uf: 'mt', novo: '5107297', origem: '5107602', ateAno: 1992 }, // São José do Povo ← Rondonópolis
+  { uf: 'mt', novo: '5107354', origem: '5107859', ateAno: 1992 }, // São José do Xingu ← São Félix do Araguaia
+  { uf: 'mt', novo: '5107404', origem: '5104807', ateAno: 1992 }, // São Pedro da Cipa ← Jaciara
+  { uf: 'mt', novo: '5107941', origem: '5106802', ateAno: 1992 }, // Tabaporã ← Porto dos Gaúchos
+  { uf: 'mt', novo: '5108808', origem: '5103205', ateAno: 1992 }, // Nova Guarita ← Colíder
+  { uf: 'mt', novo: '5108857', origem: '5101308', ateAno: 1992 }, // Nova Marilândia ← Arenápolis
+  { uf: 'mt', novo: '5108907', origem: '5107305', ateAno: 1992 }, // Nova Maringá ← São José do Rio Claro
+  { uf: 'mt', novo: '5108956', origem: '5100805', ateAno: 1992 }, // Nova Monte Verde ← Apiacás
+  { uf: 'pa', novo: '1500131', origem: '1501576', ateAno: 1992 }, // Abel Figueiredo ← Bom Jesus do Tocantins
+  { uf: 'pa', novo: '1500347', origem: '1505536', ateAno: 1992 }, // Água Azul do Norte ← Parauapebas
+  { uf: 'pa', novo: '1500958', origem: '1507201', ateAno: 1992 }, // Aurora do Pará ← São Domingos do Capim
+  { uf: 'pa', novo: '1501725', origem: '1500602', ateAno: 1992 }, // Brasil Novo ← Altamira
+  { uf: 'pa', novo: '1501782', origem: '1508100', ateAno: 1992 }, // Breu Branco ← Tucuruí
+  { uf: 'pa', novo: '1502764', origem: '1505437', ateAno: 1992 }, // Cumaru do Norte ← Ourilândia do Norte
+  // em 1994 o TSE pôs Ourilândia e Bannach no código de Cumaru (acima, desdeAno); em 1989 Ourilândia tinha resultado próprio
+  { uf: 'pa', novo: '1501253', origem: '1505437', ateAno: 1992 }, // Bannach ← Ourilândia do Norte (revisado)
+  { uf: 'pa', novo: '1502954', origem: '1502772', ateAno: 1992 }, // Eldorado dos Carajás ← Curionópolis
+  { uf: 'pa', novo: '1503044', origem: '1502707', ateAno: 1992 }, // Floresta do Araguaia ← Conceição do Araguaia
+  { uf: 'pa', novo: '1503093', origem: '1503804', ateAno: 1992 }, // Goianésia do Pará ← Jacundá
+  { uf: 'pa', novo: '1503457', origem: '1507201', ateAno: 1992 }, // Ipixuna do Pará ← São Domingos do Capim
+  { uf: 'pa', novo: '1503754', origem: '1503606', ateAno: 1992 }, // Jacareacanga ← Itaituba
+  { uf: 'pa', novo: '1504950', origem: '1508308', ateAno: 1992 }, // Nova Esperança do Piriá ← Viseu
+  { uf: 'pa', novo: '1504976', origem: '1503705', ateAno: 1992 }, // Nova Ipixuna ← Itupiranga
+  { uf: 'pa', novo: '1505031', origem: '1503606', ateAno: 1992 }, // Novo Progresso ← Itaituba
+  { uf: 'pa', novo: '1505064', origem: '1505486', ateAno: 1992 }, // Novo Repartimento ← Pacajá
+  { uf: 'pa', novo: '1505494', origem: '1501758', ateAno: 1992 }, // Palestina do Pará ← Brejo Grande do Araguaia
+  { uf: 'pa', novo: '1505551', origem: '1506138', ateAno: 1992 }, // Pau d'Arco ← Redenção
+  { uf: 'pa', novo: '1505650', origem: '1506807', ateAno: 1992 }, // Placas ← Santarém
+  { uf: 'pa', novo: '1506351', origem: '1501501', ateAno: 1992 }, // Santa Bárbara do Pará ← Benevides
+  { uf: 'pa', novo: '1506559', origem: '1505403', ateAno: 1992 }, // Santa Luzia do Pará ← Ourém
+  { uf: 'pa', novo: '1507151', origem: '1507508', ateAno: 1992 }, // São Domingos do Araguaia ← São João do Araguaia
+  { uf: 'pa', novo: '1507961', origem: '1502905', ateAno: 1992 }, // Terra Alta ← Curuçá
+  { uf: 'pa', novo: '1507979', origem: '1503002', ateAno: 1992 }, // Terra Santa ← Faro
+  { uf: 'pa', novo: '1508050', origem: '1503606', ateAno: 1992 }, // Trairão ← Itaituba
+  { uf: 'pa', novo: '1508126', origem: '1505502', ateAno: 1992 }, // Ulianópolis ← Paragominas
+  { uf: 'pa', novo: '1508357', origem: '1500602', ateAno: 1992 }, // Vitória do Xingu ← Altamira
+  { uf: 'pe', novo: '2603926', origem: '2605707', ateAno: 1992 }, // Carnaubeira da Penha ← Floresta
+  { uf: 'pe', novo: '2605152', origem: '2611101', ateAno: 1992 }, // Dormentes ← Petrolina
+  { uf: 'pe', novo: '2608255', origem: '2608305', ateAno: 1992 }, // Jucati ← Jupi
+  { uf: 'pe', novo: '2608453', origem: '2604007', ateAno: 1992 }, // Lagoa do Carro ← Carpina
+  { uf: 'pe', novo: '2611533', origem: '2603900', ateAno: 1992 }, // Quixaba ← Carnaíba
+  { uf: 'pe', novo: '2612455', origem: '2609907', ateAno: 1992 }, // Santa Cruz ← Ouricuri
+  { uf: 'pe', novo: '2612471', origem: '2615706', ateAno: 1992 }, // Santa Cruz da Baixa Verde ← Triunfo
+  { uf: 'pe', novo: '2616183', origem: '2614501', ateAno: 1992 }, // Vertente do Lério ← Surubim
+  { uf: 'pe', novo: '2616506', origem: '2600401', ateAno: 1992 }, // Xexéu ← Água Preta
+  { uf: 'pi', novo: '2200277', origem: '2210300', ateAno: 1992 }, // Alegrete do Piauí ← São Julião
+  { uf: 'pi', novo: '2200459', origem: '2203107', ateAno: 1992 }, // Alvorada do Gurguéia ← Cristino Castro
+  { uf: 'pi', novo: '2201051', origem: '2210409', ateAno: 1992 }, // Assunção do Piauí ← São Miguel do Tapuio
+  { uf: 'pi', novo: '2201150', origem: '2208908', ateAno: 1992 }, // Baixa Grande do Ribeiro ← Ribeiro Gonçalves
+  { uf: 'pi', novo: '2201176', origem: '2211407', ateAno: 1992 }, // Barra d'Alcântara ← Várzea Grande
+  { uf: 'pi', novo: '2201556', origem: '2210805', ateAno: 1992 }, // Bela Vista do Piauí ← Simplício Mendes
+  { uf: 'pi', novo: '2201739', origem: '2207801', ateAno: 1992 }, // Betânia do Piauí ← Paulistana
+  { uf: 'pi', novo: '2201770', origem: '2201200', ateAno: 1992 }, // Boa Hora ← Barras
+  { uf: 'pi', novo: '2201919', origem: '2207702', ateAno: 1992 }, // Bom Princípio do Piauí ← Parnaíba
+  { uf: 'pi', novo: '2201929', origem: '2200707', ateAno: 1992 }, // Bonfim do Piauí ← Anísio de Abreu
+  { uf: 'pi', novo: '2201945', origem: '2202208', ateAno: 1992 }, // Boqueirão do Piauí ← Campo Maior
+  { uf: 'pi', novo: '2201960', origem: '2208403', ateAno: 1992 }, // Brasileira ← Piripiri
+  { uf: 'pi', novo: '2201988', origem: '2202307', ateAno: 1992 }, // Brejo do Piauí ← Canto do Buriti
+  { uf: 'pi', novo: '2202026', origem: '2202604', ateAno: 1992 }, // Buriti dos Montes ← Castelo do Piauí
+  { uf: 'pi', novo: '2202059', origem: '2201200', ateAno: 1992 }, // Cabeceiras do Piauí ← Barras
+  { uf: 'pi', novo: '2202091', origem: '2204303', ateAno: 1992 }, // Caldeirão Grande do Piauí ← Fronteiras
+  { uf: 'pi', novo: '2202133', origem: '2205201', ateAno: 1992 }, // Campo Grande do Piauí ← Jaicós
+  { uf: 'pi', novo: '2202174', origem: '2208502', ateAno: 1992 }, // Campo Largo do Piauí ← Porto
+  { uf: 'pi', novo: '2202251', origem: '2205300', ateAno: 1992 }, // Canavieira ← Jerumenha
+  { uf: 'pi', novo: '2202455', origem: '2210003', ateAno: 1992 }, // Capitão Gervásio Oliveira ← São João do Piauí
+  { uf: 'pi', novo: '2202554', origem: '2210706', ateAno: 1992 }, // Caridade do Piauí ← Simões
+  { uf: 'pi', novo: '2202737', origem: '2200400', ateAno: 1992 }, // Coivaras ← Altos
+  { uf: 'pi', novo: '2202752', origem: '2203602', ateAno: 1992 }, // Colônia do Gurguéia ← Eliseu Martins
+  { uf: 'pi', novo: '2202778', origem: '2207009', ateAno: 1992 }, // Colônia do Piauí ← Oeiras
+  { uf: 'pi', novo: '2202851', origem: '2210607', ateAno: 1992 }, // Coronel José Dias ← São Raimundo Nonato
+  { uf: 'pi', novo: '2203230', origem: '2201903', ateAno: 1992 }, // Currais ← Bom Jesus
+  { uf: 'pi', novo: '2203271', origem: '2210706', ateAno: 1992 }, // Curral Novo do Piauí ← Simões
+  { uf: 'pi', novo: '2203750', origem: '2203354', ateAno: 1992 }, // Fartura do Piauí ← Dirceu Arcoverde
+  { uf: 'pi', novo: '2204352', origem: '2208007', ateAno: 1992 }, // Geminiano ← Picos
+  { uf: 'pi', novo: '2204550', origem: '2202505', ateAno: 1992 }, // Guaribas ← Caracol
+  { uf: 'pi', novo: '2204659', origem: '2207702', ateAno: 1992 }, // Ilha Grande ← Parnaíba
+  { uf: 'pi', novo: '2205151', origem: '2207801', ateAno: 1992 }, // Jacobina do Piauí ← Paulistana
+  { uf: 'pi', novo: '2205250', origem: '2208809', ateAno: 1992 }, // Jardim do Mulato ← Regeneração
+  { uf: 'pi', novo: '2205524', origem: '2203206', ateAno: 1992 }, // Júlio Borges ← Curimatá
+  { uf: 'pi', novo: '2205532', origem: '2200707', ateAno: 1992 }, // Jurema ← Anísio de Abreu
+  { uf: 'pi', novo: '2205557', origem: '2211100', ateAno: 1992 }, // Lagoa Alegre ← União
+  { uf: 'pi', novo: '2205565', origem: '2210003', ateAno: 1992 }, // Lagoa do Barro do Piauí ← São João do Piauí
+  { uf: 'pi', novo: '2205573', origem: '2207900', ateAno: 1992 }, // Lagoa de São Francisco ← Pedro Ii
+  { uf: 'pi', novo: '2205599', origem: '2211308', ateAno: 1992 }, // Lagoa do Sítio ← Valença do Piauí
+  { uf: 'pi', novo: '2205953', origem: '2207207', ateAno: 1992 }, // Marcolândia ← Padre Marcos
+  { uf: 'pi', novo: '2206357', origem: '2207900', ateAno: 1992 }, // Milton Brandão ← Pedro Ii
+  { uf: 'pi', novo: '2206654', origem: '2201101', ateAno: 1992 }, // Morro Cabeça No Tempo ← Avelino Lopes
+  { uf: 'pi', novo: '2206753', origem: '2202208', ateAno: 1992 }, // Nossa Senhora de Nazaré ← Campo Maior
+  { uf: 'pi', novo: '2206951', origem: '2200301', ateAno: 1992 }, // Novo Santo Antônio ← Alto Longá
+  { uf: 'pi', novo: '2207355', origem: '2202307', ateAno: 1992 }, // Pajeú do Piauí ← Canto do Buriti
+  { uf: 'pi', novo: '2207553', origem: '2208007', ateAno: 1992 }, // Paquetá ← Picos
+  { uf: 'pi', novo: '2207751', origem: '2201606', ateAno: 1992 }, // Passagem Franca do Piauí ← Beneditinos
+  { uf: 'pi', novo: '2207777', origem: '2205201', ateAno: 1992 }, // Patos do Piauí ← Jaicós
+  { uf: 'pi', novo: '2207850', origem: '2209005', ateAno: 1992 }, // Pavussu ← Rio Grande do Piauí
+  { uf: 'pi', novo: '2207959', origem: '2210003', ateAno: 1992 }, // Nova Santa Rita ← São João do Piauí
+  { uf: 'pi', novo: '2208650', origem: '2207801', ateAno: 1992 }, // Queimada Nova ← Paulistana
+  { uf: 'pi', novo: '2208858', origem: '2207603', ateAno: 1992 }, // Riacho Frio ← Parnaguá
+  { uf: 'pi', novo: '2209153', origem: '2200905', ateAno: 1992 }, // Santa Cruz dos Milagres ← Aroazes
+  { uf: 'pi', novo: '2209351', origem: '2208007', ateAno: 1992 }, // Santana do Piauí ← Picos
+  { uf: 'pi', novo: '2209377', origem: '2207009', ateAno: 1992 }, // Santa Rosa do Piauí ← Oeiras
+  { uf: 'pi', novo: '2209559', origem: '2200707', ateAno: 1992 }, // São Braz do Piauí ← Anísio de Abreu
+  { uf: 'pi', novo: '2209872', origem: '2208304', ateAno: 1992 }, // São João da Fronteira ← Piracuruca
+  { uf: 'pi', novo: '2209955', origem: '2207009', ateAno: 1992 }, // São João da Varjota ← Oeiras
+  { uf: 'pi', novo: '2209971', origem: '2206100', ateAno: 1992 }, // São João do Arraial ← Matias Olímpio
+  { uf: 'pi', novo: '2210052', origem: '2208304', ateAno: 1992 }, // São José do Divino ← Piracuruca
+  { uf: 'pi', novo: '2210359', origem: '2210607', ateAno: 1992 }, // São Lourenço do Piauí ← São Raimundo Nonato
+  { uf: 'pi', novo: '2210623', origem: '2202901', ateAno: 1992 }, // Sebastião Barros ← Corrente
+  { uf: 'pi', novo: '2210631', origem: '2201705', ateAno: 1992 }, // Sebastião Leal ← Bertolínia
+  { uf: 'pi', novo: '2210656', origem: '2202208', ateAno: 1992 }, // Sigefredo Pacheco ← Campo Maior
+  { uf: 'pi', novo: '2211357', origem: '2200707', ateAno: 1992 }, // Várzea Branca ← Anísio de Abreu
+  { uf: 'pr', novo: '4101051', origem: '4106308', ateAno: 1992 }, // Anahy ← Corbélia
+  { uf: 'pr', novo: '4101150', origem: '4110003', ateAno: 1992 }, // Ângulo ← Iguaraçu
+  { uf: 'pr', novo: '4103024', origem: '4107207', ateAno: 1992 }, // Boa Esperança do Iguaçu ← Dois Vizinhos
+  { uf: 'pr', novo: '4103222', origem: '4118501', ateAno: 1992 }, // Bom Sucesso do Sul ← Pato Branco
+  { uf: 'pr', novo: '4103370', origem: '4100707', ateAno: 1992 }, // Brasilândia do Sul ← Alto Piquiri
+  { uf: 'pr', novo: '4103479', origem: '4110607', ateAno: 1992 }, // Cafezal do Sul ← Iporã
+  { uf: 'pr', novo: '4104428', origem: '4109401', ateAno: 1992 }, // Candói ← Guarapuava
+  { uf: 'pr', novo: '4106571', origem: '4107207', ateAno: 1992 }, // Cruzeiro do Iguaçu ← Dois Vizinhos
+  { uf: 'pr', novo: '4107124', origem: '4109302', ateAno: 1992 }, // Diamante do Sul ← Guaraniaçu
+  { uf: 'pr', novo: '4107538', origem: '4114609', ateAno: 1992 }, // Entre Rios do Oeste ← Marechal Cândido Rondon
+  { uf: 'pr', novo: '4107553', origem: '4104303', ateAno: 1992 }, // Farol ← Campo Mourão
+  { uf: 'pr', novo: '4107652', origem: '4114302', ateAno: 1992 }, // Fazenda Rio Grande ← Mandirituba
+  { uf: 'pr', novo: '4107850', origem: '4122800', ateAno: 1992 }, // Flor da Serra do Sul ← Salgado Filho
+  { uf: 'pr', novo: '4108551', origem: '4125001', ateAno: 1992 }, // Godoy Moreira ← São João do Ivaí (revisado)
+  { uf: 'pr', novo: '4109658', origem: '4114401', ateAno: 1992 }, // Honório Serpa ← Mangueirinha
+  { uf: 'pr', novo: '4109757', origem: '4105003', ateAno: 1992 }, // Ibema ← Catanduvas
+  { uf: 'pr', novo: '4110052', origem: '4106308', ateAno: 1992 }, // Iguatu ← Corbélia
+  { uf: 'pr', novo: '4110656', origem: '4108205', ateAno: 1992 }, // Iracema do Oeste ← Formosa do Oeste
+  { uf: 'pr', novo: '4110953', origem: '4125704', ateAno: 1992 }, // Itaipulândia ← São Miguel do Iguaçu
+  { uf: 'pr', novo: '4111258', origem: '4122206', ateAno: 1992 }, // Itaperuçu ← Rio Branco do Sul
+  { uf: 'pr', novo: '4111555', origem: '4128104', ateAno: 1992 }, // Ivaté ← Umuarama
+  { uf: 'pr', novo: '4113254', origem: '4117800', ateAno: 1992 }, // Laranjal ← Palmital
+  { uf: 'pr', novo: '4113429', origem: '4112504', ateAno: 1992 }, // Lidianópolis ← Jardim Alegre
+  { uf: 'pr', novo: '4113452', origem: '4104808', ateAno: 1992 }, // Lindoeste ← Cascavel
+  { uf: 'pr', novo: '4115358', origem: '4117909', ateAno: 1992 }, // Maripá ← Palotina
+  { uf: 'pr', novo: '4115739', origem: '4119608', ateAno: 1992 }, // Mato Rico ← Pitanga
+  { uf: 'pr', novo: '4115754', origem: '4114906', ateAno: 1992 }, // Mauá da Serra ← Marilândia do Sul
+  { uf: 'pr', novo: '4115853', origem: '4114609', ateAno: 1992 }, // Mercedes ← Marechal Cândido Rondon
+  { uf: 'pr', novo: '4116950', origem: '4107405', ateAno: 1992 }, // Nova Esperança do Sudoeste ← Enéas Marques
+  { uf: 'pr', novo: '4117057', origem: '4113304', ateAno: 1992 }, // Nova Laranjeiras ← Laranjeiras do Sul
+  { uf: 'pr', novo: '4117214', origem: '4123204', ateAno: 1992 }, // Nova Santa Bárbara ← Santa Cecília do Pavão
+  { uf: 'pr', novo: '4117297', origem: '4103800', ateAno: 1992 }, // Novo Itacolomi ← Cambira
+  { uf: 'pr', novo: '4117453', origem: '4127700', ateAno: 1992 }, // Ouro Verde do Oeste ← Toledo
+  { uf: 'pr', novo: '4118451', origem: '4114609', ateAno: 1992 }, // Pato Bragado ← Marechal Cândido Rondon
+  { uf: 'pr', novo: '4119152', origem: '4119509', ateAno: 1992 }, // Pinhais ← Piraquara
+  { uf: 'pr', novo: '4119251', origem: '4124400', ateAno: 1992 }, // Pinhal de São Bento ← Santo Antônio do Sudoeste
+  { uf: 'pr', novo: '4119657', origem: '4122404', ateAno: 1992 }, // Pitangueiras ← Rolândia
+  { uf: 'pr', novo: '4120853', origem: '4114609', ateAno: 1992 }, // Quatro Pontes ← Marechal Cândido Rondon
+  { uf: 'pr', novo: '4121257', origem: '4115606', ateAno: 1992 }, // Ramilândia ← Matelândia
+  { uf: 'pr', novo: '4121356', origem: '4108601', ateAno: 1992 }, // Rancho Alegre d'Oeste ← Goioerê
+  { uf: 'pr', novo: '4122156', origem: '4113304', ateAno: 1992 }, // Rio Bonito do Iguaçu ← Laranjeiras do Sul
+  { uf: 'pr', novo: '4123824', origem: '4104600', ateAno: 1992 }, // Santa Lúcia ← Capitão Leônidas Marques
+  { uf: 'pr', novo: '4123857', origem: '4119608', ateAno: 1992 }, // Santa Maria do Oeste ← Pitanga
+  { uf: 'pr', novo: '4123956', origem: '4123709', ateAno: 1992 }, // Santa Mônica ← Santa Isabel do Ivaí
+  { uf: 'pr', novo: '4124020', origem: '4104808', ateAno: 1992 }, // Santa Tereza do Oeste ← Cascavel
+  { uf: 'pr', novo: '4125555', origem: '4110409', ateAno: 1992 }, // São Manoel do Paraná ← Indianópolis
+  { uf: 'pr', novo: '4125753', origem: '4127700', ateAno: 1992 }, // São Pedro do Iguaçu ← Toledo
+  { uf: 'pr', novo: '4126272', origem: '4105409', ateAno: 1992 }, // Saudade do Iguaçu ← Chopinzinho
+  { uf: 'pr', novo: '4127882', origem: '4103107', ateAno: 1992 }, // Tunas do Paraná ← Bocaiúva do Sul
+  { uf: 'pr', novo: '4128534', origem: '4127502', ateAno: 1992 }, // Ventania ← Tibagi
+  { uf: 'pr', novo: '4128625', origem: '4128104', ateAno: 1992 }, // Alto Paraíso ← Umuarama
+  { uf: 'pr', novo: '4128633', origem: '4105201', ateAno: 1992 }, // Doutor Ulysses ← Cerro Azul
+  { uf: 'pr', novo: '4128658', origem: '4113304', ateAno: 1992 }, // Virmond ← Laranjeiras do Sul
+  { uf: 'rj', novo: '3300159', origem: '3304706', ateAno: 1992 }, // Aperibé ← Santo Antônio de Pádua
+  { uf: 'rj', novo: '3300225', origem: '3306008', ateAno: 1992 }, // Areal ← Três Rios
+  { uf: 'rj', novo: '3300456', origem: '3303500', ateAno: 1992 }, // Belford Roxo ← Nova Iguaçu
+  { uf: 'rj', novo: '3300951', origem: '3306008', ateAno: 1992 }, // Comendador Levy Gasparian ← Três Rios
+  { uf: 'rj', novo: '3301157', origem: '3301009', ateAno: 1992 }, // Cardoso Moreira ← Campos dos Goytacazes
+  { uf: 'rj', novo: '3301850', origem: '3302502', ateAno: 1992 }, // Guapimirim ← Magé
+  { uf: 'rj', novo: '3302270', origem: '3303500', ateAno: 1992 }, // Japeri ← Nova Iguaçu
+  { uf: 'rj', novo: '3304128', origem: '3300407', ateAno: 1992 }, // Quatis ← Barra Mansa
+  { uf: 'rj', novo: '3304144', origem: '3303500', ateAno: 1992 }, // Queimados ← Nova Iguaçu
+  { uf: 'rj', novo: '3304151', origem: '3302403', ateAno: 1992 }, // Quissamã ← Macaé (revisado)
+  { uf: 'rj', novo: '3304524', origem: '3301306', ateAno: 1992 }, // Rio das Ostras ← Casimiro de Abreu
+  { uf: 'rj', novo: '3306156', origem: '3303104', ateAno: 1992 }, // Varre-Sai ← Natividade
+  { uf: 'rn', novo: '2401651', origem: '2411403', ateAno: 1992 }, // Bodó ← Santana do Matos
+  { uf: 'rn', novo: '2401859', origem: '2411601', ateAno: 1992 }, // Caiçara do Norte ← São Bento do Norte
+  { uf: 'rn', novo: '2403756', origem: '2400802', ateAno: 1992 }, // Fernando Pedroza ← Angicos
+  { uf: 'rn', novo: '2404853', origem: '2404705', ateAno: 1992 }, // Itajá ← Ipanguaçu
+  { uf: 'rn', novo: '2407252', origem: '2407005', ateAno: 1992 }, // Major Sales ← Luís Gomes
+  { uf: 'rn', novo: '2412559', origem: '2414407', ateAno: 1992 }, // São Miguel do Gostoso ← Touros
+  { uf: 'rn', novo: '2414159', origem: '2403806', ateAno: 1992 }, // Tenente Laurentino Cruz ← Florânia
+  { uf: 'rn', novo: '2414456', origem: '2401305', ateAno: 1992 }, // Triunfo Potiguar ← Campo Grande
+  { uf: 'rn', novo: '2414753', origem: '2412500', ateAno: 1992 }, // Venha-Ver ← São Miguel
+  { uf: 'ro', novo: '1100072', origem: '1100064', ateAno: 1992 }, // Corumbiara ← Colorado do Oeste
+  { uf: 'ro', novo: '1100262', origem: '1100023', ateAno: 1992 }, // Rio Crespo ← Ariquemes
+  { uf: 'ro', novo: '1100403', origem: '1100023', ateAno: 1992 }, // Alto Paraíso ← Ariquemes (revisado)
+  { uf: 'ro', novo: '1100502', origem: '1100288', ateAno: 1992 }, // Novo Horizonte do Oeste ← Rolim de Moura
+  { uf: 'ro', novo: '1100601', origem: '1100023', ateAno: 1992 }, // Cacaulândia ← Ariquemes
+  { uf: 'ro', novo: '1100700', origem: '1100023', ateAno: 1992 }, // Campo Novo de Rondônia ← Ariquemes
+  { uf: 'ro', novo: '1100809', origem: '1100205', ateAno: 1992 }, // Candeias do Jamari ← Porto Velho
+  { uf: 'ro', novo: '1100908', origem: '1100288', ateAno: 1992 }, // Castanheiras ← Rolim de Moura
+  { uf: 'ro', novo: '1101005', origem: '1100114', ateAno: 1992 }, // Governador Jorge Teixeira ← Jaru
+  { uf: 'ro', novo: '1101104', origem: '1100205', ateAno: 1992 }, // Itapuã do Oeste ← Porto Velho
+  { uf: 'ro', novo: '1101203', origem: '1100049', ateAno: 1992 }, // Ministro Andreazza ← Cacoal
+  { uf: 'ro', novo: '1101302', origem: '1100155', ateAno: 1992 }, // Mirante da Serra ← Ouro Preto do Oeste
+  { uf: 'ro', novo: '1101401', origem: '1100023', ateAno: 1992 }, // Monte Negro ← Ariquemes
+  { uf: 'ro', novo: '1101500', origem: '1100320', ateAno: 1992 }, // Seringueiras ← São Miguel do Guaporé
+  { uf: 'ro', novo: '1101609', origem: '1100114', ateAno: 1992 }, // Theobroma ← Jaru
+  { uf: 'ro', novo: '1101708', origem: '1100346', ateAno: 1992 }, // Urupá ← Alvorada do Oeste
+  { uf: 'ro', novo: '1101807', origem: '1100155', ateAno: 1992 }, // Vale do Paraíso ← Ouro Preto do Oeste
+  { uf: 'rs', novo: '4300570', origem: '4308102', ateAno: 1992 }, // Alto Feliz ← Feliz
+  { uf: 'rs', novo: '4300646', origem: '4314704', ateAno: 1992 }, // Ametista do Sul ← Planalto
+  { uf: 'rs', novo: '4300851', origem: '4303509', ateAno: 1992 }, // Arambaré ← Camaquã
+  { uf: 'rs', novo: '4301750', origem: '4318408', ateAno: 1992 }, // Barão do Triunfo ← São Jerônimo
+  { uf: 'rs', novo: '4301859', origem: '4321402', ateAno: 1992 }, // Barra do Guarita ← Tenente Portela
+  { uf: 'rs', novo: '4301925', origem: '4300901', ateAno: 1992 }, // Barra do Rio Azul ← Aratiba
+  { uf: 'rs', novo: '4301958', origem: '4320107', ateAno: 1992 }, // Barra Funda ← Sarandi
+  { uf: 'rs', novo: '4302154', origem: '4313706', ateAno: 1992 }, // Boa Vista das Missões ← Palmeira das Missões
+  { uf: 'rs', novo: '4302378', origem: '4304002', ateAno: 1992 }, // Bom Progresso ← Campo Novo
+  { uf: 'rs', novo: '4303673', origem: '4322509', ateAno: 1992 }, // Campestre da Serra ← Vacaria
+  { uf: 'rs', novo: '4304358', origem: '4301602', ateAno: 1992 }, // Candiota ← Bagé
+  { uf: 'rs', novo: '4304697', origem: '4301008', ateAno: 1992 }, // Capitão ← Arroio do Meio
+  { uf: 'rs', novo: '4304853', origem: '4322905', ateAno: 1992 }, // Carlos Gomes ← Viadutos
+  { uf: 'rs', novo: '4305116', origem: '4301552', ateAno: 1992 }, // Centenário ← Áurea
+  { uf: 'rs', novo: '4305371', origem: '4320909', ateAno: 1992 }, // Charrua ← Tapejara
+  { uf: 'rs', novo: '4305587', origem: '4307807', ateAno: 1992 }, // Colinas ← Estrela
+  { uf: 'rs', novo: '4305850', origem: '4304705', ateAno: 1992 }, // Coqueiros do Sul ← Carazinho
+  { uf: 'rs', novo: '4305871', origem: '4310207', ateAno: 1992 }, // Coronel Barros ← Ijuí
+  { uf: 'rs', novo: '4305975', origem: '4314100', ateAno: 1992 }, // Coxilha ← Passo Fundo
+  { uf: 'rs', novo: '4306320', origem: '4321402', ateAno: 1992 }, // Derrubadas ← Tenente Portela
+  { uf: 'rs', novo: '4306429', origem: '4307302', ateAno: 1992 }, // Dois Irmãos das Missões ← Erval Seco
+  { uf: 'rs', novo: '4306924', origem: '4305801', ateAno: 1992 }, // Engenho Velho ← Constantina
+  { uf: 'rs', novo: '4308656', origem: '4318002', ateAno: 1992 }, // Garruchos ← São Borja
+  { uf: 'rs', novo: '4308854', origem: '4311809', ateAno: 1992 }, // Gentil ← Marau
+  { uf: 'rs', novo: '4309126', origem: '4312708', ateAno: 1992 }, // Gramado dos Loureiros ← Nonoai
+  { uf: 'rs', novo: '4309159', origem: '4316808', ateAno: 1992 }, // Gramado Xavier ← Santa Cruz do Sul
+  { uf: 'rs', novo: '4309654', origem: '4301602', ateAno: 1992 }, // Hulha Negra ← Bagé
+  { uf: 'rs', novo: '4310413', origem: '4305405', ateAno: 1992 }, // Inhacorá ← Chiapetta
+  { uf: 'rs', novo: '4310579', origem: '4301404', ateAno: 1992 }, // Itapuca ← Arvorezinha
+  { uf: 'rs', novo: '4311270', origem: '4321006', ateAno: 1992 }, // Lagoa dos Três Cantos ← Tapera
+  { uf: 'rs', novo: '4311429', origem: '4310850', ateAno: 1992 }, // Lajeado do Bugre ← Jaboticaba
+  { uf: 'rs', novo: '4311627', origem: '4310801', ateAno: 1992 }, // Lindolfo Collor ← Ivoti
+  { uf: 'rs', novo: '4311643', origem: '4308102', ateAno: 1992 }, // Linha Nova ← Feliz
+  { uf: 'rs', novo: '4311759', origem: '4318101', ateAno: 1992 }, // Manoel Viana ← São Francisco de Assis
+  { uf: 'rs', novo: '4311775', origem: '4313508', ateAno: 1992 }, // Maquiné ← Osório
+  { uf: 'rs', novo: '4311791', origem: '4302659', ateAno: 1992 }, // Maratá ← Brochier
+  { uf: 'rs', novo: '4311981', origem: '4301909', ateAno: 1992 }, // Mariana Pimentel ← Barra do Ribeiro
+  { uf: 'rs', novo: '4312138', origem: '4314100', ateAno: 1992 }, // Mato Castelhano ← Passo Fundo
+  { uf: 'rs', novo: '4312153', origem: '4322608', ateAno: 1992 }, // Mato Leitão ← Venâncio Aires
+  { uf: 'rs', novo: '4312252', origem: '4302709', ateAno: 1992 }, // Minas do Leão ← Butiá
+  { uf: 'rs', novo: '4312385', origem: '4302105', ateAno: 1992 }, // Monte Belo do Sul ← Bento Gonçalves
+  { uf: 'rs', novo: '4312427', origem: '4320800', ateAno: 1992 }, // Mormaço ← Soledade
+  { uf: 'rs', novo: '4312443', origem: '4321501', ateAno: 1992 }, // Morrinhos do Sul ← Torres
+  { uf: 'rs', novo: '4312476', origem: '4306403', ateAno: 1992 }, // Morro Reuter ← Dois Irmãos
+  { uf: 'rs', novo: '4312625', origem: '4309902', ateAno: 1992 }, // Muliterno ← Ibiraiaras
+  { uf: 'rs', novo: '4312674', origem: '4311809', ateAno: 1992 }, // Nicolau Vergueiro ← Marau
+  { uf: 'rs', novo: '4312955', origem: '4320107', ateAno: 1992 }, // Nova Boa Vista ← Sarandi
+  { uf: 'rs', novo: '4313086', origem: '4308201', ateAno: 1992 }, // Nova Pádua ← Flores da Cunha
+  { uf: 'rs', novo: '4313375', origem: '4304606', ateAno: 1992 }, // Nova Santa Rita ← Canoas
+  { uf: 'rs', novo: '4313425', origem: '4322103', ateAno: 1992 }, // Novo Machado ← Tucunduva
+  { uf: 'rs', novo: '4313441', origem: '4315909', ateAno: 1992 }, // Novo Tiradentes ← Rodeio Bonito
+  { uf: 'rs', novo: '4313490', origem: '4313706', ateAno: 1992 }, // Novo Barreiro ← Palmeira das Missões
+  { uf: 'rs', novo: '4314035', origem: '4312401', ateAno: 1992 }, // Pareci Novo ← Montenegro
+  { uf: 'rs', novo: '4314076', origem: '4315701', ateAno: 1992 }, // Passo do Sobrado ← Rio Pardo
+  { uf: 'rs', novo: '4314423', origem: '4313201', ateAno: 1992 }, // Picada Café ← Nova Petrópolis
+  { uf: 'rs', novo: '4314472', origem: '4311205', ateAno: 1992 }, // Pinhal Grande ← Júlio de Castilhos
+  { uf: 'rs', novo: '4314498', origem: '4313805', ateAno: 1992 }, // Pinheirinho do Vale ← Palmitinho
+  { uf: 'rs', novo: '4314779', origem: '4314100', ateAno: 1992 }, // Pontão ← Passo Fundo
+  { uf: 'rs', novo: '4314787', origem: '4310900', ateAno: 1992 }, // Ponte Preta ← Jacutinga
+  { uf: 'rs', novo: '4315057', origem: '4322301', ateAno: 1992 }, // Porto Mauá ← Tuparendi
+  { uf: 'rs', novo: '4315073', origem: '4315008', ateAno: 1992 }, // Porto Vera Cruz ← Porto Lucena
+  { uf: 'rs', novo: '4315149', origem: '4310801', ateAno: 1992 }, // Presidente Lucena ← Ivoti
+  { uf: 'rs', novo: '4315321', origem: '4311205', ateAno: 1992 }, // Quevedos ← Júlio de Castilhos
+  { uf: 'rs', novo: '4315552', origem: '4312708', ateAno: 1992 }, // Rio dos Índios ← Nonoai
+  { uf: 'rs', novo: '4316428', origem: '4310850', ateAno: 1992 }, // Sagrada Família ← Jaboticaba
+  { uf: 'rs', novo: '4316477', origem: '4305207', ateAno: 1992 }, // Salvador das Missões ← Cerro Largo
+  { uf: 'rs', novo: '4316758', origem: '4311403', ateAno: 1992 }, // Santa Clara do Sul ← Lajeado
+  { uf: 'rs', novo: '4317251', origem: '4302105', ateAno: 1992 }, // Santa Tereza ← Bento Gonçalves
+  { uf: 'rs', novo: '4317558', origem: '4304903', ateAno: 1992 }, // Santo Antônio do Palma ← Casca
+  { uf: 'rs', novo: '4317756', origem: '4304705', ateAno: 1992 }, // Santo Antônio do Planalto ← Carazinho
+  { uf: 'rs', novo: '4317954', origem: '4303202', ateAno: 1992 }, // Santo Expedito do Sul ← Cacique Doble
+  { uf: 'rs', novo: '4318432', origem: '4308003', ateAno: 1992 }, // São João do Polêsine ← Faxinal do Soturno
+  { uf: 'rs', novo: '4318457', origem: '4313706', ateAno: 1992 }, // São José das Missões ← Palmeira das Missões
+  { uf: 'rs', novo: '4318499', origem: '4321808', ateAno: 1992 }, // São José do Inhacorá ← Três de Maio
+  { uf: 'rs', novo: '4318622', origem: '4302303', ateAno: 1992 }, // São José dos Ausentes ← Bom Jesus
+  { uf: 'rs', novo: '4319125', origem: '4316907', ateAno: 1992 }, // São Martinho da Serra ← Santa Maria
+  { uf: 'rs', novo: '4319356', origem: '4316501', ateAno: 1992 }, // São Pedro da Serra ← Salvador do Sul
+  { uf: 'rs', novo: '4319372', origem: '4305207', ateAno: 1992 }, // São Pedro do Butiá ← Cerro Largo
+  { uf: 'rs', novo: '4319711', origem: '4306452', ateAno: 1992 }, // São Valentim do Sul ← Dois Lajeados
+  { uf: 'rs', novo: '4319737', origem: '4306106', ateAno: 1992 }, // São Valério do Sul ← Cruz Alta
+  { uf: 'rs', novo: '4320354', origem: '4321105', ateAno: 1992 }, // Sentinela do Sul ← Tapes
+  { uf: 'rs', novo: '4320453', origem: '4311403', ateAno: 1992 }, // Sério ← Lajeado
+  { uf: 'rs', novo: '4320552', origem: '4301909', ateAno: 1992 }, // Sertão Santana ← Barra do Ribeiro
+  { uf: 'rs', novo: '4320677', origem: '4316808', ateAno: 1992 }, // Sinimbu ← Santa Cruz do Sul
+  { uf: 'rs', novo: '4321477', origem: '4321907', ateAno: 1992 }, // Tiradentes do Sul ← Três Passos
+  { uf: 'rs', novo: '4321626', origem: '4301008', ateAno: 1992 }, // Travesseiro ← Arroio do Meio
+  { uf: 'rs', novo: '4321832', origem: '4321501', ateAno: 1992 }, // Três Forquilhas ← Torres
+  { uf: 'rs', novo: '4322186', origem: '4318606', ateAno: 1992 }, // Tupanci do Sul ← São José do Ouro
+  { uf: 'rs', novo: '4322350', origem: '4309407', ateAno: 1992 }, // União da Serra ← Guaporé
+  { uf: 'rs', novo: '4322533', origem: '4316808', ateAno: 1992 }, // Vale do Sol ← Santa Cruz do Sul
+  { uf: 'rs', novo: '4322541', origem: '4308102', ateAno: 1992 }, // Vale Real ← Feliz
+  { uf: 'rs', novo: '4323457', origem: '4319604', ateAno: 1992 }, // Vila Nova do Sul ← São Sepé
+  { uf: 'rs', novo: '4323754', origem: '4317509', ateAno: 1992 }, // Vitória das Missões ← Santo Ângelo
+  { uf: 'rs', novo: '4323804', origem: '4304630', ateAno: 1992 }, // Xangri-Lá ← Capão da Canoa
+  { uf: 'sc', novo: '4200556', origem: '4204400', ateAno: 1992 }, // Águas Frias ← Coronel Freitas
+  { uf: 'sc', novo: '4201273', origem: '4204301', ateAno: 1992 }, // Arabutã ← Concórdia
+  { uf: 'sc', novo: '4201653', origem: '4217501', ateAno: 1992 }, // Arvoredo ← Seara
+  { uf: 'sc', novo: '4202057', origem: '4201307', ateAno: 1992 }, // Balneário Barra do Sul ← Araquari
+  { uf: 'sc', novo: '4202156', origem: '4204905', ateAno: 1992 }, // Belmonte ← Descanso
+  { uf: 'sc', novo: '4202453', origem: '4213500', ateAno: 1992 }, // Bombinhas ← Porto Belo
+  { uf: 'sc', novo: '4202859', origem: '4218608', ateAno: 1992 }, // Braço do Trombudo ← Trombudo Central
+  { uf: 'sc', novo: '4203154', origem: '4210704', ateAno: 1992 }, // Calmon ← Matos Costa
+  { uf: 'sc', novo: '4203956', origem: '4218707', ateAno: 1992 }, // Capivari de Baixo ← Tubarão
+  { uf: 'sc', novo: '4204178', origem: '4203402', ateAno: 1992 }, // Cerro Negro ← Campo Belo do Sul
+  { uf: 'sc', novo: '4204251', origem: '4219002', ateAno: 1992 }, // Cocal do Sul ← Urussanga
+  { uf: 'sc', novo: '4204350', origem: '4204202', ateAno: 1992 }, // Cordilheira Alta ← Chapecó
+  { uf: 'sc', novo: '4204459', origem: '4216107', ateAno: 1992 }, // Coronel Martins ← São Domingos
+  { uf: 'sc', novo: '4205431', origem: '4214201', ateAno: 1992 }, // Formosa do Sul ← Quilombo
+  { uf: 'sc', novo: '4206652', origem: '4204202', ateAno: 1992 }, // Guatambú ← Chapecó
+  { uf: 'sc', novo: '4207684', origem: '4200101', ateAno: 1992 }, // Ipuaçu ← Abelardo Luz
+  { uf: 'sc', novo: '4207858', origem: '4214201', ateAno: 1992 }, // Irati ← Quilombo
+  { uf: 'sc', novo: '4208955', origem: '4218855', ateAno: 1992 }, // Jardinópolis ← União do Oeste
+  { uf: 'sc', novo: '4209458', origem: '4219705', ateAno: 1992 }, // Lajeado Grande ← Xaxim
+  { uf: 'sc', novo: '4210050', origem: '4203006', ateAno: 1992 }, // Macieira ← Caçador
+  { uf: 'sc', novo: '4210852', origem: '4217808', ateAno: 1992 }, // Mirim Doce ← Taió
+  { uf: 'sc', novo: '4211058', origem: '4203600', ateAno: 1992 }, // Monte Carlo ← Campos Novos
+  { uf: 'sc', novo: '4211256', origem: '4210803', ateAno: 1992 }, // Morro Grande ← Meleiro
+  { uf: 'sc', novo: '4211454', origem: '4204202', ateAno: 1992 }, // Nova Itaberaba ← Chapecó
+  { uf: 'sc', novo: '4211652', origem: '4216909', ateAno: 1992 }, // Novo Horizonte ← São Lourenço do Oeste
+  { uf: 'sc', novo: '4211850', origem: '4200101', ateAno: 1992 }, // Ouro Verde ← Abelardo Luz
+  { uf: 'sc', novo: '4212239', origem: '4217204', ateAno: 1992 }, // Paraíso ← São Miguel do Oeste
+  { uf: 'sc', novo: '4212254', origem: '4216404', ateAno: 1992 }, // Passo de Torres ← São João do Sul
+  { uf: 'sc', novo: '4212270', origem: '4213401', ateAno: 1992 }, // Passos Maia ← Ponte Serrada
+  { uf: 'sc', novo: '4213153', origem: '4204103', ateAno: 1992 }, // Planalto Alegre ← Caxambu do Sul
+  { uf: 'sc', novo: '4213351', origem: '4204806', ateAno: 1992 }, // Ponte Alta do Norte ← Curitibanos
+  { uf: 'sc', novo: '4215059', origem: '4218905', ateAno: 1992 }, // Rio Rufino ← Urubici
+  { uf: 'sc', novo: '4215075', origem: '4211009', ateAno: 1992 }, // Riqueza ← Mondaí
+  { uf: 'sc', novo: '4215455', origem: '4208807', ateAno: 1992 }, // Sangão ← Jaguaruna
+  { uf: 'sc', novo: '4215554', origem: '4204905', ateAno: 1992 }, // Santa Helena ← Descanso
+  { uf: 'sc', novo: '4215679', origem: '4208104', ateAno: 1992 }, // Santa Terezinha ← Itaiópolis
+  { uf: 'sc', novo: '4216057', origem: '4204806', ateAno: 1992 }, // São Cristóvão do Sul ← Curitibanos
+  { uf: 'sc', novo: '4216255', origem: '4208401', ateAno: 1992 }, // São João do Oeste ← Itapiranga
+  { uf: 'sc', novo: '4216354', origem: '4202107', ateAno: 1992 }, // São João do Itaperiú ← Barra Velha
+  { uf: 'sc', novo: '4217154', origem: '4210506', ateAno: 1992 }, // São Miguel da Boa Vista ← Maravilha
+  { uf: 'sc', novo: '4217758', origem: '4210902', ateAno: 1992 }, // Sul Brasil ← Modelo
+  { uf: 'sc', novo: '4219150', origem: '4203600', ateAno: 1992 }, // Vargem ← Campos Novos
+  { uf: 'sc', novo: '4219176', origem: '4204004', ateAno: 1992 }, // Vargem Bonita ← Catanduvas
+  { uf: 'se', novo: '2806404', origem: '2804409', ateAno: 1992 }, // Santana do São Francisco ← Neópolis
+  { uf: 'sp', novo: '3500758', origem: '3522307', ateAno: 1992 }, // Alambari ← Itapetininga
+  { uf: 'sp', novo: '3501152', origem: '3528403', ateAno: 1992 }, // Alumínio ← Mairinque
+  { uf: 'sp', novo: '3502754', origem: '3550605', ateAno: 1992 }, // Araçariguama ← São Roque
+  { uf: 'sp', novo: '3503158', origem: '3504909', ateAno: 1992 }, // Arapeí ← Bananal
+  { uf: 'sp', novo: '3503950', origem: '3555802', ateAno: 1992 }, // Aspásia ← Urânia
+  { uf: 'sp', novo: '3505351', origem: '3502705', ateAno: 1992 }, // Barra do Chapéu ← Apiaí
+  { uf: 'sp', novo: '3506359', origem: '3548500', ateAno: 1992 }, // Bertioga ← Santos
+  { uf: 'sp', novo: '3507159', origem: '3523206', ateAno: 1992 }, // Bom Sucesso de Itararé ← Itararé
+  { uf: 'sp', novo: '3507456', origem: '3526803', ateAno: 1992 }, // Borebi ← Lençóis Paulista
+  { uf: 'sp', novo: '3509254', origem: '3524600', ateAno: 1992 }, // Cajati ← Jacupiranga
+  { uf: 'sp', novo: '3509452', origem: '3502200', ateAno: 1992 }, // Campina do Monte Alegre ← Angatuba
+  { uf: 'sp', novo: '3510153', origem: '3557204', ateAno: 1992 }, // Canitar ← Chavantes
+  { uf: 'sp', novo: '3513850', origem: '3549003', ateAno: 1992 }, // Dirce Reis ← São Francisco
+  { uf: 'sp', novo: '3514924', origem: '3511102', ateAno: 1992 }, // Elisiário ← Catanduva
+  { uf: 'sp', novo: '3514957', origem: '3509304', ateAno: 1992 }, // Embaúba ← Cajobi
+  { uf: 'sp', novo: '3515129', origem: '3541208', ateAno: 1992 }, // Emilianópolis ← Presidente Bernardes
+  { uf: 'sp', novo: '3515152', origem: '3503802', ateAno: 1992 }, // Engenheiro Coelho ← Artur Nogueira
+  { uf: 'sp', novo: '3515194', origem: '3546405', ateAno: 1992 }, // Espírito Santo do Turvo ← Santa Cruz do Rio Pardo
+  { uf: 'sp', novo: '3515350', origem: '3554300', ateAno: 1992 }, // Euclides da Cunha Paulista ← Teodoro Sampaio
+  { uf: 'sp', novo: '3518859', origem: '3543402', ateAno: 1992 }, // Guatapará ← Ribeirão Preto
+  { uf: 'sp', novo: '3519055', origem: '3524709', ateAno: 1992 }, // Holambra ← Jaguariúna
+  { uf: 'sp', novo: '3519071', origem: '3552403', ateAno: 1992 }, // Hortolândia ← Sumaré
+  { uf: 'sp', novo: '3519253', origem: '3500550', ateAno: 1992 }, // Iaras ← Águas de Santa Bárbara
+  { uf: 'sp', novo: '3520426', origem: '3520301', ateAno: 1992 }, // Ilha Comprida ← Iguape
+  { uf: 'sp', novo: '3520442', origem: '3537404', ateAno: 1992 }, // Ilha Solteira ← Pereira Barreto
+  { uf: 'sp', novo: '3522158', origem: '3502705', ateAno: 1992 }, // Itaoca ← Apiaí
+  { uf: 'sp', novo: '3522653', origem: '3542800', ateAno: 1992 }, // Itapirapuã Paulista ← Ribeira
+  { uf: 'sp', novo: '3527256', origem: '3555208', ateAno: 1992 }, // Lourdes ← Turiúba
+  { uf: 'sp', novo: '3528858', origem: '3521903', ateAno: 1992 }, // Marapoama ← Itajobi
+  { uf: 'sp', novo: '3529658', origem: '3535903', ateAno: 1992 }, // Mesópolis ← Paranapuã
+  { uf: 'sp', novo: '3532058', origem: '3503208', ateAno: 1992 }, // Motuca ← Araraquara
+  { uf: 'sp', novo: '3532827', origem: '3522406', ateAno: 1992 }, // Nova Campina ← Itapeva
+  { uf: 'sp', novo: '3532843', origem: '3554904', ateAno: 1992 }, // Nova Canaã Paulista ← Três Fronteiras
+  { uf: 'sp', novo: '3533254', origem: '3552601', ateAno: 1992 }, // Novais ← Tabapuã
+  { uf: 'sp', novo: '3536257', origem: '3557105', ateAno: 1992 }, // Parisi ← Votuporanga
+  { uf: 'sp', novo: '3537156', origem: '3513306', ateAno: 1992 }, // Pedrinhas Paulista ← Cruzália
+  { uf: 'sp', novo: '3540259', origem: '3524808', ateAno: 1992 }, // Pontalinda ← Jales
+  { uf: 'sp', novo: '3540754', origem: '3518404', ateAno: 1992 }, // Potim ← Guaratinguetá
+  { uf: 'sp', novo: '3543253', origem: '3510203', ateAno: 1992 }, // Ribeirão Grande ← Capão Bonito
+  { uf: 'sp', novo: '3544251', origem: '3554300', ateAno: 1992 }, // Rosana ← Teodoro Sampaio
+  { uf: 'sp', novo: '3545159', origem: '3538709', ateAno: 1992 }, // Saltinho ← Piracicaba
+  { uf: 'sp', novo: '3548054', origem: '3502804', ateAno: 1992 }, // Santo Antônio do Aracanguá ← Araçatuba
+  { uf: 'sp', novo: '3549250', origem: '3516903', ateAno: 1992 }, // São João de Iracema ← General Salgado
+  { uf: 'sp', novo: '3549953', origem: '3522208', ateAno: 1992 }, // São Lourenço da Serra ← Itapecerica da Serra
+  { uf: 'sp', novo: '3552551', origem: '3537404', ateAno: 1992 }, // Suzanápolis ← Pereira Barreto
+  { uf: 'sp', novo: '3553856', origem: '3522406', ateAno: 1992 }, // Taquarivaí ← Itapeva
+  { uf: 'sp', novo: '3553955', origem: '3504008', ateAno: 1992 }, // Tarumã ← Assis
+  { uf: 'sp', novo: '3554656', origem: '3540507', ateAno: 1992 }, // Torre de Pedra ← Porangaba
+  { uf: 'sp', novo: '3554953', origem: '3507605', ateAno: 1992 }, // Tuiuti ← Bragança Paulista
+  { uf: 'sp', novo: '3555356', origem: '3525706', ateAno: 1992 }, // Ubarana ← José Bonifácio
+  { uf: 'sp', novo: '3556354', origem: '3507605', ateAno: 1992 }, // Vargem ← Bragança Paulista
+  { uf: 'sp', novo: '3557154', origem: '3539608', ateAno: 1992 }, // Zacarias ← Planalto
+  { uf: 'sp', novo: '3557303', origem: '3530706', ateAno: 1992 }, // Estiva Gerbi ← Mogi Guaçu
+  { uf: 'to', novo: '1700251', origem: '1701903', ateAno: 1992 }, // Abreulândia ← Araguacema
+  { uf: 'to', novo: '1701051', origem: '1714302', ateAno: 1992 }, // Angico ← Nazaré
+  { uf: 'to', novo: '1701309', origem: '1702109', ateAno: 1992 }, // Aragominas ← Araguaína
+  { uf: 'to', novo: '1702158', origem: '1702109', ateAno: 1992 }, // Araguanã ← Araguaína
+  { uf: 'to', novo: '1703305', origem: '1716505', ateAno: 1992 }, // Bom Jesus do Tocantins ← Pedro Afonso
+  { uf: 'to', novo: '1703602', origem: '1718402', ateAno: 1992 }, // Brasilândia do Tocantins ← Presidente Kennedy
+  { uf: 'to', novo: '1703826', origem: '1714302', ateAno: 1992 }, // Cachoeirinha ← Nazaré
+  { uf: 'to', novo: '1703842', origem: '1709005', ateAno: 1992 }, // Campos Lindos ← Goiatins
+  { uf: 'to', novo: '1703867', origem: '1709500', ateAno: 1992 }, // Cariri do Tocantins ← Gurupi
+  { uf: 'to', novo: '1703883', origem: '1702109', ateAno: 1992 }, // Carmolândia ← Araguaína
+  { uf: 'to', novo: '1703891', origem: '1718808', ateAno: 1992 }, // Carrasco Bonito ← Sampaio
+  { uf: 'to', novo: '1704105', origem: '1710508', ateAno: 1992 }, // Centenário ← Itacajá
+  { uf: 'to', novo: '1706506', origem: '1701002', ateAno: 1992 }, // Darcinópolis ← Ananás
+  { uf: 'to', novo: '1707405', origem: '1702208', ateAno: 1992 }, // Esperantina ← Araguatins
+  { uf: 'to', novo: '1708254', origem: '1709302', ateAno: 1992 }, // Tabocão ← Guaraí
+  { uf: 'to', novo: '1710904', origem: '1710508', ateAno: 1992 }, // Itapiratins ← Itacajá
+  { uf: 'to', novo: '1711506', origem: '1716604', ateAno: 1992 }, // Jaú do Tocantins ← Peixe
+  { uf: 'to', novo: '1711803', origem: '1706001', ateAno: 1992 }, // Juarina ← Couto Magalhães
+  { uf: 'to', novo: '1711902', origem: '1706100', ateAno: 1992 }, // Lagoa da Confusão ← Cristalândia
+  { uf: 'to', novo: '1711951', origem: '1715101', ateAno: 1992 }, // Lagoa do Tocantins ← Novo Acordo
+  { uf: 'to', novo: '1712009', origem: '1721109', ateAno: 1992 }, // Lajeado ← Tocantínia
+  { uf: 'to', novo: '1712702', origem: '1717909', ateAno: 1992 }, // Mateiros ← Ponte Alta do Tocantins
+  { uf: 'to', novo: '1712801', origem: '1710706', ateAno: 1992 }, // Maurilândia do Tocantins ← Itaguatins
+  { uf: 'to', novo: '1713809', origem: '1714302', ateAno: 1992 }, // Palmeiras do Tocantins ← Nazaré
+  { uf: 'to', novo: '1713957', origem: '1702109', ateAno: 1992 }, // Muricilândia ← Araguaína
+  { uf: 'to', novo: '1715150', origem: '1702406', ateAno: 1992 }, // Novo Alegre ← Arraias
+  { uf: 'to', novo: '1715259', origem: '1717800', ateAno: 1992 }, // Novo Jardim ← Ponte Alta do Bom Jesus
+  { uf: 'to', novo: '1715705', origem: '1707702', ateAno: 1992 }, // Palmeirante ← Filadélfia
+  { uf: 'to', novo: '1716307', origem: '1702307', ateAno: 1992 }, // Pau d'Arco ← Arapoema
+  { uf: 'to', novo: '1717206', origem: '1722107', ateAno: 1992 }, // Piraquê ← Xambioá
+  { uf: 'to', novo: '1718501', origem: '1710508', ateAno: 1992 }, // Recursolândia ← Itacajá
+  { uf: 'to', novo: '1718550', origem: '1701002', ateAno: 1992 }, // Riachinho ← Ananás
+  { uf: 'to', novo: '1718659', origem: '1707009', ateAno: 1992 }, // Rio da Conceição ← Dianópolis
+  { uf: 'to', novo: '1718709', origem: '1713304', ateAno: 1992 }, // Rio dos Bois ← Miranorte
+  { uf: 'to', novo: '1718840', origem: '1702000', ateAno: 1992 }, // Sandolândia ← Araguaçu
+  { uf: 'to', novo: '1718865', origem: '1702109', ateAno: 1992 }, // Santa Fé do Araguaia ← Araguaína
+  { uf: 'to', novo: '1718881', origem: '1716505', ateAno: 1992 }, // Santa Maria do Tocantins ← Pedro Afonso
+  { uf: 'to', novo: '1720101', origem: '1702208', ateAno: 1992 }, // São Bento do Tocantins ← Araguatins
+  { uf: 'to', novo: '1720150', origem: '1715101', ateAno: 1992 }, // São Félix do Tocantins ← Novo Acordo
+  { uf: 'to', novo: '1720200', origem: '1720804', ateAno: 1992 }, // São Miguel do Tocantins ← Sítio Novo do Tocantins
+  { uf: 'to', novo: '1720259', origem: '1715754', ateAno: 1992 }, // São Salvador do Tocantins ← Palmeirópolis
+  { uf: 'to', novo: '1720853', origem: '1716604', ateAno: 1992 }, // Sucupira ← Peixe
+  { uf: 'to', novo: '1720937', origem: '1705607', ateAno: 1992 }, // Taipas do Tocantins ← Conceição do Tocantins
+  { uf: 'to', novo: '1721307', origem: '1718402', ateAno: 1992 }, // Tupiratins ← Presidente Kennedy
   // criados em 2013 (primeira eleição municipal em 2012): em 2010 ainda votavam na origem
   { uf: 'sc', novo: '4212650', origem: '4209409', ateAno: 2011 }, // Pescaria Brava ← Laguna
   { uf: 'sc', novo: '4220000', origem: '4207007', ateAno: 2011 }, // Balneário Rincão ← Içara
@@ -568,7 +1110,7 @@ export const FUSOES = [
 
 /** Fusões que valem no ano; quando a origem também ainda não existia, segue até o município que existia. */
 export const fusoesDoAno = (ano) => {
-  const lista = FUSOES.filter((f) => ano <= f.ateAno);
+  const lista = FUSOES.filter((f) => ano <= f.ateAno && !(f.desdeAno > ano));
   const de = new Map(lista.map((f) => [f.novo, f.origem]));
   return lista.map((f) => {
     let o = f.origem;

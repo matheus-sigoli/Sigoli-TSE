@@ -6,6 +6,7 @@
  * Só imprime: a lista revisada vai para scripts/lib/fusoes.mjs.
  * Com --amc (data/amc/1991-2000.txt), a origem sai do mesmo grupo de Áreas Mínimas Comparáveis.
  * Uso: node scripts/propor-fusoes.mjs --ano 1998 --depois 2002 [--amc data/amc/1991-2000.txt]
+ * (1989: --ano 1989 --depois 1998 --amc data/amc/1991-2000.txt; sem governador, lê o arquivo nacional de Presidente)
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { fusoesDoAno } from './lib/fusoes.mjs';
@@ -21,12 +22,21 @@ if (opt('amc')) readFileSync(opt('amc'), 'utf8').trim().split('\n').forEach((l, 
 const grupo = new Map();
 for (const [m, g] of amc) (grupo.get(g) ?? grupo.set(g, []).get(g)).push(m);
 const saida = [];
+let presidenteBr = null;
+const CODIGO_UF = { ro: 11, ac: 12, am: 13, rr: 14, pa: 15, ap: 16, to: 17, ma: 21, pi: 22, ce: 23, rn: 24, pb: 25, pe: 26, al: 27, se: 28, ba: 29,
+  mg: 31, es: 32, rj: 33, sp: 35, pr: 41, sc: 42, rs: 43, ms: 50, mt: 51, go: 52, df: 53 };
+const topoUfCodigo = (uf) => CODIGO_UF[uf];
 const origem = new Map(); const pendentes = [];
 for (const arq of readdirSync('public/geo/uf').filter((n) => /^[a-z]{2}\.json$/.test(n))) {
   const uf = arq.slice(0, 2);
   const p = `public/data/${ANO}/governador/1/${uf}.json`;
-  if (!existsSync(p)) continue;
-  const comResultado = new Set(Object.keys(JSON.parse(readFileSync(p, 'utf8')).mun));
+  // 1989 só tem Presidente (arquivo nacional): os municípios da UF saem dele
+  const pp = `public/data/${ANO}/presidente/1/br.json`;
+  if (!existsSync(p) && !existsSync(pp)) continue;
+  const prefixo = String(topoUfCodigo(uf));
+  const comResultado = existsSync(p)
+    ? new Set(Object.keys(JSON.parse(readFileSync(p, 'utf8')).mun))
+    : new Set(Object.keys((presidenteBr ??= JSON.parse(readFileSync(pp, 'utf8'))).mun).filter((k) => k.startsWith(prefixo)));
   const zonasAno = new Map(); // ibge → zonas no ano
   const pz = `public/data/${ANO}/governador/1/zonas-cidade/${uf}.json`;
   // 1994: o TSE não publica a zona (NR_ZONA = -3) → vale a zona do vizinho no ano seguinte

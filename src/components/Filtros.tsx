@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { memo, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { FAIXAS_LEGENDA, type Faixas } from '@/lib/cores';
-import type { Local, Malha, Nivel, Regiao } from '@/lib/dados';
+import type { Local, Malha, Nivel, Regioes } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
@@ -16,7 +16,7 @@ interface Props {
   cargo: Cargo;
   regiaoSelecionada: string | null;
   malha: Malha | null;
-  regioes: Record<string, Regiao> | null;
+  regioes: Regioes | null;
   municipios: Municipio[] | null;
   legenda: { rotulo: string; faixas: Faixas }[];
   modoCalor: boolean;
@@ -34,7 +34,7 @@ interface Props {
   /** ausente quando a UF é uma cidade só (DF): não há estado para voltar */
   aoFecharCidade?: () => void;
   aoMudarNivel: (n: Nivel) => void;
-  /** locais de votação da cidade aberta (busca por local) */
+  /** locais de votação da cidade aberta ou da região vista por locais (busca por local) */
   locaisDaCidade: Local[] | null;
   aoEscolherLocal: (id: string) => void;
 }
@@ -48,6 +48,8 @@ const NIVEIS_CIDADE: { n: Nivel; rotulo: string }[] = [
   { n: 'bairros', rotulo: 'Bairros' },
   { n: 'locais', rotulo: 'Locais' },
 ];
+/** com uma micro ou mesorregião escolhida, o estado também pode ser visto por locais de votação da região */
+const NIVEIS_REGIAO: { n: Nivel; rotulo: string }[] = [...NIVEIS_ESTADO, { n: 'locais', rotulo: 'Locais' }];
 const DICA_CIDADE: Record<string, string> = {
   zonas: 'Zonas eleitorais dentro da cidade. Clique numa zona para ver o resultado dela.',
   bairros: 'Bairros com área vêm do IBGE; os demais, do cadastro do TSE, aparecem como círculos.',
@@ -76,19 +78,23 @@ function Filtros(p: Props) {
     [p.locaisDaCidade],
   );
 
-  // regiões presentes na malha da UF
+  // micro e mesorregiões dos municípios da malha da UF
   const opcoesRegiao = useMemo(() => {
     if (!p.malha || !p.regioes || p.abr === 'br' || p.abr === 'exterior') return null;
-    const imediatas = new Set<string>(), intermediarias = new Set<string>();
+    const { regioes, municipios } = p.regioes;
+    const micros = new Set<string>(), mesos = new Set<string>();
     for (const f of p.malha.municipios.features) {
-      const pr = f.properties as { rgi?: string; rgint?: string };
-      if (pr.rgi) imediatas.add(pr.rgi);
-      if (pr.rgint) intermediarias.add(pr.rgint);
+      const micro = municipios[String((f.properties as { id?: string } | null)?.id ?? f.id)];
+      if (!micro) continue;
+      micros.add(micro);
+      if (regioes[micro]?.pai) mesos.add(regioes[micro].pai!);
     }
-    const nome = (c: string) => p.regioes![c]?.nome ?? c;
+    if (!micros.size) return null;
+    const nome = (c: string) => regioes[c]?.nome ?? c;
     const ord = (s: Set<string>) => [...s].sort((a, b) => nome(a).localeCompare(nome(b), 'pt-BR')).map((c) => ({ c, nome: nome(c) }));
-    return { imediatas: ord(imediatas), intermediarias: ord(intermediarias) };
+    return { micros: ord(micros), mesos: ord(mesos) };
   }, [p.malha, p.regioes, p.abr]);
+  const comRegiao = !!p.regiaoSelecionada && !p.cidade && temLocais(p.ano);
 
   return (
     <aside className="filtros" aria-label="Filtros">
@@ -130,38 +136,41 @@ function Filtros(p: Props) {
           ) : null}
           <span className="campo-rotulo" id="rot-nivel">Ver por</span>
           <div className="segmentado nivel" role="group" aria-labelledby="rot-nivel">
-            {(p.cidade ? NIVEIS_CIDADE.filter((x) => x.n === 'zonas' || temLocais(p.ano)) : NIVEIS_ESTADO).map(({ n, rotulo }) => (
+            {(p.cidade ? NIVEIS_CIDADE.filter((x) => x.n === 'zonas' || temLocais(p.ano)) : comRegiao ? NIVEIS_REGIAO : NIVEIS_ESTADO).map(({ n, rotulo }) => (
               <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
             ))}
           </div>
           <p className="marca-sub dica-nivel" style={{ marginTop: 6 }}>
-            {p.cidade ? DICA_CIDADE[p.nivel] : 'Dois cliques num município abrem as zonas, os bairros e os locais de votação dele.'}
+            {p.cidade ? DICA_CIDADE[p.nivel]
+              : comRegiao && p.nivel === 'locais' ? 'Todos os locais de votação da região num mapa só. Clique num local para ver o resultado dele.'
+              : comRegiao ? 'Em Locais, a região inteira aparece por local de votação. Dois cliques num município abrem só ele.'
+              : 'Dois cliques num município abrem as zonas, os bairros e os locais de votação dele.'}
             {' '}Shift + clique soma várias áreas.
           </p>
         </div>
       ) : null}
 
-      {opcoesRegiao && p.nivel === 'municipios' && !p.cidade ? (
+      {opcoesRegiao && (p.nivel === 'municipios' || p.nivel === 'locais') && !p.cidade ? (
         <div className="campo campo-regiao">
           <label htmlFor={idReg}>Região</label>
           <select id={idReg} className="select" value={p.regiaoSelecionada ?? ''} onChange={(e) => p.aoMudarRegiao(e.target.value || null)}>
             <option value="">Estado inteiro</option>
-            <optgroup label="Regiões intermediárias">
-              {opcoesRegiao.intermediarias.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
+            <optgroup label="Mesorregiões">
+              {opcoesRegiao.mesos.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
             </optgroup>
-            <optgroup label="Regiões imediatas">
-              {opcoesRegiao.imediatas.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
+            <optgroup label="Microrregiões">
+              {opcoesRegiao.micros.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
             </optgroup>
           </select>
         </div>
       ) : null}
 
-      {p.cidade && p.locaisDaCidade ? (
+      {p.locaisDaCidade ? (
         <Busca
           rotulo="Buscar local de votação"
           placeholder="Nome da escola ou bairro"
           itens={itensLocais}
-          vazio="Nenhum local de votação com esse nome nesta cidade"
+          vazio={p.cidade ? 'Nenhum local de votação com esse nome nesta cidade' : 'Nenhum local de votação com esse nome nesta região'}
           aoEscolher={p.aoEscolherLocal}
           classe="busca-local"
         />
