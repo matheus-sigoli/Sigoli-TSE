@@ -1,0 +1,29 @@
+# Monta o site e grava capturas das páginas listadas em .github/capturas/paginas.json (artefato "capturas").
+name: Capturas de tela
+on:
+  push:
+    paths:
+      - .github/capturas/**
+      - .github/workflows/capturas.yml
+jobs:
+  capturas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npx next build
+      - run: npm install --no-save --no-audit --no-fund playwright@1.49.1 serve@14.2.4 && npx playwright install --with-deps chromium
+      - name: Capturas
+        run: |
+          (npx serve out -l 3000 > /dev/null 2>&1 &)
+          sleep 5
+          PAGINAS="$(cat .github/capturas/paginas.json)" node .github/capturas/capturar.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: capturas
+          path: capturas/
