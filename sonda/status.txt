@@ -1,0 +1,29 @@
+200 1867011 https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2024/DTB_2024.zip
+200 1536464 https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2023/DTB_2023.zip
+200 2039162 https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2022/DTB_2022.zip
+200 281239 https://cdn.tse.jus.br/estatistica/sead/odsele/detalhe_votacao_uf/detalhe_votacao_uf_1989.zip
+200 285967 https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_candidato_uf/votacao_candidato_uf_1989.zip
+404 196 https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_candidato_munzona/votacao_candidato_munzona_1990.zip
+404 196 https://cdn.tse.jus.br/estatistica/sead/odsele/detalhe_votacao_munzona/detalhe_votacao_munzona_1990.zip
+404 196 https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_partido_munzona/votacao_partido_munzona_1990.zip
+404 196 https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_1990.zip
+ibge 
+60975 https://geografiadovoto.com/resultados/municipio/../../js/jquery-ui.js
+371581 https://geografiadovoto.com/resultados/municipio/../../js/materialize.js
+89476 https://code.jquery.com/jquery-3.5.1.min.js
+206976 https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+16926 https://geografiadovoto.com/resultados/municipio/resultadomunicipio.min.js
+8747 https://geografiadovoto.com/resultados/municipio/svghandler.min.js
+total 5924
+drwxr-xr-x  3 runner runner    4096 Nov 10 02:43 .
+drwxr-xr-x 11 runner runner    4096 Nov 10 02:40 ..
+-rw-r--r--  1 runner runner  285967 Nov 10 02:41 cand89.zip
+-rw-r--r--  1 runner runner  281239 Nov 10 02:41 det89.zip
+-rw-r--r--  1 runner runner 2039162 Nov 10 02:40 dtb_2022.zip
+-rw-r--r--  1 runner runner 1536464 Nov 10 02:40 dtb_2023.zip
+-rw-r--r--  1 runner runner 1867011 Nov 10 02:40 dtb_2024.zip
+-rw-r--r--  1 runner runner   12897 Nov 10 02:43 gv-fontes.html
+-rw-r--r--  1 runner runner   10692 Nov 10 02:43 gv-municipio.html
+-rw-r--r--  1 runner runner     233 Nov 10 02:43 gv-refs.txt
+drwxr-xr-x  2 runner runner    4096 Nov 10 02:43 gvjs
+-rw-r--r--  1 runner runner    1457 Nov 10 02:43 status.txt

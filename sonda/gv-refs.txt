@@ -1,0 +1,6 @@
+src="../../js/jquery-ui.js"
+src="../../js/materialize.js"
+src="https://code.jquery.com/jquery-3.5.1.min.js"
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+src="resultadomunicipio.min.js"
+src="svghandler.min.js"
