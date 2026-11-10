@@ -5,6 +5,8 @@ on:
     paths:
       - .github/capturas/**
       - .github/workflows/capturas.yml
+permissions:
+  contents: write
 jobs:
   capturas:
     runs-on: ubuntu-latest
@@ -22,8 +24,9 @@ jobs:
           (npx serve out -l 3000 > /dev/null 2>&1 &)
           sleep 5
           PAGINAS="$(cat .github/capturas/paginas.json)" node .github/capturas/capturar.mjs
-      - uses: actions/upload-artifact@v4
+      - name: Gravar no ramo capturas-teste
         if: always()
-        with:
-          name: capturas
-          path: capturas/
+        run: |
+          cd capturas && git init -q -b capturas-teste && git add . 
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -m "capturas ${{ github.sha }} [skip ci]"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" capturas-teste
