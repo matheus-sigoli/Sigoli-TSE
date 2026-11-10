@@ -1,0 +1,37 @@
+# Sonda temporária: baixa as fontes de 1989/1990 e as micro/mesorregiões do IBGE e grava em sonda/
+name: Sonda 1989
+on:
+  push:
+    branches: [sonda-1989]
+    paths: [.github/workflows/sonda-1989.yml]
+permissions:
+  contents: write
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Baixar
+        run: |
+          mkdir -p sonda && cd sonda
+          C=https://cdn.tse.jus.br/estatistica/sead/odsele
+          for u in $C/detalhe_votacao_uf/detalhe_votacao_uf_1989.zip $C/votacao_candidato_uf/votacao_candidato_uf_1989.zip \
+                   $C/votacao_candidato_munzona/votacao_candidato_munzona_1990.zip $C/detalhe_votacao_munzona/detalhe_votacao_munzona_1990.zip \
+                   $C/votacao_partido_munzona/votacao_partido_munzona_1990.zip $C/consulta_cand/consulta_cand_1990.zip; do
+            curl -sL -o /dev/null -w "%{http_code} %{size_download} $u\n" "$u" >> status.txt
+          done
+          curl -sL $C/detalhe_votacao_uf/detalhe_votacao_uf_1989.zip -o det89.zip; curl -sL $C/votacao_candidato_uf/votacao_candidato_uf_1989.zip -o cand89.zip
+          curl -sL "https://servicodados.ibge.gov.br/api/v1/localidades/municipios" -o ibge-municipios.json; echo "ibge $(wc -c < ibge-municipios.json)" >> status.txt
+          curl -sL https://geografiadovoto.com/resultados/municipio/ -o gv-municipio.html
+          curl -sL https://geografiadovoto.com/fontes/ -o gv-fontes.html
+          grep -oE '(src|href)="[^"]+\.(js|json|csv|topojson|geojson)[^"]*"' gv-municipio.html | sort -u > gv-refs.txt || true
+          mkdir -p gvjs
+          for r in $(sed -E 's/^(src|href)="//; s/"$//' gv-refs.txt); do
+            case "$r" in http*) u=$r;; /*) u=https://geografiadovoto.com$r;; *) u=https://geografiadovoto.com/resultados/municipio/$r;; esac
+            f=gvjs/$(echo "$r" | tr '/?=&' '____'); curl -sL "$u" -o "$f"; echo "$(wc -c < "$f") $u" >> status.txt
+          done
+          ls -la >> status.txt
+      - name: Gravar
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sonda && git commit -m "sonda 1989 [skip ci]" && git push
