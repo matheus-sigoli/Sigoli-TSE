@@ -18,7 +18,7 @@ import {
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
 import { definirAnoCores } from '@/lib/cores';
-import { temLocais, temPresidente, temZonas } from '@/lib/anos';
+import { fonteDoAno, temCargo, temLocais, temZonas } from '@/lib/anos';
 import Filtros from './Filtros';
 import Painel from './Painel';
 import Carregando from './Carregando';
@@ -128,8 +128,11 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       if (cid && cid !== cidadeUnica) p.set('cid', cid);
       if (nivel !== 'municipios') p.set('nivel', nivel);
       const q = p.toString();
-      // 1998 não tem Presidente: vai para Governador (no Brasil, São Paulo)
-      if (cargoSlug === 'presidente' && !temPresidente(outro)) return `${rotaDe(abr === 'br' || abr === 'exterior' ? 'sp' : abr, 'governador', outro)}${q ? `?${q}` : ''}`;
+      // 1998 não tem Presidente: vai para Governador (no Brasil, São Paulo); 1989 só tem Presidente
+      if (!temCargo(outro, cargoSlug)) {
+        if (temCargo(outro, 'presidente')) return `${rotaDe(abr, 'presidente', outro)}${q ? `?${q}` : ''}`;
+        return `${rotaDe(abr === 'br' || abr === 'exterior' ? 'sp' : abr, 'governador', outro)}${q ? `?${q}` : ''}`;
+      }
       return `${rotaDe(abr, cargoSlug, outro)}${q ? `?${q}` : ''}`;
     },
     [abr, cargo, cargoSlug, turno, nivel, cid, cidadeUnica],
@@ -488,7 +491,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         ) : null}
         {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">
-          Malha: IBGE{cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ' 2025'} · Resultados: TSE
+          Malha: IBGE{cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ' 2025'} · Resultados: {fonteDoAno(ano) ?? 'TSE'}
           {nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
           {cid && nivel === 'bairros' ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}
           {(cid || regiaoLocais) && nivel === 'locais'

@@ -46,6 +46,8 @@ const APELIDOS: Record<string, string> = {
   PPB: 'PP',
   // 1994: PTRB e PDC com as cores de PRTB e DC (pedido do usuário); PPR, PRN, PTR e o PSD antigo têm cor própria
   PTRB: 'PRTB', PDC: 'DC',
+  // 1989: o PDS (Maluf) é o partido que em 1993 virou PPR: mesma cor cinza
+  PDS: 'PPR',
 };
 
 // O PSD de antes de 2011 (número 41, incorporado ao PTB em 2003) não é o PSD de hoje (55): cor própria.
@@ -93,6 +95,9 @@ const cacheGerado = new Map<string, EntradaPaleta>();
 export const chavePartido = (sigla: string) => {
   const k = normaliza(sigla);
   if (k === 'PSD' && anoCores < 2011) return 'PSD41';
+  // 1989: PP, PPB e PMB eram outros partidos (sem relação com os de hoje); o PCB de 1989 é o que virou PPS e Cidadania
+  if (anoCores < 1990 && (k === 'PP' || k === 'PPB' || k === 'PMB')) return `${k}89`;
+  if (anoCores < 1990 && k === 'PCB') return 'CIDADANIA';
   return APELIDOS[k] ?? k;
 };
 

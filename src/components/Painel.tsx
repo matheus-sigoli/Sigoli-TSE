@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { textoSobre } from '@/lib/cores';
 import { preCarregar, urlResultadoNivel, type Local, type Nivel } from '@/lib/dados';
-import { temPresidente } from '@/lib/anos';
+import { temCargo } from '@/lib/anos';
 import { CARGOS, UFS, type Arquivo, type Cargo, type CargoSlug, type Turno } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
 import { bancada, type Foco, type Linha, type Visao } from '@/lib/resultados';
@@ -97,7 +97,7 @@ function Painel(p: Props) {
       />
 
       <nav className="abas" aria-label="Cargo">
-        {CARGOS.filter((c) => c.slug !== 'presidente' || temPresidente(p.ano)).map((c) => (
+        {CARGOS.filter((c) => temCargo(p.ano, c.slug)).map((c) => (
           <Link
             key={c.slug}
             href={p.hrefCargo(c.slug)}
@@ -131,7 +131,7 @@ function Painel(p: Props) {
         ) : null}
         <p className="subtitulo">
           {cargo.nome}, {turno}º turno
-          {p.ano !== 2026 ? '. Totalização final do TSE' : arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
+          {p.ano === 1989 ? '. Totalização final, por município: Geografia do Voto' : p.ano !== 2026 ? '. Totalização final do TSE' : arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
         </p>
         {cargo.turnos.length > 1 ? (
           <div className="segmentado" role="group" aria-label="Turno">
@@ -230,7 +230,9 @@ function Painel(p: Props) {
       ) : null}
 
       <footer className="rodape">
-        Fonte: {p.ano === 2026 ? <a href="https://resultados.tse.jus.br" target="_blank" rel="noreferrer">TSE, resultados oficiais 2026</a> : <a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noreferrer">TSE, dados abertos {p.ano}</a>}.
+        Fonte: {p.ano === 2026 ? <a href="https://resultados.tse.jus.br" target="_blank" rel="noreferrer">TSE, resultados oficiais 2026</a>
+          : p.ano === 1989 ? <><a href="https://geografiadovoto.com/fontes/" target="_blank" rel="noreferrer">Geografia do Voto</a> (IpeaData com correções), conferido com o <a href="https://dadosabertos.tse.jus.br/dataset/resultados-1989" target="_blank" rel="noreferrer">TSE por UF</a>; sem o voto no exterior</>
+          : <a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noreferrer">TSE, dados abertos {p.ano}</a>}.
         Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.
       </footer>
     </aside>
