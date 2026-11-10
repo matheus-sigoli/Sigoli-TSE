@@ -14,29 +14,13 @@ jobs:
       - name: Baixar
         run: |
           set +e
-          mkdir -p sonda && cd sonda
-          for a in 2024 2023 2022; do
-            u=https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/$a/DTB_$a.zip
-            curl -sL --max-time 120 --max-time 120 -o dtb_$a.zip -w "%{http_code} %{size_download} $u\n" "$u" >> status.txt
-          done
-          C=https://cdn.tse.jus.br/estatistica/sead/odsele
-          for u in $C/detalhe_votacao_uf/detalhe_votacao_uf_1989.zip $C/votacao_candidato_uf/votacao_candidato_uf_1989.zip \
-                   $C/votacao_candidato_munzona/votacao_candidato_munzona_1990.zip $C/detalhe_votacao_munzona/detalhe_votacao_munzona_1990.zip \
-                   $C/votacao_partido_munzona/votacao_partido_munzona_1990.zip $C/consulta_cand/consulta_cand_1990.zip; do
-            curl -sL --max-time 60 -o /dev/null -w "%{http_code} %{size_download} $u\n" "$u" >> status.txt
-          done
-          curl -sL --max-time 120 $C/detalhe_votacao_uf/detalhe_votacao_uf_1989.zip -o det89.zip; curl -sL --max-time 120 $C/votacao_candidato_uf/votacao_candidato_uf_1989.zip -o cand89.zip
-          curl -sL --max-time 120 "https://servicodados.ibge.gov.br/api/v1/localidades/municipios" -o ibge-municipios.json; echo "ibge $(wc -c < ibge-municipios.json)" >> status.txt
-          curl -sL --max-time 120 https://geografiadovoto.com/resultados/municipio/ -o gv-municipio.html
-          curl -sL --max-time 120 https://geografiadovoto.com/fontes/ -o gv-fontes.html
-          grep -oE '(src|href)="[^"]+\.(js|json|csv|topojson|geojson)[^"]*"' gv-municipio.html | sort -u > gv-refs.txt || true
-          mkdir -p gvjs
-          for r in $(sed -E 's/^(src|href)="//; s/"$//' gv-refs.txt); do
-            case "$r" in http*) u=$r;; /*) u=https://geografiadovoto.com$r;; *) u=https://geografiadovoto.com/resultados/municipio/$r;; esac
-            f=gvjs/$(echo "$r" | tr '/?=&' '____'); curl -sL --max-time 120 "$u" -o "$f"; echo "$(wc -c < "$f") $u" >> status.txt
+          mkdir -p sonda89 && cd sonda89
+          G=https://geografiadovoto.com/data/1989
+          for f in resultado1989.1.json resultado1989.2.json resultado1989.1.zz resultado1989.2.zz cand1989.json legenda1989.1.json legenda1989.2.json mapa1989BR.svg; do
+            curl -sL --max-time 120 -o $f -w "%{http_code} %{size_download} $G/$f\n" "$G/$f" >> status.txt
           done
           ls -la >> status.txt
       - name: Gravar
         run: |
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f sonda && git commit -m "sonda 1989 [skip ci]" && git push
+          git add -f sonda89 && git commit -m "sonda 1989 dados [skip ci]" && git push
