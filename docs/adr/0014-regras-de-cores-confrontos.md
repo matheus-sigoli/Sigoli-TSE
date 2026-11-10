@@ -26,7 +26,7 @@ Com a regra da ADR 0004 (distância CIE76 < 22 entre todos os concorrentes do ar
    cor principal quando pintam o mapa. No conflito, troca o outro partido, mesmo sendo o mais votado (extra,
    reservas ou paleta neutra). Ex.: deputado federal PE, PT vermelho e PSB amarelo (reserva). Eles não têm reservas.
    A única exceção é o 2º candidato do mesmo partido no Senado (PL × PL, PT × PT), que ganha outro tom para o mapa
-   continuar legível. O PP fica com o azul (#295CA8): PP × PL é par compatível.
+   continuar legível. O PP fica com o azul (#04368A, trocado em 11/2026 a pedido do usuário): PP × PL é par compatível.
 4. **Quem troca**: quem tem alternativa, mesmo sendo o mais votado. Ordem: extra do menos votado, extra do mais
    votado, reservas do menos votado, reservas do mais votado. A extra (2ª cor oficial) vem antes das reservas:
    no governo do Pará, PODE vira roxo e o MDB segue verde.
