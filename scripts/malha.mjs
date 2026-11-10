@@ -139,5 +139,5 @@ const topoBr = encodeTopo(
   brArcs.map((_, i) => i),
 );
 writeFileSync(join(OUT_DIR, 'br.json'), JSON.stringify(topoBr));
-writeFileSync(join(OUT_DIR, 'regioes.json'), JSON.stringify(regioes));
+// regioes.json (micro e mesorregiões) agora sai de scripts/regioes.mjs
 process.stdout.write(`br.json  ${brMun.length} mun  ${(JSON.stringify(topoBr).length / 1024).toFixed(0)} KB\n`);

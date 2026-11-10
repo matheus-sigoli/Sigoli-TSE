@@ -116,9 +116,11 @@ export type Nivel = 'municipios' | 'zonas' | 'bairros' | 'locais';
 /** Arquivo de resultado por UF de cada nível. */
 export type NivelArquivo = 'municipios' | 'zonas' | 'zonas-cidade' | 'bairros' | 'locais';
 
-export const lerNivel = (s: string | null, abr: string, cidade: boolean): Nivel => {
+/** `regiao`: há micro ou mesorregião escolhida no estado, que também pode ser vista por locais de votação */
+export const lerNivel = (s: string | null, abr: string, cidade: boolean, regiao = false): Nivel => {
   if (abr === 'br' || abr === 'exterior') return 'municipios';
   if (cidade) return s === 'bairros' || s === 'locais' ? s : 'zonas';
+  if (regiao && s === 'locais') return 'locais';
   return s === 'zonas' ? 'zonas' : 'municipios';
 };
 
@@ -290,6 +292,24 @@ function buscarMalhaCidade(ano: number, uf: string, ibge: string, nivel: 'zonas'
 export const useMalhaCidade = (ano: number, uf: string | null, ibge: string | null, nivel: 'zonas' | 'bairros' | 'locais') =>
   useArquivo<MalhaCidade>(uf && ibge ? () => buscarMalhaCidade(ano, uf, ibge, nivel) : null, `cidade:${ano}:${uf}:${ibge}:${nivel}`);
 
+/**
+ * Região (micro ou mesorregião) por locais de votação: junta os locais de cada cidade dela num mapa só.
+ * Cidades com áreas do Atlas entram com as áreas; as demais, com círculos sobre o município (cinza) e os bairros.
+ * O contorno dos municípios vai por cima, para a região continuar legível.
+ */
+async function buscarMalhaRegiao(ano: number, uf: string, ibges: string[]): Promise<MalhaCidade> {
+  const cidades = await Promise.all(ibges.map((i) => buscarMalhaCidade(ano, uf, i, 'locais')));
+  const juntar = (fcs: GeoJSON.FeatureCollection[]): GeoJSON.FeatureCollection => ({ type: 'FeatureCollection', features: fcs.flatMap((f) => f.features) });
+  const municipios = juntar(cidades.map((c) => c.malha.municipios));
+  const pontos = juntar(cidades.map((c) => c.pontos));
+  const fundo = juntar(cidades.filter((c) => c.pontos.features.length).map((c) => c.fundo));
+  const linhas = juntar([...cidades.map((c) => c.malha.linhas), ...cidades.map((c) => c.fundo)]);
+  const bbox = caixaGeo(juntar([...cidades.map((c) => c.fundo), municipios, pontos]));
+  return { malha: { municipios, linhas, bbox }, fundo, pontos };
+}
+export const useMalhaRegiao = (ano: number, uf: string | null, reg: string | null, ibges: string[] | null) =>
+  useArquivo<MalhaCidade>(uf && reg && ibges?.length ? () => buscarMalhaRegiao(ano, uf, ibges) : null, `regiao:${ano}:${uf}:${reg}:${ibges?.length ?? 0}`);
+
 /** Local de votação (cadastro do TSE). */
 export interface Local {
   id: string; ibge: string; zona: string; nome: string; bairro: string;
@@ -323,8 +343,15 @@ export const useLocais = (ano: number, uf: string | null) => useArquivo<Locais>(
 export const useMunicipios = (ano: number) =>
   useArquivo<Municipio[]>(() => buscar<Municipio[]>(`/data/${ano}/municipios.json`), `municipios:${ano}`);
 
-export interface Regiao { tipo: 'imediata' | 'intermediaria'; nome: string; uf: string; pai?: string }
-export const useRegioes = () => useArquivo<Record<string, Regiao>>(() => buscar('/geo/regioes.json'), 'regioes');
+/** Micro e mesorregiões do IBGE (scripts/regioes.mjs); a mesorregião da micro é o `pai` */
+export interface Regiao { tipo: 'micro' | 'meso'; nome: string; uf: string; pai?: string }
+export interface Regioes { regioes: Record<string, Regiao>; /** ibge → microrregião */ municipios: Record<string, string> }
+export const useRegioes = () => useArquivo<Regioes>(() => buscar('/geo/regioes.json'), 'regioes:micro-meso');
+/** a região `reg` contém o município? (micro: ela mesma; meso: o pai da micro) */
+export const naRegiao = (r: Regioes, ibge: string, reg: string) => {
+  const micro = r.municipios[ibge];
+  return !!micro && (micro === reg || r.regioes[micro]?.pai === reg);
+};
 
 /**
  * Países que cruzam a linha de data (Rússia, Fiji) têm anéis que saltam de +180 para -180,
