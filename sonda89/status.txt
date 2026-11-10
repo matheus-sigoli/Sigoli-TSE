@@ -1,0 +1,20 @@
+200 6786927 https://geografiadovoto.com/data/1989/resultado1989.1.json
+200 2514381 https://geografiadovoto.com/data/1989/resultado1989.2.json
+404 5305 https://geografiadovoto.com/data/1989/resultado1989.1.zz
+404 5305 https://geografiadovoto.com/data/1989/resultado1989.2.zz
+200 9477 https://geografiadovoto.com/data/1989/cand1989.json
+200 979 https://geografiadovoto.com/data/1989/legenda1989.1.json
+200 217 https://geografiadovoto.com/data/1989/legenda1989.2.json
+200 5624010 https://geografiadovoto.com/data/1989/mapa1989BR.svg
+total 14628
+drwxr-xr-x  2 runner runner    4096 Nov 10 02:45 .
+drwxr-xr-x 12 runner runner    4096 Nov 10 02:45 ..
+-rw-r--r--  1 runner runner    9477 Nov 10 02:45 cand1989.json
+-rw-r--r--  1 runner runner     979 Nov 10 02:45 legenda1989.1.json
+-rw-r--r--  1 runner runner     217 Nov 10 02:45 legenda1989.2.json
+-rw-r--r--  1 runner runner 5624010 Nov 10 02:45 mapa1989BR.svg
+-rw-r--r--  1 runner runner 6786927 Nov 10 02:45 resultado1989.1.json
+-rw-r--r--  1 runner runner    5305 Nov 10 02:45 resultado1989.1.zz
+-rw-r--r--  1 runner runner 2514381 Nov 10 02:45 resultado1989.2.json
+-rw-r--r--  1 runner runner    5305 Nov 10 02:45 resultado1989.2.zz
+-rw-r--r--  1 runner runner     530 Nov 10 02:45 status.txt
