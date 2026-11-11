@@ -9,7 +9,7 @@ permissions:
   contents: write
 jobs:
   capturas:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # o espelho de pacotes do Ubuntu mais novo falhou em 11/2026
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
