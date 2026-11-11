@@ -1,0 +1,91 @@
+pais_livro;nome;pais_mapa;iso3;iso_numerico;eleitorado;comparecimento;abstencao;brancos;nulos;collor;lula
+AFRICA DO SUL;África do Sul;África do Sul;ZAF;710;23;0;23;0;0;0;0
+ALEMANHA OCIDENTAL;Alemanha Ocidental;Alemanha;DEU;276;1442;217;1225;2;0;41;174
+ALEMANHA ORIENTAL;Alemanha Oriental;Alemanha;DEU;276;33;22;11;0;0;5;17
+ANGOLA;Angola;Angola;AGO;024;680;462;218;2;8;297;155
+ARABIA SAUDITA;Arábia Saudita;Arábia Saudita;SAU;682;30;17;13;0;0;15;2
+ARGELIA;Argélia;Argélia;DZA;012;22;0;22;0;0;0;0
+ARGENTINA;Argentina;Argentina;ARG;032;665;487;178;6;7;264;210
+AUSTRALIA;Austrália;Austrália;AUS;036;119;87;32;0;0;36;51
+AUSTRIA;Áustria;Áustria;AUT;040;247;176;71;3;2;57;114
+BANGLADESH;Bangladesh;Bangladesh;BGD;050;1;0;1;0;0;0;0
+BARBADO;Barbados;Barbados;BRB;052;10;0;10;0;0;0;0
+BELGICA;Bélgica;Bélgica;BEL;056;292;189;103;0;3;51;135
+BOLIVIA;Bolívia;Bolívia;BOL;068;376;211;165;2;1;138;70
+BULGARIA;Bulgária;Bulgária;BGR;100;10;0;10;0;0;0;0
+CABO VERDE;Cabo Verde;Cabo Verde;CPV;132;25;0;25;0;0;0;0
+CANADA;Canadá;Canadá;CAN;124;837;432;405;3;14;184;231
+CHECOSLOVAQUIA;Tchecoslováquia;Tchéquia;CZE;203;27;0;27;0;0;0;0
+CHILE;Chile;Chile;CHL;152;210;153;57;1;6;77;69
+CHINA;China;China;CHN;156;17;0;17;0;0;0;0
+CINGAPURA;Singapura;Singapura;SGP;702;33;27;6;0;0;6;21
+COLOMBIA;Colômbia;Colômbia;COL;170;143;79;64;0;1;39;39
+COREIA;Coreia;Coreia do Sul;KOR;410;19;0;19;0;0;0;0
+COSTA DO MARFIM;Costa do Marfim;Costa do Marfim;CIV;384;91;52;39;0;0;31;21
+COSTA RICA;Costa Rica;Costa Rica;CRI;188;78;59;19;1;0;30;28
+CUBA;Cuba;Cuba;CUB;192;32;27;5;1;0;3;23
+DINAMARCA;Dinamarca;Dinamarca;DNK;208;66;39;27;1;0;11;27
+EGITO;Egito;Egito;EGY;818;30;21;9;1;0;12;8
+EMIRADOS ARABES;Emirados Árabes;Emirados Árabes Unidos;ARE;784;30;12;18;0;0;5;7
+EQUADOR;Equador;Equador;ECU;218;236;186;50;0;3;100;83
+ESPANHA;Espanha;Espanha;ESP;724;355;236;119;7;2;66;161
+ESTADOS UNIDOS;Estados Unidos;Estados Unidos;USA;840;2228;1543;685;20;28;660;835
+FILIPINAS;Filipinas;Filipinas;PHL;608;33;21;12;0;1;9;11
+FINLANDIA;Finlândia;Finlândia;FIN;246;28;0;28;0;0;0;0
+FRANCA;França;França;FRA;250;974;760;214;6;17;121;616
+GABAO;Gabão;Gabão;GAB;266;8;0;8;0;0;0;0
+GRECIA;Grécia;Grécia;GRC;300;163;110;53;0;1;64;45
+GUATEMALA;Guatemala;Guatemala;GTM;320;45;20;25;0;0;10;10
+GUIANA;Guiana;Guiana;GUY;328;20;0;20;0;0;0;0
+GUIANA FRANCESA;Guiana Francesa;França;FRA;250;296;100;196;4;1;72;23
+GUINE BISSAU;Guiné-Bissau;Guiné-Bissau;GNB;624;53;38;15;0;1;12;25
+HAITI;Haiti;Haiti;HTI;332;23;0;23;0;0;0;0
+HOLANDA;Holanda;Países Baixos;NLD;528;39;32;7;0;1;6;25
+HONDURAS;Honduras;Honduras;HND;340;21;0;21;0;0;0;0
+HUNGRIA;Hungria;Hungria;HUN;348;29;0;29;0;0;0;0
+INDIA;Índia;Índia;IND;356;21;0;21;0;0;0;0
+INDONESIA;Indonésia;Indonésia;IDN;360;28;0;28;0;0;0;0
+INGLATERRA;Inglaterra;Reino Unido;GBR;826;1162;825;337;12;23;201;589
+IRA;Irã;Irã;IRN;364;15;0;15;0;0;0;0
+IRAQUE;Iraque;Iraque;IRQ;368;53;39;14;1;0;15;23
+ISRAEL;Israel;Israel;ISR;376;255;104;151;2;5;69;28
+ITALIA;Itália;Itália;ITA;380;1859;1126;733;17;30;342;737
+IUGUSLAVIA;Iugoslávia;Sérvia;SRB;688;23;0;23;0;0;0;0
+JAPAO;Japão;Japão;JPN;392;217;149;68;4;2;72;71
+JORDANIA;Jordânia;Jordânia;JOR;400;84;53;31;0;0;23;30
+KENIA;Quênia;Quênia;KEN;404;19;0;19;0;0;0;0
+KUWAIT;Kuwait;Kuwait;KWT;414;13;0;13;0;0;0;0
+LIBANO;Líbano;Líbano;LBN;422;83;52;31;2;0;42;8
+LIBIA;Líbia;Líbia;LBY;434;17;0;17;0;0;0;0
+MALASIA;Malásia;Malásia;MYS;458;17;0;17;0;0;0;0
+MARROCOS;Marrocos;Marrocos;MAR;504;33;16;17;1;2;3;10
+MEXICO;México;México;MEX;484;176;103;73;0;4;41;58
+MOCAMBIQUE;Moçambique;Moçambique;MOZ;508;110;54;56;0;0;20;34
+NICARAGUA;Nicarágua;Nicarágua;NIC;558;56;39;17;0;2;16;21
+NIGERIA;Nigéria;Nigéria;NGA;566;33;26;7;2;0;13;11
+NORUEGA;Noruega;Noruega;NOR;578;32;24;8;0;1;6;17
+PANAMA;Panamá;Panamá;PAN;591;93;66;27;0;1;45;20
+PAQUISTAO;Paquistão;Paquistão;PAK;586;14;0;14;0;0;0;0
+PARAGUAI;Paraguai;Paraguai;PRY;600;1000;572;428;13;11;384;164
+PERU;Peru;Peru;PER;604;150;106;44;0;1;81;24
+POLONIA;Polônia;Polônia;POL;616;41;27;14;1;4;8;14
+PORTUGAL;Portugal;Portugal;PRT;620;1102;690;412;8;11;395;276
+REPUBLICA DOMINICANA;República Dominicana;República Dominicana;DOM;214;56;34;22;1;0;22;11
+REPUBLICA DOS CAMAROES;Camarões;Camarões;CMR;120;11;0;11;0;0;0;0
+ROMENIA;Romênia;Romênia;ROU;642;2;0;2;0;0;0;0
+SENEGAL;Senegal;Senegal;SEN;686;22;0;22;0;0;0;0
+SIRIA;Síria;Síria;SYR;760;13;0;13;0;0;0;0
+SUECIA;Suécia;Suécia;SWE;752;50;31;19;1;1;11;18
+SUICA;Suíça;Suíça;CHE;756;460;26;434;0;0;5;21
+SURINAME;Suriname;Suriname;SUR;740;66;41;25;0;1;26;14
+TAILANDIA;Tailândia;Tailândia;THA;764;17;0;17;0;0;0;0
+TANZANIA;Tanzânia;Tanzânia;TZA;834;14;0;14;0;0;0;0
+TOGO;Togo;Togo;TGO;768;9;0;9;0;0;0;0
+TRINIDAD TOBAGO;Trinidad e Tobago;Trinidad e Tobago;TTO;780;21;0;21;0;0;0;0
+TUNISIA;Tunísia;Tunísia;TUN;788;16;0;16;0;0;0;0
+TURQUIA;Turquia;Turquia;TUR;792;7;0;7;0;0;0;0
+UNIAO SOVIETICA;União Soviética;Rússia;RUS;643;62;36;26;2;0;6;28
+URUGUAI;Uruguai;Uruguai;URY;858;419;286;133;6;5;154;121
+VENEZUELA;Venezuela;Venezuela;VEN;862;348;167;181;1;1;119;46
+ZAIRE;Zaire;Rep. Dem. do Congo;COD;180;43;0;43;0;0;0;0
+ZIMBABWE;Zimbábue;Zimbábue;ZWE;716;11;0;11;0;0;0;0

@@ -231,7 +231,7 @@ function Painel(p: Props) {
 
       <footer className="rodape">
         Fonte: {p.ano === 2026 ? <a href="https://resultados.tse.jus.br" target="_blank" rel="noreferrer">TSE, resultados oficiais 2026</a>
-          : p.ano === 1989 ? <><a href="https://geografiadovoto.com/fontes/" target="_blank" rel="noreferrer">Geografia do Voto</a> (IpeaData com correções), conferido com o <a href="https://dadosabertos.tse.jus.br/dataset/resultados-1989" target="_blank" rel="noreferrer">TSE por UF</a>; sem o voto no exterior</>
+          : p.ano === 1989 ? <><a href="https://geografiadovoto.com/fontes/" target="_blank" rel="noreferrer">Geografia do Voto</a> (IpeaData com correções), conferido com o <a href="https://dadosabertos.tse.jus.br/dataset/resultados-1989" target="_blank" rel="noreferrer">TSE por UF</a>; exterior do 2º turno por país: livro do TSE <i>Eleições 89, Turno II</i></>
           : <a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noreferrer">TSE, dados abertos {p.ano}</a>}.
         Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.
       </footer>

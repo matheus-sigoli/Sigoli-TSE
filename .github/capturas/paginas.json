@@ -1,12 +1,6 @@
 {
-  "sp-meso-municipios": "/2026/sp/presidente?t=2&reg=3515",
-  "sp-micro-sp-locais": "/2026/sp/presidente?t=2&reg=35061&nivel=locais",
-  "sp-meso-locais": "/2026/sp/presidente?t=2&reg=3515&nivel=locais",
-  "rj-micro-rio-locais-2022": "/2022/rj/presidente?t=2&reg=33018&nivel=locais",
-  "mg-micro-bh-locais-gov": "/2026/mg/governador?reg=31030&nivel=locais",
+  "1989-exterior-t2": "/1989/exterior/presidente?t=2",
+  "1989-exterior-t1": "/1989/exterior/presidente",
   "1989-br-t2": "/1989/br/presidente?t=2",
-  "1989-br-t1": "/1989/br/presidente",
-  "1989-sp-t1": "/1989/sp/presidente",
-  "1989-pa-t2": "/1989/pa/presidente?t=2",
-  "1994-br": "/1994/br/presidente"
+  "1989-br-t1": "/1989/br/presidente"
 }
