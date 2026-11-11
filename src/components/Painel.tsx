@@ -273,7 +273,7 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: 
               </span>
               <span className="linha-info">
                 <span className="linha-nome">
-                  {candidato ? `${titulo(l.nome)} (${l.partido})` : l.partido}
+                  {candidato && l.nome !== l.partido ? `${titulo(l.nome)} (${l.partido})` : l.partido}
                   {mostrarSelos && l.eleito ? <span className="selo eleito">Eleito</span> : null}
                   {mostrarSelos && !l.eleito && l.segundoTurno ? <span className="selo segundo">2º turno</span> : null}
                   {l.anulado ? <span className="selo anulado" title={`Destinação do voto no TSE: ${l.anulado}`}>Votos anulados</span> : null}

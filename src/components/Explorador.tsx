@@ -544,7 +544,7 @@ function linhaVencedor(arq: ArquivoResultado, regs: ArquivoResultado['mun'][stri
   let idx = 0;
   for (let i = 1; i < n; i++) if (soma[i] > soma[idx]) idx = i;
   if (!validos || !soma[idx]) return 'Sem votos válidos';
-  const quem = prop ? arq.partidos[idx].sg : `${titulo(arq.cands[idx].nome)} (${arq.cands[idx].partido})`;
+  const quem = prop ? arq.partidos[idx].sg : arq.cands[idx].nome === arq.cands[idx].partido ? arq.cands[idx].partido : `${titulo(arq.cands[idx].nome)} (${arq.cands[idx].partido})`;
   return `${quem} · ${pct(soma[idx] / validos)}`;
 }
 
