@@ -1,9 +1,5 @@
 {
-  "sp-capital-locais-2026": "/2026/sp/presidente?t=2&cid=3550308&nivel=locais",
-  "sp-micro-locais-2026": "/2026/sp/presidente?t=2&reg=35061&nivel=locais",
-  "belem-locais-2026": "/2026/pa/presidente?t=2&cid=1501402&nivel=locais",
-  "rio-locais-2022": "/2022/rj/presidente?t=2&cid=3304557&nivel=locais",
-  "bh-locais-2018": "/2018/mg/presidente?t=2&cid=3106200&nivel=locais",
-  "rural-pa-2026": "/2026/pa/presidente?t=2&cid=1500107&nivel=locais",
-  "dist-2026-sem-local": "/2026/df/presidente?t=2&nivel=locais"
+  "1978-sp-senador": "/1978/sp/senador",
+  "1978-sp-senador-cotia": "/1978/sp/senador?mun=3513009",
+  "1978-sp-regiao": "/1978/sp/senador?reg=3515"
 }
