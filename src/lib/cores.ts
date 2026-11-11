@@ -48,8 +48,6 @@ const APELIDOS: Record<string, string> = {
   PTRB: 'PRTB', PDC: 'DC',
   // 1989: o PDS (Maluf) é o partido que em 1993 virou PPR: mesma cor cinza
   PDS: 'PPR',
-  // até 1979: a ARENA é a origem do PDS (mesmo cinza)
-  ARENA: 'PPR',
 };
 
 // O PSD de antes de 2011 (número 41, incorporado ao PTB em 2003) não é o PSD de hoje (55): cor própria.
@@ -100,6 +98,8 @@ export const chavePartido = (sigla: string) => {
   // 1989: PP, PPB e PMB eram outros partidos (sem relação com os de hoje); o PCB de 1989 é o que virou PPS e Cidadania
   if (anoCores < 1990 && (k === 'PP' || k === 'PPB' || k === 'PMB')) return `${k}89`;
   if (anoCores < 1990 && k === 'PCB') return 'CIDADANIA';
+  // bipartidarismo (1966–1979): MDB e ARENA têm cores próprias, uma por sublegenda (DITADURA, abaixo)
+  if (anoCores < 1980 && k === 'MDB') return 'MDB66';
   return APELIDOS[k] ?? k;
 };
 
@@ -191,6 +191,15 @@ const EXTERNAS = ['#7B2CBF', '#F5C400'].map(gerarFaixas);
  *    mesmo quando não pinta o mapa (1978: Montoro e FHC, sublegendas do MDB);
  *  - sem alternativa: paleta neutra (até o usuário preencher as reservas do partido).
  */
+/**
+ * Bipartidarismo (1966–1979), definido com o usuário: cada partido tinha até 3 candidatos (sublegendas),
+ * e a cor vai pela ordem de votos dentro do partido. MDB: vermelho, verde, amarelo. ARENA: azul e cinza do PP, roxo.
+ */
+const DITADURA: Record<string, Faixas[]> = {
+  MDB66: ['#D62828', '#00AA4F', '#FFC401'].map(gerarFaixas),
+  ARENA: ['#04368A', '#5F747A', '#7B2CBF'].map(gerarFaixas),
+};
+
 export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pinta?: boolean[]): Faixas[] {
   if (daltonico) return partidosEmOrdem.map((_, i) => gerarFaixas(DALTONICO[i % DALTONICO.length]));
   const chaves = partidosEmOrdem.map(chavePartido);
@@ -215,6 +224,13 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
   };
 
   for (let i = 0; i < pals.length; i++) {
+    const dit = DITADURA[chaves[i]];
+    if (dit) {
+      const k = chaves.slice(0, i).filter((c) => c === chaves[i]).length;
+      escolha[i] = dit[Math.min(k, dit.length - 1)];
+      if (!pinta || pinta[i]) ativos.push(i);
+      continue;
+    }
     if (pinta && !pinta[i]) {
       // não pinta o mapa, mas aparece na legenda e no painel: o 2º candidato do mesmo partido não repete a cor
       if (chaves.slice(0, i).includes(chaves[i])) escolha[i] = [...EXTERNAS, ...NEUTRAS].find((f) => conflito(f, i) < 0) ?? EXTERNAS[0];

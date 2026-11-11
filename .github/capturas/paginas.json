@@ -1,6 +1,7 @@
 {
-  "1978-sp-senador": "/1978/sp/senador",
-  "1978-sp-senador-cotia": "/1978/sp/senador?mun=3513009",
-  "1978-sp-regiao": "/1978/sp/senador?reg=3515",
-  "2018-sp-senador": "/2018/sp/senador"
+  "1990-sp-t2": "/1990/sp/governador?t=2",
+  "1990-mg-t1": "/1990/mg/governador",
+  "1990-rj": "/1990/rj/governador",
+  "1990-al-t2": "/1990/al/governador?t=2",
+  "1978-sp": "/1978/sp/senador"
 }
