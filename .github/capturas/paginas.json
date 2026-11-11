@@ -1,6 +1,8 @@
 {
-  "1989-exterior-t2": "/1989/exterior/presidente?t=2",
-  "1989-exterior-t1": "/1989/exterior/presidente",
-  "1989-br-t2": "/1989/br/presidente?t=2",
-  "1989-br-t1": "/1989/br/presidente"
+  "sp-capital-locais-2026": "/2026/sp/presidente?t=2&cid=3550308&nivel=locais",
+  "sp-micro-locais-2026": "/2026/sp/presidente?t=2&reg=35061&nivel=locais",
+  "belem-locais-2026": "/2026/pa/presidente?t=2&cid=1501402&nivel=locais",
+  "rio-locais-2022": "/2022/rj/presidente?t=2&cid=3304557&nivel=locais",
+  "bh-locais-2018": "/2018/mg/presidente?t=2&cid=3106200&nivel=locais",
+  "rural-pa-2026": "/2026/pa/presidente?t=2&cid=1500107&nivel=locais"
 }
