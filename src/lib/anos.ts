@@ -66,6 +66,11 @@ export const ELEICOES: Eleicao[] = [
     fonte: 'Geografia do Voto (IpeaData com correções), conferido com o TSE por UF',
   },
   {
+    ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
+    cargos: 'Governador (por enquanto SP, MG, RJ e AL)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador'],
+    fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
+  },
+  {
     ano: 1978, titulo: 'Eleições 1978', datas: '15 de novembro',
     cargos: 'Senador (por enquanto só São Paulo)', disponivel: true, rota: '/1978/sp/senador', semLocais: true, semZonas: true, soCargos: ['senador'],
     fonte: 'Acervo Sigoli.TSE (votos válidos por município)',

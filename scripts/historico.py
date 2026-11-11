@@ -10,6 +10,7 @@ Organização (ver data/historico/LEIA-ME.md):
     aba "CANDIDATOS" (opcional): ANO  TURNO  PARTIDO  NUMERO  NOME  VICE  PARTIDO VICE  COLIGACAO  ELEITO
         PARTIDO é o mesmo texto do cabeçalho da coluna de votos; sem a aba, o candidato aparece pelo partido.
         COLUNA (opcional): o cabeçalho da coluna, quando não é a sigla (ex.: "FHC", sublegenda do MDB em 1978).
+  ou data/historico/candidatos.csv (;), com as mesmas colunas mais CARGO e UF, para não mexer nas planilhas do acervo.
   As outras abas (BASE, Associação, Planilha1…) são ignoradas.
 
 Saída: public/data/{ano}/{cargo}/{turno}/{uf}.json (mesmo formato do site) e, se faltar, municipios.json e meta.json do ano.
@@ -42,6 +43,19 @@ def ler_candidatos(wb):
         out[(int(d['ANO']), int(d.get('TURNO') or 1), sem_acento(d.get('COLUNA') or d['PARTIDO']))] = d
     return out
 
+def ler_candidatos_csv(pasta):
+    """data/historico/candidatos.csv (;): mesmas colunas da aba CANDIDATOS, mais CARGO e UF (para não mexer nas planilhas do acervo)"""
+    p = os.path.join(pasta, 'candidatos.csv')
+    out = {}
+    if not os.path.exists(p): return out
+    import csv
+    for d in csv.DictReader(open(p, encoding='utf8'), delimiter=';'):
+        d = {sem_acento(k): (v.strip() if isinstance(v, str) else v) for k, v in d.items()}
+        if not d.get('ANO') or not d.get('PARTIDO'): continue
+        chave = (d['CARGO'].lower(), d['UF'].lower(), int(d['ANO']), int(d.get('TURNO') or 1), sem_acento(d.get('COLUNA') or d['PARTIDO']))
+        out[chave] = {k: v for k, v in d.items() if v}
+    return out
+
 def ler_aba(ws):
     linhas = [r for r in ws.iter_rows(values_only=True)]
     cab = [str(c).strip() if c is not None else '' for c in linhas[0]]
@@ -71,6 +85,7 @@ def main():
     lista = [m for m in json.load(open('public/data/2026/municipios.json', encoding='utf8')) if m['uf'] != 'zz']
     ibge_ok = {m['ibge']: m for m in lista}
     problemas = 0
+    cands_csv = ler_candidatos_csv(a.de)
     for cargo in sorted(os.listdir(a.de)):
         pasta = os.path.join(a.de, cargo)
         if not os.path.isdir(pasta) or (a.cargo and cargo != a.cargo): continue
@@ -98,7 +113,7 @@ def main():
                 cands = []
                 for pos, j in enumerate(ordem):
                     sigla = cand[j][0]
-                    info = cands_info.get((ano, turno, sem_acento(sigla)), {})
+                    info = cands_info.get((ano, turno, sem_acento(sigla))) or cands_csv.get((cargo, uf, ano, turno, sem_acento(sigla)), {})
                     eleito = str(info.get('ELEITO') or '').strip().upper() in ('SIM', 'S', 'ELEITO', 'X') if info else (turno == 2 and pos == 0)
                     cands.append({'id': str(info.get('NUMERO') or re.sub(r'[^A-Z0-9]+', '-', sem_acento(sigla))), 'n': str(info.get('NUMERO') or ''),
                                   'nome': str(info.get('NOME') or sigla).upper(), 'partido': str(info.get('PARTIDO') or sigla).upper(), 'eleito': eleito,
