@@ -9,6 +9,7 @@ Organização (ver data/historico/LEIA-ME.md):
         CDG = código do IBGE do município (o de hoje); colunas que começam com % e a coluna MAPA são ignoradas.
     aba "CANDIDATOS" (opcional): ANO  TURNO  PARTIDO  NUMERO  NOME  VICE  PARTIDO VICE  COLIGACAO  ELEITO
         PARTIDO é o mesmo texto do cabeçalho da coluna de votos; sem a aba, o candidato aparece pelo partido.
+        COLUNA (opcional): o cabeçalho da coluna, quando não é a sigla (ex.: "FHC", sublegenda do MDB em 1978).
   As outras abas (BASE, Associação, Planilha1…) são ignoradas.
 
 Saída: public/data/{ano}/{cargo}/{turno}/{uf}.json (mesmo formato do site) e, se faltar, municipios.json e meta.json do ano.
@@ -37,7 +38,8 @@ def ler_candidatos(wb):
     for r in linhas[1:]:
         d = dict(zip(cab, r))
         if not d.get('ANO') or not d.get('PARTIDO'): continue
-        out[(int(d['ANO']), int(d.get('TURNO') or 1), sem_acento(d['PARTIDO']))] = d
+        # COLUNA (opcional): o cabeçalho da coluna de votos, quando não é a sigla (dois candidatos do mesmo partido)
+        out[(int(d['ANO']), int(d.get('TURNO') or 1), sem_acento(d.get('COLUNA') or d['PARTIDO']))] = d
     return out
 
 def ler_aba(ws):
@@ -98,8 +100,8 @@ def main():
                     sigla = cand[j][0]
                     info = cands_info.get((ano, turno, sem_acento(sigla)), {})
                     eleito = str(info.get('ELEITO') or '').strip().upper() in ('SIM', 'S', 'ELEITO', 'X') if info else (turno == 2 and pos == 0)
-                    cands.append({'id': str(info.get('NUMERO') or sem_acento(sigla)), 'n': str(info.get('NUMERO') or ''),
-                                  'nome': str(info.get('NOME') or sigla).upper(), 'partido': sigla.upper(), 'eleito': eleito,
+                    cands.append({'id': str(info.get('NUMERO') or re.sub(r'[^A-Z0-9]+', '-', sem_acento(sigla))), 'n': str(info.get('NUMERO') or ''),
+                                  'nome': str(info.get('NOME') or sigla).upper(), 'partido': str(info.get('PARTIDO') or sigla).upper(), 'eleito': eleito,
                                   'situacao': 'Eleito' if eleito else ('2º turno' if turno == 1 and info.get('ELEITO') and 'TURNO' in sem_acento(info['ELEITO']) else 'Não eleito'),
                                   **({'vices': [{'tipo': 'v', 'nome': str(info['VICE']).upper(), 'partido': str(info.get('PARTIDO VICE') or '').upper()}]} if info.get('VICE') else {}),
                                   **({'col': str(info['COLIGACAO']).upper()} if info.get('COLIGACAO') else {})})

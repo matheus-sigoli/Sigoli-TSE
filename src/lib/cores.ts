@@ -48,6 +48,8 @@ const APELIDOS: Record<string, string> = {
   PTRB: 'PRTB', PDC: 'DC',
   // 1989: o PDS (Maluf) é o partido que em 1993 virou PPR: mesma cor cinza
   PDS: 'PPR',
+  // até 1979: a ARENA é a origem do PDS (mesmo cinza)
+  ARENA: 'PPR',
 };
 
 // O PSD de antes de 2011 (número 41, incorporado ao PTB em 2003) não é o PSD de hoje (55): cor própria.
@@ -185,7 +187,8 @@ const EXTERNAS = ['#7B2CBF', '#F5C400'].map(gerarFaixas);
  *    se nenhum dos dois tem, troca o menos votado;
  *  - PL, PT e MISSÃO (`conflito.fixos`) ficam sempre com a cor principal: no conflito, troca o outro,
  *    mesmo sendo o mais votado (extra, reservas ou paleta neutra);
- *  - mesmo partido duas vezes: o mais votado com a cor do partido; o outro, cor externa (roxo, depois amarelo);
+ *  - mesmo partido duas vezes: o mais votado com a cor do partido; o outro, cor externa (roxo, depois amarelo),
+ *    mesmo quando não pinta o mapa (1978: Montoro e FHC, sublegendas do MDB);
  *  - sem alternativa: paleta neutra (até o usuário preencher as reservas do partido).
  */
 export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pinta?: boolean[]): Faixas[] {
@@ -212,7 +215,11 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
   };
 
   for (let i = 0; i < pals.length; i++) {
-    if (pinta && !pinta[i]) continue;
+    if (pinta && !pinta[i]) {
+      // não pinta o mapa, mas aparece na legenda e no painel: o 2º candidato do mesmo partido não repete a cor
+      if (chaves.slice(0, i).includes(chaves[i])) escolha[i] = [...EXTERNAS, ...NEUTRAS].find((f) => conflito(f, i) < 0) ?? EXTERNAS[0];
+      continue;
+    }
     if (ativos.some((k) => chaves[k] === chaves[i])) {
       // o partido já está no mapa com um candidato mais votado: este ganha uma cor externa
       escolha[i] = [...EXTERNAS, ...NEUTRAS].find((f) => conflito(f, i) < 0) ?? EXTERNAS[0];
