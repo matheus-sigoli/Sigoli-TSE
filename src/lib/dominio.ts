@@ -113,6 +113,8 @@ export interface ArquivoResultado {
   /** quem vence ao menos uma área em algum nível (scripts/pintam.mjs, ADR 0014) */
   pintam?: { c: number[]; p: number[] };
   mun: Record<string, RegistroMunicipio>;
+  /** eleições antigas do acervo (scripts/historico.py): só os votos válidos, sem eleitorado, brancos e nulos */
+  semTotais?: boolean;
   resumo?: undefined;
 }
 

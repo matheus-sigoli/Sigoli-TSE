@@ -559,6 +559,8 @@ export const FUSOES = [
   { uf: 'to', novo: '1720002', origem: '1713809', ateAno: 1996 }, // Santa Terezinha do Tocantins ← Palmeiras do Tocantins
   { uf: 'to', novo: '1720978', origem: '1700707', ateAno: 1996 }, // Talismã ← Alvorada
   { uf: 'to', novo: '1721257', origem: '1709302', ateAno: 1996 }, // Tupirama ← Guaraí
+  // criados até 1982 (já votavam sozinhos em 1982): em 1978 ainda votavam na origem
+  { uf: 'sp', novo: '3556453', origem: '3513009', ateAno: 1978 }, // Vargem Grande Paulista ← Cotia
   // instalados em 1993 (primeira eleição municipal em 1992): em 1989 ainda votavam na origem. Origem pelo grupo de
   // Áreas Mínimas Comparáveis 1991–2000; com mais de uma origem no grupo, a da zona eleitoral de 1998 ou a de maior
   // fronteira (scripts/propor-fusoes.mjs --ano 1989 --depois 1998 --amc); revisados à mão os marcados

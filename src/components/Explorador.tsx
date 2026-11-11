@@ -18,7 +18,7 @@ import {
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
 import { definirAnoCores } from '@/lib/cores';
-import { fonteDoAno, temCargo, temLocais, temZonas } from '@/lib/anos';
+import { ELEICOES, fonteDoAno, temCargo, temLocais, temZonas } from '@/lib/anos';
 import Filtros from './Filtros';
 import Painel from './Painel';
 import Carregando from './Carregando';
@@ -131,6 +131,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       // 1998 não tem Presidente: vai para Governador (no Brasil, São Paulo); 1989 só tem Presidente
       if (!temCargo(outro, cargoSlug)) {
         if (temCargo(outro, 'presidente')) return `${rotaDe(abr, 'presidente', outro)}${q ? `?${q}` : ''}`;
+        // anos só com outro cargo (1978: Senador): o primeiro cargo do ano, na mesma UF (no Brasil, São Paulo)
+        const so = ELEICOES.find((e) => e.ano === outro)?.soCargos?.[0];
+        if (so) return rotaDe(abr === 'br' || abr === 'exterior' ? 'sp' : abr, so as CargoSlug, outro);
         return `${rotaDe(abr === 'br' || abr === 'exterior' ? 'sp' : abr, 'governador', outro)}${q ? `?${q}` : ''}`;
       }
       return `${rotaDe(abr, cargoSlug, outro)}${q ? `?${q}` : ''}`;

@@ -48,6 +48,8 @@ const APELIDOS: Record<string, string> = {
   PTRB: 'PRTB', PDC: 'DC',
   // 1989: o PDS (Maluf) é o partido que em 1993 virou PPR: mesma cor cinza
   PDS: 'PPR',
+  // até 1979: a ARENA é a origem do PDS (mesmo cinza)
+  ARENA: 'PPR',
 };
 
 // O PSD de antes de 2011 (número 41, incorporado ao PTB em 2003) não é o PSD de hoje (55): cor própria.

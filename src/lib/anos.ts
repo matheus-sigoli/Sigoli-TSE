@@ -65,6 +65,11 @@ export const ELEICOES: Eleicao[] = [
     cargos: 'Presidente', disponivel: true, rota: '/1989/br/presidente?t=2', semLocais: true, semZonas: true, soCargos: ['presidente'],
     fonte: 'Geografia do Voto (IpeaData com correções), conferido com o TSE por UF',
   },
+  {
+    ano: 1978, titulo: 'Eleições 1978', datas: '15 de novembro',
+    cargos: 'Senador (por enquanto só São Paulo)', disponivel: true, rota: '/1978/sp/senador', semLocais: true, semZonas: true, soCargos: ['senador'],
+    fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
+  },
 ];
 
 /** o ano tem locais de votação (visão Locais na cidade) */
