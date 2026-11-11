@@ -18,7 +18,7 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
       - run: npx next build
-      - run: npm install --no-save --no-audit --no-fund playwright@1.49.1 serve@14.2.4 && npx playwright install --with-deps chromium
+      - run: npm install --no-save --no-audit --no-fund playwright@1.49.1 serve@14.2.4 && (npx playwright install --with-deps chromium || npx playwright install chromium)
       - name: Capturas
         run: |
           (npx serve out -l 3000 > /dev/null 2>&1 &)
