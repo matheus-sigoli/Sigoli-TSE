@@ -343,14 +343,39 @@ export const useLocais = (ano: number, uf: string | null) => useArquivo<Locais>(
 export const useMunicipios = (ano: number) =>
   useArquivo<Municipio[]>(() => buscar<Municipio[]>(`/data/${ano}/municipios.json`), `municipios:${ano}`);
 
-/** Micro e mesorregiões do IBGE (scripts/regioes.mjs); a mesorregião da micro é o `pai` */
-export interface Regiao { tipo: 'micro' | 'meso'; nome: string; uf: string; pai?: string }
-export interface Regioes { regioes: Record<string, Regiao>; /** ibge → microrregião */ municipios: Record<string, string> }
-export const useRegioes = () => useArquivo<Regioes>(() => buscar('/geo/regioes.json'), 'regioes:micro-meso');
-/** a região `reg` contém o município? (micro: ela mesma; meso: o pai da micro) */
-export const naRegiao = (r: Regioes, ibge: string, reg: string) => {
-  const micro = r.municipios[ibge];
-  return !!micro && (micro === reg || r.regioes[micro]?.pai === reg);
+/**
+ * Regiões do IBGE dentro do estado (scripts/regioes.mjs): micro e mesorregiões; regiões imediatas e intermediárias
+ * (códigos com prefixo im/in). A meso é o `pai` da micro; a intermediária, o da imediata.
+ */
+export type TipoRegiao = 'micro' | 'meso' | 'imediata' | 'intermediaria';
+export interface Regiao { tipo: TipoRegiao; nome: string; uf: string; pai?: string }
+export interface Regioes { regioes: Record<string, Regiao>; /** ibge → [microrregião, região imediata] */ municipios: Record<string, string[]> }
+export const useRegioes = () => useArquivo<Regioes>(() => buscar('/geo/regioes.json'), 'regioes:4');
+export const NOME_TIPO_REGIAO: Record<TipoRegiao, string> = {
+  micro: 'Microrregião', meso: 'Mesorregião', imediata: 'Região imediata', intermediaria: 'Região intermediária',
+};
+
+/** Grandes regiões do país (no Brasil, `reg` = siglas separadas por vírgula, ex.: "S,SE"); o dígito é o 1º do código do IBGE */
+export const REGIOES_PAIS: { s: string; nome: string; d: string }[] = [
+  { s: 'N', nome: 'Norte', d: '1' }, { s: 'NE', nome: 'Nordeste', d: '2' }, { s: 'CO', nome: 'Centro-Oeste', d: '5' },
+  { s: 'SE', nome: 'Sudeste', d: '3' }, { s: 'S', nome: 'Sul', d: '4' },
+];
+/** `reg` de grandes regiões → as regiões escolhidas (ou null, se não for) */
+export const regioesDoPais = (reg: string | null) => {
+  if (!reg) return null;
+  const l = reg.split(',').map((x) => REGIOES_PAIS.find((r) => r.s === x));
+  return l.length && l.every(Boolean) ? (l as typeof REGIOES_PAIS) : null;
+};
+export const nomeRegioesPais = (l: typeof REGIOES_PAIS) => {
+  const n = l.map((r) => r.nome);
+  return n.length > 1 ? `${n.slice(0, -1).join(', ')} e ${n[n.length - 1]}` : n[0];
+};
+
+/** a região `reg` contém o município? (micro/imediata: ela mesma; meso/intermediária: o pai) */
+export const naRegiao = (r: Regioes | null, ibge: string, reg: string) => {
+  const pais = regioesDoPais(reg);
+  if (pais) return pais.some((x) => x.d === ibge[0]);
+  return (r?.municipios[ibge] ?? []).some((c) => c === reg || r!.regioes[c]?.pai === reg);
 };
 
 /**

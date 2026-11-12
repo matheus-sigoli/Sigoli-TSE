@@ -9,10 +9,13 @@
  * Saída: public/geo/{ano}/uf/{uf}.json e public/geo/{ano}/br.json (só quando o ano tem fusões)
  *        e public/geo/{ano}/malhas.json (lista dos arquivos trocados, lida pelo site).
  *
+ * Antes de 1989 o Tocantins era o norte de Goiás: a malha de GO do ano junta os municípios de GO e de TO.
+ *
  * Uso: node scripts/malha-ano.mjs --ano 2022
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { mergeArcs } from 'topojson-client';
+import { feature, mergeArcs, meshArcs } from 'topojson-client';
+import { topology } from 'topojson-server';
 import { fusoesDoAno } from './lib/fusoes.mjs';
 
 const argv = process.argv.slice(2);
@@ -40,7 +43,23 @@ function fundir(caminho, destino, objeto) {
   trocados.push(destino.replace(`public/geo/${ANO}/`, ''));
   console.log(`${destino}: ${fusoes.length} fusão(ões)`);
 }
-for (const uf of new Set(fusoes.map((f) => f.uf))) fundir(`public/geo/uf/${uf}.json`, `public/geo/${ANO}/uf/${uf}.json`, 'municipios');
+// GO com TO (antes de 1989): nova topologia com os municípios dos dois e o contorno de tudo
+const GO_COM_TO = ANO < 1989;
+if (GO_COM_TO) {
+  const ler = (uf) => JSON.parse(readFileSync(`public/geo/uf/${uf}.json`, 'utf8'));
+  const go = ler('go'), to = ler('to');
+  const fc = { type: 'FeatureCollection', features: [...feature(go, go.objects.municipios).features, ...feature(to, to.objects.municipios).features] };
+  const t = topology({ municipios: fc }, 1e5);
+  t.objects.contorno = { type: 'GeometryCollection', geometries: [meshArcs(t, t.objects.municipios, (a, b) => a === b)] };
+  mkdirSync(`public/geo/${ANO}/uf`, { recursive: true });
+  writeFileSync(`public/geo/${ANO}/uf/go.json`, JSON.stringify(t));
+}
+const ufDaMalha = (uf) => (GO_COM_TO && uf === 'to' ? 'go' : uf);
+for (const uf of new Set(fusoes.map((f) => ufDaMalha(f.uf)))) {
+  const origem = GO_COM_TO && uf === 'go' ? `public/geo/${ANO}/uf/go.json` : `public/geo/uf/${uf}.json`;
+  fundir(origem, `public/geo/${ANO}/uf/${uf}.json`, 'municipios');
+}
+if (GO_COM_TO && !trocados.includes('uf/go.json')) trocados.push('uf/go.json');
 if (fusoes.length) fundir('public/geo/br.json', `public/geo/${ANO}/br.json`, 'municipios');
 mkdirSync(`public/geo/${ANO}`, { recursive: true });
 writeFileSync(`public/geo/${ANO}/malhas.json`, JSON.stringify(trocados));
