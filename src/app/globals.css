@@ -402,3 +402,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
 }
+
+/* grandes regiões do país: duas colunas (Centro-Oeste não cabe em três) */
+.filtros .campo-regiao-pais .segmentado { grid-template-columns: repeat(2, 1fr); }
+.filtros .campo-regiao-pais .dica { padding: 0; }
