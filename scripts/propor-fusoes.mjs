@@ -29,13 +29,14 @@ const topoUfCodigo = (uf) => CODIGO_UF[uf];
 const origem = new Map(); const pendentes = [];
 for (const arq of readdirSync('public/geo/uf').filter((n) => /^[a-z]{2}\.json$/.test(n))) {
   const uf = arq.slice(0, 2);
-  const p = `public/data/${ANO}/governador/1/${uf}.json`;
+  // antes de 1989 o Tocantins votava em Goiás
+  const p = `public/data/${ANO}/governador/1/${ANO < 1989 && uf === 'to' ? 'go' : uf}.json`;
   // 1989 só tem Presidente (arquivo nacional): os municípios da UF saem dele
   const pp = `public/data/${ANO}/presidente/1/br.json`;
   if (!existsSync(p) && !existsSync(pp)) continue;
   const prefixo = String(topoUfCodigo(uf));
   const comResultado = existsSync(p)
-    ? new Set(Object.keys(JSON.parse(readFileSync(p, 'utf8')).mun))
+    ? new Set(Object.keys(JSON.parse(readFileSync(p, 'utf8')).mun).filter((k) => k.startsWith(prefixo)))
     : new Set(Object.keys((presidenteBr ??= JSON.parse(readFileSync(pp, 'utf8'))).mun).filter((k) => k.startsWith(prefixo)));
   const zonasAno = new Map(); // ibge → zonas no ano
   const pz = `public/data/${ANO}/governador/1/zonas-cidade/${uf}.json`;

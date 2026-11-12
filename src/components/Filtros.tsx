@@ -2,7 +2,8 @@
 import Link from 'next/link';
 import { memo, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { FAIXAS_LEGENDA, type Faixas } from '@/lib/cores';
-import type { Local, Malha, Nivel, Regioes } from '@/lib/dados';
+import type { Local, Malha, Nivel, Regioes, TipoRegiao } from '@/lib/dados';
+import { REGIOES_PAIS, regioesDoPais } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
@@ -15,6 +16,8 @@ interface Props {
   abr: string;
   cargo: Cargo;
   regiaoSelecionada: string | null;
+  /** no Brasil, com resultado por município: mostra as grandes regiões */
+  regioesPais?: boolean;
   malha: Malha | null;
   regioes: Regioes | null;
   municipios: Municipio[] | null;
@@ -78,22 +81,32 @@ function Filtros(p: Props) {
     [p.locaisDaCidade],
   );
 
-  // micro e mesorregiões dos municípios da malha da UF
+  // as quatro divisões do IBGE presentes na malha da UF
   const opcoesRegiao = useMemo(() => {
     if (!p.malha || !p.regioes || p.abr === 'br' || p.abr === 'exterior') return null;
     const { regioes, municipios } = p.regioes;
-    const micros = new Set<string>(), mesos = new Set<string>();
+    const por: Record<TipoRegiao, Set<string>> = { meso: new Set(), micro: new Set(), intermediaria: new Set(), imediata: new Set() };
     for (const f of p.malha.municipios.features) {
-      const micro = municipios[String((f.properties as { id?: string } | null)?.id ?? f.id)];
-      if (!micro) continue;
-      micros.add(micro);
-      if (regioes[micro]?.pai) mesos.add(regioes[micro].pai!);
+      for (const c of municipios[String((f.properties as { id?: string } | null)?.id ?? f.id)] ?? []) {
+        const r = regioes[c];
+        if (!r) continue;
+        por[r.tipo].add(c);
+        if (r.pai && regioes[r.pai]) por[regioes[r.pai].tipo].add(r.pai);
+      }
     }
-    if (!micros.size) return null;
+    if (!por.micro.size && !por.imediata.size) return null;
     const nome = (c: string) => regioes[c]?.nome ?? c;
     const ord = (s: Set<string>) => [...s].sort((a, b) => nome(a).localeCompare(nome(b), 'pt-BR')).map((c) => ({ c, nome: nome(c) }));
-    return { micros: ord(micros), mesos: ord(mesos) };
+    return { mesos: ord(por.meso), micros: ord(por.micro), intermediarias: ord(por.intermediaria), imediatas: ord(por.imediata) };
   }, [p.malha, p.regioes, p.abr]);
+  // no Brasil: grandes regiões, uma ou várias (ex.: Sul e Sudeste)
+  const pais = regioesDoPais(p.regiaoSelecionada);
+  const alternarRegiaoPais = (s: string) => {
+    const atual = new Set(pais?.map((r) => r.s) ?? []);
+    if (atual.has(s)) atual.delete(s); else atual.add(s);
+    const l = REGIOES_PAIS.filter((r) => atual.has(r.s)).map((r) => r.s);
+    p.aoMudarRegiao(l.length && l.length < REGIOES_PAIS.length ? l.join(',') : null);
+  };
   const comRegiao = !!p.regiaoSelecionada && !p.cidade && temLocais(p.ano);
 
   return (
@@ -161,7 +174,27 @@ function Filtros(p: Props) {
             <optgroup label="Microrregiões">
               {opcoesRegiao.micros.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
             </optgroup>
+            <optgroup label="Regiões intermediárias">
+              {opcoesRegiao.intermediarias.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
+            </optgroup>
+            <optgroup label="Regiões imediatas">
+              {opcoesRegiao.imediatas.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
+            </optgroup>
           </select>
+        </div>
+      ) : null}
+
+      {p.regioesPais ? (
+        <div className="campo campo-regiao-pais">
+          <span className="campo-rotulo">Regiões do país</span>
+          <div className="segmentado anos" role="group" aria-label="Regiões do país">
+            {REGIOES_PAIS.map((r) => (
+              <button key={r.s} type="button" aria-pressed={!!pais?.some((x) => x.s === r.s)} onClick={() => alternarRegiaoPais(r.s)}>
+                {r.nome}
+              </button>
+            ))}
+          </div>
+          <p className="dica">Escolha uma ou mais (ex.: Sul e Sudeste) para somar só elas.</p>
         </div>
       ) : null}
 

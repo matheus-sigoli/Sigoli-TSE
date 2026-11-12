@@ -71,6 +71,11 @@ export const ELEICOES: Eleicao[] = [
     fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
   },
   {
+    ano: 1982, titulo: 'Eleições 1982', datas: '15 de novembro',
+    cargos: 'Governador', disponivel: true, rota: '/1982/br/governador', semLocais: true, semZonas: true, soCargos: ['governador'],
+    fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
+  },
+  {
     ano: 1978, titulo: 'Eleições 1978', datas: '15 de novembro',
     cargos: 'Senador (por enquanto só São Paulo)', disponivel: true, rota: '/1978/sp/senador', semLocais: true, semZonas: true, soCargos: ['senador'],
     fonte: 'Acervo Sigoli.TSE (votos válidos por município)',

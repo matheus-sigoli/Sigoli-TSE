@@ -368,7 +368,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   .filtros .campo-ano { grid-column: span 4; }
   .filtros .campo-onde, .filtros .busca-municipio { grid-column: span 3; }
   .filtros .bloco-marca { order: 1; } .filtros .campo-ano { order: 2; } .filtros .campo-onde { order: 3; }
-  .filtros .busca-municipio { order: 4; } .filtros .campo-nivel { order: 5; } .filtros .campo-regiao { order: 6; } .filtros .busca-local { order: 7; }
+  .filtros .busca-municipio { order: 4; } .filtros .campo-nivel { order: 5; } .filtros .campo-regiao, .filtros .campo-regiao-pais { order: 6; } .filtros .busca-local { order: 7; }
   .filtros .campo-rotulo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .filtros .campo { gap: 0; }
   /* anos em duas linhas de 4, ao lado da marca */
@@ -402,3 +402,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
 }
+
+/* grandes regiões do país: duas colunas (Centro-Oeste não cabe em três) */
+.filtros .campo-regiao-pais .segmentado { grid-template-columns: repeat(2, 1fr); }
+.filtros .campo-regiao-pais .dica { padding: 0; }

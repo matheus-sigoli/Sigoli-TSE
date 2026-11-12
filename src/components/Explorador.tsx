@@ -13,7 +13,7 @@ import {
 } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
 import {
-  ArquivoAusente, lerNivel, naRegiao, useBairros, useLocais, useMalha, useMalhaCidade, useMalhaRegiao, useMunicipios, useRegioes, useResultado,
+  ArquivoAusente, lerNivel, naRegiao, NOME_TIPO_REGIAO, nomeRegioesPais, regioesDoPais, useBairros, useLocais, useMalha, useMalhaCidade, useMalhaRegiao, useMunicipios, useRegioes, useResultado,
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
@@ -131,9 +131,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       // 1998 não tem Presidente: vai para Governador (no Brasil, São Paulo); 1989 só tem Presidente
       if (!temCargo(outro, cargoSlug)) {
         if (temCargo(outro, 'presidente')) return `${rotaDe(abr, 'presidente', outro)}${q ? `?${q}` : ''}`;
-        // anos só com outro cargo (1978: Senador): o primeiro cargo do ano, na mesma UF (no Brasil, São Paulo)
+        // anos só com outro cargo (1978: Senador; 1982: Governador): o primeiro cargo do ano, na mesma abrangência
         const so = ELEICOES.find((e) => e.ano === outro)?.soCargos?.[0];
-        if (so) return rotaDe(abr === 'br' || abr === 'exterior' ? 'sp' : abr, so as CargoSlug, outro);
+        if (so) return rotaDe(abr === 'exterior' ? 'br' : abr, so as CargoSlug, outro);
         return `${rotaDe(abr === 'br' || abr === 'exterior' ? 'sp' : abr, 'governador', outro)}${q ? `?${q}` : ''}`;
       }
       return `${rotaDe(abr, cargoSlug, outro)}${q ? `?${q}` : ''}`;
@@ -159,8 +159,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const regioes = useRegioes();
   // municípios da micro ou mesorregião escolhida (os da malha do ano)
   const cidadesRegiao = useMemo(() => {
-    if (!reg || cid || !regioes.dados || !malhaUf.dados || abr === 'br' || abr === 'exterior' || nivel === 'zonas') return null;
-    const ids = malhaUf.dados.municipios.features.map((f) => String((f.properties as { id?: string } | null)?.id ?? f.id)).filter((i) => naRegiao(regioes.dados!, i, reg));
+    if (!reg || cid || !malhaUf.dados || abr === 'exterior' || nivel === 'zonas') return null;
+    // no Brasil só as grandes regiões; nos estados, as do IBGE (precisam do regioes.json)
+    if (abr === 'br' ? !regioesDoPais(reg) : !regioes.dados) return null;
+    const ids = malhaUf.dados.municipios.features.map((f) => String((f.properties as { id?: string } | null)?.id ?? f.id)).filter((i) => naRegiao(regioes.dados, i, reg));
     return ids.length ? ids.sort() : null;
   }, [reg, cid, regioes.dados, malhaUf.dados, abr, nivel]);
   const malhaRegiao = useMalhaRegiao(ano, regiaoLocais ? abr : null, reg, regiaoLocais ? cidadesRegiao : null);
@@ -204,8 +206,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     () => (regiaoLocais && cidadesRegiao && locais.dados ? cidadesRegiao.flatMap((c) => locais.dados!.porCidade.get(c) ?? []) : null),
     [regiaoLocais, cidadesRegiao, locais.dados],
   );
-  const nomeRegiao = reg ? regioes.dados?.regioes[reg]?.nome ?? null : null;
-  const tipoRegiao = reg ? (regioes.dados?.regioes[reg]?.tipo === 'meso' ? 'Mesorregião' : 'Microrregião') : '';
+  const regPais = abr === 'br' ? regioesDoPais(reg) : null;
+  const nomeRegiao = regPais ? nomeRegioesPais(regPais) : reg ? regioes.dados?.regioes[reg]?.nome ?? null : null;
+  const tipoRegiao = regPais ? (regPais.length > 1 ? 'Regiões do país' : 'Região do país')
+    : reg && regioes.dados?.regioes[reg] ? NOME_TIPO_REGIAO[regioes.dados.regioes[reg].tipo] : '';
 
   // unidades (zona/bairro/local) da cidade aberta
   const unidadesDaCidade = useMemo(() => {
@@ -303,7 +307,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     }
     // região sem nada escolhido: tipo, municípios e locais
     if (reg && !cid && !mun && nomeRegiao && cidadesRegiao) {
-      const partes = [`${tipoRegiao} · ${abr.toUpperCase()}`, `${cidadesRegiao.length} ${cidadesRegiao.length === 1 ? 'município' : 'municípios'}`];
+      const partes = [abr === 'br' ? tipoRegiao : `${tipoRegiao} · ${abr.toUpperCase()}`, `${cidadesRegiao.length} ${cidadesRegiao.length === 1 ? 'município' : 'municípios'}`];
       if (regiaoLocais && locaisRegiao) partes.push(`${locaisRegiao.length} locais de votação`);
       return partes.join(' · ');
     }
@@ -449,6 +453,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         abr={abr}
         cargo={cargo}
         regiaoSelecionada={reg}
+        regioesPais={abr === 'br' && !cid && nivel === 'municipios' && !!resultado.dados && !resultado.dados.resumo}
         malha={malhaUf.dados}
         regioes={regioes.dados}
         municipios={municipios.dados}
