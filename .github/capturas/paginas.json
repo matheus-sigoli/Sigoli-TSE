@@ -1,7 +1,10 @@
 {
-  "1990-sp-t2": "/1990/sp/governador?t=2",
-  "1990-mg-t1": "/1990/mg/governador",
-  "1990-rj": "/1990/rj/governador",
-  "1990-al-t2": "/1990/al/governador?t=2",
+  "1982-br": "/1982/br/governador",
+  "1982-go": "/1982/go/governador",
+  "1982-rj": "/1982/rj/governador",
+  "1982-sp": "/1982/sp/governador",
+  "br-sul-sudeste-2022": "/2022/br/presidente?t=2&reg=SE,S",
+  "sp-intermediaria-locais": "/2026/sp/presidente?t=2&reg=in3501&nivel=locais",
+  "sp-imediata": "/2026/sp/presidente?t=2&reg=im350001",
   "1978-sp": "/1978/sp/senador"
 }
