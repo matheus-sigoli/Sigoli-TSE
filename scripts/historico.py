@@ -142,10 +142,13 @@ def main():
                     soma = [sum(x[1][j] for v in mun.values() for x in v) for j in range(len(cand))]
                     ordem = sorted([j for j in range(len(cand)) if soma[j] > 0], key=lambda j: -soma[j])
                     cands = []
+                    info_de = lambda sigla: cands_info.get((ano, turno, sem_acento(sigla))) or cands_csv.get((cargo, uf, ano, turno, sem_acento(sigla)), {})
+                    # se algum candidato da disputa tem ELEITO preenchido, quem não tem não foi eleito (planilha parcial)
+                    com_eleito = any(info_de(cand[j][0]).get('ELEITO') for j in ordem)
                     for pos, j in enumerate(ordem):
                         sigla = cand[j][0]
                         info = cands_info.get((ano, turno, sem_acento(sigla))) or cands_csv.get((cargo, uf, ano, turno, sem_acento(sigla)), {})
-                        eleito = str(info.get('ELEITO') or '').strip().upper() in ('SIM', 'S', 'ELEITO', 'X') if info and info.get('ELEITO') else ((turno == 2 or ano < 1989) and pos == 0)
+                        eleito = str(info.get('ELEITO') or '').strip().upper() in ('SIM', 'S', 'ELEITO', 'X') if com_eleito else ((turno == 2 or ano < 1989) and pos == 0)
                         cands.append({'id': str(info.get('NUMERO') or re.sub(r'[^A-Z0-9]+', '-', sem_acento(sigla))), 'n': str(info.get('NUMERO') or ''),
                                       'nome': str(info.get('NOME') or sigla).upper(), 'partido': str(info.get('PARTIDO') or sigla).upper(), 'eleito': eleito,
                                       'situacao': 'Eleito' if eleito else ('2º turno' if turno == 1 and info.get('ELEITO') and 'TURNO' in sem_acento(info['ELEITO']) else 'Não eleito'),
