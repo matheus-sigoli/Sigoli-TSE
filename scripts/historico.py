@@ -26,8 +26,9 @@ import openpyxl
 def sem_acento(s):
     return ''.join(c for c in unicodedata.normalize('NFD', str(s)) if unicodedata.category(c) != 'Mn').upper().strip()
 
-ABA = re.compile(r'^\s*(\d{4})\s*(?:(\d)\s*º?\s*T)?\s*$', re.I)
-TOTAIS = {'APTOS': 0, 'ELEITORADO': 0, 'COMPARECIMENTO': 1, 'VOTANTES': 1, 'ABSTENCAO': 2, 'ABSTENCOES': 2, 'BRANCOS': 4, 'NULOS': 5}
+# "1990 1T", "1958" (1º turno), "1990 SENADOR" (aba de outro cargo na planilha: vale o cargo do nome da aba)
+ABA = re.compile(r'^\s*(\d{4})\s*(?:(\d)\s*º?\s*T)?\s*(GOVERNADOR|SENADOR|PRESIDENTE)?\s*$', re.I)
+TOTAIS = {'APTOS': 0, 'ELEITORADO': 0, 'COMPARECIMENTO': 1, 'VOTANTES': 1, 'ABSTENCAO': 2, 'ABSTENCOES': 2, 'BRANCOS': 4, 'BRANCO': 4, 'NULOS': 5, 'NULO': 5}
 IGNORAR = {'CDG', 'MUN', 'MUNICIPIO', 'MAPA', 'UF', 'MUN SEM ACENTO', 'VALIDOS', 'VOTOS VALIDOS', 'TOTAL'}
 
 def ler_candidatos(wb):
@@ -56,7 +57,7 @@ def ler_candidatos_csv(pasta):
         out[chave] = {k: v for k, v in d.items() if v}
     return out
 
-def ler_aba(ws):
+def ler_aba(ws, por_nome=None):
     linhas = [r for r in ws.iter_rows(values_only=True)]
     # o cabeçalho é a primeira linha com CDG (pode haver título antes)
     ic = next((n for n, r in enumerate(linhas[:15]) if any(sem_acento(c or '') == 'CDG' for c in r)), None)
@@ -74,6 +75,10 @@ def ler_aba(ws):
     mun, ufs = {}, {}
     for r in linhas[ic + 1:]:
         cdg = r[i_cdg] if i_cdg < len(r) else None
+        if (cdg is None or not re.fullmatch(r'\d{7}(\.0)?', str(cdg))) and por_nome and i_mun is not None and r[i_mun]:
+            # código quebrado (#REF!): procura pelo nome do município na UF
+            u = str(r[i_uf]).strip().lower() if i_uf is not None and r[i_uf] else None
+            cdg = por_nome.get((u, sem_acento(str(r[i_mun])).replace('-', ' ').replace("'", ''))) or cdg
         if cdg is None or not re.fullmatch(r'\d{7}(\.0)?', str(cdg)): continue
         votos = [int(r[i] or 0) if i < len(r) and isinstance(r[i], (int, float)) else 0 for _, i in cand]
         t = {k: int(r[i] or 0) if isinstance(r[i], (int, float)) else 0 for k, i in tot.items()}
@@ -89,11 +94,12 @@ def main():
     a = ap.parse_args()
     lista = [m for m in json.load(open('public/data/2026/municipios.json', encoding='utf8')) if m['uf'] != 'zz']
     ibge_ok = {m['ibge']: m for m in lista}
+    nome_chave = lambda n: sem_acento(n).replace('-', ' ').replace("'", '')
     problemas = 0
     cands_csv = ler_candidatos_csv(a.de)
     for cargo in sorted(os.listdir(a.de)):
         pasta = os.path.join(a.de, cargo)
-        if not os.path.isdir(pasta) or (a.cargo and cargo != a.cargo): continue
+        if not os.path.isdir(pasta): continue
         # planilhas de um estado (SP.xlsx) primeiro; as de vários estados (BR-1982.xlsx), mais novas, por cima
         arqs = sorted((f for f in os.listdir(pasta) if f.lower().endswith('.xlsx') and not f.startswith('~$')),
                       key=lambda f: (len(os.path.splitext(f)[0]) != 2, f))
@@ -102,12 +108,19 @@ def main():
             if a.uf and len(uf) == 2 and uf != a.uf.lower(): continue
             wb = openpyxl.load_workbook(os.path.join(pasta, arq), data_only=True)
             cands_info = ler_candidatos(wb)
+            por_nome = {}
+            for x in lista:
+                if len(uf) != 2 or x['uf'] == uf: por_nome[(x['uf'] if len(uf) != 2 else None, nome_chave(x['nome']))] = x['ibge']
+                por_nome.setdefault((x['uf'], nome_chave(x['nome'])), x['ibge'])
+            cargo_pasta = os.path.basename(pasta)
             for nome in wb.sheetnames:
                 m = ABA.match(nome)
                 if not m: continue
                 ano, turno = int(m.group(1)), int(m.group(2) or 1)
+                cargo = m.group(3).lower() if m.group(3) else cargo_pasta
                 if a.ano and ano != a.ano: continue
-                lido = ler_aba(wb[nome])
+                if a.cargo and cargo != a.cargo: continue
+                lido = ler_aba(wb[nome], por_nome)
                 if not lido: print(f'  {cargo}/{arq} "{nome}": sem coluna CDG, ignorada'); continue
                 cand, tot, mun_todos, ufs_col = lido
                 # planilha com todos os estados (coluna UF): um arquivo por estado. Antes de 1989 o Tocantins era Goiás.

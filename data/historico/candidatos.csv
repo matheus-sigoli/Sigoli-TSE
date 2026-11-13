@@ -48,3 +48,19 @@ ANO;CARGO;UF;TURNO;COLUNA;PARTIDO;NUMERO;NOME;VICE;PARTIDO VICE;COLIGACAO;ELEITO
 1982;governador;SP;1;PDS;PDS;;Reynaldo de Barros;;;;
 1982;governador;SP;1;PTB;PTB;;Jânio Quadros;;;;
 1982;governador;SP;1;PT;PT;;Lula;;;;
+1990;governador;AP;2;PFL;PFL;;Annibal Barcellos;Ronaldo Borges;;;SIM
+1990;governador;AP;2;PT;PT;;Gilson Rocha;;;;
+1990;governador;MA;1;PRN;PRN;;João Castelo;Ildon Marques;PMDB;;2º TURNO
+1990;governador;MA;1;PFL;PFL;;Edison Lobão;Ribamar Fiquene;PFL;;2º TURNO
+1990;governador;MA;1;PSB;PSB;;Conceição Andrade;Neudson Claudino;PT;;
+1990;governador;MA;2;PFL;PFL;;Edison Lobão;Ribamar Fiquene;PFL;;SIM
+1990;governador;MA;2;PRN;PRN;;João Castelo;Ney Bello;PMDB;;
+1990;governador;PA;1;PMDB;PMDB;15;Jader Barbalho;Carlos Santos;;FRENTE DE TRABALHO;2º TURNO
+1990;governador;PA;1;PTB;PTB;14;Sahid Xerfan;;;COLIGAÇÃO DO POVO;2º TURNO
+1990;governador;PA;1;PSDB;PSDB;45;Almir Gabriel;;;FRENTE POPULAR NOVO PARÁ;
+1990;governador;PA;1;PMN;PMN;20;;;;FRENTE DA RECUPERAÇÃO DO PARÁ;
+1990;governador;PA;2;PMDB;PMDB;15;Jader Barbalho;Carlos Santos;;FRENTE DE TRABALHO;SIM
+1990;governador;PA;2;PTB;PTB;14;Sahid Xerfan;;;COLIGAÇÃO DO POVO;
+1990;senador;PA;1;PMDB;PMDB;;Coutinho Jorge;;;FRENTE DE TRABALHO;SIM
+1990;governador;RN;2;PFL;PFL;;José Agripino;;;;SIM
+1990;governador;RN;2;PDT;PDT;;Lavoisier Maia;;;;

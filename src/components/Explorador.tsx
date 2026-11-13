@@ -13,7 +13,7 @@ import {
 } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
 import {
-  ArquivoAusente, lerNivel, naRegiao, NOME_TIPO_REGIAO, nomeRegioesPais, regioesDoPais, useBairros, useLocais, useMalha, useMalhaCidade, useMalhaRegiao, useMunicipios, useRegioes, useResultado,
+  ArquivoAusente, lerNivel, naRegiao, NOME_TIPO_REGIAO, nomeRegioesPais, regioesDoPais, continentesDe, continenteDe, nomeLista, useBairros, useLocais, useMalha, useMalhaCidade, useMalhaRegiao, useMunicipios, useRegioes, useResultado,
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
@@ -51,8 +51,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // o DF é um município só (Brasília): abre direto na visão da cidade, com as zonas do DF.svg (ADR 0013)
   const CIDADE_UNICA: Record<string, string> = { df: '5300108' };
   const cidadeUnica = CIDADE_UNICA[abr] ?? null;
-  // ano sem zonas (1994): só municípios, sem visão da cidade
-  const comZonas = temZonas(ano);
+  // ano sem zonas: só municípios, sem visão da cidade (1994: zonas só no Presidente, nas 17 UFs da votação por seção)
+  const comZonas = temZonas(ano, cargoSlug, abr);
   const cid = abr !== 'br' && abr !== 'exterior' && comZonas ? params.get('cid') ?? cidadeUnica : null;
   const nivelUrl = lerNivel(params.get('nivel'), abr, !!cid, !!reg && !cid && comZonas);
   // ano sem locais (1998): a cidade abre por zonas (sem locais, sem bairros)
@@ -199,6 +199,20 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // no DF a "cidade" é a UF inteira: mostra "Distrito Federal", não "Brasília"
   const nomeCidade = (ibge: string) => (ibge === cidadeUnica ? nomeAbrangencia(abr) : titulo(indiceMunicipios.porIbge.get(ibge)?.nome ?? 'Cidade'));
 
+  // exterior: continentes escolhidos → cidades (para somar) e países (para destacar no mapa)
+  const contsExt = abr === 'exterior' ? continentesDe(reg) : null;
+  const exteriorRegiao = useMemo(() => {
+    if (!contsExt || !municipios.dados) return null;
+    const ss = new Set(contsExt.map((c) => c.s));
+    const cidades = new Set<string>(), paises = new Set<string>();
+    for (const m of municipios.dados) {
+      if (m.uf !== 'zz') continue;
+      const c = continenteDe(m);
+      if (c && ss.has(c)) { cidades.add(m.tse); paises.add(m.paisNum!); }
+    }
+    return { cidades, paises };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reg, abr, municipios.dados]);
   // região escolhida no mapa dos municípios: destaca e soma só ela
   const municipiosRegiao = useMemo(() => (nivel === 'municipios' && cidadesRegiao ? new Set(cidadesRegiao) : null), [nivel, cidadesRegiao]);
   // locais de votação da região (visão da região por locais)
@@ -207,8 +221,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     [regiaoLocais, cidadesRegiao, locais.dados],
   );
   const regPais = abr === 'br' ? regioesDoPais(reg) : null;
-  const nomeRegiao = regPais ? nomeRegioesPais(regPais) : reg ? regioes.dados?.regioes[reg]?.nome ?? null : null;
+  const nomeRegiao = regPais ? nomeRegioesPais(regPais) : contsExt ? nomeLista(contsExt) : reg ? regioes.dados?.regioes[reg]?.nome ?? null : null;
   const tipoRegiao = regPais ? (regPais.length > 1 ? 'Regiões do país' : 'Região do país')
+    : contsExt ? (contsExt.length > 1 ? 'Continentes e regiões do mundo' : 'Continente ou região do mundo')
     : reg && regioes.dados?.regioes[reg] ? NOME_TIPO_REGIAO[regioes.dados.regioes[reg].tipo] : '';
 
   // unidades (zona/bairro/local) da cidade aberta
@@ -231,9 +246,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       return new Set([mun]);
     }
     if (cid) return unidadesDaCidade ?? new Set<string>();
+    if (exteriorRegiao) return exteriorRegiao.cidades;
     if (regiaoLocais) return new Set((locaisRegiao ?? []).map((l) => l.id));
     return municipiosRegiao;
-  }, [mun, multi, selecao, abr, cid, unidadesDaCidade, municipiosRegiao, indiceMunicipios, regiaoLocais, locaisRegiao]);
+  }, [mun, multi, selecao, abr, cid, unidadesDaCidade, municipiosRegiao, indiceMunicipios, regiaoLocais, locaisRegiao, exteriorRegiao]);
 
   // áreas do Atlas que reúnem vários locais (properties.inclui): área → locais incluídos
   const gruposAreas = useMemo(() => {
@@ -304,6 +320,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     if (multi) {
       const nomes = selecao.map((id) => (cid || regiaoLocais || nivel === 'zonas' ? nomeUnidade(id) : titulo(indiceMunicipios.porIbge.get(id)?.nome ?? id)));
       return `${nomes.slice(0, 6).join(' + ')}${nomes.length > 6 ? ` e mais ${nomes.length - 6}` : ''} · shift + clique para tirar ou pôr`;
+    }
+    if (exteriorRegiao && !mun) {
+      const n = exteriorRegiao.paises.size;
+      return `${tipoRegiao} · ${n} ${n === 1 ? 'país' : 'países'}`;
     }
     // região sem nada escolhido: tipo, municípios e locais
     if (reg && !cid && !mun && nomeRegiao && cidadesRegiao) {
@@ -453,7 +473,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         abr={abr}
         cargo={cargo}
         regiaoSelecionada={reg}
-        regioesPais={abr === 'br' && !cid && nivel === 'municipios' && !!resultado.dados && !resultado.dados.resumo}
+        regioesPais={(abr === 'br' && !cid && nivel === 'municipios' && !!resultado.dados && !resultado.dados.resumo) || (abr === 'exterior' && !!resultado.dados)}
         malha={malhaUf.dados}
         regioes={regioes.dados}
         municipios={municipios.dados}
@@ -490,7 +510,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
             selecionado={mun}
             selecionados={multi ? selecao : undefined}
             semContornoFundo={nivel === 'bairros'}
-            destaque={municipiosRegiao}
+            destaque={exteriorRegiao?.paises ?? municipiosRegiao}
             mundo={abr === 'exterior'}
             aoSelecionar={aoSelecionar}
             aoAbrir={aoAbrir}

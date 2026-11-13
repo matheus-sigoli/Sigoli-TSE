@@ -1,10 +1,12 @@
 {
-  "1982-br": "/1982/br/governador",
-  "1982-go": "/1982/go/governador",
-  "1982-rj": "/1982/rj/governador",
-  "1982-sp": "/1982/sp/governador",
-  "br-sul-sudeste-2022": "/2022/br/presidente?t=2&reg=SE,S",
-  "sp-intermediaria-locais": "/2026/sp/presidente?t=2&reg=in3501&nivel=locais",
-  "sp-imediata": "/2026/sp/presidente?t=2&reg=im350001",
-  "1978-sp": "/1978/sp/senador"
+  "ext-1989-1t": "/1989/exterior/presidente",
+  "ext-1989-1t-europa": "/1989/exterior/presidente?reg=EUR",
+  "ext-1994": "/1994/exterior/presidente",
+  "ext-2022-america-sul": "/2022/exterior/presidente?t=2&reg=AMS",
+  "1994-sp-zonas": "/1994/sp/presidente?nivel=zonas",
+  "1994-sp-cidade": "/1994/sp/presidente?cid=3550308",
+  "1990-pa-2t": "/1990/pa/governador?t=2",
+  "1990-ma": "/1990/ma/governador",
+  "1990-br-2t": "/1990/br/governador?t=2",
+  "1990-pa-senador": "/1990/pa/senador"
 }

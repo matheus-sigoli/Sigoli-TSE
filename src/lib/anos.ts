@@ -17,6 +17,8 @@ export interface Eleicao {
   semPresidente?: boolean;
   /** sem zona eleitoral nos dados do TSE (1994: NR_ZONA = -3): só a visão por municípios */
   semZonas?: boolean;
+  /** zonas só para estes cargos e UFs (1994: a votação por seção só tem Presidente, de 17 UFs) */
+  zonasSo?: { cargos: string[]; ufs: string[] };
   /** só estes cargos (1989: eleição só de Presidente) */
   soCargos?: string[];
   /** de onde vêm os resultados, quando não é o TSE por município */
@@ -58,7 +60,8 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1994, titulo: 'Eleições Gerais 1994', datas: '3 de outubro e 15 de novembro',
-    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/1994/br/presidente', semLocais: true, semZonas: true,
+    cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/1994/br/presidente', semLocais: true,
+    zonasSo: { cargos: ['presidente'], ufs: ['ac', 'al', 'am', 'ap', 'ba', 'go', 'ma', 'ms', 'pb', 'pe', 'pi', 'ro', 'rs', 'sc', 'se', 'sp', 'to'] },
   },
   {
     ano: 1989, titulo: 'Eleição Presidencial 1989', datas: '15 de novembro e 17 de dezembro',
@@ -67,7 +70,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
-    cargos: 'Governador (por enquanto SP, MG, RJ e AL)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador'],
+    cargos: 'Governador (por enquanto SP, MG, RJ, AL, AP, MA, PA, RN e RO) e Senador (PA)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador'],
     fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
   },
   {
@@ -86,7 +89,11 @@ export const ELEICOES: Eleicao[] = [
 export const temLocais = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semLocais;
 
 /** o ano tem as zonas eleitorais (visão Zonas e a visão da cidade) */
-export const temZonas = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semZonas;
+export const temZonas = (ano: number, cargo?: string, abr?: string) => {
+  const e = ELEICOES.find((x) => x.ano === ano);
+  if (e?.zonasSo) return (!cargo || e.zonasSo.cargos.includes(cargo)) && (!abr || e.zonasSo.ufs.includes(abr));
+  return !e?.semZonas;
+};
 
 /** o ano tem o Presidente por município */
 export const temPresidente = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semPresidente;

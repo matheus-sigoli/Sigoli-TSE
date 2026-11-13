@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { memo, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { FAIXAS_LEGENDA, type Faixas } from '@/lib/cores';
 import type { Local, Malha, Nivel, Regioes, TipoRegiao } from '@/lib/dados';
-import { REGIOES_PAIS, regioesDoPais } from '@/lib/dados';
+import { CONTINENTES, REGIOES_PAIS, continentesDe, regioesDoPais } from '@/lib/dados';
 import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
@@ -100,12 +100,15 @@ function Filtros(p: Props) {
     return { mesos: ord(por.meso), micros: ord(por.micro), intermediarias: ord(por.intermediaria), imediatas: ord(por.imediata) };
   }, [p.malha, p.regioes, p.abr]);
   // no Brasil: grandes regiões, uma ou várias (ex.: Sul e Sudeste)
-  const pais = regioesDoPais(p.regiaoSelecionada);
+  // no exterior: continentes e regiões do mundo, do mesmo jeito
+  const exterior = p.abr === 'exterior';
+  const gruposRegiao: { s: string; nome: string }[] = exterior ? CONTINENTES : REGIOES_PAIS;
+  const pais: { s: string }[] | null = exterior ? continentesDe(p.regiaoSelecionada) : regioesDoPais(p.regiaoSelecionada);
   const alternarRegiaoPais = (s: string) => {
     const atual = new Set(pais?.map((r) => r.s) ?? []);
     if (atual.has(s)) atual.delete(s); else atual.add(s);
-    const l = REGIOES_PAIS.filter((r) => atual.has(r.s)).map((r) => r.s);
-    p.aoMudarRegiao(l.length && l.length < REGIOES_PAIS.length ? l.join(',') : null);
+    const l = gruposRegiao.filter((r) => atual.has(r.s)).map((r) => r.s);
+    p.aoMudarRegiao(l.length && l.length < gruposRegiao.length ? l.join(',') : null);
   };
   const comRegiao = !!p.regiaoSelecionada && !p.cidade && temLocais(p.ano);
 
@@ -138,7 +141,7 @@ function Filtros(p: Props) {
         </select>
       </div>
 
-      {p.abr !== 'br' && p.abr !== 'exterior' && temZonas(p.ano) ? (
+      {p.abr !== 'br' && p.abr !== 'exterior' && temZonas(p.ano, p.cargo.slug, p.abr) ? (
         <div className="campo campo-nivel">
           {p.cidade ? (
             <div className="cidade-aberta">
@@ -186,15 +189,15 @@ function Filtros(p: Props) {
 
       {p.regioesPais ? (
         <div className="campo campo-regiao-pais">
-          <span className="campo-rotulo">Regiões do país</span>
-          <div className="segmentado anos" role="group" aria-label="Regiões do país">
-            {REGIOES_PAIS.map((r) => (
+          <span className="campo-rotulo">{exterior ? 'Continentes e regiões' : 'Regiões do país'}</span>
+          <div className="segmentado anos" role="group" aria-label={exterior ? 'Continentes e regiões' : 'Regiões do país'}>
+            {gruposRegiao.map((r) => (
               <button key={r.s} type="button" aria-pressed={!!pais?.some((x) => x.s === r.s)} onClick={() => alternarRegiaoPais(r.s)}>
                 {r.nome}
               </button>
             ))}
           </div>
-          <p className="dica">Escolha uma ou mais (ex.: Sul e Sudeste) para somar só elas.</p>
+          <p className="dica">{exterior ? 'Escolha um ou mais (ex.: Europa e América do Norte) para somar só eles.' : 'Escolha uma ou mais (ex.: Sul e Sudeste) para somar só elas.'}</p>
         </div>
       ) : null}
 

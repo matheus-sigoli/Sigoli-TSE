@@ -371,6 +371,35 @@ export const nomeRegioesPais = (l: typeof REGIOES_PAIS) => {
   return n.length > 1 ? `${n.slice(0, -1).join(', ')} e ${n[n.length - 1]}` : n[0];
 };
 
+/**
+ * Exterior: continentes e regiões do mundo, pelo código ISO de 3 letras do país (`pais` em municipios.json).
+ * O México fica na América do Norte; o Oriente Médio (com a Turquia) separado do resto da Ásia; o Cáucaso na Ásia.
+ */
+export const CONTINENTES = [
+  { s: 'AMS', nome: 'América do Sul', paises: 'ARG BOL CHL COL ECU GUY GUF PRY PER SUR URY VEN' },
+  { s: 'AMC', nome: 'América Central e Caribe', paises: 'ATG BHS BRB BLZ CRI CUB DMA DOM SLV GRD GTM HTI HND JAM NIC PAN PRI KNA LCA VCT TTO' },
+  { s: 'AMN', nome: 'América do Norte', paises: 'USA CAN MEX' },
+  { s: 'EUR', nome: 'Europa', paises: 'ALB DEU AND AUT BEL BLR BIH BGR CYP HRV DNK SVK SVN ESP EST FIN FRA GRC HUN IRL ISL ITA LVA LIE LTU LUX MKD MLT MDA MCO MNE NOR NLD POL PRT GBR CZE ROU RUS SMR SRB SWE CHE UKR VAT XKX' },
+  { s: 'AFR', nome: 'África', paises: 'AGO DZA BEN BWA BFA BDI CPV CMR TCD COM COG CIV DJI EGY ERI SWZ ETH GAB GMB GHA GIN GNQ GNB KEN LSO LBR LBY MDG MWI MLI MAR MUS MRT MOZ NAM NER NGA CAF COD RWA STP SEN SLE SYC SOM SDN SSD TZA TGO TUN UGA ZMB ZWE ZAF' },
+  { s: 'ORM', nome: 'Oriente Médio', paises: 'SAU BHR QAT ARE YEM IRQ IRN ISR JOR KWT LBN OMN PSE SYR TUR' },
+  { s: 'ASI', nome: 'Ásia', paises: 'AFG ARM AZE BGD BTN BRN KHM KAZ CHN HKG MAC PRK KOR PHL GEO IND IDN JPN KGZ LAO MYS MDV MNG MMR NPL PAK SGP LKA TJK THA TWN TLS TKM UZB VNM' },
+  { s: 'OCE', nome: 'Oceania', paises: 'AUS NZL FJI PNG WSM TON VUT SLB' },
+].map((c) => ({ ...c, paises: new Set(c.paises.split(' ')) }));
+/** `reg` de continentes (exterior) → os escolhidos (ou null, se não for) */
+export const continentesDe = (reg: string | null) => {
+  if (!reg) return null;
+  const l = reg.split(',').map((x) => CONTINENTES.find((r) => r.s === x));
+  return l.length && l.every(Boolean) ? (l as typeof CONTINENTES) : null;
+};
+/** continente de uma unidade do exterior (a Guiana Francesa é da França, mas fica na América do Sul) */
+const GUIANA_FRANCESA = /CAIENA|LOYAPOCK|OIAPOQUE|GUIANA FRANCESA/;
+export const continenteDe = (m: { pais?: string; nome: string }) =>
+  GUIANA_FRANCESA.test(m.nome) ? 'AMS' : CONTINENTES.find((c) => c.paises.has(m.pais ?? ''))?.s ?? null;
+export const nomeLista = (l: { nome: string }[]) => {
+  const n = l.map((r) => r.nome);
+  return n.length > 1 ? `${n.slice(0, -1).join(', ')} e ${n[n.length - 1]}` : n[0];
+};
+
 /** a região `reg` contém o município? (micro/imediata: ela mesma; meso/intermediária: o pai) */
 export const naRegiao = (r: Regioes | null, ibge: string, reg: string) => {
   const pais = regioesDoPais(reg);

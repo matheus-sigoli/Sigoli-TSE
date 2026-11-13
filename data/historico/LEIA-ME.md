@@ -15,9 +15,9 @@ data/historico/
 
 Dentro de cada planilha:
 
-- **Uma aba por eleição**, com o nome `ANO NT`: `1990 1T`, `1990 2T`. Uma aba só com o ano (`1958`) conta como 1º turno. Abas com outros nomes (BASE, Associação, Planilha1…) são ignoradas.
+- **Uma aba por eleição**, com o nome `ANO NT`: `1990 1T`, `1990 2T`. Uma aba só com o ano (`1958`) conta como 1º turno. Uma aba com o cargo no nome (`1990 SENADOR`) vale para esse cargo, mesmo dentro da planilha de outro (ex.: o Senador de 1990 na planilha de Governador do Pará). Abas com outros nomes (BASE, Associação, Planilha1…) são ignoradas.
 - **Colunas da aba**:
-  - `CDG`: código do IBGE do município, o de hoje. Quando dois municípios da época viraram um só, repita o código e o script soma as linhas.
+  - `CDG`: código do IBGE do município, o de hoje (se o código estiver quebrado, como `#REF!`, o script procura pelo nome em `MUN`). Quando dois municípios da época viraram um só, repita o código e o script soma as linhas.
   - `MUN`: nome do município (só para você conferir).
   - `APTOS`, `COMPARECIMENTO`, `BRANCOS`, `NULOS`: opcionais. Sem elas, o site mostra só os votos dos candidatos.
   - **Uma coluna por candidato**, com a sigla do partido no cabeçalho (`PDS`, `PMDB`…).

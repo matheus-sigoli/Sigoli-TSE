@@ -6,12 +6,12 @@
  * Geografia do Voto (geografiadovoto.com), que montou a base a partir do IpeaData, corrigida com dados de TREs, da
  * Seade e das resoluções do TSE. Conferido com o TSE: no 1º turno os totais de cada UF batem; no 2º turno os votos
  * de cada candidato batem (os válidos do arquivo do TSE diferem em 7 UFs; aqui válidos = soma dos candidatos).
- * Exterior: no 2º turno, por país, transcrito do livro do TSE "Eleições 89 — Turno II" (data/exterior/1989/
- * presidente-2t-paises.csv; soma igual ao total do TSE para o exterior); no 1º turno só o total do TSE
- * (data/exterior/1989/presidente-tse-zz.csv), que entra no total do Brasil sem mapa por país.
+ * Exterior: por país, transcrito dos livros do TSE "Eleições 89 — Turno I" e "Turno II" (data/exterior/1989/
+ * presidente-{1t,2t}-paises.csv; nos dois turnos a soma dos países é igual ao total do TSE para o exterior,
+ * data/exterior/1989/presidente-tse-zz.csv). No livro, país sem votante aparece com 1 voto válido: aqui, 0.
  *
  * Entrada: data/geografiadovoto/1989/{resultado1989.1,resultado1989.2,cand1989}.json.gz, data/exterior/1989/
- * Saída:   public/data/1989/presidente/{1,2}/br.json, presidente/2/zz.json, public/data/1989/municipios.json e meta.json
+ * Saída:   public/data/1989/presidente/{1,2}/{br,zz}.json, public/data/1989/municipios.json e meta.json
  * Depois:  node scripts/malha-ano.mjs --ano 1989 && node scripts/pintam.mjs --ano 1989
  * Uso:     node scripts/ano-1989.mjs
  */
@@ -38,6 +38,7 @@ const csv = (p) => {
   return linhas.map((l) => Object.fromEntries(cab.map((k, i) => [k, l[i]])));
 };
 const paises = csv('data/exterior/1989/presidente-2t-paises.csv');
+const paises1 = new Map(csv('data/exterior/1989/presidente-1t-paises.csv').map((p) => [p.pais_livro, p]));
 const zzTse = csv('data/exterior/1989/presidente-tse-zz.csv');
 // cada país do livro vira uma unidade do exterior (as duas Alemanhas pintam a Alemanha de hoje, a URSS a Rússia etc.)
 const codigoPais = (p, i) => `89${String(i + 1).padStart(3, '0')}`;
@@ -77,9 +78,11 @@ for (const turno of [1, 2]) {
   // exterior: soma no total do Brasil; no 2º turno também o arquivo por país (zz.json)
   const tZz = [0, 0, 0, 0, 0, 0], cZz = new Array(nums.length).fill(0);
   const munZz = {};
-  if (turno === 2) {
-    paises.forEach((p, i) => {
-      const c = nums.map((n) => (n === 20 ? Number(p.collor) : n === 13 ? Number(p.lula) : 0));
+  {
+    paises.forEach((p0, i) => {
+      const p = turno === 2 ? p0 : { ...p0, ...paises1.get(p0.pais_livro) };
+      if (turno === 1 && !paises1.has(p0.pais_livro)) throw new Error(`exterior 1º turno: falta ${p0.pais_livro}`);
+      const c = turno === 2 ? nums.map((n) => (n === 20 ? Number(p.collor) : n === 13 ? Number(p.lula) : 0)) : nums.map((n) => Number(p[`n${n}`] ?? 0));
       const v = c.reduce((s, x) => s + x, 0);
       const t = [Number(p.eleitorado), Number(p.comparecimento), Number(p.abstencao), v, Number(p.brancos), Number(p.nulos)];
       if (t[1] !== v + t[4] + t[5] || t[0] !== t[1] + t[2]) throw new Error(`exterior ${p.pais_livro}: conta não fecha`);
@@ -87,21 +90,21 @@ for (const turno of [1, 2]) {
       t.forEach((x, k) => (tZz[k] += x));
       c.forEach((x, k) => (cZz[k] += x));
     });
-  } else {
-    const linhas = zzTse.filter((l) => Number(l.turno) === turno);
-    const l0 = linhas[0];
-    for (const l of linhas) if (idx.has(Number(l.numero))) cZz[idx.get(Number(l.numero))] += Number(l.votos);
-    tZz.splice(0, 6, Number(l0.aptos), Number(l0.comparecimento), Number(l0.abstencao), cZz.reduce((s, x) => s + x, 0), Number(l0.brancos), Number(l0.nulos));
   }
   // conferência com o total do TSE para o exterior
   for (const l of zzTse.filter((x) => Number(x.turno) === turno)) {
     if (idx.has(Number(l.numero)) && cZz[idx.get(Number(l.numero))] !== Number(l.votos)) throw new Error(`exterior ${turno}º turno, ${l.numero}: ${cZz[idx.get(Number(l.numero))]} ≠ TSE ${l.votos}`);
   }
+  {
+    const l0 = zzTse.find((x) => Number(x.turno) === turno);
+    const tse = [l0.aptos, l0.comparecimento, l0.abstencao, null, l0.brancos, l0.nulos];
+    tse.forEach((x, k) => { if (x !== null && Number(x) !== tZz[k]) throw new Error(`exterior ${turno}º turno, total ${k}: ${tZz[k]} ≠ TSE ${x}`); });
+  }
   const base = { v: 1, cargo: 'presidente', turno, tipo: 'maj', vagas: 1, atualizado: turno === 1 ? '15/11/1989' : '17/12/1989', cands, partidos: [] };
   const arq = { ...base, abr: 'br', total: { t: tTotal.map((x, k) => x + tZz[k]), c: cTotal.map((x, k) => x + cZz[k]), p: [] }, mun };
   mkdirSync(`${SAIDA}/presidente/${turno}`, { recursive: true });
   writeFileSync(`${SAIDA}/presidente/${turno}/br.json`, JSON.stringify(arq));
-  if (turno === 2) writeFileSync(`${SAIDA}/presidente/${turno}/zz.json`, JSON.stringify({ ...base, abr: 'zz', total: { t: tZz, c: cZz, p: [] }, mun: munZz }));
+  writeFileSync(`${SAIDA}/presidente/${turno}/zz.json`, JSON.stringify({ ...base, abr: 'zz', total: { t: tZz, c: cZz, p: [] }, mun: munZz }));
   console.log(`presidente ${turno}º turno: ${Object.keys(mun).length} municípios · válidos ${tTotal[3]} · ` +
     cands.slice(0, 3).map((c, i) => `${c.nome} ${arq.total.c[i]} (${(100 * arq.total.c[i] / arq.total.t[3]).toFixed(2)}%)`).join(' | ') + ` · exterior ${tZz[1]} votantes`);
 }
@@ -111,5 +114,5 @@ const lista = JSON.parse(readFileSync('public/data/2026/municipios.json', 'utf8'
 writeFileSync(`${SAIDA}/municipios.json`, JSON.stringify([...lista, ...unidadesExterior]));
 writeFileSync(`${SAIDA}/meta.json`, JSON.stringify({
   geradoEm: new Date().toISOString(),
-  fonte: 'Geografia do Voto (geografiadovoto.com/fontes), a partir do IpeaData com correções; totais por UF conferidos com o TSE (detalhe_votacao_uf_1989, votacao_candidato_uf_1989); exterior do 2º turno por país: livro do TSE Eleições 89, Turno II',
+  fonte: 'Geografia do Voto (geografiadovoto.com/fontes), a partir do IpeaData com correções; totais por UF conferidos com o TSE (detalhe_votacao_uf_1989, votacao_candidato_uf_1989); exterior por país: livros do TSE Eleições 89, Turnos I e II',
 }));

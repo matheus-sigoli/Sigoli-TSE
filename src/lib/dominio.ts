@@ -26,8 +26,8 @@ export const cargoPorSlug = (s: string) => CARGOS.find((c) => c.slug === s);
 /** UFs que tiveram 2º turno para governador, por ano (2026: config 6260 do TSE; 2022: resultado oficial). */
 export const UFS_2T_GOVERNADOR: Record<number, string[]> = {
   2026: ['ac', 'am', 'df', 'es', 'rn', 'to'],
-  // 1990: só os estados que já estão no acervo (o 2º turno de MA e PA ainda falta)
-  1990: ['al', 'mg', 'sp'],
+  // 1990: só os estados que já estão no acervo
+  1990: ['al', 'ap', 'ma', 'mg', 'pa', 'rn', 'sp'],
   2022: ['al', 'am', 'ba', 'es', 'ms', 'pb', 'pe', 'ro', 'rs', 'sc', 'se', 'sp'],
   2018: ['am', 'ap', 'df', 'mg', 'ms', 'pa', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp'],
   2014: ['ac', 'am', 'ap', 'ce', 'df', 'go', 'ms', 'pa', 'pb', 'rj', 'rn', 'ro', 'rr', 'rs'],
