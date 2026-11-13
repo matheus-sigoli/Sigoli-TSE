@@ -4,7 +4,7 @@
  * As zonas do Brasil mudam pouco de um ano para o outro: usa as áreas de --de; as partes de municípios criados depois
  * de --ano passam para o município de origem (scripts/lib/fusoes.mjs). Zona que não existia em --de fica sem desenho
  * (o resultado da cidade soma todas as zonas do arquivo, ADR 0015).
- * Uso: node scripts/zonas-de-outro-ano.mjs --ano 1998 --de 2002
+ * Uso: node scripts/zonas-de-outro-ano.mjs --ano 1998 --de 2002  (1994: --ano 1994 --de 1998)
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import polygonClipping from 'polygon-clipping';
@@ -21,8 +21,10 @@ for (const nivel of ['zonas', 'zonas-cidade']) {
   for (const arq of readdirSync(`public/geo/${DE}/${nivel}`).filter((n) => n.endsWith('.json'))) {
     const uf = arq.slice(0, 2);
     const topo = JSON.parse(readFileSync(`public/geo/${DE}/${nivel}/${arq}`, 'utf8'));
-    const dados = `public/data/${ANO}/governador/1/${nivel}/${uf}.json`;
-    const ids = existsSync(dados) ? new Set(Object.keys(JSON.parse(readFileSync(dados, 'utf8')).mun)) : null;
+    // zonas que existiam no ano: as do Governador; em 1994 só há zona no Presidente (votação por seção, 17 UFs)
+    const dados = [`public/data/${ANO}/governador/1/${nivel}/${uf}.json`, `public/data/${ANO}/presidente/1/${nivel}/${uf}.json`].find(existsSync);
+    if (!dados && ANO < 1998) continue; // sem dado de zona nesta UF: sem desenho
+    const ids = dados ? new Set(Object.keys(JSON.parse(readFileSync(dados, 'utf8')).mun)) : null;
     let semDado = 0;
     for (const obj of Object.values(topo.objects)) {
       const porId = new Map();
