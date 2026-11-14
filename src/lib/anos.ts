@@ -70,7 +70,13 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
-    cargos: 'Governador (por enquanto SP, MG, RJ, AL, AP, MA, PA, RN e RO) e Senador (PA)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador'],
+    cargos: 'Governador (por enquanto AC, AL, AP, ES, MA, MG, MS, PA, RJ, RN, RO e SP), Senador (MS e PA) e Deputados (MS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
+    soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
+    fonte: 'Acervo Sigoli.TSE e TREs (por município)',
+  },
+  {
+    ano: 1986, titulo: 'Eleições 1986', datas: '15 de novembro',
+    cargos: 'Governador (por enquanto MA, MG, MS e SP) e Senador (MS)', disponivel: true, rota: '/1986/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador'],
     fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
   },
   {

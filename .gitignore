@@ -10,3 +10,5 @@ next-env.d.ts
 shp/bairros/*.zip
 /locais/
 /saida_sigoli/
+# PDFs grandes dos TREs (dezenas de MB): ficam fora do repositório
+data/tre/fontes/pr/

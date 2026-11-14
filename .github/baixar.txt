@@ -1,0 +1,15 @@
+paginas/ms-1982.html	https://www.tre-ms.jus.br/eleicoes/eleicoes-anteriores/resultado-eleicoes-gerais-1982
+paginas/ms-1986.html	https://www.tre-ms.jus.br/eleicoes/eleicoes-anteriores/resultado-eleicoes-gerais-1986
+paginas/ms-1994.html	https://www.tre-ms.jus.br/eleicoes/eleicoes-anteriores/resultado-eleicoes-gerais-1994
+paginas/ms-1990.html	https://www.tre-ms.jus.br/eleicoes/eleicoes-anteriores/resultado-eleicoes-gerais-1990
+paginas/es-1990.html	https://www.tre-es.jus.br/eleicoes/eleicoes-anteriores/eleicoes-2006-e-anteriores/tre-es-eleicao-1990-votacao-dos-candidatos-por-municipio
+paginas/es-1990-gov2t.html	https://www.tre-es.jus.br/eleicoes/eleicoes-anteriores/eleicoes-2006-e-anteriores/tre-es-eleicao-1990-votacao-governador-segundo-turno
+paginas/ro-1990.html	https://www.tre-ro.jus.br/eleicoes/eleicoes-anteriores/eleicoes-1990
+paginas/al-resultados.html	https://www.tre-al.jus.br/eleicoes/eleicoes-anteriores/resultados
+paginas/pr-gerais.html	https://www.tre-pr.jus.br/eleicoes/resultados/resultados-de-eleicoes-gerais-tre-pr
+pr/1990-1t.zip	https://apps.tre-pr.jus.br/files/eleicoes-gerais-resultados/tre-pr-eleicoes-gerais-1990-1-turno.zip
+pr/1990-2t.zip	https://apps.tre-pr.jus.br/files/eleicoes-gerais-resultados/tre-pr-eleicoes-gerais-1990-2-turno.zip
+pr/1986-2t.pdf	https://apps.tre-pr.jus.br/files/eleicoes-gerais-resultados/tre-pr-eleicoes-gerais-1986-2-turno.pdf
+pr/1982.pdf	https://apps.tre-pr.jus.br/files/eleicoes-gerais-resultados/tre-pr-eleicoes-gerais-1982.pdf
+al/1990.pdf	https://static.tre-al.jus.br/portal/eleicoes/eleicoes_anteriores/1945-1990/TRE-AL-Resultado-Eleicoes-1990.pdf
+paginas/pi-1945-1992.html	https://www.tre-pi.jus.br/eleicoes/eleicoes-anteriores/eleicoes-1945-a-1992

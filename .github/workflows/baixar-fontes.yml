@@ -1,0 +1,38 @@
+# Baixa arquivos públicos de resultados antigos (sites dos TREs) para data/tre/fontes/.
+# .github/baixar.txt: uma linha por arquivo, "pasta/nome<TAB>URL". O container de desenvolvimento não alcança esses
+# sites; aqui o GitHub baixa e grava na branch.
+name: Baixar fontes
+on:
+  push:
+    paths:
+      - .github/baixar.txt
+      - .github/workflows/baixar-fontes.yml
+permissions:
+  contents: write
+concurrency:
+  group: baixar-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Baixar
+        run: |
+          ok=0; falha=0
+          while IFS=$'\t' read -r destino url; do
+            [ -z "$destino" ] || [ "${destino:0:1}" = "#" ] && continue
+            f="data/tre/fontes/$destino"
+            [ -s "$f" ] && continue
+            mkdir -p "$(dirname "$f")"
+            if curl -fsSL --retry 3 --max-time 300 -A "Mozilla/5.0" -o "$f" "$url"; then ok=$((ok+1)); else echo "FALHOU $url"; rm -f "$f"; falha=$((falha+1)); fi
+          done < .github/baixar.txt
+          echo "baixados $ok, falhas $falha"
+          du -sh data/tre/fontes || true
+      - name: Gravar
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tre/fontes
+          git diff --cached --quiet && exit 0
+          git commit -m "Fontes baixadas [skip ci]" && git pull --rebase && git push

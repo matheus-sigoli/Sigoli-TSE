@@ -15,7 +15,9 @@ for (const turno of opt('turno') ? [Number(opt('turno'))] : [1, 2]) {
   if (!existsSync(dir)) continue;
   const ufs = readdirSync(dir).filter((f) => /^[a-z]{2}\.json$/.test(f) && f !== 'br.json' && f !== 'zz.json');
   const arqs = ufs.map((f) => JSON.parse(readFileSync(`${dir}/${f}`, 'utf8')));
-  const r = montarResumoBrasil({ slug: cargo, tipo: 'maj' }, turno, arqs);
+  const r = montarResumoBrasil({ slug: cargo, tipo: cargo.startsWith('deputado') ? 'prop' : 'maj' }, turno, arqs);
+  // estado sem eleitorado/comparecimento: o total do Brasil fica só com os válidos (somar os outros daria um número parcial)
+  if (arqs.some((a) => !a.total.t[1])) r.total.t = [0, 0, 0, r.total.t[3], 0, 0];
   writeFileSync(`${dir}/br.json`, JSON.stringify(r));
   console.log(`${dir}/br.json: ${ufs.length} UFs, ${Object.keys(r.mun).length} municípios`);
 }
