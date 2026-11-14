@@ -197,6 +197,7 @@ function Painel(p: Props) {
             {focoChave ? `Mapa mostrando o % deste concorrente em cada ${UNIDADE[p.nivel]}. Clique de novo para voltar.` : 'Clique num nome para ver onde ele teve mais votos.'}
           </p>
           <Lista
+            semLegenda={!!(arquivo && !arquivo.resumo && arquivo.fonte)}
             linhas={(prop && abaAtiva === 'partidos' ? visao.partidos : visao.candidatos).slice(0, limite)}
             focoChave={focoChave}
             aoFocar={p.aoFocar}
@@ -256,8 +257,10 @@ const iniciais = (l: Linha) => {
   return ((p[0]?.[0] ?? '') + (p.length > 1 ? p[p.length - 1][0] : '')).toUpperCase();
 };
 
-const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: {
+const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos, semLegenda }: {
   linhas: Linha[];
+  /** fonte sem voto de legenda (PDF do TRE): o total do partido é só a soma dos nominais */
+  semLegenda?: boolean;
   focoChave: string | null;
   aoFocar: (chave: string | null) => void;
   mostrarSelos: boolean;
@@ -286,7 +289,7 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: 
                   {l.anulado ? <span className="selo anulado" title={`Destinação do voto no TSE: ${l.anulado}`}>Votos anulados</span> : null}
                 </span>
                 <span className="linha-meta">
-                  {candidato ? (l.numero ? `${l.partido} / ${l.numero}` : l.partido) : l.federacao ? `${l.federacao} / ${l.numero}` : arquivo && !arquivo.resumo && arquivo.fonte ? `Nominais / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
+                  {candidato ? (l.numero ? `${l.partido} / ${l.numero}` : l.partido) : l.federacao ? `${l.federacao} / ${l.numero}` : semLegenda ? `Nominais / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
                 </span>
                 {l.vices?.length ? (
                   <span className="linha-meta">
