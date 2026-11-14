@@ -131,7 +131,8 @@ function Painel(p: Props) {
         ) : null}
         <p className="subtitulo">
           {cargo.nome}, {turno}º turno
-          {p.ano < 1989 || p.ano === 1990 ? '. Votos válidos, por município: acervo Sigoli.TSE' : p.ano === 1989 ? '. Totalização final, por município: Geografia do Voto' : p.ano !== 2026 ? '. Totalização final do TSE' : arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
+          {arquivo && !arquivo.resumo && arquivo.fonte ? `. Por município: ${arquivo.fonte.split(',')[0]}`
+            : p.ano < 1989 || p.ano === 1990 ? `. ${arquivo && !arquivo.resumo && !arquivo.semTotais && arquivo.total.t[1] ? 'Por' : 'Votos válidos, por'} município: acervo Sigoli.TSE` : p.ano === 1989 ? '. Totalização final, por município: Geografia do Voto' : p.ano !== 2026 ? '. Totalização final do TSE' : arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
         </p>
         {cargo.turnos.length > 1 ? (
           <div className="segmentado" role="group" aria-label="Turno">
@@ -285,7 +286,7 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos }: 
                   {l.anulado ? <span className="selo anulado" title={`Destinação do voto no TSE: ${l.anulado}`}>Votos anulados</span> : null}
                 </span>
                 <span className="linha-meta">
-                  {candidato ? (l.numero ? `${l.partido} / ${l.numero}` : l.partido) : l.federacao ? `${l.federacao} / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
+                  {candidato ? (l.numero ? `${l.partido} / ${l.numero}` : l.partido) : l.federacao ? `${l.federacao} / ${l.numero}` : arquivo && !arquivo.resumo && arquivo.fonte ? `Nominais / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
                 </span>
                 {l.vices?.length ? (
                   <span className="linha-meta">

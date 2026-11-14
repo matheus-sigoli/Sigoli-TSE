@@ -29,6 +29,7 @@ def sem_acento(s):
 # "1990 1T", "1958" (1º turno), "1990 SENADOR" (aba de outro cargo na planilha: vale o cargo do nome da aba)
 ABA = re.compile(r'^\s*(\d{4})\s*(?:(\d)\s*º?\s*T)?\s*(GOVERNADOR|SENADOR|PRESIDENTE)?\s*$', re.I)
 TOTAIS = {'APTOS': 0, 'ELEITORADO': 0, 'ELEITORES': 0, 'ELEITORADO APTO': 0, 'VOTANTE': 1, 'ABSTENCOES': 2, 'COMPARECIMENTO': 1, 'VOTANTES': 1, 'ABSTENCAO': 2, 'ABSTENCOES': 2, 'BRANCOS': 4, 'BRANCO': 4, 'NULOS': 5, 'NULO': 5}
+SENADO_2_VAGAS = {1986}
 IGNORAR = {'CDG', 'MUN', 'MUNICIPIO', 'MAPA', 'UF', 'MUN SEM ACENTO', 'VALIDOS', 'VOTOS VALIDOS', 'TOTAL'}
 
 def ler_candidatos(wb):
@@ -184,7 +185,9 @@ def main():
                         val = sum(c)
                         t = [t0.get(0, 0), t0.get(1, 0), t0.get(2, 0), val, t0.get(4, 0), t0.get(5, 0)]
                         # completa o que dá pelas contas: comparecimento = válidos + brancos + nulos; eleitorado = comparecimento + abstenção
-                        if not t[1] and 4 in t0 and 5 in t0: t[1] = val + t[4] + t[5]
+                        # Senado com duas vagas (1986): cada eleitor dá dois votos
+                        votos_por_eleitor = 2 if cargo == 'senador' and ano in SENADO_2_VAGAS else 1
+                        if not t[1] and 4 in t0 and 5 in t0: t[1] = (val + t[4] + t[5]) // votos_por_eleitor
                         if t[0] and not t[2] and t[1]: t[2] = t[0] - t[1]
                         if t[2] and not t[0] and t[1]: t[0] = t[1] + t[2]
                         if t[1] and not (t[4] or t[5]) and t[1] > val: pass  # brancos e nulos juntos não dá para separar
