@@ -1,0 +1,145 @@
+[
+  {
+    "nome": "1990-ms-gov",
+    "url": "/1990/ms/governador",
+    "ms": 2623,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nMato Grosso do Sul\n\nGovernador, 1º turno. Por município: TRE-MS\n\n1º turno\n2º turno\nComparecimento\n83,9%\nAbstenção\n16,1%\nBrancos\n9,8%\nNulos\n8,4%\n\nClique num nome para ver onde ele teve mais votos.\n\n14\nPedro Pedrossian (PTB)Eleito\nPTB / 14\n59,39%\n417.589 votos\n12\nGandi Jamil (PDT)\nPDT / 12\n30,90%\n217.289 votos\n13\nManoel Camargo Bronze (PT)\nPT / 13\n9,71%\n68.304 votos\nFonte: TRE-MS, Eleições Gerais 1990 (resultado por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nCentro Norte de Mato Grosso do Sul\nLeste de Mato Grosso do Sul\nPantanais Sul Mato-grossense\nSudoeste de Mato Grosso do Sul\nAlto Taquari\nAquidauana\nBaixo Pantanal\nBodoquena\nCampo Grande\nCassilândia\nDourados\nIguatemi\nNova Andradina\nParanaíba\nTrês Lagoas\nCampo Grande\nCorumbá\nDourados\nAmambai\nAquidauana - Anastácio\nCampo Grande\nCorumbá\nCoxim\nDourados\nJardi",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-MS, Eleições Gerais 1990 (resultado por município)",
+    "areas": 73,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-ms-depfed",
+    "url": "/1990/ms/deputado-federal",
+    "ms": 2454,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nMato Grosso do Sul\n\nDeputado Federal, 1º turno. Por município: TRE-MS\n\nComparecimento\n83,9%\nAbstenção\n16,1%\nBrancos\n33,3%\nNulos\n10,9%\nPartidos\nCandidatos\n\nClique num nome para ver onde ele teve mais votos.\n\n52\nPST\nNominais / 52\n28,86%\n128.261 votos\n14\nPTB\nNominais / 14\n28,30%\n125.813 votos\n36\nPRN\nNominais / 36\n11,27%\n50.113 votos\n15\nPMDB\nNominais / 15\n9,56%\n42.509 votos\n45\nPSDB\nNominais / 45\n6,97%\n30.990 votos\n13\nPT\nNominais / 13\n6,05%\n26.895 votos\n25\nPFL\nNominais / 25\n6,02%\n26.747 votos\n12\nPDT\nNominais / 12\n2,40%\n10.651 votos\n11\nPDS\nNominais / 11\n0,18%\n819 votos\n33\nPMN\nNominais / 33\n0,18%\n811 votos\n28\nPTR\nNominais / 28\n0,09%\n395 votos\n65\nPCDOB\nNominais / 65\n0,05%\n221 votos\n23\nPCB\nNominais / 23\n0,04%\n184 votos\n40\nPSB\nNominais / 40\n0,02%\n92 votos\nFonte: TRE-MS, Eleições Gerais 1990 (resultado por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nCentro Norte de Mato Grosso do Sul\nLeste de Mato Grosso do Sul\nPantanais Sul Mato-grossense\nSudoeste de Mato Grosso do Sul\nAlto Taquari\nAquidauana\nBaixo Pantanal\nBodoquena\nCampo Grande\nCassilândia\nDourados\nIguatemi\nNova Andradina\nParanaíba\nTrês Lagoas\nCampo Grande\nCorumbá\nDourados\nAmambai\nAquidauana - Anastácio\nCampo Grande\nCorumbá\nCoxim\nDourados\nJardi",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-MS, Eleições Gerais 1990 (resultado por município)",
+    "areas": 73,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-ms-depest-cg",
+    "url": "/1990/ms/deputado-estadual?mun=5002704",
+    "ms": 2453,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\n/ Mato Grosso do Sul\nCampo Grande\n\nDeputado Estadual, 1º turno. Por município: TRE-MS\n\nComparecimento\n88,2%\nAbstenção\n11,8%\nBrancos\n22,6%\nNulos\n9,0%\nPartidos\nCandidatos\n\nClique num nome para ver onde ele teve mais votos.\n\n52\nPST\nNominais / 52\n24,85%\n37.953 votos\n14\nPTB\nNominais / 14\n23,80%\n36.348 votos\n12\nPDT\nNominais / 12\n11,18%\n17.067 votos\n45\nPSDB\nNominais / 45\n10,91%\n16.661 votos\n15\nPMDB\nNominais / 15\n8,36%\n12.771 votos\n13\nPT\nNominais / 13\n4,58%\n6.999 votos\n36\nPRN\nNominais / 36\n3,86%\n5.895 votos\n11\nPDS\nNominais / 11\n3,36%\n5.130 votos\n25\nPFL\nNominais / 25\n2,09%\n3.198 votos\n22\nPL\nNominais / 22\n1,93%\n2.946 votos\n23\nPCB\nNominais / 23\n1,76%\n2.682 votos\n33\nPMN\nNominais / 33\n1,09%\n1.668 votos\n28\nPTR\nNominais / 28\n0,91%\n1.397 votos\n17\nPDC\nNominais / 17\n0,61%\n926 votos\n65\nPCDOB\nNominais / 65\n0,58%\n883 votos\n40\nPSB\nNominais / 40\n0,10%\n146 votos\n41\nPSD\nNominais / 41\n0,03%\n50 votos\nFonte: TRE-MS, Eleições Gerais 1990 (resultado por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nCentro Norte de Mato Grosso do Sul\nLeste de Mato Grosso do Sul\nPantanais Sul Mato-grossense\nSudoeste de Mato Grosso do Sul\nAlto Taquari\nAquidauana\nBaixo Pantanal\nBodoquena\nCampo Grande\nCassilândia\nDourados\nIguatemi\nNova Andradina\nParanaíba\nTrês Lagoas\nCampo Grande\nCorumbá\nDourados\nAmambai\nAquidauana - Anastácio\nCampo Grande\nCorumbá\nCoxim\nDourados\nJardi",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-MS, Eleições Gerais 1990 (resultado por município)",
+    "areas": 74,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-pa-gov",
+    "url": "/1990/pa/governador",
+    "ms": 2387,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nPará\n\nGovernador, 1º turno. Por município: TRE-PA\n\n1º turno\n2º turno\nVotantes\n1.700.200\nBrancos e nulos\n16,8%\n\nClique num nome para ver onde ele teve mais votos.\n\n15\nJader Fontenelle Barbalho (PMDB)2º turno\nPMDB / 15\n43,64%\n617.282 votos\n14\nSahid Xerfan (PTB)2º turno\nPTB / 14\n38,73%\n547.901 votos\n45\nAlmir Jose de Oliveira Gabriel (PSDB)\nPSDB / 45\n16,28%\n230.233 votos\n33\nCarlos Nascimento Levy (PMN)\nPMN / 33\n1,35%\n19.144 votos\nFonte: TRE-PA, Demonstrativo da votação do candidato (SERPRO VP-003), 1º turno de 1990 — lido por OCR e conferido com os totais impressos. Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nBaixo Amazonas\nMarajó\nMetropolitana de Belém\nNordeste Paraense\nSudeste Paraense\nSudoeste Paraense\nAlmeirim\nAltamira\nArari\nBelém\nBragantina\nCametá\nCastanhal\nConceição do Araguaia\nFuros de Breves\nGuamá\nItaituba\nMarabá\nÓbidos\nParagominas\nParauapebas\nPortel\nRedenção\nSalgado\nSantarém\nSão Félix do Xingu\nTomé-Açu\nTucuruí\nAltamira\nBelém\nBreves\nCastanhal\nMarabá",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-PA, Demonstrativo da votação do candidato (SERPRO VP-003), 1º turno de 1990 — lido por OCR e conferido com os totais impressos",
+    "areas": 106,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-pa-sen",
+    "url": "/1990/pa/senador",
+    "ms": 2419,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nPará\n\nSenador, 1º turno. Por município: TRE-PA\n\nVotantes\n1.700.200\nBrancos e nulos\n32,1%\n\nClique num nome para ver onde ele teve mais votos.\n\n151\nFernando Coutinho Jorge (PMDB)Eleito\nPMDB / 151\n34,18%\n394.636 votos\n401\nAdemir Galvao Andrade (PSB)\nPSB / 401\n33,30%\n384.501 votos\n111\nJorge Arbage (PDS)\nPDS / 111\n27,08%\n312.611 votos\n171\nJoao Menezes (PDC)\nPDC / 171\n3,54%\n40.923 votos\n331\nHelio Vieira Dourado (PMN)\nPMN / 331\n1,90%\n21.923 votos\nFonte: TRE-PA, Demonstrativo da votação do candidato (SERPRO VP-003), 1º turno de 1990 — lido por OCR e conferido com os totais impressos. Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nBaixo Amazonas\nMarajó\nMetropolitana de Belém\nNordeste Paraense\nSudeste Paraense\nSudoeste Paraense\nAlmeirim\nAltamira\nArari\nBelém\nBragantina\nCametá\nCastanhal\nConceição do Araguaia\nFuros de Breves\nGuamá\nItaituba\nMarabá\nÓbidos\nParagominas\nParauapebas\nPortel\nRedenção\nSalgado\nSantarém\nSão Félix do Xingu\nTomé-Açu\nTucuruí\nAltamira\nBelém\nBreves\nCastanhal\nMarabá",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-PA, Demonstrativo da votação do candidato (SERPRO VP-003), 1º turno de 1990 — lido por OCR e conferido com os totais impressos",
+    "areas": 106,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-ac-gov",
+    "url": "/1990/ac/governador",
+    "ms": 2385,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nAcre\n\nGovernador, 1º turno. Por município: acervo Sigoli.TSE\n\n1º turno\n2º turno\nComparecimento\n79,7%\nAbstenção\n20,3%\nBrancos\n12,7%\nNulos\n9,2%\n\nClique num nome para ver onde ele teve mais votos.\n\n11\nEdmundo Pinto (PDS)2º turno\nPDS / 11\n28,64%\n35.228 votos\n13\nJorge Viana (PT)2º turno\nPT / 13\n28,34%\n34.868 votos\nP\nPMDB\nPMDB\n22,15%\n27.252 votos\nP\nPL\nPL\n19,24%\n23.669 votos\nP\nPSDB\nPSDB\n1,63%\n2.006 votos\nFonte: acervo de planilhas de Matheus Sigoli (votos válidos por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nVale do Acre\nVale do Juruá\nBrasiléia\nCruzeiro do Sul\nRio Branco\nSena Madureira\nTarauacá\nCruzeiro do Sul\nRio Branco\nBrasiléia\nCruzeiro do Sul\nRio Branco\nSena Madureira\nTarauacá\nBuscar município\nVencedor no município\nEdmundo Pinto (PDS)\nJorge Viana (PT)\nPmdb (PMDB)\nPl (PL)\n10%\n50%\n100%\n\nTom mais escuro: vitória mais folgada.\n\npor Matheus Sigoli\nTema clar",
+    "creditos": "Malha: IBGE 2025 · Resultados: Acervo Sigoli.TSE e TREs (por município)",
+    "areas": 13,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-es-gov2",
+    "url": "/1990/es/governador?t=2",
+    "ms": 2416,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nEspírito Santo\n\nGovernador, 2º turno. Por município: acervo Sigoli.TSE\n\n1º turno\n2º turno\nVotantes\n1.159.179\nBrancos\n3,2%\nNulos\n21,0%\n\nClique num nome para ver onde ele teve mais votos.\n\n12\nAlbuíno Azeredo (PDT)Eleito\nPDT / 12\n66,46%\n584.249 votos\n52\nJosé Ignácio Ferreira (PST)\nPST / 52\n33,54%\n294.868 votos\nFonte: acervo de planilhas de Matheus Sigoli (votos válidos por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nCentral Espírito-santense\nLitoral Norte Espírito-santense\nNoroeste Espírito-santense\nSul Espírito-santense\nAfonso Cláudio\nAlegre\nBarra de São Francisco\nCachoeiro de Itapemirim\nColatina\nGuarapari\nItapemirim\nLinhares\nMontanha\nNova Venécia\nSanta Teresa\nSão Mateus\nVitória\nCachoeiro do Itapemirim\nColatina\nSão Mateus\nVitória\nAfonso Cláudio - Venda Nova do Im",
+    "creditos": "Malha: IBGE 2025 · Resultados: Acervo Sigoli.TSE e TREs (por município)",
+    "areas": 68,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-ap-gov2",
+    "url": "/1990/ap/governador?t=2",
+    "ms": 2391,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nAmapá\n\nGovernador, 2º turno. Por município: acervo Sigoli.TSE\n\n1º turno\n2º turno\nVotantes\n94.568\nBrancos e nulos\n6,5%\n\nClique num nome para ver onde ele teve mais votos.\n\nAB\nAnnibal Barcellos (PFL)Eleito\nPFL\nVice: Ronaldo Borges\n67,02%\n59.289 votos\nGR\nGilson Rocha (PT)\nPT\n32,98%\n29.178 votos\nFonte: acervo de planilhas de Matheus Sigoli (votos válidos por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nNorte do Amapá\nSul do Amapá\nAmapá\nMacapá\nMazagão\nOiapoque\nMacapá\nOiapoque - Porto Grande\nLaranjal do Jari\nMacapá\nOiapoque\nPorto Grande\nBuscar município\nVencedor no município\nAnnibal Barcellos (PFL)\nGilson Rocha (PT)\n10%\n50%\n100%\n\nTom mais escuro: vitória mais folgada.\n\npor Matheus Sigoli\nTema claro\nCores para daltonismo",
+    "creditos": "Malha: IBGE 2025 · Resultados: Acervo Sigoli.TSE e TREs (por município)",
+    "areas": 10,
+    "circulos": 0
+  },
+  {
+    "nome": "1986-sp-gov",
+    "url": "/1986/sp/governador",
+    "ms": 2539,
+    "erros": [],
+    "painel": "Governador\nSenador\nBrasil\nSão Paulo\n\nGovernador, 1º turno. Votos válidos, por município: acervo Sigoli.TSE\n\n1º turno\n2º turno\n\nClique num nome para ver onde ele teve mais votos.\n\n15\nOrestes Quércia (PMDB)Eleito\nPMDB / 15\nVice: Almino Affonso (PMDB)\n40,76%\n5.576.354 votos\n14\nAntônio Ermírio de Moraes (PTB)\nPTB / 14\n26,89%\n3.679.107 votos\n11\nPaulo Maluf (PDS)\nPDS / 11\n19,49%\n2.666.935 votos\n13\nEduardo Suplicy (PT)\nPT / 13\n11,03%\n1.508.589 votos\nP\nPH\nPH\n1,83%\n250.657 votos\nFonte: acervo de planilhas de Matheus Sigoli (votos válidos por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1986, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nAraçatuba\nAraraquara\nAssis\nBauru\nCampinas\nItapetininga\nLitoral Sul Paulista\nMacro Metropolitana Paulista\nMarília\nMetropolitana de São Paulo\nPiracicaba\nPresidente Prudente\nRibeirão Preto\nSão José do Rio Preto\nVale do Paraíba Paulista\nAdamantina\nAmparo\nAndradina\nAraçatuba\nAraraquara\nAssis\nAuriflama\nAvaré\nBananal\nBarretos\nBatatais\nBauru\nBirigui\nBotucatu\nB",
+    "creditos": "Malha: IBGE 2025 · Resultados: Acervo Sigoli.TSE (votos válidos por município)",
+    "areas": 573,
+    "circulos": 0
+  },
+  {
+    "nome": "1986-br-gov",
+    "url": "/1986/br/governador",
+    "ms": 2707,
+    "erros": [],
+    "painel": "Governador\nSenador\nBrasil\n\nGovernador, 1º turno. Votos válidos, por município: acervo Sigoli.TSE\n\n1º turno\n2º turno\nResultado por estado\nMaranhão\n15\nEpitácio Cafeteira\nPMDB\nEleito\n1.031.618\nMato Grosso do Sul\n15\nMarcelo Miranda Soares\nPMDB\nEleito\n412.974\nMinas Gerais\n15\nNewton Cardoso\nPMDB\nEleito\n2.869.635\nSão Paulo\n15\nOrestes Quércia\nPMDB\nEleito\n5.576.354\nFonte: acervo de planilhas de Matheus Sigoli (votos válidos por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1986, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nBuscar município\nVencedor no município\nPMDB\nPL\nPDS\nPTB\nPT\n10%\n50%\n100%\n\nTom mais escuro: vitória mais folgada.\n\npor Matheus Sigoli\nTema claro\nCores para daltonismo",
+    "creditos": "Malha: IBGE 2025 · Resultados: Acervo Sigoli.TSE (votos válidos por município)",
+    "areas": 4476,
+    "circulos": 0
+  },
+  {
+    "nome": "1986-ms-sen",
+    "url": "/1986/ms/senador",
+    "ms": 2649,
+    "erros": [],
+    "painel": "Governador\nSenador\nBrasil\nMato Grosso do Sul\n\nSenador, 1º turno. Por município: acervo Sigoli.TSE\n\nVotantes\n1.160.893\nBrancos\n1,3%\nNulos\n0,4%\n\nClique num nome para ver onde ele teve mais votos.\n\n154\nWilson Barbosa Martins (PMDB)Eleito\nPMDB / 154\n20,83%\n479.519 votos\n141\nPedro Pedrossian (PTB)\nPTB / 141\n20,02%\n460.733 votos\n151\nRachid Saldanha Derzi (PMDB)Eleito\nPMDB / 151\n18,65%\n429.257 votos\n142\nPaulo Coelho Machado (PTB)\nPTB / 142\n14,07%\n323.917 votos\n155\nJoao Toto da Camara (PMDB)\nPMDB / 155\n10,40%\n239.406 votos\n152\nRoberto Moaccar Orro (PMDB)\nPMDB / 152\n10,01%\n230.502 votos\n153\nAdir Pires Maia (PMDB)\nPMDB / 153\n1,89%\n43.455 votos\n156\nMarco Lucio Trajano dos Santos (PMDB)\nPMDB / 156\n1,54%\n35.359 votos\n132\nElvio Araújo Garabini (PT)\nPT / 132\n1,44%\n33.032 votos\n131\nGeraldo Biancatelli (PT)\nPT / 131\n1,15%\n26.519 votos\nFonte: acervo de planilhas de Matheus Sigoli (votos válidos por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1986, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nCentro Norte de Mato Grosso do Sul\nLeste de Mato Grosso do Sul\nPantanais Sul Mato-grossense\nSudoeste de Mato Grosso do Sul\nAlto Taquari\nAquidauana\nBaixo Pantanal\nBodoquena\nCampo Grande\nCassilândia\nDourados\nIguatemi\nNova Andradina\nParanaíba\nTrês Lagoas\nCampo Grande\nCorumbá\nDourados\nAmambai\nAquidauana - Anastácio\nCampo Grande\nCorumbá\nCoxim\nDourados\nJardi",
+    "creditos": "Malha: IBGE 2025 · Resultados: Acervo Sigoli.TSE (votos válidos por município)",
+    "areas": 65,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-br-depfed",
+    "url": "/1990/br/deputado-federal",
+    "ms": 2426,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\n\nDeputado Federal, 1º turno. Votos válidos, por município: acervo Sigoli.TSE\n\nComparecimento\n83,9%\nAbstenção\n16,1%\nBrancos\n33,3%\nNulos\n10,9%\nBancada eleita por partido\n3\nPTB\n2\nPST\n1\nPRN\n1\nPFL\n1\nPMDB\nEleitos por estado\nMato Grosso do Sul\n\nPTB 3, PST 2, PRN 1, PFL 1, PMDB 1\n\nFonte: acervo de planilhas de Matheus Sigoli (votos válidos por município). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nBuscar município\nVencedor no município\nPST\nPTB\nPMDB\nPRN\nPFL\nPDT\n10%\n50%\n100%\n\nTom mais escuro: vitória mais folgada.\n\npor Matheus Sigoli\nTema claro\nCores para daltonismo",
+    "creditos": "Malha: IBGE 2025 · Resultados: Acervo Sigoli.TSE e TREs (por município)",
+    "areas": 4489,
+    "circulos": 0
+  },
+  {
+    "nome": "1990-pa-gov-belem",
+    "url": "/1990/pa/governador?mun=1501402",
+    "ms": 2388,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\n/ Pará\nBelém\n\nGovernador, 1º turno. Por município: TRE-PA\n\n1º turno\n2º turno\nVotantes\n512.229\nBrancos e nulos\n10,1%\n\nClique num nome para ver onde ele teve mais votos.\n\n14\nSahid Xerfan (PTB)\nPTB / 14\n40,07%\n184.599 votos\n15\nJader Fontenelle Barbalho (PMDB)\nPMDB / 15\n30,91%\n142.407 votos\n45\nAlmir Jose de Oliveira Gabriel (PSDB)\nPSDB / 45\n27,03%\n124.531 votos\n33\nCarlos Nascimento Levy (PMN)\nPMN / 33\n2,00%\n9.207 votos\nFonte: TRE-PA, Demonstrativo da votação do candidato (SERPRO VP-003), 1º turno de 1990 — lido por OCR e conferido com os totais impressos. Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1989\n1990\n1986\n1982\n1978\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nBaixo Amazonas\nMarajó\nMetropolitana de Belém\nNordeste Paraense\nSudeste Paraense\nSudoeste Paraense\nAlmeirim\nAltamira\nArari\nBelém\nBragantina\nCametá\nCastanhal\nConceição do Araguaia\nFuros de Breves\nGuamá\nItaituba\nMarabá\nÓbidos\nParagominas\nParauapebas\nPortel\nRedenção\nSalgado\nSantarém\nSão Félix do Xingu\nTomé-Açu\nTucuruí\nAltamira\nBelém\nBreves\nCastanhal\nMarabá",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-PA, Demonstrativo da votação do candidato (SERPRO VP-003), 1º turno de 1990 — lido por OCR e conferido com os totais impressos",
+    "areas": 107,
+    "circulos": 0
+  }
+]
