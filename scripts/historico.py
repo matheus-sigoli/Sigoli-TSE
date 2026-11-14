@@ -28,7 +28,7 @@ def sem_acento(s):
 
 # "1990 1T", "1958" (1º turno), "1990 SENADOR" (aba de outro cargo na planilha: vale o cargo do nome da aba)
 ABA = re.compile(r'^\s*(\d{4})\s*(?:(\d)\s*º?\s*T)?\s*(GOVERNADOR|SENADOR|PRESIDENTE)?\s*$', re.I)
-TOTAIS = {'APTOS': 0, 'ELEITORADO': 0, 'COMPARECIMENTO': 1, 'VOTANTES': 1, 'ABSTENCAO': 2, 'ABSTENCOES': 2, 'BRANCOS': 4, 'BRANCO': 4, 'NULOS': 5, 'NULO': 5}
+TOTAIS = {'APTOS': 0, 'ELEITORADO': 0, 'ELEITORES': 0, 'ELEITORADO APTO': 0, 'VOTANTE': 1, 'ABSTENCOES': 2, 'COMPARECIMENTO': 1, 'VOTANTES': 1, 'ABSTENCAO': 2, 'ABSTENCOES': 2, 'BRANCOS': 4, 'BRANCO': 4, 'NULOS': 5, 'NULO': 5}
 IGNORAR = {'CDG', 'MUN', 'MUNICIPIO', 'MAPA', 'UF', 'MUN SEM ACENTO', 'VALIDOS', 'VOTOS VALIDOS', 'TOTAL'}
 
 def ler_candidatos(wb):
@@ -42,6 +42,18 @@ def ler_candidatos(wb):
         if not d.get('ANO') or not d.get('PARTIDO'): continue
         # COLUNA (opcional): o cabeçalho da coluna de votos, quando não é a sigla (dois candidatos do mesmo partido)
         out[(int(d['ANO']), int(d.get('TURNO') or 1), sem_acento(d.get('COLUNA') or d['PARTIDO']))] = d
+    return out
+
+def ler_totais_csv(pasta):
+    """data/historico/totais.csv (;): ANO;CARGO;UF;TURNO;CDG;ELEITORADO;COMPARECIMENTO;ABSTENCAO;BRANCOS;NULOS;FONTE —
+    totais do município tirados de outra fonte (PDF do TRE…), para quando a planilha só tem os votos dos candidatos."""
+    p = os.path.join(pasta, 'totais.csv')
+    out = {}
+    if not os.path.exists(p): return out
+    import csv
+    for d in csv.DictReader(open(p, encoding='utf8'), delimiter=';'):
+        k = (d['CARGO'].lower(), d['UF'].lower(), int(d['ANO']), int(d.get('TURNO') or 1))
+        out.setdefault(k, {})[d['CDG']] = {i: int(d[c]) for i, c in ((0, 'ELEITORADO'), (1, 'COMPARECIMENTO'), (2, 'ABSTENCAO'), (4, 'BRANCOS'), (5, 'NULOS')) if (d.get(c) or '').strip()}
     return out
 
 def ler_candidatos_csv(pasta):
@@ -68,7 +80,7 @@ def ler_aba(ws, por_nome=None):
     i_uf = next((i for i, c in enumerate(cab) if sem_acento(c) == 'UF'), None)
     tot, cand = {}, []
     for i, c in enumerate(cab):
-        k = sem_acento(c)
+        k = re.sub(r'^(VOTOS?|TOTAL DE|TOTAL)\s+(EM\s+)?', '', sem_acento(c)).strip()
         if not k or i in (i_cdg, i_mun, i_uf) or k.startswith('%') or k in IGNORAR or k.startswith('COLUNA'): continue
         if k in TOTAIS: tot[TOTAIS[k]] = i
         else: cand.append((c, i))
@@ -85,7 +97,13 @@ def ler_aba(ws, por_nome=None):
         k = str(int(float(cdg)))
         mun.setdefault(k, []).append((r[i_mun] if i_mun is not None else '', votos, t))
         if i_uf is not None and r[i_uf]: ufs[k] = str(r[i_uf]).strip().lower()
-    return cand, tot, mun, ufs
+    # linha acima do cabeçalho com "14 - LUDIO MARTINS COELHO (PTB)": número, nome e partido do candidato da coluna
+    nomes = {}
+    for c, i in cand:
+        for x in ([c] + ([linhas[ic - 1][i]] if ic > 0 and i < len(linhas[ic - 1]) else [])):
+            m = re.match(r'\s*(\d+)\s*[-–]\s*(.+?)\s*\(([^)]+)\)\s*$', str(x or ''))
+            if m: nomes[c] = {'NUMERO': m.group(1), 'NOME': m.group(2).strip(), 'PARTIDO': m.group(3).strip()}; break
+    return cand, tot, mun, ufs, nomes
 
 def main():
     ap = argparse.ArgumentParser()
@@ -97,6 +115,7 @@ def main():
     nome_chave = lambda n: sem_acento(n).replace('-', ' ').replace("'", '')
     problemas = 0
     cands_csv = ler_candidatos_csv(a.de)
+    totais_csv = ler_totais_csv(a.de)
     for cargo in sorted(os.listdir(a.de)):
         pasta = os.path.join(a.de, cargo)
         if not os.path.isdir(pasta): continue
@@ -122,7 +141,7 @@ def main():
                 if a.cargo and cargo != a.cargo: continue
                 lido = ler_aba(wb[nome], por_nome)
                 if not lido: print(f'  {cargo}/{arq} "{nome}": sem coluna CDG, ignorada'); continue
-                cand, tot, mun_todos, ufs_col = lido
+                cand, tot, mun_todos, ufs_col, nomes_cab = lido
                 # planilha com todos os estados (coluna UF): um arquivo por estado. Antes de 1989 o Tocantins era Goiás.
                 grupos = {}
                 for k, v in mun_todos.items():
@@ -142,12 +161,12 @@ def main():
                     soma = [sum(x[1][j] for v in mun.values() for x in v) for j in range(len(cand))]
                     ordem = sorted([j for j in range(len(cand)) if soma[j] > 0], key=lambda j: -soma[j])
                     cands = []
-                    info_de = lambda sigla: cands_info.get((ano, turno, sem_acento(sigla))) or cands_csv.get((cargo, uf, ano, turno, sem_acento(sigla)), {})
+                    info_de = lambda sigla: cands_info.get((ano, turno, sem_acento(sigla))) or cands_csv.get((cargo, uf, ano, turno, sem_acento(sigla))) or nomes_cab.get(sigla, {})
                     # se algum candidato da disputa tem ELEITO preenchido, quem não tem não foi eleito (planilha parcial)
                     com_eleito = any(info_de(cand[j][0]).get('ELEITO') for j in ordem)
                     for pos, j in enumerate(ordem):
                         sigla = cand[j][0]
-                        info = cands_info.get((ano, turno, sem_acento(sigla))) or cands_csv.get((cargo, uf, ano, turno, sem_acento(sigla)), {})
+                        info = info_de(sigla)
                         eleito = str(info.get('ELEITO') or '').strip().upper() in ('SIM', 'S', 'ELEITO', 'X') if com_eleito else ((turno == 2 or ano < 1989) and pos == 0)
                         cands.append({'id': str(info.get('NUMERO') or re.sub(r'[^A-Z0-9]+', '-', sem_acento(sigla))), 'n': str(info.get('NUMERO') or ''),
                                       'nome': str(info.get('NOME') or sigla).upper(), 'partido': str(info.get('PARTIDO') or sigla).upper(), 'eleito': eleito,
@@ -160,10 +179,14 @@ def main():
                         # várias linhas com o mesmo código = municípios da época que hoje são um só: soma
                         votos = [sum(x[1][j] for x in v) for j in range(len(cand))]
                         t0 = {k: sum(x[2].get(k, 0) for x in v) for k in set().union(*[x[2] for x in v])}
+                        for kk, vv in totais_csv.get((cargo, uf, ano, turno), {}).get(k, {}).items(): t0.setdefault(kk, vv)
                         c = [votos[j] for j in ordem]
                         val = sum(c)
                         t = [t0.get(0, 0), t0.get(1, 0), t0.get(2, 0), val, t0.get(4, 0), t0.get(5, 0)]
+                        # completa o que dá pelas contas: comparecimento = válidos + brancos + nulos; eleitorado = comparecimento + abstenção
+                        if not t[1] and 4 in t0 and 5 in t0: t[1] = val + t[4] + t[5]
                         if t[0] and not t[2] and t[1]: t[2] = t[0] - t[1]
+                        if t[2] and not t[0] and t[1]: t[0] = t[1] + t[2]
                         if t[1] and not (t[4] or t[5]) and t[1] > val: pass  # brancos e nulos juntos não dá para separar
                         saida_mun[k] = {'t': t, 'c': c}
                         tt = [x + y for x, y in zip(tt, t)]; tc = [x + y for x, y in zip(tc, c)]
@@ -175,7 +198,7 @@ def main():
                     if a.conferir: continue
                     dest = os.path.join(a.saida, str(ano), cargo, str(turno)); os.makedirs(dest, exist_ok=True)
                     json.dump({'v': 1, 'cargo': cargo, 'turno': turno, 'abr': uf, 'tipo': 'maj', 'vagas': 1, 'atualizado': '',
-                               'semTotais': not tot, 'cands': cands, 'partidos': [], 'total': {'t': tt, 'c': tc, 'p': []}, 'mun': saida_mun},
+                               'semTotais': not tot and not totais_csv.get((cargo, uf, ano, turno)), 'cands': cands, 'partidos': [], 'total': {'t': tt, 'c': tc, 'p': []}, 'mun': saida_mun},
                               open(os.path.join(dest, f'{uf}.json'), 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
                     base = os.path.join(a.saida, str(ano))
                     if not os.path.exists(os.path.join(base, 'municipios.json')):

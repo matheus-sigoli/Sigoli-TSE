@@ -64,3 +64,21 @@ ANO;CARGO;UF;TURNO;COLUNA;PARTIDO;NUMERO;NOME;VICE;PARTIDO VICE;COLIGACAO;ELEITO
 1990;senador;PA;1;PMDB;PMDB;;Coutinho Jorge;;;FRENTE DE TRABALHO;SIM
 1990;governador;RN;2;PFL;PFL;;José Agripino;;;;SIM
 1990;governador;RN;2;PDT;PDT;;Lavoisier Maia;;;;
+1986;governador;SP;1;PMDB;PMDB;15;Orestes Quércia;Almino Affonso;PMDB;;SIM
+1986;governador;SP;1;PTB;PTB;14;Antônio Ermírio de Moraes;;;;
+1986;governador;SP;1;PDS;PDS;11;Paulo Maluf;;;;
+1986;governador;SP;1;PT;PT;13;Eduardo Suplicy;;;;
+1986;governador;MG;1;PMDB;PMDB;15;Newton Cardoso;Júnia Marise;PMDB;;SIM
+1986;governador;MG;1;PL;PL;22;Itamar Franco;;;;
+1986;governador;MA;1;PMDB;PMDB;15;Epitácio Cafeteira;João Alberto;PFL;;SIM
+1986;governador;MA;1;PDS;PDS;11;João Castelo;Ildon Marques;PDS;;
+1986;senador;MS;1;154 - WILSON BARBOSA MARTINS (PMDB);PMDB;154;Wilson Barbosa Martins;;;;SIM
+1986;senador;MS;1;151 - RACHID SALDANHA DERZI (PMDB);PMDB;151;Rachid Saldanha Derzi;;;;SIM
+1986;senador;MS;1;141 - PEDRO PEDROSSIAN (PTB);PTB;141;Pedro Pedrossian;;;;
+1986;senador;MS;1;142 - PAULO COELHO MACHADO (PTB);PTB;142;Paulo Coelho Machado;;;;
+1990;governador;AC;1;PDS;PDS;11;Edmundo Pinto;;;;2º TURNO
+1990;governador;AC;1;PT;PT;13;Jorge Viana;;;;2º TURNO
+1990;governador;AC;2;PDS;PDS;11;Edmundo Pinto;;;;SIM
+1990;governador;AC;2;PT;PT;13;Jorge Viana;;;;
+1990;governador;ES;2;PDT;PDT;12;Albuíno Azeredo;;;;SIM
+1990;governador;ES;2;PST;PST;52;José Ignácio Ferreira;;;;

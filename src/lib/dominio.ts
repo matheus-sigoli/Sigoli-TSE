@@ -27,7 +27,7 @@ export const cargoPorSlug = (s: string) => CARGOS.find((c) => c.slug === s);
 export const UFS_2T_GOVERNADOR: Record<number, string[]> = {
   2026: ['ac', 'am', 'df', 'es', 'rn', 'to'],
   // 1990: só os estados que já estão no acervo
-  1990: ['al', 'ap', 'ma', 'mg', 'pa', 'rn', 'sp'],
+  1990: ['ac', 'al', 'ap', 'es', 'ma', 'mg', 'pa', 'rn', 'sp'],
   2022: ['al', 'am', 'ba', 'es', 'ms', 'pb', 'pe', 'ro', 'rs', 'sc', 'se', 'sp'],
   2018: ['am', 'ap', 'df', 'mg', 'ms', 'pa', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp'],
   2014: ['ac', 'am', 'ap', 'ce', 'df', 'go', 'ms', 'pa', 'pb', 'rj', 'rn', 'ro', 'rr', 'rs'],
@@ -117,6 +117,8 @@ export interface ArquivoResultado {
   mun: Record<string, RegistroMunicipio>;
   /** eleições antigas do acervo (scripts/historico.py): só os votos válidos, sem eleitorado, brancos e nulos */
   semTotais?: boolean;
+  /** de onde vieram os resultados, quando não é o TSE (ex.: PDF do TRE; scripts/tre.py) */
+  fonte?: string;
   resumo?: undefined;
 }
 

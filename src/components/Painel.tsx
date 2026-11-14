@@ -167,8 +167,12 @@ function Painel(p: Props) {
           {/* sem eleitorado (1994 por zona: a votação por seção não traz os aptos) só brancos e nulos */}
           {t[0] ? <div><dt>Comparecimento</dt><dd className="num">{pct(t[1] / t[0])}</dd></div> : null}
           {t[0] ? <div><dt>Abstenção</dt><dd className="num">{pct(t[2] / t[0])}</dd></div> : null}
-          <div><dt>Brancos</dt><dd className="num">{pct(t[4] / (t[1] || 1))}</dd></div>
-          <div><dt>Nulos</dt><dd className="num">{pct(t[5] / (t[1] || 1))}</dd></div>
+          {/* fontes antigas com o número de votantes mas sem o eleitorado: mostra o número */}
+          {!t[0] && t[1] ? <div><dt>Votantes</dt><dd className="num">{t[1].toLocaleString('pt-BR')}</dd></div> : null}
+          {t[4] || t[5] ? <>
+            <div><dt>Brancos</dt><dd className="num">{pct(t[4] / (t[1] || 1))}</dd></div>
+            <div><dt>Nulos</dt><dd className="num">{pct(t[5] / (t[1] || 1))}</dd></div>
+          </> : t[1] > t[3] ? <div><dt>Brancos e nulos</dt><dd className="num">{pct((t[1] - t[3]) / t[1])}</dd></div> : null}
         </dl>
       ) : null}
 
@@ -231,7 +235,8 @@ function Painel(p: Props) {
       ) : null}
 
       <footer className="rodape">
-        Fonte: {p.ano === 2026 ? <a href="https://resultados.tse.jus.br" target="_blank" rel="noreferrer">TSE, resultados oficiais 2026</a>
+        Fonte: {arquivo && !arquivo.resumo && arquivo.fonte ? <>{arquivo.fonte}</>
+          : p.ano === 2026 ? <a href="https://resultados.tse.jus.br" target="_blank" rel="noreferrer">TSE, resultados oficiais 2026</a>
           : p.ano < 1989 || p.ano === 1990 ? <>acervo de planilhas de Matheus Sigoli (votos válidos por município){p.ano === 1978 ? ', conferido com os totais do Senado Federal' : ''}</>
           : p.ano === 1989 ? <><a href="https://geografiadovoto.com/fontes/" target="_blank" rel="noreferrer">Geografia do Voto</a> (IpeaData com correções), conferido com o <a href="https://dadosabertos.tse.jus.br/dataset/resultados-1989" target="_blank" rel="noreferrer">TSE por UF</a>; exterior por país: livros do TSE <i>Eleições 89</i>, Turnos I e II</>
           : <><a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noreferrer">TSE, dados abertos {p.ano}</a>{p.ano === 1994 && p.cargo.slug === 'presidente' ? <>; exterior por país: relatório do TSE <i>Eleições 1994, Exterior</i> (totalização de 12/10/1994)</> : null}</>}.

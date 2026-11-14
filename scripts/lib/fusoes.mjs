@@ -1491,6 +1491,20 @@ export const FUSOES = [
   { uf: 'pa', novo: '1504752', origem: '1506807', ateAno: 2011 }, // Mojuí dos Campos ← Santarém
   { uf: 'rs', novo: '4314548', origem: '4302105', ateAno: 2011 }, // Pinto Bandeira ← Bento Gonçalves
   { uf: 'ms', novo: '5006275', origem: '5003256', ateAno: 2011 }, // Paraíso das Águas ← Costa Rica
+  // 1986: criados em 1987–1988 (sem voto em 1986 nas planilhas de MA, MG, MS e SP); mesma origem do bloco de 1982
+  { uf: 'ma', novo: '2100956', origem: '2104800', ateAno: 1986 }, // ARAME ← GRAJAÚ
+  { uf: 'ma', novo: '2106755', origem: '2105401', ateAno: 1986 }, // MIRANDA DO NORTE ← ITAPECURU MIRIM
+  { uf: 'ma', novo: '2110039', origem: '2102606', ateAno: 1986 }, // SANTA LUZIA DO PARUÁ ← CÂNDIDO MENDES
+  { uf: 'ma', novo: '2114007', origem: '2106904', ateAno: 1986 }, // ZÉ DOCA ← MONÇÃO
+  { uf: 'mg', novo: '3133758', origem: '3152907', ateAno: 1986 }, // ITAÚ DE MINAS ← PRATÁPOLIS
+  { uf: 'ms', novo: '5002951', origem: '5002902', ateAno: 1986 }, // CHAPADÃO DO SUL ← CASSILÂNDIA
+  { uf: 'ms', novo: '5003157', origem: '5000609', ateAno: 1986 }, // CORONEL SAPUCAIA ← AMAMBAI
+  { uf: 'ms', novo: '5003488', origem: '5000708', ateAno: 1986 }, // DOIS IRMÃOS DO BURITI ← ANASTÁCIO
+  { uf: 'ms', novo: '5005152', origem: '5002407', ateAno: 1986 }, // JUTI ← CAARAPÓ
+  { uf: 'ms', novo: '5006358', origem: '5007703', ateAno: 1986 }, // PARANHOS ← SETE QUEDAS
+  { uf: 'ms', novo: '5007554', origem: '5002308', ateAno: 1986 }, // SANTA RITA DO PARDO ← BRASILÂNDIA
+  { uf: 'ms', novo: '5007935', origem: '5006408', ateAno: 1986 }, // SONORA ← PEDRO GOMES
+  { uf: 'ms', novo: '5008404', origem: '5003801', ateAno: 1986 }, // VICENTINA ← FÁTIMA DO SUL
 ];
 
 /** Fusões que valem no ano; quando a origem também ainda não existia, segue até o município que existia. */
