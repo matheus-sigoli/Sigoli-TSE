@@ -1,13 +1,13 @@
 {
-  "ext-1989-1t": "/1989/exterior/presidente",
-  "ext-1989-1t-europa": "/1989/exterior/presidente?reg=EUR",
-  "ext-1994": "/1994/exterior/presidente",
-  "ext-2022-america-sul": "/2022/exterior/presidente?t=2&reg=AMS",
-  "1994-sp-zonas": "/1994/sp/presidente?nivel=zonas",
-  "1994-ba-zonas": "/1994/ba/presidente?nivel=zonas",
-  "1994-sp-cidade": "/1994/sp/presidente?cid=3550308",
-  "1990-pa-2t": "/1990/pa/governador?t=2",
-  "1990-ma": "/1990/ma/governador",
-  "1990-br-2t": "/1990/br/governador?t=2",
-  "1990-pa-senador": "/1990/pa/senador"
+  "1990-ms-gov": "/1990/ms/governador",
+  "1990-ms-depfed": "/1990/ms/deputado-federal",
+  "1990-ms-depest-cg": "/1990/ms/deputado-estadual?mun=5002704",
+  "1990-pa-gov": "/1990/pa/governador",
+  "1990-pa-sen": "/1990/pa/senador",
+  "1990-ac-gov": "/1990/ac/governador",
+  "1990-es-gov2": "/1990/es/governador?t=2",
+  "1990-ap-gov2": "/1990/ap/governador?t=2",
+  "1986-sp-gov": "/1986/sp/governador",
+  "1986-br-gov": "/1986/br/governador",
+  "1986-ms-sen": "/1986/ms/senador"
 }
