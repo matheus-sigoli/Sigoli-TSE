@@ -121,6 +121,8 @@ export interface ArquivoResultado {
   fonte?: string;
   /** proporcional sem voto de legenda na fonte: o total do partido é só a soma dos nominais */
   semLegenda?: boolean;
+  /** Senado com duas vagas: cada votante deu dois votos (brancos e nulos contam por voto) */
+  votosPorEleitor?: number;
   resumo?: undefined;
 }
 

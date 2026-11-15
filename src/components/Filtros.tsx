@@ -68,6 +68,12 @@ const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na
 const ANOS_NO_AR = ELEICOES.filter((e) => e.disponivel).map((e) => e.ano);
 const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
 
+// na faixa de anos rolável (celular), deixa o ano escolhido à vista
+const rolarAnoAtivo = (el: HTMLDivElement | null) => {
+  const a = el?.querySelector<HTMLElement>('[aria-current="page"]');
+  if (el && a && el.scrollWidth > el.clientWidth) el.scrollLeft = a.offsetLeft - el.clientWidth / 2 + a.offsetWidth / 2;
+};
+
 function Filtros(p: Props) {
   const idAbr = useId();
   const idReg = useId();
@@ -140,7 +146,7 @@ function Filtros(p: Props) {
       {ANOS_NO_AR.length > 1 ? (
         <div className="campo campo-ano">
           <span className="campo-rotulo" id="rot-ano">Eleição</span>
-          <div className="segmentado anos" role="group" aria-labelledby="rot-ano">
+          <div className="segmentado anos" role="group" aria-labelledby="rot-ano" ref={rolarAnoAtivo}>
             {ANOS_NO_AR.map((a) => (
               <Link key={a} href={p.hrefAno(a)} aria-current={a === p.ano ? 'page' : undefined} scroll={false} prefetch={false}>{a}</Link>
             ))}

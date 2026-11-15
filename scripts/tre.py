@@ -78,7 +78,7 @@ for arq in sorted(f for f in glob.glob('data/tre/[0-9]*/*.csv') if not f.endswit
             for m in mun.values(): m['p'] = [m['p'][k] for k in ordem]
         vagas = len(eleitos) if prop else (2 if cargo == 'senador' and len(eleitos) == 2 else 1)
         saida = {'v': 1, 'cargo': cargo, 'turno': turno, 'abr': uf, 'tipo': 'prop' if prop else 'maj', 'vagas': vagas or 1,
-                 'atualizado': '', 'fonte': fonte, **({'semLegenda': True} if prop and not any(r['numero'] == '#legenda' for r in rs) else {}), 'cands': cands, 'partidos': partidos, 'total': {'t': tt, 'c': tc, 'p': tp}, 'mun': mun}
+                 'atualizado': '', 'fonte': fonte, **({'votosPorEleitor': 2} if dois else {}), **({'semLegenda': True} if prop and not any(r['numero'] == '#legenda' for r in rs) else {}), 'cands': cands, 'partidos': partidos, 'total': {'t': tt, 'c': tc, 'p': tp}, 'mun': mun}
         base = f'public/data/{ano}'
         os.makedirs(f'{base}/{cargo}/{turno}', exist_ok=True)
         json.dump(saida, open(f'{base}/{cargo}/{turno}/{uf}.json', 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))

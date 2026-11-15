@@ -77,6 +77,7 @@ function Painel(p: Props) {
   const porPartido = p.nivel !== 'municipios';
   const abaAtiva = porPartido ? 'partidos' : aba;
   const t = visao?.totais;
+  const votosPorEleitor = (arquivo && !arquivo.resumo && arquivo.votosPorEleitor) || 1;
 
   return (
     <aside
@@ -171,9 +172,9 @@ function Painel(p: Props) {
           {/* fontes antigas com o número de votantes mas sem o eleitorado: mostra o número */}
           {!t[0] && t[1] ? <div><dt>Votantes</dt><dd className="num">{t[1].toLocaleString('pt-BR')}</dd></div> : null}
           {t[4] || t[5] ? <>
-            <div><dt>Brancos</dt><dd className="num">{pct(t[4] / (t[1] || 1))}</dd></div>
-            <div><dt>Nulos</dt><dd className="num">{pct(t[5] / (t[1] || 1))}</dd></div>
-          </> : t[1] > t[3] ? <div><dt>Brancos e nulos</dt><dd className="num">{pct((t[1] - t[3]) / t[1])}</dd></div> : null}
+            <div><dt>Brancos</dt><dd className="num">{pct(t[4] / ((t[1] || 1) * votosPorEleitor))}</dd></div>
+            <div><dt>Nulos</dt><dd className="num">{pct(t[5] / ((t[1] || 1) * votosPorEleitor))}</dd></div>
+          </> : t[1] * votosPorEleitor > t[3] ? <div><dt>Brancos e nulos</dt><dd className="num">{pct((t[1] * votosPorEleitor - t[3]) / (t[1] * votosPorEleitor))}</dd></div> : null}
         </dl>
       ) : null}
 

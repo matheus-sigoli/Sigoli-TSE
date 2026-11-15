@@ -1,14 +1,10 @@
 {
   "sp-2022@cel": "/2022/sp/presidente",
-  "sp-2022-painel@peq": "/2022/sp/governador",
+  "sp-2022@peq": "/2022/sp/governador",
   "sp-2022@tab": "/2022/sp/presidente",
-  "br-2022@cel": "/2022/br/presidente",
-  "sp-cidade@cel": "/2022/sp/presidente?cid=3550308",
+  "exterior@peq": "/2022/exterior/presidente",
+  "1986-ce-sen@cel": "/1986/ce/senador",
+  "1986-ms-sen": "/1986/ms/senador",
   "exterior-multi": "/2022/exterior/presidente?mun=620,840,276",
-  "exterior-multi@cel": "/2022/exterior/presidente?mun=620,840",
-  "1990-rs-gov2": "/1990/rs/governador?t=2",
-  "1990-ce-depfed": "/1990/ce/deputado-federal",
-  "1986-ce-sen": "/1986/ce/senador",
-  "1990-rn-gov": "/1990/rn/governador",
-  "1986-rs-gov@cel": "/1986/rs/governador"
+  "1990-ce-gov@tab": "/1990/ce/governador"
 }
