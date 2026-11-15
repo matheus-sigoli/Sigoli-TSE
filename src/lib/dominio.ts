@@ -123,6 +123,8 @@ export interface ArquivoResultado {
   semLegenda?: boolean;
   /** Senado com duas vagas: cada votante deu dois votos (brancos e nulos contam por voto) */
   votosPorEleitor?: number;
+  /** total do estado tirado do resultado final oficial (os municípios do mapa podem estar incompletos; scripts/oficial.py) */
+  oficial?: { fonte: string; municipios: number };
   resumo?: undefined;
 }
 
