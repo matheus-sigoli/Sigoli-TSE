@@ -43,12 +43,14 @@ for arq in sorted(f for f in glob.glob('data/tre/[0-9]*/*.csv') if not f.endswit
         nums = [n for n, v in sorted(soma.items(), key=lambda x: -x[1]) if v > 0 or prop]
         idx = {n: i for i, n in enumerate(nums)}
         eleitos = [n for n in nums if info[n]['eleito'] == 'S']
-        cands = [{'id': n, 'n': n, 'nome': info[n]['nome'], 'partido': info[n]['partido'] or n, 'eleito': n in eleitos,
+        cands = [{'id': n, 'n': '' if n.startswith('_') else n, 'nome': info[n]['nome'], 'partido': info[n]['partido'] or n, 'eleito': n in eleitos,
                   'situacao': 'Eleito' if n in eleitos else ('2º turno' if info[n]['eleito'] == '2' else 'Não eleito')} for n in nums]
         partidos = []
         if prop:
             vistos = {}
             for c in cands: vistos.setdefault(c['partido'], c['n'][:2])
+            for r in rs:
+                if r['numero'] == '#legenda' and r['partido'] not in vistos: vistos[r['partido']] = ''
             partidos = [{'sg': sg, 'n': n} for sg, n in vistos.items()]
         ip = {p['sg']: i for i, p in enumerate(partidos)}
         mun = {}
@@ -56,12 +58,15 @@ for arq in sorted(f for f in glob.glob('data/tre/[0-9]*/*.csv') if not f.endswit
             m = mun.setdefault(r['ibge'], {'t': [0] * 6, 'c': [0] * len(nums), **({'p': [0] * len(partidos)} if prop else {})})
             v = int(r['votos'])
             if r['numero'] in TOT: m['t'][TOT[r['numero']]] += v
+            elif r['numero'] == '#legenda':
+                if prop and r['partido'] in ip: m['p'][ip[r['partido']]] += v; m.setdefault('leg', 0); m['leg'] += v
             elif r['numero'] in idx:
                 m['c'][idx[r['numero']]] += v
                 if prop: m['p'][ip[cands[idx[r['numero']]]['partido']]] += v
+        dois = cargo == 'senador' and ano in (1986,)  # duas vagas: dois votos por eleitor
         for m in mun.values():
-            t = m['t']; t[3] = sum(m['c'])
-            if not t[1] and (t[4] or t[5]): t[1] = t[3] + t[4] + t[5]
+            t = m['t']; t[3] = sum(m['c']) + m.pop('leg', 0)
+            if not t[1] and (t[4] or t[5]): t[1] = (t[3] + t[4] + t[5]) // (2 if dois else 1)
             if t[1] and t[2] and not t[0]: t[0] = t[1] + t[2]
             if t[0] and t[1] and not t[2]: t[2] = t[0] - t[1]
         tt = [sum(m['t'][k] for m in mun.values()) for k in range(6)]
@@ -73,7 +78,7 @@ for arq in sorted(f for f in glob.glob('data/tre/[0-9]*/*.csv') if not f.endswit
             for m in mun.values(): m['p'] = [m['p'][k] for k in ordem]
         vagas = len(eleitos) if prop else (2 if cargo == 'senador' and len(eleitos) == 2 else 1)
         saida = {'v': 1, 'cargo': cargo, 'turno': turno, 'abr': uf, 'tipo': 'prop' if prop else 'maj', 'vagas': vagas or 1,
-                 'atualizado': '', 'fonte': fonte, 'cands': cands, 'partidos': partidos, 'total': {'t': tt, 'c': tc, 'p': tp}, 'mun': mun}
+                 'atualizado': '', 'fonte': fonte, **({'semLegenda': True} if prop and not any(r['numero'] == '#legenda' for r in rs) else {}), 'cands': cands, 'partidos': partidos, 'total': {'t': tt, 'c': tc, 'p': tp}, 'mun': mun}
         base = f'public/data/{ano}'
         os.makedirs(f'{base}/{cargo}/{turno}', exist_ok=True)
         json.dump(saida, open(f'{base}/{cargo}/{turno}/{uf}.json', 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))

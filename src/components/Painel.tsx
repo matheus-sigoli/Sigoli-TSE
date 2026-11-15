@@ -197,7 +197,7 @@ function Painel(p: Props) {
             {focoChave ? `Mapa mostrando o % deste concorrente em cada ${UNIDADE[p.nivel]}. Clique de novo para voltar.` : 'Clique num nome para ver onde ele teve mais votos.'}
           </p>
           <Lista
-            semLegenda={!!(arquivo && !arquivo.resumo && arquivo.fonte)}
+            semLegenda={!!(arquivo && !arquivo.resumo && arquivo.semLegenda)}
             linhas={(prop && abaAtiva === 'partidos' ? visao.partidos : visao.candidatos).slice(0, limite)}
             focoChave={focoChave}
             aoFocar={p.aoFocar}

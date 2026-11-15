@@ -45,6 +45,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const selecao = useMemo(() => (munParam ? munParam.split(',').filter(Boolean) : []), [munParam]);
   const mun = selecao.length === 1 ? selecao[0] : null;
   const multi = selecao.length > 1;
+  // "Somar vários": no celular não há shift; com o modo ligado, cada toque põe ou tira a unidade da soma
+  const [modoSoma, setModoSoma] = useState(false);
   const reg = params.get('reg');
   const foco = lerFoco(params.get('foco'));
   // visão da cidade (duplo clique num município): ?cid={ibge}&nivel=zonas|bairros|locais
@@ -196,6 +198,13 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     }
     return { porIbge, porPais };
   }, [municipios.dados]);
+  // no mapa do exterior a área é o país: cidade escolhida → país dela
+  const paisDe = (id: string) => (indiceMunicipios.porPais.has(id) ? id : municipios.dados?.find((x) => x.uf === 'zz' && x.tse === id)?.paisNum ?? id);
+  // cidade do exterior pelo código: "Lisboa (Portugal)"
+  const nomeExterior = (id: string) => {
+    const m = municipios.dados?.find((x) => x.uf === 'zz' && x.tse === id);
+    return m ? `${titulo(m.nome)} (${m.nomePais})` : 'Exterior';
+  };
   // no DF a "cidade" é a UF inteira: mostra "Distrito Federal", não "Brasília"
   const nomeCidade = (ibge: string) => (ibge === cidadeUnica ? nomeAbrangencia(abr) : titulo(indiceMunicipios.porIbge.get(ibge)?.nome ?? 'Cidade'));
 
@@ -240,9 +249,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   }, [cid, nivel, bairros.dados, locais.dados, malhaCidade.dados, resultado.dados]);
 
   const recorteMunicipios = useMemo(() => {
-    if (multi) return new Set(selecao); // soma das unidades selecionadas
+    // soma das unidades selecionadas (no exterior, um país vale as cidades dele; uma cidade, ela mesma)
+    if (multi) return abr === 'exterior' ? new Set(selecao.flatMap((id) => indiceMunicipios.porPais.get(id)?.cidades ?? [id])) : new Set(selecao);
     if (mun) {
-      if (abr === 'exterior') return new Set(indiceMunicipios.porPais.get(mun)?.cidades ?? []);
+      if (abr === 'exterior') return new Set(indiceMunicipios.porPais.get(mun)?.cidades ?? [mun]);
       return new Set([mun]);
     }
     if (cid) return unidadesDaCidade ?? new Set<string>();
@@ -299,14 +309,14 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
 
   const nomeRecorte = useMemo(() => {
     if (multi) {
-      const rotulo = cid || regiaoLocais ? { zonas: 'zonas', bairros: 'bairros', locais: 'locais de votação' }[nivel as 'zonas' | 'bairros' | 'locais'] : nivel === 'zonas' ? 'zonas' : 'municípios';
+      const rotulo = abr === 'exterior' ? 'lugares do exterior' : cid || regiaoLocais ? { zonas: 'zonas', bairros: 'bairros', locais: 'locais de votação' }[nivel as 'zonas' | 'bairros' | 'locais'] : nivel === 'zonas' ? 'zonas' : 'municípios';
       return `${selecao.length} ${rotulo} somados`;
     }
     if (cid) return mun ? nomeUnidade(mun) : nomeCidade(cid);
     if (regiaoLocais) return mun ? nomeUnidade(mun) : nomeRegiao ?? nomeAbrangencia(abr);
     if (mun && nivel === 'zonas') return `Zona ${mun}`;
     if (mun) {
-      if (abr === 'exterior') return indiceMunicipios.porPais.get(mun)?.nome ?? 'País';
+      if (abr === 'exterior') return indiceMunicipios.porPais.get(mun)?.nome ?? nomeExterior(mun);
       const m = indiceMunicipios.porIbge.get(mun);
       return m ? titulo(m.nome) : 'Município';
     }
@@ -318,8 +328,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // linha de contexto abaixo do título
   const contexto = useMemo(() => {
     if (multi) {
-      const nomes = selecao.map((id) => (cid || regiaoLocais || nivel === 'zonas' ? nomeUnidade(id) : titulo(indiceMunicipios.porIbge.get(id)?.nome ?? id)));
-      return `${nomes.slice(0, 6).join(' + ')}${nomes.length > 6 ? ` e mais ${nomes.length - 6}` : ''} · shift + clique para tirar ou pôr`;
+      const nomes = selecao.map((id) => (abr === 'exterior' ? indiceMunicipios.porPais.get(id)?.nome ?? nomeExterior(id) : cid || regiaoLocais || nivel === 'zonas' ? nomeUnidade(id) : titulo(indiceMunicipios.porIbge.get(id)?.nome ?? id)));
+      return `${nomes.slice(0, 6).join(' + ')}${nomes.length > 6 ? ` e mais ${nomes.length - 6}` : ''} · ${modoSoma ? 'toque para tirar ou pôr' : 'shift + clique para tirar ou pôr'}`;
     }
     if (exteriorRegiao && !mun) {
       const n = exteriorRegiao.paises.size;
@@ -360,7 +370,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     return [b ? (b.origem === 't' ? titulo(b.nome) : b.nome) : l.bairro && titulo(l.bairro), nomeCidade(l.ibge), `Zona ${l.zona}`, `${votos(l.eleitorado)} eleitores`]
       .filter(Boolean).join(' · ');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mun, multi, selecao, nivel, cid, abr, reg, regiaoLocais, nomeRegiao, tipoRegiao, cidadesRegiao, locaisRegiao, unidadesDaCidade, nomeZona, bairros.dados, locais.dados, indiceMunicipios]);
+  }, [mun, multi, selecao, nivel, cid, abr, reg, regiaoLocais, nomeRegiao, tipoRegiao, cidadesRegiao, locaisRegiao, unidadesDaCidade, nomeZona, bairros.dados, locais.dados, indiceMunicipios, modoSoma]);
 
   // locais de votação da zona, do bairro ou da área do Atlas selecionada (lista no painel)
   const locaisDaUnidade = useMemo(() => {
@@ -395,8 +405,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const aoSelecionar = useCallback(
     (id: string | null, somar = false) => {
       if (!id) return atualizarBusca({ mun: null });
-      // shift + clique: põe ou tira a unidade da soma (não vale na visão Brasil nem no exterior, que agrupa por país)
-      if (somar && abr !== 'br' && abr !== 'exterior') {
+      // shift + clique (ou o modo "somar vários"): põe ou tira a unidade da soma (não vale na visão Brasil)
+      if ((somar || modoSoma) && abr !== 'br') {
         const nova = selecao.includes(id) ? selecao.filter((x) => x !== id) : [...selecao, id];
         return atualizarBusca({ mun: nova.length ? nova.join(',') : null, foco: null });
       }
@@ -407,7 +417,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       atualizarBusca({ mun: id === mun ? null : id });
     },
-    [abr, mun, selecao, cargoSlug, irPara, atualizarBusca],
+    [abr, mun, selecao, cargoSlug, irPara, atualizarBusca, modoSoma],
   );
 
   // duplo clique num município (estado, sem zonas) abre a visão da cidade
@@ -485,6 +495,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         aoMudarAbrangencia={(a) => irPara(a)}
         aoMudarRegiao={(r) => atualizarBusca({ reg: r, mun: null, foco: null, ...(!r && nivel === 'locais' ? { nivel: null } : {}) })}
         aoEscolherMunicipio={(m) => {
+          if (modoSoma && m.uf === abr && !cid) return aoSelecionar(m.ibge);
           if (m.uf !== abr) return irPara(m.uf, cargoSlug, cid ? { cid: m.ibge, nivel } : { mun: m.ibge });
           if (cid) return atualizarBusca({ cid: m.ibge, mun: null, reg: null });
           atualizarBusca({ mun: m.ibge, reg: null, nivel: null });
@@ -493,7 +504,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         cidade={cid ? nomeCidade(cid) : null}
         aoMudarNivel={mudarNivel}
         locaisDaCidade={cid ? locais.dados?.porCidade.get(cid) ?? null : locaisRegiao}
-        aoEscolherLocal={(id) => atualizarBusca({ nivel: 'locais', mun: id, foco: null })}
+        aoEscolherLocal={(id) => (modoSoma && nivel === 'locais' ? aoSelecionar(id) : atualizarBusca({ nivel: 'locais', mun: id, foco: null }))}
+        aoEscolherExterior={(id) => aoSelecionar(id)}
+        modoSoma={modoSoma}
+        aoAlternarSoma={abr !== 'br' ? () => setModoSoma((x) => !x) : undefined}
         aoFecharCidade={cidadeUnica ? undefined : () => atualizarBusca({ cid: null, nivel: null, mun: cid, foco: null })}
         aoAlternarTema={alternarTema}
         aoAlternarDaltonico={alternarDaltonico}
@@ -507,8 +521,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
             fundo={regiaoLocais ? malhaRegiao.dados?.fundo ?? null : cid && !(nivel === 'locais' && !malhaCidade.dados?.pontos.features.length) ? malhaCidade.dados?.fundo ?? null : null}
             pontos={malhaLocais ? malhaLocais.dados?.pontos ?? null : null}
             cores={visao?.cores ?? null}
-            selecionado={mun}
-            selecionados={multi ? selecao : undefined}
+            selecionado={abr === 'exterior' && mun ? paisDe(mun) : mun}
+            selecionados={multi ? (abr === 'exterior' ? [...new Set(selecao.map(paisDe))] : selecao) : undefined}
             semContornoFundo={nivel === 'bairros'}
             destaque={exteriorRegiao?.paises ?? municipiosRegiao}
             mundo={abr === 'exterior'}

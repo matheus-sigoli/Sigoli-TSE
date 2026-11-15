@@ -4,10 +4,17 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 const PAGINAS = JSON.parse(process.env.PAGINAS);
 mkdirSync('capturas', { recursive: true });
 const nav = await chromium.launch();
-const ctx = await nav.newContext({ viewport: { width: 1440, height: 900 } });
+// nome terminado em @cel = celular (390×844), @tab = tablet (820×1180), @peq = celular pequeno (360×640)
+const TELAS = { cel: { width: 390, height: 844 }, tab: { width: 820, height: 1180 }, peq: { width: 360, height: 640 } };
+const contextos = {};
+const ctxDe = async (nome) => {
+  const t = nome.split('@')[1] ?? 'pc';
+  contextos[t] ??= await nav.newContext(TELAS[t] ? { viewport: TELAS[t], isMobile: true, hasTouch: true, deviceScaleFactor: 2 } : { viewport: { width: 1440, height: 900 } });
+  return contextos[t];
+};
 const log = [];
 for (const [nome, url] of Object.entries(PAGINAS)) {
-  const pg = await ctx.newPage();
+  const pg = await (await ctxDe(nome)).newPage();
   const erros = [];
   pg.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') erros.push(`${m.type()}: ${m.text()}`); });
   pg.on('pageerror', (e) => erros.push(`pageerror: ${e.message}`));
@@ -16,7 +23,10 @@ for (const [nome, url] of Object.entries(PAGINAS)) {
   await pg.goto(`http://localhost:3000${url}`, { waitUntil: 'networkidle', timeout: 120000 }).catch((e) => erros.push(`goto: ${e.message}`));
   await pg.waitForFunction(() => !document.querySelector('.carregando, [class*="Carregando"]'), null, { timeout: 90000 }).catch(() => erros.push('ainda carregando'));
   await pg.waitForTimeout(1500);
-  await pg.screenshot({ path: `capturas/${nome}.png` });
+  await pg.screenshot({ path: `capturas/${nome.replace('@', '-')}.png` });
+  // largura maior que a tela = rolagem horizontal (problema de responsividade)
+  const larg = await pg.evaluate(() => ({ doc: document.documentElement.scrollWidth, tela: window.innerWidth }));
+  if (larg.doc > larg.tela + 1) erros.push(`rolagem horizontal: ${larg.doc}px numa tela de ${larg.tela}px`);
   const texto = await pg.evaluate(() => {
     const t = (s) => document.querySelector(s)?.innerText?.trim() ?? '';
     return { painel: t('.painel')?.slice(0, 1200), filtros: t('.filtros')?.slice(0, 800), creditos: t('.creditos-mapa'),

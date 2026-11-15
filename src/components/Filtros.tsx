@@ -40,6 +40,11 @@ interface Props {
   /** locais de votação da cidade aberta ou da região vista por locais (busca por local) */
   locaisDaCidade: Local[] | null;
   aoEscolherLocal: (id: string) => void;
+  /** exterior: país (código numérico) ou cidade (código do TSE) */
+  aoEscolherExterior: (id: string) => void;
+  /** "somar vários": cada toque no mapa ou na busca põe ou tira da soma (no celular não há shift) */
+  modoSoma: boolean;
+  aoAlternarSoma?: () => void;
 }
 
 const NIVEIS_ESTADO: { n: Nivel; rotulo: string }[] = [
@@ -70,6 +75,17 @@ function Filtros(p: Props) {
     () => p.municipios?.filter((m) => m.uf !== 'zz').map((m) => ({ id: m.ibge, nome: titulo(m.nome), detalhe: m.uf.toUpperCase(), chave: semAcento(m.nome), uf: m.uf })) ?? null,
     [p.municipios],
   );
+  // exterior: países e cidades
+  const itensExterior = useMemo<ItemBusca[] | null>(() => {
+    if (p.abr !== 'exterior' || !p.municipios) return null;
+    const ext = p.municipios.filter((m) => m.uf === 'zz');
+    const paises = new Map<string, string>();
+    for (const m of ext) if (m.paisNum && m.nomePais) paises.set(m.paisNum, m.nomePais);
+    return [
+      ...[...paises].map(([id, nome]) => ({ id, nome, detalhe: 'País', chave: semAcento(nome) })),
+      ...ext.map((m) => ({ id: m.tse, nome: titulo(m.nome), detalhe: m.nomePais ?? '', chave: semAcento(m.nome), extra: semAcento(m.nomePais ?? '') })),
+    ];
+  }, [p.abr, p.municipios]);
   const itensLocais = useMemo<ItemBusca[] | null>(
     () => p.locaisDaCidade?.map((l) => ({
       id: l.id,
@@ -210,6 +226,24 @@ function Filtros(p: Props) {
           aoEscolher={p.aoEscolherLocal}
           classe="busca-local"
         />
+      ) : null}
+
+      {p.abr === 'exterior' ? (
+        <Busca
+          rotulo="Buscar país ou cidade"
+          placeholder="Ex.: Portugal, Boston"
+          itens={itensExterior}
+          vazio="Nenhum país ou cidade com esse nome"
+          classe="busca-municipio"
+          aoEscolher={p.aoEscolherExterior}
+        />
+      ) : null}
+
+      {p.aoAlternarSoma ? (
+        <label className="campo soma-varios">
+          <input type="checkbox" checked={p.modoSoma} onChange={p.aoAlternarSoma} />
+          <span>Somar vários <small>{p.abr === 'exterior' ? 'países ou cidades' : p.cidade ? 'zonas, bairros ou locais' : 'municípios ou locais'}: cada toque põe ou tira da soma (no computador, shift + clique)</small></span>
+        </label>
       ) : null}
 
       {p.abr !== 'exterior' ? (
