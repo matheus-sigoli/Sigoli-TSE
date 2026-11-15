@@ -71,7 +71,9 @@ const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1]
 // na faixa de anos rolável (celular), deixa o ano escolhido à vista
 const rolarAnoAtivo = (el: HTMLDivElement | null) => {
   const a = el?.querySelector<HTMLElement>('[aria-current="page"]');
-  if (el && a && el.scrollWidth > el.clientWidth) el.scrollLeft = a.offsetLeft - el.clientWidth / 2 + a.offsetWidth / 2;
+  if (!el || !a || el.scrollWidth <= el.clientWidth) return;
+  const ra = a.getBoundingClientRect(), re = el.getBoundingClientRect();
+  el.scrollLeft += ra.left - re.left - el.clientWidth / 2 + ra.width / 2;
 };
 
 function Filtros(p: Props) {

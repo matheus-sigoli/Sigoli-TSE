@@ -328,6 +328,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   .filtros .marca b, .filtros .marca span { font-size: var(--fs-4); }
   .filtros .campo { flex: 1 1 140px; }
   .filtros .soma-varios { flex: 1 1 100%; }
+  .filtros .campo-ano .segmentado.anos { grid-template-columns: repeat(7, 1fr); }
   .filtros .soma-varios small { display: inline; margin-left: 4px; }
   .select, .entrada { font-size: 16px; } /* evita zoom automático no iOS */
   .filtros .campo > label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

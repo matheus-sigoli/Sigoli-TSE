@@ -1,10 +1,6 @@
 {
   "sp-2022@cel": "/2022/sp/presidente",
-  "sp-2022@peq": "/2022/sp/governador",
+  "sp-1986@cel": "/1986/sp/governador",
   "sp-2022@tab": "/2022/sp/presidente",
-  "exterior@peq": "/2022/exterior/presidente",
-  "1986-ce-sen@cel": "/1986/ce/senador",
-  "1986-ms-sen": "/1986/ms/senador",
-  "exterior-multi": "/2022/exterior/presidente?mun=620,840,276",
-  "1990-ce-gov@tab": "/1990/ce/governador"
+  "rs-1990-depest": "/1990/rs/deputado-estadual"
 }
