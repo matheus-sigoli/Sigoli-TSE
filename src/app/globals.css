@@ -327,6 +327,9 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   .filtros .marca-sub, .filtros .legenda-bloco, .filtros .preferencias, .filtros .autor-mini { display: none; }
   .filtros .marca b, .filtros .marca span { font-size: var(--fs-4); }
   .filtros .campo { flex: 1 1 140px; }
+  .filtros .soma-varios { flex: 1 1 100%; }
+  .filtros .campo-ano .segmentado.anos { grid-template-columns: repeat(7, 1fr); }
+  .filtros .soma-varios small { display: inline; margin-left: 4px; }
   .select, .entrada { font-size: 16px; } /* evita zoom automático no iOS */
   .filtros .campo > label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .mapa { grid-row: 2; }
@@ -371,9 +374,22 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   .filtros .busca-municipio { order: 4; } .filtros .campo-nivel { order: 5; } .filtros .campo-regiao, .filtros .campo-regiao-pais { order: 6; } .filtros .busca-local { order: 7; }
   .filtros .campo-rotulo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .filtros .campo { gap: 0; }
-  /* anos em duas linhas de 4, ao lado da marca */
-  .segmentado.anos { grid-template-columns: repeat(4, 1fr); padding: 2px; gap: 1px; }
-  .segmentado.anos a { padding: 4px 0; font-size: 12px; }
+  /* anos numa faixa só, rolando de lado, ao lado da marca (são muitos anos para caber em grade) */
+  .filtros .campo-ano .segmentado.anos {
+    display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity;
+    scrollbar-width: none; padding: 2px; gap: 2px; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
+    mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+  .filtros .campo-ano .segmentado.anos::-webkit-scrollbar { display: none; }
+  .filtros .campo-ano .segmentado.anos a { flex: 0 0 auto; padding: 7px 10px; font-size: 13px; scroll-snap-align: start; }
+  /* regiões do país e continentes: faixa rolável, sem a dica */
+  .filtros .campo-regiao-pais .segmentado.anos { display: flex; overflow-x: auto; scrollbar-width: none; }
+  .filtros .campo-regiao-pais .segmentado.anos button { flex: 0 0 auto; padding: 7px 12px; white-space: nowrap; }
+  .filtros .campo-regiao-pais .dica { display: none; }
+  /* somar vários: só a caixinha e o nome, no fim do topo */
+  .filtros .soma-varios { order: 8; align-items: center; }
+  .filtros .soma-varios small { display: none; }
+  .filtros .soma-varios input { margin-top: 0; }
   .select, .entrada { height: 38px; padding-left: 10px; }
   .select { padding-right: 28px; background-position: calc(100% - 15px) 16px, calc(100% - 10px) 16px; }
   /* cidade aberta: nome e "voltar" à esquerda, Zonas/Locais à direita, tudo numa linha */
@@ -399,6 +415,14 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   .mapa-zoom button { width: 38px; height: 38px; }
 }
 
+/* celular baixo (até 680px de altura): topo ainda mais enxuto para sobrar mapa */
+@media (max-width: 700px) and (max-height: 680px) {
+  .app { --espiada: 150px; }
+  .filtros { gap: 6px; padding: 6px 10px 8px; }
+  .select, .entrada { height: 34px; }
+  .filtros .segmentado.nivel button { padding: 5px 12px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
 }
@@ -406,3 +430,8 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 /* grandes regiões do país: duas colunas (Centro-Oeste não cabe em três) */
 .filtros .campo-regiao-pais .segmentado { grid-template-columns: repeat(2, 1fr); }
 .filtros .campo-regiao-pais .dica { padding: 0; }
+
+/* somar vários (toque) */
+.soma-varios { flex-direction: row; align-items: flex-start; gap: 8px; font-size: var(--fs-2); color: var(--text); cursor: pointer; }
+.soma-varios input { margin-top: 3px; accent-color: var(--accent, #2563eb); width: 18px; height: 18px; flex-shrink: 0; }
+.soma-varios small { display: block; color: var(--muted); font-size: var(--fs-1); }

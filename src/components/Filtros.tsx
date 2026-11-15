@@ -40,6 +40,11 @@ interface Props {
   /** locais de votação da cidade aberta ou da região vista por locais (busca por local) */
   locaisDaCidade: Local[] | null;
   aoEscolherLocal: (id: string) => void;
+  /** exterior: país (código numérico) ou cidade (código do TSE) */
+  aoEscolherExterior: (id: string) => void;
+  /** "somar vários": cada toque no mapa ou na busca põe ou tira da soma (no celular não há shift) */
+  modoSoma: boolean;
+  aoAlternarSoma?: () => void;
 }
 
 const NIVEIS_ESTADO: { n: Nivel; rotulo: string }[] = [
@@ -63,6 +68,14 @@ const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na
 const ANOS_NO_AR = ELEICOES.filter((e) => e.disponivel).map((e) => e.ano);
 const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
 
+// na faixa de anos rolável (celular), deixa o ano escolhido à vista
+const rolarAnoAtivo = (el: HTMLDivElement | null) => {
+  const a = el?.querySelector<HTMLElement>('[aria-current="page"]');
+  if (!el || !a || el.scrollWidth <= el.clientWidth) return;
+  const ra = a.getBoundingClientRect(), re = el.getBoundingClientRect();
+  el.scrollLeft += ra.left - re.left - el.clientWidth / 2 + ra.width / 2;
+};
+
 function Filtros(p: Props) {
   const idAbr = useId();
   const idReg = useId();
@@ -70,6 +83,17 @@ function Filtros(p: Props) {
     () => p.municipios?.filter((m) => m.uf !== 'zz').map((m) => ({ id: m.ibge, nome: titulo(m.nome), detalhe: m.uf.toUpperCase(), chave: semAcento(m.nome), uf: m.uf })) ?? null,
     [p.municipios],
   );
+  // exterior: países e cidades
+  const itensExterior = useMemo<ItemBusca[] | null>(() => {
+    if (p.abr !== 'exterior' || !p.municipios) return null;
+    const ext = p.municipios.filter((m) => m.uf === 'zz');
+    const paises = new Map<string, string>();
+    for (const m of ext) if (m.paisNum && m.nomePais) paises.set(m.paisNum, m.nomePais);
+    return [
+      ...[...paises].map(([id, nome]) => ({ id, nome, detalhe: 'País', chave: semAcento(nome) })),
+      ...ext.map((m) => ({ id: m.tse, nome: titulo(m.nome), detalhe: m.nomePais ?? '', chave: semAcento(m.nome), extra: semAcento(m.nomePais ?? '') })),
+    ];
+  }, [p.abr, p.municipios]);
   const itensLocais = useMemo<ItemBusca[] | null>(
     () => p.locaisDaCidade?.map((l) => ({
       id: l.id,
@@ -124,7 +148,7 @@ function Filtros(p: Props) {
       {ANOS_NO_AR.length > 1 ? (
         <div className="campo campo-ano">
           <span className="campo-rotulo" id="rot-ano">Eleição</span>
-          <div className="segmentado anos" role="group" aria-labelledby="rot-ano">
+          <div className="segmentado anos" role="group" aria-labelledby="rot-ano" ref={rolarAnoAtivo}>
             {ANOS_NO_AR.map((a) => (
               <Link key={a} href={p.hrefAno(a)} aria-current={a === p.ano ? 'page' : undefined} scroll={false} prefetch={false}>{a}</Link>
             ))}
@@ -210,6 +234,24 @@ function Filtros(p: Props) {
           aoEscolher={p.aoEscolherLocal}
           classe="busca-local"
         />
+      ) : null}
+
+      {p.abr === 'exterior' ? (
+        <Busca
+          rotulo="Buscar país ou cidade"
+          placeholder="Ex.: Portugal, Boston"
+          itens={itensExterior}
+          vazio="Nenhum país ou cidade com esse nome"
+          classe="busca-municipio"
+          aoEscolher={p.aoEscolherExterior}
+        />
+      ) : null}
+
+      {p.aoAlternarSoma ? (
+        <label className="campo soma-varios">
+          <input type="checkbox" checked={p.modoSoma} onChange={p.aoAlternarSoma} />
+          <span>Somar vários <small>{p.abr === 'exterior' ? 'países ou cidades' : p.cidade ? 'zonas, bairros ou locais' : 'municípios ou locais'}: cada toque põe ou tira da soma (no computador, shift + clique)</small></span>
+        </label>
       ) : null}
 
       {p.abr !== 'exterior' ? (

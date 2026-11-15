@@ -6,7 +6,8 @@ def chave(s):
     return re.sub(r'[^A-Z0-9]', '', s.replace("D'", 'D'))
 
 # nomes antigos ou grafias de época → nome de hoje
-APELIDOS = {'JUTY': 'JUTI', 'BATAIPORA': 'BATAYPORA'}
+APELIDOS = {'JUTY': 'JUTI', 'BATAIPORA': 'BATAYPORA', 'ITAPAGE': 'ITAPAJE', 'MOCAMBO': 'MUCAMBO', 'DEPIRAPUANPINHEIRO': 'DEPUTADO IRAPUAN PINHEIRO', 'EUZEBIO': 'EUSEBIO', 'TEJUSSUOCA': 'TEJUCUOCA', 'BROCHIERDOMARATA': 'BROCHIER', 'TRINDADE': 'TRINDADE DO SUL', 'ARES': 'AREZ', 'AUGUSTOSEVERO': 'CAMPO GRANDE', 'JANUARIOCICCO': 'BOA SAUDE', 'PRESIDENTEJUSCELINO': 'SERRA CAIADA'}
+FALTANDO = set()
 
 def ibge_por_nome(uf):
     lista = [m for m in json.load(open('public/data/2026/municipios.json', encoding='utf8')) if m['uf'] == uf]
@@ -14,7 +15,11 @@ def ibge_por_nome(uf):
     def achar(nome):
         k = chave(nome); k = chave(APELIDOS.get(k, k))
         if k in idx: return idx[k]
-        raise KeyError(f'{uf}: município não encontrado: {nome}')
+        import difflib
+        m = difflib.get_close_matches(k, idx, n=1, cutoff=0.88)
+        if m: return idx[m[0]]
+        if nome not in FALTANDO: FALTANDO.add(nome); print(f'  ⚠ {uf}: município não encontrado: {nome}')
+        return None
     return achar
 
 def gravar(caminho, linhas, eleitos, fonte):
@@ -24,6 +29,12 @@ def gravar(caminho, linhas, eleitos, fonte):
         w = csv.writer(f, delimiter=';', lineterminator='\n')
         w.writerow(['cargo', 'turno', 'ibge', 'numero', 'nome', 'partido', 'votos', 'eleito'])
         for c, t, ib, n, nome, p, v in linhas:
-            w.writerow([c, t, ib, n, nome, p, v, (eleitos.get((c, n), '') if isinstance(eleitos, dict) else ('S' if (c, n) in eleitos else ''))])
+            if ib is None: continue
+            w.writerow([c, t, ib, n, nome, p, v, (eleitos.get((c, n, t), eleitos.get((c, n), '')) if isinstance(eleitos, dict) else ('S' if (c, n) in eleitos else ''))])
     with open(caminho.replace('.csv', '.fonte.txt'), 'w', encoding='utf8') as f: f.write(fonte + '\n')
     print(f'{caminho}: {len(linhas)} linhas, {len(eleitos)} eleitos')
+
+# números de partido em 1990 (prefixo do número do candidato); os que não sabemos ficam "P<número>"
+PARTIDO_1990 = {'11': 'PDS', '12': 'PDT', '13': 'PT', '14': 'PTB', '15': 'PMDB', '17': 'PDC', '20': 'PSC', '22': 'PL', '23': 'PCB',
+                '25': 'PFL', '28': 'PTR', '33': 'PMN', '36': 'PRN', '40': 'PSB', '41': 'PSD', '45': 'PSDB', '65': 'PC do B', '70': 'PT do B'}
+partido_1990 = lambda num: PARTIDO_1990.get(num[:2], 'P' + num[:2])

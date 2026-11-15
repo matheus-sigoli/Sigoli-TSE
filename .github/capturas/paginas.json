@@ -1,15 +1,6 @@
 {
-  "1990-ms-gov": "/1990/ms/governador",
-  "1990-ms-depfed": "/1990/ms/deputado-federal",
-  "1990-ms-depest-cg": "/1990/ms/deputado-estadual?mun=5002704",
-  "1990-pa-gov": "/1990/pa/governador",
-  "1990-pa-sen": "/1990/pa/senador",
-  "1990-ac-gov": "/1990/ac/governador",
-  "1990-es-gov2": "/1990/es/governador?t=2",
-  "1990-ap-gov2": "/1990/ap/governador?t=2",
-  "1986-sp-gov": "/1986/sp/governador",
-  "1986-br-gov": "/1986/br/governador",
-  "1986-ms-sen": "/1986/ms/senador",
-  "1990-br-depfed": "/1990/br/deputado-federal",
-  "1990-pa-gov-belem": "/1990/pa/governador?mun=1501402"
+  "sp-2022@cel": "/2022/sp/presidente",
+  "sp-1986@cel": "/1986/sp/governador",
+  "sp-2022@tab": "/2022/sp/presidente",
+  "rs-1990-depest": "/1990/rs/deputado-estadual"
 }

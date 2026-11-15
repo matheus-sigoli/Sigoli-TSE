@@ -201,7 +201,7 @@ def main():
                     if a.conferir: continue
                     dest = os.path.join(a.saida, str(ano), cargo, str(turno)); os.makedirs(dest, exist_ok=True)
                     json.dump({'v': 1, 'cargo': cargo, 'turno': turno, 'abr': uf, 'tipo': 'maj', 'vagas': 1, 'atualizado': '',
-                               'semTotais': not tot and not totais_csv.get((cargo, uf, ano, turno)), 'cands': cands, 'partidos': [], 'total': {'t': tt, 'c': tc, 'p': []}, 'mun': saida_mun},
+                               **({'votosPorEleitor': 2} if cargo == 'senador' and ano in SENADO_2_VAGAS else {}), 'semTotais': not tot and not totais_csv.get((cargo, uf, ano, turno)), 'cands': cands, 'partidos': [], 'total': {'t': tt, 'c': tc, 'p': []}, 'mun': saida_mun},
                               open(os.path.join(dest, f'{uf}.json'), 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
                     base = os.path.join(a.saida, str(ano))
                     if not os.path.exists(os.path.join(base, 'municipios.json')):

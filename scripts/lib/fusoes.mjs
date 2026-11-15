@@ -1491,7 +1491,33 @@ export const FUSOES = [
   { uf: 'pa', novo: '1504752', origem: '1506807', ateAno: 2011 }, // Mojuí dos Campos ← Santarém
   { uf: 'rs', novo: '4314548', origem: '4302105', ateAno: 2011 }, // Pinto Bandeira ← Bento Gonçalves
   { uf: 'ms', novo: '5006275', origem: '5003256', ateAno: 2011 }, // Paraíso das Águas ← Costa Rica
-  // 1986: criados em 1987–1988 (sem voto em 1986 nas planilhas de MA, MG, MS e SP); mesma origem do bloco de 1982
+  // 1986: criados em 1987–1988 (sem voto em 1986 nos estados com dados de 1986); mesma origem do bloco de 1982
+  { uf: 'ce', novo: '2300150', origem: '2311603', ateAno: 1986 }, // ACARAPE ← REDENÇÃO
+  { uf: 'ce', novo: '2301851', origem: '2311306', ateAno: 1986 }, // BANABUIÚ ← QUIXADÁ
+  { uf: 'ce', novo: '2301950', origem: '2311603', ateAno: 1986 }, // BARREIRA ← REDENÇÃO
+  { uf: 'ce', novo: '2302057', origem: '2302602', ateAno: 1986 }, // BARROQUINHA ← CAMOCIM
+  { uf: 'ce', novo: '2303956', origem: '2309607', ateAno: 1986 }, // CHOROZINHO ← PACAJUS
+  { uf: 'ce', novo: '2304236', origem: '2305001', ateAno: 1986 }, // CROATÁ ← GUARACIABA DO NORTE
+  { uf: 'ce', novo: '2304269', origem: '2313005', ateAno: 1986 }, // DEPUTADO IRAPUAN PINHEIRO ← SOLONÓPOLE
+  { uf: 'ce', novo: '2304277', origem: '2310803', ateAno: 1986 }, // ERERÉ ← PEREIRO
+  { uf: 'ce', novo: '2304285', origem: '2301000', ateAno: 1986 }, // EUSÉBIO ← AQUIRAZ
+  { uf: 'ce', novo: '2304657', origem: '2312304', ateAno: 1986 }, // GRAÇA ← SÃO BENEDITO
+  { uf: 'ce', novo: '2304954', origem: '2309706', ateAno: 1986 }, // GUAIÚBA ← PACATUBA
+  { uf: 'ce', novo: '2305233', origem: '2309607', ateAno: 1986 }, // HORIZONTE ← PACAJUS
+  { uf: 'ce', novo: '2305266', origem: '2311306', ateAno: 1986 }, // IBARETAMA ← QUIXADÁ
+  { uf: 'ce', novo: '2305332', origem: '2308708', ateAno: 1986 }, // IBICUITINGA ← MORADA NOVA
+  { uf: 'ce', novo: '2305654', origem: '2309300', ateAno: 1986 }, // IPAPORANGA ← NOVA RUSSAS
+  { uf: 'ce', novo: '2307635', origem: '2311405', ateAno: 1986 }, // MADALENA ← QUIXERAMOBIM
+  { uf: 'ce', novo: '2308377', origem: '2306405', ateAno: 1986 }, // MIRAÍMA ← ITAPIPOCA
+  { uf: 'ce', novo: '2309458', origem: '2301208', ateAno: 1986 }, // OCARA ← ARACOIABA
+  { uf: 'ce', novo: '2310852', origem: '2303501', ateAno: 1986 }, // PINDORETAMA ← CASCAVEL
+  { uf: 'ce', novo: '2310951', origem: '2305803', ateAno: 1986 }, // PIRES FERREIRA ← IPU
+  { uf: 'ce', novo: '2311231', origem: '2306009', ateAno: 1986 }, // POTIRETAMA ← IRACEMA
+  { uf: 'ce', novo: '2311264', origem: '2305605', ateAno: 1986 }, // QUITERIANÓPOLIS ← INDEPENDÊNCIA
+  { uf: 'ce', novo: '2311959', origem: '2302701', ateAno: 1986 }, // SALITRE ← CAMPOS SALES
+  { uf: 'ce', novo: '2313252', origem: '2301604', ateAno: 1986 }, // TARRAFAS ← ASSARÉ
+  { uf: 'ce', novo: '2313351', origem: '2306108', ateAno: 1986 }, // TEJUÇUOCA ← IRAUÇUBA
+  { uf: 'ce', novo: '2313559', origem: '2313807', ateAno: 1986 }, // TURURU ← URUBURETAMA
   { uf: 'ma', novo: '2100956', origem: '2104800', ateAno: 1986 }, // ARAME ← GRAJAÚ
   { uf: 'ma', novo: '2106755', origem: '2105401', ateAno: 1986 }, // MIRANDA DO NORTE ← ITAPECURU MIRIM
   { uf: 'ma', novo: '2110039', origem: '2102606', ateAno: 1986 }, // SANTA LUZIA DO PARUÁ ← CÂNDIDO MENDES
@@ -1505,6 +1531,95 @@ export const FUSOES = [
   { uf: 'ms', novo: '5007554', origem: '5002308', ateAno: 1986 }, // SANTA RITA DO PARDO ← BRASILÂNDIA
   { uf: 'ms', novo: '5007935', origem: '5006408', ateAno: 1986 }, // SONORA ← PEDRO GOMES
   { uf: 'ms', novo: '5008404', origem: '5003801', ateAno: 1986 }, // VICENTINA ← FÁTIMA DO SUL
+  { uf: 'rs', novo: '4300059', origem: '4320909', ateAno: 1986 }, // ÁGUA SANTA ← TAPEJARA
+  { uf: 'rs', novo: '4300455', origem: '4310405', ateAno: 1986 }, // ALEGRIA ← INDEPENDÊNCIA
+  { uf: 'rs', novo: '4300554', origem: '4307500', ateAno: 1986 }, // ALTO ALEGRE ← ESPUMOSO
+  { uf: 'rs', novo: '4300638', origem: '4306502', ateAno: 1986 }, // AMARAL FERRADOR ← DOM FELICIANO
+  { uf: 'rs', novo: '4300661', origem: '4313300', ateAno: 1986 }, // ANDRÉ DA ROCHA ← NOVA PRATA
+  { uf: 'rs', novo: '4301057', origem: '4321501', ateAno: 1986 }, // ARROIO DO SAL ← TORRES
+  { uf: 'rs', novo: '4301552', origem: '4308706', ateAno: 1986 }, // ÁUREA ← GAURAMA
+  { uf: 'rs', novo: '4301651', origem: '4304804', ateAno: 1986 }, // BARÃO ← CARLOS BARBOSA
+  { uf: 'rs', novo: '4302451', origem: '4322608', ateAno: 1986 }, // BOQUEIRÃO DO LEÃO ← VENÂNCIO AIRES
+  { uf: 'rs', novo: '4302659', origem: '4312401', ateAno: 1986 }, // BROCHIER ← MONTENEGRO
+  { uf: 'rs', novo: '4303558', origem: '4311809', ateAno: 1986 }, // CAMARGO ← MARAU
+  { uf: 'rs', novo: '4304101', origem: '4307500', ateAno: 1986 }, // CAMPOS BORGES ← ESPUMOSO
+  { uf: 'rs', novo: '4304689', origem: '4319505', ateAno: 1986 }, // CAPELA DE SANTANA ← SÃO SEBASTIÃO DO CAÍ
+  { uf: 'rs', novo: '4304952', origem: '4309902', ateAno: 1986 }, // CASEIROS ← IBIRAIARAS
+  { uf: 'rs', novo: '4305132', origem: '4304200', ateAno: 1986 }, // CERRO BRANCO ← CANDELÁRIA
+  { uf: 'rs', novo: '4305157', origem: '4311601', ateAno: 1986 }, // CERRO GRANDE ← LIBERATO SALZANO
+  { uf: 'rs', novo: '4305173', origem: '4303509', ateAno: 1986 }, // CERRO GRANDE DO SUL ← CAMAQUÃ
+  { uf: 'rs', novo: '4305454', origem: '4321600', ateAno: 1986 }, // CIDREIRA ← TRAMANDAÍ
+  { uf: 'rs', novo: '4306056', origem: '4303509', ateAno: 1986 }, // CRISTAL ← CAMAQUÃ
+  { uf: 'rs', novo: '4306353', origem: '4318903', ateAno: 1986 }, // DEZESSEIS DE NOVEMBRO ← SÃO LUIZ GONZAGA
+  { uf: 'rs', novo: '4306452', origem: '4300703', ateAno: 1986 }, // DOIS LAJEADOS ← ANTA GORDA
+  { uf: 'rs', novo: '4306734', origem: '4309605', ateAno: 1986 }, // DOUTOR MAURÍCIO CARDOSO ← HORIZONTINA
+  { uf: 'rs', novo: '4306767', origem: '4309308', ateAno: 1986 }, // ELDORADO DO SUL ← GUAÍBA
+  { uf: 'rs', novo: '4306932', origem: '4317509', ateAno: 1986 }, // ENTRE-IJUÍS ← SANTO ÂNGELO
+  { uf: 'rs', novo: '4306957', origem: '4319703', ateAno: 1986 }, // ENTRE RIOS DO SUL ← SÃO VALENTIM
+  { uf: 'rs', novo: '4306973', origem: '4308904', ateAno: 1986 }, // EREBANGO ← GETÚLIO VARGAS
+  { uf: 'rs', novo: '4307054', origem: '4314100', ateAno: 1986 }, // ERNESTINA ← PASSO FUNDO
+  { uf: 'rs', novo: '4307559', origem: '4320503', ateAno: 1986 }, // ESTAÇÃO ← SERTÃO
+  { uf: 'rs', novo: '4307831', origem: '4311155', ateAno: 1986 }, // EUGÊNIO DE CASTRO ← JÓIA
+  { uf: 'rs', novo: '4307864', origem: '4322806', ateAno: 1986 }, // FAGUNDES VARELA ← VERANÓPOLIS
+  { uf: 'rs', novo: '4308052', origem: '4307203', ateAno: 1986 }, // FAXINALZINHO ← ERVAL GRANDE
+  { uf: 'rs', novo: '4309050', origem: '4309209', ateAno: 1986 }, // GLORINHA ← GRAVATAÍ
+  { uf: 'rs', novo: '4309258', origem: '4313300', ateAno: 1986 }, // GUABIJU ← NOVA PRATA
+  { uf: 'rs', novo: '4309555', origem: '4319505', ateAno: 1986 }, // HARMONIA ← SÃO SEBASTIÃO DO CAÍ
+  { uf: 'rs', novo: '4309753', origem: '4320701', ateAno: 1986 }, // IBARAMA ← SOBRADINHO
+  { uf: 'rs', novo: '4309951', origem: '4320800', ateAno: 1986 }, // IBIRAPUITÃ ← SOLEDADE
+  { uf: 'rs', novo: '4310330', origem: '4321600', ateAno: 1986 }, // IMBÉ ← TRAMANDAÍ
+  { uf: 'rs', novo: '4310363', origem: '4321451', ateAno: 1986 }, // IMIGRANTE ← TEUTÔNIA
+  { uf: 'rs', novo: '4310439', origem: '4300802', ateAno: 1986 }, // IPÊ ← ANTÔNIO PRADO
+  { uf: 'rs', novo: '4310462', origem: '4320503', ateAno: 1986 }, // IPIRANGA DO SUL ← SERTÃO
+  { uf: 'rs', novo: '4310553', origem: '4317400', ateAno: 1986 }, // ITACURUBI ← SANTIAGO
+  { uf: 'rs', novo: '4310751', origem: '4308003', ateAno: 1986 }, // IVORÁ ← FAXINAL DO SOTURNO
+  { uf: 'rs', novo: '4310850', origem: '4313706', ateAno: 1986 }, // JABOTICABA ← PALMEIRA DAS MISSÕES
+  { uf: 'rs', novo: '4311122', origem: '4302303', ateAno: 1986 }, // JAQUIRANA ← BOM JESUS
+  { uf: 'rs', novo: '4311254', origem: '4302006', ateAno: 1986 }, // LAGOÃO ← BARROS CASSAL
+  { uf: 'rs', novo: '4312351', origem: '4320404', ateAno: 1986 }, // MONTAURI ← SERAFINA CORRÊA
+  { uf: 'rs', novo: '4312450', origem: '4314407', ateAno: 1986 }, // MORRO REDONDO ← PELOTAS
+  { uf: 'rs', novo: '4312757', origem: '4320800', ateAno: 1986 }, // NOVA ALVORADA ← SOLEDADE
+  { uf: 'rs', novo: '4313037', origem: '4311106', ateAno: 1986 }, // NOVA ESPERANÇA DO SUL ← JAGUARI
+  { uf: 'rs', novo: '4313060', origem: '4319901', ateAno: 1986 }, // NOVA HARTZ ← SAPIRANGA
+  { uf: 'rs', novo: '4313359', origem: '4300802', ateAno: 1986 }, // NOVA ROMA DO SUL ← ANTÔNIO PRADO
+  { uf: 'rs', novo: '4313953', origem: '4315701', ateAno: 1986 }, // PANTANO GRANDE ← RIO PARDO
+  { uf: 'rs', novo: '4314027', origem: '4303004', ateAno: 1986 }, // PARAÍSO DO SUL ← CACHOEIRA DO SUL
+  { uf: 'rs', novo: '4314159', origem: '4321303', ateAno: 1986 }, // PAVERAMA ← TAQUARI
+  { uf: 'rs', novo: '4314456', origem: '4320206', ateAno: 1986 }, // PINHAL ← SEBERI
+  { uf: 'rs', novo: '4314555', origem: '4319208', ateAno: 1986 }, // PIRAPÓ ← SÃO NICOLAU
+  { uf: 'rs', novo: '4314753', origem: '4321451', ateAno: 1986 }, // POÇO DAS ANTAS ← TEUTÔNIA
+  { uf: 'rs', novo: '4315131', origem: '4315206', ateAno: 1986 }, // POUSO NOVO ← PUTINGA
+  { uf: 'rs', novo: '4315156', origem: '4302006', ateAno: 1986 }, // PROGRESSO ← BARROS CASSAL
+  { uf: 'rs', novo: '4315172', origem: '4313300', ateAno: 1986 }, // PROTÁSIO ALVES ← NOVA PRATA
+  { uf: 'rs', novo: '4315354', origem: '4310009', ateAno: 1986 }, // QUINZE DE NOVEMBRO ← IBIRUBÁ
+  { uf: 'rs', novo: '4315453', origem: '4306809', ateAno: 1986 }, // RELVADO ← ENCANTADO
+  { uf: 'rs', novo: '4315750', origem: '4316006', ateAno: 1986 }, // RIOZINHO ← ROLANTE
+  { uf: 'rs', novo: '4316436', origem: '4316709', ateAno: 1986 }, // SALDANHA MARINHO ← SANTA BÁRBARA DO SUL
+  { uf: 'rs', novo: '4316956', origem: '4309100', ateAno: 1986 }, // SANTA MARIA DO HERVAL ← GRAMADO
+  { uf: 'rs', novo: '4318051', origem: '4314001', ateAno: 1986 }, // SÃO DOMINGOS DO SUL ← PARAÍ
+  { uf: 'rs', novo: '4318424', origem: '4316600', ateAno: 1986 }, // SÃO JOÃO DA URTIGA ← SANANDUVA
+  { uf: 'rs', novo: '4318440', origem: '4309902', ateAno: 1986 }, // SÃO JORGE ← IBIRAIARAS
+  { uf: 'rs', novo: '4318465', origem: '4308300', ateAno: 1986 }, // SÃO JOSÉ DO HERVAL ← FONTOURA XAVIER
+  { uf: 'rs', novo: '4318481', origem: '4314803', ateAno: 1986 }, // SÃO JOSÉ DO HORTÊNCIO ← PORTÃO
+  { uf: 'rs', novo: '4319158', origem: '4311155', ateAno: 1986 }, // SÃO MIGUEL DAS MISSÕES ← JÓIA
+  { uf: 'rs', novo: '4319752', origem: '4302352', ateAno: 1986 }, // SÃO VENDELINO ← BOM PRINCÍPIO
+  { uf: 'rs', novo: '4320230', origem: '4304002', ateAno: 1986 }, // SEDE NOVA ← CAMPO NOVO
+  { uf: 'rs', novo: '4320263', origem: '4320701', ateAno: 1986 }, // SEGREDO ← SOBRADINHO
+  { uf: 'rs', novo: '4320651', origem: '4316907', ateAno: 1986 }, // SILVEIRA MARTINS ← SANTA MARIA
+  { uf: 'rs', novo: '4321329', origem: '4308508', ateAno: 1986 }, // TAQUARUÇU DO SUL ← FREDERICO WESTPHALEN
+  { uf: 'rs', novo: '4321436', origem: '4304630', ateAno: 1986 }, // TERRA DE AREIA ← CAPÃO DA CANOA
+  { uf: 'rs', novo: '4321634', origem: '4300901', ateAno: 1986 }, // TRÊS ARROIOS ← ARATIBA
+  { uf: 'rs', novo: '4321667', origem: '4304630', ateAno: 1986 }, // TRÊS CACHOEIRAS ← CAPÃO DA CANOA
+  { uf: 'rs', novo: '4321857', origem: '4316105', ateAno: 1986 }, // TRÊS PALMEIRAS ← RONDA ALTA
+  { uf: 'rs', novo: '4321956', origem: '4312708', ateAno: 1986 }, // TRINDADE DO SUL ← NONOAI
+  { uf: 'rs', novo: '4322152', origem: '4301206', ateAno: 1986 }, // TUNAS ← ARROIO DO TIGRE
+  { uf: 'rs', novo: '4322251', origem: '4302352', ateAno: 1986 }, // TUPANDI ← BOM PRINCÍPIO
+  { uf: 'rs', novo: '4322558', origem: '4306304', ateAno: 1986 }, // VANINI ← DAVID CANABARRO
+  { uf: 'rs', novo: '4323309', origem: '4322806', ateAno: 1986 }, // VILA FLORES ← VERANÓPOLIS
+  { uf: 'rs', novo: '4323408', origem: '4311809', ateAno: 1986 }, // VILA MARIA ← MARAU
+  { uf: 'rs', novo: '4323507', origem: '4313805', ateAno: 1986 }, // VISTA ALEGRE ← PALMITINHO
+  { uf: 'rs', novo: '4323606', origem: '4312906', ateAno: 1986 }, // VISTA ALEGRE DO PRATA ← NOVA BASSANO
+  { uf: 'rs', novo: '4323705', origem: '4321402', ateAno: 1986 }, // VISTA GAÚCHA ← TENENTE PORTELA
 ];
 
 /** Fusões que valem no ano; quando a origem também ainda não existia, segue até o município que existia. */

@@ -27,7 +27,7 @@ export const cargoPorSlug = (s: string) => CARGOS.find((c) => c.slug === s);
 export const UFS_2T_GOVERNADOR: Record<number, string[]> = {
   2026: ['ac', 'am', 'df', 'es', 'rn', 'to'],
   // 1990: só os estados que já estão no acervo
-  1990: ['ac', 'al', 'ap', 'es', 'ma', 'mg', 'pa', 'rn', 'sp'],
+  1990: ['ac', 'al', 'ap', 'es', 'ma', 'mg', 'pa', 'rn', 'rs', 'sp'],
   2022: ['al', 'am', 'ba', 'es', 'ms', 'pb', 'pe', 'ro', 'rs', 'sc', 'se', 'sp'],
   2018: ['am', 'ap', 'df', 'mg', 'ms', 'pa', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp'],
   2014: ['ac', 'am', 'ap', 'ce', 'df', 'go', 'ms', 'pa', 'pb', 'rj', 'rn', 'ro', 'rr', 'rs'],
@@ -119,6 +119,10 @@ export interface ArquivoResultado {
   semTotais?: boolean;
   /** de onde vieram os resultados, quando não é o TSE (ex.: PDF do TRE; scripts/tre.py) */
   fonte?: string;
+  /** proporcional sem voto de legenda na fonte: o total do partido é só a soma dos nominais */
+  semLegenda?: boolean;
+  /** Senado com duas vagas: cada votante deu dois votos (brancos e nulos contam por voto) */
+  votosPorEleitor?: number;
   resumo?: undefined;
 }
 

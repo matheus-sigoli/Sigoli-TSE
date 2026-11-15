@@ -70,14 +70,14 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
-    cargos: 'Governador (por enquanto AC, AL, AP, ES, MA, MG, MS, PA, RJ, RN, RO e SP), Senador (MS e PA) e Deputados (MS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AC, AL, AP, CE, ES, MA, MG, MS, PA, RJ, RN, RO, RS e SP), Senador (CE, MS, PA, RN e RS) e Deputados (CE, MS, RN e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'Acervo Sigoli.TSE e TREs (por município)',
   },
   {
     ano: 1986, titulo: 'Eleições 1986', datas: '15 de novembro',
-    cargos: 'Governador (por enquanto MA, MG, MS e SP) e Senador (MS)', disponivel: true, rota: '/1986/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador'],
-    fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
+    cargos: 'Governador (por enquanto CE, MA, MG, MS, RS e SP), Senador (CE, MS e RS) e Deputados (CE e RS)', disponivel: true, rota: '/1986/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
+    fonte: 'Acervo Sigoli.TSE e TREs (por município)',
   },
   {
     ano: 1982, titulo: 'Eleições 1982', datas: '15 de novembro',
