@@ -55,6 +55,19 @@ for (const m of [...new Set(Object.values(ANOS))]) {
   }
 }
 
+// malha de hoje (IBGE 2025, public/geo/uf): candidata para as UFs com municípios criados depois da última malha
+// histórica (ex.: MT em 1986); os que ainda não existiam voltam para a origem do mesmo jeito
+TODAS.BR2025 = {};
+for (const arq of readdirSync('public/geo/uf').filter((f) => /^[a-z]{2}\.json$/.test(f))) {
+  const t = JSON.parse(readFileSync(join('public/geo/uf', arq), 'utf8'));
+  const tr = t.transform;
+  const arcos = t.arcs.map((a) => { let x = 0, y = 0; return a.map(([dx, dy]) => (tr ? [(x += dx) * tr.scale[0] + tr.translate[0], (y += dy) * tr.scale[1] + tr.translate[1]] : [dx, dy])); });
+  const anel = (r) => r.flatMap((i, k) => { const a = i < 0 ? [...arcos[~i]].reverse() : arcos[i]; return k ? a.slice(1) : a; });
+  TODAS.BR2025[arq.slice(0, 2)] = t.objects.municipios.geometries.map((g) => ({
+    id: String(g.id), n: g.properties.n, coords: (g.type === 'Polygon' ? [g.arcs] : g.arcs).flat().map(anel),
+  }));
+}
+
 // municípios com resultado no ano, por UF (todos os cargos e turnos)
 function idsComDado(ano) {
   const r = {};
@@ -131,7 +144,8 @@ const manterAntigo = {}; // UF em que nenhuma malha do IBGE tem todos os municí
 const ufs = [];
 const nomesUf = Object.keys(TODAS[PADRAO]).filter((uf) => !(Number(ANO) < 1979 && uf === 'ms'));
 for (const uf of nomesUf) {
-  const lerUf = (m) => [...(TODAS[m][uf] ?? []), ...(Number(ANO) < 1979 && uf === 'mt' ? TODAS[m].ms ?? [] : [])];
+  const lerUf = (m) => [...(TODAS[m][uf] ?? []), ...(Number(ANO) < 1979 && uf === 'mt' ? TODAS[m].ms ?? [] : []),
+    ...(Number(ANO) < 1989 && uf === 'go' ? TODAS[m].to ?? [] : [])];
   const comDado = DADOS[uf];
   let escolha = PADRAO, feats = lerUf(PADRAO), fora = 0;
   if (comDado?.size) {
@@ -148,8 +162,14 @@ for (const uf of nomesUf) {
     escolha = melhor.m; feats = melhor.fs; fora = melhor.fo;
     // município que já existia na eleição (está na malha do IBGE de antes dela) e ficou sem dado: fica no mapa, sem cor
     const anterior = Object.keys(TODAS).filter((m) => Number(m.slice(2)) <= Number(ANO)).sort().pop();
-    const existia = new Set(anterior ? lerUf(anterior).map((f) => f.id) : []);
-    const dest = destinos(feats, new Set([...comDado, ...feats.filter((f) => existia.has(f.id)).map((f) => f.id)]), ANO);
+    // resultado por zona eleitoral (data/malhas-historicas/agrupar/{ano}-{uf}.csv): cada município vai para a sede da
+    // zona; "*;vizinho" = sem a lista, os municípios sem dado vão para o vizinho com dado de maior divisa
+    const arqGrupo = `data/malhas-historicas/agrupar/${ANO}-${uf}.csv`;
+    const grupo = new Map(existsSync(arqGrupo) ? readFileSync(arqGrupo, 'utf8').trim().split('\n').slice(1).map((l) => l.split(';')) : []);
+    const porVizinho = grupo.get('*') === 'vizinho';
+    const existia = new Set(anterior && !porVizinho ? lerUf(anterior).map((f) => f.id) : []);
+    const dest = destinos(feats, new Set([...comDado, ...feats.filter((f) => existia.has(f.id) && !grupo.has(f.id)).map((f) => f.id)]), ANO);
+    for (const f of feats) if (grupo.has(f.id) && comDado.has(grupo.get(f.id))) dest.set(f.id, grupo.get(f.id));
     const nomeDe = new Map(feats.map((f) => [f.id, f.n]));
     let juntos = 0;
     feats = feats.map((f) => {

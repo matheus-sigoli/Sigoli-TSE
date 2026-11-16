@@ -1,0 +1,9 @@
+cargo;turno;uf;candidato;partido;votos;eleito;fonte
+governador;1;mg;JOSÉ DE MAGALHÃES PINTO;UDN;760271;S;TRE-MG, eleições de 1960 (total geral)
+governador;1;mg;TANCREDO NEVES;PSD;678885;;TRE-MG, eleições de 1960 (total geral)
+governador;1;mg;RIBEIRO PENA;PSP;59604;;TRE-MG, eleições de 1960 (total geral)
+governador;1;mg;#brancos;;157953;;TRE-MG, eleições de 1960 (total geral)
+governador;1;mg;#nulos;;69859;;TRE-MG, eleições de 1960 (total geral)
+governador;1;mg;#comparecimento;;1728455;;TRE-MG, eleições de 1960 (total geral)
+governador;1;mg;#abstencao;;386204;;TRE-MG, eleições de 1960 (total geral)
+governador;1;mg;#eleitorado;;2000552;;TRE-MG, eleições de 1960 (total geral)

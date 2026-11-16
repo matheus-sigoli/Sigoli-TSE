@@ -22,7 +22,7 @@ TOT = {'#eleitorado': 0, '#comparecimento': 1, '#abstencao': 2, '#brancos': 4, '
 a = argparse.ArgumentParser(); a.add_argument('--ano', type=int); a.add_argument('--uf'); a = a.parse_args()
 lista = [m for m in json.load(open('public/data/2026/municipios.json', encoding='utf8')) if m['uf'] != 'zz']
 for arq in sorted(f for f in glob.glob('data/tre/[0-9]*/*.csv') if not f.endswith('.nomes.csv')):
-    ano, uf = int(arq.split('/')[2]), os.path.basename(arq)[:-4]
+    ano, uf = int(arq.split('/')[2]), os.path.basename(arq)[:2]  # {uf}.csv ou {uf}-{origem}.csv
     if (a.ano and ano != a.ano) or (a.uf and uf != a.uf): continue
     fonte = open(arq[:-4] + '.fonte.txt', encoding='utf8').read().strip() if os.path.exists(arq[:-4] + '.fonte.txt') else ''
     # data/tre/{ano}/{uf}.nomes.csv (;): cargo;numero;nome — conserta nomes mal lidos pelo OCR

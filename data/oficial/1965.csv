@@ -1,0 +1,9 @@
+cargo;turno;uf;candidato;partido;votos;eleito;fonte
+governador;1;mg;ISRAEL PINHEIRO;PSD;937555;S;TRE-MG, eleições de 1965 (total)
+governador;1;mg;ROBERTO RESENDE;UDN;793409;;TRE-MG, eleições de 1965 (total)
+governador;1;mg;PEDRO GOMES DE OLIVEIRA;MTR;30966;;TRE-MG, eleições de 1965 (total)
+governador;1;mg;#brancos;;32386;;TRE-MG, eleições de 1965 (total)
+governador;1;mg;#nulos;;86378;;TRE-MG, eleições de 1965 (total)
+governador;1;mg;#comparecimento;;1880694;;TRE-MG, eleições de 1965 (total)
+governador;1;mg;#abstencao;;838092;;TRE-MG, eleições de 1965 (total)
+governador;1;mg;#eleitorado;;2718786;;TRE-MG, eleições de 1965 (total)

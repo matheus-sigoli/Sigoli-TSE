@@ -58,6 +58,8 @@ export const abrangenciaValida = (abr: string, cargo: Cargo) =>
 
 export const turnoDisponivel = (cargo: Cargo, abr: string, turno: Turno, ano = 2026) => {
   if (!cargo.turnos.includes(turno)) return false;
+  // 2º turno só existe desde a Constituição de 1988 (República de 1946 e ditadura: turno único)
+  if (turno === 2 && ano < 1989) return false;
   if (turno === 2 && cargo.slug === 'governador' && abr !== 'br') return (UFS_2T_GOVERNADOR[ano] ?? []).includes(abr);
   // 1994 e 1998: Fernando Henrique eleito no 1º turno, sem 2º turno de Presidente
   if (turno === 2 && cargo.slug === 'presidente' && (ano === 1998 || ano === 1994)) return false;
