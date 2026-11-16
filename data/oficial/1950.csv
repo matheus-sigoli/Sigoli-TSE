@@ -1,0 +1,6 @@
+cargo;turno;uf;candidato;partido;votos;eleito;fonte
+governador;1;ba;RÉGIS PACHECO;PSD;321181;S;TRE-BA, eleições de 3/10/1950 (totais impressos)
+governador;1;ba;JURACI MAGALHÃES;UDN;264159;;TRE-BA, eleições de 3/10/1950 (totais impressos)
+governador;1;ba;#brancos;;12844;;TRE-BA, eleições de 3/10/1950 (totais impressos)
+governador;1;ba;#nulos;;17541;;TRE-BA, eleições de 3/10/1950 (totais impressos)
+governador;1;ba;#comparecimento;;615725;;TRE-BA, eleições de 3/10/1950 (totais impressos)

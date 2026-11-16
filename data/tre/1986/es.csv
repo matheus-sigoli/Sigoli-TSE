@@ -1,0 +1,465 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+governador;1;3205309;_PDT;PDT;PDT;900;
+governador;1;3205309;_PTPSB;PT-PSB;PT;21069;
+governador;1;3205309;_MAXMAURO;MAX MAURO;PMDB;54472;S
+governador;1;3205309;_PFL;PFL;PFL;46033;
+governador;1;3205309;#brancos;;;7038;
+governador;1;3205309;#nulos;;;4652;
+governador;1;3205309;#comparecimento;;;134164;
+governador;1;3205309;#eleitorado;;;140360;
+governador;1;3200102;_PDT;PDT;PDT;68;
+governador;1;3200102;_PTPSB;PT-PSB;PT;1004;
+governador;1;3200102;_MAXMAURO;MAX MAURO;PMDB;8530;S
+governador;1;3200102;_PFL;PFL;PFL;9054;
+governador;1;3200102;#brancos;;;2684;
+governador;1;3200102;#nulos;;;683;
+governador;1;3200102;#comparecimento;;;22023;
+governador;1;3200102;#eleitorado;;;22998;
+governador;1;3200201;_PDT;PDT;PDT;98;
+governador;1;3200201;_PTPSB;PT-PSB;PT;650;
+governador;1;3200201;_MAXMAURO;MAX MAURO;PMDB;10333;S
+governador;1;3200201;_PFL;PFL;PFL;4704;
+governador;1;3200201;#brancos;;;1476;
+governador;1;3200201;#nulos;;;720;
+governador;1;3200201;#comparecimento;;;17981;
+governador;1;3200201;#eleitorado;;;18697;
+governador;1;3200300;_PDT;PDT;PDT;10;
+governador;1;3200300;_PTPSB;PT-PSB;PT;105;
+governador;1;3200300;_MAXMAURO;MAX MAURO;PMDB;3526;S
+governador;1;3200300;_PFL;PFL;PFL;1856;
+governador;1;3200300;#brancos;;;334;
+governador;1;3200300;#nulos;;;131;
+governador;1;3200300;#comparecimento;;;5962;
+governador;1;3200300;#eleitorado;;;6064;
+governador;1;3200409;_PDT;PDT;PDT;6;
+governador;1;3200409;_PTPSB;PT-PSB;PT;305;
+governador;1;3200409;_MAXMAURO;MAX MAURO;PMDB;3457;S
+governador;1;3200409;_PFL;PFL;PFL;1697;
+governador;1;3200409;#brancos;;;405;
+governador;1;3200409;#nulos;;;131;
+governador;1;3200409;#comparecimento;;;6001;
+governador;1;3200409;#eleitorado;;;6281;
+governador;1;3200508;_PDT;PDT;PDT;21;
+governador;1;3200508;_PTPSB;PT-PSB;PT;68;
+governador;1;3200508;_MAXMAURO;MAX MAURO;PMDB;2190;S
+governador;1;3200508;_PFL;PFL;PFL;871;
+governador;1;3200508;#brancos;;;379;
+governador;1;3200508;#nulos;;;139;
+governador;1;3200508;#comparecimento;;;3668;
+governador;1;3200508;#eleitorado;;;3863;
+governador;1;3200607;_PDT;PDT;PDT;56;
+governador;1;3200607;_PTPSB;PT-PSB;PT;1059;
+governador;1;3200607;_MAXMAURO;MAX MAURO;PMDB;10302;S
+governador;1;3200607;_PFL;PFL;PFL;6050;
+governador;1;3200607;#brancos;;;1576;
+governador;1;3200607;#nulos;;;599;
+governador;1;3200607;#comparecimento;;;19642;
+governador;1;3200607;#eleitorado;;;20429;
+governador;1;3200706;_PDT;PDT;PDT;14;
+governador;1;3200706;_PTPSB;PT-PSB;PT;173;
+governador;1;3200706;_MAXMAURO;MAX MAURO;PMDB;1801;S
+governador;1;3200706;_PFL;PFL;PFL;2139;
+governador;1;3200706;#brancos;;;365;
+governador;1;3200706;#nulos;;;135;
+governador;1;3200706;#comparecimento;;;4627;
+governador;1;3200706;#eleitorado;;;4737;
+governador;1;3200805;_PDT;PDT;PDT;52;
+governador;1;3200805;_PTPSB;PT-PSB;PT;221;
+governador;1;3200805;_MAXMAURO;MAX MAURO;PMDB;7257;S
+governador;1;3200805;_PFL;PFL;PFL;3806;
+governador;1;3200805;#brancos;;;1330;
+governador;1;3200805;#nulos;;;376;
+governador;1;3200805;#comparecimento;;;13042;
+governador;1;3200805;#eleitorado;;;13868;
+governador;1;3200904;_PDT;PDT;PDT;107;
+governador;1;3200904;_PTPSB;PT-PSB;PT;1103;
+governador;1;3200904;_MAXMAURO;MAX MAURO;PMDB;13341;S
+governador;1;3200904;_PFL;PFL;PFL;7810;
+governador;1;3200904;#brancos;;;3130;
+governador;1;3200904;#nulos;;;946;
+governador;1;3200904;#comparecimento;;;26437;
+governador;1;3200904;#eleitorado;;;27975;
+governador;1;3201001;_PDT;PDT;PDT;26;
+governador;1;3201001;_PTPSB;PT-PSB;PT;204;
+governador;1;3201001;_MAXMAURO;MAX MAURO;PMDB;3060;S
+governador;1;3201001;_PFL;PFL;PFL;1950;
+governador;1;3201001;#brancos;;;471;
+governador;1;3201001;#nulos;;;161;
+governador;1;3201001;#comparecimento;;;5872;
+governador;1;3201001;#eleitorado;;;6209;
+governador;1;3201100;_PDT;PDT;PDT;26;
+governador;1;3201100;_PTPSB;PT-PSB;PT;83;
+governador;1;3201100;_MAXMAURO;MAX MAURO;PMDB;1682;S
+governador;1;3201100;_PFL;PFL;PFL;1618;
+governador;1;3201100;#brancos;;;380;
+governador;1;3201100;#nulos;;;183;
+governador;1;3201100;#comparecimento;;;3972;
+governador;1;3201100;#eleitorado;;;4137;
+governador;1;3201209;_PDT;PDT;PDT;319;
+governador;1;3201209;_PTPSB;PT-PSB;PT;5677;
+governador;1;3201209;_MAXMAURO;MAX MAURO;PMDB;31576;S
+governador;1;3201209;_PFL;PFL;PFL;19720;
+governador;1;3201209;#brancos;;;6829;
+governador;1;3201209;#nulos;;;2593;
+governador;1;3201209;#comparecimento;;;66714;
+governador;1;3201209;#eleitorado;;;68972;
+governador;1;3201308;_PDT;PDT;PDT;430;
+governador;1;3201308;_PTPSB;PT-PSB;PT;14234;
+governador;1;3201308;_MAXMAURO;MAX MAURO;PMDB;44657;S
+governador;1;3201308;_PFL;PFL;PFL;29306;
+governador;1;3201308;#brancos;;;9847;
+governador;1;3201308;#nulos;;;4795;
+governador;1;3201308;#comparecimento;;;103269;
+governador;1;3201308;#eleitorado;;;108378;
+governador;1;3201407;_PDT;PDT;PDT;32;
+governador;1;3201407;_PTPSB;PT-PSB;PT;376;
+governador;1;3201407;_MAXMAURO;MAX MAURO;PMDB;6626;S
+governador;1;3201407;_PFL;PFL;PFL;5070;
+governador;1;3201407;#brancos;;;1130;
+governador;1;3201407;#nulos;;;376;
+governador;1;3201407;#comparecimento;;;13610;
+governador;1;3201407;#eleitorado;;;13979;
+governador;1;3201506;_PDT;PDT;PDT;173;
+governador;1;3201506;_PTPSB;PT-PSB;PT;4090;
+governador;1;3201506;_MAXMAURO;MAX MAURO;PMDB;27152;S
+governador;1;3201506;_PFL;PFL;PFL;12998;
+governador;1;3201506;#brancos;;;5321;
+governador;1;3201506;#nulos;;;1802;
+governador;1;3201506;#comparecimento;;;51536;
+governador;1;3201506;#eleitorado;;;54076;
+governador;1;3201605;_PDT;PDT;PDT;42;
+governador;1;3201605;_PTPSB;PT-PSB;PT;581;
+governador;1;3201605;_MAXMAURO;MAX MAURO;PMDB;4043;S
+governador;1;3201605;_PFL;PFL;PFL;2040;
+governador;1;3201605;#brancos;;;1168;
+governador;1;3201605;#nulos;;;479;
+governador;1;3201605;#comparecimento;;;8353;
+governador;1;3201605;#eleitorado;;;8804;
+governador;1;3201704;_PDT;PDT;PDT;56;
+governador;1;3201704;_PTPSB;PT-PSB;PT;516;
+governador;1;3201704;_MAXMAURO;MAX MAURO;PMDB;4653;S
+governador;1;3201704;_PFL;PFL;PFL;3192;
+governador;1;3201704;#brancos;;;852;
+governador;1;3201704;#nulos;;;290;
+governador;1;3201704;#comparecimento;;;9559;
+governador;1;3201704;#eleitorado;;;9777;
+governador;1;3201803;_PDT;PDT;PDT;13;
+governador;1;3201803;_PTPSB;PT-PSB;PT;19;
+governador;1;3201803;_MAXMAURO;MAX MAURO;PMDB;1166;S
+governador;1;3201803;_PFL;PFL;PFL;517;
+governador;1;3201803;#brancos;;;230;
+governador;1;3201803;#nulos;;;73;
+governador;1;3201803;#comparecimento;;;2018;
+governador;1;3201803;#eleitorado;;;2137;
+governador;1;3201902;_PDT;PDT;PDT;54;
+governador;1;3201902;_PTPSB;PT-PSB;PT;445;
+governador;1;3201902;_MAXMAURO;MAX MAURO;PMDB;7246;S
+governador;1;3201902;_PFL;PFL;PFL;4418;
+governador;1;3201902;#brancos;;;1051;
+governador;1;3201902;#nulos;;;418;
+governador;1;3201902;#comparecimento;;;13632;
+governador;1;3201902;#eleitorado;;;13935;
+governador;1;3202009;_PDT;PDT;PDT;19;
+governador;1;3202009;_PTPSB;PT-PSB;PT;24;
+governador;1;3202009;_MAXMAURO;MAX MAURO;PMDB;1321;S
+governador;1;3202009;_PFL;PFL;PFL;1104;
+governador;1;3202009;#brancos;;;254;
+governador;1;3202009;#nulos;;;97;
+governador;1;3202009;#comparecimento;;;2819;
+governador;1;3202009;#eleitorado;;;2912;
+governador;1;3202108;_PDT;PDT;PDT;38;
+governador;1;3202108;_PTPSB;PT-PSB;PT;650;
+governador;1;3202108;_MAXMAURO;MAX MAURO;PMDB;5861;S
+governador;1;3202108;_PFL;PFL;PFL;3452;
+governador;1;3202108;#brancos;;;1534;
+governador;1;3202108;#nulos;;;408;
+governador;1;3202108;#comparecimento;;;11943;
+governador;1;3202108;#eleitorado;;;12681;
+governador;1;3202207;_PDT;PDT;PDT;25;
+governador;1;3202207;_PTPSB;PT-PSB;PT;182;
+governador;1;3202207;_MAXMAURO;MAX MAURO;PMDB;2649;S
+governador;1;3202207;_PFL;PFL;PFL;2226;
+governador;1;3202207;#brancos;;;374;
+governador;1;3202207;#nulos;;;181;
+governador;1;3202207;#comparecimento;;;5637;
+governador;1;3202207;#eleitorado;;;5809;
+governador;1;3202306;_PDT;PDT;PDT;40;
+governador;1;3202306;_PTPSB;PT-PSB;PT;275;
+governador;1;3202306;_MAXMAURO;MAX MAURO;PMDB;6774;S
+governador;1;3202306;_PFL;PFL;PFL;2891;
+governador;1;3202306;#brancos;;;917;
+governador;1;3202306;#nulos;;;257;
+governador;1;3202306;#comparecimento;;;11154;
+governador;1;3202306;#eleitorado;;;11532;
+governador;1;3202405;_PDT;PDT;PDT;72;
+governador;1;3202405;_PTPSB;PT-PSB;PT;1608;
+governador;1;3202405;_MAXMAURO;MAX MAURO;PMDB;9749;S
+governador;1;3202405;_PFL;PFL;PFL;8438;
+governador;1;3202405;#brancos;;;1879;
+governador;1;3202405;#nulos;;;866;
+governador;1;3202405;#comparecimento;;;22612;
+governador;1;3202405;#eleitorado;;;23618;
+governador;1;3202454;_PDT;PDT;PDT;34;
+governador;1;3202454;_PTPSB;PT-PSB;PT;128;
+governador;1;3202454;_MAXMAURO;MAX MAURO;PMDB;2439;S
+governador;1;3202454;_PFL;PFL;PFL;2975;
+governador;1;3202454;#brancos;;;758;
+governador;1;3202454;#nulos;;;191;
+governador;1;3202454;#comparecimento;;;6525;
+governador;1;3202454;#eleitorado;;;6777;
+governador;1;3202504;_PDT;PDT;PDT;28;
+governador;1;3202504;_PTPSB;PT-PSB;PT;1008;
+governador;1;3202504;_MAXMAURO;MAX MAURO;PMDB;5104;S
+governador;1;3202504;_PFL;PFL;PFL;3804;
+governador;1;3202504;#brancos;;;830;
+governador;1;3202504;#nulos;;;307;
+governador;1;3202504;#comparecimento;;;11081;
+governador;1;3202504;#eleitorado;;;11363;
+governador;1;3202603;_PDT;PDT;PDT;15;
+governador;1;3202603;_PTPSB;PT-PSB;PT;110;
+governador;1;3202603;_MAXMAURO;MAX MAURO;PMDB;1798;S
+governador;1;3202603;_PFL;PFL;PFL;2886;
+governador;1;3202603;#brancos;;;305;
+governador;1;3202603;#nulos;;;111;
+governador;1;3202603;#comparecimento;;;5225;
+governador;1;3202603;#eleitorado;;;5332;
+governador;1;3202702;_PDT;PDT;PDT;15;
+governador;1;3202702;_PTPSB;PT-PSB;PT;208;
+governador;1;3202702;_MAXMAURO;MAX MAURO;PMDB;3938;S
+governador;1;3202702;_PFL;PFL;PFL;2038;
+governador;1;3202702;#brancos;;;409;
+governador;1;3202702;#nulos;;;201;
+governador;1;3202702;#comparecimento;;;6809;
+governador;1;3202702;#eleitorado;;;6997;
+governador;1;3202801;_PDT;PDT;PDT;37;
+governador;1;3202801;_PTPSB;PT-PSB;PT;301;
+governador;1;3202801;_MAXMAURO;MAX MAURO;PMDB;8991;S
+governador;1;3202801;_PFL;PFL;PFL;5444;
+governador;1;3202801;#brancos;;;1672;
+governador;1;3202801;#nulos;;;534;
+governador;1;3202801;#comparecimento;;;16979;
+governador;1;3202801;#eleitorado;;;17871;
+governador;1;3202900;_PDT;PDT;PDT;16;
+governador;1;3202900;_PTPSB;PT-PSB;PT;397;
+governador;1;3202900;_MAXMAURO;MAX MAURO;PMDB;2793;S
+governador;1;3202900;_PFL;PFL;PFL;1249;
+governador;1;3202900;#brancos;;;354;
+governador;1;3202900;#nulos;;;142;
+governador;1;3202900;#comparecimento;;;4951;
+governador;1;3202900;#eleitorado;;;5058;
+governador;1;3203007;_PDT;PDT;PDT;50;
+governador;1;3203007;_PTPSB;PT-PSB;PT;259;
+governador;1;3203007;_MAXMAURO;MAX MAURO;PMDB;7244;S
+governador;1;3203007;_PFL;PFL;PFL;4223;
+governador;1;3203007;#brancos;;;1851;
+governador;1;3203007;#nulos;;;629;
+governador;1;3203007;#comparecimento;;;14256;
+governador;1;3203007;#eleitorado;;;14759;
+governador;1;3203056;_PDT;PDT;PDT;20;
+governador;1;3203056;_PTPSB;PT-PSB;PT;755;
+governador;1;3203056;_MAXMAURO;MAX MAURO;PMDB;2669;S
+governador;1;3203056;_PFL;PFL;PFL;1029;
+governador;1;3203056;#brancos;;;660;
+governador;1;3203056;#nulos;;;263;
+governador;1;3203056;#comparecimento;;;5396;
+governador;1;3203056;#eleitorado;;;5674;
+governador;1;3203106;_PDT;PDT;PDT;21;
+governador;1;3203106;_PTPSB;PT-PSB;PT;106;
+governador;1;3203106;_MAXMAURO;MAX MAURO;PMDB;3057;S
+governador;1;3203106;_PFL;PFL;PFL;1526;
+governador;1;3203106;#brancos;;;521;
+governador;1;3203106;#nulos;;;343;
+governador;1;3203106;#comparecimento;;;5574;
+governador;1;3203106;#eleitorado;;;5787;
+governador;1;3203205;_PDT;PDT;PDT;202;
+governador;1;3203205;_PTPSB;PT-PSB;PT;3679;
+governador;1;3203205;_MAXMAURO;MAX MAURO;PMDB;25275;S
+governador;1;3203205;_PFL;PFL;PFL;12319;
+governador;1;3203205;#brancos;;;6173;
+governador;1;3203205;#nulos;;;2104;
+governador;1;3203205;#comparecimento;;;49752;
+governador;1;3203205;#eleitorado;;;52551;
+governador;1;3203304;_PDT;PDT;PDT;26;
+governador;1;3203304;_PTPSB;PT-PSB;PT;271;
+governador;1;3203304;_MAXMAURO;MAX MAURO;PMDB;3648;S
+governador;1;3203304;_PFL;PFL;PFL;2210;
+governador;1;3203304;#brancos;;;594;
+governador;1;3203304;#nulos;;;191;
+governador;1;3203304;#comparecimento;;;6940;
+governador;1;3203304;#eleitorado;;;7295;
+governador;1;3203353;_PDT;PDT;PDT;21;
+governador;1;3203353;_PTPSB;PT-PSB;PT;181;
+governador;1;3203353;_MAXMAURO;MAX MAURO;PMDB;2969;S
+governador;1;3203353;_PFL;PFL;PFL;1199;
+governador;1;3203353;#brancos;;;488;
+governador;1;3203353;#nulos;;;143;
+governador;1;3203353;#comparecimento;;;5001;
+governador;1;3203353;#eleitorado;;;5136;
+governador;1;3203403;_PDT;PDT;PDT;46;
+governador;1;3203403;_PTPSB;PT-PSB;PT;152;
+governador;1;3203403;_MAXMAURO;MAX MAURO;PMDB;5969;S
+governador;1;3203403;_PFL;PFL;PFL;4318;
+governador;1;3203403;#brancos;;;1141;
+governador;1;3203403;#nulos;;;374;
+governador;1;3203403;#comparecimento;;;12000;
+governador;1;3203403;#eleitorado;;;12409;
+governador;1;3203502;_PDT;PDT;PDT;23;
+governador;1;3203502;_PTPSB;PT-PSB;PT;322;
+governador;1;3203502;_MAXMAURO;MAX MAURO;PMDB;4947;S
+governador;1;3203502;_PFL;PFL;PFL;2211;
+governador;1;3203502;#brancos;;;827;
+governador;1;3203502;#nulos;;;284;
+governador;1;3203502;#comparecimento;;;8614;
+governador;1;3203502;#eleitorado;;;9098;
+governador;1;3203601;_PDT;PDT;PDT;18;
+governador;1;3203601;_PTPSB;PT-PSB;PT;89;
+governador;1;3203601;_MAXMAURO;MAX MAURO;PMDB;2938;S
+governador;1;3203601;_PFL;PFL;PFL;1673;
+governador;1;3203601;#brancos;;;575;
+governador;1;3203601;#nulos;;;123;
+governador;1;3203601;#comparecimento;;;5416;
+governador;1;3203601;#eleitorado;;;5756;
+governador;1;3203700;_PDT;PDT;PDT;33;
+governador;1;3203700;_PTPSB;PT-PSB;PT;122;
+governador;1;3203700;_MAXMAURO;MAX MAURO;PMDB;4515;S
+governador;1;3203700;_PFL;PFL;PFL;2743;
+governador;1;3203700;#brancos;;;834;
+governador;1;3203700;#nulos;;;306;
+governador;1;3203700;#comparecimento;;;8553;
+governador;1;3203700;#eleitorado;;;8845;
+governador;1;3203809;_PDT;PDT;PDT;18;
+governador;1;3203809;_PTPSB;PT-PSB;PT;434;
+governador;1;3203809;_MAXMAURO;MAX MAURO;PMDB;4115;S
+governador;1;3203809;_PFL;PFL;PFL;2519;
+governador;1;3203809;#brancos;;;570;
+governador;1;3203809;#nulos;;;301;
+governador;1;3203809;#comparecimento;;;7957;
+governador;1;3203809;#eleitorado;;;8197;
+governador;1;3203908;_PDT;PDT;PDT;99;
+governador;1;3203908;_PTPSB;PT-PSB;PT;2248;
+governador;1;3203908;_MAXMAURO;MAX MAURO;PMDB;8495;S
+governador;1;3203908;_PFL;PFL;PFL;6123;
+governador;1;3203908;#brancos;;;2159;
+governador;1;3203908;#nulos;;;732;
+governador;1;3203908;#comparecimento;;;19856;
+governador;1;3203908;#eleitorado;;;20964;
+governador;1;3204005;_PDT;PDT;PDT;77;
+governador;1;3204005;_PTPSB;PT-PSB;PT;623;
+governador;1;3204005;_MAXMAURO;MAX MAURO;PMDB;7424;S
+governador;1;3204005;_PFL;PFL;PFL;4224;
+governador;1;3204005;#brancos;;;1687;
+governador;1;3204005;#nulos;;;504;
+governador;1;3204005;#comparecimento;;;14539;
+governador;1;3204005;#eleitorado;;;15369;
+governador;1;3204054;_PDT;PDT;PDT;49;
+governador;1;3204054;_PTPSB;PT-PSB;PT;294;
+governador;1;3204054;_MAXMAURO;MAX MAURO;PMDB;3822;S
+governador;1;3204054;_PFL;PFL;PFL;2031;
+governador;1;3204054;#brancos;;;1245;
+governador;1;3204054;#nulos;;;345;
+governador;1;3204054;#comparecimento;;;7786;
+governador;1;3204054;#eleitorado;;;8289;
+governador;1;3204104;_PDT;PDT;PDT;26;
+governador;1;3204104;_PTPSB;PT-PSB;PT;151;
+governador;1;3204104;_MAXMAURO;MAX MAURO;PMDB;5892;S
+governador;1;3204104;_PFL;PFL;PFL;2412;
+governador;1;3204104;#brancos;;;1137;
+governador;1;3204104;#nulos;;;226;
+governador;1;3204104;#comparecimento;;;9844;
+governador;1;3204104;#eleitorado;;;10389;
+governador;1;3204203;_PDT;PDT;PDT;22;
+governador;1;3204203;_PTPSB;PT-PSB;PT;63;
+governador;1;3204203;_MAXMAURO;MAX MAURO;PMDB;1959;S
+governador;1;3204203;_PFL;PFL;PFL;857;
+governador;1;3204203;#brancos;;;213;
+governador;1;3204203;#nulos;;;94;
+governador;1;3204203;#comparecimento;;;3208;
+governador;1;3204203;#eleitorado;;;3374;
+governador;1;3204302;_PDT;PDT;PDT;10;
+governador;1;3204302;_PTPSB;PT-PSB;PT;58;
+governador;1;3204302;_MAXMAURO;MAX MAURO;PMDB;2421;S
+governador;1;3204302;_PFL;PFL;PFL;1838;
+governador;1;3204302;#brancos;;;380;
+governador;1;3204302;#nulos;;;110;
+governador;1;3204302;#comparecimento;;;4817;
+governador;1;3204302;#eleitorado;;;5005;
+governador;1;3204351;_PDT;PDT;PDT;39;
+governador;1;3204351;_PTPSB;PT-PSB;PT;530;
+governador;1;3204351;_MAXMAURO;MAX MAURO;PMDB;4184;S
+governador;1;3204351;_PFL;PFL;PFL;1310;
+governador;1;3204351;#brancos;;;780;
+governador;1;3204351;#nulos;;;223;
+governador;1;3204351;#comparecimento;;;7066;
+governador;1;3204351;#eleitorado;;;7349;
+governador;1;3204401;_PDT;PDT;PDT;13;
+governador;1;3204401;_PTPSB;PT-PSB;PT;114;
+governador;1;3204401;_MAXMAURO;MAX MAURO;PMDB;2450;S
+governador;1;3204401;_PFL;PFL;PFL;2292;
+governador;1;3204401;#brancos;;;328;
+governador;1;3204401;#nulos;;;142;
+governador;1;3204401;#comparecimento;;;5339;
+governador;1;3204401;#eleitorado;;;5480;
+governador;1;3204500;_PDT;PDT;PDT;24;
+governador;1;3204500;_PTPSB;PT-PSB;PT;259;
+governador;1;3204500;_MAXMAURO;MAX MAURO;PMDB;5614;S
+governador;1;3204500;_PFL;PFL;PFL;2583;
+governador;1;3204500;#brancos;;;710;
+governador;1;3204500;#nulos;;;243;
+governador;1;3204500;#comparecimento;;;9433;
+governador;1;3204500;#eleitorado;;;9766;
+governador;1;3204609;_PDT;PDT;PDT;25;
+governador;1;3204609;_PTPSB;PT-PSB;PT;459;
+governador;1;3204609;_MAXMAURO;MAX MAURO;PMDB;7396;S
+governador;1;3204609;_PFL;PFL;PFL;2411;
+governador;1;3204609;#brancos;;;1002;
+governador;1;3204609;#nulos;;;300;
+governador;1;3204609;#comparecimento;;;11593;
+governador;1;3204609;#eleitorado;;;11870;
+governador;1;3204708;_PDT;PDT;PDT;62;
+governador;1;3204708;_PTPSB;PT-PSB;PT;1861;
+governador;1;3204708;_MAXMAURO;MAX MAURO;PMDB;8307;S
+governador;1;3204708;_PFL;PFL;PFL;4676;
+governador;1;3204708;#brancos;;;1814;
+governador;1;3204708;#nulos;;;634;
+governador;1;3204708;#comparecimento;;;17354;
+governador;1;3204708;#eleitorado;;;18590;
+governador;1;3204807;_PDT;PDT;PDT;27;
+governador;1;3204807;_PTPSB;PT-PSB;PT;143;
+governador;1;3204807;_MAXMAURO;MAX MAURO;PMDB;2575;S
+governador;1;3204807;_PFL;PFL;PFL;2081;
+governador;1;3204807;#brancos;;;590;
+governador;1;3204807;#nulos;;;141;
+governador;1;3204807;#comparecimento;;;5557;
+governador;1;3204807;#eleitorado;;;5768;
+governador;1;3204906;_PDT;PDT;PDT;97;
+governador;1;3204906;_PTPSB;PT-PSB;PT;2110;
+governador;1;3204906;_MAXMAURO;MAX MAURO;PMDB;10216;S
+governador;1;3204906;_PFL;PFL;PFL;5910;
+governador;1;3204906;#brancos;;;3391;
+governador;1;3204906;#nulos;;;1255;
+governador;1;3204906;#comparecimento;;;22979;
+governador;1;3204906;#eleitorado;;;24386;
+governador;1;3205002;_PDT;PDT;PDT;382;
+governador;1;3205002;_PTPSB;PT-PSB;PT;8920;
+governador;1;3205002;_MAXMAURO;MAX MAURO;PMDB;31351;S
+governador;1;3205002;_PFL;PFL;PFL;18581;
+governador;1;3205002;#brancos;;;5604;
+governador;1;3205002;#nulos;;;2713;
+governador;1;3205002;#comparecimento;;;67551;
+governador;1;3205002;#eleitorado;;;71143;
+governador;1;3205101;_PDT;PDT;PDT;75;
+governador;1;3205101;_PTPSB;PT-PSB;PT;1114;
+governador;1;3205101;_MAXMAURO;MAX MAURO;PMDB;7228;S
+governador;1;3205101;_PFL;PFL;PFL;4451;
+governador;1;3205101;#brancos;;;1493;
+governador;1;3205101;#nulos;;;628;
+governador;1;3205101;#comparecimento;;;14989;
+governador;1;3205101;#eleitorado;;;15581;
+governador;1;3205200;_PDT;PDT;PDT;610;
+governador;1;3205200;_PTPSB;PT-PSB;PT;15089;
+governador;1;3205200;_MAXMAURO;MAX MAURO;PMDB;57546;S
+governador;1;3205200;_PFL;PFL;PFL;35572;
+governador;1;3205200;#brancos;;;6471;
+governador;1;3205200;#nulos;;;3818;
+governador;1;3205200;#comparecimento;;;119106;
+governador;1;3205200;#eleitorado;;;125090;

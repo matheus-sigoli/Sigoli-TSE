@@ -1,9 +1,8 @@
 {
-  "mg-1960-gov": "/1960/mg/governador",
-  "mg-1955-gov": "/1955/mg/governador",
-  "mg-1965-gov": "/1965/mg/governador",
-  "rs-1962-gov": "/1962/rs/governador",
-  "mt-1986-gov": "/1986/mt/governador",
-  "ro-1990-gov": "/1990/ro/governador",
-  "mg-1947-gov@cel": "/1947/mg/governador"
+  "ba-1950-gov": "/1950/ba/governador",
+  "ba-1947-gov": "/1947/ba/governador",
+  "rj-1986-gov": "/1986/rj/governador",
+  "es-1986-gov": "/1986/es/governador",
+  "br-1986-gov": "/1986/br/governador",
+  "mg-1960-gov@cel": "/1960/mg/governador"
 }
