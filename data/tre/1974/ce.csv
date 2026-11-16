@@ -1,0 +1,565 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+senador;1;2304400;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;53460;
+senador;1;2300101;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;738;
+senador;1;2300200;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;5740;
+senador;1;2300309;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;7200;
+senador;1;2300408;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;726;
+senador;1;2300507;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1344;
+senador;1;2300606;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;861;
+senador;1;2300705;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1142;
+senador;1;2300804;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;529;
+senador;1;2300903;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2790;
+senador;1;2301000;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2850;
+senador;1;2301109;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;6010;
+senador;1;2301208;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2750;
+senador;1;2301307;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1336;
+senador;1;2301406;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;892;
+senador;1;2301505;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1258;
+senador;1;2301604;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1497;
+senador;1;2301703;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3022;
+senador;1;2304400;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;165303;S
+senador;1;2300101;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;436;S
+senador;1;2300200;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;4935;S
+senador;1;2300309;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2209;S
+senador;1;2300408;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1244;S
+senador;1;2300507;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;303;S
+senador;1;2300606;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;133;S
+senador;1;2300705;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2194;S
+senador;1;2300804;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;313;S
+senador;1;2300903;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;785;S
+senador;1;2301000;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2973;S
+senador;1;2301109;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;4430;S
+senador;1;2301208;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3241;S
+senador;1;2301307;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1027;S
+senador;1;2301406;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;820;S
+senador;1;2301505;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;156;S
+senador;1;2301604;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1382;S
+senador;1;2301703;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2264;S
+senador;1;2304400;#brancos;;;13523;
+senador;1;2300101;#brancos;;;103;
+senador;1;2300200;#brancos;;;872;
+senador;1;2300309;#brancos;;;667;
+senador;1;2300408;#brancos;;;159;
+senador;1;2300507;#brancos;;;202;
+senador;1;2300606;#brancos;;;126;
+senador;1;2300705;#brancos;;;431;
+senador;1;2300804;#brancos;;;53;
+senador;1;2300903;#brancos;;;383;
+senador;1;2301000;#brancos;;;650;
+senador;1;2301109;#brancos;;;914;
+senador;1;2301208;#brancos;;;497;
+senador;1;2301307;#brancos;;;301;
+senador;1;2301406;#brancos;;;90;
+senador;1;2301505;#brancos;;;145;
+senador;1;2301604;#brancos;;;350;
+senador;1;2301703;#brancos;;;938;
+senador;1;2304400;#nulos;;;11844;
+senador;1;2300101;#nulos;;;40;
+senador;1;2300200;#nulos;;;310;
+senador;1;2300309;#nulos;;;249;
+senador;1;2300408;#nulos;;;25;
+senador;1;2300507;#nulos;;;61;
+senador;1;2300606;#nulos;;;14;
+senador;1;2300705;#nulos;;;165;
+senador;1;2300804;#nulos;;;24;
+senador;1;2300903;#nulos;;;120;
+senador;1;2301000;#nulos;;;323;
+senador;1;2301109;#nulos;;;259;
+senador;1;2301208;#nulos;;;251;
+senador;1;2301307;#nulos;;;99;
+senador;1;2301406;#nulos;;;31;
+senador;1;2301505;#nulos;;;37;
+senador;1;2301604;#nulos;;;152;
+senador;1;2301703;#nulos;;;186;
+senador;1;2301802;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;914;
+senador;1;2301901;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2414;
+senador;1;2302008;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1773;
+senador;1;2302107;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2466;
+senador;1;2302206;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2680;
+senador;1;2302305;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1693;
+senador;1;2302404;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;4907;
+senador;1;2302503;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1779;
+senador;1;2302602;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;5723;
+senador;1;2302701;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2484;
+senador;1;2302800;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3557;
+senador;1;2302909;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1194;
+senador;1;2303006;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1663;
+senador;1;2303105;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3242;
+senador;1;2303204;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1415;
+senador;1;2303303;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2032;
+senador;1;2303402;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;788;
+senador;1;2303501;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;4109;
+senador;1;2301802;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;541;S
+senador;1;2301901;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2741;S
+senador;1;2302008;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1538;S
+senador;1;2302107;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2873;S
+senador;1;2302206;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2662;S
+senador;1;2302305;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1234;S
+senador;1;2302404;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;4185;S
+senador;1;2302503;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2663;S
+senador;1;2302602;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1735;S
+senador;1;2302701;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1635;S
+senador;1;2302800;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;5426;S
+senador;1;2302909;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;951;S
+senador;1;2303006;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1202;S
+senador;1;2303105;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1125;S
+senador;1;2303204;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2256;S
+senador;1;2303303;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1251;S
+senador;1;2303402;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;369;S
+senador;1;2303501;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;5167;S
+senador;1;2301802;#brancos;;;153;
+senador;1;2301901;#brancos;;;676;
+senador;1;2302008;#brancos;;;406;
+senador;1;2302107;#brancos;;;308;
+senador;1;2302206;#brancos;;;939;
+senador;1;2302305;#brancos;;;260;
+senador;1;2302404;#brancos;;;930;
+senador;1;2302503;#brancos;;;498;
+senador;1;2302602;#brancos;;;1333;
+senador;1;2302701;#brancos;;;352;
+senador;1;2302800;#brancos;;;810;
+senador;1;2302909;#brancos;;;132;
+senador;1;2303006;#brancos;;;345;
+senador;1;2303105;#brancos;;;515;
+senador;1;2303204;#brancos;;;404;
+senador;1;2303303;#brancos;;;267;
+senador;1;2303402;#brancos;;;103;
+senador;1;2303501;#brancos;;;902;
+senador;1;2301802;#nulos;;;38;
+senador;1;2301901;#nulos;;;216;
+senador;1;2302008;#nulos;;;159;
+senador;1;2302107;#nulos;;;195;
+senador;1;2302206;#nulos;;;234;
+senador;1;2302305;#nulos;;;87;
+senador;1;2302404;#nulos;;;425;
+senador;1;2302503;#nulos;;;220;
+senador;1;2302602;#nulos;;;377;
+senador;1;2302701;#nulos;;;139;
+senador;1;2302800;#nulos;;;336;
+senador;1;2302909;#nulos;;;101;
+senador;1;2303006;#nulos;;;90;
+senador;1;2303105;#nulos;;;163;
+senador;1;2303204;#nulos;;;148;
+senador;1;2303303;#nulos;;;151;
+senador;1;2303402;#nulos;;;30;
+senador;1;2303501;#nulos;;;378;
+senador;1;2303600;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1261;
+senador;1;2303709;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;7844;
+senador;1;2303808;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3719;
+senador;1;2303907;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1127;
+senador;1;2304004;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2157;
+senador;1;2304103;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;7048;
+senador;1;2304202;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;5720;
+senador;1;2304301;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2059;
+senador;1;2304509;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1262;
+senador;1;2304608;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;993;
+senador;1;2304707;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2654;
+senador;1;2304806;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;604;
+senador;1;2304905;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;636;
+senador;1;2305001;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1865;
+senador;1;2305100;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;501;
+senador;1;2305209;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1444;
+senador;1;2305308;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1623;
+senador;1;2305407;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;5067;
+senador;1;2303600;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;588;S
+senador;1;2303709;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;9249;S
+senador;1;2303808;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2805;S
+senador;1;2303907;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;804;S
+senador;1;2304004;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1316;S
+senador;1;2304103;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;6042;S
+senador;1;2304202;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;10794;S
+senador;1;2304301;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1468;S
+senador;1;2304509;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;277;S
+senador;1;2304608;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;269;S
+senador;1;2304707;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3486;S
+senador;1;2304806;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;281;S
+senador;1;2304905;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;983;S
+senador;1;2305001;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3525;S
+senador;1;2305100;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;692;S
+senador;1;2305209;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1473;S
+senador;1;2305308;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;426;S
+senador;1;2305407;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2388;S
+senador;1;2303600;#brancos;;;129;
+senador;1;2303709;#brancos;;;1499;
+senador;1;2303808;#brancos;;;558;
+senador;1;2303907;#brancos;;;203;
+senador;1;2304004;#brancos;;;349;
+senador;1;2304103;#brancos;;;650;
+senador;1;2304202;#brancos;;;1863;
+senador;1;2304301;#brancos;;;300;
+senador;1;2304509;#brancos;;;215;
+senador;1;2304608;#brancos;;;161;
+senador;1;2304707;#brancos;;;612;
+senador;1;2304806;#brancos;;;116;
+senador;1;2304905;#brancos;;;75;
+senador;1;2305001;#brancos;;;256;
+senador;1;2305100;#brancos;;;92;
+senador;1;2305209;#brancos;;;202;
+senador;1;2305308;#brancos;;;261;
+senador;1;2305407;#brancos;;;461;
+senador;1;2303600;#nulos;;;41;
+senador;1;2303709;#nulos;;;1084;
+senador;1;2303808;#nulos;;;299;
+senador;1;2303907;#nulos;;;77;
+senador;1;2304004;#nulos;;;98;
+senador;1;2304103;#nulos;;;414;
+senador;1;2304202;#nulos;;;807;
+senador;1;2304301;#nulos;;;97;
+senador;1;2304509;#nulos;;;45;
+senador;1;2304608;#nulos;;;71;
+senador;1;2304707;#nulos;;;201;
+senador;1;2304806;#nulos;;;32;
+senador;1;2304905;#nulos;;;36;
+senador;1;2305001;#nulos;;;78;
+senador;1;2305100;#nulos;;;38;
+senador;1;2305209;#nulos;;;108;
+senador;1;2305308;#nulos;;;116;
+senador;1;2305407;#nulos;;;265;
+senador;1;2305506;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;8713;
+senador;1;2305605;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;4856;
+senador;1;2305704;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2540;
+senador;1;2305803;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;4695;
+senador;1;2305902;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3246;
+senador;1;2306009;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2440;
+senador;1;2306108;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1600;
+senador;1;2306207;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;762;
+senador;1;2306306;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;4316;
+senador;1;2306405;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;7957;
+senador;1;2306504;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1639;
+senador;1;2306603;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1265;
+senador;1;2306702;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1861;
+senador;1;2306801;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1194;
+senador;1;2306900;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3886;
+senador;1;2307007;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3381;
+senador;1;2307106;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2442;
+senador;1;2307205;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;276;
+senador;1;2305506;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;6432;S
+senador;1;2305605;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3446;S
+senador;1;2305704;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;688;S
+senador;1;2305803;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2786;S
+senador;1;2305902;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2850;S
+senador;1;2306009;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1548;S
+senador;1;2306108;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1533;S
+senador;1;2306207;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;585;S
+senador;1;2306306;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3869;S
+senador;1;2306405;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;8409;S
+senador;1;2306504;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;799;S
+senador;1;2306603;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;868;S
+senador;1;2306702;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2519;S
+senador;1;2306801;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1025;S
+senador;1;2306900;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3325;S
+senador;1;2307007;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2099;S
+senador;1;2307106;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2192;S
+senador;1;2307205;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;793;S
+senador;1;2305506;#brancos;;;522;
+senador;1;2305605;#brancos;;;582;
+senador;1;2305704;#brancos;;;267;
+senador;1;2305803;#brancos;;;553;
+senador;1;2305902;#brancos;;;404;
+senador;1;2306009;#brancos;;;290;
+senador;1;2306108;#brancos;;;279;
+senador;1;2306207;#brancos;;;113;
+senador;1;2306306;#brancos;;;1161;
+senador;1;2306405;#brancos;;;1521;
+senador;1;2306504;#brancos;;;274;
+senador;1;2306603;#brancos;;;229;
+senador;1;2306702;#brancos;;;248;
+senador;1;2306801;#brancos;;;118;
+senador;1;2306900;#brancos;;;452;
+senador;1;2307007;#brancos;;;431;
+senador;1;2307106;#brancos;;;377;
+senador;1;2307205;#brancos;;;137;
+senador;1;2305506;#nulos;;;320;
+senador;1;2305605;#nulos;;;322;
+senador;1;2305704;#nulos;;;64;
+senador;1;2305803;#nulos;;;227;
+senador;1;2305902;#nulos;;;138;
+senador;1;2306009;#nulos;;;148;
+senador;1;2306108;#nulos;;;111;
+senador;1;2306207;#nulos;;;32;
+senador;1;2306306;#nulos;;;513;
+senador;1;2306405;#nulos;;;549;
+senador;1;2306504;#nulos;;;85;
+senador;1;2306603;#nulos;;;77;
+senador;1;2306702;#nulos;;;108;
+senador;1;2306801;#nulos;;;31;
+senador;1;2306900;#nulos;;;220;
+senador;1;2307007;#nulos;;;175;
+senador;1;2307106;#nulos;;;58;
+senador;1;2307205;#nulos;;;28;
+senador;1;2307304;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;8675;
+senador;1;2307403;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3013;
+senador;1;2307502;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3364;
+senador;1;2307601;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3863;
+senador;1;2307700;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;7396;
+senador;1;2307809;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1685;
+senador;1;2307908;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;832;
+senador;1;2308005;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2619;
+senador;1;2308104;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3534;
+senador;1;2308203;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1205;
+senador;1;2308302;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1674;
+senador;1;2308401;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2159;
+senador;1;2308500;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;5750;
+senador;1;2308609;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1608;
+senador;1;2308708;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2989;
+senador;1;2308807;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;807;
+senador;1;2308906;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1355;
+senador;1;2309003;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1360;
+senador;1;2307304;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;9990;S
+senador;1;2307403;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2342;S
+senador;1;2307502;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2523;S
+senador;1;2307601;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3412;S
+senador;1;2307700;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;9613;S
+senador;1;2307809;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1430;S
+senador;1;2307908;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;399;S
+senador;1;2308005;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2442;S
+senador;1;2308104;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1310;S
+senador;1;2308203;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1066;S
+senador;1;2308302;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1509;S
+senador;1;2308401;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2627;S
+senador;1;2308500;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;5190;S
+senador;1;2308609;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1393;S
+senador;1;2308708;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;8900;S
+senador;1;2308807;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;354;S
+senador;1;2308906;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1392;S
+senador;1;2309003;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;837;S
+senador;1;2307304;#brancos;;;1619;
+senador;1;2307403;#brancos;;;271;
+senador;1;2307502;#brancos;;;775;
+senador;1;2307601;#brancos;;;364;
+senador;1;2307700;#brancos;;;1410;
+senador;1;2307809;#brancos;;;251;
+senador;1;2307908;#brancos;;;66;
+senador;1;2308005;#brancos;;;330;
+senador;1;2308104;#brancos;;;650;
+senador;1;2308203;#brancos;;;290;
+senador;1;2308302;#brancos;;;280;
+senador;1;2308401;#brancos;;;647;
+senador;1;2308500;#brancos;;;465;
+senador;1;2308609;#brancos;;;169;
+senador;1;2308708;#brancos;;;891;
+senador;1;2308807;#brancos;;;143;
+senador;1;2308906;#brancos;;;137;
+senador;1;2309003;#brancos;;;114;
+senador;1;2307304;#nulos;;;761;
+senador;1;2307403;#nulos;;;133;
+senador;1;2307502;#nulos;;;318;
+senador;1;2307601;#nulos;;;158;
+senador;1;2307700;#nulos;;;779;
+senador;1;2307809;#nulos;;;81;
+senador;1;2307908;#nulos;;;24;
+senador;1;2308005;#nulos;;;172;
+senador;1;2308104;#nulos;;;153;
+senador;1;2308203;#nulos;;;125;
+senador;1;2308302;#nulos;;;90;
+senador;1;2308401;#nulos;;;208;
+senador;1;2308500;#nulos;;;195;
+senador;1;2308609;#nulos;;;131;
+senador;1;2308708;#nulos;;;542;
+senador;1;2308807;#nulos;;;41;
+senador;1;2308906;#nulos;;;41;
+senador;1;2309003;#nulos;;;43;
+senador;1;2309102;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;769;
+senador;1;2309201;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;820;
+senador;1;2309300;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3937;
+senador;1;2309409;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1202;
+senador;1;2309508;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2308;
+senador;1;2309607;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3462;
+senador;1;2309706;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3223;
+senador;1;2309805;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1562;
+senador;1;2309904;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1392;
+senador;1;2310001;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;653;
+senador;1;2310100;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1382;
+senador;1;2310209;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3349;
+senador;1;2310308;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2433;
+senador;1;2310407;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1140;
+senador;1;2310506;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3652;
+senador;1;2310605;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;228;
+senador;1;2310704;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;6204;
+senador;1;2310803;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1895;
+senador;1;2309102;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;738;S
+senador;1;2309201;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;558;S
+senador;1;2309300;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2999;S
+senador;1;2309409;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1648;S
+senador;1;2309508;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1317;S
+senador;1;2309607;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3580;S
+senador;1;2309706;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;5081;S
+senador;1;2309805;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;762;S
+senador;1;2309904;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;86;S
+senador;1;2310001;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;469;S
+senador;1;2310100;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;853;S
+senador;1;2310209;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1989;S
+senador;1;2310308;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2061;S
+senador;1;2310407;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;453;S
+senador;1;2310506;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2648;S
+senador;1;2310605;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;580;S
+senador;1;2310704;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2188;S
+senador;1;2310803;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1436;S
+senador;1;2309102;#brancos;;;86;
+senador;1;2309201;#brancos;;;176;
+senador;1;2309300;#brancos;;;469;
+senador;1;2309409;#brancos;;;162;
+senador;1;2309508;#brancos;;;356;
+senador;1;2309607;#brancos;;;753;
+senador;1;2309706;#brancos;;;584;
+senador;1;2309805;#brancos;;;148;
+senador;1;2309904;#brancos;;;73;
+senador;1;2310001;#brancos;;;71;
+senador;1;2310100;#brancos;;;186;
+senador;1;2310209;#brancos;;;656;
+senador;1;2310308;#brancos;;;321;
+senador;1;2310407;#brancos;;;149;
+senador;1;2310506;#brancos;;;682;
+senador;1;2310605;#brancos;;;148;
+senador;1;2310704;#brancos;;;786;
+senador;1;2310803;#brancos;;;344;
+senador;1;2309102;#nulos;;;46;
+senador;1;2309201;#nulos;;;76;
+senador;1;2309300;#nulos;;;173;
+senador;1;2309409;#nulos;;;50;
+senador;1;2309508;#nulos;;;173;
+senador;1;2309607;#nulos;;;445;
+senador;1;2309706;#nulos;;;412;
+senador;1;2309805;#nulos;;;76;
+senador;1;2309904;#nulos;;;16;
+senador;1;2310001;#nulos;;;36;
+senador;1;2310100;#nulos;;;78;
+senador;1;2310209;#nulos;;;178;
+senador;1;2310308;#nulos;;;127;
+senador;1;2310407;#nulos;;;33;
+senador;1;2310506;#nulos;;;372;
+senador;1;2310605;#nulos;;;31;
+senador;1;2310704;#nulos;;;454;
+senador;1;2310803;#nulos;;;182;
+senador;1;2310902;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1026;
+senador;1;2311009;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;266;
+senador;1;2311108;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;308;
+senador;1;2311207;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1121;
+senador;1;2311306;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;7269;
+senador;1;2311405;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;6166;
+senador;1;2311504;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1553;
+senador;1;2311603;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;4879;
+senador;1;2311702;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2711;
+senador;1;2311801;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3952;
+senador;1;2311900;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2114;
+senador;1;2312205;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3815;
+senador;1;2312007;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2380;
+senador;1;2312106;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1249;
+senador;1;2312304;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;4418;
+senador;1;2312403;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2302;
+senador;1;2312502;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1695;
+senador;1;2312601;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1113;
+senador;1;2310902;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2192;S
+senador;1;2311009;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;943;S
+senador;1;2311108;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1469;S
+senador;1;2311207;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;312;S
+senador;1;2311306;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;9636;S
+senador;1;2311405;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;9314;S
+senador;1;2311504;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1115;S
+senador;1;2311603;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3768;S
+senador;1;2311702;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2972;S
+senador;1;2311801;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;4949;S
+senador;1;2311900;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;306;S
+senador;1;2312205;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3396;S
+senador;1;2312007;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3690;S
+senador;1;2312106;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;786;S
+senador;1;2312304;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2902;S
+senador;1;2312403;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1966;S
+senador;1;2312502;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;732;S
+senador;1;2312601;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1153;S
+senador;1;2310902;#brancos;;;294;
+senador;1;2311009;#brancos;;;107;
+senador;1;2311108;#brancos;;;161;
+senador;1;2311207;#brancos;;;117;
+senador;1;2311306;#brancos;;;1379;
+senador;1;2311405;#brancos;;;1183;
+senador;1;2311504;#brancos;;;132;
+senador;1;2311603;#brancos;;;912;
+senador;1;2311702;#brancos;;;322;
+senador;1;2311801;#brancos;;;432;
+senador;1;2311900;#brancos;;;139;
+senador;1;2312205;#brancos;;;742;
+senador;1;2312007;#brancos;;;234;
+senador;1;2312106;#brancos;;;184;
+senador;1;2312304;#brancos;;;513;
+senador;1;2312403;#brancos;;;655;
+senador;1;2312502;#brancos;;;148;
+senador;1;2312601;#brancos;;;170;
+senador;1;2310902;#nulos;;;111;
+senador;1;2311009;#nulos;;;11;
+senador;1;2311108;#nulos;;;55;
+senador;1;2311207;#nulos;;;44;
+senador;1;2311306;#nulos;;;782;
+senador;1;2311405;#nulos;;;419;
+senador;1;2311504;#nulos;;;41;
+senador;1;2311603;#nulos;;;465;
+senador;1;2311702;#nulos;;;150;
+senador;1;2311801;#nulos;;;199;
+senador;1;2311900;#nulos;;;68;
+senador;1;2312205;#nulos;;;241;
+senador;1;2312007;#nulos;;;58;
+senador;1;2312106;#nulos;;;69;
+senador;1;2312304;#nulos;;;137;
+senador;1;2312403;#nulos;;;315;
+senador;1;2312502;#nulos;;;75;
+senador;1;2312601;#nulos;;;72;
+senador;1;2312700;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2791;
+senador;1;2312809;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;669;
+senador;1;2312908;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;8197;
+senador;1;2313005;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3727;
+senador;1;2313104;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2247;
+senador;1;2313203;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3313;
+senador;1;2313302;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;5054;
+senador;1;2313401;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3496;
+senador;1;2313500;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2037;
+senador;1;2313609;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;2475;
+senador;1;2313708;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1464;
+senador;1;2313807;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3122;
+senador;1;2313906;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;1426;
+senador;1;2314003;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3389;
+senador;1;2314102;_JOSEEDILSONDEMELOTAVORA;José Edilson De Melo Távora;ARENA;3143;
+senador;1;2312700;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;3615;S
+senador;1;2312809;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;420;S
+senador;1;2312908;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;13867;S
+senador;1;2313005;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;4586;S
+senador;1;2313104;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2698;S
+senador;1;2313203;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1322;S
+senador;1;2313302;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;4787;S
+senador;1;2313401;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1175;S
+senador;1;2313500;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;1232;S
+senador;1;2313609;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;980;S
+senador;1;2313708;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;616;S
+senador;1;2313807;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2674;S
+senador;1;2313906;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;639;S
+senador;1;2314003;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2935;S
+senador;1;2314102;_CARLOSMAUROCABRALBENEVIDES;Carlos Mauro Cabral Benevides;MDB;2470;S
+senador;1;2312700;#brancos;;;548;
+senador;1;2312809;#brancos;;;70;
+senador;1;2312908;#brancos;;;1228;
+senador;1;2313005;#brancos;;;605;
+senador;1;2313104;#brancos;;;302;
+senador;1;2313203;#brancos;;;514;
+senador;1;2313302;#brancos;;;1221;
+senador;1;2313401;#brancos;;;623;
+senador;1;2313500;#brancos;;;508;
+senador;1;2313609;#brancos;;;368;
+senador;1;2313708;#brancos;;;193;
+senador;1;2313807;#brancos;;;393;
+senador;1;2313906;#brancos;;;156;
+senador;1;2314003;#brancos;;;603;
+senador;1;2314102;#brancos;;;269;
+senador;1;2312700;#nulos;;;187;
+senador;1;2312809;#nulos;;;38;
+senador;1;2312908;#nulos;;;1263;
+senador;1;2313005;#nulos;;;231;
+senador;1;2313104;#nulos;;;131;
+senador;1;2313203;#nulos;;;228;
+senador;1;2313302;#nulos;;;353;
+senador;1;2313401;#nulos;;;155;
+senador;1;2313500;#nulos;;;168;
+senador;1;2313609;#nulos;;;107;
+senador;1;2313708;#nulos;;;57;
+senador;1;2313807;#nulos;;;227;
+senador;1;2313906;#nulos;;;51;
+senador;1;2314003;#nulos;;;215;
+senador;1;2314102;#nulos;;;92;

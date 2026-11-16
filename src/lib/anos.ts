@@ -70,13 +70,13 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
-    cargos: 'Governador (por enquanto AC, AL, AP, CE, ES, MA, MG, MS, MT, PA, RJ, RN, RO, RS e SP), Senador (CE, MS, PA, RN, RO e RS) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, MA, MG, MS, MT, PA, RJ, RN, RO, RS e SP), Senador (CE, MS, PA, RN, RO e RS) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'Acervo Sigoli.TSE e TREs (por município)',
   },
   {
     ano: 1986, titulo: 'Eleições 1986', datas: '15 de novembro',
-    cargos: 'Governador (por enquanto CE, ES, MA, MG, MS, MT, RJ, RS, SE e SP), Senador (CE, MS e RS) e Deputados (CE e RS)', disponivel: true, rota: '/1986/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
+    cargos: 'Governador (por enquanto BA, CE, ES, MA, MG, MS, MT, PE, RJ, RS, SE e SP), Senador (CE, MS, PE e RS) e Deputados (CE e RS)', disponivel: true, rota: '/1986/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'Acervo Sigoli.TSE e TREs (por município)',
   },
   {
@@ -86,15 +86,15 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1978, titulo: 'Eleições 1978', datas: '15 de novembro',
-    cargos: 'Senador (SP, RS e MT) e Deputados (RS)', disponivel: true, rota: '/1978/sp/senador', semLocais: true, semZonas: true,
+    cargos: 'Senador (CE, MT, PE, RS e SP; PE por partido) e Deputados (CE e RS)', disponivel: true, rota: '/1978/sp/senador', semLocais: true, semZonas: true,
     soCargos: ['senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'Acervo Sigoli.TSE e TRE-RS (por município)',
+    fonte: 'Acervo Sigoli.TSE, TRE-CE, TRE-PE e TRE-RS (por município)',
   },
   {
     ano: 1974, titulo: 'Eleições 1974', datas: '15 de novembro',
-    cargos: 'Senador (RS e SP) e Deputados (RS)', disponivel: true, rota: '/1974/sp/senador', semLocais: true, semZonas: true,
+    cargos: 'Senador (CE, RS e SP) e Deputados (RS)', disponivel: true, rota: '/1974/sp/senador', semLocais: true, semZonas: true,
     soCargos: ['senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS e acervo Sigoli.TSE (por município)',
+    fonte: 'TRE-RS, TRE-CE e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1970, titulo: 'Eleições 1970', datas: '15 de novembro',
@@ -104,9 +104,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1966, titulo: 'Eleições 1966', datas: '15 de novembro',
-    cargos: 'Senador e Deputado Federal (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1966/rs/senador', semLocais: true, semZonas: true,
-    soCargos: ['senador', 'deputado-federal'],
-    fonte: 'TRE-RS (por município)',
+    cargos: 'Senador e Deputado Federal (CE e RS) e Deputado Estadual (CE)', disponivel: true, rota: '/1966/ce/senador', semLocais: true, semZonas: true,
+    soCargos: ['senador', 'deputado-federal', 'deputado-estadual'],
+    fonte: 'TRE-RS e TRE-CE (por município)',
   },
   {
     ano: 1965, titulo: 'Eleições 1965', datas: '3 de outubro',
@@ -128,7 +128,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1958, titulo: 'Eleições 1958', datas: '3 de outubro',
-    cargos: 'Governador (RS e SP), Senador e Deputados (RS)', disponivel: true, rota: '/1958/sp/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (CE, RS e SP), Senador (CE e RS) e Deputados (RS)', disponivel: true, rota: '/1958/ce/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'TRE-RS e acervo Sigoli.TSE (por município)',
   },
@@ -140,15 +140,15 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1954, titulo: 'Eleições 1954', datas: '3 de outubro',
-    cargos: 'Governador, Senador e Deputados (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1954/rs/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador e Senador (CE e RS) e Deputados (RS)', disponivel: true, rota: '/1954/ce/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS (por município)',
+    fonte: 'TRE-RS e TRE-CE (por município)',
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto AL, BA e MA)', disponivel: true, rota: '/1950/ba/governador', semLocais: true, semZonas: true,
-    soCargos: ['governador'],
-    fonte: 'TRE-BA e acervo Sigoli.TSE (por município)',
+    cargos: 'Governador (por enquanto AL, BA, CE e MA) e Senador (CE)', disponivel: true, rota: '/1950/ba/governador', semLocais: true, semZonas: true,
+    soCargos: ['governador', 'senador'],
+    fonte: 'TRE-BA, TRE-CE e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1947, titulo: 'Eleições 1947', datas: '19 de janeiro',
