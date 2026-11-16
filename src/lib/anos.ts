@@ -76,7 +76,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1986, titulo: 'Eleições 1986', datas: '15 de novembro',
-    cargos: 'Governador (por enquanto CE, ES, MA, MG, MS, MT, RJ, RS e SP), Senador (CE, MS e RS) e Deputados (CE e RS)', disponivel: true, rota: '/1986/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
+    cargos: 'Governador (por enquanto CE, ES, MA, MG, MS, MT, RJ, RS, SE e SP), Senador (CE, MS e RS) e Deputados (CE e RS)', disponivel: true, rota: '/1986/sp/governador', semLocais: true, semZonas: true, soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'Acervo Sigoli.TSE e TREs (por município)',
   },
   {
@@ -92,9 +92,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1974, titulo: 'Eleições 1974', datas: '15 de novembro',
-    cargos: 'Senador e Deputados (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1974/rs/senador', semLocais: true, semZonas: true,
+    cargos: 'Senador (RS e SP) e Deputados (RS)', disponivel: true, rota: '/1974/sp/senador', semLocais: true, semZonas: true,
     soCargos: ['senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS (por município)',
+    fonte: 'TRE-RS e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1970, titulo: 'Eleições 1970', datas: '15 de novembro',
@@ -110,33 +110,33 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1965, titulo: 'Eleições 1965', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto MG, MT e RN)', disponivel: true, rota: '/1965/mg/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AL, MA, MG, MT e RN)', disponivel: true, rota: '/1965/mg/governador', semLocais: true, semZonas: true,
     soCargos: ['governador'],
     fonte: 'TRE-MG e planilhas do acervo (por município)',
   },
   {
     ano: 1962, titulo: 'Eleições 1962', datas: '7 de outubro',
-    cargos: 'Governador, Senador e Deputados (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1962/rs/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador e Senador (RS e PE; PE por zona eleitoral) e Deputados (RS)', disponivel: true, rota: '/1962/pe/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS (por município)',
+    fonte: 'TRE-RS (por município) e TRE-PE, Relatório Final das Eleições de 1962 (por zona eleitoral)',
   },
   {
     ano: 1960, titulo: 'Eleições 1960', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto só Minas Gerais)', disponivel: true, rota: '/1960/mg/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AL e MG)', disponivel: true, rota: '/1960/mg/governador', semLocais: true, semZonas: true,
     soCargos: ['governador'],
-    fonte: 'TRE-MG (por município)',
+    fonte: 'TRE-MG e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1958, titulo: 'Eleições 1958', datas: '3 de outubro',
-    cargos: 'Governador, Senador e Deputados (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1958/rs/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (RS e SP), Senador e Deputados (RS)', disponivel: true, rota: '/1958/sp/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS (por município)',
+    fonte: 'TRE-RS e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1955, titulo: 'Eleições 1955', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto só Minas Gerais, por zona eleitoral)', disponivel: true, rota: '/1955/mg/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AL, MG e MT; MG por zona eleitoral)', disponivel: true, rota: '/1955/mg/governador', semLocais: true, semZonas: true,
     soCargos: ['governador'],
-    fonte: 'TRE-MG (por zona eleitoral)',
+    fonte: 'TRE-MG (por zona eleitoral) e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1954, titulo: 'Eleições 1954', datas: '3 de outubro',
@@ -146,15 +146,15 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto só Bahia)', disponivel: true, rota: '/1950/ba/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AL, BA e MA)', disponivel: true, rota: '/1950/ba/governador', semLocais: true, semZonas: true,
     soCargos: ['governador'],
-    fonte: 'TRE-BA (por município)',
+    fonte: 'TRE-BA e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1947, titulo: 'Eleições 1947', datas: '19 de janeiro',
-    cargos: 'Governador (por enquanto BA e MG; MG por zona eleitoral)', disponivel: true, rota: '/1947/mg/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto BA, MG e SP; MG por zona eleitoral)', disponivel: true, rota: '/1947/mg/governador', semLocais: true, semZonas: true,
     soCargos: ['governador'],
-    fonte: 'TRE-MG (por zona eleitoral) e TRE-BA (por município)',
+    fonte: 'TRE-MG (por zona eleitoral), TRE-BA e acervo Sigoli.TSE (por município)',
   },
 ];
 

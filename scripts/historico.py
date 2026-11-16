@@ -30,7 +30,7 @@ def sem_acento(s):
 ABA = re.compile(r'^\s*(\d{4})\s*(?:(\d)\s*º?\s*T)?\s*(GOVERNADOR|SENADOR|PRESIDENTE)?\s*$', re.I)
 TOTAIS = {'APTOS': 0, 'ELEITORADO': 0, 'ELEITORES': 0, 'ELEITORADO APTO': 0, 'VOTANTE': 1, 'ABSTENCOES': 2, 'COMPARECIMENTO': 1, 'VOTANTES': 1, 'ABSTENCAO': 2, 'ABSTENCOES': 2, 'BRANCOS': 4, 'BRANCO': 4, 'NULOS': 5, 'NULO': 5}
 SENADO_2_VAGAS = {1986}
-IGNORAR = {'CDG', 'MUN', 'MUNICIPIO', 'MAPA', 'UF', 'MUN SEM ACENTO', 'VALIDOS', 'VOTOS VALIDOS', 'TOTAL'}
+IGNORAR = {'CDG', 'CODIGO', 'MUN', 'MUNICIPIO', 'MAPA', 'UF', 'MUN SEM ACENTO', 'VALIDOS', 'VOTOS VALIDOS', 'TOTAL'}
 
 def ler_candidatos(wb):
     if 'CANDIDATOS' not in [sem_acento(n) for n in wb.sheetnames]: return {}
@@ -73,10 +73,10 @@ def ler_candidatos_csv(pasta):
 def ler_aba(ws, por_nome=None):
     linhas = [r for r in ws.iter_rows(values_only=True)]
     # o cabeçalho é a primeira linha com CDG (pode haver título antes)
-    ic = next((n for n, r in enumerate(linhas[:15]) if any(sem_acento(c or '') == 'CDG' for c in r)), None)
+    ic = next((n for n, r in enumerate(linhas[:15]) if any(sem_acento(c or '') in ('CDG', 'CODIGO') for c in r)), None)
     if ic is None: return None
     cab = [str(c).strip() if c is not None else '' for c in linhas[ic]]
-    i_cdg = next(i for i, c in enumerate(cab) if sem_acento(c) == 'CDG')
+    i_cdg = next(i for i, c in enumerate(cab) if sem_acento(c) in ('CDG', 'CODIGO'))
     i_mun = next((i for i, c in enumerate(cab) if sem_acento(c) in ('MUN', 'MUNICIPIO')), None)
     i_uf = next((i for i, c in enumerate(cab) if sem_acento(c) == 'UF'), None)
     tot, cand = {}, []
@@ -154,15 +154,16 @@ def main():
                 # planilha com todos os estados (coluna UF): um arquivo por estado. Antes de 1989 o Tocantins era Goiás.
                 grupos = {}
                 for k, v in mun_todos.items():
-                    u = ufs_col.get(k, uf) if ufs_col else uf
+                    u = ufs_col.get(k, uf) if ufs_col else (ibge_ok[k]['uf'] if k in ibge_ok and len(uf) == 2 and ibge_ok[k]['uf'] in ('ms', 'to') else uf)
                     if u == 'to' and ano < 1989: u = 'go'
+                    if u == 'ms' and ano < 1979: u = 'mt'  # antes de 1979 o MS era parte de MT
                     grupos.setdefault(u, {})[k] = v
                 for uf, mun in sorted(grupos.items()):
                     # linha sem voto = município que ainda não existia (planilha com a lista de hoje): fica de fora
                     mun = {k: v for k, v in mun.items() if sum(sum(x[1]) for x in v)}
                     if not mun: continue
                     rotulo = f'{ano} {cargo} {turno}º turno {uf.upper()}'
-                    fora = sorted(k for k in mun if k not in ibge_ok or (ibge_ok[k]['uf'] != uf and not (uf == 'go' and ibge_ok[k]['uf'] == 'to' and ano < 1989)))
+                    fora = sorted(k for k in mun if k not in ibge_ok or (ibge_ok[k]['uf'] != uf and not (uf == 'go' and ibge_ok[k]['uf'] == 'to' and ano < 1989) and not (uf == 'mt' and ibge_ok[k]['uf'] == 'ms' and ano < 1979)))
                     rep = sorted(k for k, v in mun.items() if len(v) > 1)
                     vazios = sorted(k for k, v in mun.items() if not sum(sum(x[1]) for x in v))
                     if fora: problemas += 1

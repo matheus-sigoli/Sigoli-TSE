@@ -82,3 +82,19 @@ ANO;CARGO;UF;TURNO;COLUNA;PARTIDO;NUMERO;NOME;VICE;PARTIDO VICE;COLIGACAO;ELEITO
 1990;governador;AC;2;PT;PT;13;Jorge Viana;;;;
 1990;governador;ES;2;PDT;PDT;12;Albuíno Azeredo;;;;SIM
 1990;governador;ES;2;PST;PST;;José Ignácio Ferreira;;;;
+1947;governador;SP;1;PSP;PSP;;Ademar de Barros;;;;ELEITO
+1947;governador;SP;1;PTN;PTN;;Hugo Borghi;;;;
+1947;governador;SP;1;PSD;PSD;;Mário Tavares;;;;
+1947;governador;SP;1;UDN;UDN;;Antônio de Almeida Prado;;;;
+1958;governador;SP;1;PDC;PDC;;Carvalho Pinto;;;;ELEITO
+1958;governador;SP;1;PSP;PSP;;Ademar de Barros;;;;
+1974;senador;SP;1;PMDB;MDB;;Franco Montoro;;;;ELEITO
+1974;senador;SP;1;ARENA;ARENA;;Carvalho Pinto;;;;
+1950;governador;AL;1;UDN;UDN;;Arnon de Mello;;;;ELEITO
+1955;governador;AL;1;PSP;PSP;;Muniz Falcão;;;;ELEITO
+1960;governador;AL;1;UDN;UDN;;Luiz Cavalcante;;;;ELEITO
+1965;governador;AL;1;PSP;PSP;;Muniz Falcão;;;;NÃO ELEITO (SEM MAIORIA ABSOLUTA)
+1950;governador;MA;1;PST;PST;;Eugênio Barros;;;;ELEITO
+1965;governador;MA;1;UDN;UDN;;José Sarney;;;;ELEITO
+1955;governador;MT;1;PSD;PSD;;João Ponce de Arruda;;;;ELEITO
+1986;governador;SE;1;PFL;PFL;;Antônio Carlos Valadares;;;;ELEITO
