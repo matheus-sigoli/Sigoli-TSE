@@ -52,17 +52,34 @@ const APELIDOS: Record<string, string> = {
 
 // O PSD de antes de 2011 (número 41, incorporado ao PTB em 2003) não é o PSD de hoje (55): cor própria.
 let anoCores = 2026;
-/** República de 1946 (1945–1965): partidos da época; PSD e PTB seguem com a cor que já têm (PSD41 e PTB) */
-const POPULISTA_BASE: Record<string, string> = {
-  UDN45: '#3D7DD8', PL45: '#8B1E2D', PRP45: '#2E7D32', PSP45: '#F28C28', PR45: '#8E44AD', PDC45: '#6D4C41',
-  MTR45: '#C2185B', PTN45: '#9E9D24', PST45: '#9370DB', PRT45: '#5D4037', PCB45: '#B71C1C', PSB45: '#FB0000',
+/**
+ * República de 1946 (1945–1965): paleta "Brasil – República Populista" do acervo de Matheus Sigoli (10% a 100%).
+ * Partido com duas cores na tabela: a 1ª é a principal; a 2ª, a extra (usada quando dois concorrentes ficam parecidos).
+ */
+const POPULISTA_FAIXAS: Record<string, string[][]> = {
+  PSD45: [['#CFF2FA', '#9FE5F5', '#6FD9F0', '#3FCCEB', '#0FC0E6', '#0CA3C3', '#0A86A0', '#08697E', '#064C5C', '#03262E']],
+  UDN45: [['#D0D4E3', '#A2AAC8', '#747FAD', '#465592', '#182B77', '#142465', '#101E53', '#0D1741', '#09112F', '#040817']],
+  PSP45: [['#DCD8D8', '#BAB1B2', '#978B8C', '#756466', '#533E40', '#463436', '#392B2C', '#2D2223', '#211819', '#100C0C']],
+  PDC45: [['#FFFFCC', '#FFFF99', '#FFFF66', '#FFFF33', '#FFFF00', '#D9D900', '#B2B200', '#8C8C00', '#666600', '#333300'], ['#CCD2EA', '#99A5D6', '#6678C2', '#334BAE', '#001E9A', '#001983', '#00146B', '#001054', '#000C3D', '#00061E']],
+  PL45: [['#CCCEDF', '#999DC0', '#666DA0', '#333C81', '#000C62', '#000A53', '#000844', '#000635', '#000427', '#000213'], ['#FFCCCC', '#FF999A', '#FF6667', '#FF3335', '#FF0003', '#D90002', '#B20002', '#8C0001', '#660001', '#330000']],
+  PR45: [['#CCE4DC', '#99C9B9', '#66AE96', '#339373', '#007850', '#006644', '#005337', '#00412B', '#003020', '#001810']],
+  MTR45: [['#FEF5CC', '#FEEB99', '#FEE266', '#FED833', '#FECF01', '#D8B000', '#B19000', '#8B7100', '#655200', '#322900'], ['#CCECF7', '#99DAF0', '#66C8E9', '#33B6E2', '#00A4DB', '#008BBA', '#007298', '#005A78', '#004157', '#00202B']],
+  PTN45: [['#D5EEDA', '#ABDEB5', '#82CE91', '#58BE6C', '#2FAE48', '#27943D', '#207932', '#195F27', '#12451C', '#09220E']],
+  PTB45: [['#F5CCCC', '#EB9999', '#E16666', '#D73333', '#CD0000', '#AE0000', '#8F0000', '#700000', '#520000', '#290000']],
+  PRP45: [['#CCE5D7', '#99CCAF', '#66B287', '#33995F', '#008037', '#006C2E', '#005926', '#00461E', '#003316', '#00190B']],
+  PST45: [['#DDFFCC', '#BBFF99', '#99FF66', '#77FF33', '#55FF00', '#48D900', '#3BB200', '#2E8C00', '#226600', '#113300']],
+  PRT45: [['#EEDDCC', '#DEBC99', '#CD9A66', '#BD7933', '#AD5800', '#934A00', '#783D00', '#5E3000', '#452300', '#221100']],
+  PCB45: [['#F7D3D1', '#F0A7A4', '#E87C76', '#E15049', '#DA251C', '#B91F17', '#981913', '#77140F', '#570E0B', '#2B0705']],
+  PSB45: [['#FEF5CC', '#FEEB99', '#FEE166', '#FED733', '#FECD00', '#D8AE00', '#B18F00', '#8B7000', '#655200', '#322900'], ['#F9D1D2', '#F3A3A6', '#EE7579', '#E8474D', '#E31921', '#C1151C', '#9E1117', '#7C0D12', '#5A0A0D', '#2D0506']],
 };
+const POPULISTA_BASE = POPULISTA_FAIXAS; // siglas da época (chavePartido)
 const POPULISTA_CACHE = new Map<string, EntradaPaleta>();
+const paraFaixas = (cores: string[]) => Object.fromEntries(CHAVES.map((k, i) => [k, cores[i]])) as Faixas;
 const populista = (k: string): EntradaPaleta | undefined => {
-  const base = POPULISTA_BASE[k];
-  if (!base) return undefined;
+  const cores = POPULISTA_FAIXAS[k];
+  if (!cores) return undefined;
   let e = POPULISTA_CACHE.get(k);
-  if (!e) POPULISTA_CACHE.set(k, (e = { principal: gerarFaixas(base), reservas: [] }));
+  if (!e) POPULISTA_CACHE.set(k, (e = { principal: paraFaixas(cores[0]), extra: cores[1] ? paraFaixas(cores[1]) : undefined, reservas: [] }));
   return e;
 };
 /** Ano da eleição exibida (as siglas que mudaram de partido com o tempo dependem dele). */
@@ -107,12 +124,12 @@ const cacheGerado = new Map<string, EntradaPaleta>();
 /** Sigla canônica (apelidos do TSE resolvidos): é o que identifica "o mesmo partido". */
 export const chavePartido = (sigla: string) => {
   const k = normaliza(sigla);
+  // República de 1946 (até 1965): partidos da época com a paleta própria (POPULISTA_FAIXAS, acima)
+  if (anoCores < 1966 && POPULISTA_BASE[`${k}45`]) return `${k}45`;
   if (k === 'PSD' && anoCores < 2011) return 'PSD41';
   // 1989: PP, PPB e PMB eram outros partidos (sem relação com os de hoje); o PCB de 1989 é o que virou PPS e Cidadania
   if (anoCores < 1990 && (k === 'PP' || k === 'PPB' || k === 'PMB')) return `${k}89`;
   if (anoCores < 1990 && k === 'PCB') return 'CIDADANIA';
-  // República de 1946 (até 1965): siglas que voltaram depois com outro partido têm cor própria (POPULISTA_BASE, acima)
-  if (anoCores < 1966 && POPULISTA_BASE[`${k}45`]) return `${k}45`;
   // bipartidarismo (1966–1979): MDB e ARENA têm cores próprias, uma por sublegenda (DITADURA, abaixo)
   if (anoCores < 1980 && k === 'MDB') return 'MDB66';
   return APELIDOS[k] ?? k;

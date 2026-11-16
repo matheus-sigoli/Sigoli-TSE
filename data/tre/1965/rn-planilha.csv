@@ -1,0 +1,751 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+governador;1;2408102;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;33785;S
+governador;1;2408102;_DINARTEMARIZ;DINARTE MARIZ;UDN;18767;
+governador;1;2408102;#brancos;;;324;
+governador;1;2408102;#nulos;;;838;
+governador;1;2408102;#comparecimento;;;53714;
+governador;1;2400208;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;2174;S
+governador;1;2400208;_DINARTEMARIZ;DINARTE MARIZ;UDN;2965;
+governador;1;2400208;#brancos;;;57;
+governador;1;2400208;#nulos;;;77;
+governador;1;2400208;#comparecimento;;;5273;
+governador;1;2401206;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;691;S
+governador;1;2401206;_DINARTEMARIZ;DINARTE MARIZ;UDN;595;
+governador;1;2401206;#brancos;;;7;
+governador;1;2401206;#nulos;;;27;
+governador;1;2401206;#comparecimento;;;1320;
+governador;1;2401008;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;2162;S
+governador;1;2401008;_DINARTEMARIZ;DINARTE MARIZ;UDN;1539;
+governador;1;2401008;#brancos;;;32;
+governador;1;2401008;#nulos;;;43;
+governador;1;2401008;#comparecimento;;;3776;
+governador;1;2400109;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;2130;S
+governador;1;2400109;_DINARTEMARIZ;DINARTE MARIZ;UDN;1510;
+governador;1;2400109;#brancos;;;21;
+governador;1;2400109;#nulos;;;42;
+governador;1;2400109;#comparecimento;;;3703;
+governador;1;2400802;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1908;S
+governador;1;2400802;_DINARTEMARIZ;DINARTE MARIZ;UDN;526;
+governador;1;2400802;#brancos;;;25;
+governador;1;2400802;#nulos;;;24;
+governador;1;2400802;#comparecimento;;;2483;
+governador;1;2400406;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;51;S
+governador;1;2400406;_DINARTEMARIZ;DINARTE MARIZ;UDN;148;
+governador;1;2400406;#brancos;;;0;
+governador;1;2400406;#nulos;;;4;
+governador;1;2400406;#comparecimento;;;203;
+governador;1;2400505;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1242;S
+governador;1;2400505;_DINARTEMARIZ;DINARTE MARIZ;UDN;1521;
+governador;1;2400505;#brancos;;;20;
+governador;1;2400505;#nulos;;;26;
+governador;1;2400505;#comparecimento;;;2809;
+governador;1;2401107;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;2415;S
+governador;1;2401107;_DINARTEMARIZ;DINARTE MARIZ;UDN;2355;
+governador;1;2401107;#brancos;;;50;
+governador;1;2401107;#nulos;;;33;
+governador;1;2401107;#comparecimento;;;4853;
+governador;1;2400604;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;975;S
+governador;1;2400604;_DINARTEMARIZ;DINARTE MARIZ;UDN;493;
+governador;1;2400604;#brancos;;;7;
+governador;1;2400604;#nulos;;;12;
+governador;1;2400604;#comparecimento;;;1487;
+governador;1;2400307;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1029;S
+governador;1;2400307;_DINARTEMARIZ;DINARTE MARIZ;UDN;792;
+governador;1;2400307;#brancos;;;23;
+governador;1;2400307;#nulos;;;31;
+governador;1;2400307;#comparecimento;;;1875;
+governador;1;2401305;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1033;S
+governador;1;2401305;_DINARTEMARIZ;DINARTE MARIZ;UDN;974;
+governador;1;2401305;#brancos;;;30;
+governador;1;2401305;#nulos;;;7;
+governador;1;2401305;#comparecimento;;;2044;
+governador;1;2400901;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;448;S
+governador;1;2400901;_DINARTEMARIZ;DINARTE MARIZ;UDN;702;
+governador;1;2400901;#brancos;;;25;
+governador;1;2400901;#nulos;;;15;
+governador;1;2400901;#comparecimento;;;1190;
+governador;1;2400703;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;569;S
+governador;1;2400703;_DINARTEMARIZ;DINARTE MARIZ;UDN;573;
+governador;1;2400703;#brancos;;;6;
+governador;1;2400703;#nulos;;;6;
+governador;1;2400703;#comparecimento;;;1154;
+governador;1;2401602;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;491;S
+governador;1;2401602;_DINARTEMARIZ;DINARTE MARIZ;UDN;240;
+governador;1;2401602;#brancos;;;8;
+governador;1;2401602;#nulos;;;14;
+governador;1;2401602;#comparecimento;;;753;
+governador;1;2401800;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;336;S
+governador;1;2401800;_DINARTEMARIZ;DINARTE MARIZ;UDN;221;
+governador;1;2401800;#brancos;;;2;
+governador;1;2401800;#nulos;;;5;
+governador;1;2401800;#comparecimento;;;564;
+governador;1;2401503;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;662;S
+governador;1;2401503;_DINARTEMARIZ;DINARTE MARIZ;UDN;417;
+governador;1;2401503;#brancos;;;4;
+governador;1;2401503;#nulos;;;9;
+governador;1;2401503;#comparecimento;;;1092;
+governador;1;2401701;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;526;S
+governador;1;2401701;_DINARTEMARIZ;DINARTE MARIZ;UDN;186;
+governador;1;2401701;#brancos;;;5;
+governador;1;2401701;#nulos;;;5;
+governador;1;2401701;#comparecimento;;;722;
+governador;1;2401404;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;193;S
+governador;1;2401404;_DINARTEMARIZ;DINARTE MARIZ;UDN;247;
+governador;1;2401404;#brancos;;;3;
+governador;1;2401404;#nulos;;;3;
+governador;1;2401404;#comparecimento;;;446;
+governador;1;2407500;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;759;S
+governador;1;2407500;_DINARTEMARIZ;DINARTE MARIZ;UDN;636;
+governador;1;2407500;#brancos;;;8;
+governador;1;2407500;#nulos;;;11;
+governador;1;2407500;#comparecimento;;;1414;
+governador;1;2402006;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;2686;S
+governador;1;2402006;_DINARTEMARIZ;DINARTE MARIZ;UDN;4350;
+governador;1;2402006;#brancos;;;26;
+governador;1;2402006;#nulos;;;51;
+governador;1;2402006;#comparecimento;;;7113;
+governador;1;2403004;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;769;S
+governador;1;2403004;_DINARTEMARIZ;DINARTE MARIZ;UDN;897;
+governador;1;2403004;#brancos;;;6;
+governador;1;2403004;#nulos;;;15;
+governador;1;2403004;#comparecimento;;;1687;
+governador;1;2402303;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1426;S
+governador;1;2402303;_DINARTEMARIZ;DINARTE MARIZ;UDN;1607;
+governador;1;2402303;#brancos;;;34;
+governador;1;2402303;#nulos;;;30;
+governador;1;2402303;#comparecimento;;;3097;
+governador;1;2402501;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;964;S
+governador;1;2402501;_DINARTEMARIZ;DINARTE MARIZ;UDN;1161;
+governador;1;2402501;#brancos;;;24;
+governador;1;2402501;#nulos;;;34;
+governador;1;2402501;#comparecimento;;;2183;
+governador;1;2402709;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;734;S
+governador;1;2402709;_DINARTEMARIZ;DINARTE MARIZ;UDN;364;
+governador;1;2402709;#brancos;;;12;
+governador;1;2402709;#nulos;;;20;
+governador;1;2402709;#comparecimento;;;1130;
+governador;1;2402600;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;3135;S
+governador;1;2402600;_DINARTEMARIZ;DINARTE MARIZ;UDN;2556;
+governador;1;2402600;#brancos;;;54;
+governador;1;2402600;#nulos;;;66;
+governador;1;2402600;#comparecimento;;;5811;
+governador;1;2403103;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;3466;S
+governador;1;2403103;_DINARTEMARIZ;DINARTE MARIZ;UDN;2181;
+governador;1;2403103;#brancos;;;61;
+governador;1;2403103;#nulos;;;79;
+governador;1;2403103;#comparecimento;;;5787;
+governador;1;2402204;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1094;S
+governador;1;2402204;_DINARTEMARIZ;DINARTE MARIZ;UDN;727;
+governador;1;2402204;#brancos;;;21;
+governador;1;2402204;#nulos;;;36;
+governador;1;2402204;#comparecimento;;;1878;
+governador;1;2402105;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;414;S
+governador;1;2402105;_DINARTEMARIZ;DINARTE MARIZ;UDN;632;
+governador;1;2402105;#brancos;;;6;
+governador;1;2402105;#nulos;;;12;
+governador;1;2402105;#comparecimento;;;1064;
+governador;1;2402808;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;291;S
+governador;1;2402808;_DINARTEMARIZ;DINARTE MARIZ;UDN;355;
+governador;1;2402808;#brancos;;;6;
+governador;1;2402808;#nulos;;;12;
+governador;1;2402808;#comparecimento;;;664;
+governador;1;2402907;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;272;S
+governador;1;2402907;_DINARTEMARIZ;DINARTE MARIZ;UDN;317;
+governador;1;2402907;#brancos;;;6;
+governador;1;2402907;#nulos;;;2;
+governador;1;2402907;#comparecimento;;;597;
+governador;1;2402402;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;518;S
+governador;1;2402402;_DINARTEMARIZ;DINARTE MARIZ;UDN;706;
+governador;1;2402402;#brancos;;;7;
+governador;1;2402402;#nulos;;;15;
+governador;1;2402402;#comparecimento;;;1246;
+governador;1;2401909;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;395;S
+governador;1;2401909;_DINARTEMARIZ;DINARTE MARIZ;UDN;55;
+governador;1;2401909;#brancos;;;7;
+governador;1;2401909;#nulos;;;4;
+governador;1;2401909;#comparecimento;;;461;
+governador;1;2403202;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;323;S
+governador;1;2403202;_DINARTEMARIZ;DINARTE MARIZ;UDN;470;
+governador;1;2403202;#brancos;;;13;
+governador;1;2403202;#nulos;;;12;
+governador;1;2403202;#comparecimento;;;818;
+governador;1;2403301;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;206;S
+governador;1;2403301;_DINARTEMARIZ;DINARTE MARIZ;UDN;618;
+governador;1;2403301;#brancos;;;18;
+governador;1;2403301;#nulos;;;7;
+governador;1;2403301;#comparecimento;;;849;
+governador;1;2403400;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;65;S
+governador;1;2403400;_DINARTEMARIZ;DINARTE MARIZ;UDN;725;
+governador;1;2403400;#brancos;;;2;
+governador;1;2403400;#nulos;;;13;
+governador;1;2403400;#comparecimento;;;805;
+governador;1;2403608;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;808;S
+governador;1;2403608;_DINARTEMARIZ;DINARTE MARIZ;UDN;692;
+governador;1;2403608;#brancos;;;23;
+governador;1;2403608;#nulos;;;45;
+governador;1;2403608;#comparecimento;;;1568;
+governador;1;2413102;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;176;S
+governador;1;2413102;_DINARTEMARIZ;DINARTE MARIZ;UDN;422;
+governador;1;2413102;#brancos;;;3;
+governador;1;2413102;#nulos;;;7;
+governador;1;2413102;#comparecimento;;;608;
+governador;1;2403509;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;440;S
+governador;1;2403509;_DINARTEMARIZ;DINARTE MARIZ;UDN;162;
+governador;1;2403509;#brancos;;;3;
+governador;1;2403509;#nulos;;;2;
+governador;1;2403509;#comparecimento;;;607;
+governador;1;2403806;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1013;S
+governador;1;2403806;_DINARTEMARIZ;DINARTE MARIZ;UDN;636;
+governador;1;2403806;#brancos;;;12;
+governador;1;2403806;#nulos;;;19;
+governador;1;2403806;#comparecimento;;;1680;
+governador;1;2403707;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;619;S
+governador;1;2403707;_DINARTEMARIZ;DINARTE MARIZ;UDN;270;
+governador;1;2403707;#brancos;;;10;
+governador;1;2403707;#nulos;;;19;
+governador;1;2403707;#comparecimento;;;918;
+governador;1;2403905;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;413;S
+governador;1;2403905;_DINARTEMARIZ;DINARTE MARIZ;UDN;163;
+governador;1;2403905;#brancos;;;11;
+governador;1;2403905;#nulos;;;11;
+governador;1;2403905;#comparecimento;;;598;
+governador;1;2404507;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;193;S
+governador;1;2404507;_DINARTEMARIZ;DINARTE MARIZ;UDN;112;
+governador;1;2404507;#brancos;;;4;
+governador;1;2404507;#nulos;;;4;
+governador;1;2404507;#comparecimento;;;313;
+governador;1;2404408;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;796;S
+governador;1;2404408;_DINARTEMARIZ;DINARTE MARIZ;UDN;592;
+governador;1;2404408;#brancos;;;9;
+governador;1;2404408;#nulos;;;14;
+governador;1;2404408;#comparecimento;;;1411;
+governador;1;2404101;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;155;S
+governador;1;2404101;_DINARTEMARIZ;DINARTE MARIZ;UDN;104;
+governador;1;2404101;#brancos;;;1;
+governador;1;2404101;#nulos;;;1;
+governador;1;2404101;#comparecimento;;;261;
+governador;1;2404200;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;640;S
+governador;1;2404200;_DINARTEMARIZ;DINARTE MARIZ;UDN;483;
+governador;1;2404200;#brancos;;;20;
+governador;1;2404200;#nulos;;;14;
+governador;1;2404200;#comparecimento;;;1157;
+governador;1;2404309;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;871;S
+governador;1;2404309;_DINARTEMARIZ;DINARTE MARIZ;UDN;1259;
+governador;1;2404309;#brancos;;;28;
+governador;1;2404309;#nulos;;;15;
+governador;1;2404309;#comparecimento;;;2173;
+governador;1;2404903;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;162;S
+governador;1;2404903;_DINARTEMARIZ;DINARTE MARIZ;UDN;430;
+governador;1;2404903;#brancos;;;1;
+governador;1;2404903;#nulos;;;5;
+governador;1;2404903;#comparecimento;;;598;
+governador;1;2404804;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;57;S
+governador;1;2404804;_DINARTEMARIZ;DINARTE MARIZ;UDN;200;
+governador;1;2404804;#brancos;;;1;
+governador;1;2404804;#nulos;;;4;
+governador;1;2404804;#comparecimento;;;262;
+governador;1;2404705;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;897;S
+governador;1;2404705;_DINARTEMARIZ;DINARTE MARIZ;UDN;1400;
+governador;1;2404705;#brancos;;;26;
+governador;1;2404705;#nulos;;;35;
+governador;1;2404705;#comparecimento;;;2358;
+governador;1;2404606;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;566;S
+governador;1;2404606;_DINARTEMARIZ;DINARTE MARIZ;UDN;203;
+governador;1;2404606;#brancos;;;8;
+governador;1;2404606;#nulos;;;9;
+governador;1;2404606;#comparecimento;;;786;
+governador;1;2405405;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;160;S
+governador;1;2405405;_DINARTEMARIZ;DINARTE MARIZ;UDN;209;
+governador;1;2405405;#brancos;;;1;
+governador;1;2405405;#nulos;;;3;
+governador;1;2405405;#comparecimento;;;373;
+governador;1;2407609;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;463;S
+governador;1;2407609;_DINARTEMARIZ;DINARTE MARIZ;UDN;388;
+governador;1;2407609;#brancos;;;3;
+governador;1;2407609;#nulos;;;21;
+governador;1;2407609;#comparecimento;;;875;
+governador;1;2405009;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;143;S
+governador;1;2405009;_DINARTEMARIZ;DINARTE MARIZ;UDN;211;
+governador;1;2405009;#brancos;;;2;
+governador;1;2405009;#nulos;;;1;
+governador;1;2405009;#comparecimento;;;357;
+governador;1;2405207;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;525;S
+governador;1;2405207;_DINARTEMARIZ;DINARTE MARIZ;UDN;627;
+governador;1;2405207;#brancos;;;17;
+governador;1;2405207;#nulos;;;8;
+governador;1;2405207;#comparecimento;;;1177;
+governador;1;2406106;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;794;S
+governador;1;2406106;_DINARTEMARIZ;DINARTE MARIZ;UDN;1450;
+governador;1;2406106;#brancos;;;13;
+governador;1;2406106;#nulos;;;19;
+governador;1;2406106;#comparecimento;;;2276;
+governador;1;2405108;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;233;S
+governador;1;2405108;_DINARTEMARIZ;DINARTE MARIZ;UDN;67;
+governador;1;2405108;#brancos;;;4;
+governador;1;2405108;#nulos;;;6;
+governador;1;2405108;#comparecimento;;;310;
+governador;1;2405900;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;219;S
+governador;1;2405900;_DINARTEMARIZ;DINARTE MARIZ;UDN;241;
+governador;1;2405900;#brancos;;;5;
+governador;1;2405900;#nulos;;;11;
+governador;1;2405900;#comparecimento;;;476;
+governador;1;2405801;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1937;S
+governador;1;2405801;_DINARTEMARIZ;DINARTE MARIZ;UDN;1031;
+governador;1;2405801;#brancos;;;18;
+governador;1;2405801;#nulos;;;40;
+governador;1;2405801;#comparecimento;;;3026;
+governador;1;2406007;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;344;S
+governador;1;2406007;_DINARTEMARIZ;DINARTE MARIZ;UDN;585;
+governador;1;2406007;#brancos;;;13;
+governador;1;2406007;#nulos;;;15;
+governador;1;2406007;#comparecimento;;;957;
+governador;1;2405306;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;394;S
+governador;1;2405306;_DINARTEMARIZ;DINARTE MARIZ;UDN;317;
+governador;1;2405306;#brancos;;;3;
+governador;1;2405306;#nulos;;;18;
+governador;1;2405306;#comparecimento;;;732;
+governador;1;2405702;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1662;S
+governador;1;2405702;_DINARTEMARIZ;DINARTE MARIZ;UDN;505;
+governador;1;2405702;#brancos;;;18;
+governador;1;2405702;#nulos;;;20;
+governador;1;2405702;#comparecimento;;;2205;
+governador;1;2405504;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;551;S
+governador;1;2405504;_DINARTEMARIZ;DINARTE MARIZ;UDN;80;
+governador;1;2405504;#brancos;;;7;
+governador;1;2405504;#nulos;;;8;
+governador;1;2405504;#comparecimento;;;646;
+governador;1;2405603;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;710;S
+governador;1;2405603;_DINARTEMARIZ;DINARTE MARIZ;UDN;856;
+governador;1;2405603;#brancos;;;4;
+governador;1;2405603;#nulos;;;8;
+governador;1;2405603;#comparecimento;;;1578;
+governador;1;2406700;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1281;S
+governador;1;2406700;_DINARTEMARIZ;DINARTE MARIZ;UDN;416;
+governador;1;2406700;#brancos;;;7;
+governador;1;2406700;#nulos;;;23;
+governador;1;2406700;#comparecimento;;;1727;
+governador;1;2406908;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;188;S
+governador;1;2406908;_DINARTEMARIZ;DINARTE MARIZ;UDN;259;
+governador;1;2406908;#brancos;;;5;
+governador;1;2406908;#nulos;;;2;
+governador;1;2406908;#comparecimento;;;454;
+governador;1;2406502;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;364;S
+governador;1;2406502;_DINARTEMARIZ;DINARTE MARIZ;UDN;123;
+governador;1;2406502;#brancos;;;7;
+governador;1;2406502;#nulos;;;14;
+governador;1;2406502;#comparecimento;;;508;
+governador;1;2407005;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;479;S
+governador;1;2407005;_DINARTEMARIZ;DINARTE MARIZ;UDN;973;
+governador;1;2407005;#brancos;;;32;
+governador;1;2407005;#nulos;;;39;
+governador;1;2407005;#comparecimento;;;1523;
+governador;1;2406205;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;310;S
+governador;1;2406205;_DINARTEMARIZ;DINARTE MARIZ;UDN;197;
+governador;1;2406205;#brancos;;;9;
+governador;1;2406205;#nulos;;;8;
+governador;1;2406205;#comparecimento;;;524;
+governador;1;2406601;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;328;S
+governador;1;2406601;_DINARTEMARIZ;DINARTE MARIZ;UDN;354;
+governador;1;2406601;#brancos;;;10;
+governador;1;2406601;#nulos;;;3;
+governador;1;2406601;#comparecimento;;;695;
+governador;1;2406809;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;383;S
+governador;1;2406809;_DINARTEMARIZ;DINARTE MARIZ;UDN;243;
+governador;1;2406809;#brancos;;;10;
+governador;1;2406809;#nulos;;;16;
+governador;1;2406809;#comparecimento;;;652;
+governador;1;2406304;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;368;S
+governador;1;2406304;_DINARTEMARIZ;DINARTE MARIZ;UDN;141;
+governador;1;2406304;#brancos;;;7;
+governador;1;2406304;#nulos;;;7;
+governador;1;2406304;#comparecimento;;;523;
+governador;1;2406403;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;292;S
+governador;1;2406403;_DINARTEMARIZ;DINARTE MARIZ;UDN;166;
+governador;1;2406403;#brancos;;;4;
+governador;1;2406403;#nulos;;;7;
+governador;1;2406403;#comparecimento;;;469;
+governador;1;2407203;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;2127;S
+governador;1;2407203;_DINARTEMARIZ;DINARTE MARIZ;UDN;2304;
+governador;1;2407203;#brancos;;;31;
+governador;1;2407203;#nulos;;;39;
+governador;1;2407203;#comparecimento;;;4501;
+governador;1;2407401;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1542;S
+governador;1;2407401;_DINARTEMARIZ;DINARTE MARIZ;UDN;1126;
+governador;1;2407401;#brancos;;;24;
+governador;1;2407401;#nulos;;;20;
+governador;1;2407401;#comparecimento;;;2712;
+governador;1;2404002;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;329;S
+governador;1;2404002;_DINARTEMARIZ;DINARTE MARIZ;UDN;443;
+governador;1;2404002;#brancos;;;3;
+governador;1;2404002;#nulos;;;7;
+governador;1;2404002;#comparecimento;;;782;
+governador;1;2408003;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;10238;S
+governador;1;2408003;_DINARTEMARIZ;DINARTE MARIZ;UDN;10162;
+governador;1;2408003;#brancos;;;149;
+governador;1;2408003;#nulos;;;106;
+governador;1;2408003;#comparecimento;;;20655;
+governador;1;2407104;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1739;S
+governador;1;2407104;_DINARTEMARIZ;DINARTE MARIZ;UDN;1343;
+governador;1;2407104;#brancos;;;5;
+governador;1;2407104;#nulos;;;25;
+governador;1;2407104;#comparecimento;;;3112;
+governador;1;2407708;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;454;S
+governador;1;2407708;_DINARTEMARIZ;DINARTE MARIZ;UDN;300;
+governador;1;2407708;#brancos;;;3;
+governador;1;2407708;#nulos;;;13;
+governador;1;2407708;#comparecimento;;;770;
+governador;1;2407807;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;879;S
+governador;1;2407807;_DINARTEMARIZ;DINARTE MARIZ;UDN;343;
+governador;1;2407807;#brancos;;;22;
+governador;1;2407807;#nulos;;;15;
+governador;1;2407807;#comparecimento;;;1259;
+governador;1;2407302;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;649;S
+governador;1;2407302;_DINARTEMARIZ;DINARTE MARIZ;UDN;823;
+governador;1;2407302;#brancos;;;7;
+governador;1;2407302;#nulos;;;17;
+governador;1;2407302;#comparecimento;;;1496;
+governador;1;2407906;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;157;S
+governador;1;2407906;_DINARTEMARIZ;DINARTE MARIZ;UDN;77;
+governador;1;2407906;#brancos;;;2;
+governador;1;2407906;#nulos;;;2;
+governador;1;2407906;#comparecimento;;;238;
+governador;1;2408300;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1848;S
+governador;1;2408300;_DINARTEMARIZ;DINARTE MARIZ;UDN;1483;
+governador;1;2408300;#brancos;;;20;
+governador;1;2408300;#nulos;;;38;
+governador;1;2408300;#comparecimento;;;3389;
+governador;1;2408201;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1090;S
+governador;1;2408201;_DINARTEMARIZ;DINARTE MARIZ;UDN;539;
+governador;1;2408201;#brancos;;;22;
+governador;1;2408201;#nulos;;;17;
+governador;1;2408201;#comparecimento;;;1668;
+governador;1;2408508;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;782;S
+governador;1;2408508;_DINARTEMARIZ;DINARTE MARIZ;UDN;313;
+governador;1;2408508;#brancos;;;2;
+governador;1;2408508;#nulos;;;12;
+governador;1;2408508;#comparecimento;;;1109;
+governador;1;2408409;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;509;S
+governador;1;2408409;_DINARTEMARIZ;DINARTE MARIZ;UDN;306;
+governador;1;2408409;#brancos;;;10;
+governador;1;2408409;#nulos;;;13;
+governador;1;2408409;#comparecimento;;;838;
+governador;1;2409308;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1112;S
+governador;1;2409308;_DINARTEMARIZ;DINARTE MARIZ;UDN;1362;
+governador;1;2409308;#brancos;;;13;
+governador;1;2409308;#nulos;;;23;
+governador;1;2409308;#comparecimento;;;2510;
+governador;1;2408706;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;427;S
+governador;1;2408706;_DINARTEMARIZ;DINARTE MARIZ;UDN;632;
+governador;1;2408706;#brancos;;;19;
+governador;1;2408706;#nulos;;;10;
+governador;1;2408706;#comparecimento;;;1088;
+governador;1;2410009;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;252;S
+governador;1;2410009;_DINARTEMARIZ;DINARTE MARIZ;UDN;209;
+governador;1;2410009;#brancos;;;0;
+governador;1;2410009;#nulos;;;6;
+governador;1;2410009;#comparecimento;;;467;
+governador;1;2408607;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;323;S
+governador;1;2408607;_DINARTEMARIZ;DINARTE MARIZ;UDN;306;
+governador;1;2408607;#brancos;;;7;
+governador;1;2408607;#nulos;;;10;
+governador;1;2408607;#comparecimento;;;646;
+governador;1;2410405;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;463;S
+governador;1;2410405;_DINARTEMARIZ;DINARTE MARIZ;UDN;268;
+governador;1;2410405;#brancos;;;7;
+governador;1;2410405;#nulos;;;16;
+governador;1;2410405;#comparecimento;;;754;
+governador;1;2408904;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1063;S
+governador;1;2408904;_DINARTEMARIZ;DINARTE MARIZ;UDN;2559;
+governador;1;2408904;#brancos;;;8;
+governador;1;2408904;#nulos;;;23;
+governador;1;2408904;#comparecimento;;;3653;
+governador;1;2409209;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;211;S
+governador;1;2409209;_DINARTEMARIZ;DINARTE MARIZ;UDN;268;
+governador;1;2409209;#brancos;;;6;
+governador;1;2409209;#nulos;;;2;
+governador;1;2409209;#comparecimento;;;487;
+governador;1;2408805;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;223;S
+governador;1;2408805;_DINARTEMARIZ;DINARTE MARIZ;UDN;126;
+governador;1;2408805;#brancos;;;2;
+governador;1;2408805;#nulos;;;7;
+governador;1;2408805;#comparecimento;;;358;
+governador;1;2410207;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;696;S
+governador;1;2410207;_DINARTEMARIZ;DINARTE MARIZ;UDN;533;
+governador;1;2410207;#brancos;;;17;
+governador;1;2410207;#nulos;;;15;
+governador;1;2410207;#comparecimento;;;1261;
+governador;1;2403251;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1612;S
+governador;1;2403251;_DINARTEMARIZ;DINARTE MARIZ;UDN;957;
+governador;1;2403251;#brancos;;;31;
+governador;1;2403251;#nulos;;;41;
+governador;1;2403251;#comparecimento;;;2641;
+governador;1;2409902;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1124;S
+governador;1;2409902;_DINARTEMARIZ;DINARTE MARIZ;UDN;878;
+governador;1;2409902;#brancos;;;9;
+governador;1;2409902;#nulos;;;17;
+governador;1;2409902;#comparecimento;;;2028;
+governador;1;2409605;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;535;S
+governador;1;2409605;_DINARTEMARIZ;DINARTE MARIZ;UDN;133;
+governador;1;2409605;#brancos;;;2;
+governador;1;2409605;#nulos;;;9;
+governador;1;2409605;#comparecimento;;;679;
+governador;1;2409803;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;814;S
+governador;1;2409803;_DINARTEMARIZ;DINARTE MARIZ;UDN;808;
+governador;1;2409803;#brancos;;;24;
+governador;1;2409803;#nulos;;;16;
+governador;1;2409803;#comparecimento;;;1662;
+governador;1;2410108;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;425;S
+governador;1;2410108;_DINARTEMARIZ;DINARTE MARIZ;UDN;791;
+governador;1;2410108;#brancos;;;11;
+governador;1;2410108;#nulos;;;22;
+governador;1;2410108;#comparecimento;;;1249;
+governador;1;2409506;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;242;S
+governador;1;2409506;_DINARTEMARIZ;DINARTE MARIZ;UDN;142;
+governador;1;2409506;#brancos;;;1;
+governador;1;2409506;#nulos;;;4;
+governador;1;2409506;#comparecimento;;;389;
+governador;1;2409100;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;432;S
+governador;1;2409100;_DINARTEMARIZ;DINARTE MARIZ;UDN;403;
+governador;1;2409100;#brancos;;;14;
+governador;1;2409100;#nulos;;;14;
+governador;1;2409100;#comparecimento;;;863;
+governador;1;2409704;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1161;S
+governador;1;2409704;_DINARTEMARIZ;DINARTE MARIZ;UDN;770;
+governador;1;2409704;#brancos;;;8;
+governador;1;2409704;#nulos;;;21;
+governador;1;2409704;#comparecimento;;;1960;
+governador;1;2409407;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1027;S
+governador;1;2409407;_DINARTEMARIZ;DINARTE MARIZ;UDN;1420;
+governador;1;2409407;#brancos;;;24;
+governador;1;2409407;#nulos;;;27;
+governador;1;2409407;#comparecimento;;;2498;
+governador;1;2410306;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;398;S
+governador;1;2410306;_DINARTEMARIZ;DINARTE MARIZ;UDN;405;
+governador;1;2410306;#brancos;;;3;
+governador;1;2410306;#nulos;;;14;
+governador;1;2410306;#comparecimento;;;820;
+governador;1;2410900;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;808;S
+governador;1;2410900;_DINARTEMARIZ;DINARTE MARIZ;UDN;675;
+governador;1;2410900;#brancos;;;10;
+governador;1;2410900;#nulos;;;13;
+governador;1;2410900;#comparecimento;;;1506;
+governador;1;2411106;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;429;S
+governador;1;2411106;_DINARTEMARIZ;DINARTE MARIZ;UDN;155;
+governador;1;2411106;#brancos;;;5;
+governador;1;2411106;#nulos;;;9;
+governador;1;2411106;#comparecimento;;;598;
+governador;1;2410702;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;235;S
+governador;1;2410702;_DINARTEMARIZ;DINARTE MARIZ;UDN;217;
+governador;1;2410702;#brancos;;;2;
+governador;1;2410702;#nulos;;;0;
+governador;1;2410702;#comparecimento;;;454;
+governador;1;2410504;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;249;S
+governador;1;2410504;_DINARTEMARIZ;DINARTE MARIZ;UDN;235;
+governador;1;2410504;#brancos;;;7;
+governador;1;2410504;#nulos;;;5;
+governador;1;2410504;#comparecimento;;;496;
+governador;1;2410801;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;395;S
+governador;1;2410801;_DINARTEMARIZ;DINARTE MARIZ;UDN;265;
+governador;1;2410801;#brancos;;;9;
+governador;1;2410801;#nulos;;;8;
+governador;1;2410801;#comparecimento;;;677;
+governador;1;2411007;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;192;S
+governador;1;2411007;_DINARTEMARIZ;DINARTE MARIZ;UDN;286;
+governador;1;2411007;#brancos;;;1;
+governador;1;2411007;#nulos;;;6;
+governador;1;2411007;#comparecimento;;;485;
+governador;1;2411429;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;142;S
+governador;1;2411429;_DINARTEMARIZ;DINARTE MARIZ;UDN;236;
+governador;1;2411429;#brancos;;;0;
+governador;1;2411429;#nulos;;;2;
+governador;1;2411429;#comparecimento;;;380;
+governador;1;2413508;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;612;S
+governador;1;2413508;_DINARTEMARIZ;DINARTE MARIZ;UDN;237;
+governador;1;2413508;#brancos;;;13;
+governador;1;2413508;#nulos;;;10;
+governador;1;2413508;#comparecimento;;;872;
+governador;1;2412906;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1274;S
+governador;1;2412906;_DINARTEMARIZ;DINARTE MARIZ;UDN;664;
+governador;1;2412906;#brancos;;;20;
+governador;1;2412906;#nulos;;;39;
+governador;1;2412906;#comparecimento;;;1997;
+governador;1;2412708;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;631;S
+governador;1;2412708;_DINARTEMARIZ;DINARTE MARIZ;UDN;383;
+governador;1;2412708;#brancos;;;2;
+governador;1;2412708;#nulos;;;6;
+governador;1;2412708;#comparecimento;;;1022;
+governador;1;2413706;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;434;S
+governador;1;2413706;_DINARTEMARIZ;DINARTE MARIZ;UDN;334;
+governador;1;2413706;#brancos;;;8;
+governador;1;2413706;#nulos;;;11;
+governador;1;2413706;#comparecimento;;;787;
+governador;1;2411205;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1212;S
+governador;1;2411205;_DINARTEMARIZ;DINARTE MARIZ;UDN;1216;
+governador;1;2411205;#brancos;;;18;
+governador;1;2411205;#nulos;;;27;
+governador;1;2411205;#comparecimento;;;2473;
+governador;1;2411908;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;227;S
+governador;1;2411908;_DINARTEMARIZ;DINARTE MARIZ;UDN;268;
+governador;1;2411908;#brancos;;;8;
+governador;1;2411908;#nulos;;;4;
+governador;1;2411908;#comparecimento;;;507;
+governador;1;2412500;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;954;S
+governador;1;2412500;_DINARTEMARIZ;DINARTE MARIZ;UDN;1579;
+governador;1;2412500;#brancos;;;32;
+governador;1;2412500;#nulos;;;37;
+governador;1;2412500;#comparecimento;;;2602;
+governador;1;2412807;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1025;S
+governador;1;2412807;_DINARTEMARIZ;DINARTE MARIZ;UDN;789;
+governador;1;2412807;#brancos;;;20;
+governador;1;2412807;#nulos;;;10;
+governador;1;2412807;#comparecimento;;;1844;
+governador;1;2413003;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;521;S
+governador;1;2413003;_DINARTEMARIZ;DINARTE MARIZ;UDN;342;
+governador;1;2413003;#brancos;;;9;
+governador;1;2413003;#nulos;;;21;
+governador;1;2413003;#comparecimento;;;893;
+governador;1;2411809;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;355;S
+governador;1;2411809;_DINARTEMARIZ;DINARTE MARIZ;UDN;275;
+governador;1;2411809;#brancos;;;2;
+governador;1;2411809;#nulos;;;4;
+governador;1;2411809;#comparecimento;;;636;
+governador;1;2411502;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1345;S
+governador;1;2411502;_DINARTEMARIZ;DINARTE MARIZ;UDN;406;
+governador;1;2411502;#brancos;;;21;
+governador;1;2411502;#nulos;;;17;
+governador;1;2411502;#comparecimento;;;1789;
+governador;1;2413607;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;451;S
+governador;1;2413607;_DINARTEMARIZ;DINARTE MARIZ;UDN;545;
+governador;1;2413607;#brancos;;;3;
+governador;1;2413607;#nulos;;;11;
+governador;1;2413607;#comparecimento;;;1010;
+governador;1;2411403;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;2017;S
+governador;1;2411403;_DINARTEMARIZ;DINARTE MARIZ;UDN;1696;
+governador;1;2411403;#brancos;;;47;
+governador;1;2411403;#nulos;;;37;
+governador;1;2411403;#comparecimento;;;3797;
+governador;1;2412104;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;500;S
+governador;1;2412104;_DINARTEMARIZ;DINARTE MARIZ;UDN;614;
+governador;1;2412104;#brancos;;;6;
+governador;1;2412104;#nulos;;;4;
+governador;1;2412104;#comparecimento;;;1124;
+governador;1;2413300;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;482;S
+governador;1;2413300;_DINARTEMARIZ;DINARTE MARIZ;UDN;370;
+governador;1;2413300;#brancos;;;15;
+governador;1;2413300;#nulos;;;10;
+governador;1;2413300;#comparecimento;;;877;
+governador;1;2411601;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;515;S
+governador;1;2411601;_DINARTEMARIZ;DINARTE MARIZ;UDN;662;
+governador;1;2411601;#brancos;;;5;
+governador;1;2411601;#nulos;;;8;
+governador;1;2411601;#comparecimento;;;1190;
+governador;1;2412401;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;245;S
+governador;1;2412401;_DINARTEMARIZ;DINARTE MARIZ;UDN;205;
+governador;1;2412401;#brancos;;;2;
+governador;1;2412401;#nulos;;;3;
+governador;1;2412401;#comparecimento;;;455;
+governador;1;2412203;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1465;S
+governador;1;2412203;_DINARTEMARIZ;DINARTE MARIZ;UDN;852;
+governador;1;2412203;#brancos;;;24;
+governador;1;2412203;#nulos;;;23;
+governador;1;2412203;#comparecimento;;;2364;
+governador;1;2411700;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;244;S
+governador;1;2411700;_DINARTEMARIZ;DINARTE MARIZ;UDN;261;
+governador;1;2411700;#brancos;;;5;
+governador;1;2411700;#nulos;;;5;
+governador;1;2411700;#comparecimento;;;515;
+governador;1;2412609;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1019;S
+governador;1;2412609;_DINARTEMARIZ;DINARTE MARIZ;UDN;698;
+governador;1;2412609;#brancos;;;10;
+governador;1;2412609;#nulos;;;13;
+governador;1;2412609;#comparecimento;;;1740;
+governador;1;2413409;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;381;S
+governador;1;2413409;_DINARTEMARIZ;DINARTE MARIZ;UDN;968;
+governador;1;2413409;#brancos;;;10;
+governador;1;2413409;#nulos;;;21;
+governador;1;2413409;#comparecimento;;;1380;
+governador;1;2412302;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1011;S
+governador;1;2412302;_DINARTEMARIZ;DINARTE MARIZ;UDN;926;
+governador;1;2412302;#brancos;;;18;
+governador;1;2412302;#nulos;;;13;
+governador;1;2412302;#comparecimento;;;1968;
+governador;1;2412005;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1334;S
+governador;1;2412005;_DINARTEMARIZ;DINARTE MARIZ;UDN;1230;
+governador;1;2412005;#brancos;;;35;
+governador;1;2412005;#nulos;;;52;
+governador;1;2412005;#comparecimento;;;2651;
+governador;1;2413201;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;95;S
+governador;1;2413201;_DINARTEMARIZ;DINARTE MARIZ;UDN;76;
+governador;1;2413201;#brancos;;;0;
+governador;1;2413201;#nulos;;;0;
+governador;1;2413201;#comparecimento;;;171;
+governador;1;2413904;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;793;S
+governador;1;2413904;_DINARTEMARIZ;DINARTE MARIZ;UDN;410;
+governador;1;2413904;#brancos;;;11;
+governador;1;2413904;#nulos;;;32;
+governador;1;2413904;#comparecimento;;;1246;
+governador;1;2414407;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;1102;S
+governador;1;2414407;_DINARTEMARIZ;DINARTE MARIZ;UDN;873;
+governador;1;2414407;#brancos;;;24;
+governador;1;2414407;#nulos;;;38;
+governador;1;2414407;#comparecimento;;;2037;
+governador;1;2414001;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;741;S
+governador;1;2414001;_DINARTEMARIZ;DINARTE MARIZ;UDN;530;
+governador;1;2414001;#brancos;;;10;
+governador;1;2414001;#nulos;;;41;
+governador;1;2414001;#comparecimento;;;1322;
+governador;1;2414209;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;322;S
+governador;1;2414209;_DINARTEMARIZ;DINARTE MARIZ;UDN;367;
+governador;1;2414209;#brancos;;;11;
+governador;1;2414209;#nulos;;;6;
+governador;1;2414209;#comparecimento;;;706;
+governador;1;2414100;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;952;S
+governador;1;2414100;_DINARTEMARIZ;DINARTE MARIZ;UDN;673;
+governador;1;2414100;#brancos;;;12;
+governador;1;2414100;#nulos;;;26;
+governador;1;2414100;#comparecimento;;;1663;
+governador;1;2413805;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;350;S
+governador;1;2413805;_DINARTEMARIZ;DINARTE MARIZ;UDN;195;
+governador;1;2413805;#brancos;;;1;
+governador;1;2413805;#nulos;;;3;
+governador;1;2413805;#comparecimento;;;549;
+governador;1;2414308;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;150;S
+governador;1;2414308;_DINARTEMARIZ;DINARTE MARIZ;UDN;245;
+governador;1;2414308;#brancos;;;1;
+governador;1;2414308;#nulos;;;0;
+governador;1;2414308;#comparecimento;;;396;
+governador;1;2414605;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;583;S
+governador;1;2414605;_DINARTEMARIZ;DINARTE MARIZ;UDN;793;
+governador;1;2414605;#brancos;;;20;
+governador;1;2414605;#nulos;;;18;
+governador;1;2414605;#comparecimento;;;1414;
+governador;1;2414506;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;814;S
+governador;1;2414506;_DINARTEMARIZ;DINARTE MARIZ;UDN;301;
+governador;1;2414506;#brancos;;;13;
+governador;1;2414506;#nulos;;;18;
+governador;1;2414506;#comparecimento;;;1146;
+governador;1;2414704;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;308;S
+governador;1;2414704;_DINARTEMARIZ;DINARTE MARIZ;UDN;454;
+governador;1;2414704;#brancos;;;5;
+governador;1;2414704;#nulos;;;12;
+governador;1;2414704;#comparecimento;;;779;
+governador;1;2414902;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;122;S
+governador;1;2414902;_DINARTEMARIZ;DINARTE MARIZ;UDN;74;
+governador;1;2414902;#brancos;;;0;
+governador;1;2414902;#nulos;;;0;
+governador;1;2414902;#comparecimento;;;196;
+governador;1;2415008;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;83;S
+governador;1;2415008;_DINARTEMARIZ;DINARTE MARIZ;UDN;57;
+governador;1;2415008;#brancos;;;2;
+governador;1;2415008;#nulos;;;2;
+governador;1;2415008;#comparecimento;;;144;
+governador;1;2414803;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;443;S
+governador;1;2414803;_DINARTEMARIZ;DINARTE MARIZ;UDN;301;
+governador;1;2414803;#brancos;;;9;
+governador;1;2414803;#nulos;;;18;
+governador;1;2414803;#comparecimento;;;771;
+governador;1;2410603;_WALFREDOGURGEL;WALFREDO GURGEL;PSD;359;S
+governador;1;2410603;_DINARTEMARIZ;DINARTE MARIZ;UDN;147;
+governador;1;2410603;#brancos;;;4;
+governador;1;2410603;#nulos;;;5;
+governador;1;2410603;#comparecimento;;;515;

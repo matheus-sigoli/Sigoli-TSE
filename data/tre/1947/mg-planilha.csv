@@ -1,0 +1,1086 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+governador;1;3100203;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2032;
+governador;1;3100203;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1938;S
+governador;1;3100203;#nulos;;;17;
+governador;1;3100203;#brancos;;;18;
+governador;1;3100203;#comparecimento;;;4005;
+governador;1;3100203;#abstencao;;;1743;
+governador;1;3100203;#eleitorado;;;5748;
+governador;1;3100302;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2673;
+governador;1;3100302;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1776;S
+governador;1;3100302;#nulos;;;251;
+governador;1;3100302;#brancos;;;396;
+governador;1;3100302;#comparecimento;;;5096;
+governador;1;3100302;#abstencao;;;1718;
+governador;1;3100302;#eleitorado;;;6814;
+governador;1;3101102;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;5052;
+governador;1;3101102;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4173;S
+governador;1;3101102;#nulos;;;9;
+governador;1;3101102;#brancos;;;3;
+governador;1;3101102;#comparecimento;;;9237;
+governador;1;3101102;#abstencao;;;4678;
+governador;1;3101102;#eleitorado;;;13915;
+governador;1;3101201;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1505;
+governador;1;3101201;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2172;S
+governador;1;3101201;#nulos;;;99;
+governador;1;3101201;#brancos;;;8;
+governador;1;3101201;#comparecimento;;;3784;
+governador;1;3101201;#abstencao;;;1250;
+governador;1;3101201;#eleitorado;;;5034;
+governador;1;3101508;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2314;
+governador;1;3101508;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3689;S
+governador;1;3101508;#nulos;;;168;
+governador;1;3101508;#brancos;;;182;
+governador;1;3101508;#comparecimento;;;6353;
+governador;1;3101508;#abstencao;;;3205;
+governador;1;3101508;#eleitorado;;;9558;
+governador;1;3101607;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3406;
+governador;1;3101607;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2598;S
+governador;1;3101607;#nulos;;;4;
+governador;1;3101607;#brancos;;;224;
+governador;1;3101607;#comparecimento;;;6232;
+governador;1;3101607;#abstencao;;;2219;
+governador;1;3101607;#eleitorado;;;8451;
+governador;1;3101706;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2618;
+governador;1;3101706;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1751;S
+governador;1;3101706;#nulos;;;2;
+governador;1;3101706;#brancos;;;21;
+governador;1;3101706;#comparecimento;;;4392;
+governador;1;3101706;#abstencao;;;2268;
+governador;1;3101706;#eleitorado;;;6660;
+governador;1;3102100;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2122;
+governador;1;3102100;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2764;S
+governador;1;3102100;#nulos;;;16;
+governador;1;3102100;#brancos;;;28;
+governador;1;3102100;#comparecimento;;;4930;
+governador;1;3102100;#abstencao;;;2308;
+governador;1;3102100;#eleitorado;;;7238;
+governador;1;3102308;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1796;
+governador;1;3102308;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1348;S
+governador;1;3102308;#nulos;;;2;
+governador;1;3102308;#brancos;;;80;
+governador;1;3102308;#comparecimento;;;3226;
+governador;1;3102308;#abstencao;;;1288;
+governador;1;3102308;#eleitorado;;;4514;
+governador;1;3102605;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;548;
+governador;1;3102605;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2188;S
+governador;1;3102605;#nulos;;;16;
+governador;1;3102605;#brancos;;;47;
+governador;1;3102605;#comparecimento;;;2799;
+governador;1;3102605;#abstencao;;;681;
+governador;1;3102605;#eleitorado;;;3480;
+governador;1;3102803;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2463;
+governador;1;3102803;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2061;S
+governador;1;3102803;#nulos;;;80;
+governador;1;3102803;#brancos;;;117;
+governador;1;3102803;#comparecimento;;;4721;
+governador;1;3102803;#abstencao;;;2313;
+governador;1;3102803;#eleitorado;;;7034;
+governador;1;3103504;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2025;
+governador;1;3103504;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2785;S
+governador;1;3103504;#nulos;;;135;
+governador;1;3103504;#brancos;;;194;
+governador;1;3103504;#comparecimento;;;5139;
+governador;1;3103504;#abstencao;;;2985;
+governador;1;3103504;#eleitorado;;;8124;
+governador;1;3103405;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1725;
+governador;1;3103405;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1922;S
+governador;1;3103405;#nulos;;;22;
+governador;1;3103405;#brancos;;;295;
+governador;1;3103405;#comparecimento;;;3964;
+governador;1;3103405;#abstencao;;;2071;
+governador;1;3103405;#eleitorado;;;6035;
+governador;1;3104007;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3823;
+governador;1;3104007;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4443;S
+governador;1;3104007;#nulos;;;89;
+governador;1;3104007;#brancos;;;299;
+governador;1;3104007;#comparecimento;;;8654;
+governador;1;3104007;#abstencao;;;4358;
+governador;1;3104007;#eleitorado;;;13012;
+governador;1;3104908;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1126;
+governador;1;3104908;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2088;S
+governador;1;3104908;#nulos;;;70;
+governador;1;3104908;#brancos;;;124;
+governador;1;3104908;#comparecimento;;;3408;
+governador;1;3104908;#abstencao;;;1699;
+governador;1;3104908;#eleitorado;;;5107;
+governador;1;3105103;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1434;
+governador;1;3105103;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;951;S
+governador;1;3105103;#nulos;;;8;
+governador;1;3105103;#brancos;;;126;
+governador;1;3105103;#comparecimento;;;2519;
+governador;1;3105103;#abstencao;;;803;
+governador;1;3105103;#eleitorado;;;3322;
+governador;1;3105608;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;12013;
+governador;1;3105608;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;8695;S
+governador;1;3105608;#nulos;;;0;
+governador;1;3105608;#brancos;;;312;
+governador;1;3105608;#comparecimento;;;21020;
+governador;1;3105608;#abstencao;;;7766;
+governador;1;3105608;#eleitorado;;;28786;
+governador;1;3106200;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;22922;
+governador;1;3106200;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;40646;S
+governador;1;3106200;#nulos;;;1173;
+governador;1;3106200;#brancos;;;610;
+governador;1;3106200;#comparecimento;;;65351;
+governador;1;3106200;#abstencao;;;28780;
+governador;1;3106200;#eleitorado;;;94131;
+governador;1;3106705;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2267;
+governador;1;3106705;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3270;S
+governador;1;3106705;#nulos;;;191;
+governador;1;3106705;#brancos;;;514;
+governador;1;3106705;#comparecimento;;;6242;
+governador;1;3106705;#abstencao;;;2276;
+governador;1;3106705;#eleitorado;;;8518;
+governador;1;3106903;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1179;
+governador;1;3106903;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1496;S
+governador;1;3106903;#nulos;;;5;
+governador;1;3106903;#brancos;;;45;
+governador;1;3106903;#comparecimento;;;2725;
+governador;1;3106903;#abstencao;;;804;
+governador;1;3106903;#eleitorado;;;3529;
+governador;1;3107109;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1393;
+governador;1;3107109;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;938;S
+governador;1;3107109;#nulos;;;0;
+governador;1;3107109;#brancos;;;47;
+governador;1;3107109;#comparecimento;;;2378;
+governador;1;3107109;#abstencao;;;641;
+governador;1;3107109;#eleitorado;;;3019;
+governador;1;3107307;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1822;
+governador;1;3107307;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1410;S
+governador;1;3107307;#nulos;;;20;
+governador;1;3107307;#brancos;;;72;
+governador;1;3107307;#comparecimento;;;3324;
+governador;1;3107307;#abstencao;;;1484;
+governador;1;3107307;#eleitorado;;;4808;
+governador;1;3107406;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1379;
+governador;1;3107406;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1755;S
+governador;1;3107406;#nulos;;;16;
+governador;1;3107406;#brancos;;;29;
+governador;1;3107406;#comparecimento;;;3179;
+governador;1;3107406;#abstencao;;;1079;
+governador;1;3107406;#eleitorado;;;4258;
+governador;1;3108008;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2381;
+governador;1;3108008;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2191;S
+governador;1;3108008;#nulos;;;19;
+governador;1;3108008;#brancos;;;135;
+governador;1;3108008;#comparecimento;;;4726;
+governador;1;3108008;#abstencao;;;1312;
+governador;1;3108008;#eleitorado;;;6038;
+governador;1;3108107;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2188;
+governador;1;3108107;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;5867;S
+governador;1;3108107;#nulos;;;203;
+governador;1;3108107;#brancos;;;173;
+governador;1;3108107;#comparecimento;;;8431;
+governador;1;3108107;#abstencao;;;4540;
+governador;1;3108107;#eleitorado;;;12971;
+governador;1;3108909;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;469;
+governador;1;3108909;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1528;S
+governador;1;3108909;#nulos;;;33;
+governador;1;3108909;#brancos;;;41;
+governador;1;3108909;#comparecimento;;;2071;
+governador;1;3108909;#abstencao;;;1167;
+governador;1;3108909;#eleitorado;;;3238;
+governador;1;3109501;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;611;
+governador;1;3109501;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1032;S
+governador;1;3109501;#nulos;;;9;
+governador;1;3109501;#brancos;;;34;
+governador;1;3109501;#comparecimento;;;1686;
+governador;1;3109501;#abstencao;;;867;
+governador;1;3109501;#eleitorado;;;2553;
+governador;1;3110004;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1879;
+governador;1;3110004;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1642;S
+governador;1;3110004;#nulos;;;20;
+governador;1;3110004;#brancos;;;61;
+governador;1;3110004;#comparecimento;;;3602;
+governador;1;3110004;#abstencao;;;2132;
+governador;1;3110004;#eleitorado;;;5734;
+governador;1;3110509;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1564;
+governador;1;3110509;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1175;S
+governador;1;3110509;#nulos;;;10;
+governador;1;3110509;#brancos;;;88;
+governador;1;3110509;#comparecimento;;;2837;
+governador;1;3110509;#abstencao;;;1052;
+governador;1;3110509;#eleitorado;;;3889;
+governador;1;3110608;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1348;
+governador;1;3110608;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;790;S
+governador;1;3110608;#nulos;;;0;
+governador;1;3110608;#brancos;;;35;
+governador;1;3110608;#comparecimento;;;2173;
+governador;1;3110608;#abstencao;;;910;
+governador;1;3110608;#eleitorado;;;3083;
+governador;1;3110905;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;317;
+governador;1;3110905;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1335;S
+governador;1;3110905;#nulos;;;0;
+governador;1;3110905;#brancos;;;15;
+governador;1;3110905;#comparecimento;;;1667;
+governador;1;3110905;#abstencao;;;734;
+governador;1;3110905;#eleitorado;;;2401;
+governador;1;3111200;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2071;
+governador;1;3111200;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3375;S
+governador;1;3111200;#nulos;;;15;
+governador;1;3111200;#brancos;;;76;
+governador;1;3111200;#comparecimento;;;5537;
+governador;1;3111200;#abstencao;;;2241;
+governador;1;3111200;#eleitorado;;;7778;
+governador;1;3111606;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1175;
+governador;1;3111606;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1462;S
+governador;1;3111606;#nulos;;;2;
+governador;1;3111606;#brancos;;;99;
+governador;1;3111606;#comparecimento;;;2738;
+governador;1;3111606;#abstencao;;;1219;
+governador;1;3111606;#eleitorado;;;3957;
+governador;1;3113305;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;7713;
+governador;1;3113305;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2715;S
+governador;1;3113305;#nulos;;;0;
+governador;1;3113305;#brancos;;;259;
+governador;1;3113305;#comparecimento;;;10687;
+governador;1;3113305;#abstencao;;;8070;
+governador;1;3113305;#eleitorado;;;18757;
+governador;1;3113404;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;9746;
+governador;1;3113404;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4809;S
+governador;1;3113404;#nulos;;;208;
+governador;1;3113404;#brancos;;;826;
+governador;1;3113404;#comparecimento;;;15589;
+governador;1;3113404;#abstencao;;;5910;
+governador;1;3113404;#eleitorado;;;21499;
+governador;1;3114303;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1319;
+governador;1;3114303;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1240;S
+governador;1;3114303;#nulos;;;8;
+governador;1;3114303;#brancos;;;38;
+governador;1;3114303;#comparecimento;;;2605;
+governador;1;3114303;#abstencao;;;901;
+governador;1;3114303;#eleitorado;;;3506;
+governador;1;3114402;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1166;
+governador;1;3114402;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1260;S
+governador;1;3114402;#nulos;;;19;
+governador;1;3114402;#brancos;;;34;
+governador;1;3114402;#comparecimento;;;2479;
+governador;1;3114402;#abstencao;;;1429;
+governador;1;3114402;#eleitorado;;;3908;
+governador;1;3115102;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2262;
+governador;1;3115102;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2056;S
+governador;1;3115102;#nulos;;;59;
+governador;1;3115102;#brancos;;;55;
+governador;1;3115102;#comparecimento;;;4432;
+governador;1;3115102;#abstencao;;;2652;
+governador;1;3115102;#eleitorado;;;7084;
+governador;1;3115300;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3906;
+governador;1;3115300;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4732;S
+governador;1;3115300;#nulos;;;5;
+governador;1;3115300;#brancos;;;190;
+governador;1;3115300;#comparecimento;;;8833;
+governador;1;3115300;#abstencao;;;3279;
+governador;1;3115300;#eleitorado;;;12112;
+governador;1;3117504;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2775;
+governador;1;3117504;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3127;S
+governador;1;3117504;#nulos;;;0;
+governador;1;3117504;#brancos;;;185;
+governador;1;3117504;#comparecimento;;;6087;
+governador;1;3117504;#abstencao;;;4132;
+governador;1;3117504;#eleitorado;;;10219;
+governador;1;3118205;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;384;
+governador;1;3118205;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1092;S
+governador;1;3118205;#nulos;;;7;
+governador;1;3118205;#brancos;;;11;
+governador;1;3118205;#comparecimento;;;1494;
+governador;1;3118205;#abstencao;;;791;
+governador;1;3118205;#eleitorado;;;2285;
+governador;1;3118304;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1888;
+governador;1;3118304;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;8677;S
+governador;1;3118304;#nulos;;;198;
+governador;1;3118304;#brancos;;;216;
+governador;1;3118304;#comparecimento;;;10979;
+governador;1;3118304;#abstencao;;;6037;
+governador;1;3118304;#eleitorado;;;17016;
+governador;1;3119104;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1694;
+governador;1;3119104;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2416;S
+governador;1;3119104;#nulos;;;63;
+governador;1;3119104;#brancos;;;297;
+governador;1;3119104;#comparecimento;;;4470;
+governador;1;3119104;#abstencao;;;1840;
+governador;1;3119104;#eleitorado;;;6310;
+governador;1;3120508;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;477;
+governador;1;3120508;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3023;S
+governador;1;3120508;#nulos;;;0;
+governador;1;3120508;#brancos;;;101;
+governador;1;3120508;#comparecimento;;;3601;
+governador;1;3120508;#abstencao;;;1618;
+governador;1;3120508;#eleitorado;;;5219;
+governador;1;3120904;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2716;
+governador;1;3120904;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2862;S
+governador;1;3120904;#nulos;;;334;
+governador;1;3120904;#brancos;;;460;
+governador;1;3120904;#comparecimento;;;6372;
+governador;1;3120904;#abstencao;;;6462;
+governador;1;3120904;#eleitorado;;;12834;
+governador;1;3121605;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4812;
+governador;1;3121605;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2572;S
+governador;1;3121605;#nulos;;;5;
+governador;1;3121605;#brancos;;;216;
+governador;1;3121605;#comparecimento;;;7605;
+governador;1;3121605;#abstencao;;;5800;
+governador;1;3121605;#eleitorado;;;13405;
+governador;1;3122306;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2315;
+governador;1;3122306;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2959;S
+governador;1;3122306;#nulos;;;18;
+governador;1;3122306;#brancos;;;81;
+governador;1;3122306;#comparecimento;;;5373;
+governador;1;3122306;#abstencao;;;1927;
+governador;1;3122306;#eleitorado;;;7300;
+governador;1;3123205;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;775;
+governador;1;3123205;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1737;S
+governador;1;3123205;#nulos;;;0;
+governador;1;3123205;#brancos;;;59;
+governador;1;3123205;#comparecimento;;;2571;
+governador;1;3123205;#abstencao;;;1562;
+governador;1;3123205;#eleitorado;;;4133;
+governador;1;3123601;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;637;
+governador;1;3123601;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;923;S
+governador;1;3123601;#nulos;;;20;
+governador;1;3123601;#brancos;;;14;
+governador;1;3123601;#comparecimento;;;1594;
+governador;1;3123601;#abstencao;;;524;
+governador;1;3123601;#eleitorado;;;2118;
+governador;1;3124807;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1309;
+governador;1;3124807;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;289;S
+governador;1;3124807;#nulos;;;22;
+governador;1;3124807;#brancos;;;20;
+governador;1;3124807;#comparecimento;;;1640;
+governador;1;3124807;#abstencao;;;799;
+governador;1;3124807;#eleitorado;;;2439;
+governador;1;3125903;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;436;
+governador;1;3125903;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2228;S
+governador;1;3125903;#nulos;;;39;
+governador;1;3125903;#brancos;;;76;
+governador;1;3125903;#comparecimento;;;2779;
+governador;1;3125903;#abstencao;;;2274;
+governador;1;3125903;#eleitorado;;;5053;
+governador;1;3126109;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2496;
+governador;1;3126109;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3884;S
+governador;1;3126109;#nulos;;;84;
+governador;1;3126109;#brancos;;;204;
+governador;1;3126109;#comparecimento;;;6668;
+governador;1;3126109;#abstencao;;;3453;
+governador;1;3126109;#eleitorado;;;10121;
+governador;1;3127107;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1279;
+governador;1;3127107;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;815;S
+governador;1;3127107;#nulos;;;24;
+governador;1;3127107;#brancos;;;50;
+governador;1;3127107;#comparecimento;;;2168;
+governador;1;3127107;#abstencao;;;1326;
+governador;1;3127107;#eleitorado;;;3494;
+governador;1;3127701;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3806;
+governador;1;3127701;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3218;S
+governador;1;3127701;#nulos;;;377;
+governador;1;3127701;#brancos;;;249;
+governador;1;3127701;#comparecimento;;;7650;
+governador;1;3127701;#abstencao;;;5636;
+governador;1;3127701;#eleitorado;;;13286;
+governador;1;3127800;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1903;
+governador;1;3127800;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;784;S
+governador;1;3127800;#nulos;;;8;
+governador;1;3127800;#brancos;;;75;
+governador;1;3127800;#comparecimento;;;2770;
+governador;1;3127800;#abstencao;;;1155;
+governador;1;3127800;#eleitorado;;;3925;
+governador;1;3128006;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2744;
+governador;1;3128006;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1855;S
+governador;1;3128006;#nulos;;;0;
+governador;1;3128006;#brancos;;;34;
+governador;1;3128006;#comparecimento;;;4633;
+governador;1;3128006;#abstencao;;;2987;
+governador;1;3128006;#eleitorado;;;7620;
+governador;1;3128303;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;624;
+governador;1;3128303;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1255;S
+governador;1;3128303;#nulos;;;6;
+governador;1;3128303;#brancos;;;53;
+governador;1;3128303;#comparecimento;;;1938;
+governador;1;3128303;#abstencao;;;1227;
+governador;1;3128303;#eleitorado;;;3165;
+governador;1;3128709;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1401;
+governador;1;3128709;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1555;S
+governador;1;3128709;#nulos;;;22;
+governador;1;3128709;#brancos;;;74;
+governador;1;3128709;#comparecimento;;;3052;
+governador;1;3128709;#abstencao;;;1280;
+governador;1;3128709;#eleitorado;;;4332;
+governador;1;3131208;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4302;
+governador;1;3131208;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1876;S
+governador;1;3131208;#nulos;;;231;
+governador;1;3131208;#brancos;;;181;
+governador;1;3131208;#comparecimento;;;6590;
+governador;1;3131208;#abstencao;;;4166;
+governador;1;3131208;#eleitorado;;;10756;
+governador;1;3131901;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1423;
+governador;1;3131901;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1061;S
+governador;1;3131901;#nulos;;;72;
+governador;1;3131901;#brancos;;;31;
+governador;1;3131901;#comparecimento;;;2587;
+governador;1;3131901;#abstencao;;;725;
+governador;1;3131901;#eleitorado;;;3312;
+governador;1;3132404;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1560;
+governador;1;3132404;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4297;S
+governador;1;3132404;#nulos;;;23;
+governador;1;3132404;#brancos;;;170;
+governador;1;3132404;#comparecimento;;;6050;
+governador;1;3132404;#abstencao;;;2929;
+governador;1;3132404;#eleitorado;;;8979;
+governador;1;3132503;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;565;
+governador;1;3132503;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;833;S
+governador;1;3132503;#nulos;;;0;
+governador;1;3132503;#brancos;;;22;
+governador;1;3132503;#comparecimento;;;1420;
+governador;1;3132503;#abstencao;;;954;
+governador;1;3132503;#eleitorado;;;2374;
+governador;1;3133105;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;507;
+governador;1;3133105;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1428;S
+governador;1;3133105;#nulos;;;8;
+governador;1;3133105;#brancos;;;61;
+governador;1;3133105;#comparecimento;;;2004;
+governador;1;3133105;#abstencao;;;772;
+governador;1;3133105;#eleitorado;;;2776;
+governador;1;3133501;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2763;
+governador;1;3133501;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1598;S
+governador;1;3133501;#nulos;;;0;
+governador;1;3133501;#brancos;;;5;
+governador;1;3133501;#comparecimento;;;4366;
+governador;1;3133501;#abstencao;;;2184;
+governador;1;3133501;#eleitorado;;;6550;
+governador;1;3133808;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1243;
+governador;1;3133808;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2670;S
+governador;1;3133808;#nulos;;;18;
+governador;1;3133808;#brancos;;;63;
+governador;1;3133808;#comparecimento;;;3994;
+governador;1;3133808;#abstencao;;;1787;
+governador;1;3133808;#eleitorado;;;5781;
+governador;1;3134202;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;323;
+governador;1;3134202;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1929;S
+governador;1;3134202;#nulos;;;66;
+governador;1;3134202;#brancos;;;109;
+governador;1;3134202;#comparecimento;;;2427;
+governador;1;3134202;#abstencao;;;2899;
+governador;1;3134202;#eleitorado;;;5326;
+governador;1;3134806;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1089;
+governador;1;3134806;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;982;S
+governador;1;3134806;#nulos;;;1;
+governador;1;3134806;#brancos;;;37;
+governador;1;3134806;#comparecimento;;;2109;
+governador;1;3134806;#abstencao;;;1165;
+governador;1;3134806;#eleitorado;;;3274;
+governador;1;3134905;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1243;
+governador;1;3134905;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;952;S
+governador;1;3134905;#nulos;;;10;
+governador;1;3134905;#brancos;;;57;
+governador;1;3134905;#comparecimento;;;2262;
+governador;1;3134905;#abstencao;;;851;
+governador;1;3134905;#eleitorado;;;3113;
+governador;1;3135209;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;808;
+governador;1;3135209;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2442;S
+governador;1;3135209;#nulos;;;44;
+governador;1;3135209;#brancos;;;51;
+governador;1;3135209;#comparecimento;;;3345;
+governador;1;3135209;#abstencao;;;2326;
+governador;1;3135209;#eleitorado;;;5671;
+governador;1;3135803;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1074;
+governador;1;3135803;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1704;S
+governador;1;3135803;#nulos;;;24;
+governador;1;3135803;#brancos;;;27;
+governador;1;3135803;#comparecimento;;;2829;
+governador;1;3135803;#abstencao;;;628;
+governador;1;3135803;#eleitorado;;;3457;
+governador;1;3123908;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1420;
+governador;1;3123908;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1862;S
+governador;1;3123908;#nulos;;;51;
+governador;1;3123908;#brancos;;;47;
+governador;1;3123908;#comparecimento;;;3380;
+governador;1;3123908;#abstencao;;;1224;
+governador;1;3123908;#eleitorado;;;4604;
+governador;1;3136702;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;10871;
+governador;1;3136702;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;12462;S
+governador;1;3136702;#nulos;;;713;
+governador;1;3136702;#brancos;;;482;
+governador;1;3136702;#comparecimento;;;24528;
+governador;1;3136702;#abstencao;;;8250;
+governador;1;3136702;#eleitorado;;;32778;
+governador;1;3137809;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1621;
+governador;1;3137809;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3071;S
+governador;1;3137809;#nulos;;;86;
+governador;1;3137809;#brancos;;;11;
+governador;1;3137809;#comparecimento;;;4789;
+governador;1;3137809;#abstencao;;;1416;
+governador;1;3137809;#eleitorado;;;6205;
+governador;1;3138203;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3097;
+governador;1;3138203;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4267;S
+governador;1;3138203;#nulos;;;10;
+governador;1;3138203;#brancos;;;200;
+governador;1;3138203;#comparecimento;;;7574;
+governador;1;3138203;#abstencao;;;2987;
+governador;1;3138203;#eleitorado;;;10561;
+governador;1;3138401;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1791;
+governador;1;3138401;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;5937;S
+governador;1;3138401;#nulos;;;96;
+governador;1;3138401;#brancos;;;179;
+governador;1;3138401;#comparecimento;;;8003;
+governador;1;3138401;#abstencao;;;3909;
+governador;1;3138401;#eleitorado;;;11912;
+governador;1;3138609;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1306;
+governador;1;3138609;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1475;S
+governador;1;3138609;#nulos;;;175;
+governador;1;3138609;#brancos;;;204;
+governador;1;3138609;#comparecimento;;;3160;
+governador;1;3138609;#abstencao;;;738;
+governador;1;3138609;#eleitorado;;;3898;
+governador;1;3138807;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;468;
+governador;1;3138807;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1338;S
+governador;1;3138807;#nulos;;;24;
+governador;1;3138807;#brancos;;;50;
+governador;1;3138807;#comparecimento;;;1880;
+governador;1;3138807;#abstencao;;;1267;
+governador;1;3138807;#eleitorado;;;3147;
+governador;1;3139003;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3338;
+governador;1;3139003;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2537;S
+governador;1;3139003;#nulos;;;4;
+governador;1;3139003;#brancos;;;96;
+governador;1;3139003;#comparecimento;;;5975;
+governador;1;3139003;#abstencao;;;2081;
+governador;1;3139003;#eleitorado;;;8056;
+governador;1;3139409;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3270;
+governador;1;3139409;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1876;S
+governador;1;3139409;#nulos;;;163;
+governador;1;3139409;#brancos;;;108;
+governador;1;3139409;#comparecimento;;;5417;
+governador;1;3139409;#abstencao;;;2408;
+governador;1;3139409;#eleitorado;;;7825;
+governador;1;3139508;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2396;
+governador;1;3139508;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1172;S
+governador;1;3139508;#nulos;;;10;
+governador;1;3139508;#brancos;;;38;
+governador;1;3139508;#comparecimento;;;3616;
+governador;1;3139508;#abstencao;;;1045;
+governador;1;3139508;#eleitorado;;;4661;
+governador;1;3139607;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2084;
+governador;1;3139607;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;430;S
+governador;1;3139607;#nulos;;;20;
+governador;1;3139607;#brancos;;;64;
+governador;1;3139607;#comparecimento;;;2598;
+governador;1;3139607;#abstencao;;;744;
+governador;1;3139607;#eleitorado;;;3342;
+governador;1;3139805;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;869;
+governador;1;3139805;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1664;S
+governador;1;3139805;#nulos;;;81;
+governador;1;3139805;#brancos;;;255;
+governador;1;3139805;#comparecimento;;;2869;
+governador;1;3139805;#abstencao;;;1505;
+governador;1;3139805;#eleitorado;;;4374;
+governador;1;3140001;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2164;
+governador;1;3140001;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2688;S
+governador;1;3140001;#nulos;;;86;
+governador;1;3140001;#brancos;;;102;
+governador;1;3140001;#comparecimento;;;5040;
+governador;1;3140001;#abstencao;;;2570;
+governador;1;3140001;#eleitorado;;;7610;
+governador;1;3141801;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2759;
+governador;1;3141801;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;851;S
+governador;1;3141801;#nulos;;;16;
+governador;1;3141801;#brancos;;;188;
+governador;1;3141801;#comparecimento;;;3814;
+governador;1;3141801;#abstencao;;;1285;
+governador;1;3141801;#eleitorado;;;5099;
+governador;1;3142205;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;896;
+governador;1;3142205;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1792;S
+governador;1;3142205;#nulos;;;17;
+governador;1;3142205;#brancos;;;169;
+governador;1;3142205;#comparecimento;;;2874;
+governador;1;3142205;#abstencao;;;1279;
+governador;1;3142205;#eleitorado;;;4153;
+governador;1;3143203;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1611;
+governador;1;3143203;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2127;S
+governador;1;3143203;#nulos;;;0;
+governador;1;3143203;#brancos;;;174;
+governador;1;3143203;#comparecimento;;;3912;
+governador;1;3143203;#abstencao;;;2235;
+governador;1;3143203;#eleitorado;;;6147;
+governador;1;3142908;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1072;
+governador;1;3142908;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1269;S
+governador;1;3142908;#nulos;;;10;
+governador;1;3142908;#brancos;;;64;
+governador;1;3142908;#comparecimento;;;2415;
+governador;1;3142908;#abstencao;;;1386;
+governador;1;3142908;#eleitorado;;;3801;
+governador;1;3143104;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1404;
+governador;1;3143104;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;696;S
+governador;1;3143104;#nulos;;;10;
+governador;1;3143104;#brancos;;;86;
+governador;1;3143104;#comparecimento;;;2196;
+governador;1;3143104;#abstencao;;;1146;
+governador;1;3143104;#eleitorado;;;3342;
+governador;1;3143302;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4296;
+governador;1;3143302;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;7926;S
+governador;1;3143302;#nulos;;;526;
+governador;1;3143302;#brancos;;;975;
+governador;1;3143302;#comparecimento;;;13723;
+governador;1;3143302;#abstencao;;;11425;
+governador;1;3143302;#eleitorado;;;25148;
+governador;1;3143906;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4238;
+governador;1;3143906;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;6696;S
+governador;1;3143906;#nulos;;;95;
+governador;1;3143906;#brancos;;;247;
+governador;1;3143906;#comparecimento;;;11276;
+governador;1;3143906;#abstencao;;;5972;
+governador;1;3143906;#eleitorado;;;17248;
+governador;1;3144003;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2003;
+governador;1;3144003;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2064;S
+governador;1;3144003;#nulos;;;0;
+governador;1;3144003;#brancos;;;59;
+governador;1;3144003;#comparecimento;;;4126;
+governador;1;3144003;#abstencao;;;1370;
+governador;1;3144003;#eleitorado;;;5496;
+governador;1;3144102;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2053;
+governador;1;3144102;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2982;S
+governador;1;3144102;#nulos;;;0;
+governador;1;3144102;#brancos;;;196;
+governador;1;3144102;#comparecimento;;;5231;
+governador;1;3144102;#abstencao;;;3285;
+governador;1;3144102;#eleitorado;;;8516;
+governador;1;3144607;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1205;
+governador;1;3144607;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;995;S
+governador;1;3144607;#nulos;;;21;
+governador;1;3144607;#brancos;;;50;
+governador;1;3144607;#comparecimento;;;2271;
+governador;1;3144607;#abstencao;;;691;
+governador;1;3144607;#eleitorado;;;2962;
+governador;1;3144805;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3709;
+governador;1;3144805;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3403;S
+governador;1;3144805;#nulos;;;45;
+governador;1;3144805;#brancos;;;170;
+governador;1;3144805;#comparecimento;;;7327;
+governador;1;3144805;#abstencao;;;6009;
+governador;1;3144805;#eleitorado;;;13336;
+governador;1;3145604;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4286;
+governador;1;3145604;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;5497;S
+governador;1;3145604;#nulos;;;130;
+governador;1;3145604;#brancos;;;148;
+governador;1;3145604;#comparecimento;;;10061;
+governador;1;3145604;#abstencao;;;4947;
+governador;1;3145604;#eleitorado;;;15008;
+governador;1;3146008;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2919;
+governador;1;3146008;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2098;S
+governador;1;3146008;#nulos;;;0;
+governador;1;3146008;#brancos;;;116;
+governador;1;3146008;#comparecimento;;;5133;
+governador;1;3146008;#abstencao;;;2382;
+governador;1;3146008;#eleitorado;;;7515;
+governador;1;3146107;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1730;
+governador;1;3146107;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3285;S
+governador;1;3146107;#nulos;;;30;
+governador;1;3146107;#brancos;;;164;
+governador;1;3146107;#comparecimento;;;5209;
+governador;1;3146107;#abstencao;;;2933;
+governador;1;3146107;#eleitorado;;;8142;
+governador;1;3146701;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;417;
+governador;1;3146701;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2102;S
+governador;1;3146701;#nulos;;;0;
+governador;1;3146701;#brancos;;;90;
+governador;1;3146701;#comparecimento;;;2609;
+governador;1;3146701;#abstencao;;;1506;
+governador;1;3146701;#eleitorado;;;4115;
+governador;1;3147006;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2793;
+governador;1;3147006;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1819;S
+governador;1;3147006;#nulos;;;0;
+governador;1;3147006;#brancos;;;273;
+governador;1;3147006;#comparecimento;;;4885;
+governador;1;3147006;#abstencao;;;2570;
+governador;1;3147006;#eleitorado;;;7455;
+governador;1;3147105;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3245;
+governador;1;3147105;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4348;S
+governador;1;3147105;#nulos;;;88;
+governador;1;3147105;#brancos;;;289;
+governador;1;3147105;#comparecimento;;;7970;
+governador;1;3147105;#abstencao;;;3382;
+governador;1;3147105;#eleitorado;;;11352;
+governador;1;3147204;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1118;
+governador;1;3147204;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;478;S
+governador;1;3147204;#nulos;;;10;
+governador;1;3147204;#brancos;;;78;
+governador;1;3147204;#comparecimento;;;1684;
+governador;1;3147204;#abstencao;;;737;
+governador;1;3147204;#eleitorado;;;2421;
+governador;1;3147303;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;876;
+governador;1;3147303;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3507;S
+governador;1;3147303;#nulos;;;11;
+governador;1;3147303;#brancos;;;82;
+governador;1;3147303;#comparecimento;;;4476;
+governador;1;3147303;#abstencao;;;1734;
+governador;1;3147303;#eleitorado;;;6210;
+governador;1;3110301;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2226;
+governador;1;3110301;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;596;S
+governador;1;3110301;#nulos;;;0;
+governador;1;3110301;#brancos;;;79;
+governador;1;3110301;#comparecimento;;;2901;
+governador;1;3110301;#abstencao;;;1821;
+governador;1;3110301;#eleitorado;;;4722;
+governador;1;3147600;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;194;
+governador;1;3147600;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1584;S
+governador;1;3147600;#nulos;;;0;
+governador;1;3147600;#brancos;;;62;
+governador;1;3147600;#comparecimento;;;1840;
+governador;1;3147600;#abstencao;;;724;
+governador;1;3147600;#eleitorado;;;2564;
+governador;1;3147907;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4283;
+governador;1;3147907;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3574;S
+governador;1;3147907;#nulos;;;0;
+governador;1;3147907;#brancos;;;38;
+governador;1;3147907;#comparecimento;;;7895;
+governador;1;3147907;#abstencao;;;5623;
+governador;1;3147907;#eleitorado;;;13518;
+governador;1;3148004;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3242;
+governador;1;3148004;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2170;S
+governador;1;3148004;#nulos;;;29;
+governador;1;3148004;#brancos;;;150;
+governador;1;3148004;#comparecimento;;;5591;
+governador;1;3148004;#abstencao;;;2567;
+governador;1;3148004;#eleitorado;;;8158;
+governador;1;3148103;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2573;
+governador;1;3148103;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2287;S
+governador;1;3148103;#nulos;;;25;
+governador;1;3148103;#brancos;;;254;
+governador;1;3148103;#comparecimento;;;5139;
+governador;1;3148103;#abstencao;;;2472;
+governador;1;3148103;#eleitorado;;;7611;
+governador;1;3148608;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2924;
+governador;1;3148608;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1726;S
+governador;1;3148608;#nulos;;;130;
+governador;1;3148608;#brancos;;;77;
+governador;1;3148608;#comparecimento;;;4857;
+governador;1;3148608;#abstencao;;;2533;
+governador;1;3148608;#eleitorado;;;7390;
+governador;1;3148707;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1868;
+governador;1;3148707;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1212;S
+governador;1;3148707;#nulos;;;530;
+governador;1;3148707;#brancos;;;4;
+governador;1;3148707;#comparecimento;;;3614;
+governador;1;3148707;#abstencao;;;1568;
+governador;1;3148707;#eleitorado;;;5182;
+governador;1;3149309;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1773;
+governador;1;3149309;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2147;S
+governador;1;3149309;#nulos;;;0;
+governador;1;3149309;#brancos;;;59;
+governador;1;3149309;#comparecimento;;;3979;
+governador;1;3149309;#abstencao;;;1745;
+governador;1;3149309;#eleitorado;;;5724;
+governador;1;3150802;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1483;
+governador;1;3150802;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2855;S
+governador;1;3150802;#nulos;;;3;
+governador;1;3150802;#brancos;;;101;
+governador;1;3150802;#comparecimento;;;4442;
+governador;1;3150802;#abstencao;;;3187;
+governador;1;3150802;#eleitorado;;;7629;
+governador;1;3151206;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1473;
+governador;1;3151206;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;928;S
+governador;1;3151206;#nulos;;;0;
+governador;1;3151206;#brancos;;;94;
+governador;1;3151206;#comparecimento;;;2495;
+governador;1;3151206;#abstencao;;;2059;
+governador;1;3151206;#eleitorado;;;4554;
+governador;1;3151404;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2534;
+governador;1;3151404;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3985;S
+governador;1;3151404;#nulos;;;28;
+governador;1;3151404;#brancos;;;406;
+governador;1;3151404;#comparecimento;;;6953;
+governador;1;3151404;#abstencao;;;3062;
+governador;1;3151404;#eleitorado;;;10015;
+governador;1;3151503;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2260;
+governador;1;3151503;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4561;S
+governador;1;3151503;#nulos;;;6;
+governador;1;3151503;#brancos;;;110;
+governador;1;3151503;#comparecimento;;;6937;
+governador;1;3151503;#abstencao;;;2805;
+governador;1;3151503;#eleitorado;;;9742;
+governador;1;3151800;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2312;
+governador;1;3151800;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3425;S
+governador;1;3151800;#nulos;;;73;
+governador;1;3151800;#brancos;;;233;
+governador;1;3151800;#comparecimento;;;6043;
+governador;1;3151800;#abstencao;;;2972;
+governador;1;3151800;#eleitorado;;;9015;
+governador;1;3155801;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3651;
+governador;1;3155801;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3484;S
+governador;1;3155801;#nulos;;;0;
+governador;1;3155801;#brancos;;;161;
+governador;1;3155801;#comparecimento;;;7296;
+governador;1;3155801;#abstencao;;;2988;
+governador;1;3155801;#eleitorado;;;10284;
+governador;1;3152105;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;8474;
+governador;1;3152105;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;5434;S
+governador;1;3152105;#nulos;;;315;
+governador;1;3152105;#brancos;;;216;
+governador;1;3152105;#comparecimento;;;14439;
+governador;1;3152105;#abstencao;;;7936;
+governador;1;3152105;#eleitorado;;;22375;
+governador;1;3152501;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2923;
+governador;1;3152501;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4305;S
+governador;1;3152501;#nulos;;;0;
+governador;1;3152501;#brancos;;;124;
+governador;1;3152501;#comparecimento;;;7352;
+governador;1;3152501;#abstencao;;;4016;
+governador;1;3152501;#eleitorado;;;11368;
+governador;1;3152600;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;817;
+governador;1;3152600;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2146;S
+governador;1;3152600;#nulos;;;96;
+governador;1;3152600;#brancos;;;8;
+governador;1;3152600;#comparecimento;;;3067;
+governador;1;3152600;#abstencao;;;1677;
+governador;1;3152600;#eleitorado;;;4744;
+governador;1;3152709;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2273;
+governador;1;3152709;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2637;S
+governador;1;3152709;#nulos;;;0;
+governador;1;3152709;#brancos;;;35;
+governador;1;3152709;#comparecimento;;;4945;
+governador;1;3152709;#abstencao;;;2509;
+governador;1;3152709;#eleitorado;;;7454;
+governador;1;3152808;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1880;
+governador;1;3152808;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1334;S
+governador;1;3152808;#nulos;;;0;
+governador;1;3152808;#brancos;;;176;
+governador;1;3152808;#comparecimento;;;3390;
+governador;1;3152808;#abstencao;;;1789;
+governador;1;3152808;#eleitorado;;;5179;
+governador;1;3154002;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2847;
+governador;1;3154002;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1389;S
+governador;1;3154002;#nulos;;;13;
+governador;1;3154002;#brancos;;;65;
+governador;1;3154002;#comparecimento;;;4314;
+governador;1;3154002;#abstencao;;;2389;
+governador;1;3154002;#eleitorado;;;6703;
+governador;1;3154903;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2202;
+governador;1;3154903;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1723;S
+governador;1;3154903;#nulos;;;63;
+governador;1;3154903;#brancos;;;66;
+governador;1;3154903;#comparecimento;;;4054;
+governador;1;3154903;#abstencao;;;1768;
+governador;1;3154903;#eleitorado;;;5822;
+governador;1;3155405;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1082;
+governador;1;3155405;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1472;S
+governador;1;3155405;#nulos;;;39;
+governador;1;3155405;#brancos;;;38;
+governador;1;3155405;#comparecimento;;;2631;
+governador;1;3155405;#abstencao;;;751;
+governador;1;3155405;#eleitorado;;;3382;
+governador;1;3155900;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;632;
+governador;1;3155900;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2109;S
+governador;1;3155900;#nulos;;;7;
+governador;1;3155900;#brancos;;;42;
+governador;1;3155900;#comparecimento;;;2790;
+governador;1;3155900;#abstencao;;;1065;
+governador;1;3155900;#eleitorado;;;3855;
+governador;1;3155603;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;734;
+governador;1;3155603;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;232;S
+governador;1;3155603;#nulos;;;42;
+governador;1;3155603;#brancos;;;20;
+governador;1;3155603;#comparecimento;;;1028;
+governador;1;3155603;#abstencao;;;347;
+governador;1;3155603;#eleitorado;;;1375;
+governador;1;3156700;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1217;
+governador;1;3156700;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;756;S
+governador;1;3156700;#nulos;;;55;
+governador;1;3156700;#brancos;;;4;
+governador;1;3156700;#comparecimento;;;2032;
+governador;1;3156700;#abstencao;;;913;
+governador;1;3156700;#eleitorado;;;2945;
+governador;1;3156908;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2296;
+governador;1;3156908;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1464;S
+governador;1;3156908;#nulos;;;0;
+governador;1;3156908;#brancos;;;52;
+governador;1;3156908;#comparecimento;;;3812;
+governador;1;3156908;#abstencao;;;1779;
+governador;1;3156908;#eleitorado;;;5591;
+governador;1;3157005;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2048;
+governador;1;3157005;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;787;S
+governador;1;3157005;#nulos;;;13;
+governador;1;3157005;#brancos;;;59;
+governador;1;3157005;#comparecimento;;;2907;
+governador;1;3157005;#abstencao;;;1135;
+governador;1;3157005;#eleitorado;;;4042;
+governador;1;3157203;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4589;
+governador;1;3157203;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2597;S
+governador;1;3157203;#nulos;;;3;
+governador;1;3157203;#brancos;;;240;
+governador;1;3157203;#comparecimento;;;7429;
+governador;1;3157203;#abstencao;;;4523;
+governador;1;3157203;#eleitorado;;;11952;
+governador;1;3157807;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2917;
+governador;1;3157807;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2718;S
+governador;1;3157807;#nulos;;;18;
+governador;1;3157807;#brancos;;;303;
+governador;1;3157807;#comparecimento;;;5956;
+governador;1;3157807;#abstencao;;;3319;
+governador;1;3157807;#eleitorado;;;9275;
+governador;1;3159605;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1281;
+governador;1;3159605;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2041;S
+governador;1;3159605;#nulos;;;39;
+governador;1;3159605;#brancos;;;101;
+governador;1;3159605;#comparecimento;;;3462;
+governador;1;3159605;#abstencao;;;1520;
+governador;1;3159605;#eleitorado;;;4982;
+governador;1;3160405;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1251;
+governador;1;3160405;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1985;S
+governador;1;3160405;#nulos;;;16;
+governador;1;3160405;#brancos;;;33;
+governador;1;3160405;#comparecimento;;;3285;
+governador;1;3160405;#abstencao;;;1334;
+governador;1;3160405;#eleitorado;;;4619;
+governador;1;3160702;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3410;
+governador;1;3160702;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3508;S
+governador;1;3160702;#nulos;;;171;
+governador;1;3160702;#brancos;;;22;
+governador;1;3160702;#comparecimento;;;7111;
+governador;1;3160702;#abstencao;;;2826;
+governador;1;3160702;#eleitorado;;;9937;
+governador;1;3161007;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1857;
+governador;1;3161007;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2304;S
+governador;1;3161007;#nulos;;;0;
+governador;1;3161007;#brancos;;;97;
+governador;1;3161007;#comparecimento;;;4258;
+governador;1;3161007;#abstencao;;;1328;
+governador;1;3161007;#eleitorado;;;5586;
+governador;1;3161106;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2372;
+governador;1;3161106;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1984;S
+governador;1;3161106;#nulos;;;8;
+governador;1;3161106;#brancos;;;211;
+governador;1;3161106;#comparecimento;;;4575;
+governador;1;3161106;#abstencao;;;3595;
+governador;1;3161106;#eleitorado;;;8170;
+governador;1;3162005;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1841;
+governador;1;3162005;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1158;S
+governador;1;3162005;#nulos;;;0;
+governador;1;3162005;#brancos;;;46;
+governador;1;3162005;#comparecimento;;;3045;
+governador;1;3162005;#abstencao;;;894;
+governador;1;3162005;#eleitorado;;;3939;
+governador;1;3162104;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2438;
+governador;1;3162104;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2633;S
+governador;1;3162104;#nulos;;;172;
+governador;1;3162104;#brancos;;;191;
+governador;1;3162104;#comparecimento;;;5434;
+governador;1;3162104;#abstencao;;;3033;
+governador;1;3162104;#eleitorado;;;8467;
+governador;1;3162500;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3370;
+governador;1;3162500;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4191;S
+governador;1;3162500;#nulos;;;0;
+governador;1;3162500;#brancos;;;202;
+governador;1;3162500;#comparecimento;;;7763;
+governador;1;3162500;#abstencao;;;4801;
+governador;1;3162500;#eleitorado;;;12564;
+governador;1;3162906;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1832;
+governador;1;3162906;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2468;S
+governador;1;3162906;#nulos;;;0;
+governador;1;3162906;#brancos;;;84;
+governador;1;3162906;#comparecimento;;;4384;
+governador;1;3162906;#abstencao;;;1709;
+governador;1;3162906;#eleitorado;;;6093;
+governador;1;3164704;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3503;
+governador;1;3164704;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4603;S
+governador;1;3164704;#nulos;;;23;
+governador;1;3164704;#brancos;;;144;
+governador;1;3164704;#comparecimento;;;8273;
+governador;1;3164704;#abstencao;;;3419;
+governador;1;3164704;#eleitorado;;;11692;
+governador;1;3167103;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1424;
+governador;1;3167103;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2075;S
+governador;1;3167103;#nulos;;;0;
+governador;1;3167103;#brancos;;;71;
+governador;1;3167103;#comparecimento;;;3570;
+governador;1;3167103;#abstencao;;;2435;
+governador;1;3167103;#eleitorado;;;6005;
+governador;1;3167202;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4022;
+governador;1;3167202;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;5395;S
+governador;1;3167202;#nulos;;;104;
+governador;1;3167202;#brancos;;;197;
+governador;1;3167202;#comparecimento;;;9718;
+governador;1;3167202;#abstencao;;;4356;
+governador;1;3167202;#eleitorado;;;14074;
+governador;1;3114105;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;791;
+governador;1;3114105;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1333;S
+governador;1;3114105;#nulos;;;4;
+governador;1;3114105;#brancos;;;61;
+governador;1;3114105;#comparecimento;;;2189;
+governador;1;3114105;#abstencao;;;765;
+governador;1;3114105;#eleitorado;;;2954;
+governador;1;3168408;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;4045;
+governador;1;3168408;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2542;S
+governador;1;3168408;#nulos;;;7;
+governador;1;3168408;#brancos;;;261;
+governador;1;3168408;#comparecimento;;;6855;
+governador;1;3168408;#abstencao;;;2920;
+governador;1;3168408;#eleitorado;;;9775;
+governador;1;3168606;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;6037;
+governador;1;3168606;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;4988;S
+governador;1;3168606;#nulos;;;758;
+governador;1;3168606;#brancos;;;245;
+governador;1;3168606;#comparecimento;;;12028;
+governador;1;3168606;#abstencao;;;5124;
+governador;1;3168606;#eleitorado;;;17152;
+governador;1;3169307;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;589;
+governador;1;3169307;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2676;S
+governador;1;3169307;#nulos;;;0;
+governador;1;3169307;#brancos;;;123;
+governador;1;3169307;#comparecimento;;;3388;
+governador;1;3169307;#abstencao;;;1666;
+governador;1;3169307;#eleitorado;;;5054;
+governador;1;3169406;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1796;
+governador;1;3169406;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1266;S
+governador;1;3169406;#nulos;;;0;
+governador;1;3169406;#brancos;;;83;
+governador;1;3169406;#comparecimento;;;3145;
+governador;1;3169406;#abstencao;;;1142;
+governador;1;3169406;#eleitorado;;;4287;
+governador;1;3169604;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1401;
+governador;1;3169604;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;1471;S
+governador;1;3169604;#nulos;;;36;
+governador;1;3169604;#brancos;;;48;
+governador;1;3169604;#comparecimento;;;2956;
+governador;1;3169604;#abstencao;;;1606;
+governador;1;3169604;#eleitorado;;;4562;
+governador;1;3169901;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2823;
+governador;1;3169901;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;10265;S
+governador;1;3169901;#nulos;;;132;
+governador;1;3169901;#brancos;;;296;
+governador;1;3169901;#comparecimento;;;13516;
+governador;1;3169901;#abstencao;;;6316;
+governador;1;3169901;#eleitorado;;;19832;
+governador;1;3170107;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;6897;
+governador;1;3170107;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;5745;S
+governador;1;3170107;#nulos;;;403;
+governador;1;3170107;#brancos;;;243;
+governador;1;3170107;#comparecimento;;;13288;
+governador;1;3170107;#abstencao;;;7415;
+governador;1;3170107;#eleitorado;;;20703;
+governador;1;3170206;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;2900;
+governador;1;3170206;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;5345;S
+governador;1;3170206;#nulos;;;101;
+governador;1;3170206;#brancos;;;470;
+governador;1;3170206;#comparecimento;;;8816;
+governador;1;3170206;#abstencao;;;5423;
+governador;1;3170206;#eleitorado;;;14239;
+governador;1;3170701;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;1664;
+governador;1;3170701;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;2540;S
+governador;1;3170701;#nulos;;;6;
+governador;1;3170701;#brancos;;;74;
+governador;1;3170701;#comparecimento;;;4284;
+governador;1;3170701;#abstencao;;;1534;
+governador;1;3170701;#eleitorado;;;5818;
+governador;1;3171303;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3703;
+governador;1;3171303;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;6547;S
+governador;1;3171303;#nulos;;;148;
+governador;1;3171303;#brancos;;;49;
+governador;1;3171303;#comparecimento;;;10447;
+governador;1;3171303;#abstencao;;;5047;
+governador;1;3171303;#eleitorado;;;15494;
+governador;1;3172004;_JOSEFRANCISCOBIASFORTES;JOSÉ FRANCISCO BIAS FORTES;PSD;3388;
+governador;1;3172004;_MILTONSOARESCAMPOS;MILTON SOARES CAMPOS;UDN;3275;S
+governador;1;3172004;#nulos;;;0;
+governador;1;3172004;#brancos;;;187;
+governador;1;3172004;#comparecimento;;;6850;
+governador;1;3172004;#abstencao;;;4352;
+governador;1;3172004;#eleitorado;;;11202;

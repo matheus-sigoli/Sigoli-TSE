@@ -1,0 +1,901 @@
+{
+"RIO DE JANEIRO": {
+"votantes": 3200692,
+"brancos": 149978,
+"nulos": 99266,
+"c": {
+"PMDB": 1334906,
+"PDT": 1133307,
+"PT": 280324,
+"PDS": 49738,
+"PASART": 124412,
+"PSB": 22498,
+"PND": 6263
+}
+},
+"ARARUAMA": {
+"votantes": 31813,
+"brancos": 3002,
+"nulos": 1132,
+"c": {
+"PMDB": 20183,
+"PDT": 5436,
+"PT": 1196,
+"PDS": 356,
+"PASART": 155,
+"PSB": 309,
+"PND": 44
+}
+},
+"BARRA MANSA": {
+"votantes": 88303,
+"brancos": 8930,
+"nulos": 4315,
+"c": {
+"PMDB": 43451,
+"PDT": 15903,
+"PT": 12304,
+"PASART": 1472,
+"PDS": 1260,
+"PSB": 480,
+"PND": 188
+}
+},
+"BOM JARDIM": {
+"votantes": 10562,
+"brancos": 892,
+"nulos": 361,
+"c": {
+"PMDB": 7316,
+"PDT": 1286,
+"PT": 498,
+"PDS": 126,
+"PASART": 37,
+"PSB": 37,
+"PND": 9
+}
+},
+"BOM JESUS DO ITABAPOANA": {
+"votantes": 18663,
+"brancos": 1590,
+"nulos": 577,
+"c": {
+"PMDB": 11952,
+"PDT": 3727,
+"PT": 450,
+"PDS": 230,
+"PASART": 60,
+"PSB": 56,
+"PND": 21
+}
+},
+"CABO FRIO": {
+"votantes": 51782,
+"brancos": 4522,
+"nulos": 1694,
+"c": {
+"PMDB": 29122,
+"PDT": 10554,
+"PT": 4045,
+"PASART": 760,
+"PDS": 725,
+"PSB": 292,
+"PND": 68
+}
+},
+"CACHOEIRAS DE MACACU": {
+"votantes": 18815,
+"brancos": 1868,
+"nulos": 612,
+"c": {
+"PMDB": 9646,
+"PDT": 5734,
+"PT": 601,
+"PASART": 170,
+"PDS": 121,
+"PSB": 49,
+"PND": 14
+}
+},
+"CAMBUCI": {
+"votantes": 11905,
+"brancos": 1215,
+"nulos": 300,
+"c": {
+"PMDB": 8476,
+"PDT": 1586,
+"PT": 177,
+"PDS": 99,
+"PSB": 25,
+"PASART": 18,
+"PND": 9
+}
+},
+"CASIMIRO DE ABREU": {
+"votantes": 16492,
+"brancos": 1241,
+"nulos": 560,
+"c": {
+"PMDB": 11422,
+"PDT": 2478,
+"PT": 568,
+"PDS": 118,
+"PASART": 55,
+"PSB": 37,
+"PND": 13
+}
+},
+"CONCEICAO DE MACABU": {
+"votantes": 9493,
+"brancos": 603,
+"nulos": 253,
+"c": {
+"PMDB": 6332,
+"PDT": 1948,
+"PT": 222,
+"PASART": 70,
+"PDS": 29,
+"PSB": 22,
+"PND": 14
+}
+},
+"DUAS BARRAS": {
+"votantes": 4709,
+"brancos": 334,
+"nulos": 135,
+"c": {
+"PMDB": 3261,
+"PDT": 633,
+"PT": 239,
+"PDS": 71,
+"PASART": 18,
+"PSB": 15,
+"PND": 3
+}
+},
+"ENGENHEIRO PAULO DE FRONTIN": {
+"votantes": 7736,
+"brancos": 566,
+"nulos": 258,
+"c": {
+"PMDB": 4701,
+"PDT": 1432,
+"PT": 383,
+"PASART": 227,
+"PDS": 141,
+"PSB": 15,
+"PND": 13
+}
+},
+"ITABORAI": {
+"votantes": 67154,
+"brancos": 6441,
+"nulos": 4096,
+"c": {
+"PMDB": 35655,
+"PDT": 16167,
+"PT": 2102,
+"PDS": 1491,
+"PASART": 937,
+"PSB": 174,
+"PND": 91
+}
+},
+"ITAGUAI": {
+"votantes": 51313,
+"brancos": 4846,
+"nulos": 2595,
+"c": {
+"PMDB": 22842,
+"PDT": 17442,
+"PT": 1897,
+"PASART": 820,
+"PDS": 594,
+"PSB": 181,
+"PND": 96
+}
+},
+"ITAOCARA": {
+"votantes": 12623,
+"brancos": 832,
+"nulos": 397,
+"c": {
+"PMDB": 8695,
+"PDT": 2220,
+"PT": 262,
+"PDS": 154,
+"PASART": 33,
+"PSB": 26,
+"PND": 4
+}
+},
+"MACAE": {
+"votantes": 50458,
+"brancos": 4514,
+"nulos": 2371,
+"c": {
+"PMDB": 29424,
+"PDT": 9654,
+"PT": 2840,
+"PDS": 851,
+"PASART": 498,
+"PSB": 264,
+"PND": 42
+}
+},
+"MAGE": {
+"votantes": 88887,
+"brancos": 9189,
+"nulos": 4320,
+"c": {
+"PMDB": 39204,
+"PDT": 26101,
+"PASART": 4275,
+"PT": 3899,
+"PDS": 1454,
+"PSB": 277,
+"PND": 168
+}
+},
+"MIGUEL PEREIRA": {
+"votantes": 11009,
+"brancos": 750,
+"nulos": 354,
+"c": {
+"PMDB": 7907,
+"PDT": 1217,
+"PT": 532,
+"PDS": 108,
+"PASART": 79,
+"PSB": 50,
+"PND": 12
+}
+},
+"NATIVIDADE": {
+"votantes": 11761,
+"brancos": 1151,
+"nulos": 392,
+"c": {
+"PMDB": 7491,
+"PDT": 2052,
+"PDS": 340,
+"PT": 275,
+"PSB": 31,
+"PASART": 24,
+"PND": 5
+}
+},
+"NILOPOLIS": {
+"votantes": 92837,
+"brancos": 5345,
+"nulos": 3222,
+"c": {
+"PDT": 36145,
+"PMDB": 34723,
+"PT": 5846,
+"PASART": 4213,
+"PDS": 2304,
+"PND": 606,
+"PSB": 433
+}
+},
+"NITEROI": {
+"votantes": 273602,
+"brancos": 10160,
+"nulos": 6261,
+"c": {
+"PMDB": 140845,
+"PDT": 74749,
+"PT": 29845,
+"PASART": 5217,
+"PDS": 3419,
+"PSB": 2633,
+"PND": 473
+}
+},
+"NOVA FRIBURGO": {
+"votantes": 77383,
+"brancos": 4989,
+"nulos": 2950,
+"c": {
+"PMDB": 45027,
+"PDT": 14006,
+"PT": 7817,
+"PASART": 1213,
+"PDS": 852,
+"PSB": 447,
+"PND": 82
+}
+},
+"NOVA IGUACU": {
+"votantes": 576599,
+"brancos": 44954,
+"nulos": 27006,
+"c": {
+"PDT": 251209,
+"PMDB": 188034,
+"PT": 30118,
+"PASART": 21807,
+"PDS": 9945,
+"PSB": 2267,
+"PND": 1259
+}
+},
+"PARAIBA DO SUL": {
+"votantes": 18690,
+"brancos": 1693,
+"nulos": 609,
+"c": {
+"PMDB": 11697,
+"PDT": 2747,
+"PT": 1382,
+"PDS": 288,
+"PASART": 174,
+"PSB": 79,
+"PND": 21
+}
+},
+"PARATI": {
+"votantes": 9145,
+"brancos": 645,
+"nulos": 342,
+"c": {
+"PMDB": 5289,
+"PDT": 2133,
+"PT": 581,
+"PDS": 102,
+"PSB": 25,
+"PASART": 19,
+"PND": 9
+}
+},
+"PETROPOLIS": {
+"votantes": 137828,
+"brancos": 10035,
+"nulos": 5283,
+"c": {
+"PMDB": 77650,
+"PDT": 18322,
+"PT": 17044,
+"PASART": 5349,
+"PDS": 2757,
+"PSB": 1135,
+"PND": 253
+}
+},
+"PIRAI": {
+"votantes": 20871,
+"brancos": 1792,
+"nulos": 827,
+"c": {
+"PMDB": 12146,
+"PDT": 3999,
+"PT": 1517,
+"PASART": 264,
+"PDS": 205,
+"PSB": 78,
+"PND": 43
+}
+},
+"PORCIUNCULA": {
+"votantes": 7992,
+"brancos": 868,
+"nulos": 348,
+"c": {
+"PMDB": 5087,
+"PDT": 1043,
+"PDS": 416,
+"PT": 179,
+"PSB": 26,
+"PASART": 15,
+"PND": 10
+}
+},
+"RESENDE": {
+"votantes": 54050,
+"brancos": 4870,
+"nulos": 2337,
+"c": {
+"PMDB": 34913,
+"PDT": 6693,
+"PT": 3455,
+"PDS": 1005,
+"PASART": 387,
+"PSB": 324,
+"PND": 66
+}
+},
+"RIO BONITO": {
+"votantes": 23679,
+"brancos": 2129,
+"nulos": 833,
+"c": {
+"PMDB": 16482,
+"PDT": 2854,
+"PT": 817,
+"PDS": 291,
+"PASART": 161,
+"PSB": 81,
+"PND": 31
+}
+},
+"RIO DAS FLORES": {
+"votantes": 4222,
+"brancos": 349,
+"nulos": 99,
+"c": {
+"PMDB": 2999,
+"PDT": 576,
+"PT": 121,
+"PDS": 32,
+"PSB": 22,
+"PASART": 17,
+"PND": 7
+}
+},
+"SANTA MARIA MADALENA": {
+"votantes": 5569,
+"brancos": 465,
+"nulos": 134,
+"c": {
+"PMDB": 3240,
+"PDT": 1514,
+"PT": 157,
+"PDS": 32,
+"PSB": 15,
+"PASART": 11,
+"PND": 1
+}
+},
+"SANTO ANTONIO DE PADUA": {
+"votantes": 21451,
+"brancos": 1724,
+"nulos": 810,
+"c": {
+"PMDB": 15103,
+"PDT": 2822,
+"PT": 480,
+"PDS": 411,
+"PASART": 57,
+"PSB": 27,
+"PND": 17
+}
+},
+"SAO FIDELIS": {
+"votantes": 20079,
+"brancos": 1794,
+"nulos": 847,
+"c": {
+"PMDB": 12251,
+"PDT": 3954,
+"PT": 557,
+"PDS": 422,
+"PASART": 136,
+"PSB": 88,
+"PND": 30
+}
+},
+"SAO GONCALO": {
+"votantes": 363320,
+"brancos": 20634,
+"nulos": 13351,
+"c": {
+"PMDB": 141965,
+"PDT": 140549,
+"PT": 22271,
+"PASART": 15129,
+"PDS": 7519,
+"PSB": 1355,
+"PND": 547
+}
+},
+"SAO JOAO DA BARRA": {
+"votantes": 32271,
+"brancos": 3670,
+"nulos": 1790,
+"c": {
+"PMDB": 19672,
+"PDT": 5744,
+"PDS": 625,
+"PT": 532,
+"PASART": 115,
+"PSB": 92,
+"PND": 31
+}
+},
+"SAO SEBASTIAO DO ALTO": {
+"votantes": 4889,
+"brancos": 427,
+"nulos": 140,
+"c": {
+"PMDB": 3124,
+"PDT": 936,
+"PT": 138,
+"PDS": 73,
+"PASART": 26,
+"PSB": 23,
+"PND": 2
+}
+},
+"SAPUCAIA": {
+"votantes": 10219,
+"brancos": 960,
+"nulos": 597,
+"c": {
+"PMDB": 6485,
+"PDT": 1581,
+"PT": 445,
+"PDS": 75,
+"PASART": 41,
+"PSB": 23,
+"PND": 12
+}
+},
+"SAQUAREMA": {
+"votantes": 19305,
+"brancos": 1567,
+"nulos": 697,
+"c": {
+"PMDB": 12910,
+"PDT": 3074,
+"PT": 769,
+"PASART": 116,
+"PDS": 112,
+"PSB": 45,
+"PND": 15
+}
+},
+"SUMIDOURO": {
+"votantes": 5929,
+"brancos": 448,
+"nulos": 118,
+"c": {
+"PMDB": 4356,
+"PDT": 677,
+"PT": 176,
+"PDS": 103,
+"PSB": 31,
+"PASART": 16,
+"PND": 4
+}
+},
+"TERESOPOLIS": {
+"votantes": 63174,
+"brancos": 4639,
+"nulos": 2125,
+"c": {
+"PMDB": 43540,
+"PDT": 6738,
+"PT": 4366,
+"PDS": 869,
+"PASART": 403,
+"PSB": 389,
+"PND": 105
+}
+},
+"TRAJANO DE MORAIS": {
+"votantes": 5384,
+"brancos": 349,
+"nulos": 132,
+"c": {
+"PMDB": 3323,
+"PDT": 1303,
+"PT": 172,
+"PDS": 83,
+"PSB": 15,
+"PASART": 6,
+"PND": 1
+}
+},
+"TRES RIOS": {
+"votantes": 44136,
+"brancos": 4257,
+"nulos": 1582,
+"c": {
+"PMDB": 23723,
+"PDT": 8679,
+"PT": 4157,
+"PDS": 851,
+"PASART": 603,
+"PSB": 206,
+"PND": 78
+}
+},
+"VALENCA": {
+"votantes": 34753,
+"brancos": 2445,
+"nulos": 1117,
+"c": {
+"PMDB": 22182,
+"PDT": 6339,
+"PT": 1935,
+"PDS": 269,
+"PASART": 262,
+"PSB": 137,
+"PND": 67
+}
+},
+"VASSOURAS": {
+"votantes": 26894,
+"brancos": 2296,
+"nulos": 906,
+"c": {
+"PMDB": 18276,
+"PDT": 3676,
+"PT": 1192,
+"PDS": 255,
+"PSB": 132,
+"PASART": 132,
+"PND": 29
+}
+},
+"VOLTA REDONDA": {
+"votantes": 125878,
+"brancos": 8558,
+"nulos": 4766,
+"c": {
+"PMDB": 50771,
+"PDT": 32829,
+"PT": 24880,
+"PASART": 1771,
+"PDS": 1479,
+"PSB": 614,
+"PND": 210
+}
+},
+"CORDEIRO": {
+"votantes": 10327,
+"brancos": 41,
+"nulos": 236,
+"c": {
+"PMDB": 6736,
+"PDT": 2579,
+"PT": 570,
+"PDS": 74,
+"PASART": 50,
+"PSB": 30,
+"PND": 11
+},
+"consertado": true
+},
+"MANGARATIBA": {
+"votantes": 11639,
+"brancos": 925,
+"nulos": 342,
+"c": {
+"PMDB": 7195,
+"PDT": 2419,
+"PT": 470,
+"PDS": 116,
+"PASART": 100,
+"PSB": 53,
+"PND": 19
+},
+"consertado": true
+},
+"SAO PEDRO DA ALDEIA": {
+"votantes": 21971,
+"brancos": 2003,
+"nulos": 819,
+"c": {
+"PMDB": 14507,
+"PDT": 3048,
+"PT": 942,
+"PDS": 278,
+"PASART": 273,
+"PSB": 80,
+"PND": 21
+},
+"consertado": true
+},
+"ANGRA DOS REIS": {
+"votantes": 38073,
+"brancos": 3553,
+"nulos": 1729,
+"c": {
+"PMDB": 19649,
+"PDT": 6913,
+"PT": 4840,
+"PDS": 627,
+"PASART": 520,
+"PSB": 154,
+"PND": 88
+}
+},
+"BARRA DO PIRAI": {
+"votantes": 43277,
+"brancos": 3530,
+"nulos": 1514,
+"c": {
+"PMDB": 25211,
+"PDT": 6929,
+"PT": 4261,
+"PDS": 672,
+"PASART": 827,
+"PSB": 269,
+"PND": 64
+}
+},
+"CAMPOS": {
+"votantes": 202430,
+"brancos": 21316,
+"nulos": 9747,
+"c": {
+"PMDB": 89044,
+"PDT": 62024,
+"PT": 10981,
+"PDS": 4467,
+"PASART": 3091,
+"PSB": 1434,
+"PND": 326
+}
+},
+"CANTAGALO": {
+"votantes": 12431,
+"brancos": 798,
+"nulos": 262,
+"c": {
+"PMDB": 8768,
+"PDT": 1651,
+"PT": 537,
+"PDS": 309,
+"PASART": 43,
+"PSB": 60,
+"PND": 3
+}
+},
+"CARMO": {
+"votantes": 8173,
+"brancos": 669,
+"nulos": 209,
+"c": {
+"PMDB": 4987,
+"PDT": 1718,
+"PT": 469,
+"PDS": 55,
+"PASART": 20,
+"PSB": 36,
+"PND": 10
+}
+},
+"DUQUE DE CAXIAS": {
+"votantes": 322483,
+"brancos": 26526,
+"nulos": 14011,
+"c": {
+"PMDB": 129957,
+"PDT": 117686,
+"PT": 15755,
+"PDS": 5088,
+"PASART": 11835,
+"PSB": 1039,
+"PND": 586
+}
+},
+"ITAPERUNA": {
+"votantes": 37866,
+"brancos": 3446,
+"nulos": 1244,
+"c": {
+"PMDB": 26144,
+"PDT": 5063,
+"PT": 1256,
+"PDS": 423,
+"PASART": 98,
+"PSB": 156,
+"PND": 36
+}
+},
+"LAJE DO MURIAE": {
+"votantes": 4570,
+"brancos": 421,
+"nulos": 155,
+"c": {
+"PMDB": 3216,
+"PDT": 590,
+"PT": 127,
+"PDS": 34,
+"PASART": 15,
+"PSB": 9,
+"PND": 3
+}
+},
+"MIRACEMA": {
+"votantes": 13721,
+"brancos": 1541,
+"nulos": 618,
+"c": {
+"PMDB": 8055,
+"PDT": 2606,
+"PT": 602,
+"PDS": 188,
+"PASART": 49,
+"PSB": 42,
+"PND": 20
+}
+},
+"MARICA": {
+"votantes": 23419,
+"brancos": 1775,
+"nulos": 749,
+"c": {
+"PMDB": 10711,
+"PDT": 8701,
+"PT": 1011,
+"PDS": 226,
+"PASART": 171,
+"PSB": 56,
+"PND": 19
+}
+},
+"MENDES": {
+"votantes": 10031,
+"brancos": 764,
+"nulos": 268,
+"c": {
+"PMDB": 5838,
+"PDT": 2070,
+"PT": 690,
+"PDS": 131,
+"PASART": 220,
+"PSB": 41,
+"PND": 9
+}
+},
+"PARACAMBI": {
+"votantes": 19189,
+"brancos": 1425,
+"nulos": 708,
+"c": {
+"PMDB": 10292,
+"PDT": 4558,
+"PT": 1232,
+"PDS": 210,
+"PASART": 654,
+"PSB": 82,
+"PND": 28
+}
+},
+"RIO CLARO": {
+"votantes": 7417,
+"brancos": 806,
+"nulos": 298,
+"c": {
+"PMDB": 4751,
+"PDT": 971,
+"PT": 448,
+"PDS": 66,
+"PASART": 46,
+"PSB": 18,
+"PND": 13
+}
+},
+"SAO JOAO DE MERITI": {
+"votantes": 218533,
+"brancos": 15475,
+"nulos": 9959,
+"c": {
+"PMDB": 72587,
+"PDT": 92963,
+"PT": 11355,
+"PDS": 3616,
+"PASART": 11445,
+"PSB": 713,
+"PND": 420
+}
+},
+"SILVA JARDIM": {
+"votantes": 7494,
+"brancos": 950,
+"nulos": 349,
+"c": {
+"PMDB": 4929,
+"PDT": 920,
+"PT": 194,
+"PDS": 98,
+"PASART": 32,
+"PSB": 15,
+"PND": 7
+}
+}
+}

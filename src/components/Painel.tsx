@@ -131,17 +131,17 @@ function Painel(p: Props) {
           </button>
         ) : null}
         <p className="subtitulo">
-          {cargo.nome}, {turno}º turno
-          {arquivo && !arquivo.resumo && arquivo.fonte ? `. Por município: ${arquivo.fonte.split(',')[0]}`
+          {cargo.nome}{p.ano >= 1989 ? `, ${turno}º turno` : ''}
+          {arquivo && !arquivo.resumo && arquivo.fonte ? `. ${/zona eleitoral/.test(arquivo.fonte) ? 'Por zona eleitoral (os municípios de cada zona aparecem juntos)' : 'Por município'}: ${arquivo.fonte.split(',')[0]}`
             : p.ano < 1989 || p.ano === 1990 ? `. ${arquivo && !arquivo.resumo && !arquivo.semTotais && arquivo.total.t[1] ? 'Por' : 'Votos válidos, por'} município: acervo Sigoli.TSE` : p.ano === 1989 ? '. Totalização final, por município: Geografia do Voto' : p.ano !== 2026 ? '. Totalização final do TSE' : arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
         </p>
         {arquivo && !arquivo.resumo && arquivo.oficial ? (
           <p className="subtitulo">
             Total do estado: resultado final oficial{arquivo.oficial.fonte ? ` (${arquivo.oficial.fonte.split(',')[0]})` : ''}. O mapa
-            tem os {arquivo.oficial.municipios} municípios com resultado por município.
+            tem {arquivo.oficial.municipios} {/zona eleitoral/.test(arquivo.fonte ?? '') ? 'zonas eleitorais' : 'municípios com resultado por município'}.
           </p>
         ) : null}
-        {cargo.turnos.length > 1 ? (
+        {cargo.turnos.length > 1 && p.ano >= 1989 ? (
           <div className="segmentado" role="group" aria-label="Turno">
             {([1, 2] as Turno[]).map((n) => (
               <button
@@ -373,7 +373,7 @@ function Resumo({ ano, visao, cargo, turno }: { ano: number; visao: Visao; cargo
 
 /** anos com a malha histórica do IBGE (scripts/malha-historica.mjs): escolhida por UF entre as de 1950 a 1985 */
 const MALHA_HISTORICA: Record<number, string> = {
-  1950: '1950', 1954: '1950', 1958: '1960', 1962: '1960', 1966: '1970', 1970: '1970', 1974: '1975', 1978: '1975', 1982: '1980 e 1985', 1986: '1985',
+  1947: '1950', 1950: '1950', 1954: '1950', 1955: '1950', 1958: '1960', 1960: '1960', 1965: '1960 e 1970', 1962: '1960', 1966: '1970', 1970: '1970', 1974: '1975', 1978: '1975', 1982: '1980 e 1985', 1986: '1985',
 };
 
 export default memo(Painel);

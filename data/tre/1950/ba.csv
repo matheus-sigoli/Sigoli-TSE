@@ -1,0 +1,751 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+governador;1;2900702;_REGISPACHECO;RÉGIS PACHECO;PSD;4109;S
+governador;1;2900702;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2524;
+governador;1;2900702;#brancos;;;149;
+governador;1;2900702;#nulos;;;292;
+governador;1;2900702;#comparecimento;;;7074;
+governador;1;2900801;_REGISPACHECO;RÉGIS PACHECO;PSD;767;S
+governador;1;2900801;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2291;
+governador;1;2900801;#brancos;;;125;
+governador;1;2900801;#nulos;;;45;
+governador;1;2900801;#comparecimento;;;3228;
+governador;1;2901007;_REGISPACHECO;RÉGIS PACHECO;PSD;2492;S
+governador;1;2901007;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1919;
+governador;1;2901007;#brancos;;;36;
+governador;1;2901007;#nulos;;;58;
+governador;1;2901007;#comparecimento;;;4505;
+governador;1;2901304;_REGISPACHECO;RÉGIS PACHECO;PSD;961;S
+governador;1;2901304;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1106;
+governador;1;2901304;#brancos;;;119;
+governador;1;2901304;#nulos;;;289;
+governador;1;2901304;#comparecimento;;;2475;
+governador;1;2901403;_REGISPACHECO;RÉGIS PACHECO;PSD;1440;S
+governador;1;2901403;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;824;
+governador;1;2901403;#brancos;;;78;
+governador;1;2901403;#nulos;;;27;
+governador;1;2901403;#comparecimento;;;2369;
+governador;1;2902302;_REGISPACHECO;RÉGIS PACHECO;PSD;307;S
+governador;1;2902302;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;436;
+governador;1;2902302;#brancos;;;6;
+governador;1;2902302;#nulos;;;73;
+governador;1;2902302;#comparecimento;;;822;
+governador;1;2902609;_REGISPACHECO;RÉGIS PACHECO;PSD;379;S
+governador;1;2902609;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;741;
+governador;1;2902609;#brancos;;;18;
+governador;1;2902609;#nulos;;;2;
+governador;1;2902609;#comparecimento;;;1140;
+governador;1;2902708;_REGISPACHECO;RÉGIS PACHECO;PSD;984;S
+governador;1;2902708;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1949;
+governador;1;2902708;#brancos;;;175;
+governador;1;2902708;#nulos;;;34;
+governador;1;2902708;#comparecimento;;;3142;
+governador;1;2902807;_REGISPACHECO;RÉGIS PACHECO;PSD;1351;S
+governador;1;2902807;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1133;
+governador;1;2902807;#brancos;;;51;
+governador;1;2902807;#nulos;;;186;
+governador;1;2902807;#comparecimento;;;2721;
+governador;1;2903201;_REGISPACHECO;RÉGIS PACHECO;PSD;1862;S
+governador;1;2903201;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;830;
+governador;1;2903201;#brancos;;;173;
+governador;1;2903201;#nulos;;;49;
+governador;1;2903201;#comparecimento;;;2914;
+governador;1;2903409;_REGISPACHECO;RÉGIS PACHECO;PSD;1138;S
+governador;1;2903409;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1280;
+governador;1;2903409;#brancos;;;117;
+governador;1;2903409;#nulos;;;151;
+governador;1;2903409;#comparecimento;;;2686;
+governador;1;2903706;_REGISPACHECO;RÉGIS PACHECO;PSD;987;S
+governador;1;2903706;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1098;
+governador;1;2903706;#brancos;;;43;
+governador;1;2903706;#nulos;;;10;
+governador;1;2903706;#comparecimento;;;2138;
+governador;1;2903904;_REGISPACHECO;RÉGIS PACHECO;PSD;1517;S
+governador;1;2903904;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1514;
+governador;1;2903904;#brancos;;;71;
+governador;1;2903904;#nulos;;;13;
+governador;1;2903904;#comparecimento;;;3115;
+governador;1;2904308;_REGISPACHECO;RÉGIS PACHECO;PSD;1098;S
+governador;1;2904308;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1072;
+governador;1;2904308;#brancos;;;25;
+governador;1;2904308;#nulos;;;123;
+governador;1;2904308;#comparecimento;;;2318;
+governador;1;2904506;_REGISPACHECO;RÉGIS PACHECO;PSD;2854;S
+governador;1;2904506;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2501;
+governador;1;2904506;#brancos;;;164;
+governador;1;2904506;#nulos;;;6;
+governador;1;2904506;#comparecimento;;;5525;
+governador;1;2904605;_REGISPACHECO;RÉGIS PACHECO;PSD;2032;S
+governador;1;2904605;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2291;
+governador;1;2904605;#brancos;;;83;
+governador;1;2904605;#nulos;;;35;
+governador;1;2904605;#comparecimento;;;4441;
+governador;1;2904902;_REGISPACHECO;RÉGIS PACHECO;PSD;4153;S
+governador;1;2904902;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1618;
+governador;1;2904902;#brancos;;;139;
+governador;1;2904902;#nulos;;;184;
+governador;1;2904902;#comparecimento;;;6094;
+governador;1;2905008;_REGISPACHECO;RÉGIS PACHECO;PSD;3029;S
+governador;1;2905008;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;716;
+governador;1;2905008;#brancos;;;93;
+governador;1;2905008;#nulos;;;0;
+governador;1;2905008;#comparecimento;;;3838;
+governador;1;2905404;_REGISPACHECO;RÉGIS PACHECO;PSD;548;S
+governador;1;2905404;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;659;
+governador;1;2905404;#brancos;;;42;
+governador;1;2905404;#nulos;;;14;
+governador;1;2905404;#comparecimento;;;1263;
+governador;1;2905206;_REGISPACHECO;RÉGIS PACHECO;PSD;2192;S
+governador;1;2905206;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;3830;
+governador;1;2905206;#brancos;;;106;
+governador;1;2905206;#nulos;;;2;
+governador;1;2905206;#comparecimento;;;6130;
+governador;1;2905800;_REGISPACHECO;RÉGIS PACHECO;PSD;1236;S
+governador;1;2905800;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1183;
+governador;1;2905800;#brancos;;;62;
+governador;1;2905800;#nulos;;;46;
+governador;1;2905800;#comparecimento;;;2527;
+governador;1;2905701;_REGISPACHECO;RÉGIS PACHECO;PSD;940;S
+governador;1;2905701;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;631;
+governador;1;2905701;#brancos;;;20;
+governador;1;2905701;#nulos;;;30;
+governador;1;2905701;#comparecimento;;;1621;
+governador;1;2906006;_REGISPACHECO;RÉGIS PACHECO;PSD;3595;S
+governador;1;2906006;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1737;
+governador;1;2906006;#brancos;;;121;
+governador;1;2906006;#nulos;;;520;
+governador;1;2906006;#comparecimento;;;5973;
+governador;1;2906303;_REGISPACHECO;RÉGIS PACHECO;PSD;3541;S
+governador;1;2906303;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2760;
+governador;1;2906303;#brancos;;;145;
+governador;1;2906303;#nulos;;;358;
+governador;1;2906303;#comparecimento;;;6804;
+governador;1;2906907;_REGISPACHECO;RÉGIS PACHECO;PSD;1185;S
+governador;1;2906907;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;513;
+governador;1;2906907;#brancos;;;71;
+governador;1;2906907;#nulos;;;49;
+governador;1;2906907;#comparecimento;;;1818;
+governador;1;2907103;_REGISPACHECO;RÉGIS PACHECO;PSD;1882;S
+governador;1;2907103;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1677;
+governador;1;2907103;#brancos;;;61;
+governador;1;2907103;#nulos;;;9;
+governador;1;2907103;#comparecimento;;;3629;
+governador;1;2907202;_REGISPACHECO;RÉGIS PACHECO;PSD;457;S
+governador;1;2907202;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;3191;
+governador;1;2907202;#brancos;;;173;
+governador;1;2907202;#nulos;;;42;
+governador;1;2907202;#comparecimento;;;3863;
+governador;1;2907301;_REGISPACHECO;RÉGIS PACHECO;PSD;2006;S
+governador;1;2907301;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1657;
+governador;1;2907301;#brancos;;;55;
+governador;1;2907301;#nulos;;;10;
+governador;1;2907301;#comparecimento;;;3728;
+governador;1;2907509;_REGISPACHECO;RÉGIS PACHECO;PSD;701;S
+governador;1;2907509;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;924;
+governador;1;2907509;#brancos;;;48;
+governador;1;2907509;#nulos;;;74;
+governador;1;2907509;#comparecimento;;;1747;
+governador;1;2907806;_REGISPACHECO;RÉGIS PACHECO;PSD;1559;S
+governador;1;2907806;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1746;
+governador;1;2907806;#brancos;;;37;
+governador;1;2907806;#nulos;;;119;
+governador;1;2907806;#comparecimento;;;3461;
+governador;1;2907905;_REGISPACHECO;RÉGIS PACHECO;PSD;892;S
+governador;1;2907905;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1258;
+governador;1;2907905;#brancos;;;35;
+governador;1;2907905;#nulos;;;58;
+governador;1;2907905;#comparecimento;;;2243;
+governador;1;2908200;_REGISPACHECO;RÉGIS PACHECO;PSD;540;S
+governador;1;2908200;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;265;
+governador;1;2908200;#brancos;;;21;
+governador;1;2908200;#nulos;;;23;
+governador;1;2908200;#comparecimento;;;849;
+governador;1;2908309;_REGISPACHECO;RÉGIS PACHECO;PSD;1474;S
+governador;1;2908309;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1049;
+governador;1;2908309;#brancos;;;45;
+governador;1;2908309;#nulos;;;6;
+governador;1;2908309;#comparecimento;;;2574;
+governador;1;2908408;_REGISPACHECO;RÉGIS PACHECO;PSD;2375;S
+governador;1;2908408;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1565;
+governador;1;2908408;#brancos;;;42;
+governador;1;2908408;#nulos;;;324;
+governador;1;2908408;#comparecimento;;;4306;
+governador;1;2908606;_REGISPACHECO;RÉGIS PACHECO;PSD;633;S
+governador;1;2908606;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1183;
+governador;1;2908606;#brancos;;;35;
+governador;1;2908606;#nulos;;;23;
+governador;1;2908606;#comparecimento;;;1874;
+governador;1;2908705;_REGISPACHECO;RÉGIS PACHECO;PSD;1991;S
+governador;1;2908705;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1983;
+governador;1;2908705;#brancos;;;102;
+governador;1;2908705;#nulos;;;2;
+governador;1;2908705;#comparecimento;;;4078;
+governador;1;2908903;_REGISPACHECO;RÉGIS PACHECO;PSD;993;S
+governador;1;2908903;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;543;
+governador;1;2908903;#brancos;;;24;
+governador;1;2908903;#nulos;;;15;
+governador;1;2908903;#comparecimento;;;1575;
+governador;1;2909307;_REGISPACHECO;RÉGIS PACHECO;PSD;634;S
+governador;1;2909307;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1047;
+governador;1;2909307;#brancos;;;38;
+governador;1;2909307;#nulos;;;9;
+governador;1;2909307;#comparecimento;;;1728;
+governador;1;2909406;_REGISPACHECO;RÉGIS PACHECO;PSD;1430;S
+governador;1;2909406;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1146;
+governador;1;2909406;#brancos;;;50;
+governador;1;2909406;#nulos;;;20;
+governador;1;2909406;#comparecimento;;;2646;
+governador;1;2909802;_REGISPACHECO;RÉGIS PACHECO;PSD;2526;S
+governador;1;2909802;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1580;
+governador;1;2909802;#brancos;;;52;
+governador;1;2909802;#nulos;;;59;
+governador;1;2909802;#comparecimento;;;4217;
+governador;1;2909901;_REGISPACHECO;RÉGIS PACHECO;PSD;1490;S
+governador;1;2909901;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2032;
+governador;1;2909901;#brancos;;;83;
+governador;1;2909901;#nulos;;;85;
+governador;1;2909901;#comparecimento;;;3690;
+governador;1;2910503;_REGISPACHECO;RÉGIS PACHECO;PSD;1613;S
+governador;1;2910503;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1086;
+governador;1;2910503;#brancos;;;53;
+governador;1;2910503;#nulos;;;25;
+governador;1;2910503;#comparecimento;;;2777;
+governador;1;2910602;_REGISPACHECO;RÉGIS PACHECO;PSD;1857;S
+governador;1;2910602;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1358;
+governador;1;2910602;#brancos;;;53;
+governador;1;2910602;#nulos;;;28;
+governador;1;2910602;#comparecimento;;;3296;
+governador;1;2910701;_REGISPACHECO;RÉGIS PACHECO;PSD;1333;S
+governador;1;2910701;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1111;
+governador;1;2910701;#brancos;;;46;
+governador;1;2910701;#nulos;;;13;
+governador;1;2910701;#comparecimento;;;2503;
+governador;1;2910800;_REGISPACHECO;RÉGIS PACHECO;PSD;7040;S
+governador;1;2910800;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;5282;
+governador;1;2910800;#brancos;;;261;
+governador;1;2910800;#nulos;;;287;
+governador;1;2910800;#comparecimento;;;12870;
+governador;1;2911402;_REGISPACHECO;RÉGIS PACHECO;PSD;1470;S
+governador;1;2911402;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1488;
+governador;1;2911402;#brancos;;;198;
+governador;1;2911402;#nulos;;;29;
+governador;1;2911402;#comparecimento;;;3185;
+governador;1;2911709;_REGISPACHECO;RÉGIS PACHECO;PSD;2218;S
+governador;1;2911709;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1218;
+governador;1;2911709;#brancos;;;56;
+governador;1;2911709;#nulos;;;20;
+governador;1;2911709;#comparecimento;;;3512;
+governador;1;2928406;_REGISPACHECO;RÉGIS PACHECO;PSD;1149;S
+governador;1;2928406;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1028;
+governador;1;2928406;#brancos;;;38;
+governador;1;2928406;#nulos;;;21;
+governador;1;2928406;#comparecimento;;;2236;
+governador;1;2913002;_REGISPACHECO;RÉGIS PACHECO;PSD;765;S
+governador;1;2913002;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;658;
+governador;1;2913002;#brancos;;;28;
+governador;1;2913002;#nulos;;;9;
+governador;1;2913002;#comparecimento;;;1460;
+governador;1;2913606;_REGISPACHECO;RÉGIS PACHECO;PSD;13919;S
+governador;1;2913606;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;4758;
+governador;1;2913606;#brancos;;;446;
+governador;1;2913606;#nulos;;;390;
+governador;1;2913606;#comparecimento;;;19513;
+governador;1;2913705;_REGISPACHECO;RÉGIS PACHECO;PSD;2295;S
+governador;1;2913705;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2640;
+governador;1;2913705;#brancos;;;58;
+governador;1;2913705;#nulos;;;38;
+governador;1;2913705;#comparecimento;;;5031;
+governador;1;2913903;_REGISPACHECO;RÉGIS PACHECO;PSD;4412;S
+governador;1;2913903;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2103;
+governador;1;2913903;#brancos;;;165;
+governador;1;2913903;#nulos;;;20;
+governador;1;2913903;#comparecimento;;;6700;
+governador;1;2914000;_REGISPACHECO;RÉGIS PACHECO;PSD;2257;S
+governador;1;2914000;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1522;
+governador;1;2914000;#brancos;;;66;
+governador;1;2914000;#nulos;;;4;
+governador;1;2914000;#comparecimento;;;3849;
+governador;1;2914505;_REGISPACHECO;RÉGIS PACHECO;PSD;2386;S
+governador;1;2914505;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2253;
+governador;1;2914505;#brancos;;;78;
+governador;1;2914505;#nulos;;;45;
+governador;1;2914505;#comparecimento;;;4762;
+governador;1;2914604;_REGISPACHECO;RÉGIS PACHECO;PSD;1839;S
+governador;1;2914604;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2444;
+governador;1;2914604;#brancos;;;51;
+governador;1;2914604;#nulos;;;2;
+governador;1;2914604;#comparecimento;;;4336;
+governador;1;2914703;_REGISPACHECO;RÉGIS PACHECO;PSD;2148;S
+governador;1;2914703;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2779;
+governador;1;2914703;#brancos;;;146;
+governador;1;2914703;#nulos;;;240;
+governador;1;2914703;#comparecimento;;;5313;
+governador;1;2914802;_REGISPACHECO;RÉGIS PACHECO;PSD;11489;S
+governador;1;2914802;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;5162;
+governador;1;2914802;#brancos;;;495;
+governador;1;2914802;#nulos;;;953;
+governador;1;2914802;#comparecimento;;;18099;
+governador;1;2914901;_REGISPACHECO;RÉGIS PACHECO;PSD;1721;S
+governador;1;2914901;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;994;
+governador;1;2914901;#brancos;;;73;
+governador;1;2914901;#nulos;;;25;
+governador;1;2914901;#comparecimento;;;2813;
+governador;1;2915809;_REGISPACHECO;RÉGIS PACHECO;PSD;3781;S
+governador;1;2915809;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2646;
+governador;1;2915809;#brancos;;;201;
+governador;1;2915809;#nulos;;;28;
+governador;1;2915809;#comparecimento;;;6656;
+governador;1;2916104;_REGISPACHECO;RÉGIS PACHECO;PSD;1630;S
+governador;1;2916104;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1790;
+governador;1;2916104;#brancos;;;45;
+governador;1;2916104;#nulos;;;187;
+governador;1;2916104;#comparecimento;;;3652;
+governador;1;2916500;_REGISPACHECO;RÉGIS PACHECO;PSD;1458;S
+governador;1;2916500;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2338;
+governador;1;2916500;#brancos;;;73;
+governador;1;2916500;#nulos;;;17;
+governador;1;2916500;#comparecimento;;;3886;
+governador;1;2916708;_REGISPACHECO;RÉGIS PACHECO;PSD;797;S
+governador;1;2916708;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;206;
+governador;1;2916708;#brancos;;;9;
+governador;1;2916708;#nulos;;;7;
+governador;1;2916708;#comparecimento;;;1019;
+governador;1;2916906;_REGISPACHECO;RÉGIS PACHECO;PSD;530;S
+governador;1;2916906;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;672;
+governador;1;2916906;#brancos;;;16;
+governador;1;2916906;#nulos;;;3;
+governador;1;2916906;#comparecimento;;;1221;
+governador;1;2917003;_REGISPACHECO;RÉGIS PACHECO;PSD;1299;S
+governador;1;2917003;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;727;
+governador;1;2917003;#brancos;;;49;
+governador;1;2917003;#nulos;;;51;
+governador;1;2917003;#comparecimento;;;2126;
+governador;1;2917201;_REGISPACHECO;RÉGIS PACHECO;PSD;2934;S
+governador;1;2917201;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2694;
+governador;1;2917201;#brancos;;;90;
+governador;1;2917201;#nulos;;;507;
+governador;1;2917201;#comparecimento;;;6225;
+governador;1;2917300;_REGISPACHECO;RÉGIS PACHECO;PSD;1602;S
+governador;1;2917300;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1651;
+governador;1;2917300;#brancos;;;51;
+governador;1;2917300;#nulos;;;53;
+governador;1;2917300;#comparecimento;;;3357;
+governador;1;2917409;_REGISPACHECO;RÉGIS PACHECO;PSD;871;S
+governador;1;2917409;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;380;
+governador;1;2917409;#brancos;;;40;
+governador;1;2917409;#nulos;;;0;
+governador;1;2917409;#comparecimento;;;1291;
+governador;1;2917508;_REGISPACHECO;RÉGIS PACHECO;PSD;2694;S
+governador;1;2917508;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2833;
+governador;1;2917508;#brancos;;;148;
+governador;1;2917508;#nulos;;;561;
+governador;1;2917508;#comparecimento;;;6236;
+governador;1;2917607;_REGISPACHECO;RÉGIS PACHECO;PSD;1173;S
+governador;1;2917607;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1344;
+governador;1;2917607;#brancos;;;43;
+governador;1;2917607;#nulos;;;14;
+governador;1;2917607;#comparecimento;;;2574;
+governador;1;2917805;_REGISPACHECO;RÉGIS PACHECO;PSD;572;S
+governador;1;2917805;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;554;
+governador;1;2917805;#brancos;;;20;
+governador;1;2917805;#nulos;;;20;
+governador;1;2917805;#comparecimento;;;1166;
+governador;1;2917706;_REGISPACHECO;RÉGIS PACHECO;PSD;1437;S
+governador;1;2917706;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;733;
+governador;1;2917706;#brancos;;;26;
+governador;1;2917706;#nulos;;;16;
+governador;1;2917706;#comparecimento;;;2212;
+governador;1;2917904;_REGISPACHECO;RÉGIS PACHECO;PSD;383;S
+governador;1;2917904;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;274;
+governador;1;2917904;#brancos;;;14;
+governador;1;2917904;#nulos;;;15;
+governador;1;2917904;#comparecimento;;;686;
+governador;1;2918100;_REGISPACHECO;RÉGIS PACHECO;PSD;1209;S
+governador;1;2918100;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;759;
+governador;1;2918100;#brancos;;;42;
+governador;1;2918100;#nulos;;;40;
+governador;1;2918100;#comparecimento;;;2050;
+governador;1;2918001;_REGISPACHECO;RÉGIS PACHECO;PSD;4781;S
+governador;1;2918001;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;4157;
+governador;1;2918001;#brancos;;;177;
+governador;1;2918001;#nulos;;;36;
+governador;1;2918001;#comparecimento;;;9151;
+governador;1;2918209;_REGISPACHECO;RÉGIS PACHECO;PSD;265;S
+governador;1;2918209;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;540;
+governador;1;2918209;#brancos;;;10;
+governador;1;2918209;#nulos;;;2;
+governador;1;2918209;#comparecimento;;;817;
+governador;1;2918407;_REGISPACHECO;RÉGIS PACHECO;PSD;4553;S
+governador;1;2918407;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2385;
+governador;1;2918407;#brancos;;;247;
+governador;1;2918407;#nulos;;;62;
+governador;1;2918407;#comparecimento;;;7247;
+governador;1;2918803;_REGISPACHECO;RÉGIS PACHECO;PSD;714;S
+governador;1;2918803;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;500;
+governador;1;2918803;#brancos;;;26;
+governador;1;2918803;#nulos;;;18;
+governador;1;2918803;#comparecimento;;;1258;
+governador;1;2919306;_REGISPACHECO;RÉGIS PACHECO;PSD;597;S
+governador;1;2919306;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;673;
+governador;1;2919306;#brancos;;;41;
+governador;1;2919306;#nulos;;;25;
+governador;1;2919306;#comparecimento;;;1336;
+governador;1;2919504;_REGISPACHECO;RÉGIS PACHECO;PSD;962;S
+governador;1;2919504;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1655;
+governador;1;2919504;#brancos;;;56;
+governador;1;2919504;#nulos;;;14;
+governador;1;2919504;#comparecimento;;;2687;
+governador;1;2919603;_REGISPACHECO;RÉGIS PACHECO;PSD;205;S
+governador;1;2919603;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;498;
+governador;1;2919603;#brancos;;;24;
+governador;1;2919603;#nulos;;;227;
+governador;1;2919603;#comparecimento;;;954;
+governador;1;2919702;_REGISPACHECO;RÉGIS PACHECO;PSD;1968;S
+governador;1;2919702;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1557;
+governador;1;2919702;#brancos;;;55;
+governador;1;2919702;#nulos;;;25;
+governador;1;2919702;#comparecimento;;;3605;
+governador;1;2919801;_REGISPACHECO;RÉGIS PACHECO;PSD;2905;S
+governador;1;2919801;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2874;
+governador;1;2919801;#brancos;;;62;
+governador;1;2919801;#nulos;;;19;
+governador;1;2919801;#comparecimento;;;5860;
+governador;1;2920106;_REGISPACHECO;RÉGIS PACHECO;PSD;1988;S
+governador;1;2920106;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1811;
+governador;1;2920106;#brancos;;;136;
+governador;1;2920106;#nulos;;;160;
+governador;1;2920106;#comparecimento;;;4095;
+governador;1;2920502;_REGISPACHECO;RÉGIS PACHECO;PSD;1002;S
+governador;1;2920502;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1821;
+governador;1;2920502;#brancos;;;42;
+governador;1;2920502;#nulos;;;44;
+governador;1;2920502;#comparecimento;;;2909;
+governador;1;2920601;_REGISPACHECO;RÉGIS PACHECO;PSD;3154;S
+governador;1;2920601;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1281;
+governador;1;2920601;#brancos;;;78;
+governador;1;2920601;#nulos;;;108;
+governador;1;2920601;#comparecimento;;;4621;
+governador;1;2920700;_REGISPACHECO;RÉGIS PACHECO;PSD;435;S
+governador;1;2920700;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;684;
+governador;1;2920700;#brancos;;;13;
+governador;1;2920700;#nulos;;;84;
+governador;1;2920700;#comparecimento;;;1216;
+governador;1;2921005;_REGISPACHECO;RÉGIS PACHECO;PSD;1235;S
+governador;1;2921005;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;603;
+governador;1;2921005;#brancos;;;30;
+governador;1;2921005;#nulos;;;46;
+governador;1;2921005;#comparecimento;;;1914;
+governador;1;2921203;_REGISPACHECO;RÉGIS PACHECO;PSD;2638;S
+governador;1;2921203;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1129;
+governador;1;2921203;#brancos;;;79;
+governador;1;2921203;#nulos;;;12;
+governador;1;2921203;#comparecimento;;;3858;
+governador;1;2921500;_REGISPACHECO;RÉGIS PACHECO;PSD;2144;S
+governador;1;2921500;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2792;
+governador;1;2921500;#brancos;;;119;
+governador;1;2921500;#nulos;;;5;
+governador;1;2921500;#comparecimento;;;5060;
+governador;1;2921708;_REGISPACHECO;RÉGIS PACHECO;PSD;2600;S
+governador;1;2921708;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1949;
+governador;1;2921708;#brancos;;;76;
+governador;1;2921708;#nulos;;;3;
+governador;1;2921708;#comparecimento;;;4628;
+governador;1;2921906;_REGISPACHECO;RÉGIS PACHECO;PSD;257;S
+governador;1;2921906;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;906;
+governador;1;2921906;#brancos;;;20;
+governador;1;2921906;#nulos;;;2;
+governador;1;2921906;#comparecimento;;;1185;
+governador;1;2922003;_REGISPACHECO;RÉGIS PACHECO;PSD;367;S
+governador;1;2922003;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;568;
+governador;1;2922003;#brancos;;;81;
+governador;1;2922003;#nulos;;;13;
+governador;1;2922003;#comparecimento;;;1029;
+governador;1;2922102;_REGISPACHECO;RÉGIS PACHECO;PSD;3339;S
+governador;1;2922102;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2479;
+governador;1;2922102;#brancos;;;109;
+governador;1;2922102;#nulos;;;197;
+governador;1;2922102;#comparecimento;;;6124;
+governador;1;2922300;_REGISPACHECO;RÉGIS PACHECO;PSD;2202;S
+governador;1;2922300;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1647;
+governador;1;2922300;#brancos;;;42;
+governador;1;2922300;#nulos;;;37;
+governador;1;2922300;#comparecimento;;;3928;
+governador;1;2922409;_REGISPACHECO;RÉGIS PACHECO;PSD;985;S
+governador;1;2922409;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;203;
+governador;1;2922409;#brancos;;;13;
+governador;1;2922409;#nulos;;;4;
+governador;1;2922409;#comparecimento;;;1205;
+governador;1;2922508;_REGISPACHECO;RÉGIS PACHECO;PSD;2619;S
+governador;1;2922508;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1568;
+governador;1;2922508;#brancos;;;51;
+governador;1;2922508;#nulos;;;78;
+governador;1;2922508;#comparecimento;;;4316;
+governador;1;2922607;_REGISPACHECO;RÉGIS PACHECO;PSD;822;S
+governador;1;2922607;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;151;
+governador;1;2922607;#brancos;;;24;
+governador;1;2922607;#nulos;;;90;
+governador;1;2922607;#comparecimento;;;1087;
+governador;1;2922904;_REGISPACHECO;RÉGIS PACHECO;PSD;228;S
+governador;1;2922904;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1018;
+governador;1;2922904;#brancos;;;19;
+governador;1;2922904;#nulos;;;24;
+governador;1;2922904;#comparecimento;;;1289;
+governador;1;2923209;_REGISPACHECO;RÉGIS PACHECO;PSD;903;S
+governador;1;2923209;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1185;
+governador;1;2923209;#brancos;;;37;
+governador;1;2923209;#nulos;;;0;
+governador;1;2923209;#comparecimento;;;2125;
+governador;1;2923407;_REGISPACHECO;RÉGIS PACHECO;PSD;850;S
+governador;1;2923407;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;117;
+governador;1;2923407;#brancos;;;26;
+governador;1;2923407;#nulos;;;4;
+governador;1;2923407;#comparecimento;;;997;
+governador;1;2923506;_REGISPACHECO;RÉGIS PACHECO;PSD;1000;S
+governador;1;2923506;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1021;
+governador;1;2923506;#brancos;;;22;
+governador;1;2923506;#nulos;;;2;
+governador;1;2923506;#comparecimento;;;2045;
+governador;1;2923605;_REGISPACHECO;RÉGIS PACHECO;PSD;871;S
+governador;1;2923605;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1407;
+governador;1;2923605;#brancos;;;63;
+governador;1;2923605;#nulos;;;8;
+governador;1;2923605;#comparecimento;;;2349;
+governador;1;2923704;_REGISPACHECO;RÉGIS PACHECO;PSD;763;S
+governador;1;2923704;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1322;
+governador;1;2923704;#brancos;;;81;
+governador;1;2923704;#nulos;;;7;
+governador;1;2923704;#comparecimento;;;2173;
+governador;1;2923803;_REGISPACHECO;RÉGIS PACHECO;PSD;1788;S
+governador;1;2923803;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1961;
+governador;1;2923803;#brancos;;;55;
+governador;1;2923803;#nulos;;;57;
+governador;1;2923803;#comparecimento;;;3861;
+governador;1;2924306;_REGISPACHECO;RÉGIS PACHECO;PSD;1301;S
+governador;1;2924306;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;798;
+governador;1;2924306;#brancos;;;32;
+governador;1;2924306;#nulos;;;7;
+governador;1;2924306;#comparecimento;;;2138;
+governador;1;2924405;_REGISPACHECO;RÉGIS PACHECO;PSD;302;S
+governador;1;2924405;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;710;
+governador;1;2924405;#brancos;;;35;
+governador;1;2924405;#nulos;;;3;
+governador;1;2924405;#comparecimento;;;1050;
+governador;1;2925105;_REGISPACHECO;RÉGIS PACHECO;PSD;2116;S
+governador;1;2925105;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;3695;
+governador;1;2925105;#brancos;;;137;
+governador;1;2925105;#nulos;;;21;
+governador;1;2925105;#comparecimento;;;5969;
+governador;1;2925204;_REGISPACHECO;RÉGIS PACHECO;PSD;657;S
+governador;1;2925204;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;616;
+governador;1;2925204;#brancos;;;11;
+governador;1;2925204;#nulos;;;61;
+governador;1;2925204;#comparecimento;;;1345;
+governador;1;2925303;_REGISPACHECO;RÉGIS PACHECO;PSD;100;S
+governador;1;2925303;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;535;
+governador;1;2925303;#brancos;;;21;
+governador;1;2925303;#nulos;;;51;
+governador;1;2925303;#comparecimento;;;707;
+governador;1;2925501;_REGISPACHECO;RÉGIS PACHECO;PSD;796;S
+governador;1;2925501;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;418;
+governador;1;2925501;#brancos;;;52;
+governador;1;2925501;#nulos;;;33;
+governador;1;2925501;#comparecimento;;;1299;
+governador;1;2925808;_REGISPACHECO;RÉGIS PACHECO;PSD;1808;S
+governador;1;2925808;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;917;
+governador;1;2925808;#brancos;;;38;
+governador;1;2925808;#nulos;;;32;
+governador;1;2925808;#comparecimento;;;2795;
+governador;1;2926004;_REGISPACHECO;RÉGIS PACHECO;PSD;2194;S
+governador;1;2926004;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1197;
+governador;1;2926004;#brancos;;;97;
+governador;1;2926004;#nulos;;;0;
+governador;1;2926004;#comparecimento;;;3488;
+governador;1;2926301;_REGISPACHECO;RÉGIS PACHECO;PSD;1126;S
+governador;1;2926301;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1639;
+governador;1;2926301;#brancos;;;34;
+governador;1;2926301;#nulos;;;27;
+governador;1;2926301;#comparecimento;;;2826;
+governador;1;2926400;_REGISPACHECO;RÉGIS PACHECO;PSD;1737;S
+governador;1;2926400;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;671;
+governador;1;2926400;#brancos;;;25;
+governador;1;2926400;#nulos;;;11;
+governador;1;2926400;#comparecimento;;;2444;
+governador;1;2926608;_REGISPACHECO;RÉGIS PACHECO;PSD;1866;S
+governador;1;2926608;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1443;
+governador;1;2926608;#brancos;;;65;
+governador;1;2926608;#nulos;;;10;
+governador;1;2926608;#comparecimento;;;3384;
+governador;1;2926707;_REGISPACHECO;RÉGIS PACHECO;PSD;779;S
+governador;1;2926707;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1074;
+governador;1;2926707;#brancos;;;13;
+governador;1;2926707;#nulos;;;8;
+governador;1;2926707;#comparecimento;;;1874;
+governador;1;2927002;_REGISPACHECO;RÉGIS PACHECO;PSD;972;S
+governador;1;2927002;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;696;
+governador;1;2927002;#brancos;;;65;
+governador;1;2927002;#nulos;;;9;
+governador;1;2927002;#comparecimento;;;1742;
+governador;1;2927200;_REGISPACHECO;RÉGIS PACHECO;PSD;2569;S
+governador;1;2927200;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2039;
+governador;1;2927200;#brancos;;;104;
+governador;1;2927200;#nulos;;;34;
+governador;1;2927200;#comparecimento;;;4746;
+governador;1;2927408;_REGISPACHECO;RÉGIS PACHECO;PSD;45872;S
+governador;1;2927408;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;39243;
+governador;1;2927408;#brancos;;;1785;
+governador;1;2927408;#nulos;;;5451;
+governador;1;2927408;#comparecimento;;;92351;
+governador;1;2928208;_REGISPACHECO;RÉGIS PACHECO;PSD;426;S
+governador;1;2928208;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2803;
+governador;1;2928208;#brancos;;;50;
+governador;1;2928208;#nulos;;;9;
+governador;1;2928208;#comparecimento;;;3288;
+governador;1;2928109;_REGISPACHECO;RÉGIS PACHECO;PSD;1245;S
+governador;1;2928109;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1456;
+governador;1;2928109;#brancos;;;46;
+governador;1;2928109;#nulos;;;5;
+governador;1;2928109;#comparecimento;;;2752;
+governador;1;2928505;_REGISPACHECO;RÉGIS PACHECO;PSD;1623;S
+governador;1;2928505;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2278;
+governador;1;2928505;#brancos;;;77;
+governador;1;2928505;#nulos;;;21;
+governador;1;2928505;#comparecimento;;;3999;
+governador;1;2928604;_REGISPACHECO;RÉGIS PACHECO;PSD;6786;S
+governador;1;2928604;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;3820;
+governador;1;2928604;#brancos;;;194;
+governador;1;2928604;#nulos;;;124;
+governador;1;2928604;#comparecimento;;;10924;
+governador;1;2928703;_REGISPACHECO;RÉGIS PACHECO;PSD;2215;S
+governador;1;2928703;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2807;
+governador;1;2928703;#brancos;;;121;
+governador;1;2928703;#nulos;;;82;
+governador;1;2928703;#comparecimento;;;5225;
+governador;1;2928802;_REGISPACHECO;RÉGIS PACHECO;PSD;646;S
+governador;1;2928802;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1201;
+governador;1;2928802;#brancos;;;40;
+governador;1;2928802;#nulos;;;76;
+governador;1;2928802;#comparecimento;;;1963;
+governador;1;2911303;_REGISPACHECO;RÉGIS PACHECO;PSD;1796;S
+governador;1;2911303;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1512;
+governador;1;2911303;#brancos;;;41;
+governador;1;2911303;#nulos;;;0;
+governador;1;2911303;#comparecimento;;;3349;
+governador;1;2929107;_REGISPACHECO;RÉGIS PACHECO;PSD;1533;S
+governador;1;2929107;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1132;
+governador;1;2929107;#brancos;;;67;
+governador;1;2929107;#nulos;;;220;
+governador;1;2929107;#comparecimento;;;2952;
+governador;1;2929008;_REGISPACHECO;RÉGIS PACHECO;PSD;1502;S
+governador;1;2929008;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;774;
+governador;1;2929008;#brancos;;;66;
+governador;1;2929008;#nulos;;;18;
+governador;1;2929008;#comparecimento;;;2360;
+governador;1;2929206;_REGISPACHECO;RÉGIS PACHECO;PSD;686;S
+governador;1;2929206;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;141;
+governador;1;2929206;#brancos;;;17;
+governador;1;2929206;#nulos;;;6;
+governador;1;2929206;#comparecimento;;;850;
+governador;1;2929305;_REGISPACHECO;RÉGIS PACHECO;PSD;1561;S
+governador;1;2929305;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1343;
+governador;1;2929305;#brancos;;;75;
+governador;1;2929305;#nulos;;;162;
+governador;1;2929305;#comparecimento;;;3141;
+governador;1;2929404;_REGISPACHECO;RÉGIS PACHECO;PSD;647;S
+governador;1;2929404;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;793;
+governador;1;2929404;#brancos;;;10;
+governador;1;2929404;#nulos;;;12;
+governador;1;2929404;#comparecimento;;;1462;
+governador;1;2929503;_REGISPACHECO;RÉGIS PACHECO;PSD;1735;S
+governador;1;2929503;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;836;
+governador;1;2929503;#brancos;;;32;
+governador;1;2929503;#nulos;;;71;
+governador;1;2929503;#comparecimento;;;2674;
+governador;1;2927705;_REGISPACHECO;RÉGIS PACHECO;PSD;64;S
+governador;1;2927705;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;47;
+governador;1;2927705;#brancos;;;3;
+governador;1;2927705;#nulos;;;210;
+governador;1;2927705;#comparecimento;;;324;
+governador;1;2927903;_REGISPACHECO;RÉGIS PACHECO;PSD;1160;S
+governador;1;2927903;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1268;
+governador;1;2927903;#brancos;;;40;
+governador;1;2927903;#nulos;;;54;
+governador;1;2927903;#comparecimento;;;2522;
+governador;1;2928000;_REGISPACHECO;RÉGIS PACHECO;PSD;1027;S
+governador;1;2928000;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;921;
+governador;1;2928000;#brancos;;;41;
+governador;1;2928000;#nulos;;;124;
+governador;1;2928000;#comparecimento;;;2113;
+governador;1;2929800;_REGISPACHECO;RÉGIS PACHECO;PSD;2125;S
+governador;1;2929800;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1737;
+governador;1;2929800;#brancos;;;49;
+governador;1;2929800;#nulos;;;59;
+governador;1;2929800;#comparecimento;;;3970;
+governador;1;2929909;_REGISPACHECO;RÉGIS PACHECO;PSD;194;S
+governador;1;2929909;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2215;
+governador;1;2929909;#brancos;;;90;
+governador;1;2929909;#nulos;;;1;
+governador;1;2929909;#comparecimento;;;2500;
+governador;1;2930105;_REGISPACHECO;RÉGIS PACHECO;PSD;4125;S
+governador;1;2930105;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2457;
+governador;1;2930105;#brancos;;;139;
+governador;1;2930105;#nulos;;;78;
+governador;1;2930105;#comparecimento;;;6799;
+governador;1;2930204;_REGISPACHECO;RÉGIS PACHECO;PSD;2021;S
+governador;1;2930204;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1817;
+governador;1;2930204;#brancos;;;58;
+governador;1;2930204;#nulos;;;299;
+governador;1;2930204;#comparecimento;;;4195;
+governador;1;2930501;_REGISPACHECO;RÉGIS PACHECO;PSD;4405;S
+governador;1;2930501;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;2885;
+governador;1;2930501;#brancos;;;174;
+governador;1;2930501;#nulos;;;318;
+governador;1;2930501;#comparecimento;;;7782;
+governador;1;2931202;_REGISPACHECO;RÉGIS PACHECO;PSD;812;S
+governador;1;2931202;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;493;
+governador;1;2931202;#brancos;;;16;
+governador;1;2931202;#nulos;;;9;
+governador;1;2931202;#comparecimento;;;1330;
+governador;1;2931905;_REGISPACHECO;RÉGIS PACHECO;PSD;2252;S
+governador;1;2931905;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1616;
+governador;1;2931905;#brancos;;;47;
+governador;1;2931905;#nulos;;;30;
+governador;1;2931905;#comparecimento;;;3945;
+governador;1;2932002;_REGISPACHECO;RÉGIS PACHECO;PSD;1691;S
+governador;1;2932002;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1276;
+governador;1;2932002;#brancos;;;50;
+governador;1;2932002;#nulos;;;4;
+governador;1;2932002;#comparecimento;;;3021;
+governador;1;2932101;_REGISPACHECO;RÉGIS PACHECO;PSD;1385;S
+governador;1;2932101;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;856;
+governador;1;2932101;#brancos;;;19;
+governador;1;2932101;#nulos;;;11;
+governador;1;2932101;#comparecimento;;;2271;
+governador;1;2932200;_REGISPACHECO;RÉGIS PACHECO;PSD;1406;S
+governador;1;2932200;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;727;
+governador;1;2932200;#brancos;;;63;
+governador;1;2932200;#nulos;;;23;
+governador;1;2932200;#comparecimento;;;2219;
+governador;1;2932507;_REGISPACHECO;RÉGIS PACHECO;PSD;253;S
+governador;1;2932507;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1058;
+governador;1;2932507;#brancos;;;42;
+governador;1;2932507;#nulos;;;399;
+governador;1;2932507;#comparecimento;;;1752;
+governador;1;2932606;_REGISPACHECO;RÉGIS PACHECO;PSD;2627;S
+governador;1;2932606;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;748;
+governador;1;2932606;#brancos;;;68;
+governador;1;2932606;#nulos;;;0;
+governador;1;2932606;#comparecimento;;;3443;
+governador;1;2932903;_REGISPACHECO;RÉGIS PACHECO;PSD;2352;S
+governador;1;2932903;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;949;
+governador;1;2932903;#brancos;;;35;
+governador;1;2932903;#nulos;;;319;
+governador;1;2932903;#comparecimento;;;3655;
+governador;1;2933307;_REGISPACHECO;RÉGIS PACHECO;PSD;5571;S
+governador;1;2933307;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;4676;
+governador;1;2933307;#brancos;;;277;
+governador;1;2933307;#nulos;;;475;
+governador;1;2933307;#comparecimento;;;10999;
+governador;1;2933604;_REGISPACHECO;RÉGIS PACHECO;PSD;2399;S
+governador;1;2933604;_JURACIMAGALHAES;JURACI MAGALHÃES;UDN;1876;
+governador;1;2933604;#brancos;;;69;
+governador;1;2933604;#nulos;;;9;
+governador;1;2933604;#comparecimento;;;4353;

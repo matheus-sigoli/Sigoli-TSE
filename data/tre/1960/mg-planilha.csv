@@ -1,0 +1,3849 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+governador;1;3100104;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;822;S
+governador;1;3100104;_TANCREDONEVES;TANCREDO NEVES;PSD;386;
+governador;1;3100104;_RIBEIROPENA;RIBEIRO PENA;PSP;25;
+governador;1;3100104;#brancos;;;113;
+governador;1;3100104;#nulos;;;59;
+governador;1;3100104;#comparecimento;;;1405;
+governador;1;3100104;#abstencao;;;521;
+governador;1;3100104;#eleitorado;;;1926;
+governador;1;3100203;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1933;S
+governador;1;3100203;_TANCREDONEVES;TANCREDO NEVES;PSD;2485;
+governador;1;3100203;_RIBEIROPENA;RIBEIRO PENA;PSP;161;
+governador;1;3100203;#brancos;;;349;
+governador;1;3100203;#nulos;;;209;
+governador;1;3100203;#comparecimento;;;5137;
+governador;1;3100203;#abstencao;;;2331;
+governador;1;3100203;#eleitorado;;;7468;
+governador;1;3100302;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1182;S
+governador;1;3100302;_TANCREDONEVES;TANCREDO NEVES;PSD;2658;
+governador;1;3100302;_RIBEIROPENA;RIBEIRO PENA;PSP;58;
+governador;1;3100302;#brancos;;;334;
+governador;1;3100302;#nulos;;;160;
+governador;1;3100302;#comparecimento;;;4392;
+governador;1;3100302;#abstencao;;;872;
+governador;1;3100302;#eleitorado;;;5264;
+governador;1;3100500;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;348;S
+governador;1;3100500;_TANCREDONEVES;TANCREDO NEVES;PSD;2570;
+governador;1;3100500;_RIBEIROPENA;RIBEIRO PENA;PSP;77;
+governador;1;3100500;#brancos;;;69;
+governador;1;3100500;#nulos;;;371;
+governador;1;3100500;#comparecimento;;;3435;
+governador;1;3100500;#abstencao;;;897;
+governador;1;3100500;#eleitorado;;;4332;
+governador;1;3100609;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;64;S
+governador;1;3100609;_TANCREDONEVES;TANCREDO NEVES;PSD;1740;
+governador;1;3100609;_RIBEIROPENA;RIBEIRO PENA;PSP;2;
+governador;1;3100609;#brancos;;;76;
+governador;1;3100609;#nulos;;;19;
+governador;1;3100609;#comparecimento;;;1901;
+governador;1;3100609;#abstencao;;;460;
+governador;1;3100609;#eleitorado;;;2361;
+governador;1;3100708;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;300;S
+governador;1;3100708;_TANCREDONEVES;TANCREDO NEVES;PSD;305;
+governador;1;3100708;_RIBEIROPENA;RIBEIRO PENA;PSP;33;
+governador;1;3100708;#brancos;;;166;
+governador;1;3100708;#nulos;;;57;
+governador;1;3100708;#comparecimento;;;861;
+governador;1;3100708;#abstencao;;;236;
+governador;1;3100708;#eleitorado;;;1097;
+governador;1;3100906;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1183;S
+governador;1;3100906;_TANCREDONEVES;TANCREDO NEVES;PSD;1116;
+governador;1;3100906;_RIBEIROPENA;RIBEIRO PENA;PSP;105;
+governador;1;3100906;#brancos;;;236;
+governador;1;3100906;#nulos;;;77;
+governador;1;3100906;#comparecimento;;;2717;
+governador;1;3100906;#abstencao;;;1454;
+governador;1;3100906;#eleitorado;;;4171;
+governador;1;3101102;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2907;S
+governador;1;3101102;_TANCREDONEVES;TANCREDO NEVES;PSD;2146;
+governador;1;3101102;_RIBEIROPENA;RIBEIRO PENA;PSP;84;
+governador;1;3101102;#brancos;;;400;
+governador;1;3101102;#nulos;;;215;
+governador;1;3101102;#comparecimento;;;7635;
+governador;1;3101102;#abstencao;;;2054;
+governador;1;3101102;#eleitorado;;;9689;
+governador;1;3101201;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;278;S
+governador;1;3101201;_TANCREDONEVES;TANCREDO NEVES;PSD;817;
+governador;1;3101201;_RIBEIROPENA;RIBEIRO PENA;PSP;48;
+governador;1;3101201;#brancos;;;175;
+governador;1;3101201;#nulos;;;77;
+governador;1;3101201;#comparecimento;;;1395;
+governador;1;3101201;#abstencao;;;291;
+governador;1;3101201;#eleitorado;;;1686;
+governador;1;3101508;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3761;S
+governador;1;3101508;_TANCREDONEVES;TANCREDO NEVES;PSD;2825;
+governador;1;3101508;_RIBEIROPENA;RIBEIRO PENA;PSP;181;
+governador;1;3101508;#brancos;;;713;
+governador;1;3101508;#nulos;;;266;
+governador;1;3101508;#comparecimento;;;7746;
+governador;1;3101508;#abstencao;;;1412;
+governador;1;3101508;#eleitorado;;;9158;
+governador;1;3101607;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2472;S
+governador;1;3101607;_TANCREDONEVES;TANCREDO NEVES;PSD;1885;
+governador;1;3101607;_RIBEIROPENA;RIBEIRO PENA;PSP;90;
+governador;1;3101607;#brancos;;;570;
+governador;1;3101607;#nulos;;;124;
+governador;1;3101607;#comparecimento;;;5141;
+governador;1;3101607;#abstencao;;;766;
+governador;1;3101607;#eleitorado;;;5907;
+governador;1;3101706;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1562;S
+governador;1;3101706;_TANCREDONEVES;TANCREDO NEVES;PSD;1039;
+governador;1;3101706;_RIBEIROPENA;RIBEIRO PENA;PSP;85;
+governador;1;3101706;#brancos;;;336;
+governador;1;3101706;#nulos;;;99;
+governador;1;3101706;#comparecimento;;;3121;
+governador;1;3101706;#abstencao;;;2095;
+governador;1;3101706;#eleitorado;;;5216;
+governador;1;3101904;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1010;S
+governador;1;3101904;_TANCREDONEVES;TANCREDO NEVES;PSD;1055;
+governador;1;3101904;_RIBEIROPENA;RIBEIRO PENA;PSP;43;
+governador;1;3101904;#brancos;;;293;
+governador;1;3101904;#nulos;;;108;
+governador;1;3101904;#comparecimento;;;2509;
+governador;1;3101904;#abstencao;;;424;
+governador;1;3101904;#eleitorado;;;2933;
+governador;1;3102001;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;643;S
+governador;1;3102001;_TANCREDONEVES;TANCREDO NEVES;PSD;631;
+governador;1;3102001;_RIBEIROPENA;RIBEIRO PENA;PSP;25;
+governador;1;3102001;#brancos;;;110;
+governador;1;3102001;#nulos;;;34;
+governador;1;3102001;#comparecimento;;;1443;
+governador;1;3102001;#abstencao;;;86;
+governador;1;3102001;#eleitorado;;;1529;
+governador;1;3102100;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1292;S
+governador;1;3102100;_TANCREDONEVES;TANCREDO NEVES;PSD;1447;
+governador;1;3102100;_RIBEIROPENA;RIBEIRO PENA;PSP;31;
+governador;1;3102100;#brancos;;;154;
+governador;1;3102100;#nulos;;;73;
+governador;1;3102100;#comparecimento;;;2997;
+governador;1;3102100;#abstencao;;;459;
+governador;1;3102100;#eleitorado;;;3456;
+governador;1;3102308;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1173;S
+governador;1;3102308;_TANCREDONEVES;TANCREDO NEVES;PSD;1216;
+governador;1;3102308;_RIBEIROPENA;RIBEIRO PENA;PSP;51;
+governador;1;3102308;#brancos;;;138;
+governador;1;3102308;#nulos;;;135;
+governador;1;3102308;#comparecimento;;;2713;
+governador;1;3102308;#abstencao;;;553;
+governador;1;3102308;#eleitorado;;;3266;
+governador;1;3102605;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1126;S
+governador;1;3102605;_TANCREDONEVES;TANCREDO NEVES;PSD;1795;
+governador;1;3102605;_RIBEIROPENA;RIBEIRO PENA;PSP;108;
+governador;1;3102605;#brancos;;;600;
+governador;1;3102605;#nulos;;;160;
+governador;1;3102605;#comparecimento;;;3789;
+governador;1;3102605;#abstencao;;;1316;
+governador;1;3102605;#eleitorado;;;5105;
+governador;1;3102803;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1094;S
+governador;1;3102803;_TANCREDONEVES;TANCREDO NEVES;PSD;886;
+governador;1;3102803;_RIBEIROPENA;RIBEIRO PENA;PSP;57;
+governador;1;3102803;#brancos;;;113;
+governador;1;3102803;#nulos;;;53;
+governador;1;3102803;#comparecimento;;;2203;
+governador;1;3102803;#abstencao;;;714;
+governador;1;3102803;#eleitorado;;;2917;
+governador;1;3102902;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;752;S
+governador;1;3102902;_TANCREDONEVES;TANCREDO NEVES;PSD;782;
+governador;1;3102902;_RIBEIROPENA;RIBEIRO PENA;PSP;41;
+governador;1;3102902;#brancos;;;135;
+governador;1;3102902;#nulos;;;53;
+governador;1;3102902;#comparecimento;;;1763;
+governador;1;3102902;#abstencao;;;365;
+governador;1;3102902;#eleitorado;;;2128;
+governador;1;3103009;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;499;S
+governador;1;3103009;_TANCREDONEVES;TANCREDO NEVES;PSD;694;
+governador;1;3103009;_RIBEIROPENA;RIBEIRO PENA;PSP;53;
+governador;1;3103009;#brancos;;;219;
+governador;1;3103009;#nulos;;;114;
+governador;1;3103009;#comparecimento;;;1579;
+governador;1;3103009;#abstencao;;;319;
+governador;1;3103009;#eleitorado;;;1898;
+governador;1;3103405;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1278;S
+governador;1;3103405;_TANCREDONEVES;TANCREDO NEVES;PSD;1045;
+governador;1;3103405;_RIBEIROPENA;RIBEIRO PENA;PSP;51;
+governador;1;3103405;#brancos;;;198;
+governador;1;3103405;#nulos;;;158;
+governador;1;3103405;#comparecimento;;;2730;
+governador;1;3103405;#abstencao;;;1432;
+governador;1;3103405;#eleitorado;;;4162;
+governador;1;3103504;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;5784;S
+governador;1;3103504;_TANCREDONEVES;TANCREDO NEVES;PSD;4132;
+governador;1;3103504;_RIBEIROPENA;RIBEIRO PENA;PSP;238;
+governador;1;3103504;#brancos;;;1010;
+governador;1;3103504;#nulos;;;387;
+governador;1;3103504;#comparecimento;;;11551;
+governador;1;3103504;#abstencao;;;2062;
+governador;1;3103504;#eleitorado;;;13613;
+governador;1;3103900;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;325;S
+governador;1;3103900;_TANCREDONEVES;TANCREDO NEVES;PSD;279;
+governador;1;3103900;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3103900;#brancos;;;35;
+governador;1;3103900;#nulos;;;18;
+governador;1;3103900;#comparecimento;;;721;
+governador;1;3103900;#abstencao;;;196;
+governador;1;3103900;#eleitorado;;;917;
+governador;1;3104007;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4436;S
+governador;1;3104007;_TANCREDONEVES;TANCREDO NEVES;PSD;2520;
+governador;1;3104007;_RIBEIROPENA;RIBEIRO PENA;PSP;265;
+governador;1;3104007;#brancos;;;836;
+governador;1;3104007;#nulos;;;304;
+governador;1;3104007;#comparecimento;;;8361;
+governador;1;3104007;#abstencao;;;1651;
+governador;1;3104007;#eleitorado;;;10012;
+governador;1;3104106;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;583;S
+governador;1;3104106;_TANCREDONEVES;TANCREDO NEVES;PSD;273;
+governador;1;3104106;_RIBEIROPENA;RIBEIRO PENA;PSP;26;
+governador;1;3104106;#brancos;;;150;
+governador;1;3104106;#nulos;;;38;
+governador;1;3104106;#comparecimento;;;1070;
+governador;1;3104106;#abstencao;;;216;
+governador;1;3104106;#eleitorado;;;1286;
+governador;1;3104205;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1899;S
+governador;1;3104205;_TANCREDONEVES;TANCREDO NEVES;PSD;622;
+governador;1;3104205;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3104205;#brancos;;;233;
+governador;1;3104205;#nulos;;;149;
+governador;1;3104205;#comparecimento;;;2967;
+governador;1;3104205;#abstencao;;;496;
+governador;1;3104205;#eleitorado;;;3463;
+governador;1;3104304;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;901;S
+governador;1;3104304;_TANCREDONEVES;TANCREDO NEVES;PSD;522;
+governador;1;3104304;_RIBEIROPENA;RIBEIRO PENA;PSP;29;
+governador;1;3104304;#brancos;;;141;
+governador;1;3104304;#nulos;;;34;
+governador;1;3104304;#comparecimento;;;1627;
+governador;1;3104304;#abstencao;;;141;
+governador;1;3104304;#eleitorado;;;1768;
+governador;1;3104601;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1181;S
+governador;1;3104601;_TANCREDONEVES;TANCREDO NEVES;PSD;1146;
+governador;1;3104601;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3104601;#brancos;;;245;
+governador;1;3104601;#nulos;;;105;
+governador;1;3104601;#comparecimento;;;2741;
+governador;1;3104601;#abstencao;;;584;
+governador;1;3104601;#eleitorado;;;3325;
+governador;1;3104700;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1156;S
+governador;1;3104700;_TANCREDONEVES;TANCREDO NEVES;PSD;1033;
+governador;1;3104700;_RIBEIROPENA;RIBEIRO PENA;PSP;96;
+governador;1;3104700;#brancos;;;437;
+governador;1;3104700;#nulos;;;148;
+governador;1;3104700;#comparecimento;;;2870;
+governador;1;3104700;#abstencao;;;2640;
+governador;1;3104700;#eleitorado;;;5510;
+governador;1;3104908;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1218;S
+governador;1;3104908;_TANCREDONEVES;TANCREDO NEVES;PSD;1115;
+governador;1;3104908;_RIBEIROPENA;RIBEIRO PENA;PSP;67;
+governador;1;3104908;#brancos;;;416;
+governador;1;3104908;#nulos;;;76;
+governador;1;3104908;#comparecimento;;;2892;
+governador;1;3104908;#abstencao;;;661;
+governador;1;3104908;#eleitorado;;;3553;
+governador;1;3105004;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;435;S
+governador;1;3105004;_TANCREDONEVES;TANCREDO NEVES;PSD;820;
+governador;1;3105004;_RIBEIROPENA;RIBEIRO PENA;PSP;124;
+governador;1;3105004;#brancos;;;188;
+governador;1;3105004;#nulos;;;83;
+governador;1;3105004;#comparecimento;;;1650;
+governador;1;3105004;#abstencao;;;340;
+governador;1;3105004;#eleitorado;;;1990;
+governador;1;3105103;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3225;S
+governador;1;3105103;_TANCREDONEVES;TANCREDO NEVES;PSD;1986;
+governador;1;3105103;_RIBEIROPENA;RIBEIRO PENA;PSP;92;
+governador;1;3105103;#brancos;;;338;
+governador;1;3105103;#nulos;;;137;
+governador;1;3105103;#comparecimento;;;5778;
+governador;1;3105103;#abstencao;;;1120;
+governador;1;3105103;#eleitorado;;;6898;
+governador;1;3105400;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;824;S
+governador;1;3105400;_TANCREDONEVES;TANCREDO NEVES;PSD;1346;
+governador;1;3105400;_RIBEIROPENA;RIBEIRO PENA;PSP;91;
+governador;1;3105400;#brancos;;;282;
+governador;1;3105400;#nulos;;;116;
+governador;1;3105400;#comparecimento;;;2659;
+governador;1;3105400;#abstencao;;;342;
+governador;1;3105400;#eleitorado;;;3001;
+governador;1;3105608;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;6564;S
+governador;1;3105608;_TANCREDONEVES;TANCREDO NEVES;PSD;5918;
+governador;1;3105608;_RIBEIROPENA;RIBEIRO PENA;PSP;289;
+governador;1;3105608;#brancos;;;1008;
+governador;1;3105608;#nulos;;;490;
+governador;1;3105608;#comparecimento;;;14269;
+governador;1;3105608;#abstencao;;;2263;
+governador;1;3105608;#eleitorado;;;16532;
+governador;1;3105707;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;624;S
+governador;1;3105707;_TANCREDONEVES;TANCREDO NEVES;PSD;1081;
+governador;1;3105707;_RIBEIROPENA;RIBEIRO PENA;PSP;37;
+governador;1;3105707;#brancos;;;162;
+governador;1;3105707;#nulos;;;96;
+governador;1;3105707;#comparecimento;;;2000;
+governador;1;3105707;#abstencao;;;716;
+governador;1;3105707;#eleitorado;;;2716;
+governador;1;3105905;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;590;S
+governador;1;3105905;_TANCREDONEVES;TANCREDO NEVES;PSD;811;
+governador;1;3105905;_RIBEIROPENA;RIBEIRO PENA;PSP;59;
+governador;1;3105905;#brancos;;;184;
+governador;1;3105905;#nulos;;;112;
+governador;1;3105905;#comparecimento;;;1756;
+governador;1;3105905;#abstencao;;;169;
+governador;1;3105905;#eleitorado;;;1925;
+governador;1;3106200;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;101728;S
+governador;1;3106200;_TANCREDONEVES;TANCREDO NEVES;PSD;67275;
+governador;1;3106200;_RIBEIROPENA;RIBEIRO PENA;PSP;9687;
+governador;1;3106200;#brancos;;;9949;
+governador;1;3106200;#nulos;;;9031;
+governador;1;3106200;#comparecimento;;;197670;
+governador;1;3106200;#abstencao;;;26474;
+governador;1;3106200;#eleitorado;;;224144;
+governador;1;3106408;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;938;S
+governador;1;3106408;_TANCREDONEVES;TANCREDO NEVES;PSD;1057;
+governador;1;3106408;_RIBEIROPENA;RIBEIRO PENA;PSP;85;
+governador;1;3106408;#brancos;;;181;
+governador;1;3106408;#nulos;;;125;
+governador;1;3106408;#comparecimento;;;2386;
+governador;1;3106408;#abstencao;;;381;
+governador;1;3106408;#eleitorado;;;2767;
+governador;1;3106705;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2301;S
+governador;1;3106705;_TANCREDONEVES;TANCREDO NEVES;PSD;1486;
+governador;1;3106705;_RIBEIROPENA;RIBEIRO PENA;PSP;211;
+governador;1;3106705;#brancos;;;520;
+governador;1;3106705;#nulos;;;301;
+governador;1;3106705;#comparecimento;;;4819;
+governador;1;3106705;#abstencao;;;747;
+governador;1;3106705;#eleitorado;;;5566;
+governador;1;3106804;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1114;S
+governador;1;3106804;_TANCREDONEVES;TANCREDO NEVES;PSD;971;
+governador;1;3106804;_RIBEIROPENA;RIBEIRO PENA;PSP;20;
+governador;1;3106804;#brancos;;;61;
+governador;1;3106804;#nulos;;;34;
+governador;1;3106804;#comparecimento;;;2200;
+governador;1;3106804;#abstencao;;;352;
+governador;1;3106804;#eleitorado;;;2552;
+governador;1;3106903;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1698;S
+governador;1;3106903;_TANCREDONEVES;TANCREDO NEVES;PSD;1371;
+governador;1;3106903;_RIBEIROPENA;RIBEIRO PENA;PSP;50;
+governador;1;3106903;#brancos;;;229;
+governador;1;3106903;#nulos;;;89;
+governador;1;3106903;#comparecimento;;;3437;
+governador;1;3106903;#abstencao;;;379;
+governador;1;3106903;#eleitorado;;;3816;
+governador;1;3107109;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1456;S
+governador;1;3107109;_TANCREDONEVES;TANCREDO NEVES;PSD;885;
+governador;1;3107109;_RIBEIROPENA;RIBEIRO PENA;PSP;53;
+governador;1;3107109;#brancos;;;280;
+governador;1;3107109;#nulos;;;80;
+governador;1;3107109;#comparecimento;;;2754;
+governador;1;3107109;#abstencao;;;321;
+governador;1;3107109;#eleitorado;;;3075;
+governador;1;3107208;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;254;S
+governador;1;3107208;_TANCREDONEVES;TANCREDO NEVES;PSD;509;
+governador;1;3107208;_RIBEIROPENA;RIBEIRO PENA;PSP;22;
+governador;1;3107208;#brancos;;;152;
+governador;1;3107208;#nulos;;;25;
+governador;1;3107208;#comparecimento;;;962;
+governador;1;3107208;#abstencao;;;284;
+governador;1;3107208;#eleitorado;;;1246;
+governador;1;3107307;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2135;S
+governador;1;3107307;_TANCREDONEVES;TANCREDO NEVES;PSD;1309;
+governador;1;3107307;_RIBEIROPENA;RIBEIRO PENA;PSP;133;
+governador;1;3107307;#brancos;;;301;
+governador;1;3107307;#nulos;;;137;
+governador;1;3107307;#comparecimento;;;4015;
+governador;1;3107307;#abstencao;;;939;
+governador;1;3107307;#eleitorado;;;4954;
+governador;1;3107406;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2396;S
+governador;1;3107406;_TANCREDONEVES;TANCREDO NEVES;PSD;1667;
+governador;1;3107406;_RIBEIROPENA;RIBEIRO PENA;PSP;101;
+governador;1;3107406;#brancos;;;344;
+governador;1;3107406;#nulos;;;148;
+governador;1;3107406;#comparecimento;;;4656;
+governador;1;3107406;#abstencao;;;1257;
+governador;1;3107406;#eleitorado;;;5913;
+governador;1;3107505;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;880;S
+governador;1;3107505;_TANCREDONEVES;TANCREDO NEVES;PSD;839;
+governador;1;3107505;_RIBEIROPENA;RIBEIRO PENA;PSP;43;
+governador;1;3107505;#brancos;;;139;
+governador;1;3107505;#nulos;;;44;
+governador;1;3107505;#comparecimento;;;1945;
+governador;1;3107505;#abstencao;;;341;
+governador;1;3107505;#eleitorado;;;2286;
+governador;1;3107703;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;436;S
+governador;1;3107703;_TANCREDONEVES;TANCREDO NEVES;PSD;382;
+governador;1;3107703;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3107703;#brancos;;;128;
+governador;1;3107703;#nulos;;;36;
+governador;1;3107703;#comparecimento;;;1006;
+governador;1;3107703;#abstencao;;;180;
+governador;1;3107703;#eleitorado;;;1186;
+governador;1;3107802;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1126;S
+governador;1;3107802;_TANCREDONEVES;TANCREDO NEVES;PSD;2935;
+governador;1;3107802;_RIBEIROPENA;RIBEIRO PENA;PSP;154;
+governador;1;3107802;#brancos;;;556;
+governador;1;3107802;#nulos;;;323;
+governador;1;3107802;#comparecimento;;;5094;
+governador;1;3107802;#abstencao;;;2681;
+governador;1;3107802;#eleitorado;;;7775;
+governador;1;3107901;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;297;S
+governador;1;3107901;_TANCREDONEVES;TANCREDO NEVES;PSD;431;
+governador;1;3107901;_RIBEIROPENA;RIBEIRO PENA;PSP;19;
+governador;1;3107901;#brancos;;;81;
+governador;1;3107901;#nulos;;;38;
+governador;1;3107901;#comparecimento;;;866;
+governador;1;3107901;#abstencao;;;224;
+governador;1;3107901;#eleitorado;;;1090;
+governador;1;3108008;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1614;S
+governador;1;3108008;_TANCREDONEVES;TANCREDO NEVES;PSD;850;
+governador;1;3108008;_RIBEIROPENA;RIBEIRO PENA;PSP;42;
+governador;1;3108008;#brancos;;;156;
+governador;1;3108008;#nulos;;;78;
+governador;1;3108008;#comparecimento;;;2740;
+governador;1;3108008;#abstencao;;;373;
+governador;1;3108008;#eleitorado;;;3113;
+governador;1;3108107;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1839;S
+governador;1;3108107;_TANCREDONEVES;TANCREDO NEVES;PSD;1114;
+governador;1;3108107;_RIBEIROPENA;RIBEIRO PENA;PSP;383;
+governador;1;3108107;#brancos;;;544;
+governador;1;3108107;#nulos;;;282;
+governador;1;3108107;#comparecimento;;;4162;
+governador;1;3108107;#abstencao;;;854;
+governador;1;3108107;#eleitorado;;;5016;
+governador;1;3108305;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1286;S
+governador;1;3108305;_TANCREDONEVES;TANCREDO NEVES;PSD;1171;
+governador;1;3108305;_RIBEIROPENA;RIBEIRO PENA;PSP;29;
+governador;1;3108305;#brancos;;;200;
+governador;1;3108305;#nulos;;;82;
+governador;1;3108305;#comparecimento;;;2768;
+governador;1;3108305;#abstencao;;;514;
+governador;1;3108305;#eleitorado;;;3282;
+governador;1;3108404;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;930;S
+governador;1;3108404;_TANCREDONEVES;TANCREDO NEVES;PSD;661;
+governador;1;3108404;_RIBEIROPENA;RIBEIRO PENA;PSP;75;
+governador;1;3108404;#brancos;;;500;
+governador;1;3108404;#nulos;;;47;
+governador;1;3108404;#comparecimento;;;2213;
+governador;1;3108404;#abstencao;;;306;
+governador;1;3108404;#eleitorado;;;2519;
+governador;1;3108909;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1898;S
+governador;1;3108909;_TANCREDONEVES;TANCREDO NEVES;PSD;1315;
+governador;1;3108909;_RIBEIROPENA;RIBEIRO PENA;PSP;76;
+governador;1;3108909;#brancos;;;317;
+governador;1;3108909;#nulos;;;58;
+governador;1;3108909;#comparecimento;;;3664;
+governador;1;3108909;#abstencao;;;758;
+governador;1;3108909;#eleitorado;;;4422;
+governador;1;3108800;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;615;S
+governador;1;3108800;_TANCREDONEVES;TANCREDO NEVES;PSD;759;
+governador;1;3108800;_RIBEIROPENA;RIBEIRO PENA;PSP;42;
+governador;1;3108800;#brancos;;;188;
+governador;1;3108800;#nulos;;;65;
+governador;1;3108800;#comparecimento;;;1669;
+governador;1;3108800;#abstencao;;;536;
+governador;1;3108800;#eleitorado;;;2205;
+governador;1;3108701;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;351;S
+governador;1;3108701;_TANCREDONEVES;TANCREDO NEVES;PSD;627;
+governador;1;3108701;_RIBEIROPENA;RIBEIRO PENA;PSP;19;
+governador;1;3108701;#brancos;;;22;
+governador;1;3108701;#nulos;;;98;
+governador;1;3108701;#comparecimento;;;1117;
+governador;1;3108701;#abstencao;;;234;
+governador;1;3108701;#eleitorado;;;1351;
+governador;1;3109006;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1311;S
+governador;1;3109006;_TANCREDONEVES;TANCREDO NEVES;PSD;1020;
+governador;1;3109006;_RIBEIROPENA;RIBEIRO PENA;PSP;391;
+governador;1;3109006;#brancos;;;359;
+governador;1;3109006;#nulos;;;222;
+governador;1;3109006;#comparecimento;;;3303;
+governador;1;3109006;#abstencao;;;618;
+governador;1;3109006;#eleitorado;;;3921;
+governador;1;3109105;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1061;S
+governador;1;3109105;_TANCREDONEVES;TANCREDO NEVES;PSD;679;
+governador;1;3109105;_RIBEIROPENA;RIBEIRO PENA;PSP;27;
+governador;1;3109105;#brancos;;;161;
+governador;1;3109105;#nulos;;;35;
+governador;1;3109105;#comparecimento;;;1963;
+governador;1;3109105;#abstencao;;;218;
+governador;1;3109105;#eleitorado;;;2181;
+governador;1;3109204;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;742;S
+governador;1;3109204;_TANCREDONEVES;TANCREDO NEVES;PSD;685;
+governador;1;3109204;_RIBEIROPENA;RIBEIRO PENA;PSP;54;
+governador;1;3109204;#brancos;;;330;
+governador;1;3109204;#nulos;;;109;
+governador;1;3109204;#comparecimento;;;1920;
+governador;1;3109204;#abstencao;;;718;
+governador;1;3109204;#eleitorado;;;2638;
+governador;1;3109501;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;895;S
+governador;1;3109501;_TANCREDONEVES;TANCREDO NEVES;PSD;361;
+governador;1;3109501;_RIBEIROPENA;RIBEIRO PENA;PSP;46;
+governador;1;3109501;#brancos;;;247;
+governador;1;3109501;#nulos;;;68;
+governador;1;3109501;#comparecimento;;;1617;
+governador;1;3109501;#abstencao;;;273;
+governador;1;3109501;#eleitorado;;;1890;
+governador;1;3109709;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;848;S
+governador;1;3109709;_TANCREDONEVES;TANCREDO NEVES;PSD;449;
+governador;1;3109709;_RIBEIROPENA;RIBEIRO PENA;PSP;77;
+governador;1;3109709;#brancos;;;239;
+governador;1;3109709;#nulos;;;72;
+governador;1;3109709;#comparecimento;;;1685;
+governador;1;3109709;#abstencao;;;189;
+governador;1;3109709;#eleitorado;;;1874;
+governador;1;3109907;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;244;S
+governador;1;3109907;_TANCREDONEVES;TANCREDO NEVES;PSD;458;
+governador;1;3109907;_RIBEIROPENA;RIBEIRO PENA;PSP;34;
+governador;1;3109907;#brancos;;;189;
+governador;1;3109907;#nulos;;;145;
+governador;1;3109907;#comparecimento;;;1070;
+governador;1;3109907;#abstencao;;;188;
+governador;1;3109907;#eleitorado;;;1258;
+governador;1;3110004;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2423;S
+governador;1;3110004;_TANCREDONEVES;TANCREDO NEVES;PSD;2313;
+governador;1;3110004;_RIBEIROPENA;RIBEIRO PENA;PSP;206;
+governador;1;3110004;#brancos;;;556;
+governador;1;3110004;#nulos;;;294;
+governador;1;3110004;#comparecimento;;;5792;
+governador;1;3110004;#abstencao;;;1289;
+governador;1;3110004;#eleitorado;;;7081;
+governador;1;3110301;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1637;S
+governador;1;3110301;_TANCREDONEVES;TANCREDO NEVES;PSD;1742;
+governador;1;3110301;_RIBEIROPENA;RIBEIRO PENA;PSP;51;
+governador;1;3110301;#brancos;;;337;
+governador;1;3110301;#nulos;;;64;
+governador;1;3110301;#comparecimento;;;3831;
+governador;1;3110301;#abstencao;;;363;
+governador;1;3110301;#eleitorado;;;4194;
+governador;1;3110509;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;962;S
+governador;1;3110509;_TANCREDONEVES;TANCREDO NEVES;PSD;585;
+governador;1;3110509;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3110509;#brancos;;;355;
+governador;1;3110509;#nulos;;;88;
+governador;1;3110509;#comparecimento;;;2054;
+governador;1;3110509;#abstencao;;;310;
+governador;1;3110509;#eleitorado;;;2364;
+governador;1;3110608;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1105;S
+governador;1;3110608;_TANCREDONEVES;TANCREDO NEVES;PSD;1162;
+governador;1;3110608;_RIBEIROPENA;RIBEIRO PENA;PSP;42;
+governador;1;3110608;#brancos;;;231;
+governador;1;3110608;#nulos;;;63;
+governador;1;3110608;#comparecimento;;;2603;
+governador;1;3110608;#abstencao;;;409;
+governador;1;3110608;#eleitorado;;;3012;
+governador;1;3110707;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1035;S
+governador;1;3110707;_TANCREDONEVES;TANCREDO NEVES;PSD;582;
+governador;1;3110707;_RIBEIROPENA;RIBEIRO PENA;PSP;67;
+governador;1;3110707;#brancos;;;266;
+governador;1;3110707;#nulos;;;68;
+governador;1;3110707;#comparecimento;;;2018;
+governador;1;3110707;#abstencao;;;339;
+governador;1;3110707;#eleitorado;;;2357;
+governador;1;3110905;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1130;S
+governador;1;3110905;_TANCREDONEVES;TANCREDO NEVES;PSD;897;
+governador;1;3110905;_RIBEIROPENA;RIBEIRO PENA;PSP;18;
+governador;1;3110905;#brancos;;;95;
+governador;1;3110905;#nulos;;;63;
+governador;1;3110905;#comparecimento;;;2203;
+governador;1;3110905;#abstencao;;;314;
+governador;1;3110905;#eleitorado;;;2517;
+governador;1;3111002;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2234;S
+governador;1;3111002;_TANCREDONEVES;TANCREDO NEVES;PSD;976;
+governador;1;3111002;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3111002;#brancos;;;349;
+governador;1;3111002;#nulos;;;72;
+governador;1;3111002;#comparecimento;;;3671;
+governador;1;3111002;#abstencao;;;434;
+governador;1;3111002;#eleitorado;;;4105;
+governador;1;3111101;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1231;S
+governador;1;3111101;_TANCREDONEVES;TANCREDO NEVES;PSD;1170;
+governador;1;3111101;_RIBEIROPENA;RIBEIRO PENA;PSP;49;
+governador;1;3111101;#brancos;;;373;
+governador;1;3111101;#nulos;;;99;
+governador;1;3111101;#comparecimento;;;2922;
+governador;1;3111101;#abstencao;;;539;
+governador;1;3111101;#eleitorado;;;3461;
+governador;1;3111200;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3425;S
+governador;1;3111200;_TANCREDONEVES;TANCREDO NEVES;PSD;1940;
+governador;1;3111200;_RIBEIROPENA;RIBEIRO PENA;PSP;225;
+governador;1;3111200;#brancos;;;433;
+governador;1;3111200;#nulos;;;169;
+governador;1;3111200;#comparecimento;;;6192;
+governador;1;3111200;#abstencao;;;1040;
+governador;1;3111200;#eleitorado;;;7232;
+governador;1;3111309;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;747;S
+governador;1;3111309;_TANCREDONEVES;TANCREDO NEVES;PSD;356;
+governador;1;3111309;_RIBEIROPENA;RIBEIRO PENA;PSP;14;
+governador;1;3111309;#brancos;;;132;
+governador;1;3111309;#nulos;;;27;
+governador;1;3111309;#comparecimento;;;1276;
+governador;1;3111309;#abstencao;;;322;
+governador;1;3111309;#eleitorado;;;1598;
+governador;1;3111408;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;599;S
+governador;1;3111408;_TANCREDONEVES;TANCREDO NEVES;PSD;550;
+governador;1;3111408;_RIBEIROPENA;RIBEIRO PENA;PSP;36;
+governador;1;3111408;#brancos;;;170;
+governador;1;3111408;#nulos;;;35;
+governador;1;3111408;#comparecimento;;;1390;
+governador;1;3111408;#abstencao;;;313;
+governador;1;3111408;#eleitorado;;;1703;
+governador;1;3111507;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;946;S
+governador;1;3111507;_TANCREDONEVES;TANCREDO NEVES;PSD;588;
+governador;1;3111507;_RIBEIROPENA;RIBEIRO PENA;PSP;27;
+governador;1;3111507;#brancos;;;134;
+governador;1;3111507;#nulos;;;41;
+governador;1;3111507;#comparecimento;;;1736;
+governador;1;3111507;#abstencao;;;334;
+governador;1;3111507;#eleitorado;;;2070;
+governador;1;3111606;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1941;S
+governador;1;3111606;_TANCREDONEVES;TANCREDO NEVES;PSD;1485;
+governador;1;3111606;_RIBEIROPENA;RIBEIRO PENA;PSP;45;
+governador;1;3111606;#brancos;;;229;
+governador;1;3111606;#nulos;;;109;
+governador;1;3111606;#comparecimento;;;3809;
+governador;1;3111606;#abstencao;;;470;
+governador;1;3111606;#eleitorado;;;4279;
+governador;1;3111804;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;535;S
+governador;1;3111804;_TANCREDONEVES;TANCREDO NEVES;PSD;725;
+governador;1;3111804;_RIBEIROPENA;RIBEIRO PENA;PSP;74;
+governador;1;3111804;#brancos;;;379;
+governador;1;3111804;#nulos;;;59;
+governador;1;3111804;#comparecimento;;;1772;
+governador;1;3111804;#abstencao;;;676;
+governador;1;3111804;#eleitorado;;;2448;
+governador;1;3112000;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;964;S
+governador;1;3112000;_TANCREDONEVES;TANCREDO NEVES;PSD;653;
+governador;1;3112000;_RIBEIROPENA;RIBEIRO PENA;PSP;139;
+governador;1;3112000;#brancos;;;147;
+governador;1;3112000;#nulos;;;107;
+governador;1;3112000;#comparecimento;;;2010;
+governador;1;3112000;#abstencao;;;484;
+governador;1;3112000;#eleitorado;;;2494;
+governador;1;3112208;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;401;S
+governador;1;3112208;_TANCREDONEVES;TANCREDO NEVES;PSD;655;
+governador;1;3112208;_RIBEIROPENA;RIBEIRO PENA;PSP;17;
+governador;1;3112208;#brancos;;;90;
+governador;1;3112208;#nulos;;;59;
+governador;1;3112208;#comparecimento;;;1222;
+governador;1;3112208;#abstencao;;;269;
+governador;1;3112208;#eleitorado;;;1491;
+governador;1;3112307;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;523;S
+governador;1;3112307;_TANCREDONEVES;TANCREDO NEVES;PSD;926;
+governador;1;3112307;_RIBEIROPENA;RIBEIRO PENA;PSP;57;
+governador;1;3112307;#brancos;;;208;
+governador;1;3112307;#nulos;;;83;
+governador;1;3112307;#comparecimento;;;1797;
+governador;1;3112307;#abstencao;;;912;
+governador;1;3112307;#eleitorado;;;2709;
+governador;1;3112406;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;699;S
+governador;1;3112406;_TANCREDONEVES;TANCREDO NEVES;PSD;306;
+governador;1;3112406;_RIBEIROPENA;RIBEIRO PENA;PSP;11;
+governador;1;3112406;#brancos;;;79;
+governador;1;3112406;#nulos;;;28;
+governador;1;3112406;#comparecimento;;;1123;
+governador;1;3112406;#abstencao;;;106;
+governador;1;3112406;#eleitorado;;;1229;
+governador;1;3112505;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;371;S
+governador;1;3112505;_TANCREDONEVES;TANCREDO NEVES;PSD;730;
+governador;1;3112505;_RIBEIROPENA;RIBEIRO PENA;PSP;19;
+governador;1;3112505;#brancos;;;119;
+governador;1;3112505;#nulos;;;62;
+governador;1;3112505;#comparecimento;;;1301;
+governador;1;3112505;#abstencao;;;280;
+governador;1;3112505;#eleitorado;;;1581;
+governador;1;3112604;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;750;S
+governador;1;3112604;_TANCREDONEVES;TANCREDO NEVES;PSD;946;
+governador;1;3112604;_RIBEIROPENA;RIBEIRO PENA;PSP;79;
+governador;1;3112604;#brancos;;;464;
+governador;1;3112604;#nulos;;;122;
+governador;1;3112604;#comparecimento;;;2361;
+governador;1;3112604;#abstencao;;;1268;
+governador;1;3112604;#eleitorado;;;3629;
+governador;1;3112802;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;693;S
+governador;1;3112802;_TANCREDONEVES;TANCREDO NEVES;PSD;274;
+governador;1;3112802;_RIBEIROPENA;RIBEIRO PENA;PSP;16;
+governador;1;3112802;#brancos;;;110;
+governador;1;3112802;#nulos;;;39;
+governador;1;3112802;#comparecimento;;;1132;
+governador;1;3112802;#abstencao;;;293;
+governador;1;3112802;#eleitorado;;;1425;
+governador;1;3113008;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1338;S
+governador;1;3113008;_TANCREDONEVES;TANCREDO NEVES;PSD;743;
+governador;1;3113008;_RIBEIROPENA;RIBEIRO PENA;PSP;241;
+governador;1;3113008;#brancos;;;342;
+governador;1;3113008;#nulos;;;158;
+governador;1;3113008;#comparecimento;;;2822;
+governador;1;3113008;#abstencao;;;1246;
+governador;1;3113008;#eleitorado;;;4068;
+governador;1;3113206;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2159;S
+governador;1;3113206;_TANCREDONEVES;TANCREDO NEVES;PSD;1769;
+governador;1;3113206;_RIBEIROPENA;RIBEIRO PENA;PSP;106;
+governador;1;3113206;#brancos;;;345;
+governador;1;3113206;#nulos;;;129;
+governador;1;3113206;#comparecimento;;;4508;
+governador;1;3113206;#abstencao;;;513;
+governador;1;3113206;#eleitorado;;;5021;
+governador;1;3113305;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3168;S
+governador;1;3113305;_TANCREDONEVES;TANCREDO NEVES;PSD;2551;
+governador;1;3113305;_RIBEIROPENA;RIBEIRO PENA;PSP;122;
+governador;1;3113305;#brancos;;;737;
+governador;1;3113305;#nulos;;;255;
+governador;1;3113305;#comparecimento;;;6833;
+governador;1;3113305;#abstencao;;;1915;
+governador;1;3113305;#eleitorado;;;8748;
+governador;1;3113404;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;6477;S
+governador;1;3113404;_TANCREDONEVES;TANCREDO NEVES;PSD;6856;
+governador;1;3113404;_RIBEIROPENA;RIBEIRO PENA;PSP;337;
+governador;1;3113404;#brancos;;;1253;
+governador;1;3113404;#nulos;;;661;
+governador;1;3113404;#comparecimento;;;15584;
+governador;1;3113404;#abstencao;;;4060;
+governador;1;3113404;#eleitorado;;;19644;
+governador;1;3113602;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;284;S
+governador;1;3113602;_TANCREDONEVES;TANCREDO NEVES;PSD;305;
+governador;1;3113602;_RIBEIROPENA;RIBEIRO PENA;PSP;25;
+governador;1;3113602;#brancos;;;73;
+governador;1;3113602;#nulos;;;22;
+governador;1;3113602;#comparecimento;;;709;
+governador;1;3113602;#abstencao;;;29;
+governador;1;3113602;#eleitorado;;;738;
+governador;1;3113701;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1597;S
+governador;1;3113701;_TANCREDONEVES;TANCREDO NEVES;PSD;920;
+governador;1;3113701;_RIBEIROPENA;RIBEIRO PENA;PSP;42;
+governador;1;3113701;#brancos;;;215;
+governador;1;3113701;#nulos;;;74;
+governador;1;3113701;#comparecimento;;;2848;
+governador;1;3113701;#abstencao;;;1082;
+governador;1;3113701;#eleitorado;;;3930;
+governador;1;3113909;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;718;S
+governador;1;3113909;_TANCREDONEVES;TANCREDO NEVES;PSD;441;
+governador;1;3113909;_RIBEIROPENA;RIBEIRO PENA;PSP;57;
+governador;1;3113909;#brancos;;;171;
+governador;1;3113909;#nulos;;;88;
+governador;1;3113909;#comparecimento;;;1475;
+governador;1;3113909;#abstencao;;;259;
+governador;1;3113909;#eleitorado;;;1734;
+governador;1;3114006;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;745;S
+governador;1;3114006;_TANCREDONEVES;TANCREDO NEVES;PSD;592;
+governador;1;3114006;_RIBEIROPENA;RIBEIRO PENA;PSP;167;
+governador;1;3114006;#brancos;;;171;
+governador;1;3114006;#nulos;;;127;
+governador;1;3114006;#comparecimento;;;1802;
+governador;1;3114006;#abstencao;;;267;
+governador;1;3114006;#eleitorado;;;2069;
+governador;1;3114105;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;501;S
+governador;1;3114105;_TANCREDONEVES;TANCREDO NEVES;PSD;683;
+governador;1;3114105;_RIBEIROPENA;RIBEIRO PENA;PSP;45;
+governador;1;3114105;#brancos;;;217;
+governador;1;3114105;#nulos;;;52;
+governador;1;3114105;#comparecimento;;;1498;
+governador;1;3114105;#abstencao;;;260;
+governador;1;3114105;#eleitorado;;;1758;
+governador;1;3114204;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1103;S
+governador;1;3114204;_TANCREDONEVES;TANCREDO NEVES;PSD;629;
+governador;1;3114204;_RIBEIROPENA;RIBEIRO PENA;PSP;54;
+governador;1;3114204;#brancos;;;260;
+governador;1;3114204;#nulos;;;102;
+governador;1;3114204;#comparecimento;;;2148;
+governador;1;3114204;#abstencao;;;307;
+governador;1;3114204;#eleitorado;;;2455;
+governador;1;3114303;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2030;S
+governador;1;3114303;_TANCREDONEVES;TANCREDO NEVES;PSD;1757;
+governador;1;3114303;_RIBEIROPENA;RIBEIRO PENA;PSP;97;
+governador;1;3114303;#brancos;;;435;
+governador;1;3114303;#nulos;;;155;
+governador;1;3114303;#comparecimento;;;4474;
+governador;1;3114303;#abstencao;;;572;
+governador;1;3114303;#eleitorado;;;5046;
+governador;1;3114402;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1369;S
+governador;1;3114402;_TANCREDONEVES;TANCREDO NEVES;PSD;793;
+governador;1;3114402;_RIBEIROPENA;RIBEIRO PENA;PSP;21;
+governador;1;3114402;#brancos;;;173;
+governador;1;3114402;#nulos;;;61;
+governador;1;3114402;#comparecimento;;;2417;
+governador;1;3114402;#abstencao;;;374;
+governador;1;3114402;#eleitorado;;;2791;
+governador;1;3114501;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;750;S
+governador;1;3114501;_TANCREDONEVES;TANCREDO NEVES;PSD;733;
+governador;1;3114501;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3114501;#brancos;;;127;
+governador;1;3114501;#nulos;;;65;
+governador;1;3114501;#comparecimento;;;1715;
+governador;1;3114501;#abstencao;;;369;
+governador;1;3114501;#eleitorado;;;2084;
+governador;1;3114600;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;444;S
+governador;1;3114600;_TANCREDONEVES;TANCREDO NEVES;PSD;171;
+governador;1;3114600;_RIBEIROPENA;RIBEIRO PENA;PSP;14;
+governador;1;3114600;#brancos;;;66;
+governador;1;3114600;#nulos;;;25;
+governador;1;3114600;#comparecimento;;;720;
+governador;1;3114600;#abstencao;;;147;
+governador;1;3114600;#eleitorado;;;867;
+governador;1;3114808;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;439;S
+governador;1;3114808;_TANCREDONEVES;TANCREDO NEVES;PSD;509;
+governador;1;3114808;_RIBEIROPENA;RIBEIRO PENA;PSP;12;
+governador;1;3114808;#brancos;;;75;
+governador;1;3114808;#nulos;;;21;
+governador;1;3114808;#comparecimento;;;1056;
+governador;1;3114808;#abstencao;;;212;
+governador;1;3114808;#eleitorado;;;1268;
+governador;1;3115003;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;473;S
+governador;1;3115003;_TANCREDONEVES;TANCREDO NEVES;PSD;393;
+governador;1;3115003;_RIBEIROPENA;RIBEIRO PENA;PSP;42;
+governador;1;3115003;#brancos;;;118;
+governador;1;3115003;#nulos;;;51;
+governador;1;3115003;#comparecimento;;;1077;
+governador;1;3115003;#abstencao;;;556;
+governador;1;3115003;#eleitorado;;;1633;
+governador;1;3115102;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1415;S
+governador;1;3115102;_TANCREDONEVES;TANCREDO NEVES;PSD;826;
+governador;1;3115102;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3115102;#brancos;;;264;
+governador;1;3115102;#nulos;;;54;
+governador;1;3115102;#comparecimento;;;2583;
+governador;1;3115102;#abstencao;;;257;
+governador;1;3115102;#eleitorado;;;2840;
+governador;1;3115300;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4572;S
+governador;1;3115300;_TANCREDONEVES;TANCREDO NEVES;PSD;3856;
+governador;1;3115300;_RIBEIROPENA;RIBEIRO PENA;PSP;148;
+governador;1;3115300;#brancos;;;780;
+governador;1;3115300;#nulos;;;266;
+governador;1;3115300;#comparecimento;;;9622;
+governador;1;3115300;#abstencao;;;1373;
+governador;1;3115300;#eleitorado;;;10995;
+governador;1;3115508;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1311;S
+governador;1;3115508;_TANCREDONEVES;TANCREDO NEVES;PSD;945;
+governador;1;3115508;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3115508;#brancos;;;267;
+governador;1;3115508;#nulos;;;87;
+governador;1;3115508;#comparecimento;;;2678;
+governador;1;3115508;#abstencao;;;445;
+governador;1;3115508;#eleitorado;;;3123;
+governador;1;3115805;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;274;S
+governador;1;3115805;_TANCREDONEVES;TANCREDO NEVES;PSD;629;
+governador;1;3115805;_RIBEIROPENA;RIBEIRO PENA;PSP;28;
+governador;1;3115805;#brancos;;;132;
+governador;1;3115805;#nulos;;;33;
+governador;1;3115805;#comparecimento;;;1096;
+governador;1;3115805;#abstencao;;;470;
+governador;1;3115805;#eleitorado;;;1566;
+governador;1;3116209;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;392;S
+governador;1;3116209;_TANCREDONEVES;TANCREDO NEVES;PSD;419;
+governador;1;3116209;_RIBEIROPENA;RIBEIRO PENA;PSP;59;
+governador;1;3116209;#brancos;;;182;
+governador;1;3116209;#nulos;;;39;
+governador;1;3116209;#comparecimento;;;1091;
+governador;1;3116209;#abstencao;;;160;
+governador;1;3116209;#eleitorado;;;1251;
+governador;1;3116308;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;368;S
+governador;1;3116308;_TANCREDONEVES;TANCREDO NEVES;PSD;534;
+governador;1;3116308;_RIBEIROPENA;RIBEIRO PENA;PSP;10;
+governador;1;3116308;#brancos;;;62;
+governador;1;3116308;#nulos;;;38;
+governador;1;3116308;#comparecimento;;;1012;
+governador;1;3116308;#abstencao;;;314;
+governador;1;3116308;#eleitorado;;;1326;
+governador;1;3116407;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;355;S
+governador;1;3116407;_TANCREDONEVES;TANCREDO NEVES;PSD;115;
+governador;1;3116407;_RIBEIROPENA;RIBEIRO PENA;PSP;59;
+governador;1;3116407;#brancos;;;153;
+governador;1;3116407;#nulos;;;35;
+governador;1;3116407;#comparecimento;;;717;
+governador;1;3116407;#abstencao;;;196;
+governador;1;3116407;#eleitorado;;;913;
+governador;1;3116605;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;758;S
+governador;1;3116605;_TANCREDONEVES;TANCREDO NEVES;PSD;1718;
+governador;1;3116605;_RIBEIROPENA;RIBEIRO PENA;PSP;78;
+governador;1;3116605;#brancos;;;205;
+governador;1;3116605;#nulos;;;218;
+governador;1;3116605;#comparecimento;;;2977;
+governador;1;3116605;#abstencao;;;344;
+governador;1;3116605;#eleitorado;;;3321;
+governador;1;3116704;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1113;S
+governador;1;3116704;_TANCREDONEVES;TANCREDO NEVES;PSD;392;
+governador;1;3116704;_RIBEIROPENA;RIBEIRO PENA;PSP;54;
+governador;1;3116704;#brancos;;;214;
+governador;1;3116704;#nulos;;;60;
+governador;1;3116704;#comparecimento;;;1833;
+governador;1;3116704;#abstencao;;;723;
+governador;1;3116704;#eleitorado;;;2556;
+governador;1;3116803;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;362;S
+governador;1;3116803;_TANCREDONEVES;TANCREDO NEVES;PSD;434;
+governador;1;3116803;_RIBEIROPENA;RIBEIRO PENA;PSP;36;
+governador;1;3116803;#brancos;;;70;
+governador;1;3116803;#nulos;;;81;
+governador;1;3116803;#comparecimento;;;983;
+governador;1;3116803;#abstencao;;;686;
+governador;1;3116803;#eleitorado;;;1669;
+governador;1;3116902;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;326;S
+governador;1;3116902;_TANCREDONEVES;TANCREDO NEVES;PSD;159;
+governador;1;3116902;_RIBEIROPENA;RIBEIRO PENA;PSP;23;
+governador;1;3116902;#brancos;;;159;
+governador;1;3116902;#nulos;;;30;
+governador;1;3116902;#comparecimento;;;697;
+governador;1;3116902;#abstencao;;;85;
+governador;1;3116902;#eleitorado;;;782;
+governador;1;3117009;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;322;S
+governador;1;3117009;_TANCREDONEVES;TANCREDO NEVES;PSD;260;
+governador;1;3117009;_RIBEIROPENA;RIBEIRO PENA;PSP;23;
+governador;1;3117009;#brancos;;;75;
+governador;1;3117009;#nulos;;;42;
+governador;1;3117009;#comparecimento;;;722;
+governador;1;3117009;#abstencao;;;225;
+governador;1;3117009;#eleitorado;;;947;
+governador;1;3117108;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;323;S
+governador;1;3117108;_TANCREDONEVES;TANCREDO NEVES;PSD;572;
+governador;1;3117108;_RIBEIROPENA;RIBEIRO PENA;PSP;32;
+governador;1;3117108;#brancos;;;188;
+governador;1;3117108;#nulos;;;63;
+governador;1;3117108;#comparecimento;;;1178;
+governador;1;3117108;#abstencao;;;242;
+governador;1;3117108;#eleitorado;;;1420;
+governador;1;3117306;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1185;S
+governador;1;3117306;_TANCREDONEVES;TANCREDO NEVES;PSD;914;
+governador;1;3117306;_RIBEIROPENA;RIBEIRO PENA;PSP;74;
+governador;1;3117306;#brancos;;;570;
+governador;1;3117306;#nulos;;;163;
+governador;1;3117306;#comparecimento;;;2906;
+governador;1;3117306;#abstencao;;;623;
+governador;1;3117306;#eleitorado;;;3529;
+governador;1;3117405;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;426;S
+governador;1;3117405;_TANCREDONEVES;TANCREDO NEVES;PSD;618;
+governador;1;3117405;_RIBEIROPENA;RIBEIRO PENA;PSP;19;
+governador;1;3117405;#brancos;;;132;
+governador;1;3117405;#nulos;;;75;
+governador;1;3117405;#comparecimento;;;1270;
+governador;1;3117405;#abstencao;;;316;
+governador;1;3117405;#eleitorado;;;1586;
+governador;1;3117504;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2685;S
+governador;1;3117504;_TANCREDONEVES;TANCREDO NEVES;PSD;1452;
+governador;1;3117504;_RIBEIROPENA;RIBEIRO PENA;PSP;83;
+governador;1;3117504;#brancos;;;311;
+governador;1;3117504;#nulos;;;239;
+governador;1;3117504;#comparecimento;;;4770;
+governador;1;3117504;#abstencao;;;2000;
+governador;1;3117504;#eleitorado;;;6770;
+governador;1;3117702;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;868;S
+governador;1;3117702;_TANCREDONEVES;TANCREDO NEVES;PSD;361;
+governador;1;3117702;_RIBEIROPENA;RIBEIRO PENA;PSP;43;
+governador;1;3117702;#brancos;;;151;
+governador;1;3117702;#nulos;;;49;
+governador;1;3117702;#comparecimento;;;1472;
+governador;1;3117702;#abstencao;;;219;
+governador;1;3117702;#eleitorado;;;1691;
+governador;1;3117801;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;203;S
+governador;1;3117801;_TANCREDONEVES;TANCREDO NEVES;PSD;309;
+governador;1;3117801;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3117801;#brancos;;;97;
+governador;1;3117801;#nulos;;;17;
+governador;1;3117801;#comparecimento;;;666;
+governador;1;3117801;#abstencao;;;105;
+governador;1;3117801;#eleitorado;;;771;
+governador;1;3117900;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;387;S
+governador;1;3117900;_TANCREDONEVES;TANCREDO NEVES;PSD;375;
+governador;1;3117900;_RIBEIROPENA;RIBEIRO PENA;PSP;66;
+governador;1;3117900;#brancos;;;166;
+governador;1;3117900;#nulos;;;25;
+governador;1;3117900;#comparecimento;;;1019;
+governador;1;3117900;#abstencao;;;212;
+governador;1;3117900;#eleitorado;;;1231;
+governador;1;3118007;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1300;S
+governador;1;3118007;_TANCREDONEVES;TANCREDO NEVES;PSD;1306;
+governador;1;3118007;_RIBEIROPENA;RIBEIRO PENA;PSP;85;
+governador;1;3118007;#brancos;;;236;
+governador;1;3118007;#nulos;;;198;
+governador;1;3118007;#comparecimento;;;3125;
+governador;1;3118007;#abstencao;;;290;
+governador;1;3118007;#eleitorado;;;3415;
+governador;1;3118205;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;933;S
+governador;1;3118205;_TANCREDONEVES;TANCREDO NEVES;PSD;788;
+governador;1;3118205;_RIBEIROPENA;RIBEIRO PENA;PSP;106;
+governador;1;3118205;#brancos;;;370;
+governador;1;3118205;#nulos;;;92;
+governador;1;3118205;#comparecimento;;;2289;
+governador;1;3118205;#abstencao;;;393;
+governador;1;3118205;#eleitorado;;;2682;
+governador;1;3118304;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;5437;S
+governador;1;3118304;_TANCREDONEVES;TANCREDO NEVES;PSD;5463;
+governador;1;3118304;_RIBEIROPENA;RIBEIRO PENA;PSP;1078;
+governador;1;3118304;#brancos;;;1316;
+governador;1;3118304;#nulos;;;766;
+governador;1;3118304;#comparecimento;;;14060;
+governador;1;3118304;#abstencao;;;3450;
+governador;1;3118304;#eleitorado;;;17510;
+governador;1;3118403;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4179;S
+governador;1;3118403;_TANCREDONEVES;TANCREDO NEVES;PSD;4479;
+governador;1;3118403;_RIBEIROPENA;RIBEIRO PENA;PSP;169;
+governador;1;3118403;#brancos;;;734;
+governador;1;3118403;#nulos;;;447;
+governador;1;3118403;#comparecimento;;;10008;
+governador;1;3118403;#abstencao;;;2742;
+governador;1;3118403;#eleitorado;;;12750;
+governador;1;3118601;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1878;S
+governador;1;3118601;_TANCREDONEVES;TANCREDO NEVES;PSD;1470;
+governador;1;3118601;_RIBEIROPENA;RIBEIRO PENA;PSP;211;
+governador;1;3118601;#brancos;;;423;
+governador;1;3118601;#nulos;;;336;
+governador;1;3118601;#comparecimento;;;4318;
+governador;1;3118601;#abstencao;;;1051;
+governador;1;3118601;#eleitorado;;;5369;
+governador;1;3118700;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;505;S
+governador;1;3118700;_TANCREDONEVES;TANCREDO NEVES;PSD;370;
+governador;1;3118700;_RIBEIROPENA;RIBEIRO PENA;PSP;8;
+governador;1;3118700;#brancos;;;50;
+governador;1;3118700;#nulos;;;19;
+governador;1;3118700;#comparecimento;;;952;
+governador;1;3118700;#abstencao;;;89;
+governador;1;3118700;#eleitorado;;;1041;
+governador;1;3118809;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1440;S
+governador;1;3118809;_TANCREDONEVES;TANCREDO NEVES;PSD;1383;
+governador;1;3118809;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3118809;#brancos;;;161;
+governador;1;3118809;#nulos;;;143;
+governador;1;3118809;#comparecimento;;;3191;
+governador;1;3118809;#abstencao;;;1612;
+governador;1;3118809;#eleitorado;;;4803;
+governador;1;3118908;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;524;S
+governador;1;3118908;_TANCREDONEVES;TANCREDO NEVES;PSD;523;
+governador;1;3118908;_RIBEIROPENA;RIBEIRO PENA;PSP;62;
+governador;1;3118908;#brancos;;;243;
+governador;1;3118908;#nulos;;;89;
+governador;1;3118908;#comparecimento;;;1441;
+governador;1;3118908;#abstencao;;;369;
+governador;1;3118908;#eleitorado;;;1810;
+governador;1;3119104;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1762;S
+governador;1;3119104;_TANCREDONEVES;TANCREDO NEVES;PSD;2074;
+governador;1;3119104;_RIBEIROPENA;RIBEIRO PENA;PSP;308;
+governador;1;3119104;#brancos;;;710;
+governador;1;3119104;#nulos;;;448;
+governador;1;3119104;#comparecimento;;;5302;
+governador;1;3119104;#abstencao;;;1822;
+governador;1;3119104;#eleitorado;;;7124;
+governador;1;3119203;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;617;S
+governador;1;3119203;_TANCREDONEVES;TANCREDO NEVES;PSD;708;
+governador;1;3119203;_RIBEIROPENA;RIBEIRO PENA;PSP;31;
+governador;1;3119203;#brancos;;;146;
+governador;1;3119203;#nulos;;;61;
+governador;1;3119203;#comparecimento;;;1563;
+governador;1;3119203;#abstencao;;;456;
+governador;1;3119203;#eleitorado;;;2019;
+governador;1;3119302;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1184;S
+governador;1;3119302;_TANCREDONEVES;TANCREDO NEVES;PSD;1727;
+governador;1;3119302;_RIBEIROPENA;RIBEIRO PENA;PSP;89;
+governador;1;3119302;#brancos;;;324;
+governador;1;3119302;#nulos;;;91;
+governador;1;3119302;#comparecimento;;;3415;
+governador;1;3119302;#abstencao;;;857;
+governador;1;3119302;#eleitorado;;;4272;
+governador;1;3119401;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2164;S
+governador;1;3119401;_TANCREDONEVES;TANCREDO NEVES;PSD;2887;
+governador;1;3119401;_RIBEIROPENA;RIBEIRO PENA;PSP;167;
+governador;1;3119401;#brancos;;;627;
+governador;1;3119401;#nulos;;;257;
+governador;1;3119401;#comparecimento;;;6102;
+governador;1;3119401;#abstencao;;;1132;
+governador;1;3119401;#eleitorado;;;7234;
+governador;1;3119500;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;235;S
+governador;1;3119500;_TANCREDONEVES;TANCREDO NEVES;PSD;450;
+governador;1;3119500;_RIBEIROPENA;RIBEIRO PENA;PSP;60;
+governador;1;3119500;#brancos;;;124;
+governador;1;3119500;#nulos;;;61;
+governador;1;3119500;#comparecimento;;;930;
+governador;1;3119500;#abstencao;;;678;
+governador;1;3119500;#eleitorado;;;1608;
+governador;1;3119906;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;644;S
+governador;1;3119906;_TANCREDONEVES;TANCREDO NEVES;PSD;494;
+governador;1;3119906;_RIBEIROPENA;RIBEIRO PENA;PSP;16;
+governador;1;3119906;#brancos;;;47;
+governador;1;3119906;#nulos;;;15;
+governador;1;3119906;#comparecimento;;;1216;
+governador;1;3119906;#abstencao;;;178;
+governador;1;3119906;#eleitorado;;;1394;
+governador;1;3119807;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;684;S
+governador;1;3119807;_TANCREDONEVES;TANCREDO NEVES;PSD;507;
+governador;1;3119807;_RIBEIROPENA;RIBEIRO PENA;PSP;8;
+governador;1;3119807;#brancos;;;92;
+governador;1;3119807;#nulos;;;31;
+governador;1;3119807;#comparecimento;;;1322;
+governador;1;3119807;#abstencao;;;280;
+governador;1;3119807;#eleitorado;;;1602;
+governador;1;3120201;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;993;S
+governador;1;3120201;_TANCREDONEVES;TANCREDO NEVES;PSD;743;
+governador;1;3120201;_RIBEIROPENA;RIBEIRO PENA;PSP;34;
+governador;1;3120201;#brancos;;;176;
+governador;1;3120201;#nulos;;;50;
+governador;1;3120201;#comparecimento;;;1996;
+governador;1;3120201;#abstencao;;;310;
+governador;1;3120201;#eleitorado;;;2306;
+governador;1;3120508;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;724;S
+governador;1;3120508;_TANCREDONEVES;TANCREDO NEVES;PSD;589;
+governador;1;3120508;_RIBEIROPENA;RIBEIRO PENA;PSP;135;
+governador;1;3120508;#brancos;;;326;
+governador;1;3120508;#nulos;;;71;
+governador;1;3120508;#comparecimento;;;1845;
+governador;1;3120508;#abstencao;;;254;
+governador;1;3120508;#eleitorado;;;2099;
+governador;1;3120607;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;494;S
+governador;1;3120607;_TANCREDONEVES;TANCREDO NEVES;PSD;353;
+governador;1;3120607;_RIBEIROPENA;RIBEIRO PENA;PSP;45;
+governador;1;3120607;#brancos;;;109;
+governador;1;3120607;#nulos;;;78;
+governador;1;3120607;#comparecimento;;;1079;
+governador;1;3120607;#abstencao;;;166;
+governador;1;3120607;#eleitorado;;;1245;
+governador;1;3120805;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;680;S
+governador;1;3120805;_TANCREDONEVES;TANCREDO NEVES;PSD;520;
+governador;1;3120805;_RIBEIROPENA;RIBEIRO PENA;PSP;45;
+governador;1;3120805;#brancos;;;118;
+governador;1;3120805;#nulos;;;48;
+governador;1;3120805;#comparecimento;;;1411;
+governador;1;3120805;#abstencao;;;222;
+governador;1;3120805;#eleitorado;;;1633;
+governador;1;3120904;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3594;S
+governador;1;3120904;_TANCREDONEVES;TANCREDO NEVES;PSD;3204;
+governador;1;3120904;_RIBEIROPENA;RIBEIRO PENA;PSP;209;
+governador;1;3120904;#brancos;;;920;
+governador;1;3120904;#nulos;;;456;
+governador;1;3120904;#comparecimento;;;8383;
+governador;1;3120904;#abstencao;;;1666;
+governador;1;3120904;#eleitorado;;;10049;
+governador;1;3121100;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;866;S
+governador;1;3121100;_TANCREDONEVES;TANCREDO NEVES;PSD;523;
+governador;1;3121100;_RIBEIROPENA;RIBEIRO PENA;PSP;62;
+governador;1;3121100;#brancos;;;268;
+governador;1;3121100;#nulos;;;34;
+governador;1;3121100;#comparecimento;;;1753;
+governador;1;3121100;#abstencao;;;319;
+governador;1;3121100;#eleitorado;;;2072;
+governador;1;3121209;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;600;S
+governador;1;3121209;_TANCREDONEVES;TANCREDO NEVES;PSD;939;
+governador;1;3121209;_RIBEIROPENA;RIBEIRO PENA;PSP;31;
+governador;1;3121209;#brancos;;;146;
+governador;1;3121209;#nulos;;;32;
+governador;1;3121209;#comparecimento;;;1748;
+governador;1;3121209;#abstencao;;;158;
+governador;1;3121209;#eleitorado;;;1906;
+governador;1;3121308;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;597;S
+governador;1;3121308;_TANCREDONEVES;TANCREDO NEVES;PSD;173;
+governador;1;3121308;_RIBEIROPENA;RIBEIRO PENA;PSP;21;
+governador;1;3121308;#brancos;;;94;
+governador;1;3121308;#nulos;;;58;
+governador;1;3121308;#comparecimento;;;943;
+governador;1;3121308;#abstencao;;;360;
+governador;1;3121308;#eleitorado;;;1303;
+governador;1;3121407;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1050;S
+governador;1;3121407;_TANCREDONEVES;TANCREDO NEVES;PSD;384;
+governador;1;3121407;_RIBEIROPENA;RIBEIRO PENA;PSP;38;
+governador;1;3121407;#brancos;;;146;
+governador;1;3121407;#nulos;;;82;
+governador;1;3121407;#comparecimento;;;1700;
+governador;1;3121407;#abstencao;;;134;
+governador;1;3121407;#eleitorado;;;1834;
+governador;1;3121605;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2914;S
+governador;1;3121605;_TANCREDONEVES;TANCREDO NEVES;PSD;3855;
+governador;1;3121605;_RIBEIROPENA;RIBEIRO PENA;PSP;238;
+governador;1;3121605;#brancos;;;1122;
+governador;1;3121605;#nulos;;;455;
+governador;1;3121605;#comparecimento;;;8584;
+governador;1;3121605;#abstencao;;;2574;
+governador;1;3121605;#eleitorado;;;11158;
+governador;1;3121803;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;826;S
+governador;1;3121803;_TANCREDONEVES;TANCREDO NEVES;PSD;901;
+governador;1;3121803;_RIBEIROPENA;RIBEIRO PENA;PSP;8;
+governador;1;3121803;#brancos;;;127;
+governador;1;3121803;#nulos;;;68;
+governador;1;3121803;#comparecimento;;;1930;
+governador;1;3121803;#abstencao;;;422;
+governador;1;3121803;#eleitorado;;;2352;
+governador;1;3122009;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1286;S
+governador;1;3122009;_TANCREDONEVES;TANCREDO NEVES;PSD;1386;
+governador;1;3122009;_RIBEIROPENA;RIBEIRO PENA;PSP;92;
+governador;1;3122009;#brancos;;;422;
+governador;1;3122009;#nulos;;;209;
+governador;1;3122009;#comparecimento;;;3395;
+governador;1;3122009;#abstencao;;;1102;
+governador;1;3122009;#eleitorado;;;4497;
+governador;1;3122306;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;5571;S
+governador;1;3122306;_TANCREDONEVES;TANCREDO NEVES;PSD;3644;
+governador;1;3122306;_RIBEIROPENA;RIBEIRO PENA;PSP;743;
+governador;1;3122306;#brancos;;;1077;
+governador;1;3122306;#nulos;;;488;
+governador;1;3122306;#comparecimento;;;11523;
+governador;1;3122306;#abstencao;;;1900;
+governador;1;3122306;#eleitorado;;;13423;
+governador;1;3122405;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;462;S
+governador;1;3122405;_TANCREDONEVES;TANCREDO NEVES;PSD;206;
+governador;1;3122405;_RIBEIROPENA;RIBEIRO PENA;PSP;23;
+governador;1;3122405;#brancos;;;105;
+governador;1;3122405;#nulos;;;38;
+governador;1;3122405;#comparecimento;;;834;
+governador;1;3122405;#abstencao;;;173;
+governador;1;3122405;#eleitorado;;;1007;
+governador;1;3122603;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;798;S
+governador;1;3122603;_TANCREDONEVES;TANCREDO NEVES;PSD;656;
+governador;1;3122603;_RIBEIROPENA;RIBEIRO PENA;PSP;31;
+governador;1;3122603;#brancos;;;197;
+governador;1;3122603;#nulos;;;73;
+governador;1;3122603;#comparecimento;;;1755;
+governador;1;3122603;#abstencao;;;600;
+governador;1;3122603;#eleitorado;;;2355;
+governador;1;3122702;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1400;S
+governador;1;3122702;_TANCREDONEVES;TANCREDO NEVES;PSD;704;
+governador;1;3122702;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3122702;#brancos;;;273;
+governador;1;3122702;#nulos;;;122;
+governador;1;3122702;#comparecimento;;;2563;
+governador;1;3122702;#abstencao;;;558;
+governador;1;3122702;#eleitorado;;;3121;
+governador;1;3122801;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;298;S
+governador;1;3122801;_TANCREDONEVES;TANCREDO NEVES;PSD;204;
+governador;1;3122801;_RIBEIROPENA;RIBEIRO PENA;PSP;29;
+governador;1;3122801;#brancos;;;130;
+governador;1;3122801;#nulos;;;37;
+governador;1;3122801;#comparecimento;;;698;
+governador;1;3122801;#abstencao;;;140;
+governador;1;3122801;#eleitorado;;;838;
+governador;1;3123007;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;546;S
+governador;1;3123007;_TANCREDONEVES;TANCREDO NEVES;PSD;667;
+governador;1;3123007;_RIBEIROPENA;RIBEIRO PENA;PSP;18;
+governador;1;3123007;#brancos;;;115;
+governador;1;3123007;#nulos;;;35;
+governador;1;3123007;#comparecimento;;;1381;
+governador;1;3123007;#abstencao;;;352;
+governador;1;3123007;#eleitorado;;;1733;
+governador;1;3123205;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1928;S
+governador;1;3123205;_TANCREDONEVES;TANCREDO NEVES;PSD;1233;
+governador;1;3123205;_RIBEIROPENA;RIBEIRO PENA;PSP;81;
+governador;1;3123205;#brancos;;;251;
+governador;1;3123205;#nulos;;;147;
+governador;1;3123205;#comparecimento;;;3640;
+governador;1;3123205;#abstencao;;;799;
+governador;1;3123205;#eleitorado;;;4439;
+governador;1;3123304;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;420;S
+governador;1;3123304;_TANCREDONEVES;TANCREDO NEVES;PSD;644;
+governador;1;3123304;_RIBEIROPENA;RIBEIRO PENA;PSP;33;
+governador;1;3123304;#brancos;;;72;
+governador;1;3123304;#nulos;;;72;
+governador;1;3123304;#comparecimento;;;1241;
+governador;1;3123304;#abstencao;;;389;
+governador;1;3123304;#eleitorado;;;1630;
+governador;1;3123601;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1002;S
+governador;1;3123601;_TANCREDONEVES;TANCREDO NEVES;PSD;1119;
+governador;1;3123601;_RIBEIROPENA;RIBEIRO PENA;PSP;102;
+governador;1;3123601;#brancos;;;151;
+governador;1;3123601;#nulos;;;58;
+governador;1;3123601;#comparecimento;;;2432;
+governador;1;3123601;#abstencao;;;168;
+governador;1;3123601;#eleitorado;;;2600;
+governador;1;3123908;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;951;S
+governador;1;3123908;_TANCREDONEVES;TANCREDO NEVES;PSD;883;
+governador;1;3123908;_RIBEIROPENA;RIBEIRO PENA;PSP;30;
+governador;1;3123908;#brancos;;;126;
+governador;1;3123908;#nulos;;;52;
+governador;1;3123908;#comparecimento;;;2042;
+governador;1;3123908;#abstencao;;;291;
+governador;1;3123908;#eleitorado;;;2333;
+governador;1;3124005;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1472;S
+governador;1;3124005;_TANCREDONEVES;TANCREDO NEVES;PSD;1402;
+governador;1;3124005;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3124005;#brancos;;;283;
+governador;1;3124005;#nulos;;;117;
+governador;1;3124005;#comparecimento;;;3338;
+governador;1;3124005;#abstencao;;;804;
+governador;1;3124005;#eleitorado;;;4142;
+governador;1;3124104;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1284;S
+governador;1;3124104;_TANCREDONEVES;TANCREDO NEVES;PSD;1067;
+governador;1;3124104;_RIBEIROPENA;RIBEIRO PENA;PSP;138;
+governador;1;3124104;#brancos;;;494;
+governador;1;3124104;#nulos;;;137;
+governador;1;3124104;#comparecimento;;;3120;
+governador;1;3124104;#abstencao;;;950;
+governador;1;3124104;#eleitorado;;;4070;
+governador;1;3124203;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1594;S
+governador;1;3124203;_TANCREDONEVES;TANCREDO NEVES;PSD;1017;
+governador;1;3124203;_RIBEIROPENA;RIBEIRO PENA;PSP;73;
+governador;1;3124203;#brancos;;;467;
+governador;1;3124203;#nulos;;;159;
+governador;1;3124203;#comparecimento;;;3310;
+governador;1;3124203;#abstencao;;;951;
+governador;1;3124203;#eleitorado;;;4261;
+governador;1;3124302;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;945;S
+governador;1;3124302;_TANCREDONEVES;TANCREDO NEVES;PSD;1183;
+governador;1;3124302;_RIBEIROPENA;RIBEIRO PENA;PSP;96;
+governador;1;3124302;#brancos;;;246;
+governador;1;3124302;#nulos;;;142;
+governador;1;3124302;#comparecimento;;;2612;
+governador;1;3124302;#abstencao;;;540;
+governador;1;3124302;#eleitorado;;;3152;
+governador;1;3124500;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;210;S
+governador;1;3124500;_TANCREDONEVES;TANCREDO NEVES;PSD;361;
+governador;1;3124500;_RIBEIROPENA;RIBEIRO PENA;PSP;76;
+governador;1;3124500;#brancos;;;113;
+governador;1;3124500;#nulos;;;11;
+governador;1;3124500;#comparecimento;;;771;
+governador;1;3124500;#abstencao;;;147;
+governador;1;3124500;#eleitorado;;;918;
+governador;1;3124609;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;388;S
+governador;1;3124609;_TANCREDONEVES;TANCREDO NEVES;PSD;328;
+governador;1;3124609;_RIBEIROPENA;RIBEIRO PENA;PSP;7;
+governador;1;3124609;#brancos;;;59;
+governador;1;3124609;#nulos;;;12;
+governador;1;3124609;#comparecimento;;;794;
+governador;1;3124609;#abstencao;;;68;
+governador;1;3124609;#eleitorado;;;862;
+governador;1;3124708;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1153;S
+governador;1;3124708;_TANCREDONEVES;TANCREDO NEVES;PSD;347;
+governador;1;3124708;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3124708;#brancos;;;153;
+governador;1;3124708;#nulos;;;70;
+governador;1;3124708;#comparecimento;;;1747;
+governador;1;3124708;#abstencao;;;412;
+governador;1;3124708;#eleitorado;;;2159;
+governador;1;3124807;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;886;S
+governador;1;3124807;_TANCREDONEVES;TANCREDO NEVES;PSD;984;
+governador;1;3124807;_RIBEIROPENA;RIBEIRO PENA;PSP;37;
+governador;1;3124807;#brancos;;;194;
+governador;1;3124807;#nulos;;;68;
+governador;1;3124807;#comparecimento;;;2169;
+governador;1;3124807;#abstencao;;;675;
+governador;1;3124807;#eleitorado;;;2844;
+governador;1;3124906;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1386;S
+governador;1;3124906;_TANCREDONEVES;TANCREDO NEVES;PSD;1251;
+governador;1;3124906;_RIBEIROPENA;RIBEIRO PENA;PSP;118;
+governador;1;3124906;#brancos;;;194;
+governador;1;3124906;#nulos;;;117;
+governador;1;3124906;#comparecimento;;;3066;
+governador;1;3124906;#abstencao;;;542;
+governador;1;3124906;#eleitorado;;;3608;
+governador;1;3125101;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;471;S
+governador;1;3125101;_TANCREDONEVES;TANCREDO NEVES;PSD;524;
+governador;1;3125101;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3125101;#brancos;;;246;
+governador;1;3125101;#nulos;;;58;
+governador;1;3125101;#comparecimento;;;1339;
+governador;1;3125101;#abstencao;;;96;
+governador;1;3125101;#eleitorado;;;1435;
+governador;1;3125200;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;314;S
+governador;1;3125200;_TANCREDONEVES;TANCREDO NEVES;PSD;273;
+governador;1;3125200;_RIBEIROPENA;RIBEIRO PENA;PSP;14;
+governador;1;3125200;#brancos;;;64;
+governador;1;3125200;#nulos;;;9;
+governador;1;3125200;#comparecimento;;;674;
+governador;1;3125200;#abstencao;;;70;
+governador;1;3125200;#eleitorado;;;744;
+governador;1;3125309;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;659;S
+governador;1;3125309;_TANCREDONEVES;TANCREDO NEVES;PSD;363;
+governador;1;3125309;_RIBEIROPENA;RIBEIRO PENA;PSP;21;
+governador;1;3125309;#brancos;;;137;
+governador;1;3125309;#nulos;;;47;
+governador;1;3125309;#comparecimento;;;1227;
+governador;1;3125309;#abstencao;;;413;
+governador;1;3125309;#eleitorado;;;1640;
+governador;1;3125705;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;617;S
+governador;1;3125705;_TANCREDONEVES;TANCREDO NEVES;PSD;450;
+governador;1;3125705;_RIBEIROPENA;RIBEIRO PENA;PSP;42;
+governador;1;3125705;#brancos;;;290;
+governador;1;3125705;#nulos;;;85;
+governador;1;3125705;#comparecimento;;;1484;
+governador;1;3125705;#abstencao;;;581;
+governador;1;3125705;#eleitorado;;;2065;
+governador;1;3125903;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1048;S
+governador;1;3125903;_TANCREDONEVES;TANCREDO NEVES;PSD;845;
+governador;1;3125903;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3125903;#brancos;;;314;
+governador;1;3125903;#nulos;;;121;
+governador;1;3125903;#comparecimento;;;2396;
+governador;1;3125903;#abstencao;;;927;
+governador;1;3125903;#eleitorado;;;3323;
+governador;1;3126109;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3313;S
+governador;1;3126109;_TANCREDONEVES;TANCREDO NEVES;PSD;2066;
+governador;1;3126109;_RIBEIROPENA;RIBEIRO PENA;PSP;459;
+governador;1;3126109;#brancos;;;459;
+governador;1;3126109;#nulos;;;253;
+governador;1;3126109;#comparecimento;;;6550;
+governador;1;3126109;#abstencao;;;578;
+governador;1;3126109;#eleitorado;;;7128;
+governador;1;3126703;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1551;S
+governador;1;3126703;_TANCREDONEVES;TANCREDO NEVES;PSD;2562;
+governador;1;3126703;_RIBEIROPENA;RIBEIRO PENA;PSP;98;
+governador;1;3126703;#brancos;;;0;
+governador;1;3126703;#nulos;;;0;
+governador;1;3126703;#comparecimento;;;4211;
+governador;1;3126703;#abstencao;;;684;
+governador;1;3126703;#eleitorado;;;4895;
+governador;1;3127107;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2386;S
+governador;1;3127107;_TANCREDONEVES;TANCREDO NEVES;PSD;2506;
+governador;1;3127107;_RIBEIROPENA;RIBEIRO PENA;PSP;156;
+governador;1;3127107;#brancos;;;1132;
+governador;1;3127107;#nulos;;;206;
+governador;1;3127107;#comparecimento;;;6386;
+governador;1;3127107;#abstencao;;;857;
+governador;1;3127107;#eleitorado;;;7243;
+governador;1;3127305;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1333;S
+governador;1;3127305;_TANCREDONEVES;TANCREDO NEVES;PSD;1101;
+governador;1;3127305;_RIBEIROPENA;RIBEIRO PENA;PSP;38;
+governador;1;3127305;#brancos;;;211;
+governador;1;3127305;#nulos;;;130;
+governador;1;3127305;#comparecimento;;;2813;
+governador;1;3127305;#abstencao;;;1153;
+governador;1;3127305;#eleitorado;;;3966;
+governador;1;3127602;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;303;S
+governador;1;3127602;_TANCREDONEVES;TANCREDO NEVES;PSD;404;
+governador;1;3127602;_RIBEIROPENA;RIBEIRO PENA;PSP;81;
+governador;1;3127602;#brancos;;;243;
+governador;1;3127602;#nulos;;;98;
+governador;1;3127602;#comparecimento;;;1129;
+governador;1;3127602;#abstencao;;;368;
+governador;1;3127602;#eleitorado;;;1497;
+governador;1;3127701;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;7473;S
+governador;1;3127701;_TANCREDONEVES;TANCREDO NEVES;PSD;5417;
+governador;1;3127701;_RIBEIROPENA;RIBEIRO PENA;PSP;480;
+governador;1;3127701;#brancos;;;1689;
+governador;1;3127701;#nulos;;;594;
+governador;1;3127701;#comparecimento;;;15653;
+governador;1;3127701;#abstencao;;;5279;
+governador;1;3127701;#eleitorado;;;20932;
+governador;1;3127800;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1196;S
+governador;1;3127800;_TANCREDONEVES;TANCREDO NEVES;PSD;958;
+governador;1;3127800;_RIBEIROPENA;RIBEIRO PENA;PSP;55;
+governador;1;3127800;#brancos;;;144;
+governador;1;3127800;#nulos;;;66;
+governador;1;3127800;#comparecimento;;;2419;
+governador;1;3127800;#abstencao;;;1712;
+governador;1;3127800;#eleitorado;;;4131;
+governador;1;3128006;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2046;S
+governador;1;3128006;_TANCREDONEVES;TANCREDO NEVES;PSD;1621;
+governador;1;3128006;_RIBEIROPENA;RIBEIRO PENA;PSP;111;
+governador;1;3128006;#brancos;;;491;
+governador;1;3128006;#nulos;;;155;
+governador;1;3128006;#comparecimento;;;4424;
+governador;1;3128006;#abstencao;;;1388;
+governador;1;3128006;#eleitorado;;;5812;
+governador;1;3128105;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1448;S
+governador;1;3128105;_TANCREDONEVES;TANCREDO NEVES;PSD;639;
+governador;1;3128105;_RIBEIROPENA;RIBEIRO PENA;PSP;58;
+governador;1;3128105;#brancos;;;259;
+governador;1;3128105;#nulos;;;90;
+governador;1;3128105;#comparecimento;;;2494;
+governador;1;3128105;#abstencao;;;273;
+governador;1;3128105;#eleitorado;;;2767;
+governador;1;3128204;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;644;S
+governador;1;3128204;_TANCREDONEVES;TANCREDO NEVES;PSD;852;
+governador;1;3128204;_RIBEIROPENA;RIBEIRO PENA;PSP;43;
+governador;1;3128204;#brancos;;;152;
+governador;1;3128204;#nulos;;;91;
+governador;1;3128204;#comparecimento;;;1782;
+governador;1;3128204;#abstencao;;;751;
+governador;1;3128204;#eleitorado;;;2533;
+governador;1;3128303;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1310;S
+governador;1;3128303;_TANCREDONEVES;TANCREDO NEVES;PSD;485;
+governador;1;3128303;_RIBEIROPENA;RIBEIRO PENA;PSP;27;
+governador;1;3128303;#brancos;;;185;
+governador;1;3128303;#nulos;;;78;
+governador;1;3128303;#comparecimento;;;2085;
+governador;1;3128303;#abstencao;;;535;
+governador;1;3128303;#eleitorado;;;2620;
+governador;1;3128402;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1304;S
+governador;1;3128402;_TANCREDONEVES;TANCREDO NEVES;PSD;571;
+governador;1;3128402;_RIBEIROPENA;RIBEIRO PENA;PSP;20;
+governador;1;3128402;#brancos;;;103;
+governador;1;3128402;#nulos;;;58;
+governador;1;3128402;#comparecimento;;;2056;
+governador;1;3128402;#abstencao;;;230;
+governador;1;3128402;#eleitorado;;;2286;
+governador;1;3128501;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;590;S
+governador;1;3128501;_TANCREDONEVES;TANCREDO NEVES;PSD;392;
+governador;1;3128501;_RIBEIROPENA;RIBEIRO PENA;PSP;22;
+governador;1;3128501;#brancos;;;110;
+governador;1;3128501;#nulos;;;74;
+governador;1;3128501;#comparecimento;;;1188;
+governador;1;3128501;#abstencao;;;147;
+governador;1;3128501;#eleitorado;;;1335;
+governador;1;3128709;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2587;S
+governador;1;3128709;_TANCREDONEVES;TANCREDO NEVES;PSD;1622;
+governador;1;3128709;_RIBEIROPENA;RIBEIRO PENA;PSP;105;
+governador;1;3128709;#brancos;;;485;
+governador;1;3128709;#nulos;;;133;
+governador;1;3128709;#comparecimento;;;4932;
+governador;1;3128709;#abstencao;;;662;
+governador;1;3128709;#eleitorado;;;5594;
+governador;1;3128808;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1096;S
+governador;1;3128808;_TANCREDONEVES;TANCREDO NEVES;PSD;557;
+governador;1;3128808;_RIBEIROPENA;RIBEIRO PENA;PSP;45;
+governador;1;3128808;#brancos;;;245;
+governador;1;3128808;#nulos;;;88;
+governador;1;3128808;#comparecimento;;;2031;
+governador;1;3128808;#abstencao;;;799;
+governador;1;3128808;#eleitorado;;;2830;
+governador;1;3129004;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1007;S
+governador;1;3129004;_TANCREDONEVES;TANCREDO NEVES;PSD;1113;
+governador;1;3129004;_RIBEIROPENA;RIBEIRO PENA;PSP;78;
+governador;1;3129004;#brancos;;;217;
+governador;1;3129004;#nulos;;;119;
+governador;1;3129004;#comparecimento;;;2534;
+governador;1;3129004;#abstencao;;;999;
+governador;1;3129004;#eleitorado;;;3533;
+governador;1;3129202;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;362;S
+governador;1;3129202;_TANCREDONEVES;TANCREDO NEVES;PSD;281;
+governador;1;3129202;_RIBEIROPENA;RIBEIRO PENA;PSP;23;
+governador;1;3129202;#brancos;;;120;
+governador;1;3129202;#nulos;;;44;
+governador;1;3129202;#comparecimento;;;830;
+governador;1;3129202;#abstencao;;;464;
+governador;1;3129202;#eleitorado;;;1294;
+governador;1;3129301;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1961;S
+governador;1;3129301;_TANCREDONEVES;TANCREDO NEVES;PSD;1735;
+governador;1;3129301;_RIBEIROPENA;RIBEIRO PENA;PSP;118;
+governador;1;3129301;#brancos;;;374;
+governador;1;3129301;#nulos;;;288;
+governador;1;3129301;#comparecimento;;;4476;
+governador;1;3129301;#abstencao;;;1754;
+governador;1;3129301;#eleitorado;;;6230;
+governador;1;3129509;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1622;S
+governador;1;3129509;_TANCREDONEVES;TANCREDO NEVES;PSD;615;
+governador;1;3129509;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3129509;#brancos;;;217;
+governador;1;3129509;#nulos;;;106;
+governador;1;3129509;#comparecimento;;;2628;
+governador;1;3129509;#abstencao;;;475;
+governador;1;3129509;#eleitorado;;;3103;
+governador;1;3129707;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;629;S
+governador;1;3129707;_TANCREDONEVES;TANCREDO NEVES;PSD;548;
+governador;1;3129707;_RIBEIROPENA;RIBEIRO PENA;PSP;31;
+governador;1;3129707;#brancos;;;279;
+governador;1;3129707;#nulos;;;58;
+governador;1;3129707;#comparecimento;;;1545;
+governador;1;3129707;#abstencao;;;360;
+governador;1;3129707;#eleitorado;;;1905;
+governador;1;3130309;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;677;S
+governador;1;3130309;_TANCREDONEVES;TANCREDO NEVES;PSD;572;
+governador;1;3130309;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3130309;#brancos;;;235;
+governador;1;3130309;#nulos;;;59;
+governador;1;3130309;#comparecimento;;;1611;
+governador;1;3130309;#abstencao;;;193;
+governador;1;3130309;#eleitorado;;;1804;
+governador;1;3130507;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;567;S
+governador;1;3130507;_TANCREDONEVES;TANCREDO NEVES;PSD;451;
+governador;1;3130507;_RIBEIROPENA;RIBEIRO PENA;PSP;19;
+governador;1;3130507;#brancos;;;173;
+governador;1;3130507;#nulos;;;40;
+governador;1;3130507;#comparecimento;;;1250;
+governador;1;3130507;#abstencao;;;201;
+governador;1;3130507;#eleitorado;;;1451;
+governador;1;3130705;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;468;S
+governador;1;3130705;_TANCREDONEVES;TANCREDO NEVES;PSD;345;
+governador;1;3130705;_RIBEIROPENA;RIBEIRO PENA;PSP;12;
+governador;1;3130705;#brancos;;;68;
+governador;1;3130705;#nulos;;;31;
+governador;1;3130705;#comparecimento;;;924;
+governador;1;3130705;#abstencao;;;130;
+governador;1;3130705;#eleitorado;;;1054;
+governador;1;3130903;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4312;S
+governador;1;3130903;_TANCREDONEVES;TANCREDO NEVES;PSD;4156;
+governador;1;3130903;_RIBEIROPENA;RIBEIRO PENA;PSP;170;
+governador;1;3130903;#brancos;;;690;
+governador;1;3130903;#nulos;;;332;
+governador;1;3130903;#comparecimento;;;9660;
+governador;1;3130903;#abstencao;;;2953;
+governador;1;3130903;#eleitorado;;;12613;
+governador;1;3131000;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;718;S
+governador;1;3131000;_TANCREDONEVES;TANCREDO NEVES;PSD;768;
+governador;1;3131000;_RIBEIROPENA;RIBEIRO PENA;PSP;56;
+governador;1;3131000;#brancos;;;213;
+governador;1;3131000;#nulos;;;118;
+governador;1;3131000;#comparecimento;;;1873;
+governador;1;3131000;#abstencao;;;455;
+governador;1;3131000;#eleitorado;;;2328;
+governador;1;3131208;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1301;S
+governador;1;3131208;_TANCREDONEVES;TANCREDO NEVES;PSD;1793;
+governador;1;3131208;_RIBEIROPENA;RIBEIRO PENA;PSP;57;
+governador;1;3131208;#brancos;;;231;
+governador;1;3131208;#nulos;;;130;
+governador;1;3131208;#comparecimento;;;3512;
+governador;1;3131208;#abstencao;;;1065;
+governador;1;3131208;#eleitorado;;;4577;
+governador;1;3131505;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;571;S
+governador;1;3131505;_TANCREDONEVES;TANCREDO NEVES;PSD;631;
+governador;1;3131505;_RIBEIROPENA;RIBEIRO PENA;PSP;45;
+governador;1;3131505;#brancos;;;192;
+governador;1;3131505;#nulos;;;22;
+governador;1;3131505;#comparecimento;;;1461;
+governador;1;3131505;#abstencao;;;239;
+governador;1;3131505;#eleitorado;;;1700;
+governador;1;3131703;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2871;S
+governador;1;3131703;_TANCREDONEVES;TANCREDO NEVES;PSD;3727;
+governador;1;3131703;_RIBEIROPENA;RIBEIRO PENA;PSP;133;
+governador;1;3131703;#brancos;;;774;
+governador;1;3131703;#nulos;;;289;
+governador;1;3131703;#comparecimento;;;7794;
+governador;1;3131703;#abstencao;;;1027;
+governador;1;3131703;#eleitorado;;;8821;
+governador;1;3131901;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1592;S
+governador;1;3131901;_TANCREDONEVES;TANCREDO NEVES;PSD;1616;
+governador;1;3131901;_RIBEIROPENA;RIBEIRO PENA;PSP;167;
+governador;1;3131901;#brancos;;;483;
+governador;1;3131901;#nulos;;;177;
+governador;1;3131901;#comparecimento;;;4035;
+governador;1;3131901;#abstencao;;;282;
+governador;1;3131901;#eleitorado;;;4317;
+governador;1;3132206;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;821;S
+governador;1;3132206;_TANCREDONEVES;TANCREDO NEVES;PSD;744;
+governador;1;3132206;_RIBEIROPENA;RIBEIRO PENA;PSP;92;
+governador;1;3132206;#brancos;;;124;
+governador;1;3132206;#nulos;;;101;
+governador;1;3132206;#comparecimento;;;1882;
+governador;1;3132206;#abstencao;;;198;
+governador;1;3132206;#eleitorado;;;2080;
+governador;1;3132404;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4063;S
+governador;1;3132404;_TANCREDONEVES;TANCREDO NEVES;PSD;4166;
+governador;1;3132404;_RIBEIROPENA;RIBEIRO PENA;PSP;703;
+governador;1;3132404;#brancos;;;1278;
+governador;1;3132404;#nulos;;;233;
+governador;1;3132404;#comparecimento;;;10443;
+governador;1;3132404;#abstencao;;;1467;
+governador;1;3132404;#eleitorado;;;11910;
+governador;1;3132503;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;544;S
+governador;1;3132503;_TANCREDONEVES;TANCREDO NEVES;PSD;836;
+governador;1;3132503;_RIBEIROPENA;RIBEIRO PENA;PSP;32;
+governador;1;3132503;#brancos;;;139;
+governador;1;3132503;#nulos;;;85;
+governador;1;3132503;#comparecimento;;;1636;
+governador;1;3132503;#abstencao;;;533;
+governador;1;3132503;#eleitorado;;;2169;
+governador;1;3132701;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4044;S
+governador;1;3132701;_TANCREDONEVES;TANCREDO NEVES;PSD;3423;
+governador;1;3132701;_RIBEIROPENA;RIBEIRO PENA;PSP;306;
+governador;1;3132701;#brancos;;;958;
+governador;1;3132701;#nulos;;;415;
+governador;1;3132701;#comparecimento;;;9146;
+governador;1;3132701;#abstencao;;;6163;
+governador;1;3132701;#eleitorado;;;15309;
+governador;1;3132909;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;723;S
+governador;1;3132909;_TANCREDONEVES;TANCREDO NEVES;PSD;539;
+governador;1;3132909;_RIBEIROPENA;RIBEIRO PENA;PSP;26;
+governador;1;3132909;#brancos;;;189;
+governador;1;3132909;#nulos;;;31;
+governador;1;3132909;#comparecimento;;;1508;
+governador;1;3132909;#abstencao;;;209;
+governador;1;3132909;#eleitorado;;;1717;
+governador;1;3133006;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;339;S
+governador;1;3133006;_TANCREDONEVES;TANCREDO NEVES;PSD;1073;
+governador;1;3133006;_RIBEIROPENA;RIBEIRO PENA;PSP;87;
+governador;1;3133006;#brancos;;;317;
+governador;1;3133006;#nulos;;;87;
+governador;1;3133006;#comparecimento;;;1903;
+governador;1;3133006;#abstencao;;;523;
+governador;1;3133006;#eleitorado;;;2426;
+governador;1;3133105;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;623;S
+governador;1;3133105;_TANCREDONEVES;TANCREDO NEVES;PSD;651;
+governador;1;3133105;_RIBEIROPENA;RIBEIRO PENA;PSP;95;
+governador;1;3133105;#brancos;;;272;
+governador;1;3133105;#nulos;;;48;
+governador;1;3133105;#comparecimento;;;1689;
+governador;1;3133105;#abstencao;;;355;
+governador;1;3133105;#eleitorado;;;2044;
+governador;1;3133204;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1296;S
+governador;1;3133204;_TANCREDONEVES;TANCREDO NEVES;PSD;1623;
+governador;1;3133204;_RIBEIROPENA;RIBEIRO PENA;PSP;62;
+governador;1;3133204;#brancos;;;292;
+governador;1;3133204;#nulos;;;128;
+governador;1;3133204;#comparecimento;;;3401;
+governador;1;3133204;#abstencao;;;762;
+governador;1;3133204;#eleitorado;;;4163;
+governador;1;3133402;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;773;S
+governador;1;3133402;_TANCREDONEVES;TANCREDO NEVES;PSD;379;
+governador;1;3133402;_RIBEIROPENA;RIBEIRO PENA;PSP;47;
+governador;1;3133402;#brancos;;;378;
+governador;1;3133402;#nulos;;;75;
+governador;1;3133402;#comparecimento;;;1652;
+governador;1;3133402;#abstencao;;;181;
+governador;1;3133402;#eleitorado;;;1833;
+governador;1;3133501;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1750;S
+governador;1;3133501;_TANCREDONEVES;TANCREDO NEVES;PSD;620;
+governador;1;3133501;_RIBEIROPENA;RIBEIRO PENA;PSP;2938;
+governador;1;3133501;#brancos;;;280;
+governador;1;3133501;#nulos;;;321;
+governador;1;3133501;#comparecimento;;;5909;
+governador;1;3133501;#abstencao;;;1585;
+governador;1;3133501;#eleitorado;;;7494;
+governador;1;3133808;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3749;S
+governador;1;3133808;_TANCREDONEVES;TANCREDO NEVES;PSD;2555;
+governador;1;3133808;_RIBEIROPENA;RIBEIRO PENA;PSP;281;
+governador;1;3133808;#brancos;;;975;
+governador;1;3133808;#nulos;;;418;
+governador;1;3133808;#comparecimento;;;7978;
+governador;1;3133808;#abstencao;;;1700;
+governador;1;3133808;#eleitorado;;;9678;
+governador;1;3134004;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;508;S
+governador;1;3134004;_TANCREDONEVES;TANCREDO NEVES;PSD;604;
+governador;1;3134004;_RIBEIROPENA;RIBEIRO PENA;PSP;55;
+governador;1;3134004;#brancos;;;167;
+governador;1;3134004;#nulos;;;76;
+governador;1;3134004;#comparecimento;;;1410;
+governador;1;3134004;#abstencao;;;1344;
+governador;1;3134004;#eleitorado;;;2754;
+governador;1;3134103;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;559;S
+governador;1;3134103;_TANCREDONEVES;TANCREDO NEVES;PSD;547;
+governador;1;3134103;_RIBEIROPENA;RIBEIRO PENA;PSP;12;
+governador;1;3134103;#brancos;;;84;
+governador;1;3134103;#nulos;;;45;
+governador;1;3134103;#comparecimento;;;1247;
+governador;1;3134103;#abstencao;;;277;
+governador;1;3134103;#eleitorado;;;1524;
+governador;1;3134202;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3946;S
+governador;1;3134202;_TANCREDONEVES;TANCREDO NEVES;PSD;6205;
+governador;1;3134202;_RIBEIROPENA;RIBEIRO PENA;PSP;412;
+governador;1;3134202;#brancos;;;1972;
+governador;1;3134202;#nulos;;;420;
+governador;1;3134202;#comparecimento;;;12955;
+governador;1;3134202;#abstencao;;;2284;
+governador;1;3134202;#eleitorado;;;15239;
+governador;1;3134301;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;422;S
+governador;1;3134301;_TANCREDONEVES;TANCREDO NEVES;PSD;591;
+governador;1;3134301;_RIBEIROPENA;RIBEIRO PENA;PSP;25;
+governador;1;3134301;#brancos;;;104;
+governador;1;3134301;#nulos;;;31;
+governador;1;3134301;#comparecimento;;;1173;
+governador;1;3134301;#abstencao;;;122;
+governador;1;3134301;#eleitorado;;;1295;
+governador;1;3134400;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;250;S
+governador;1;3134400;_TANCREDONEVES;TANCREDO NEVES;PSD;1000;
+governador;1;3134400;_RIBEIROPENA;RIBEIRO PENA;PSP;27;
+governador;1;3134400;#brancos;;;207;
+governador;1;3134400;#nulos;;;60;
+governador;1;3134400;#comparecimento;;;1544;
+governador;1;3134400;#abstencao;;;410;
+governador;1;3134400;#eleitorado;;;1954;
+governador;1;3134509;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;241;S
+governador;1;3134509;_TANCREDONEVES;TANCREDO NEVES;PSD;320;
+governador;1;3134509;_RIBEIROPENA;RIBEIRO PENA;PSP;8;
+governador;1;3134509;#brancos;;;37;
+governador;1;3134509;#nulos;;;9;
+governador;1;3134509;#comparecimento;;;615;
+governador;1;3134509;#abstencao;;;249;
+governador;1;3134509;#eleitorado;;;864;
+governador;1;3134608;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1404;S
+governador;1;3134608;_TANCREDONEVES;TANCREDO NEVES;PSD;1176;
+governador;1;3134608;_RIBEIROPENA;RIBEIRO PENA;PSP;135;
+governador;1;3134608;#brancos;;;430;
+governador;1;3134608;#nulos;;;188;
+governador;1;3134608;#comparecimento;;;3333;
+governador;1;3134608;#abstencao;;;824;
+governador;1;3134608;#eleitorado;;;4157;
+governador;1;3134707;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;515;S
+governador;1;3134707;_TANCREDONEVES;TANCREDO NEVES;PSD;1589;
+governador;1;3134707;_RIBEIROPENA;RIBEIRO PENA;PSP;48;
+governador;1;3134707;#brancos;;;193;
+governador;1;3134707;#nulos;;;42;
+governador;1;3134707;#comparecimento;;;2387;
+governador;1;3134707;#abstencao;;;2189;
+governador;1;3134707;#eleitorado;;;4576;
+governador;1;3134806;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;718;S
+governador;1;3134806;_TANCREDONEVES;TANCREDO NEVES;PSD;678;
+governador;1;3134806;_RIBEIROPENA;RIBEIRO PENA;PSP;25;
+governador;1;3134806;#brancos;;;215;
+governador;1;3134806;#nulos;;;64;
+governador;1;3134806;#comparecimento;;;1700;
+governador;1;3134806;#abstencao;;;204;
+governador;1;3134806;#eleitorado;;;1904;
+governador;1;3134905;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1179;S
+governador;1;3134905;_TANCREDONEVES;TANCREDO NEVES;PSD;956;
+governador;1;3134905;_RIBEIROPENA;RIBEIRO PENA;PSP;38;
+governador;1;3134905;#brancos;;;255;
+governador;1;3134905;#nulos;;;55;
+governador;1;3134905;#comparecimento;;;2483;
+governador;1;3134905;#abstencao;;;427;
+governador;1;3134905;#eleitorado;;;2910;
+governador;1;3135001;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;175;S
+governador;1;3135001;_TANCREDONEVES;TANCREDO NEVES;PSD;386;
+governador;1;3135001;_RIBEIROPENA;RIBEIRO PENA;PSP;7;
+governador;1;3135001;#brancos;;;21;
+governador;1;3135001;#nulos;;;13;
+governador;1;3135001;#comparecimento;;;602;
+governador;1;3135001;#abstencao;;;98;
+governador;1;3135001;#eleitorado;;;700;
+governador;1;3135100;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1000;S
+governador;1;3135100;_TANCREDONEVES;TANCREDO NEVES;PSD;793;
+governador;1;3135100;_RIBEIROPENA;RIBEIRO PENA;PSP;43;
+governador;1;3135100;#brancos;;;142;
+governador;1;3135100;#nulos;;;95;
+governador;1;3135100;#comparecimento;;;2073;
+governador;1;3135100;#abstencao;;;1061;
+governador;1;3135100;#eleitorado;;;3134;
+governador;1;3135209;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2194;S
+governador;1;3135209;_TANCREDONEVES;TANCREDO NEVES;PSD;2023;
+governador;1;3135209;_RIBEIROPENA;RIBEIRO PENA;PSP;182;
+governador;1;3135209;#brancos;;;443;
+governador;1;3135209;#nulos;;;247;
+governador;1;3135209;#comparecimento;;;5089;
+governador;1;3135209;#abstencao;;;3468;
+governador;1;3135209;#eleitorado;;;8557;
+governador;1;3135407;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;645;S
+governador;1;3135407;_TANCREDONEVES;TANCREDO NEVES;PSD;607;
+governador;1;3135407;_RIBEIROPENA;RIBEIRO PENA;PSP;57;
+governador;1;3135407;#brancos;;;145;
+governador;1;3135407;#nulos;;;74;
+governador;1;3135407;#comparecimento;;;1528;
+governador;1;3135407;#abstencao;;;178;
+governador;1;3135407;#eleitorado;;;1706;
+governador;1;3135506;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;791;S
+governador;1;3135506;_TANCREDONEVES;TANCREDO NEVES;PSD;1448;
+governador;1;3135506;_RIBEIROPENA;RIBEIRO PENA;PSP;105;
+governador;1;3135506;#brancos;;;402;
+governador;1;3135506;#nulos;;;134;
+governador;1;3135506;#comparecimento;;;2880;
+governador;1;3135506;#abstencao;;;961;
+governador;1;3135506;#eleitorado;;;3841;
+governador;1;3135605;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;293;S
+governador;1;3135605;_TANCREDONEVES;TANCREDO NEVES;PSD;489;
+governador;1;3135605;_RIBEIROPENA;RIBEIRO PENA;PSP;38;
+governador;1;3135605;#brancos;;;104;
+governador;1;3135605;#nulos;;;51;
+governador;1;3135605;#comparecimento;;;975;
+governador;1;3135605;#abstencao;;;573;
+governador;1;3135605;#eleitorado;;;1548;
+governador;1;3135704;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;363;S
+governador;1;3135704;_TANCREDONEVES;TANCREDO NEVES;PSD;1015;
+governador;1;3135704;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3135704;#brancos;;;225;
+governador;1;3135704;#nulos;;;108;
+governador;1;3135704;#comparecimento;;;1775;
+governador;1;3135704;#abstencao;;;665;
+governador;1;3135704;#eleitorado;;;2440;
+governador;1;3135803;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;818;S
+governador;1;3135803;_TANCREDONEVES;TANCREDO NEVES;PSD;808;
+governador;1;3135803;_RIBEIROPENA;RIBEIRO PENA;PSP;482;
+governador;1;3135803;#brancos;;;132;
+governador;1;3135803;#nulos;;;98;
+governador;1;3135803;#comparecimento;;;2338;
+governador;1;3135803;#abstencao;;;1195;
+governador;1;3135803;#eleitorado;;;3533;
+governador;1;3135902;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;270;S
+governador;1;3135902;_TANCREDONEVES;TANCREDO NEVES;PSD;386;
+governador;1;3135902;_RIBEIROPENA;RIBEIRO PENA;PSP;43;
+governador;1;3135902;#brancos;;;153;
+governador;1;3135902;#nulos;;;20;
+governador;1;3135902;#comparecimento;;;872;
+governador;1;3135902;#abstencao;;;208;
+governador;1;3135902;#eleitorado;;;1080;
+governador;1;3136009;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;506;S
+governador;1;3136009;_TANCREDONEVES;TANCREDO NEVES;PSD;447;
+governador;1;3136009;_RIBEIROPENA;RIBEIRO PENA;PSP;102;
+governador;1;3136009;#brancos;;;168;
+governador;1;3136009;#nulos;;;41;
+governador;1;3136009;#comparecimento;;;1264;
+governador;1;3136009;#abstencao;;;448;
+governador;1;3136009;#eleitorado;;;1712;
+governador;1;3136108;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;414;S
+governador;1;3136108;_TANCREDONEVES;TANCREDO NEVES;PSD;284;
+governador;1;3136108;_RIBEIROPENA;RIBEIRO PENA;PSP;23;
+governador;1;3136108;#brancos;;;117;
+governador;1;3136108;#nulos;;;51;
+governador;1;3136108;#comparecimento;;;889;
+governador;1;3136108;#abstencao;;;356;
+governador;1;3136108;#eleitorado;;;1245;
+governador;1;3136306;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1270;S
+governador;1;3136306;_TANCREDONEVES;TANCREDO NEVES;PSD;1220;
+governador;1;3136306;_RIBEIROPENA;RIBEIRO PENA;PSP;58;
+governador;1;3136306;#brancos;;;214;
+governador;1;3136306;#nulos;;;120;
+governador;1;3136306;#comparecimento;;;2882;
+governador;1;3136306;#abstencao;;;945;
+governador;1;3136306;#eleitorado;;;3827;
+governador;1;3136504;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;742;S
+governador;1;3136504;_TANCREDONEVES;TANCREDO NEVES;PSD;299;
+governador;1;3136504;_RIBEIROPENA;RIBEIRO PENA;PSP;42;
+governador;1;3136504;#brancos;;;120;
+governador;1;3136504;#nulos;;;65;
+governador;1;3136504;#comparecimento;;;1268;
+governador;1;3136504;#abstencao;;;1533;
+governador;1;3136504;#eleitorado;;;2801;
+governador;1;3136702;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;28879;S
+governador;1;3136702;_TANCREDONEVES;TANCREDO NEVES;PSD;19574;
+governador;1;3136702;_RIBEIROPENA;RIBEIRO PENA;PSP;1636;
+governador;1;3136702;#brancos;;;3122;
+governador;1;3136702;#nulos;;;1311;
+governador;1;3136702;#comparecimento;;;54522;
+governador;1;3136702;#abstencao;;;4927;
+governador;1;3136702;#eleitorado;;;59449;
+governador;1;3136801;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;236;S
+governador;1;3136801;_TANCREDONEVES;TANCREDO NEVES;PSD;511;
+governador;1;3136801;_RIBEIROPENA;RIBEIRO PENA;PSP;50;
+governador;1;3136801;#brancos;;;126;
+governador;1;3136801;#nulos;;;59;
+governador;1;3136801;#comparecimento;;;982;
+governador;1;3136801;#abstencao;;;575;
+governador;1;3136801;#eleitorado;;;1557;
+governador;1;3136900;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;432;S
+governador;1;3136900;_TANCREDONEVES;TANCREDO NEVES;PSD;355;
+governador;1;3136900;_RIBEIROPENA;RIBEIRO PENA;PSP;6;
+governador;1;3136900;#brancos;;;103;
+governador;1;3136900;#nulos;;;29;
+governador;1;3136900;#comparecimento;;;925;
+governador;1;3136900;#abstencao;;;149;
+governador;1;3136900;#eleitorado;;;1074;
+governador;1;3137007;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;268;S
+governador;1;3137007;_TANCREDONEVES;TANCREDO NEVES;PSD;781;
+governador;1;3137007;_RIBEIROPENA;RIBEIRO PENA;PSP;137;
+governador;1;3137007;#brancos;;;244;
+governador;1;3137007;#nulos;;;67;
+governador;1;3137007;#comparecimento;;;1497;
+governador;1;3137007;#abstencao;;;500;
+governador;1;3137007;#eleitorado;;;1997;
+governador;1;3137205;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1386;S
+governador;1;3137205;_TANCREDONEVES;TANCREDO NEVES;PSD;562;
+governador;1;3137205;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3137205;#brancos;;;243;
+governador;1;3137205;#nulos;;;123;
+governador;1;3137205;#comparecimento;;;2382;
+governador;1;3137205;#abstencao;;;766;
+governador;1;3137205;#eleitorado;;;3148;
+governador;1;3137403;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;914;S
+governador;1;3137403;_TANCREDONEVES;TANCREDO NEVES;PSD;1029;
+governador;1;3137403;_RIBEIROPENA;RIBEIRO PENA;PSP;35;
+governador;1;3137403;#brancos;;;115;
+governador;1;3137403;#nulos;;;41;
+governador;1;3137403;#comparecimento;;;2134;
+governador;1;3137403;#abstencao;;;328;
+governador;1;3137403;#eleitorado;;;2462;
+governador;1;3137601;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1527;S
+governador;1;3137601;_TANCREDONEVES;TANCREDO NEVES;PSD;785;
+governador;1;3137601;_RIBEIROPENA;RIBEIRO PENA;PSP;84;
+governador;1;3137601;#brancos;;;342;
+governador;1;3137601;#nulos;;;184;
+governador;1;3137601;#comparecimento;;;2922;
+governador;1;3137601;#abstencao;;;887;
+governador;1;3137601;#eleitorado;;;3809;
+governador;1;3137700;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2847;S
+governador;1;3137700;_TANCREDONEVES;TANCREDO NEVES;PSD;1744;
+governador;1;3137700;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3137700;#brancos;;;397;
+governador;1;3137700;#nulos;;;235;
+governador;1;3137700;#comparecimento;;;5291;
+governador;1;3137700;#abstencao;;;1267;
+governador;1;3137700;#eleitorado;;;6558;
+governador;1;3137809;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1386;S
+governador;1;3137809;_TANCREDONEVES;TANCREDO NEVES;PSD;1130;
+governador;1;3137809;_RIBEIROPENA;RIBEIRO PENA;PSP;111;
+governador;1;3137809;#brancos;;;319;
+governador;1;3137809;#nulos;;;75;
+governador;1;3137809;#comparecimento;;;3021;
+governador;1;3137809;#abstencao;;;528;
+governador;1;3137809;#eleitorado;;;3549;
+governador;1;3138005;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;604;S
+governador;1;3138005;_TANCREDONEVES;TANCREDO NEVES;PSD;582;
+governador;1;3138005;_RIBEIROPENA;RIBEIRO PENA;PSP;21;
+governador;1;3138005;#brancos;;;102;
+governador;1;3138005;#nulos;;;39;
+governador;1;3138005;#comparecimento;;;1348;
+governador;1;3138005;#abstencao;;;232;
+governador;1;3138005;#eleitorado;;;1580;
+governador;1;3138104;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;300;S
+governador;1;3138104;_TANCREDONEVES;TANCREDO NEVES;PSD;234;
+governador;1;3138104;_RIBEIROPENA;RIBEIRO PENA;PSP;13;
+governador;1;3138104;#brancos;;;79;
+governador;1;3138104;#nulos;;;25;
+governador;1;3138104;#comparecimento;;;651;
+governador;1;3138104;#abstencao;;;141;
+governador;1;3138104;#eleitorado;;;792;
+governador;1;3138203;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4354;S
+governador;1;3138203;_TANCREDONEVES;TANCREDO NEVES;PSD;3110;
+governador;1;3138203;_RIBEIROPENA;RIBEIRO PENA;PSP;214;
+governador;1;3138203;#brancos;;;759;
+governador;1;3138203;#nulos;;;299;
+governador;1;3138203;#comparecimento;;;8736;
+governador;1;3138203;#abstencao;;;1217;
+governador;1;3138203;#eleitorado;;;9953;
+governador;1;3138401;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4747;S
+governador;1;3138401;_TANCREDONEVES;TANCREDO NEVES;PSD;3335;
+governador;1;3138401;_RIBEIROPENA;RIBEIRO PENA;PSP;197;
+governador;1;3138401;#brancos;;;1047;
+governador;1;3138401;#nulos;;;147;
+governador;1;3138401;#comparecimento;;;9473;
+governador;1;3138401;#abstencao;;;1093;
+governador;1;3138401;#eleitorado;;;10566;
+governador;1;3138500;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;282;S
+governador;1;3138500;_TANCREDONEVES;TANCREDO NEVES;PSD;409;
+governador;1;3138500;_RIBEIROPENA;RIBEIRO PENA;PSP;17;
+governador;1;3138500;#brancos;;;105;
+governador;1;3138500;#nulos;;;36;
+governador;1;3138500;#comparecimento;;;849;
+governador;1;3138500;#abstencao;;;166;
+governador;1;3138500;#eleitorado;;;1015;
+governador;1;3138609;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2197;S
+governador;1;3138609;_TANCREDONEVES;TANCREDO NEVES;PSD;1879;
+governador;1;3138609;_RIBEIROPENA;RIBEIRO PENA;PSP;82;
+governador;1;3138609;#brancos;;;360;
+governador;1;3138609;#nulos;;;180;
+governador;1;3138609;#comparecimento;;;4698;
+governador;1;3138609;#abstencao;;;635;
+governador;1;3138609;#eleitorado;;;5333;
+governador;1;3138708;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;485;S
+governador;1;3138708;_TANCREDONEVES;TANCREDO NEVES;PSD;198;
+governador;1;3138708;_RIBEIROPENA;RIBEIRO PENA;PSP;8;
+governador;1;3138708;#brancos;;;88;
+governador;1;3138708;#nulos;;;17;
+governador;1;3138708;#comparecimento;;;796;
+governador;1;3138708;#abstencao;;;176;
+governador;1;3138708;#eleitorado;;;972;
+governador;1;3138807;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1652;S
+governador;1;3138807;_TANCREDONEVES;TANCREDO NEVES;PSD;543;
+governador;1;3138807;_RIBEIROPENA;RIBEIRO PENA;PSP;76;
+governador;1;3138807;#brancos;;;227;
+governador;1;3138807;#nulos;;;108;
+governador;1;3138807;#comparecimento;;;2606;
+governador;1;3138807;#abstencao;;;608;
+governador;1;3138807;#eleitorado;;;3214;
+governador;1;3138906;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;611;S
+governador;1;3138906;_TANCREDONEVES;TANCREDO NEVES;PSD;750;
+governador;1;3138906;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3138906;#brancos;;;76;
+governador;1;3138906;#nulos;;;65;
+governador;1;3138906;#comparecimento;;;1526;
+governador;1;3138906;#abstencao;;;1695;
+governador;1;3138906;#eleitorado;;;3221;
+governador;1;3139003;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1498;S
+governador;1;3139003;_TANCREDONEVES;TANCREDO NEVES;PSD;782;
+governador;1;3139003;_RIBEIROPENA;RIBEIRO PENA;PSP;163;
+governador;1;3139003;#brancos;;;364;
+governador;1;3139003;#nulos;;;140;
+governador;1;3139003;#comparecimento;;;2947;
+governador;1;3139003;#abstencao;;;681;
+governador;1;3139003;#eleitorado;;;3628;
+governador;1;3139102;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;254;S
+governador;1;3139102;_TANCREDONEVES;TANCREDO NEVES;PSD;375;
+governador;1;3139102;_RIBEIROPENA;RIBEIRO PENA;PSP;20;
+governador;1;3139102;#brancos;;;42;
+governador;1;3139102;#nulos;;;28;
+governador;1;3139102;#comparecimento;;;719;
+governador;1;3139102;#abstencao;;;133;
+governador;1;3139102;#eleitorado;;;852;
+governador;1;3139201;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;524;S
+governador;1;3139201;_TANCREDONEVES;TANCREDO NEVES;PSD;972;
+governador;1;3139201;_RIBEIROPENA;RIBEIRO PENA;PSP;57;
+governador;1;3139201;#brancos;;;232;
+governador;1;3139201;#nulos;;;85;
+governador;1;3139201;#comparecimento;;;1870;
+governador;1;3139201;#abstencao;;;979;
+governador;1;3139201;#eleitorado;;;2849;
+governador;1;3139300;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;836;S
+governador;1;3139300;_TANCREDONEVES;TANCREDO NEVES;PSD;1431;
+governador;1;3139300;_RIBEIROPENA;RIBEIRO PENA;PSP;70;
+governador;1;3139300;#brancos;;;191;
+governador;1;3139300;#nulos;;;148;
+governador;1;3139300;#comparecimento;;;2676;
+governador;1;3139300;#abstencao;;;1097;
+governador;1;3139300;#eleitorado;;;3773;
+governador;1;3139409;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3321;S
+governador;1;3139409;_TANCREDONEVES;TANCREDO NEVES;PSD;2845;
+governador;1;3139409;_RIBEIROPENA;RIBEIRO PENA;PSP;451;
+governador;1;3139409;#brancos;;;900;
+governador;1;3139409;#nulos;;;234;
+governador;1;3139409;#comparecimento;;;7751;
+governador;1;3139409;#abstencao;;;2582;
+governador;1;3139409;#eleitorado;;;10333;
+governador;1;3139508;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2992;S
+governador;1;3139508;_TANCREDONEVES;TANCREDO NEVES;PSD;2566;
+governador;1;3139508;_RIBEIROPENA;RIBEIRO PENA;PSP;101;
+governador;1;3139508;#brancos;;;547;
+governador;1;3139508;#nulos;;;251;
+governador;1;3139508;#comparecimento;;;6457;
+governador;1;3139508;#abstencao;;;1683;
+governador;1;3139508;#eleitorado;;;8140;
+governador;1;3139607;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3629;S
+governador;1;3139607;_TANCREDONEVES;TANCREDO NEVES;PSD;2033;
+governador;1;3139607;_RIBEIROPENA;RIBEIRO PENA;PSP;153;
+governador;1;3139607;#brancos;;;517;
+governador;1;3139607;#nulos;;;319;
+governador;1;3139607;#comparecimento;;;6651;
+governador;1;3139607;#abstencao;;;2512;
+governador;1;3139607;#eleitorado;;;9163;
+governador;1;3139805;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1393;S
+governador;1;3139805;_TANCREDONEVES;TANCREDO NEVES;PSD;1261;
+governador;1;3139805;_RIBEIROPENA;RIBEIRO PENA;PSP;87;
+governador;1;3139805;#brancos;;;264;
+governador;1;3139805;#nulos;;;123;
+governador;1;3139805;#comparecimento;;;3128;
+governador;1;3139805;#abstencao;;;374;
+governador;1;3139805;#eleitorado;;;3502;
+governador;1;3139706;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;321;S
+governador;1;3139706;_TANCREDONEVES;TANCREDO NEVES;PSD;211;
+governador;1;3139706;_RIBEIROPENA;RIBEIRO PENA;PSP;38;
+governador;1;3139706;#brancos;;;106;
+governador;1;3139706;#nulos;;;38;
+governador;1;3139706;#comparecimento;;;714;
+governador;1;3139706;#abstencao;;;196;
+governador;1;3139706;#eleitorado;;;910;
+governador;1;3139904;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;804;S
+governador;1;3139904;_TANCREDONEVES;TANCREDO NEVES;PSD;620;
+governador;1;3139904;_RIBEIROPENA;RIBEIRO PENA;PSP;45;
+governador;1;3139904;#brancos;;;151;
+governador;1;3139904;#nulos;;;40;
+governador;1;3139904;#comparecimento;;;1660;
+governador;1;3139904;#abstencao;;;182;
+governador;1;3139904;#eleitorado;;;1842;
+governador;1;3140001;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2979;S
+governador;1;3140001;_TANCREDONEVES;TANCREDO NEVES;PSD;3268;
+governador;1;3140001;_RIBEIROPENA;RIBEIRO PENA;PSP;183;
+governador;1;3140001;#brancos;;;707;
+governador;1;3140001;#nulos;;;325;
+governador;1;3140001;#comparecimento;;;7462;
+governador;1;3140001;#abstencao;;;2426;
+governador;1;3140001;#eleitorado;;;9888;
+governador;1;3140308;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;359;S
+governador;1;3140308;_TANCREDONEVES;TANCREDO NEVES;PSD;390;
+governador;1;3140308;_RIBEIROPENA;RIBEIRO PENA;PSP;4;
+governador;1;3140308;#brancos;;;67;
+governador;1;3140308;#nulos;;;24;
+governador;1;3140308;#comparecimento;;;844;
+governador;1;3140308;#abstencao;;;168;
+governador;1;3140308;#eleitorado;;;1012;
+governador;1;3140506;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;785;S
+governador;1;3140506;_TANCREDONEVES;TANCREDO NEVES;PSD;450;
+governador;1;3140506;_RIBEIROPENA;RIBEIRO PENA;PSP;45;
+governador;1;3140506;#brancos;;;340;
+governador;1;3140506;#nulos;;;102;
+governador;1;3140506;#comparecimento;;;1722;
+governador;1;3140506;#abstencao;;;608;
+governador;1;3140506;#eleitorado;;;2330;
+governador;1;3140704;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1456;S
+governador;1;3140704;_TANCREDONEVES;TANCREDO NEVES;PSD;643;
+governador;1;3140704;_RIBEIROPENA;RIBEIRO PENA;PSP;140;
+governador;1;3140704;#brancos;;;604;
+governador;1;3140704;#nulos;;;305;
+governador;1;3140704;#comparecimento;;;3148;
+governador;1;3140704;#abstencao;;;679;
+governador;1;3140704;#eleitorado;;;3827;
+governador;1;3140803;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;942;S
+governador;1;3140803;_TANCREDONEVES;TANCREDO NEVES;PSD;733;
+governador;1;3140803;_RIBEIROPENA;RIBEIRO PENA;PSP;57;
+governador;1;3140803;#brancos;;;228;
+governador;1;3140803;#nulos;;;73;
+governador;1;3140803;#comparecimento;;;2033;
+governador;1;3140803;#abstencao;;;215;
+governador;1;3140803;#eleitorado;;;2248;
+governador;1;3140902;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1940;S
+governador;1;3140902;_TANCREDONEVES;TANCREDO NEVES;PSD;1256;
+governador;1;3140902;_RIBEIROPENA;RIBEIRO PENA;PSP;48;
+governador;1;3140902;#brancos;;;252;
+governador;1;3140902;#nulos;;;118;
+governador;1;3140902;#comparecimento;;;3614;
+governador;1;3140902;#abstencao;;;908;
+governador;1;3140902;#eleitorado;;;4522;
+governador;1;3141009;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;410;S
+governador;1;3141009;_TANCREDONEVES;TANCREDO NEVES;PSD;454;
+governador;1;3141009;_RIBEIROPENA;RIBEIRO PENA;PSP;6;
+governador;1;3141009;#brancos;;;15;
+governador;1;3141009;#nulos;;;59;
+governador;1;3141009;#comparecimento;;;944;
+governador;1;3141009;#abstencao;;;160;
+governador;1;3141009;#eleitorado;;;1104;
+governador;1;3141108;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;962;S
+governador;1;3141108;_TANCREDONEVES;TANCREDO NEVES;PSD;824;
+governador;1;3141108;_RIBEIROPENA;RIBEIRO PENA;PSP;117;
+governador;1;3141108;#brancos;;;324;
+governador;1;3141108;#nulos;;;169;
+governador;1;3141108;#comparecimento;;;2396;
+governador;1;3141108;#abstencao;;;659;
+governador;1;3141108;#eleitorado;;;3055;
+governador;1;3141207;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;243;S
+governador;1;3141207;_TANCREDONEVES;TANCREDO NEVES;PSD;726;
+governador;1;3141207;_RIBEIROPENA;RIBEIRO PENA;PSP;26;
+governador;1;3141207;#brancos;;;62;
+governador;1;3141207;#nulos;;;47;
+governador;1;3141207;#comparecimento;;;1104;
+governador;1;3141207;#abstencao;;;106;
+governador;1;3141207;#eleitorado;;;1210;
+governador;1;3141405;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;774;S
+governador;1;3141405;_TANCREDONEVES;TANCREDO NEVES;PSD;1283;
+governador;1;3141405;_RIBEIROPENA;RIBEIRO PENA;PSP;75;
+governador;1;3141405;#brancos;;;235;
+governador;1;3141405;#nulos;;;108;
+governador;1;3141405;#comparecimento;;;2475;
+governador;1;3141405;#abstencao;;;1657;
+governador;1;3141405;#eleitorado;;;4132;
+governador;1;3141504;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1737;S
+governador;1;3141504;_TANCREDONEVES;TANCREDO NEVES;PSD;1069;
+governador;1;3141504;_RIBEIROPENA;RIBEIRO PENA;PSP;52;
+governador;1;3141504;#brancos;;;203;
+governador;1;3141504;#nulos;;;152;
+governador;1;3141504;#comparecimento;;;3213;
+governador;1;3141504;#abstencao;;;1027;
+governador;1;3141504;#eleitorado;;;4240;
+governador;1;3141603;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;759;S
+governador;1;3141603;_TANCREDONEVES;TANCREDO NEVES;PSD;1213;
+governador;1;3141603;_RIBEIROPENA;RIBEIRO PENA;PSP;101;
+governador;1;3141603;#brancos;;;240;
+governador;1;3141603;#nulos;;;157;
+governador;1;3141603;#comparecimento;;;2470;
+governador;1;3141603;#abstencao;;;962;
+governador;1;3141603;#eleitorado;;;3432;
+governador;1;3141702;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;732;S
+governador;1;3141702;_TANCREDONEVES;TANCREDO NEVES;PSD;997;
+governador;1;3141702;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3141702;#brancos;;;267;
+governador;1;3141702;#nulos;;;106;
+governador;1;3141702;#comparecimento;;;2170;
+governador;1;3141702;#abstencao;;;580;
+governador;1;3141702;#eleitorado;;;2750;
+governador;1;3141801;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;824;S
+governador;1;3141801;_TANCREDONEVES;TANCREDO NEVES;PSD;2212;
+governador;1;3141801;_RIBEIROPENA;RIBEIRO PENA;PSP;93;
+governador;1;3141801;#brancos;;;260;
+governador;1;3141801;#nulos;;;146;
+governador;1;3141801;#comparecimento;;;3535;
+governador;1;3141801;#abstencao;;;1639;
+governador;1;3141801;#eleitorado;;;5174;
+governador;1;3141900;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;404;S
+governador;1;3141900;_TANCREDONEVES;TANCREDO NEVES;PSD;179;
+governador;1;3141900;_RIBEIROPENA;RIBEIRO PENA;PSP;19;
+governador;1;3141900;#brancos;;;64;
+governador;1;3141900;#nulos;;;35;
+governador;1;3141900;#comparecimento;;;701;
+governador;1;3141900;#abstencao;;;96;
+governador;1;3141900;#eleitorado;;;797;
+governador;1;3142106;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1248;S
+governador;1;3142106;_TANCREDONEVES;TANCREDO NEVES;PSD;1343;
+governador;1;3142106;_RIBEIROPENA;RIBEIRO PENA;PSP;41;
+governador;1;3142106;#brancos;;;178;
+governador;1;3142106;#nulos;;;54;
+governador;1;3142106;#comparecimento;;;2864;
+governador;1;3142106;#abstencao;;;567;
+governador;1;3142106;#eleitorado;;;3431;
+governador;1;3142205;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1458;S
+governador;1;3142205;_TANCREDONEVES;TANCREDO NEVES;PSD;699;
+governador;1;3142205;_RIBEIROPENA;RIBEIRO PENA;PSP;61;
+governador;1;3142205;#brancos;;;235;
+governador;1;3142205;#nulos;;;123;
+governador;1;3142205;#comparecimento;;;2576;
+governador;1;3142205;#abstencao;;;632;
+governador;1;3142205;#eleitorado;;;3208;
+governador;1;3142304;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;577;S
+governador;1;3142304;_TANCREDONEVES;TANCREDO NEVES;PSD;418;
+governador;1;3142304;_RIBEIROPENA;RIBEIRO PENA;PSP;51;
+governador;1;3142304;#brancos;;;127;
+governador;1;3142304;#nulos;;;87;
+governador;1;3142304;#comparecimento;;;1260;
+governador;1;3142304;#abstencao;;;312;
+governador;1;3142304;#eleitorado;;;1572;
+governador;1;3142403;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;495;S
+governador;1;3142403;_TANCREDONEVES;TANCREDO NEVES;PSD;374;
+governador;1;3142403;_RIBEIROPENA;RIBEIRO PENA;PSP;19;
+governador;1;3142403;#brancos;;;60;
+governador;1;3142403;#nulos;;;27;
+governador;1;3142403;#comparecimento;;;975;
+governador;1;3142403;#abstencao;;;246;
+governador;1;3142403;#eleitorado;;;1221;
+governador;1;3142601;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;462;S
+governador;1;3142601;_TANCREDONEVES;TANCREDO NEVES;PSD;335;
+governador;1;3142601;_RIBEIROPENA;RIBEIRO PENA;PSP;26;
+governador;1;3142601;#brancos;;;157;
+governador;1;3142601;#nulos;;;39;
+governador;1;3142601;#comparecimento;;;1019;
+governador;1;3142601;#abstencao;;;336;
+governador;1;3142601;#eleitorado;;;1355;
+governador;1;3142809;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;685;S
+governador;1;3142809;_TANCREDONEVES;TANCREDO NEVES;PSD;1096;
+governador;1;3142809;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3142809;#brancos;;;258;
+governador;1;3142809;#nulos;;;87;
+governador;1;3142809;#comparecimento;;;2166;
+governador;1;3142809;#abstencao;;;397;
+governador;1;3142809;#eleitorado;;;2563;
+governador;1;3142908;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;226;S
+governador;1;3142908;_TANCREDONEVES;TANCREDO NEVES;PSD;942;
+governador;1;3142908;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3142908;#brancos;;;70;
+governador;1;3142908;#nulos;;;28;
+governador;1;3142908;#comparecimento;;;1306;
+governador;1;3142908;#abstencao;;;201;
+governador;1;3142908;#eleitorado;;;1507;
+governador;1;3143005;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1067;S
+governador;1;3143005;_TANCREDONEVES;TANCREDO NEVES;PSD;519;
+governador;1;3143005;_RIBEIROPENA;RIBEIRO PENA;PSP;29;
+governador;1;3143005;#brancos;;;206;
+governador;1;3143005;#nulos;;;51;
+governador;1;3143005;#comparecimento;;;1872;
+governador;1;3143005;#abstencao;;;434;
+governador;1;3143005;#eleitorado;;;2306;
+governador;1;3143104;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2749;S
+governador;1;3143104;_TANCREDONEVES;TANCREDO NEVES;PSD;1720;
+governador;1;3143104;_RIBEIROPENA;RIBEIRO PENA;PSP;141;
+governador;1;3143104;#brancos;;;719;
+governador;1;3143104;#nulos;;;298;
+governador;1;3143104;#comparecimento;;;5627;
+governador;1;3143104;#abstencao;;;1747;
+governador;1;3143104;#eleitorado;;;7374;
+governador;1;3143203;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1459;S
+governador;1;3143203;_TANCREDONEVES;TANCREDO NEVES;PSD;1085;
+governador;1;3143203;_RIBEIROPENA;RIBEIRO PENA;PSP;55;
+governador;1;3143203;#brancos;;;432;
+governador;1;3143203;#nulos;;;87;
+governador;1;3143203;#comparecimento;;;3118;
+governador;1;3143203;#abstencao;;;442;
+governador;1;3143203;#eleitorado;;;3560;
+governador;1;3143401;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;704;S
+governador;1;3143401;_TANCREDONEVES;TANCREDO NEVES;PSD;687;
+governador;1;3143401;_RIBEIROPENA;RIBEIRO PENA;PSP;23;
+governador;1;3143401;#brancos;;;128;
+governador;1;3143401;#nulos;;;27;
+governador;1;3143401;#comparecimento;;;1569;
+governador;1;3143401;#abstencao;;;216;
+governador;1;3143401;#eleitorado;;;1785;
+governador;1;3143302;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;5074;S
+governador;1;3143302;_TANCREDONEVES;TANCREDO NEVES;PSD;3909;
+governador;1;3143302;_RIBEIROPENA;RIBEIRO PENA;PSP;562;
+governador;1;3143302;#brancos;;;991;
+governador;1;3143302;#nulos;;;633;
+governador;1;3143302;#comparecimento;;;11169;
+governador;1;3143302;#abstencao;;;5127;
+governador;1;3143302;#eleitorado;;;16296;
+governador;1;3143500;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;806;S
+governador;1;3143500;_TANCREDONEVES;TANCREDO NEVES;PSD;1150;
+governador;1;3143500;_RIBEIROPENA;RIBEIRO PENA;PSP;91;
+governador;1;3143500;#brancos;;;225;
+governador;1;3143500;#nulos;;;92;
+governador;1;3143500;#comparecimento;;;2364;
+governador;1;3143500;#abstencao;;;722;
+governador;1;3143500;#eleitorado;;;3086;
+governador;1;3143708;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;430;S
+governador;1;3143708;_TANCREDONEVES;TANCREDO NEVES;PSD;391;
+governador;1;3143708;_RIBEIROPENA;RIBEIRO PENA;PSP;25;
+governador;1;3143708;#brancos;;;86;
+governador;1;3143708;#nulos;;;52;
+governador;1;3143708;#comparecimento;;;984;
+governador;1;3143708;#abstencao;;;284;
+governador;1;3143708;#eleitorado;;;1268;
+governador;1;3143807;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;186;S
+governador;1;3143807;_TANCREDONEVES;TANCREDO NEVES;PSD;329;
+governador;1;3143807;_RIBEIROPENA;RIBEIRO PENA;PSP;14;
+governador;1;3143807;#brancos;;;109;
+governador;1;3143807;#nulos;;;27;
+governador;1;3143807;#comparecimento;;;665;
+governador;1;3143807;#abstencao;;;171;
+governador;1;3143807;#eleitorado;;;836;
+governador;1;3143906;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;5525;S
+governador;1;3143906;_TANCREDONEVES;TANCREDO NEVES;PSD;4875;
+governador;1;3143906;_RIBEIROPENA;RIBEIRO PENA;PSP;171;
+governador;1;3143906;#brancos;;;625;
+governador;1;3143906;#nulos;;;323;
+governador;1;3143906;#comparecimento;;;11519;
+governador;1;3143906;#abstencao;;;2163;
+governador;1;3143906;#eleitorado;;;13682;
+governador;1;3144003;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2827;S
+governador;1;3144003;_TANCREDONEVES;TANCREDO NEVES;PSD;3063;
+governador;1;3144003;_RIBEIROPENA;RIBEIRO PENA;PSP;109;
+governador;1;3144003;#brancos;;;209;
+governador;1;3144003;#nulos;;;190;
+governador;1;3144003;#comparecimento;;;6398;
+governador;1;3144003;#abstencao;;;1219;
+governador;1;3144003;#eleitorado;;;7617;
+governador;1;3144102;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2165;S
+governador;1;3144102;_TANCREDONEVES;TANCREDO NEVES;PSD;1351;
+governador;1;3144102;_RIBEIROPENA;RIBEIRO PENA;PSP;41;
+governador;1;3144102;#brancos;;;189;
+governador;1;3144102;#nulos;;;86;
+governador;1;3144102;#comparecimento;;;3832;
+governador;1;3144102;#abstencao;;;481;
+governador;1;3144102;#eleitorado;;;4313;
+governador;1;3144300;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2365;S
+governador;1;3144300;_TANCREDONEVES;TANCREDO NEVES;PSD;2043;
+governador;1;3144300;_RIBEIROPENA;RIBEIRO PENA;PSP;174;
+governador;1;3144300;#brancos;;;898;
+governador;1;3144300;#nulos;;;314;
+governador;1;3144300;#comparecimento;;;5794;
+governador;1;3144300;#abstencao;;;2716;
+governador;1;3144300;#eleitorado;;;8510;
+governador;1;3144409;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;724;S
+governador;1;3144409;_TANCREDONEVES;TANCREDO NEVES;PSD;603;
+governador;1;3144409;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3144409;#brancos;;;90;
+governador;1;3144409;#nulos;;;48;
+governador;1;3144409;#comparecimento;;;1489;
+governador;1;3144409;#abstencao;;;180;
+governador;1;3144409;#eleitorado;;;1669;
+governador;1;3144508;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;257;S
+governador;1;3144508;_TANCREDONEVES;TANCREDO NEVES;PSD;485;
+governador;1;3144508;_RIBEIROPENA;RIBEIRO PENA;PSP;22;
+governador;1;3144508;#brancos;;;47;
+governador;1;3144508;#nulos;;;33;
+governador;1;3144508;#comparecimento;;;844;
+governador;1;3144508;#abstencao;;;276;
+governador;1;3144508;#eleitorado;;;1120;
+governador;1;3144607;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2119;S
+governador;1;3144607;_TANCREDONEVES;TANCREDO NEVES;PSD;854;
+governador;1;3144607;_RIBEIROPENA;RIBEIRO PENA;PSP;54;
+governador;1;3144607;#brancos;;;297;
+governador;1;3144607;#nulos;;;176;
+governador;1;3144607;#comparecimento;;;3500;
+governador;1;3144607;#abstencao;;;618;
+governador;1;3144607;#eleitorado;;;4118;
+governador;1;3144706;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1312;S
+governador;1;3144706;_TANCREDONEVES;TANCREDO NEVES;PSD;1676;
+governador;1;3144706;_RIBEIROPENA;RIBEIRO PENA;PSP;106;
+governador;1;3144706;#brancos;;;359;
+governador;1;3144706;#nulos;;;167;
+governador;1;3144706;#comparecimento;;;3620;
+governador;1;3144706;#abstencao;;;597;
+governador;1;3144706;#eleitorado;;;4217;
+governador;1;3144805;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2644;S
+governador;1;3144805;_TANCREDONEVES;TANCREDO NEVES;PSD;2678;
+governador;1;3144805;_RIBEIROPENA;RIBEIRO PENA;PSP;166;
+governador;1;3144805;#brancos;;;473;
+governador;1;3144805;#nulos;;;374;
+governador;1;3144805;#comparecimento;;;6335;
+governador;1;3144805;#abstencao;;;552;
+governador;1;3144805;#eleitorado;;;6887;
+governador;1;3145000;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;538;S
+governador;1;3145000;_TANCREDONEVES;TANCREDO NEVES;PSD;534;
+governador;1;3145000;_RIBEIROPENA;RIBEIRO PENA;PSP;26;
+governador;1;3145000;#brancos;;;121;
+governador;1;3145000;#nulos;;;75;
+governador;1;3145000;#comparecimento;;;1294;
+governador;1;3145000;#abstencao;;;414;
+governador;1;3145000;#eleitorado;;;1708;
+governador;1;3145109;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;742;S
+governador;1;3145109;_TANCREDONEVES;TANCREDO NEVES;PSD;692;
+governador;1;3145109;_RIBEIROPENA;RIBEIRO PENA;PSP;46;
+governador;1;3145109;#brancos;;;249;
+governador;1;3145109;#nulos;;;80;
+governador;1;3145109;#comparecimento;;;1809;
+governador;1;3145109;#abstencao;;;209;
+governador;1;3145109;#eleitorado;;;2018;
+governador;1;3145208;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;407;S
+governador;1;3145208;_TANCREDONEVES;TANCREDO NEVES;PSD;431;
+governador;1;3145208;_RIBEIROPENA;RIBEIRO PENA;PSP;27;
+governador;1;3145208;#brancos;;;111;
+governador;1;3145208;#nulos;;;60;
+governador;1;3145208;#comparecimento;;;1036;
+governador;1;3145208;#abstencao;;;375;
+governador;1;3145208;#eleitorado;;;1411;
+governador;1;3145307;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;941;S
+governador;1;3145307;_TANCREDONEVES;TANCREDO NEVES;PSD;1959;
+governador;1;3145307;_RIBEIROPENA;RIBEIRO PENA;PSP;182;
+governador;1;3145307;#brancos;;;310;
+governador;1;3145307;#nulos;;;150;
+governador;1;3145307;#comparecimento;;;3542;
+governador;1;3145307;#abstencao;;;2086;
+governador;1;3145307;#eleitorado;;;5628;
+governador;1;3145604;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2981;S
+governador;1;3145604;_TANCREDONEVES;TANCREDO NEVES;PSD;2769;
+governador;1;3145604;_RIBEIROPENA;RIBEIRO PENA;PSP;247;
+governador;1;3145604;#brancos;;;396;
+governador;1;3145604;#nulos;;;260;
+governador;1;3145604;#comparecimento;;;6653;
+governador;1;3145604;#abstencao;;;1507;
+governador;1;3145604;#eleitorado;;;8160;
+governador;1;3145703;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;199;S
+governador;1;3145703;_TANCREDONEVES;TANCREDO NEVES;PSD;417;
+governador;1;3145703;_RIBEIROPENA;RIBEIRO PENA;PSP;15;
+governador;1;3145703;#brancos;;;50;
+governador;1;3145703;#nulos;;;19;
+governador;1;3145703;#comparecimento;;;700;
+governador;1;3145703;#abstencao;;;234;
+governador;1;3145703;#eleitorado;;;934;
+governador;1;3145901;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;265;S
+governador;1;3145901;_TANCREDONEVES;TANCREDO NEVES;PSD;390;
+governador;1;3145901;_RIBEIROPENA;RIBEIRO PENA;PSP;64;
+governador;1;3145901;#brancos;;;90;
+governador;1;3145901;#nulos;;;59;
+governador;1;3145901;#comparecimento;;;868;
+governador;1;3145901;#abstencao;;;175;
+governador;1;3145901;#eleitorado;;;1043;
+governador;1;3146008;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2532;S
+governador;1;3146008;_TANCREDONEVES;TANCREDO NEVES;PSD;2129;
+governador;1;3146008;_RIBEIROPENA;RIBEIRO PENA;PSP;43;
+governador;1;3146008;#brancos;;;337;
+governador;1;3146008;#nulos;;;127;
+governador;1;3146008;#comparecimento;;;5168;
+governador;1;3146008;#abstencao;;;1027;
+governador;1;3146008;#eleitorado;;;6195;
+governador;1;3146107;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2922;S
+governador;1;3146107;_TANCREDONEVES;TANCREDO NEVES;PSD;3433;
+governador;1;3146107;_RIBEIROPENA;RIBEIRO PENA;PSP;330;
+governador;1;3146107;#brancos;;;883;
+governador;1;3146107;#nulos;;;448;
+governador;1;3146107;#comparecimento;;;8016;
+governador;1;3146107;#abstencao;;;1807;
+governador;1;3146107;#eleitorado;;;9823;
+governador;1;3146503;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;772;S
+governador;1;3146503;_TANCREDONEVES;TANCREDO NEVES;PSD;530;
+governador;1;3146503;_RIBEIROPENA;RIBEIRO PENA;PSP;148;
+governador;1;3146503;#brancos;;;154;
+governador;1;3146503;#nulos;;;121;
+governador;1;3146503;#comparecimento;;;1725;
+governador;1;3146503;#abstencao;;;359;
+governador;1;3146503;#eleitorado;;;2084;
+governador;1;3146602;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;232;S
+governador;1;3146602;_TANCREDONEVES;TANCREDO NEVES;PSD;169;
+governador;1;3146602;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3146602;#brancos;;;50;
+governador;1;3146602;#nulos;;;16;
+governador;1;3146602;#comparecimento;;;491;
+governador;1;3146602;#abstencao;;;119;
+governador;1;3146602;#eleitorado;;;610;
+governador;1;3146701;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2040;S
+governador;1;3146701;_TANCREDONEVES;TANCREDO NEVES;PSD;1877;
+governador;1;3146701;_RIBEIROPENA;RIBEIRO PENA;PSP;104;
+governador;1;3146701;#brancos;;;286;
+governador;1;3146701;#nulos;;;128;
+governador;1;3146701;#comparecimento;;;4435;
+governador;1;3146701;#abstencao;;;793;
+governador;1;3146701;#eleitorado;;;5228;
+governador;1;3146909;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;618;S
+governador;1;3146909;_TANCREDONEVES;TANCREDO NEVES;PSD;567;
+governador;1;3146909;_RIBEIROPENA;RIBEIRO PENA;PSP;49;
+governador;1;3146909;#brancos;;;134;
+governador;1;3146909;#nulos;;;61;
+governador;1;3146909;#comparecimento;;;1429;
+governador;1;3146909;#abstencao;;;389;
+governador;1;3146909;#eleitorado;;;1818;
+governador;1;3147105;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4408;S
+governador;1;3147105;_TANCREDONEVES;TANCREDO NEVES;PSD;2113;
+governador;1;3147105;_RIBEIROPENA;RIBEIRO PENA;PSP;209;
+governador;1;3147105;#brancos;;;816;
+governador;1;3147105;#nulos;;;468;
+governador;1;3147105;#comparecimento;;;8014;
+governador;1;3147105;#abstencao;;;1188;
+governador;1;3147105;#eleitorado;;;9202;
+governador;1;3147006;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1475;S
+governador;1;3147006;_TANCREDONEVES;TANCREDO NEVES;PSD;1844;
+governador;1;3147006;_RIBEIROPENA;RIBEIRO PENA;PSP;134;
+governador;1;3147006;#brancos;;;489;
+governador;1;3147006;#nulos;;;154;
+governador;1;3147006;#comparecimento;;;4096;
+governador;1;3147006;#abstencao;;;1304;
+governador;1;3147006;#eleitorado;;;5400;
+governador;1;3147204;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1545;S
+governador;1;3147204;_TANCREDONEVES;TANCREDO NEVES;PSD;1479;
+governador;1;3147204;_RIBEIROPENA;RIBEIRO PENA;PSP;79;
+governador;1;3147204;#brancos;;;256;
+governador;1;3147204;#nulos;;;82;
+governador;1;3147204;#comparecimento;;;3441;
+governador;1;3147204;#abstencao;;;412;
+governador;1;3147204;#eleitorado;;;3853;
+governador;1;3147303;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1480;S
+governador;1;3147303;_TANCREDONEVES;TANCREDO NEVES;PSD;1528;
+governador;1;3147303;_RIBEIROPENA;RIBEIRO PENA;PSP;70;
+governador;1;3147303;#brancos;;;413;
+governador;1;3147303;#nulos;;;126;
+governador;1;3147303;#comparecimento;;;3617;
+governador;1;3147303;#abstencao;;;601;
+governador;1;3147303;#eleitorado;;;4218;
+governador;1;3147402;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;649;S
+governador;1;3147402;_TANCREDONEVES;TANCREDO NEVES;PSD;736;
+governador;1;3147402;_RIBEIROPENA;RIBEIRO PENA;PSP;73;
+governador;1;3147402;#brancos;;;349;
+governador;1;3147402;#nulos;;;171;
+governador;1;3147402;#comparecimento;;;1978;
+governador;1;3147402;#abstencao;;;383;
+governador;1;3147402;#eleitorado;;;2361;
+governador;1;3147600;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;702;S
+governador;1;3147600;_TANCREDONEVES;TANCREDO NEVES;PSD;1287;
+governador;1;3147600;_RIBEIROPENA;RIBEIRO PENA;PSP;126;
+governador;1;3147600;#brancos;;;438;
+governador;1;3147600;#nulos;;;101;
+governador;1;3147600;#comparecimento;;;2654;
+governador;1;3147600;#abstencao;;;432;
+governador;1;3147600;#eleitorado;;;3086;
+governador;1;3147709;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;787;S
+governador;1;3147709;_TANCREDONEVES;TANCREDO NEVES;PSD;492;
+governador;1;3147709;_RIBEIROPENA;RIBEIRO PENA;PSP;30;
+governador;1;3147709;#brancos;;;89;
+governador;1;3147709;#nulos;;;52;
+governador;1;3147709;#comparecimento;;;1450;
+governador;1;3147709;#abstencao;;;205;
+governador;1;3147709;#eleitorado;;;1655;
+governador;1;3147808;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;238;S
+governador;1;3147808;_TANCREDONEVES;TANCREDO NEVES;PSD;318;
+governador;1;3147808;_RIBEIROPENA;RIBEIRO PENA;PSP;14;
+governador;1;3147808;#brancos;;;64;
+governador;1;3147808;#nulos;;;25;
+governador;1;3147808;#comparecimento;;;659;
+governador;1;3147808;#abstencao;;;126;
+governador;1;3147808;#eleitorado;;;785;
+governador;1;3147907;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4158;S
+governador;1;3147907;_TANCREDONEVES;TANCREDO NEVES;PSD;2929;
+governador;1;3147907;_RIBEIROPENA;RIBEIRO PENA;PSP;196;
+governador;1;3147907;#brancos;;;715;
+governador;1;3147907;#nulos;;;270;
+governador;1;3147907;#comparecimento;;;8268;
+governador;1;3147907;#abstencao;;;1140;
+governador;1;3147907;#eleitorado;;;9408;
+governador;1;3148004;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;7820;S
+governador;1;3148004;_TANCREDONEVES;TANCREDO NEVES;PSD;7118;
+governador;1;3148004;_RIBEIROPENA;RIBEIRO PENA;PSP;255;
+governador;1;3148004;#brancos;;;1227;
+governador;1;3148004;#nulos;;;494;
+governador;1;3148004;#comparecimento;;;16914;
+governador;1;3148004;#abstencao;;;3188;
+governador;1;3148004;#eleitorado;;;20102;
+governador;1;3148103;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4196;S
+governador;1;3148103;_TANCREDONEVES;TANCREDO NEVES;PSD;4025;
+governador;1;3148103;_RIBEIROPENA;RIBEIRO PENA;PSP;180;
+governador;1;3148103;#brancos;;;647;
+governador;1;3148103;#nulos;;;213;
+governador;1;3148103;#comparecimento;;;9261;
+governador;1;3148103;#abstencao;;;1683;
+governador;1;3148103;#eleitorado;;;10944;
+governador;1;3148202;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;695;S
+governador;1;3148202;_TANCREDONEVES;TANCREDO NEVES;PSD;615;
+governador;1;3148202;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3148202;#brancos;;;117;
+governador;1;3148202;#nulos;;;68;
+governador;1;3148202;#comparecimento;;;1519;
+governador;1;3148202;#abstencao;;;297;
+governador;1;3148202;#eleitorado;;;1816;
+governador;1;3148301;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;351;S
+governador;1;3148301;_TANCREDONEVES;TANCREDO NEVES;PSD;716;
+governador;1;3148301;_RIBEIROPENA;RIBEIRO PENA;PSP;48;
+governador;1;3148301;#brancos;;;170;
+governador;1;3148301;#nulos;;;41;
+governador;1;3148301;#comparecimento;;;1326;
+governador;1;3148301;#abstencao;;;307;
+governador;1;3148301;#eleitorado;;;1633;
+governador;1;3148400;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;295;S
+governador;1;3148400;_TANCREDONEVES;TANCREDO NEVES;PSD;372;
+governador;1;3148400;_RIBEIROPENA;RIBEIRO PENA;PSP;17;
+governador;1;3148400;#brancos;;;78;
+governador;1;3148400;#nulos;;;42;
+governador;1;3148400;#comparecimento;;;804;
+governador;1;3148400;#abstencao;;;282;
+governador;1;3148400;#eleitorado;;;1086;
+governador;1;3148608;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1762;S
+governador;1;3148608;_TANCREDONEVES;TANCREDO NEVES;PSD;1314;
+governador;1;3148608;_RIBEIROPENA;RIBEIRO PENA;PSP;76;
+governador;1;3148608;#brancos;;;365;
+governador;1;3148608;#nulos;;;171;
+governador;1;3148608;#comparecimento;;;3688;
+governador;1;3148608;#abstencao;;;3172;
+governador;1;3148608;#eleitorado;;;6860;
+governador;1;3148707;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1602;S
+governador;1;3148707;_TANCREDONEVES;TANCREDO NEVES;PSD;1508;
+governador;1;3148707;_RIBEIROPENA;RIBEIRO PENA;PSP;138;
+governador;1;3148707;#brancos;;;445;
+governador;1;3148707;#nulos;;;90;
+governador;1;3148707;#comparecimento;;;3783;
+governador;1;3148707;#abstencao;;;1538;
+governador;1;3148707;#eleitorado;;;5321;
+governador;1;3149101;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;591;S
+governador;1;3149101;_TANCREDONEVES;TANCREDO NEVES;PSD;581;
+governador;1;3149101;_RIBEIROPENA;RIBEIRO PENA;PSP;56;
+governador;1;3149101;#brancos;;;144;
+governador;1;3149101;#nulos;;;58;
+governador;1;3149101;#comparecimento;;;1430;
+governador;1;3149101;#abstencao;;;258;
+governador;1;3149101;#eleitorado;;;1688;
+governador;1;3149309;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1813;S
+governador;1;3149309;_TANCREDONEVES;TANCREDO NEVES;PSD;1481;
+governador;1;3149309;_RIBEIROPENA;RIBEIRO PENA;PSP;278;
+governador;1;3149309;#brancos;;;461;
+governador;1;3149309;#nulos;;;208;
+governador;1;3149309;#comparecimento;;;4241;
+governador;1;3149309;#abstencao;;;625;
+governador;1;3149309;#eleitorado;;;4866;
+governador;1;3149507;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;180;S
+governador;1;3149507;_TANCREDONEVES;TANCREDO NEVES;PSD;456;
+governador;1;3149507;_RIBEIROPENA;RIBEIRO PENA;PSP;18;
+governador;1;3149507;#brancos;;;39;
+governador;1;3149507;#nulos;;;13;
+governador;1;3149507;#comparecimento;;;706;
+governador;1;3149507;#abstencao;;;75;
+governador;1;3149507;#eleitorado;;;781;
+governador;1;3149606;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;662;S
+governador;1;3149606;_TANCREDONEVES;TANCREDO NEVES;PSD;592;
+governador;1;3149606;_RIBEIROPENA;RIBEIRO PENA;PSP;39;
+governador;1;3149606;#brancos;;;143;
+governador;1;3149606;#nulos;;;72;
+governador;1;3149606;#comparecimento;;;1508;
+governador;1;3149606;#abstencao;;;366;
+governador;1;3149606;#eleitorado;;;1874;
+governador;1;3149705;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;202;S
+governador;1;3149705;_TANCREDONEVES;TANCREDO NEVES;PSD;363;
+governador;1;3149705;_RIBEIROPENA;RIBEIRO PENA;PSP;16;
+governador;1;3149705;#brancos;;;51;
+governador;1;3149705;#nulos;;;33;
+governador;1;3149705;#comparecimento;;;665;
+governador;1;3149705;#abstencao;;;169;
+governador;1;3149705;#eleitorado;;;834;
+governador;1;3149804;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;637;S
+governador;1;3149804;_TANCREDONEVES;TANCREDO NEVES;PSD;436;
+governador;1;3149804;_RIBEIROPENA;RIBEIRO PENA;PSP;48;
+governador;1;3149804;#brancos;;;180;
+governador;1;3149804;#nulos;;;70;
+governador;1;3149804;#comparecimento;;;1371;
+governador;1;3149804;#abstencao;;;346;
+governador;1;3149804;#eleitorado;;;1717;
+governador;1;3149903;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1668;S
+governador;1;3149903;_TANCREDONEVES;TANCREDO NEVES;PSD;407;
+governador;1;3149903;_RIBEIROPENA;RIBEIRO PENA;PSP;152;
+governador;1;3149903;#brancos;;;200;
+governador;1;3149903;#nulos;;;121;
+governador;1;3149903;#comparecimento;;;2548;
+governador;1;3149903;#abstencao;;;397;
+governador;1;3149903;#eleitorado;;;2945;
+governador;1;3150109;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;629;S
+governador;1;3150109;_TANCREDONEVES;TANCREDO NEVES;PSD;353;
+governador;1;3150109;_RIBEIROPENA;RIBEIRO PENA;PSP;23;
+governador;1;3150109;#brancos;;;128;
+governador;1;3150109;#nulos;;;34;
+governador;1;3150109;#comparecimento;;;1167;
+governador;1;3150109;#abstencao;;;353;
+governador;1;3150109;#eleitorado;;;1520;
+governador;1;3150307;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;420;S
+governador;1;3150307;_TANCREDONEVES;TANCREDO NEVES;PSD;378;
+governador;1;3150307;_RIBEIROPENA;RIBEIRO PENA;PSP;32;
+governador;1;3150307;#brancos;;;140;
+governador;1;3150307;#nulos;;;58;
+governador;1;3150307;#comparecimento;;;1028;
+governador;1;3150307;#abstencao;;;322;
+governador;1;3150307;#eleitorado;;;1350;
+governador;1;3150505;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;710;S
+governador;1;3150505;_TANCREDONEVES;TANCREDO NEVES;PSD;372;
+governador;1;3150505;_RIBEIROPENA;RIBEIRO PENA;PSP;46;
+governador;1;3150505;#brancos;;;154;
+governador;1;3150505;#nulos;;;85;
+governador;1;3150505;#comparecimento;;;1367;
+governador;1;3150505;#abstencao;;;316;
+governador;1;3150505;#eleitorado;;;1683;
+governador;1;3150604;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;496;S
+governador;1;3150604;_TANCREDONEVES;TANCREDO NEVES;PSD;376;
+governador;1;3150604;_RIBEIROPENA;RIBEIRO PENA;PSP;21;
+governador;1;3150604;#brancos;;;55;
+governador;1;3150604;#nulos;;;37;
+governador;1;3150604;#comparecimento;;;985;
+governador;1;3150604;#abstencao;;;130;
+governador;1;3150604;#eleitorado;;;1115;
+governador;1;3150703;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;667;S
+governador;1;3150703;_TANCREDONEVES;TANCREDO NEVES;PSD;691;
+governador;1;3150703;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3150703;#brancos;;;161;
+governador;1;3150703;#nulos;;;51;
+governador;1;3150703;#comparecimento;;;1610;
+governador;1;3150703;#abstencao;;;477;
+governador;1;3150703;#eleitorado;;;2087;
+governador;1;3150802;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1138;S
+governador;1;3150802;_TANCREDONEVES;TANCREDO NEVES;PSD;1230;
+governador;1;3150802;_RIBEIROPENA;RIBEIRO PENA;PSP;59;
+governador;1;3150802;#brancos;;;358;
+governador;1;3150802;#nulos;;;186;
+governador;1;3150802;#comparecimento;;;2971;
+governador;1;3150802;#abstencao;;;755;
+governador;1;3150802;#eleitorado;;;3726;
+governador;1;3151107;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;899;S
+governador;1;3151107;_TANCREDONEVES;TANCREDO NEVES;PSD;520;
+governador;1;3151107;_RIBEIROPENA;RIBEIRO PENA;PSP;41;
+governador;1;3151107;#brancos;;;158;
+governador;1;3151107;#nulos;;;61;
+governador;1;3151107;#comparecimento;;;1679;
+governador;1;3151107;#abstencao;;;464;
+governador;1;3151107;#eleitorado;;;2143;
+governador;1;3151206;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;965;S
+governador;1;3151206;_TANCREDONEVES;TANCREDO NEVES;PSD;2200;
+governador;1;3151206;_RIBEIROPENA;RIBEIRO PENA;PSP;295;
+governador;1;3151206;#brancos;;;499;
+governador;1;3151206;#nulos;;;106;
+governador;1;3151206;#comparecimento;;;4065;
+governador;1;3151206;#abstencao;;;1654;
+governador;1;3151206;#eleitorado;;;5719;
+governador;1;3151305;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1017;S
+governador;1;3151305;_TANCREDONEVES;TANCREDO NEVES;PSD;818;
+governador;1;3151305;_RIBEIROPENA;RIBEIRO PENA;PSP;35;
+governador;1;3151305;#brancos;;;161;
+governador;1;3151305;#nulos;;;57;
+governador;1;3151305;#comparecimento;;;2088;
+governador;1;3151305;#abstencao;;;316;
+governador;1;3151305;#eleitorado;;;2404;
+governador;1;3151404;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2027;S
+governador;1;3151404;_TANCREDONEVES;TANCREDO NEVES;PSD;1633;
+governador;1;3151404;_RIBEIROPENA;RIBEIRO PENA;PSP;121;
+governador;1;3151404;#brancos;;;526;
+governador;1;3151404;#nulos;;;174;
+governador;1;3151404;#comparecimento;;;4481;
+governador;1;3151404;#abstencao;;;772;
+governador;1;3151404;#eleitorado;;;5253;
+governador;1;3151503;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2204;S
+governador;1;3151503;_TANCREDONEVES;TANCREDO NEVES;PSD;1553;
+governador;1;3151503;_RIBEIROPENA;RIBEIRO PENA;PSP;161;
+governador;1;3151503;#brancos;;;316;
+governador;1;3151503;#nulos;;;186;
+governador;1;3151503;#comparecimento;;;4420;
+governador;1;3151503;#abstencao;;;1197;
+governador;1;3151503;#eleitorado;;;5617;
+governador;1;3151701;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1234;S
+governador;1;3151701;_TANCREDONEVES;TANCREDO NEVES;PSD;652;
+governador;1;3151701;_RIBEIROPENA;RIBEIRO PENA;PSP;48;
+governador;1;3151701;#brancos;;;313;
+governador;1;3151701;#nulos;;;55;
+governador;1;3151701;#comparecimento;;;2302;
+governador;1;3151701;#abstencao;;;375;
+governador;1;3151701;#eleitorado;;;2677;
+governador;1;3151800;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4521;S
+governador;1;3151800;_TANCREDONEVES;TANCREDO NEVES;PSD;3491;
+governador;1;3151800;_RIBEIROPENA;RIBEIRO PENA;PSP;195;
+governador;1;3151800;#brancos;;;1259;
+governador;1;3151800;#nulos;;;219;
+governador;1;3151800;#comparecimento;;;9685;
+governador;1;3151800;#abstencao;;;1471;
+governador;1;3151800;#eleitorado;;;11156;
+governador;1;3151909;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1026;S
+governador;1;3151909;_TANCREDONEVES;TANCREDO NEVES;PSD;801;
+governador;1;3151909;_RIBEIROPENA;RIBEIRO PENA;PSP;29;
+governador;1;3151909;#brancos;;;170;
+governador;1;3151909;#nulos;;;109;
+governador;1;3151909;#comparecimento;;;2135;
+governador;1;3151909;#abstencao;;;546;
+governador;1;3151909;#eleitorado;;;2681;
+governador;1;3152006;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1474;S
+governador;1;3152006;_TANCREDONEVES;TANCREDO NEVES;PSD;1244;
+governador;1;3152006;_RIBEIROPENA;RIBEIRO PENA;PSP;54;
+governador;1;3152006;#brancos;;;295;
+governador;1;3152006;#nulos;;;82;
+governador;1;3152006;#comparecimento;;;3149;
+governador;1;3152006;#abstencao;;;885;
+governador;1;3152006;#eleitorado;;;4034;
+governador;1;3152105;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4886;S
+governador;1;3152105;_TANCREDONEVES;TANCREDO NEVES;PSD;4839;
+governador;1;3152105;_RIBEIROPENA;RIBEIRO PENA;PSP;469;
+governador;1;3152105;#brancos;;;1415;
+governador;1;3152105;#nulos;;;642;
+governador;1;3152105;#comparecimento;;;12251;
+governador;1;3152105;#abstencao;;;3116;
+governador;1;3152105;#eleitorado;;;15367;
+governador;1;3152204;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1028;S
+governador;1;3152204;_TANCREDONEVES;TANCREDO NEVES;PSD;1080;
+governador;1;3152204;_RIBEIROPENA;RIBEIRO PENA;PSP;112;
+governador;1;3152204;#brancos;;;452;
+governador;1;3152204;#nulos;;;126;
+governador;1;3152204;#comparecimento;;;2798;
+governador;1;3152204;#abstencao;;;1258;
+governador;1;3152204;#eleitorado;;;4056;
+governador;1;3152303;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;314;S
+governador;1;3152303;_TANCREDONEVES;TANCREDO NEVES;PSD;1207;
+governador;1;3152303;_RIBEIROPENA;RIBEIRO PENA;PSP;41;
+governador;1;3152303;#brancos;;;207;
+governador;1;3152303;#nulos;;;100;
+governador;1;3152303;#comparecimento;;;1869;
+governador;1;3152303;#abstencao;;;674;
+governador;1;3152303;#eleitorado;;;2543;
+governador;1;3152402;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;343;S
+governador;1;3152402;_TANCREDONEVES;TANCREDO NEVES;PSD;623;
+governador;1;3152402;_RIBEIROPENA;RIBEIRO PENA;PSP;38;
+governador;1;3152402;#brancos;;;153;
+governador;1;3152402;#nulos;;;62;
+governador;1;3152402;#comparecimento;;;1219;
+governador;1;3152402;#abstencao;;;534;
+governador;1;3152402;#eleitorado;;;1753;
+governador;1;3152501;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1855;S
+governador;1;3152501;_TANCREDONEVES;TANCREDO NEVES;PSD;2198;
+governador;1;3152501;_RIBEIROPENA;RIBEIRO PENA;PSP;1032;
+governador;1;3152501;#brancos;;;985;
+governador;1;3152501;#nulos;;;139;
+governador;1;3152501;#comparecimento;;;6209;
+governador;1;3152501;#abstencao;;;1095;
+governador;1;3152501;#eleitorado;;;7304;
+governador;1;3152600;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;461;S
+governador;1;3152600;_TANCREDONEVES;TANCREDO NEVES;PSD;667;
+governador;1;3152600;_RIBEIROPENA;RIBEIRO PENA;PSP;130;
+governador;1;3152600;#brancos;;;200;
+governador;1;3152600;#nulos;;;89;
+governador;1;3152600;#comparecimento;;;1547;
+governador;1;3152600;#abstencao;;;236;
+governador;1;3152600;#eleitorado;;;1783;
+governador;1;3152709;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1036;S
+governador;1;3152709;_TANCREDONEVES;TANCREDO NEVES;PSD;733;
+governador;1;3152709;_RIBEIROPENA;RIBEIRO PENA;PSP;15;
+governador;1;3152709;#brancos;;;104;
+governador;1;3152709;#nulos;;;69;
+governador;1;3152709;#comparecimento;;;1957;
+governador;1;3152709;#abstencao;;;301;
+governador;1;3152709;#eleitorado;;;2258;
+governador;1;3152808;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1258;S
+governador;1;3152808;_TANCREDONEVES;TANCREDO NEVES;PSD;1649;
+governador;1;3152808;_RIBEIROPENA;RIBEIRO PENA;PSP;100;
+governador;1;3152808;#brancos;;;493;
+governador;1;3152808;#nulos;;;143;
+governador;1;3152808;#comparecimento;;;3643;
+governador;1;3152808;#abstencao;;;621;
+governador;1;3152808;#eleitorado;;;4264;
+governador;1;3152907;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;668;S
+governador;1;3152907;_TANCREDONEVES;TANCREDO NEVES;PSD;706;
+governador;1;3152907;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3152907;#brancos;;;301;
+governador;1;3152907;#nulos;;;75;
+governador;1;3152907;#comparecimento;;;1818;
+governador;1;3152907;#abstencao;;;323;
+governador;1;3152907;#eleitorado;;;2141;
+governador;1;3153004;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;447;S
+governador;1;3153004;_TANCREDONEVES;TANCREDO NEVES;PSD;59;
+governador;1;3153004;_RIBEIROPENA;RIBEIRO PENA;PSP;12;
+governador;1;3153004;#brancos;;;107;
+governador;1;3153004;#nulos;;;22;
+governador;1;3153004;#comparecimento;;;647;
+governador;1;3153004;#abstencao;;;146;
+governador;1;3153004;#eleitorado;;;793;
+governador;1;3153103;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;546;S
+governador;1;3153103;_TANCREDONEVES;TANCREDO NEVES;PSD;993;
+governador;1;3153103;_RIBEIROPENA;RIBEIRO PENA;PSP;31;
+governador;1;3153103;#brancos;;;79;
+governador;1;3153103;#nulos;;;44;
+governador;1;3153103;#comparecimento;;;1693;
+governador;1;3153103;#abstencao;;;393;
+governador;1;3153103;#eleitorado;;;2086;
+governador;1;3153400;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1041;S
+governador;1;3153400;_TANCREDONEVES;TANCREDO NEVES;PSD;1239;
+governador;1;3153400;_RIBEIROPENA;RIBEIRO PENA;PSP;73;
+governador;1;3153400;#brancos;;;213;
+governador;1;3153400;#nulos;;;121;
+governador;1;3153400;#comparecimento;;;2687;
+governador;1;3153400;#abstencao;;;945;
+governador;1;3153400;#eleitorado;;;3632;
+governador;1;3153707;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;145;S
+governador;1;3153707;_TANCREDONEVES;TANCREDO NEVES;PSD;439;
+governador;1;3153707;_RIBEIROPENA;RIBEIRO PENA;PSP;13;
+governador;1;3153707;#brancos;;;47;
+governador;1;3153707;#nulos;;;17;
+governador;1;3153707;#comparecimento;;;661;
+governador;1;3153707;#abstencao;;;138;
+governador;1;3153707;#eleitorado;;;799;
+governador;1;3153905;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;934;S
+governador;1;3153905;_TANCREDONEVES;TANCREDO NEVES;PSD;737;
+governador;1;3153905;_RIBEIROPENA;RIBEIRO PENA;PSP;86;
+governador;1;3153905;#brancos;;;171;
+governador;1;3153905;#nulos;;;151;
+governador;1;3153905;#comparecimento;;;2079;
+governador;1;3153905;#abstencao;;;253;
+governador;1;3153905;#eleitorado;;;2332;
+governador;1;3154002;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3053;S
+governador;1;3154002;_TANCREDONEVES;TANCREDO NEVES;PSD;4049;
+governador;1;3154002;_RIBEIROPENA;RIBEIRO PENA;PSP;184;
+governador;1;3154002;#brancos;;;846;
+governador;1;3154002;#nulos;;;558;
+governador;1;3154002;#comparecimento;;;8690;
+governador;1;3154002;#abstencao;;;3193;
+governador;1;3154002;#eleitorado;;;11883;
+governador;1;3154101;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;988;S
+governador;1;3154101;_TANCREDONEVES;TANCREDO NEVES;PSD;599;
+governador;1;3154101;_RIBEIROPENA;RIBEIRO PENA;PSP;33;
+governador;1;3154101;#brancos;;;220;
+governador;1;3154101;#nulos;;;51;
+governador;1;3154101;#comparecimento;;;1891;
+governador;1;3154101;#abstencao;;;246;
+governador;1;3154101;#eleitorado;;;2137;
+governador;1;3154200;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;785;S
+governador;1;3154200;_TANCREDONEVES;TANCREDO NEVES;PSD;600;
+governador;1;3154200;_RIBEIROPENA;RIBEIRO PENA;PSP;32;
+governador;1;3154200;#brancos;;;131;
+governador;1;3154200;#nulos;;;85;
+governador;1;3154200;#comparecimento;;;1633;
+governador;1;3154200;#abstencao;;;323;
+governador;1;3154200;#eleitorado;;;1956;
+governador;1;3154309;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3092;S
+governador;1;3154309;_TANCREDONEVES;TANCREDO NEVES;PSD;2463;
+governador;1;3154309;_RIBEIROPENA;RIBEIRO PENA;PSP;99;
+governador;1;3154309;#brancos;;;527;
+governador;1;3154309;#nulos;;;231;
+governador;1;3154309;#comparecimento;;;6412;
+governador;1;3154309;#abstencao;;;1926;
+governador;1;3154309;#eleitorado;;;8338;
+governador;1;3154408;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;568;S
+governador;1;3154408;_TANCREDONEVES;TANCREDO NEVES;PSD;485;
+governador;1;3154408;_RIBEIROPENA;RIBEIRO PENA;PSP;35;
+governador;1;3154408;#brancos;;;122;
+governador;1;3154408;#nulos;;;55;
+governador;1;3154408;#comparecimento;;;1265;
+governador;1;3154408;#abstencao;;;183;
+governador;1;3154408;#eleitorado;;;1448;
+governador;1;3154606;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;547;S
+governador;1;3154606;_TANCREDONEVES;TANCREDO NEVES;PSD;439;
+governador;1;3154606;_RIBEIROPENA;RIBEIRO PENA;PSP;51;
+governador;1;3154606;#brancos;;;99;
+governador;1;3154606;#nulos;;;60;
+governador;1;3154606;#comparecimento;;;1196;
+governador;1;3154606;#abstencao;;;257;
+governador;1;3154606;#eleitorado;;;1453;
+governador;1;3154705;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;574;S
+governador;1;3154705;_TANCREDONEVES;TANCREDO NEVES;PSD;372;
+governador;1;3154705;_RIBEIROPENA;RIBEIRO PENA;PSP;34;
+governador;1;3154705;#brancos;;;133;
+governador;1;3154705;#nulos;;;72;
+governador;1;3154705;#comparecimento;;;1185;
+governador;1;3154705;#abstencao;;;121;
+governador;1;3154705;#eleitorado;;;1306;
+governador;1;3154804;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;263;S
+governador;1;3154804;_TANCREDONEVES;TANCREDO NEVES;PSD;642;
+governador;1;3154804;_RIBEIROPENA;RIBEIRO PENA;PSP;30;
+governador;1;3154804;#brancos;;;59;
+governador;1;3154804;#nulos;;;64;
+governador;1;3154804;#comparecimento;;;1058;
+governador;1;3154804;#abstencao;;;98;
+governador;1;3154804;#eleitorado;;;1156;
+governador;1;3154903;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1249;S
+governador;1;3154903;_TANCREDONEVES;TANCREDO NEVES;PSD;1658;
+governador;1;3154903;_RIBEIROPENA;RIBEIRO PENA;PSP;54;
+governador;1;3154903;#brancos;;;206;
+governador;1;3154903;#nulos;;;108;
+governador;1;3154903;#comparecimento;;;3275;
+governador;1;3154903;#abstencao;;;1030;
+governador;1;3154903;#eleitorado;;;4305;
+governador;1;3155108;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;510;S
+governador;1;3155108;_TANCREDONEVES;TANCREDO NEVES;PSD;1033;
+governador;1;3155108;_RIBEIROPENA;RIBEIRO PENA;PSP;12;
+governador;1;3155108;#brancos;;;59;
+governador;1;3155108;#nulos;;;50;
+governador;1;3155108;#comparecimento;;;1664;
+governador;1;3155108;#abstencao;;;2143;
+governador;1;3155108;#eleitorado;;;3807;
+governador;1;3155207;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1144;S
+governador;1;3155207;_TANCREDONEVES;TANCREDO NEVES;PSD;814;
+governador;1;3155207;_RIBEIROPENA;RIBEIRO PENA;PSP;30;
+governador;1;3155207;#brancos;;;134;
+governador;1;3155207;#nulos;;;70;
+governador;1;3155207;#comparecimento;;;2192;
+governador;1;3155207;#abstencao;;;603;
+governador;1;3155207;#eleitorado;;;2795;
+governador;1;3155405;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1254;S
+governador;1;3155405;_TANCREDONEVES;TANCREDO NEVES;PSD;769;
+governador;1;3155405;_RIBEIROPENA;RIBEIRO PENA;PSP;63;
+governador;1;3155405;#brancos;;;208;
+governador;1;3155405;#nulos;;;85;
+governador;1;3155405;#comparecimento;;;2379;
+governador;1;3155405;#abstencao;;;459;
+governador;1;3155405;#eleitorado;;;2838;
+governador;1;3155504;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;867;S
+governador;1;3155504;_TANCREDONEVES;TANCREDO NEVES;PSD;971;
+governador;1;3155504;_RIBEIROPENA;RIBEIRO PENA;PSP;44;
+governador;1;3155504;#brancos;;;284;
+governador;1;3155504;#nulos;;;96;
+governador;1;3155504;#comparecimento;;;2262;
+governador;1;3155504;#abstencao;;;327;
+governador;1;3155504;#eleitorado;;;2589;
+governador;1;3155603;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1074;S
+governador;1;3155603;_TANCREDONEVES;TANCREDO NEVES;PSD;863;
+governador;1;3155603;_RIBEIROPENA;RIBEIRO PENA;PSP;68;
+governador;1;3155603;#brancos;;;135;
+governador;1;3155603;#nulos;;;83;
+governador;1;3155603;#comparecimento;;;2223;
+governador;1;3155603;#abstencao;;;1378;
+governador;1;3155603;#eleitorado;;;3601;
+governador;1;3155702;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1616;S
+governador;1;3155702;_TANCREDONEVES;TANCREDO NEVES;PSD;2712;
+governador;1;3155702;_RIBEIROPENA;RIBEIRO PENA;PSP;416;
+governador;1;3155702;#brancos;;;806;
+governador;1;3155702;#nulos;;;344;
+governador;1;3155702;#comparecimento;;;5894;
+governador;1;3155702;#abstencao;;;978;
+governador;1;3155702;#eleitorado;;;6872;
+governador;1;3155801;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1948;S
+governador;1;3155801;_TANCREDONEVES;TANCREDO NEVES;PSD;1866;
+governador;1;3155801;_RIBEIROPENA;RIBEIRO PENA;PSP;136;
+governador;1;3155801;#brancos;;;390;
+governador;1;3155801;#nulos;;;136;
+governador;1;3155801;#comparecimento;;;4476;
+governador;1;3155801;#abstencao;;;667;
+governador;1;3155801;#eleitorado;;;5143;
+governador;1;3155900;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;789;S
+governador;1;3155900;_TANCREDONEVES;TANCREDO NEVES;PSD;1154;
+governador;1;3155900;_RIBEIROPENA;RIBEIRO PENA;PSP;82;
+governador;1;3155900;#brancos;;;162;
+governador;1;3155900;#nulos;;;76;
+governador;1;3155900;#comparecimento;;;2263;
+governador;1;3155900;#abstencao;;;732;
+governador;1;3155900;#eleitorado;;;2995;
+governador;1;3156007;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;521;S
+governador;1;3156007;_TANCREDONEVES;TANCREDO NEVES;PSD;788;
+governador;1;3156007;_RIBEIROPENA;RIBEIRO PENA;PSP;70;
+governador;1;3156007;#brancos;;;184;
+governador;1;3156007;#nulos;;;57;
+governador;1;3156007;#comparecimento;;;1620;
+governador;1;3156007;#abstencao;;;2950;
+governador;1;3156007;#eleitorado;;;4570;
+governador;1;3156601;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;653;S
+governador;1;3156601;_TANCREDONEVES;TANCREDO NEVES;PSD;744;
+governador;1;3156601;_RIBEIROPENA;RIBEIRO PENA;PSP;38;
+governador;1;3156601;#brancos;;;151;
+governador;1;3156601;#nulos;;;52;
+governador;1;3156601;#comparecimento;;;1638;
+governador;1;3156601;#abstencao;;;3512;
+governador;1;3156601;#eleitorado;;;5150;
+governador;1;3156700;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1562;S
+governador;1;3156700;_TANCREDONEVES;TANCREDO NEVES;PSD;2009;
+governador;1;3156700;_RIBEIROPENA;RIBEIRO PENA;PSP;229;
+governador;1;3156700;#brancos;;;334;
+governador;1;3156700;#nulos;;;227;
+governador;1;3156700;#comparecimento;;;4361;
+governador;1;3156700;#abstencao;;;435;
+governador;1;3156700;#eleitorado;;;4796;
+governador;1;3156809;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;670;S
+governador;1;3156809;_TANCREDONEVES;TANCREDO NEVES;PSD;563;
+governador;1;3156809;_RIBEIROPENA;RIBEIRO PENA;PSP;88;
+governador;1;3156809;#brancos;;;132;
+governador;1;3156809;#nulos;;;69;
+governador;1;3156809;#comparecimento;;;1522;
+governador;1;3156809;#abstencao;;;502;
+governador;1;3156809;#eleitorado;;;2024;
+governador;1;3156908;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1670;S
+governador;1;3156908;_TANCREDONEVES;TANCREDO NEVES;PSD;1582;
+governador;1;3156908;_RIBEIROPENA;RIBEIRO PENA;PSP;133;
+governador;1;3156908;#brancos;;;521;
+governador;1;3156908;#nulos;;;165;
+governador;1;3156908;#comparecimento;;;4071;
+governador;1;3156908;#abstencao;;;581;
+governador;1;3156908;#eleitorado;;;4652;
+governador;1;3157005;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1440;S
+governador;1;3157005;_TANCREDONEVES;TANCREDO NEVES;PSD;4206;
+governador;1;3157005;_RIBEIROPENA;RIBEIRO PENA;PSP;198;
+governador;1;3157005;#brancos;;;555;
+governador;1;3157005;#nulos;;;233;
+governador;1;3157005;#comparecimento;;;6632;
+governador;1;3157005;#abstencao;;;3383;
+governador;1;3157005;#eleitorado;;;10015;
+governador;1;3157104;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;252;S
+governador;1;3157104;_TANCREDONEVES;TANCREDO NEVES;PSD;669;
+governador;1;3157104;_RIBEIROPENA;RIBEIRO PENA;PSP;36;
+governador;1;3157104;#brancos;;;92;
+governador;1;3157104;#nulos;;;47;
+governador;1;3157104;#comparecimento;;;1096;
+governador;1;3157104;#abstencao;;;1155;
+governador;1;3157104;#eleitorado;;;2251;
+governador;1;3157203;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1443;S
+governador;1;3157203;_TANCREDONEVES;TANCREDO NEVES;PSD;1647;
+governador;1;3157203;_RIBEIROPENA;RIBEIRO PENA;PSP;108;
+governador;1;3157203;#brancos;;;435;
+governador;1;3157203;#nulos;;;206;
+governador;1;3157203;#comparecimento;;;3839;
+governador;1;3157203;#abstencao;;;577;
+governador;1;3157203;#eleitorado;;;4416;
+governador;1;3157401;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;285;S
+governador;1;3157401;_TANCREDONEVES;TANCREDO NEVES;PSD;874;
+governador;1;3157401;_RIBEIROPENA;RIBEIRO PENA;PSP;56;
+governador;1;3157401;#brancos;;;198;
+governador;1;3157401;#nulos;;;78;
+governador;1;3157401;#comparecimento;;;1491;
+governador;1;3157401;#abstencao;;;517;
+governador;1;3157401;#eleitorado;;;2008;
+governador;1;3157708;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;535;S
+governador;1;3157708;_TANCREDONEVES;TANCREDO NEVES;PSD;1018;
+governador;1;3157708;_RIBEIROPENA;RIBEIRO PENA;PSP;95;
+governador;1;3157708;#brancos;;;393;
+governador;1;3157708;#nulos;;;135;
+governador;1;3157708;#comparecimento;;;2176;
+governador;1;3157708;#abstencao;;;642;
+governador;1;3157708;#eleitorado;;;2818;
+governador;1;3157807;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1321;S
+governador;1;3157807;_TANCREDONEVES;TANCREDO NEVES;PSD;1266;
+governador;1;3157807;_RIBEIROPENA;RIBEIRO PENA;PSP;78;
+governador;1;3157807;#brancos;;;362;
+governador;1;3157807;#nulos;;;229;
+governador;1;3157807;#comparecimento;;;3256;
+governador;1;3157807;#abstencao;;;1037;
+governador;1;3157807;#eleitorado;;;4293;
+governador;1;3157906;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;806;S
+governador;1;3157906;_TANCREDONEVES;TANCREDO NEVES;PSD;698;
+governador;1;3157906;_RIBEIROPENA;RIBEIRO PENA;PSP;39;
+governador;1;3157906;#brancos;;;172;
+governador;1;3157906;#nulos;;;72;
+governador;1;3157906;#comparecimento;;;1787;
+governador;1;3157906;#abstencao;;;402;
+governador;1;3157906;#eleitorado;;;2189;
+governador;1;3158003;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1098;S
+governador;1;3158003;_TANCREDONEVES;TANCREDO NEVES;PSD;1527;
+governador;1;3158003;_RIBEIROPENA;RIBEIRO PENA;PSP;95;
+governador;1;3158003;#brancos;;;294;
+governador;1;3158003;#nulos;;;132;
+governador;1;3158003;#comparecimento;;;3146;
+governador;1;3158003;#abstencao;;;533;
+governador;1;3158003;#eleitorado;;;3679;
+governador;1;3158201;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;892;S
+governador;1;3158201;_TANCREDONEVES;TANCREDO NEVES;PSD;1944;
+governador;1;3158201;_RIBEIROPENA;RIBEIRO PENA;PSP;107;
+governador;1;3158201;#brancos;;;393;
+governador;1;3158201;#nulos;;;162;
+governador;1;3158201;#comparecimento;;;3498;
+governador;1;3158201;#abstencao;;;2361;
+governador;1;3158201;#eleitorado;;;5859;
+governador;1;3159209;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;969;S
+governador;1;3159209;_TANCREDONEVES;TANCREDO NEVES;PSD;829;
+governador;1;3159209;_RIBEIROPENA;RIBEIRO PENA;PSP;20;
+governador;1;3159209;#brancos;;;128;
+governador;1;3159209;#nulos;;;29;
+governador;1;3159209;#comparecimento;;;1975;
+governador;1;3159209;#abstencao;;;278;
+governador;1;3159209;#eleitorado;;;2253;
+governador;1;3159308;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;920;S
+governador;1;3159308;_TANCREDONEVES;TANCREDO NEVES;PSD;578;
+governador;1;3159308;_RIBEIROPENA;RIBEIRO PENA;PSP;26;
+governador;1;3159308;#brancos;;;125;
+governador;1;3159308;#nulos;;;34;
+governador;1;3159308;#comparecimento;;;1683;
+governador;1;3159308;#abstencao;;;340;
+governador;1;3159308;#eleitorado;;;2023;
+governador;1;3159605;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1806;S
+governador;1;3159605;_TANCREDONEVES;TANCREDO NEVES;PSD;1356;
+governador;1;3159605;_RIBEIROPENA;RIBEIRO PENA;PSP;96;
+governador;1;3159605;#brancos;;;376;
+governador;1;3159605;#nulos;;;104;
+governador;1;3159605;#comparecimento;;;3738;
+governador;1;3159605;#abstencao;;;852;
+governador;1;3159605;#eleitorado;;;4590;
+governador;1;3159803;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;436;S
+governador;1;3159803;_TANCREDONEVES;TANCREDO NEVES;PSD;861;
+governador;1;3159803;_RIBEIROPENA;RIBEIRO PENA;PSP;57;
+governador;1;3159803;#brancos;;;343;
+governador;1;3159803;#nulos;;;77;
+governador;1;3159803;#comparecimento;;;1774;
+governador;1;3159803;#abstencao;;;412;
+governador;1;3159803;#eleitorado;;;2186;
+governador;1;3158607;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;239;S
+governador;1;3158607;_TANCREDONEVES;TANCREDO NEVES;PSD;237;
+governador;1;3158607;_RIBEIROPENA;RIBEIRO PENA;PSP;15;
+governador;1;3158607;#brancos;;;67;
+governador;1;3158607;#nulos;;;38;
+governador;1;3158607;#comparecimento;;;596;
+governador;1;3158607;#abstencao;;;83;
+governador;1;3158607;#eleitorado;;;679;
+governador;1;3158805;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;372;S
+governador;1;3158805;_TANCREDONEVES;TANCREDO NEVES;PSD;213;
+governador;1;3158805;_RIBEIROPENA;RIBEIRO PENA;PSP;134;
+governador;1;3158805;#brancos;;;132;
+governador;1;3158805;#nulos;;;19;
+governador;1;3158805;#comparecimento;;;870;
+governador;1;3158805;#abstencao;;;123;
+governador;1;3158805;#eleitorado;;;993;
+governador;1;3158508;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;342;S
+governador;1;3158508;_TANCREDONEVES;TANCREDO NEVES;PSD;334;
+governador;1;3158508;_RIBEIROPENA;RIBEIRO PENA;PSP;27;
+governador;1;3158508;#brancos;;;117;
+governador;1;3158508;#nulos;;;52;
+governador;1;3158508;#comparecimento;;;872;
+governador;1;3158508;#abstencao;;;383;
+governador;1;3158508;#eleitorado;;;1255;
+governador;1;3159902;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;792;S
+governador;1;3159902;_TANCREDONEVES;TANCREDO NEVES;PSD;357;
+governador;1;3159902;_RIBEIROPENA;RIBEIRO PENA;PSP;30;
+governador;1;3159902;#brancos;;;100;
+governador;1;3159902;#nulos;;;29;
+governador;1;3159902;#comparecimento;;;1308;
+governador;1;3159902;#abstencao;;;169;
+governador;1;3159902;#eleitorado;;;1477;
+governador;1;3160108;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;346;S
+governador;1;3160108;_TANCREDONEVES;TANCREDO NEVES;PSD;540;
+governador;1;3160108;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3160108;#brancos;;;77;
+governador;1;3160108;#nulos;;;41;
+governador;1;3160108;#comparecimento;;;1044;
+governador;1;3160108;#abstencao;;;417;
+governador;1;3160108;#eleitorado;;;1461;
+governador;1;3160405;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1512;S
+governador;1;3160405;_TANCREDONEVES;TANCREDO NEVES;PSD;450;
+governador;1;3160405;_RIBEIROPENA;RIBEIRO PENA;PSP;22;
+governador;1;3160405;#brancos;;;113;
+governador;1;3160405;#nulos;;;81;
+governador;1;3160405;#comparecimento;;;2178;
+governador;1;3160405;#abstencao;;;375;
+governador;1;3160405;#eleitorado;;;2553;
+governador;1;3160702;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3413;S
+governador;1;3160702;_TANCREDONEVES;TANCREDO NEVES;PSD;4037;
+governador;1;3160702;_RIBEIROPENA;RIBEIRO PENA;PSP;248;
+governador;1;3160702;#brancos;;;775;
+governador;1;3160702;#nulos;;;394;
+governador;1;3160702;#comparecimento;;;8867;
+governador;1;3160702;#abstencao;;;1196;
+governador;1;3160702;#eleitorado;;;10063;
+governador;1;3160900;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;378;S
+governador;1;3160900;_TANCREDONEVES;TANCREDO NEVES;PSD;194;
+governador;1;3160900;_RIBEIROPENA;RIBEIRO PENA;PSP;15;
+governador;1;3160900;#brancos;;;74;
+governador;1;3160900;#nulos;;;27;
+governador;1;3160900;#comparecimento;;;688;
+governador;1;3160900;#abstencao;;;107;
+governador;1;3160900;#eleitorado;;;795;
+governador;1;3161007;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2133;S
+governador;1;3161007;_TANCREDONEVES;TANCREDO NEVES;PSD;1525;
+governador;1;3161007;_RIBEIROPENA;RIBEIRO PENA;PSP;75;
+governador;1;3161007;#brancos;;;285;
+governador;1;3161007;#nulos;;;181;
+governador;1;3161007;#comparecimento;;;4199;
+governador;1;3161007;#abstencao;;;828;
+governador;1;3161007;#eleitorado;;;5027;
+governador;1;3161106;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;303;S
+governador;1;3161106;_TANCREDONEVES;TANCREDO NEVES;PSD;1102;
+governador;1;3161106;_RIBEIROPENA;RIBEIRO PENA;PSP;84;
+governador;1;3161106;#brancos;;;123;
+governador;1;3161106;#nulos;;;45;
+governador;1;3161106;#comparecimento;;;1657;
+governador;1;3161106;#abstencao;;;1693;
+governador;1;3161106;#eleitorado;;;3350;
+governador;1;3161403;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;274;S
+governador;1;3161403;_TANCREDONEVES;TANCREDO NEVES;PSD;847;
+governador;1;3161403;_RIBEIROPENA;RIBEIRO PENA;PSP;21;
+governador;1;3161403;#brancos;;;137;
+governador;1;3161403;#nulos;;;47;
+governador;1;3161403;#comparecimento;;;1326;
+governador;1;3161403;#abstencao;;;357;
+governador;1;3161403;#eleitorado;;;1683;
+governador;1;3161502;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;714;S
+governador;1;3161502;_TANCREDONEVES;TANCREDO NEVES;PSD;662;
+governador;1;3161502;_RIBEIROPENA;RIBEIRO PENA;PSP;58;
+governador;1;3161502;#brancos;;;171;
+governador;1;3161502;#nulos;;;60;
+governador;1;3161502;#comparecimento;;;1665;
+governador;1;3161502;#abstencao;;;454;
+governador;1;3161502;#eleitorado;;;2119;
+governador;1;3161700;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;830;S
+governador;1;3161700;_TANCREDONEVES;TANCREDO NEVES;PSD;688;
+governador;1;3161700;_RIBEIROPENA;RIBEIRO PENA;PSP;25;
+governador;1;3161700;#brancos;;;126;
+governador;1;3161700;#nulos;;;54;
+governador;1;3161700;#comparecimento;;;1723;
+governador;1;3161700;#abstencao;;;618;
+governador;1;3161700;#eleitorado;;;2341;
+governador;1;3161809;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;661;S
+governador;1;3161809;_TANCREDONEVES;TANCREDO NEVES;PSD;282;
+governador;1;3161809;_RIBEIROPENA;RIBEIRO PENA;PSP;11;
+governador;1;3161809;#brancos;;;91;
+governador;1;3161809;#nulos;;;33;
+governador;1;3161809;#comparecimento;;;1078;
+governador;1;3161809;#abstencao;;;155;
+governador;1;3161809;#eleitorado;;;1233;
+governador;1;3162005;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1312;S
+governador;1;3162005;_TANCREDONEVES;TANCREDO NEVES;PSD;2190;
+governador;1;3162005;_RIBEIROPENA;RIBEIRO PENA;PSP;98;
+governador;1;3162005;#brancos;;;457;
+governador;1;3162005;#nulos;;;137;
+governador;1;3162005;#comparecimento;;;4194;
+governador;1;3162005;#abstencao;;;1349;
+governador;1;3162005;#eleitorado;;;5543;
+governador;1;3162104;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1769;S
+governador;1;3162104;_TANCREDONEVES;TANCREDO NEVES;PSD;1455;
+governador;1;3162104;_RIBEIROPENA;RIBEIRO PENA;PSP;32;
+governador;1;3162104;#brancos;;;239;
+governador;1;3162104;#nulos;;;154;
+governador;1;3162104;#comparecimento;;;3649;
+governador;1;3162104;#abstencao;;;677;
+governador;1;3162104;#eleitorado;;;4326;
+governador;1;3162203;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;418;S
+governador;1;3162203;_TANCREDONEVES;TANCREDO NEVES;PSD;302;
+governador;1;3162203;_RIBEIROPENA;RIBEIRO PENA;PSP;20;
+governador;1;3162203;#brancos;;;121;
+governador;1;3162203;#nulos;;;47;
+governador;1;3162203;#comparecimento;;;908;
+governador;1;3162203;#abstencao;;;102;
+governador;1;3162203;#eleitorado;;;1010;
+governador;1;3162401;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;278;S
+governador;1;3162401;_TANCREDONEVES;TANCREDO NEVES;PSD;482;
+governador;1;3162401;_RIBEIROPENA;RIBEIRO PENA;PSP;42;
+governador;1;3162401;#brancos;;;57;
+governador;1;3162401;#nulos;;;68;
+governador;1;3162401;#comparecimento;;;927;
+governador;1;3162401;#abstencao;;;389;
+governador;1;3162401;#eleitorado;;;1316;
+governador;1;3162500;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;5951;S
+governador;1;3162500;_TANCREDONEVES;TANCREDO NEVES;PSD;6893;
+governador;1;3162500;_RIBEIROPENA;RIBEIRO PENA;PSP;66;
+governador;1;3162500;#brancos;;;395;
+governador;1;3162500;#nulos;;;507;
+governador;1;3162500;#comparecimento;;;13812;
+governador;1;3162500;#abstencao;;;2204;
+governador;1;3162500;#eleitorado;;;16016;
+governador;1;3162708;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;250;S
+governador;1;3162708;_TANCREDONEVES;TANCREDO NEVES;PSD;217;
+governador;1;3162708;_RIBEIROPENA;RIBEIRO PENA;PSP;44;
+governador;1;3162708;#brancos;;;81;
+governador;1;3162708;#nulos;;;76;
+governador;1;3162708;#comparecimento;;;668;
+governador;1;3162708;#abstencao;;;540;
+governador;1;3162708;#eleitorado;;;1208;
+governador;1;3162807;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;935;S
+governador;1;3162807;_TANCREDONEVES;TANCREDO NEVES;PSD;1314;
+governador;1;3162807;_RIBEIROPENA;RIBEIRO PENA;PSP;59;
+governador;1;3162807;#brancos;;;201;
+governador;1;3162807;#nulos;;;91;
+governador;1;3162807;#comparecimento;;;2600;
+governador;1;3162807;#abstencao;;;919;
+governador;1;3162807;#eleitorado;;;3519;
+governador;1;3162906;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2646;S
+governador;1;3162906;_TANCREDONEVES;TANCREDO NEVES;PSD;1934;
+governador;1;3162906;_RIBEIROPENA;RIBEIRO PENA;PSP;93;
+governador;1;3162906;#brancos;;;373;
+governador;1;3162906;#nulos;;;137;
+governador;1;3162906;#comparecimento;;;5183;
+governador;1;3162906;#abstencao;;;726;
+governador;1;3162906;#eleitorado;;;5909;
+governador;1;3163201;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;198;S
+governador;1;3163201;_TANCREDONEVES;TANCREDO NEVES;PSD;251;
+governador;1;3163201;_RIBEIROPENA;RIBEIRO PENA;PSP;22;
+governador;1;3163201;#brancos;;;105;
+governador;1;3163201;#nulos;;;7;
+governador;1;3163201;#comparecimento;;;583;
+governador;1;3163201;#abstencao;;;104;
+governador;1;3163201;#eleitorado;;;687;
+governador;1;3163409;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;440;S
+governador;1;3163409;_TANCREDONEVES;TANCREDO NEVES;PSD;936;
+governador;1;3163409;_RIBEIROPENA;RIBEIRO PENA;PSP;34;
+governador;1;3163409;#brancos;;;89;
+governador;1;3163409;#nulos;;;90;
+governador;1;3163409;#comparecimento;;;1589;
+governador;1;3163409;#abstencao;;;579;
+governador;1;3163409;#eleitorado;;;2168;
+governador;1;3163508;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;407;S
+governador;1;3163508;_TANCREDONEVES;TANCREDO NEVES;PSD;446;
+governador;1;3163508;_RIBEIROPENA;RIBEIRO PENA;PSP;23;
+governador;1;3163508;#brancos;;;105;
+governador;1;3163508;#nulos;;;49;
+governador;1;3163508;#comparecimento;;;1030;
+governador;1;3163508;#abstencao;;;515;
+governador;1;3163508;#eleitorado;;;1545;
+governador;1;3163706;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1362;S
+governador;1;3163706;_TANCREDONEVES;TANCREDO NEVES;PSD;1388;
+governador;1;3163706;_RIBEIROPENA;RIBEIRO PENA;PSP;167;
+governador;1;3163706;#brancos;;;291;
+governador;1;3163706;#nulos;;;113;
+governador;1;3163706;#comparecimento;;;3321;
+governador;1;3163706;#abstencao;;;451;
+governador;1;3163706;#eleitorado;;;3772;
+governador;1;3163805;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;512;S
+governador;1;3163805;_TANCREDONEVES;TANCREDO NEVES;PSD;745;
+governador;1;3163805;_RIBEIROPENA;RIBEIRO PENA;PSP;545;
+governador;1;3163805;#brancos;;;361;
+governador;1;3163805;#nulos;;;145;
+governador;1;3163805;#comparecimento;;;2308;
+governador;1;3163805;#abstencao;;;1137;
+governador;1;3163805;#eleitorado;;;3445;
+governador;1;3163904;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;734;S
+governador;1;3163904;_TANCREDONEVES;TANCREDO NEVES;PSD;401;
+governador;1;3163904;_RIBEIROPENA;RIBEIRO PENA;PSP;17;
+governador;1;3163904;#brancos;;;43;
+governador;1;3163904;#nulos;;;25;
+governador;1;3163904;#comparecimento;;;1220;
+governador;1;3163904;#abstencao;;;170;
+governador;1;3163904;#eleitorado;;;1390;
+governador;1;3164001;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;740;S
+governador;1;3164001;_TANCREDONEVES;TANCREDO NEVES;PSD;1566;
+governador;1;3164001;_RIBEIROPENA;RIBEIRO PENA;PSP;58;
+governador;1;3164001;#brancos;;;257;
+governador;1;3164001;#nulos;;;136;
+governador;1;3164001;#comparecimento;;;2757;
+governador;1;3164001;#abstencao;;;594;
+governador;1;3164001;#eleitorado;;;3351;
+governador;1;3164209;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;301;S
+governador;1;3164209;_TANCREDONEVES;TANCREDO NEVES;PSD;1129;
+governador;1;3164209;_RIBEIROPENA;RIBEIRO PENA;PSP;80;
+governador;1;3164209;#brancos;;;238;
+governador;1;3164209;#nulos;;;76;
+governador;1;3164209;#comparecimento;;;1824;
+governador;1;3164209;#abstencao;;;862;
+governador;1;3164209;#eleitorado;;;2686;
+governador;1;3164506;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;589;S
+governador;1;3164506;_TANCREDONEVES;TANCREDO NEVES;PSD;550;
+governador;1;3164506;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3164506;#brancos;;;99;
+governador;1;3164506;#nulos;;;57;
+governador;1;3164506;#comparecimento;;;1319;
+governador;1;3164506;#abstencao;;;270;
+governador;1;3164506;#eleitorado;;;1589;
+governador;1;3164704;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2698;S
+governador;1;3164704;_TANCREDONEVES;TANCREDO NEVES;PSD;2256;
+governador;1;3164704;_RIBEIROPENA;RIBEIRO PENA;PSP;179;
+governador;1;3164704;#brancos;;;624;
+governador;1;3164704;#nulos;;;166;
+governador;1;3164704;#comparecimento;;;5923;
+governador;1;3164704;#abstencao;;;1007;
+governador;1;3164704;#eleitorado;;;6930;
+governador;1;3165008;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1189;S
+governador;1;3165008;_TANCREDONEVES;TANCREDO NEVES;PSD;1013;
+governador;1;3165008;_RIBEIROPENA;RIBEIRO PENA;PSP;13;
+governador;1;3165008;#brancos;;;99;
+governador;1;3165008;#nulos;;;66;
+governador;1;3165008;#comparecimento;;;2380;
+governador;1;3165008;#abstencao;;;146;
+governador;1;3165008;#eleitorado;;;2526;
+governador;1;3165107;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;766;S
+governador;1;3165107;_TANCREDONEVES;TANCREDO NEVES;PSD;644;
+governador;1;3165107;_RIBEIROPENA;RIBEIRO PENA;PSP;35;
+governador;1;3165107;#brancos;;;266;
+governador;1;3165107;#nulos;;;68;
+governador;1;3165107;#comparecimento;;;1779;
+governador;1;3165107;#abstencao;;;257;
+governador;1;3165107;#eleitorado;;;2036;
+governador;1;3165305;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;268;S
+governador;1;3165305;_TANCREDONEVES;TANCREDO NEVES;PSD;364;
+governador;1;3165305;_RIBEIROPENA;RIBEIRO PENA;PSP;17;
+governador;1;3165305;#brancos;;;99;
+governador;1;3165305;#nulos;;;21;
+governador;1;3165305;#comparecimento;;;769;
+governador;1;3165305;#abstencao;;;133;
+governador;1;3165305;#eleitorado;;;902;
+governador;1;3165404;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;317;S
+governador;1;3165404;_TANCREDONEVES;TANCREDO NEVES;PSD;226;
+governador;1;3165404;_RIBEIROPENA;RIBEIRO PENA;PSP;10;
+governador;1;3165404;#brancos;;;95;
+governador;1;3165404;#nulos;;;17;
+governador;1;3165404;#comparecimento;;;665;
+governador;1;3165404;#abstencao;;;108;
+governador;1;3165404;#eleitorado;;;773;
+governador;1;3165701;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;620;S
+governador;1;3165701;_TANCREDONEVES;TANCREDO NEVES;PSD;870;
+governador;1;3165701;_RIBEIROPENA;RIBEIRO PENA;PSP;38;
+governador;1;3165701;#brancos;;;150;
+governador;1;3165701;#nulos;;;73;
+governador;1;3165701;#comparecimento;;;1751;
+governador;1;3165701;#abstencao;;;408;
+governador;1;3165701;#eleitorado;;;2159;
+governador;1;3166006;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;438;S
+governador;1;3166006;_TANCREDONEVES;TANCREDO NEVES;PSD;443;
+governador;1;3166006;_RIBEIROPENA;RIBEIRO PENA;PSP;142;
+governador;1;3166006;#brancos;;;142;
+governador;1;3166006;#nulos;;;47;
+governador;1;3166006;#comparecimento;;;1212;
+governador;1;3166006;#abstencao;;;366;
+governador;1;3166006;#eleitorado;;;1578;
+governador;1;3166105;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;532;S
+governador;1;3166105;_TANCREDONEVES;TANCREDO NEVES;PSD;456;
+governador;1;3166105;_RIBEIROPENA;RIBEIRO PENA;PSP;8;
+governador;1;3166105;#brancos;;;42;
+governador;1;3166105;#nulos;;;25;
+governador;1;3166105;#comparecimento;;;1063;
+governador;1;3166105;#abstencao;;;247;
+governador;1;3166105;#eleitorado;;;1310;
+governador;1;3166204;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;754;S
+governador;1;3166204;_TANCREDONEVES;TANCREDO NEVES;PSD;397;
+governador;1;3166204;_RIBEIROPENA;RIBEIRO PENA;PSP;12;
+governador;1;3166204;#brancos;;;50;
+governador;1;3166204;#nulos;;;32;
+governador;1;3166204;#comparecimento;;;1245;
+governador;1;3166204;#abstencao;;;188;
+governador;1;3166204;#eleitorado;;;1433;
+governador;1;3166808;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;582;S
+governador;1;3166808;_TANCREDONEVES;TANCREDO NEVES;PSD;323;
+governador;1;3166808;_RIBEIROPENA;RIBEIRO PENA;PSP;22;
+governador;1;3166808;#brancos;;;133;
+governador;1;3166808;#nulos;;;46;
+governador;1;3166808;#comparecimento;;;1106;
+governador;1;3166808;#abstencao;;;336;
+governador;1;3166808;#eleitorado;;;1442;
+governador;1;3166907;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;595;S
+governador;1;3166907;_TANCREDONEVES;TANCREDO NEVES;PSD;404;
+governador;1;3166907;_RIBEIROPENA;RIBEIRO PENA;PSP;29;
+governador;1;3166907;#brancos;;;134;
+governador;1;3166907;#nulos;;;33;
+governador;1;3166907;#comparecimento;;;1195;
+governador;1;3166907;#abstencao;;;148;
+governador;1;3166907;#eleitorado;;;1343;
+governador;1;3167004;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;309;S
+governador;1;3167004;_TANCREDONEVES;TANCREDO NEVES;PSD;290;
+governador;1;3167004;_RIBEIROPENA;RIBEIRO PENA;PSP;11;
+governador;1;3167004;#brancos;;;63;
+governador;1;3167004;#nulos;;;22;
+governador;1;3167004;#comparecimento;;;695;
+governador;1;3167004;#abstencao;;;129;
+governador;1;3167004;#eleitorado;;;824;
+governador;1;3167103;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1424;S
+governador;1;3167103;_TANCREDONEVES;TANCREDO NEVES;PSD;594;
+governador;1;3167103;_RIBEIROPENA;RIBEIRO PENA;PSP;60;
+governador;1;3167103;#brancos;;;307;
+governador;1;3167103;#nulos;;;112;
+governador;1;3167103;#comparecimento;;;2497;
+governador;1;3167103;#abstencao;;;942;
+governador;1;3167103;#eleitorado;;;3439;
+governador;1;3167202;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;4140;S
+governador;1;3167202;_TANCREDONEVES;TANCREDO NEVES;PSD;4584;
+governador;1;3167202;_RIBEIROPENA;RIBEIRO PENA;PSP;459;
+governador;1;3167202;#brancos;;;956;
+governador;1;3167202;#nulos;;;568;
+governador;1;3167202;#comparecimento;;;10707;
+governador;1;3167202;#abstencao;;;1699;
+governador;1;3167202;#eleitorado;;;12406;
+governador;1;3167400;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;751;S
+governador;1;3167400;_TANCREDONEVES;TANCREDO NEVES;PSD;1061;
+governador;1;3167400;_RIBEIROPENA;RIBEIRO PENA;PSP;153;
+governador;1;3167400;#brancos;;;462;
+governador;1;3167400;#nulos;;;146;
+governador;1;3167400;#comparecimento;;;2573;
+governador;1;3167400;#abstencao;;;756;
+governador;1;3167400;#eleitorado;;;3329;
+governador;1;3167608;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1074;S
+governador;1;3167608;_TANCREDONEVES;TANCREDO NEVES;PSD;2226;
+governador;1;3167608;_RIBEIROPENA;RIBEIRO PENA;PSP;161;
+governador;1;3167608;#brancos;;;634;
+governador;1;3167608;#nulos;;;213;
+governador;1;3167608;#comparecimento;;;4308;
+governador;1;3167608;#abstencao;;;2667;
+governador;1;3167608;#eleitorado;;;6975;
+governador;1;3167806;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;888;S
+governador;1;3167806;_TANCREDONEVES;TANCREDO NEVES;PSD;350;
+governador;1;3167806;_RIBEIROPENA;RIBEIRO PENA;PSP;92;
+governador;1;3167806;#brancos;;;283;
+governador;1;3167806;#nulos;;;72;
+governador;1;3167806;#comparecimento;;;1685;
+governador;1;3167806;#abstencao;;;358;
+governador;1;3167806;#eleitorado;;;2043;
+governador;1;3167905;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;631;S
+governador;1;3167905;_TANCREDONEVES;TANCREDO NEVES;PSD;631;
+governador;1;3167905;_RIBEIROPENA;RIBEIRO PENA;PSP;39;
+governador;1;3167905;#brancos;;;108;
+governador;1;3167905;#nulos;;;33;
+governador;1;3167905;#comparecimento;;;1442;
+governador;1;3167905;#abstencao;;;223;
+governador;1;3167905;#eleitorado;;;1665;
+governador;1;3168002;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;372;S
+governador;1;3168002;_TANCREDONEVES;TANCREDO NEVES;PSD;514;
+governador;1;3168002;_RIBEIROPENA;RIBEIRO PENA;PSP;31;
+governador;1;3168002;#brancos;;;70;
+governador;1;3168002;#nulos;;;66;
+governador;1;3168002;#comparecimento;;;1053;
+governador;1;3168002;#abstencao;;;596;
+governador;1;3168002;#eleitorado;;;1649;
+governador;1;3168200;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;595;S
+governador;1;3168200;_TANCREDONEVES;TANCREDO NEVES;PSD;419;
+governador;1;3168200;_RIBEIROPENA;RIBEIRO PENA;PSP;26;
+governador;1;3168200;#brancos;;;97;
+governador;1;3168200;#nulos;;;33;
+governador;1;3168200;#comparecimento;;;1170;
+governador;1;3168200;#abstencao;;;355;
+governador;1;3168200;#eleitorado;;;1525;
+governador;1;3168408;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2849;S
+governador;1;3168408;_TANCREDONEVES;TANCREDO NEVES;PSD;2672;
+governador;1;3168408;_RIBEIROPENA;RIBEIRO PENA;PSP;63;
+governador;1;3168408;#brancos;;;415;
+governador;1;3168408;#nulos;;;201;
+governador;1;3168408;#comparecimento;;;6200;
+governador;1;3168408;#abstencao;;;1237;
+governador;1;3168408;#eleitorado;;;7437;
+governador;1;3168507;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1320;S
+governador;1;3168507;_TANCREDONEVES;TANCREDO NEVES;PSD;930;
+governador;1;3168507;_RIBEIROPENA;RIBEIRO PENA;PSP;354;
+governador;1;3168507;#brancos;;;371;
+governador;1;3168507;#nulos;;;217;
+governador;1;3168507;#comparecimento;;;3192;
+governador;1;3168507;#abstencao;;;1486;
+governador;1;3168507;#eleitorado;;;4678;
+governador;1;3168606;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;6443;S
+governador;1;3168606;_TANCREDONEVES;TANCREDO NEVES;PSD;4881;
+governador;1;3168606;_RIBEIROPENA;RIBEIRO PENA;PSP;424;
+governador;1;3168606;#brancos;;;1689;
+governador;1;3168606;#nulos;;;536;
+governador;1;3168606;#comparecimento;;;13973;
+governador;1;3168606;#abstencao;;;5596;
+governador;1;3168606;#eleitorado;;;19569;
+governador;1;3168804;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;396;S
+governador;1;3168804;_TANCREDONEVES;TANCREDO NEVES;PSD;342;
+governador;1;3168804;_RIBEIROPENA;RIBEIRO PENA;PSP;9;
+governador;1;3168804;#brancos;;;50;
+governador;1;3168804;#nulos;;;35;
+governador;1;3168804;#comparecimento;;;832;
+governador;1;3168804;#abstencao;;;107;
+governador;1;3168804;#eleitorado;;;939;
+governador;1;3168903;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1345;S
+governador;1;3168903;_TANCREDONEVES;TANCREDO NEVES;PSD;1002;
+governador;1;3168903;_RIBEIROPENA;RIBEIRO PENA;PSP;32;
+governador;1;3168903;#brancos;;;189;
+governador;1;3168903;#nulos;;;181;
+governador;1;3168903;#comparecimento;;;2749;
+governador;1;3168903;#abstencao;;;572;
+governador;1;3168903;#eleitorado;;;3321;
+governador;1;3169000;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;891;S
+governador;1;3169000;_TANCREDONEVES;TANCREDO NEVES;PSD;1268;
+governador;1;3169000;_RIBEIROPENA;RIBEIRO PENA;PSP;50;
+governador;1;3169000;#brancos;;;246;
+governador;1;3169000;#nulos;;;122;
+governador;1;3169000;#comparecimento;;;2577;
+governador;1;3169000;#abstencao;;;514;
+governador;1;3169000;#eleitorado;;;3091;
+governador;1;3169109;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;207;S
+governador;1;3169109;_TANCREDONEVES;TANCREDO NEVES;PSD;413;
+governador;1;3169109;_RIBEIROPENA;RIBEIRO PENA;PSP;15;
+governador;1;3169109;#brancos;;;155;
+governador;1;3169109;#nulos;;;34;
+governador;1;3169109;#comparecimento;;;824;
+governador;1;3169109;#abstencao;;;70;
+governador;1;3169109;#eleitorado;;;894;
+governador;1;3169208;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;875;S
+governador;1;3169208;_TANCREDONEVES;TANCREDO NEVES;PSD;1233;
+governador;1;3169208;_RIBEIROPENA;RIBEIRO PENA;PSP;59;
+governador;1;3169208;#brancos;;;333;
+governador;1;3169208;#nulos;;;123;
+governador;1;3169208;#comparecimento;;;2623;
+governador;1;3169208;#abstencao;;;463;
+governador;1;3169208;#eleitorado;;;3086;
+governador;1;3169307;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2591;S
+governador;1;3169307;_TANCREDONEVES;TANCREDO NEVES;PSD;1763;
+governador;1;3169307;_RIBEIROPENA;RIBEIRO PENA;PSP;85;
+governador;1;3169307;#brancos;;;652;
+governador;1;3169307;#nulos;;;177;
+governador;1;3169307;#comparecimento;;;5268;
+governador;1;3169307;#abstencao;;;834;
+governador;1;3169307;#eleitorado;;;6102;
+governador;1;3169406;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2141;S
+governador;1;3169406;_TANCREDONEVES;TANCREDO NEVES;PSD;1572;
+governador;1;3169406;_RIBEIROPENA;RIBEIRO PENA;PSP;110;
+governador;1;3169406;#brancos;;;435;
+governador;1;3169406;#nulos;;;97;
+governador;1;3169406;#comparecimento;;;4355;
+governador;1;3169406;#abstencao;;;618;
+governador;1;3169406;#eleitorado;;;4973;
+governador;1;3169505;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;611;S
+governador;1;3169505;_TANCREDONEVES;TANCREDO NEVES;PSD;563;
+governador;1;3169505;_RIBEIROPENA;RIBEIRO PENA;PSP;65;
+governador;1;3169505;#brancos;;;144;
+governador;1;3169505;#nulos;;;103;
+governador;1;3169505;#comparecimento;;;1486;
+governador;1;3169505;#abstencao;;;667;
+governador;1;3169505;#eleitorado;;;2153;
+governador;1;3169604;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1601;S
+governador;1;3169604;_TANCREDONEVES;TANCREDO NEVES;PSD;2575;
+governador;1;3169604;_RIBEIROPENA;RIBEIRO PENA;PSP;235;
+governador;1;3169604;#brancos;;;813;
+governador;1;3169604;#nulos;;;378;
+governador;1;3169604;#comparecimento;;;5602;
+governador;1;3169604;#abstencao;;;1518;
+governador;1;3169604;#eleitorado;;;7120;
+governador;1;3169703;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;93;S
+governador;1;3169703;_TANCREDONEVES;TANCREDO NEVES;PSD;621;
+governador;1;3169703;_RIBEIROPENA;RIBEIRO PENA;PSP;12;
+governador;1;3169703;#brancos;;;41;
+governador;1;3169703;#nulos;;;29;
+governador;1;3169703;#comparecimento;;;796;
+governador;1;3169703;#abstencao;;;334;
+governador;1;3169703;#eleitorado;;;1130;
+governador;1;3169901;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;5283;S
+governador;1;3169901;_TANCREDONEVES;TANCREDO NEVES;PSD;3954;
+governador;1;3169901;_RIBEIROPENA;RIBEIRO PENA;PSP;251;
+governador;1;3169901;#brancos;;;1127;
+governador;1;3169901;#nulos;;;264;
+governador;1;3169901;#comparecimento;;;10879;
+governador;1;3169901;#abstencao;;;3637;
+governador;1;3169901;#eleitorado;;;14516;
+governador;1;3170107;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;9519;S
+governador;1;3170107;_TANCREDONEVES;TANCREDO NEVES;PSD;9399;
+governador;1;3170107;_RIBEIROPENA;RIBEIRO PENA;PSP;1211;
+governador;1;3170107;#brancos;;;2293;
+governador;1;3170107;#nulos;;;652;
+governador;1;3170107;#comparecimento;;;23074;
+governador;1;3170107;#abstencao;;;3785;
+governador;1;3170107;#eleitorado;;;26859;
+governador;1;3170206;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;8577;S
+governador;1;3170206;_TANCREDONEVES;TANCREDO NEVES;PSD;10448;
+governador;1;3170206;_RIBEIROPENA;RIBEIRO PENA;PSP;705;
+governador;1;3170206;#brancos;;;2507;
+governador;1;3170206;#nulos;;;800;
+governador;1;3170206;#comparecimento;;;23037;
+governador;1;3170206;#abstencao;;;5724;
+governador;1;3170206;#eleitorado;;;28761;
+governador;1;3170404;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;762;S
+governador;1;3170404;_TANCREDONEVES;TANCREDO NEVES;PSD;1495;
+governador;1;3170404;_RIBEIROPENA;RIBEIRO PENA;PSP;138;
+governador;1;3170404;#brancos;;;451;
+governador;1;3170404;#nulos;;;186;
+governador;1;3170404;#comparecimento;;;3032;
+governador;1;3170404;#abstencao;;;2156;
+governador;1;3170404;#eleitorado;;;5188;
+governador;1;3170602;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;242;S
+governador;1;3170602;_TANCREDONEVES;TANCREDO NEVES;PSD;377;
+governador;1;3170602;_RIBEIROPENA;RIBEIRO PENA;PSP;30;
+governador;1;3170602;#brancos;;;75;
+governador;1;3170602;#nulos;;;36;
+governador;1;3170602;#comparecimento;;;760;
+governador;1;3170602;#abstencao;;;202;
+governador;1;3170602;#eleitorado;;;962;
+governador;1;3170701;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;3400;S
+governador;1;3170701;_TANCREDONEVES;TANCREDO NEVES;PSD;2504;
+governador;1;3170701;_RIBEIROPENA;RIBEIRO PENA;PSP;298;
+governador;1;3170701;#brancos;;;811;
+governador;1;3170701;#nulos;;;246;
+governador;1;3170701;#comparecimento;;;7259;
+governador;1;3170701;#abstencao;;;983;
+governador;1;3170701;#eleitorado;;;8242;
+governador;1;3170800;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;364;S
+governador;1;3170800;_TANCREDONEVES;TANCREDO NEVES;PSD;635;
+governador;1;3170800;_RIBEIROPENA;RIBEIRO PENA;PSP;34;
+governador;1;3170800;#brancos;;;142;
+governador;1;3170800;#nulos;;;44;
+governador;1;3170800;#comparecimento;;;1219;
+governador;1;3170800;#abstencao;;;301;
+governador;1;3170800;#eleitorado;;;1520;
+governador;1;3171006;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;904;S
+governador;1;3171006;_TANCREDONEVES;TANCREDO NEVES;PSD;584;
+governador;1;3171006;_RIBEIROPENA;RIBEIRO PENA;PSP;59;
+governador;1;3171006;#brancos;;;263;
+governador;1;3171006;#nulos;;;100;
+governador;1;3171006;#comparecimento;;;1910;
+governador;1;3171006;#abstencao;;;1609;
+governador;1;3171006;#eleitorado;;;3519;
+governador;1;3171105;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;625;S
+governador;1;3171105;_TANCREDONEVES;TANCREDO NEVES;PSD;435;
+governador;1;3171105;_RIBEIROPENA;RIBEIRO PENA;PSP;56;
+governador;1;3171105;#brancos;;;304;
+governador;1;3171105;#nulos;;;47;
+governador;1;3171105;#comparecimento;;;1467;
+governador;1;3171105;#abstencao;;;439;
+governador;1;3171105;#eleitorado;;;1906;
+governador;1;3171204;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;882;S
+governador;1;3171204;_TANCREDONEVES;TANCREDO NEVES;PSD;786;
+governador;1;3171204;_RIBEIROPENA;RIBEIRO PENA;PSP;60;
+governador;1;3171204;#brancos;;;198;
+governador;1;3171204;#nulos;;;112;
+governador;1;3171204;#comparecimento;;;2038;
+governador;1;3171204;#abstencao;;;394;
+governador;1;3171204;#eleitorado;;;2432;
+governador;1;3171303;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;2579;S
+governador;1;3171303;_TANCREDONEVES;TANCREDO NEVES;PSD;2412;
+governador;1;3171303;_RIBEIROPENA;RIBEIRO PENA;PSP;247;
+governador;1;3171303;#brancos;;;671;
+governador;1;3171303;#nulos;;;265;
+governador;1;3171303;#comparecimento;;;6174;
+governador;1;3171303;#abstencao;;;1662;
+governador;1;3171303;#eleitorado;;;7836;
+governador;1;3171402;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;617;S
+governador;1;3171402;_TANCREDONEVES;TANCREDO NEVES;PSD;345;
+governador;1;3171402;_RIBEIROPENA;RIBEIRO PENA;PSP;11;
+governador;1;3171402;#brancos;;;61;
+governador;1;3171402;#nulos;;;30;
+governador;1;3171402;#comparecimento;;;1064;
+governador;1;3171402;#abstencao;;;164;
+governador;1;3171402;#eleitorado;;;1228;
+governador;1;3171600;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;191;S
+governador;1;3171600;_TANCREDONEVES;TANCREDO NEVES;PSD;637;
+governador;1;3171600;_RIBEIROPENA;RIBEIRO PENA;PSP;25;
+governador;1;3171600;#brancos;;;54;
+governador;1;3171600;#nulos;;;16;
+governador;1;3171600;#comparecimento;;;923;
+governador;1;3171600;#abstencao;;;574;
+governador;1;3171600;#eleitorado;;;1497;
+governador;1;3171709;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;211;S
+governador;1;3171709;_TANCREDONEVES;TANCREDO NEVES;PSD;419;
+governador;1;3171709;_RIBEIROPENA;RIBEIRO PENA;PSP;40;
+governador;1;3171709;#brancos;;;106;
+governador;1;3171709;#nulos;;;21;
+governador;1;3171709;#comparecimento;;;797;
+governador;1;3171709;#abstencao;;;144;
+governador;1;3171709;#eleitorado;;;941;
+governador;1;3171808;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1641;S
+governador;1;3171808;_TANCREDONEVES;TANCREDO NEVES;PSD;1800;
+governador;1;3171808;_RIBEIROPENA;RIBEIRO PENA;PSP;139;
+governador;1;3171808;#brancos;;;542;
+governador;1;3171808;#nulos;;;192;
+governador;1;3171808;#comparecimento;;;4314;
+governador;1;3171808;#abstencao;;;1271;
+governador;1;3171808;#eleitorado;;;5585;
+governador;1;3171907;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1075;S
+governador;1;3171907;_TANCREDONEVES;TANCREDO NEVES;PSD;995;
+governador;1;3171907;_RIBEIROPENA;RIBEIRO PENA;PSP;24;
+governador;1;3171907;#brancos;;;106;
+governador;1;3171907;#nulos;;;101;
+governador;1;3171907;#comparecimento;;;2301;
+governador;1;3171907;#abstencao;;;603;
+governador;1;3171907;#eleitorado;;;2904;
+governador;1;3172004;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;1397;S
+governador;1;3172004;_TANCREDONEVES;TANCREDO NEVES;PSD;3589;
+governador;1;3172004;_RIBEIROPENA;RIBEIRO PENA;PSP;141;
+governador;1;3172004;#brancos;;;334;
+governador;1;3172004;#nulos;;;112;
+governador;1;3172004;#comparecimento;;;5573;
+governador;1;3172004;#abstencao;;;1331;
+governador;1;3172004;#eleitorado;;;6904;
+governador;1;3172103;_JOSEDEMAGALHAESPINTO;JOSÉ DE MAGALHÃES PINTO;UDN;309;S
+governador;1;3172103;_TANCREDONEVES;TANCREDO NEVES;PSD;310;
+governador;1;3172103;_RIBEIROPENA;RIBEIRO PENA;PSP;34;
+governador;1;3172103;#brancos;;;91;
+governador;1;3172103;#nulos;;;35;
+governador;1;3172103;#comparecimento;;;779;
+governador;1;3172103;#abstencao;;;96;
+governador;1;3172103;#eleitorado;;;875;
