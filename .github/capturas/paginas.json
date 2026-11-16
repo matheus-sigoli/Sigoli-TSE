@@ -1,6 +1,11 @@
 {
-  "sp-2022@cel": "/2022/sp/presidente",
-  "sp-1986@cel": "/1986/sp/governador",
-  "sp-2022@tab": "/2022/sp/presidente",
-  "rs-1990-depest": "/1990/rs/deputado-estadual"
+  "rs-1954-gov": "/1954/rs/governador",
+  "rs-1962-sen": "/1962/rs/senador",
+  "rs-1966-sen": "/1966/rs/senador",
+  "rs-1978-depfed": "/1978/rs/deputado-federal",
+  "br-1982-gov": "/1982/br/governador",
+  "pa-1982-gov": "/1982/pa/governador",
+  "pa-1990-gov2": "/1990/pa/governador?t=2",
+  "rn-1990-gov": "/1990/rn/governador",
+  "rs-1958-gov@cel": "/1958/rs/governador"
 }

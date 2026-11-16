@@ -63,7 +63,7 @@ for arq in sorted(f for f in glob.glob('data/tre/[0-9]*/*.csv') if not f.endswit
             elif r['numero'] in idx:
                 m['c'][idx[r['numero']]] += v
                 if prop: m['p'][ip[cands[idx[r['numero']]]['partido']]] += v
-        dois = cargo == 'senador' and ano in (1986,)  # duas vagas: dois votos por eleitor
+        dois = cargo == 'senador' and ano in (1954, 1962, 1970, 1986)  # duas vagas: dois votos por eleitor
         for m in mun.values():
             t = m['t']; t[3] = sum(m['c']) + m.pop('leg', 0)
             if not t[1] and (t[4] or t[5]): t[1] = (t[3] + t[4] + t[5]) // (2 if dois else 1)

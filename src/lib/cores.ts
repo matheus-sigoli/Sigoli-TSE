@@ -52,6 +52,19 @@ const APELIDOS: Record<string, string> = {
 
 // O PSD de antes de 2011 (número 41, incorporado ao PTB em 2003) não é o PSD de hoje (55): cor própria.
 let anoCores = 2026;
+/** República de 1946 (1945–1965): partidos da época; PSD e PTB seguem com a cor que já têm (PSD41 e PTB) */
+const POPULISTA_BASE: Record<string, string> = {
+  UDN45: '#3D7DD8', PL45: '#8B1E2D', PRP45: '#2E7D32', PSP45: '#F28C28', PR45: '#8E44AD', PDC45: '#6D4C41',
+  MTR45: '#C2185B', PTN45: '#9E9D24', PST45: '#9370DB', PRT45: '#5D4037', PCB45: '#B71C1C', PSB45: '#FB0000',
+};
+const POPULISTA_CACHE = new Map<string, EntradaPaleta>();
+const populista = (k: string): EntradaPaleta | undefined => {
+  const base = POPULISTA_BASE[k];
+  if (!base) return undefined;
+  let e = POPULISTA_CACHE.get(k);
+  if (!e) POPULISTA_CACHE.set(k, (e = { principal: gerarFaixas(base), reservas: [] }));
+  return e;
+};
 /** Ano da eleição exibida (as siglas que mudaram de partido com o tempo dependem dele). */
 export const definirAnoCores = (ano: number) => { anoCores = ano; };
 
@@ -98,6 +111,8 @@ export const chavePartido = (sigla: string) => {
   // 1989: PP, PPB e PMB eram outros partidos (sem relação com os de hoje); o PCB de 1989 é o que virou PPS e Cidadania
   if (anoCores < 1990 && (k === 'PP' || k === 'PPB' || k === 'PMB')) return `${k}89`;
   if (anoCores < 1990 && k === 'PCB') return 'CIDADANIA';
+  // República de 1946 (até 1965): siglas que voltaram depois com outro partido têm cor própria (POPULISTA_BASE, acima)
+  if (anoCores < 1966 && POPULISTA_BASE[`${k}45`]) return `${k}45`;
   // bipartidarismo (1966–1979): MDB e ARENA têm cores próprias, uma por sublegenda (DITADURA, abaixo)
   if (anoCores < 1980 && k === 'MDB') return 'MDB66';
   return APELIDOS[k] ?? k;
@@ -105,6 +120,8 @@ export const chavePartido = (sigla: string) => {
 
 export function paletaDoPartido(sigla: string): EntradaPaleta {
   const k = chavePartido(sigla);
+  const pop = populista(k);
+  if (pop) return pop;
   const direto = TABELA.get(k);
   if (direto) {
     const bases = RESERVAS_BASE.get(k);

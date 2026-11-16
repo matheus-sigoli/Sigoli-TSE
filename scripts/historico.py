@@ -106,6 +106,9 @@ def ler_aba(ws, por_nome=None):
             if m: nomes[c] = {'NUMERO': m.group(1), 'NOME': m.group(2).strip(), 'PARTIDO': m.group(3).strip()}; break
     return cand, tot, mun, ufs, nomes
 
+import csv
+CORRECOES = list(csv.DictReader(open('data/historico/correcoes.csv', encoding='utf8'), delimiter=';')) if os.path.exists('data/historico/correcoes.csv') else []
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--de', default='data/historico'); ap.add_argument('--ano', type=int); ap.add_argument('--uf'); ap.add_argument('--cargo')
@@ -143,6 +146,11 @@ def main():
                 lido = ler_aba(wb[nome], por_nome)
                 if not lido: print(f'  {cargo}/{arq} "{nome}": sem coluna CDG, ignorada'); continue
                 cand, tot, mun_todos, ufs_col, nomes_cab = lido
+                # data/historico/correcoes.csv (ano;cargo;de;para;obs): voto lançado na linha do município vizinho da planilha
+                for c in CORRECOES:
+                    if c['ano'] == str(ano) and c['cargo'] in ('', cargo) and c['de'] in mun_todos and not any(any(v) for _, v, _ in mun_todos.get(c['para'], [])):
+                        mun_todos[c['para']] = mun_todos.pop(c['de'])
+                        if c['de'] in ufs_col: ufs_col[c['para']] = ufs_col.pop(c['de'])
                 # planilha com todos os estados (coluna UF): um arquivo por estado. Antes de 1989 o Tocantins era Goiás.
                 grupos = {}
                 for k, v in mun_todos.items():

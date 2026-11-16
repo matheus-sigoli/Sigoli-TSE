@@ -82,12 +82,49 @@ export const ELEICOES: Eleicao[] = [
   {
     ano: 1982, titulo: 'Eleições 1982', datas: '15 de novembro',
     cargos: 'Governador', disponivel: true, rota: '/1982/br/governador', semLocais: true, semZonas: true, soCargos: ['governador'],
-    fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
+    fonte: 'Acervo Sigoli.TSE (por município) e TSE, Dados Estatísticos de 1982 (total de cada estado)',
   },
   {
     ano: 1978, titulo: 'Eleições 1978', datas: '15 de novembro',
-    cargos: 'Senador (por enquanto só São Paulo)', disponivel: true, rota: '/1978/sp/senador', semLocais: true, semZonas: true, soCargos: ['senador'],
-    fonte: 'Acervo Sigoli.TSE (votos válidos por município)',
+    cargos: 'Senador (SP e RS) e Deputados (RS)', disponivel: true, rota: '/1978/sp/senador', semLocais: true, semZonas: true,
+    soCargos: ['senador', 'deputado-federal', 'deputado-estadual'],
+    fonte: 'Acervo Sigoli.TSE e TRE-RS (por município)',
+  },
+  {
+    ano: 1974, titulo: 'Eleições 1974', datas: '15 de novembro',
+    cargos: 'Senador e Deputados (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1974/rs/senador', semLocais: true, semZonas: true,
+    soCargos: ['senador', 'deputado-federal', 'deputado-estadual'],
+    fonte: 'TRE-RS (por município)',
+  },
+  {
+    ano: 1970, titulo: 'Eleições 1970', datas: '15 de novembro',
+    cargos: 'Senador e Deputado Federal (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1970/rs/senador', semLocais: true, semZonas: true,
+    soCargos: ['senador', 'deputado-federal'],
+    fonte: 'TRE-RS (por município)',
+  },
+  {
+    ano: 1966, titulo: 'Eleições 1966', datas: '15 de novembro',
+    cargos: 'Senador e Deputado Federal (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1966/rs/senador', semLocais: true, semZonas: true,
+    soCargos: ['senador', 'deputado-federal'],
+    fonte: 'TRE-RS (por município)',
+  },
+  {
+    ano: 1962, titulo: 'Eleições 1962', datas: '7 de outubro',
+    cargos: 'Governador, Senador e Deputados (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1962/rs/governador', semLocais: true, semZonas: true,
+    soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
+    fonte: 'TRE-RS (por município)',
+  },
+  {
+    ano: 1958, titulo: 'Eleições 1958', datas: '3 de outubro',
+    cargos: 'Governador, Senador e Deputados (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1958/rs/governador', semLocais: true, semZonas: true,
+    soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
+    fonte: 'TRE-RS (por município)',
+  },
+  {
+    ano: 1954, titulo: 'Eleições 1954', datas: '3 de outubro',
+    cargos: 'Governador, Senador e Deputados (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1954/rs/governador', semLocais: true, semZonas: true,
+    soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
+    fonte: 'TRE-RS (por município)',
   },
 ];
 

@@ -1,0 +1,77 @@
+cargo;turno;uf;candidato;partido;votos;eleito;fonte
+governador;1;ac;EDMUNDO PINTO;PDS;;2;
+governador;1;ac;JORGE VIANA;PT;;2;
+governador;1;ac;PMDB;PMDB;;;
+governador;1;ac;PL;PL;;;
+governador;1;ac;PSDB;PSDB;;;
+governador;1;mg;HÉLIO GARCIA;PRS;;2;
+governador;1;mg;HÉLIO COSTA;PRN;;2;
+governador;1;mg;PIMENTA DA VEIGA;PSDB;;;
+governador;1;mg;VIRGÍLIO GUIMARÃES;PT;;;
+governador;1;mg;PMDB;PMDB;;;
+governador;1;mg;PFL;PFL;;;
+governador;1;mg;PST;PST;;;
+governador;1;sp;PAULO MALUF;PDS;;2;
+governador;1;sp;LUIZ ANTÔNIO FLEURY FILHO;PMDB;;2;
+governador;1;sp;MÁRIO COVAS;PSDB;;;
+governador;1;sp;PLÍNIO DE ARRUDA SAMPAIO;PT;;;
+governador;1;sp;PRP;PRP;;;
+governador;1;sp;PLH;PLH;;;
+governador;1;sp;PST;PST;;;
+governador;1;rs;ALCEU DE DEUS COLLARES;PDT;;2;
+governador;1;rs;NELSON MARCHEZAN;PDS;;2;
+governador;1;rs;PMDB;PMDB;;;
+governador;1;rs;TARSO FERNANDO HERZ GENRO;PT;;;
+governador;1;ma;EDISON LOBÃO;PFL;;2;
+governador;1;ma;JOÃO CASTELO;PRN;;2;
+governador;1;ma;CONCEIÇÃO ANDRADE;PSB;;;
+governador;1;ma;PDC;PDC;;;
+governador;1;ma;PST;PST;;;
+governador;1;ce;CIRO FERREIRA GOMES;PSDB;;S;Wikipedia, "Eleições estaduais no Ceará em 1990" (resultado do TRE)
+governador;1;ce;PAULO DE TARSO LUSTOSA DA COSTA;PFL;;;Wikipedia, "Eleições estaduais no Ceará em 1990" (resultado do TRE)
+governador;1;ce;JOAO ALFREDO TELLES MELO;PT;;;Wikipedia, "Eleições estaduais no Ceará em 1990" (resultado do TRE)
+governador;1;ce;JOSE RIBAMAR AGUIAR JUNIOR;PRN;;;Wikipedia, "Eleições estaduais no Ceará em 1990" (resultado do TRE)
+senador;1;ce;BENEDITO CLAYTON VERAS ALCANTARA;PSDB;;S;Wikipedia, "Eleições estaduais no Ceará em 1990" (resultado do TRE)
+senador;1;ce;ANTONIO PAES DE ANDRADE;PMDB;;;Wikipedia, "Eleições estaduais no Ceará em 1990" (resultado do TRE)
+senador;1;ce;ANTONIO DURVAL FERRAZ SOARES;PT;;;Wikipedia, "Eleições estaduais no Ceará em 1990" (resultado do TRE)
+senador;1;ms;LEVY DIAS;PST;;S;Wikipedia, "Eleições estaduais em Mato Grosso do Sul em 1990" (resultado do TRE)
+senador;1;ms;JUVENCIO CESAR DA FONSECA;PMDB;;;Wikipedia, "Eleições estaduais em Mato Grosso do Sul em 1990" (resultado do TRE)
+senador;1;ms;PEDRO TERUEL;PT;;;Wikipedia, "Eleições estaduais em Mato Grosso do Sul em 1990" (resultado do TRE)
+governador;1;rn;JOSE AGRIPINO MAIA;PFL;;2;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;1;rn;LAVOISIER MAIA SOBRINHO;PDT;;2;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;1;rn;SALOMAO GURGEL;PT;;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;1;rn;ANA CATARINA;PTR;;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;1;rn;#brancos;;83667;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;1;rn;#nulos;;112795;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;1;rn;#comparecimento;;1141250;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;2;rn;JOSÉ AGRIPINO;PFL;;S;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;2;rn;LAVOISIER MAIA;PDT;;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;2;rn;#brancos;;21885;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;2;rn;#nulos;;78392;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;2;rn;#comparecimento;;1108573;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+senador;1;rn;GARIBALDI ALVES FILHO;PMDB;;S;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+senador;1;rn;CARLOS ALBERTO DE SOUSA;PDS;;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+senador;1;rn;JOSE DE ANCHIETA FERREIRA LOPES;PC do B;;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+senador;1;rn;#brancos;;275040;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+senador;1;rn;#nulos;;89220;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+senador;1;rn;#comparecimento;;1141250;;Wikipedia, "Eleições estaduais no Rio Grande do Norte em 1990" (resultado do TRE)
+governador;1;pa;JADER FONTENELLE BARBALHO;PMDB;617475;2;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;1;pa;SAHID XERFAN;PTB;547982;2;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;1;pa;ALMIR JOSE DE OLIVEIRA GABRIEL;PSDB;230242;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;1;pa;CARLOS NASCIMENTO LEVY;PMN;19111;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;1;pa;#brancos;;170468;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;1;pa;#nulos;;115261;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;1;pa;#comparecimento;;1700539;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;2;pa;SAHID XERFAN;PTB;701403;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;2;pa;JADER BARBALHO;PMDB;708703;S;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;2;pa;#brancos;;23045;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;2;pa;#nulos;;123983;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;2;pa;#comparecimento;;1557134;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+senador;1;pa;FERNANDO COUTINHO JORGE;PMDB;394795;S;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+senador;1;pa;ADEMIR GALVAO ANDRADE;PSB;384520;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+senador;1;pa;JORGE ARBAGE;PDS;312661;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+senador;1;pa;JOAO MENEZES;PDC;40934;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+senador;1;pa;HELIO VIEIRA DOURADO;PMN;21925;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+senador;1;pa;#brancos;;441642;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+senador;1;pa;#nulos;;104062;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+senador;1;pa;#comparecimento;;1700539;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)

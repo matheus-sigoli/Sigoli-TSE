@@ -41,4 +41,7 @@ for ano in (1986, 1990):
             nome = GOV_1990.get(part, part)
         elif nome in ELEITOS.get(ano, {}).get((cargo, turno), []): eleitos[(cargo, cid)] = 'S'
         linhas.append((cargo, turno, ib, cid, nome, part, v))
+    # município só com brancos/nulos num cargo (linha solta do arquivo, ex.: "CRISTAL DO SUL" em 1986, antes de existir): fora
+    com_voto = {(l[0], l[1], l[2]) for l in linhas if not l[3].startswith('#')}
+    linhas = [l for l in linhas if (l[0], l[1], l[2]) in com_voto]
     gravar(f'data/tre/{ano}/rs.csv', linhas, eleitos, fonte=f'TRE-RS, resultado das eleições de {ano} por município')

@@ -135,6 +135,12 @@ function Painel(p: Props) {
           {arquivo && !arquivo.resumo && arquivo.fonte ? `. Por município: ${arquivo.fonte.split(',')[0]}`
             : p.ano < 1989 || p.ano === 1990 ? `. ${arquivo && !arquivo.resumo && !arquivo.semTotais && arquivo.total.t[1] ? 'Por' : 'Votos válidos, por'} município: acervo Sigoli.TSE` : p.ano === 1989 ? '. Totalização final, por município: Geografia do Voto' : p.ano !== 2026 ? '. Totalização final do TSE' : arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
         </p>
+        {arquivo && !arquivo.resumo && arquivo.oficial ? (
+          <p className="subtitulo">
+            Total do estado: resultado final oficial{arquivo.oficial.fonte ? ` (${arquivo.oficial.fonte.split(',')[0]})` : ''}. O mapa
+            tem os {arquivo.oficial.municipios} municípios com resultado por município.
+          </p>
+        ) : null}
         {cargo.turnos.length > 1 ? (
           <div className="segmentado" role="group" aria-label="Turno">
             {([1, 2] as Turno[]).map((n) => (
@@ -243,7 +249,8 @@ function Painel(p: Props) {
           : p.ano < 1989 || p.ano === 1990 ? <>acervo de planilhas de Matheus Sigoli (votos válidos por município){p.ano === 1978 ? ', conferido com os totais do Senado Federal' : ''}</>
           : p.ano === 1989 ? <><a href="https://geografiadovoto.com/fontes/" target="_blank" rel="noreferrer">Geografia do Voto</a> (IpeaData com correções), conferido com o <a href="https://dadosabertos.tse.jus.br/dataset/resultados-1989" target="_blank" rel="noreferrer">TSE por UF</a>; exterior por país: livros do TSE <i>Eleições 89</i>, Turnos I e II</>
           : <><a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noreferrer">TSE, dados abertos {p.ano}</a>{p.ano === 1994 && p.cargo.slug === 'presidente' ? <>; exterior por país: relatório do TSE <i>Eleições 1994, Exterior</i> (totalização de 12/10/1994)</> : null}</>}.
-        Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.
+        {arquivo && !arquivo.resumo && arquivo.oficial?.fonte ? <> Total do estado: {arquivo.oficial.fonte}.</> : null}
+        {' '}Malha municipal: {MALHA_HISTORICA[p.ano] ? `IBGE, malha municipal histórica de ${MALHA_HISTORICA[p.ano]} (municípios da época)` : 'IBGE 2025'}. Percentuais de candidatos sobre votos válidos.
       </footer>
     </aside>
   );
@@ -363,5 +370,10 @@ function Resumo({ ano, visao, cargo, turno }: { ano: number; visao: Visao; cargo
     </>
   );
 }
+
+/** anos com a malha histórica do IBGE (scripts/malha-historica.mjs): escolhida por UF entre as de 1950 a 1985 */
+const MALHA_HISTORICA: Record<number, string> = {
+  1950: '1950', 1954: '1950', 1958: '1960', 1962: '1960', 1966: '1970', 1970: '1970', 1974: '1975', 1978: '1975', 1982: '1980 e 1985', 1986: '1985',
+};
 
 export default memo(Painel);
