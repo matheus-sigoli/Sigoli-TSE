@@ -17,7 +17,9 @@ def ibge_por_nome(uf):
     lista = [m for m in json.load(open('public/data/2026/municipios.json', encoding='utf8')) if m['uf'] == uf]
     idx = {chave(m['nome']): m['ibge'] for m in lista}
     def achar(nome):
-        k = chave(nome); k = chave(APELIDOS.get(k, k))
+        k = chave(nome)
+        if k in idx: return idx[k]  # o nome exato no estado vale antes do apelido (Trindade-PE × Trindade do Sul-RS)
+        k = chave(APELIDOS.get(k, k))
         if k in idx: return idx[k]
         import difflib
         m = difflib.get_close_matches(k, idx, n=1, cutoff=0.88)

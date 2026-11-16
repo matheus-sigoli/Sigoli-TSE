@@ -1,0 +1,648 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+governador;1;2304400;_RAULBARBOSA;Raul Barbosa;PSD;12708;S
+governador;1;2304400;_RAULBARBOSA;Raul Barbosa;PSD;9431;S
+governador;1;2304400;_RAULBARBOSA;Raul Barbosa;PSD;10805;S
+governador;1;2307700;_RAULBARBOSA;Raul Barbosa;PSD;5277;S
+governador;1;2302107;_RAULBARBOSA;Raul Barbosa;PSD;3073;S
+governador;1;2311306;_RAULBARBOSA;Raul Barbosa;PSD;4770;S
+governador;1;2303501;_RAULBARBOSA;Raul Barbosa;PSD;4285;S
+governador;1;2301109;_RAULBARBOSA;Raul Barbosa;PSD;2812;S
+governador;1;2311801;_RAULBARBOSA;Raul Barbosa;PSD;4037;S
+governador;1;2306900;_RAULBARBOSA;Raul Barbosa;PSD;2155;S
+governador;1;2311405;_RAULBARBOSA;Raul Barbosa;PSD;4541;S
+governador;1;2312700;_RAULBARBOSA;Raul Barbosa;PSD;2295;S
+governador;1;2305506;_RAULBARBOSA;Raul Barbosa;PSD;4081;S
+governador;1;2307502;_RAULBARBOSA;Raul Barbosa;PSD;2827;S
+governador;1;2305407;_RAULBARBOSA;Raul Barbosa;PSD;2338;S
+governador;1;2308401;_RAULBARBOSA;Raul Barbosa;PSD;1609;S
+governador;1;2306405;_RAULBARBOSA;Raul Barbosa;PSD;3804;S
+governador;1;2301604;_RAULBARBOSA;Raul Barbosa;PSD;1869;S
+governador;1;2313302;_RAULBARBOSA;Raul Barbosa;PSD;4228;S
+governador;1;2304103;_RAULBARBOSA;Raul Barbosa;PSD;2382;S
+governador;1;2305803;_RAULBARBOSA;Raul Barbosa;PSD;3558;S
+governador;1;2312304;_RAULBARBOSA;Raul Barbosa;PSD;3157;S
+governador;1;2313807;_RAULBARBOSA;Raul Barbosa;PSD;2573;S
+governador;1;2312908;_RAULBARBOSA;Raul Barbosa;PSD;8655;S
+governador;1;2304707;_RAULBARBOSA;Raul Barbosa;PSD;5070;S
+governador;1;2308302;_RAULBARBOSA;Raul Barbosa;PSD;2195;S
+governador;1;2304202;_RAULBARBOSA;Raul Barbosa;PSD;3509;S
+governador;1;2307304;_RAULBARBOSA;Raul Barbosa;PSD;4323;S
+governador;1;2307601;_RAULBARBOSA;Raul Barbosa;PSD;4988;S
+governador;1;2300200;_RAULBARBOSA;Raul Barbosa;PSD;5061;S
+governador;1;2301901;_RAULBARBOSA;Raul Barbosa;PSD;1592;S
+governador;1;2302602;_RAULBARBOSA;Raul Barbosa;PSD;1870;S
+governador;1;2302800;_RAULBARBOSA;Raul Barbosa;PSD;4209;S
+governador;1;2303808;_RAULBARBOSA;Raul Barbosa;PSD;1499;S
+governador;1;2314102;_RAULBARBOSA;Raul Barbosa;PSD;1673;S
+governador;1;2312403;_RAULBARBOSA;Raul Barbosa;PSD;3902;S
+governador;1;2303709;_RAULBARBOSA;Raul Barbosa;PSD;2872;S
+governador;1;2302701;_RAULBARBOSA;Raul Barbosa;PSD;1671;S
+governador;1;2305605;_RAULBARBOSA;Raul Barbosa;PSD;3317;S
+governador;1;2305902;_RAULBARBOSA;Raul Barbosa;PSD;2595;S
+governador;1;2306306;_RAULBARBOSA;Raul Barbosa;PSD;4307;S
+governador;1;2304400;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;5004;
+governador;1;2304400;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3900;
+governador;1;2304400;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3023;
+governador;1;2307700;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2412;
+governador;1;2302107;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1922;
+governador;1;2311306;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;4198;
+governador;1;2303501;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2349;
+governador;1;2301109;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3738;
+governador;1;2311801;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3195;
+governador;1;2306900;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2327;
+governador;1;2311405;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2921;
+governador;1;2312700;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2788;
+governador;1;2305506;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3614;
+governador;1;2307502;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1988;
+governador;1;2305407;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3458;
+governador;1;2308401;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2274;
+governador;1;2306405;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;5055;
+governador;1;2301604;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1487;
+governador;1;2313302;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;4406;
+governador;1;2304103;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;4020;
+governador;1;2305803;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3814;
+governador;1;2312304;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3020;
+governador;1;2313807;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2038;
+governador;1;2312908;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;6239;
+governador;1;2304707;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3196;
+governador;1;2308302;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2733;
+governador;1;2304202;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;4150;
+governador;1;2307304;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2000;
+governador;1;2307601;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3694;
+governador;1;2300200;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;5162;
+governador;1;2301901;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1495;
+governador;1;2302602;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2687;
+governador;1;2302800;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2637;
+governador;1;2303808;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2450;
+governador;1;2314102;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1675;
+governador;1;2312403;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3801;
+governador;1;2303709;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3598;
+governador;1;2302701;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1855;
+governador;1;2305605;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2750;
+governador;1;2305902;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3159;
+governador;1;2306306;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2362;
+governador;1;2304400;#brancos;;;1301;
+governador;1;2304400;#brancos;;;1138;
+governador;1;2304400;#brancos;;;1026;
+governador;1;2307700;#brancos;;;220;
+governador;1;2302107;#brancos;;;113;
+governador;1;2311306;#brancos;;;297;
+governador;1;2303501;#brancos;;;111;
+governador;1;2301109;#brancos;;;91;
+governador;1;2311801;#brancos;;;105;
+governador;1;2306900;#brancos;;;43;
+governador;1;2311405;#brancos;;;133;
+governador;1;2312700;#brancos;;;136;
+governador;1;2305506;#brancos;;;12;
+governador;1;2307502;#brancos;;;84;
+governador;1;2305407;#brancos;;;238;
+governador;1;2308401;#brancos;;;113;
+governador;1;2306405;#brancos;;;158;
+governador;1;2301604;#brancos;;;127;
+governador;1;2313302;#brancos;;;195;
+governador;1;2304103;#brancos;;;150;
+governador;1;2305803;#brancos;;;165;
+governador;1;2312304;#brancos;;;126;
+governador;1;2313807;#brancos;;;149;
+governador;1;2312908;#brancos;;;355;
+governador;1;2304707;#brancos;;;179;
+governador;1;2308302;#brancos;;;42;
+governador;1;2304202;#brancos;;;385;
+governador;1;2307304;#brancos;;;231;
+governador;1;2307601;#brancos;;;139;
+governador;1;2300200;#brancos;;;167;
+governador;1;2301901;#brancos;;;93;
+governador;1;2302602;#brancos;;;294;
+governador;1;2302800;#brancos;;;313;
+governador;1;2303808;#brancos;;;152;
+governador;1;2314102;#brancos;;;33;
+governador;1;2312403;#brancos;;;175;
+governador;1;2303709;#brancos;;;164;
+governador;1;2302701;#brancos;;;93;
+governador;1;2305605;#brancos;;;118;
+governador;1;2305902;#brancos;;;80;
+governador;1;2306306;#brancos;;;162;
+governador;1;2304400;#nulos;;;547;
+governador;1;2304400;#nulos;;;980;
+governador;1;2304400;#nulos;;;70;
+governador;1;2307700;#nulos;;;180;
+governador;1;2302107;#nulos;;;251;
+governador;1;2311306;#nulos;;;11;
+governador;1;2303501;#nulos;;;265;
+governador;1;2301109;#nulos;;;0;
+governador;1;2311801;#nulos;;;26;
+governador;1;2306900;#nulos;;;33;
+governador;1;2311405;#nulos;;;34;
+governador;1;2312700;#nulos;;;129;
+governador;1;2305506;#nulos;;;311;
+governador;1;2307502;#nulos;;;89;
+governador;1;2305407;#nulos;;;277;
+governador;1;2308401;#nulos;;;18;
+governador;1;2306405;#nulos;;;227;
+governador;1;2301604;#nulos;;;85;
+governador;1;2313302;#nulos;;;18;
+governador;1;2304103;#nulos;;;0;
+governador;1;2305803;#nulos;;;40;
+governador;1;2312304;#nulos;;;0;
+governador;1;2313807;#nulos;;;42;
+governador;1;2312908;#nulos;;;108;
+governador;1;2304707;#nulos;;;7;
+governador;1;2308302;#nulos;;;112;
+governador;1;2304202;#nulos;;;122;
+governador;1;2307304;#nulos;;;276;
+governador;1;2307601;#nulos;;;1;
+governador;1;2300200;#nulos;;;504;
+governador;1;2301901;#nulos;;;37;
+governador;1;2302602;#nulos;;;39;
+governador;1;2302800;#nulos;;;3;
+governador;1;2303808;#nulos;;;81;
+governador;1;2314102;#nulos;;;211;
+governador;1;2312403;#nulos;;;28;
+governador;1;2303709;#nulos;;;80;
+governador;1;2302701;#nulos;;;251;
+governador;1;2305605;#nulos;;;20;
+governador;1;2305902;#nulos;;;383;
+governador;1;2306306;#nulos;;;226;
+governador;1;2307106;_RAULBARBOSA;Raul Barbosa;PSD;1072;S
+governador;1;2307403;_RAULBARBOSA;Raul Barbosa;PSD;2653;S
+governador;1;2312007;_RAULBARBOSA;Raul Barbosa;PSD;2802;S
+governador;1;2308005;_RAULBARBOSA;Raul Barbosa;PSD;2760;S
+governador;1;2308500;_RAULBARBOSA;Raul Barbosa;PSD;2347;S
+governador;1;2308708;_RAULBARBOSA;Raul Barbosa;PSD;2980;S
+governador;1;2309300;_RAULBARBOSA;Raul Barbosa;PSD;2814;S
+governador;1;2309607;_RAULBARBOSA;Raul Barbosa;PSD;2526;S
+governador;1;2310704;_RAULBARBOSA;Raul Barbosa;PSD;3448;S
+governador;1;2310803;_RAULBARBOSA;Raul Barbosa;PSD;2455;S
+governador;1;2311603;_RAULBARBOSA;Raul Barbosa;PSD;2480;S
+governador;1;2312106;_RAULBARBOSA;Raul Barbosa;PSD;608;S
+governador;1;2312205;_RAULBARBOSA;Raul Barbosa;PSD;3529;S
+governador;1;2313005;_RAULBARBOSA;Raul Barbosa;PSD;2181;S
+governador;1;2313609;_RAULBARBOSA;Raul Barbosa;PSD;1205;S
+governador;1;2309706;_RAULBARBOSA;Raul Barbosa;PSD;1606;S
+governador;1;2301802;_RAULBARBOSA;Raul Barbosa;PSD;2262;S
+governador;1;2310506;_RAULBARBOSA;Raul Barbosa;PSD;2768;S
+governador;1;2300309;_RAULBARBOSA;Raul Barbosa;PSD;2727;S
+governador;1;2313203;_RAULBARBOSA;Raul Barbosa;PSD;1967;S
+governador;1;2314003;_RAULBARBOSA;Raul Barbosa;PSD;2701;S
+governador;1;2302404;_RAULBARBOSA;Raul Barbosa;PSD;2205;S
+governador;1;2304004;_RAULBARBOSA;Raul Barbosa;PSD;2642;S
+governador;1;2303105;_RAULBARBOSA;Raul Barbosa;PSD;2843;S
+governador;1;2301000;_RAULBARBOSA;Raul Barbosa;PSD;1496;S
+governador;1;2301208;_RAULBARBOSA;Raul Barbosa;PSD;1691;S
+governador;1;2301307;_RAULBARBOSA;Raul Barbosa;PSD;1655;S
+governador;1;2301703;_RAULBARBOSA;Raul Barbosa;PSD;1944;S
+governador;1;2302503;_RAULBARBOSA;Raul Barbosa;PSD;2453;S
+governador;1;2303204;_RAULBARBOSA;Raul Barbosa;PSD;1679;S
+governador;1;2306702;_RAULBARBOSA;Raul Barbosa;PSD;1627;S
+governador;1;2305308;_RAULBARBOSA;Raul Barbosa;PSD;2577;S
+governador;1;2305001;_RAULBARBOSA;Raul Barbosa;PSD;1709;S
+governador;1;2307007;_RAULBARBOSA;Raul Barbosa;PSD;2889;S
+governador;1;2308104;_RAULBARBOSA;Raul Barbosa;PSD;960;S
+governador;1;2309805;_RAULBARBOSA;Raul Barbosa;PSD;1889;S
+governador;1;2304301;_RAULBARBOSA;Raul Barbosa;PSD;1493;S
+governador;1;2311702;_RAULBARBOSA;Raul Barbosa;PSD;1652;S
+governador;1;2311900;_RAULBARBOSA;Raul Barbosa;PSD;2805;S
+governador;1;2313401;_RAULBARBOSA;Raul Barbosa;PSD;1109;S
+governador;1;2307106;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2317;
+governador;1;2307403;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2539;
+governador;1;2312007;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1697;
+governador;1;2308005;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2258;
+governador;1;2308500;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2485;
+governador;1;2308708;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3198;
+governador;1;2309300;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2780;
+governador;1;2309607;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;947;
+governador;1;2310704;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1989;
+governador;1;2310803;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2390;
+governador;1;2311603;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1388;
+governador;1;2312106;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2868;
+governador;1;2312205;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;3512;
+governador;1;2313005;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2469;
+governador;1;2313609;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2213;
+governador;1;2309706;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1768;
+governador;1;2301802;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1557;
+governador;1;2310506;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;406;
+governador;1;2300309;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2286;
+governador;1;2313203;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2841;
+governador;1;2314003;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2505;
+governador;1;2302404;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1213;
+governador;1;2304004;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2048;
+governador;1;2303105;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1874;
+governador;1;2301000;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;784;
+governador;1;2301208;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1325;
+governador;1;2301307;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;596;
+governador;1;2301703;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2451;
+governador;1;2302503;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2491;
+governador;1;2303204;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1004;
+governador;1;2306702;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1290;
+governador;1;2305308;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2316;
+governador;1;2305001;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1238;
+governador;1;2307007;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2397;
+governador;1;2308104;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1327;
+governador;1;2309805;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1284;
+governador;1;2304301;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1150;
+governador;1;2311702;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1966;
+governador;1;2311900;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;2180;
+governador;1;2313401;_EDGARCAVALCANTEDEARRUDA;Edgar Cavalcante De Arruda;UDN;1602;
+governador;1;2307106;#brancos;;;9;
+governador;1;2307403;#brancos;;;198;
+governador;1;2312007;#brancos;;;150;
+governador;1;2308005;#brancos;;;88;
+governador;1;2308500;#brancos;;;75;
+governador;1;2308708;#brancos;;;142;
+governador;1;2309300;#brancos;;;99;
+governador;1;2309607;#brancos;;;117;
+governador;1;2310704;#brancos;;;145;
+governador;1;2310803;#brancos;;;8;
+governador;1;2311603;#brancos;;;163;
+governador;1;2312106;#brancos;;;4;
+governador;1;2312205;#brancos;;;108;
+governador;1;2313005;#brancos;;;82;
+governador;1;2313609;#brancos;;;44;
+governador;1;2309706;#brancos;;;80;
+governador;1;2301802;#brancos;;;59;
+governador;1;2310506;#brancos;;;105;
+governador;1;2300309;#brancos;;;146;
+governador;1;2313203;#brancos;;;48;
+governador;1;2314003;#brancos;;;68;
+governador;1;2302404;#brancos;;;43;
+governador;1;2304004;#brancos;;;60;
+governador;1;2303105;#brancos;;;49;
+governador;1;2301000;#brancos;;;44;
+governador;1;2301208;#brancos;;;64;
+governador;1;2301307;#brancos;;;40;
+governador;1;2301703;#brancos;;;55;
+governador;1;2302503;#brancos;;;108;
+governador;1;2303204;#brancos;;;96;
+governador;1;2306702;#brancos;;;37;
+governador;1;2305308;#brancos;;;101;
+governador;1;2305001;#brancos;;;41;
+governador;1;2307007;#brancos;;;47;
+governador;1;2308104;#brancos;;;61;
+governador;1;2309805;#brancos;;;148;
+governador;1;2304301;#brancos;;;46;
+governador;1;2311702;#brancos;;;54;
+governador;1;2311900;#brancos;;;233;
+governador;1;2313401;#brancos;;;56;
+governador;1;2307106;#nulos;;;73;
+governador;1;2307403;#nulos;;;2;
+governador;1;2312007;#nulos;;;56;
+governador;1;2308005;#nulos;;;158;
+governador;1;2308500;#nulos;;;5;
+governador;1;2308708;#nulos;;;6;
+governador;1;2309300;#nulos;;;70;
+governador;1;2309607;#nulos;;;12;
+governador;1;2310704;#nulos;;;136;
+governador;1;2310803;#nulos;;;119;
+governador;1;2311603;#nulos;;;287;
+governador;1;2312106;#nulos;;;87;
+governador;1;2312205;#nulos;;;21;
+governador;1;2313005;#nulos;;;43;
+governador;1;2313609;#nulos;;;68;
+governador;1;2309706;#nulos;;;18;
+governador;1;2301802;#nulos;;;20;
+governador;1;2310506;#nulos;;;25;
+governador;1;2300309;#nulos;;;15;
+governador;1;2313203;#nulos;;;8;
+governador;1;2314003;#nulos;;;72;
+governador;1;2302404;#nulos;;;27;
+governador;1;2304004;#nulos;;;69;
+governador;1;2303105;#nulos;;;3;
+governador;1;2301000;#nulos;;;32;
+governador;1;2301208;#nulos;;;2;
+governador;1;2301307;#nulos;;;6;
+governador;1;2301703;#nulos;;;23;
+governador;1;2302503;#nulos;;;74;
+governador;1;2303204;#nulos;;;91;
+governador;1;2306702;#nulos;;;23;
+governador;1;2305308;#nulos;;;87;
+governador;1;2305001;#nulos;;;3;
+governador;1;2307007;#nulos;;;156;
+governador;1;2308104;#nulos;;;87;
+governador;1;2309805;#nulos;;;48;
+governador;1;2304301;#nulos;;;24;
+governador;1;2311702;#nulos;;;5;
+governador;1;2311900;#nulos;;;672;
+governador;1;2313401;#nulos;;;1;
+senador;1;2304400;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;10153;S
+senador;1;2304400;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;7303;S
+senador;1;2304400;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;7920;S
+senador;1;2307700;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;5131;S
+senador;1;2302107;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2878;S
+senador;1;2311306;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;7171;S
+senador;1;2303501;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3872;S
+senador;1;2301109;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2631;S
+senador;1;2311801;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4076;S
+senador;1;2306900;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2068;S
+senador;1;2311405;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4561;S
+senador;1;2312700;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2162;S
+senador;1;2305506;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3859;S
+senador;1;2307502;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2800;S
+senador;1;2305407;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2296;S
+senador;1;2308401;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1572;S
+senador;1;2306405;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3637;S
+senador;1;2301604;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1785;S
+senador;1;2313302;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4152;S
+senador;1;2304103;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2251;S
+senador;1;2305803;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3431;S
+senador;1;2312304;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2960;S
+senador;1;2313807;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2312;S
+senador;1;2312908;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;8320;S
+senador;1;2304707;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4953;S
+senador;1;2308302;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2121;S
+senador;1;2304202;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3332;S
+senador;1;2307304;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3981;S
+senador;1;2307601;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4913;S
+senador;1;2300200;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4651;S
+senador;1;2301901;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1517;S
+senador;1;2302602;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1605;S
+senador;1;2302800;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4098;S
+senador;1;2303808;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1382;S
+senador;1;2314102;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1659;S
+senador;1;2312403;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4004;S
+senador;1;2303709;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2540;S
+senador;1;2302701;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1620;S
+senador;1;2305605;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3254;S
+senador;1;2305902;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2567;S
+senador;1;2306306;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;4193;S
+senador;1;2304400;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;5715;
+senador;1;2304400;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;4475;
+senador;1;2304400;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3828;
+senador;1;2307700;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2447;
+senador;1;2302107;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1988;
+senador;1;2311306;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1432;
+senador;1;2303501;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2253;
+senador;1;2301109;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3796;
+senador;1;2311801;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3009;
+senador;1;2306900;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2363;
+senador;1;2311405;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2781;
+senador;1;2312700;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2711;
+senador;1;2305506;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3653;
+senador;1;2307502;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1992;
+senador;1;2305407;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3047;
+senador;1;2308401;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2286;
+senador;1;2306405;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;5075;
+senador;1;2301604;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1409;
+senador;1;2313302;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;4274;
+senador;1;2304103;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;4063;
+senador;1;2305803;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3844;
+senador;1;2312304;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3015;
+senador;1;2313807;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2109;
+senador;1;2312908;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;6221;
+senador;1;2304707;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3220;
+senador;1;2308302;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2721;
+senador;1;2304202;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3958;
+senador;1;2307304;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1906;
+senador;1;2307601;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3645;
+senador;1;2300200;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;5172;
+senador;1;2301901;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1488;
+senador;1;2302602;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2820;
+senador;1;2302800;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2700;
+senador;1;2303808;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2495;
+senador;1;2314102;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1668;
+senador;1;2312403;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3542;
+senador;1;2303709;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3780;
+senador;1;2302701;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1864;
+senador;1;2305605;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2698;
+senador;1;2305902;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3083;
+senador;1;2306306;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2373;
+senador;1;2304400;#brancos;;;3145;
+senador;1;2304400;#brancos;;;2691;
+senador;1;2304400;#brancos;;;3075;
+senador;1;2307700;#brancos;;;290;
+senador;1;2302107;#brancos;;;239;
+senador;1;2311306;#brancos;;;668;
+senador;1;2303501;#brancos;;;628;
+senador;1;2301109;#brancos;;;214;
+senador;1;2311801;#brancos;;;251;
+senador;1;2306900;#brancos;;;96;
+senador;1;2311405;#brancos;;;253;
+senador;1;2312700;#brancos;;;349;
+senador;1;2305506;#brancos;;;12;
+senador;1;2307502;#brancos;;;109;
+senador;1;2305407;#brancos;;;697;
+senador;1;2308401;#brancos;;;148;
+senador;1;2306405;#brancos;;;297;
+senador;1;2301604;#brancos;;;291;
+senador;1;2313302;#brancos;;;403;
+senador;1;2304103;#brancos;;;238;
+senador;1;2305803;#brancos;;;259;
+senador;1;2312304;#brancos;;;328;
+senador;1;2313807;#brancos;;;339;
+senador;1;2312908;#brancos;;;722;
+senador;1;2304707;#brancos;;;272;
+senador;1;2308302;#brancos;;;77;
+senador;1;2304202;#brancos;;;754;
+senador;1;2307304;#brancos;;;651;
+senador;1;2307601;#brancos;;;264;
+senador;1;2300200;#brancos;;;567;
+senador;1;2301901;#brancos;;;178;
+senador;1;2302602;#brancos;;;434;
+senador;1;2302800;#brancos;;;357;
+senador;1;2303808;#brancos;;;225;
+senador;1;2314102;#brancos;;;54;
+senador;1;2312403;#brancos;;;336;
+senador;1;2303709;#brancos;;;377;
+senador;1;2302701;#brancos;;;139;
+senador;1;2305605;#brancos;;;241;
+senador;1;2305902;#brancos;;;100;
+senador;1;2306306;#brancos;;;261;
+senador;1;2304400;#nulos;;;547;
+senador;1;2304400;#nulos;;;980;
+senador;1;2304400;#nulos;;;101;
+senador;1;2307700;#nulos;;;221;
+senador;1;2302107;#nulos;;;254;
+senador;1;2311306;#nulos;;;5;
+senador;1;2303501;#nulos;;;257;
+senador;1;2301109;#nulos;;;0;
+senador;1;2311801;#nulos;;;27;
+senador;1;2306900;#nulos;;;31;
+senador;1;2311405;#nulos;;;34;
+senador;1;2312700;#nulos;;;126;
+senador;1;2305506;#nulos;;;494;
+senador;1;2307502;#nulos;;;87;
+senador;1;2305407;#nulos;;;271;
+senador;1;2308401;#nulos;;;8;
+senador;1;2306405;#nulos;;;235;
+senador;1;2301604;#nulos;;;83;
+senador;1;2313302;#nulos;;;18;
+senador;1;2304103;#nulos;;;0;
+senador;1;2305803;#nulos;;;43;
+senador;1;2312304;#nulos;;;0;
+senador;1;2313807;#nulos;;;42;
+senador;1;2312908;#nulos;;;94;
+senador;1;2304707;#nulos;;;7;
+senador;1;2308302;#nulos;;;163;
+senador;1;2304202;#nulos;;;122;
+senador;1;2307304;#nulos;;;292;
+senador;1;2307601;#nulos;;;0;
+senador;1;2300200;#nulos;;;504;
+senador;1;2301901;#nulos;;;34;
+senador;1;2302602;#nulos;;;31;
+senador;1;2302800;#nulos;;;7;
+senador;1;2303808;#nulos;;;80;
+senador;1;2314102;#nulos;;;211;
+senador;1;2312403;#nulos;;;24;
+senador;1;2303709;#nulos;;;17;
+senador;1;2302701;#nulos;;;247;
+senador;1;2305605;#nulos;;;12;
+senador;1;2305902;#nulos;;;467;
+senador;1;2306306;#nulos;;;230;
+senador;1;2307106;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1019;S
+senador;1;2307403;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2450;S
+senador;1;2312007;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2920;S
+senador;1;2308005;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2727;S
+senador;1;2308500;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2305;S
+senador;1;2308708;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2613;S
+senador;1;2309300;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2767;S
+senador;1;2309607;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2447;S
+senador;1;2310704;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3343;S
+senador;1;2310803;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2428;S
+senador;1;2311603;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2048;S
+senador;1;2312106;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;490;S
+senador;1;2312205;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;3474;S
+senador;1;2313005;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2141;S
+senador;1;2313609;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1192;S
+senador;1;2309706;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1517;S
+senador;1;2301802;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2277;S
+senador;1;2310506;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2734;S
+senador;1;2300309;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2684;S
+senador;1;2313203;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1934;S
+senador;1;2314003;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2700;S
+senador;1;2302404;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2175;S
+senador;1;2304004;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2573;S
+senador;1;2303105;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2809;S
+senador;1;2301000;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1466;S
+senador;1;2301208;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1628;S
+senador;1;2301307;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1618;S
+senador;1;2301703;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1865;S
+senador;1;2302503;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2401;S
+senador;1;2303204;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1592;S
+senador;1;2306702;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1921;S
+senador;1;2305308;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2556;S
+senador;1;2305001;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1697;S
+senador;1;2307007;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2829;S
+senador;1;2308104;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1147;S
+senador;1;2309805;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1643;S
+senador;1;2304301;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1455;S
+senador;1;2311702;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1634;S
+senador;1;2311900;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;2697;S
+senador;1;2313401;_ONOFREMUNIZGOMESDELIMA;Onofre Muniz Gomes De Lima;PSD;1098;S
+senador;1;2307106;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2233;
+senador;1;2307403;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2558;
+senador;1;2312007;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1669;
+senador;1;2308005;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2273;
+senador;1;2308500;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2431;
+senador;1;2308708;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3457;
+senador;1;2309300;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2786;
+senador;1;2309607;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;936;
+senador;1;2310704;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1413;
+senador;1;2310803;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2403;
+senador;1;2311603;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1584;
+senador;1;2312106;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2965;
+senador;1;2312205;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;3488;
+senador;1;2313005;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2478;
+senador;1;2313609;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2170;
+senador;1;2309706;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1779;
+senador;1;2301802;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1548;
+senador;1;2310506;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;406;
+senador;1;2300309;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2305;
+senador;1;2313203;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2811;
+senador;1;2314003;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2521;
+senador;1;2302404;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1132;
+senador;1;2304004;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2056;
+senador;1;2303105;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1868;
+senador;1;2301000;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;766;
+senador;1;2301208;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1313;
+senador;1;2301307;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;580;
+senador;1;2301703;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2447;
+senador;1;2302503;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2504;
+senador;1;2303204;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1005;
+senador;1;2306702;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;915;
+senador;1;2305308;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2300;
+senador;1;2305001;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1227;
+senador;1;2307007;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2427;
+senador;1;2308104;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1043;
+senador;1;2309805;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1296;
+senador;1;2304301;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1141;
+senador;1;2311702;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1958;
+senador;1;2311900;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;2193;
+senador;1;2313401;_MANUELDONASCIMENTOFERNANDESTAVORA;Manuel Do Nascimento Fernandes Tavora;UDN;1598;
+senador;1;2307106;#brancos;;;1;
+senador;1;2307403;#brancos;;;384;
+senador;1;2312007;#brancos;;;101;
+senador;1;2308005;#brancos;;;106;
+senador;1;2308500;#brancos;;;171;
+senador;1;2308708;#brancos;;;251;
+senador;1;2309300;#brancos;;;142;
+senador;1;2309607;#brancos;;;213;
+senador;1;2310704;#brancos;;;840;
+senador;1;2310803;#brancos;;;11;
+senador;1;2311603;#brancos;;;399;
+senador;1;2312106;#brancos;;;4;
+senador;1;2312205;#brancos;;;187;
+senador;1;2313005;#brancos;;;105;
+senador;1;2313609;#brancos;;;100;
+senador;1;2309706;#brancos;;;153;
+senador;1;2301802;#brancos;;;53;
+senador;1;2310506;#brancos;;;139;
+senador;1;2300309;#brancos;;;168;
+senador;1;2313203;#brancos;;;113;
+senador;1;2314003;#brancos;;;61;
+senador;1;2302404;#brancos;;;152;
+senador;1;2304004;#brancos;;;131;
+senador;1;2303105;#brancos;;;87;
+senador;1;2301000;#brancos;;;92;
+senador;1;2301208;#brancos;;;137;
+senador;1;2301307;#brancos;;;91;
+senador;1;2301703;#brancos;;;135;
+senador;1;2302503;#brancos;;;142;
+senador;1;2303204;#brancos;;;190;
+senador;1;2306702;#brancos;;;72;
+senador;1;2305308;#brancos;;;138;
+senador;1;2305001;#brancos;;;64;
+senador;1;2307007;#brancos;;;77;
+senador;1;2308104;#brancos;;;158;
+senador;1;2309805;#brancos;;;382;
+senador;1;2304301;#brancos;;;93;
+senador;1;2311702;#brancos;;;77;
+senador;1;2311900;#brancos;;;328;
+senador;1;2313401;#brancos;;;71;
+senador;1;2307106;#nulos;;;218;
+senador;1;2312007;#nulos;;;15;
+senador;1;2308005;#nulos;;;158;
+senador;1;2308500;#nulos;;;5;
+senador;1;2308708;#nulos;;;5;
+senador;1;2309300;#nulos;;;68;
+senador;1;2309607;#nulos;;;6;
+senador;1;2310704;#nulos;;;122;
+senador;1;2310803;#nulos;;;130;
+senador;1;2311603;#nulos;;;287;
+senador;1;2312106;#nulos;;;108;
+senador;1;2312205;#nulos;;;21;
+senador;1;2313005;#nulos;;;51;
+senador;1;2313609;#nulos;;;68;
+senador;1;2309706;#nulos;;;23;
+senador;1;2301802;#nulos;;;20;
+senador;1;2310506;#nulos;;;25;
+senador;1;2300309;#nulos;;;17;
+senador;1;2313203;#nulos;;;6;
+senador;1;2314003;#nulos;;;64;
+senador;1;2302404;#nulos;;;29;
+senador;1;2304004;#nulos;;;59;
+senador;1;2303105;#nulos;;;5;
+senador;1;2301000;#nulos;;;32;
+senador;1;2301208;#nulos;;;4;
+senador;1;2301307;#nulos;;;8;
+senador;1;2301703;#nulos;;;26;
+senador;1;2302503;#nulos;;;79;
+senador;1;2303204;#nulos;;;83;
+senador;1;2306702;#nulos;;;69;
+senador;1;2305308;#nulos;;;87;
+senador;1;2305001;#nulos;;;3;
+senador;1;2307007;#nulos;;;156;
+senador;1;2308104;#nulos;;;87;
+senador;1;2309805;#nulos;;;48;
+senador;1;2304301;#nulos;;;24;
+senador;1;2311702;#nulos;;;8;
+senador;1;2311900;#nulos;;;672;
+senador;1;2313401;#nulos;;;1;

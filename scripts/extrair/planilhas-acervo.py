@@ -16,6 +16,7 @@ from comum import chave, gravar, APELIDOS
 ACERVO = '/mnt/user-data/uploads/Acervo de Mapas - Governador/Mapas'
 XLSX = os.environ.get('XLSX_CONVERTIDOS', '/tmp/claude-0/-home-claude/49e12fad-3ad5-5fd2-8d63-4cfafb1b1765/scratchpad/xls')
 LISTA = [m for m in json.load(open('public/data/2026/municipios.json', encoding='utf8')) if m['uf'] != 'zz']
+CODIGOS = {m['ibge'] for m in LISTA}
 
 EXTRA = {'PIUI': 'PIUMHI', 'VASANTE': 'VAZANTE', 'POROXEU': 'POXOREU', 'CARCERES': 'CACERES', 'AMAMBI': 'AMAMBAI',
          'BARREIROGRANDE': 'TRES MARIAS', 'TAQUARACU': 'TAQUARACU DE MINAS',
@@ -64,6 +65,12 @@ FONTES = [
      {1: ('LUIZ ROCHA', 'PDS'), 2: ('RENATO ARCHER', 'PMDB'), 3: ('PT', 'PT'), 4: ('PDT', 'PDT'), 5: ('PTB', 'PTB')}, {}, 'Relatório do Maranhão 1982-1990 (acervo)'),
     (1986, 'ma', 'governador', f'{ACERVO}/MA/Resultados/Maranhão 1982-1990 Relatorio.xlsx', 'Governador do Estado - 1986', 1,
      {1: ('JOÃO CASTELO', 'PDS'), 2: ('EPITÁCIO CAFETEIRA', 'PMDB'), 3: ('PT', 'PT')}, {}, 'Relatório do Maranhão 1982-1990 (acervo)'),
+    # BA: coluna 0 = código IBGE, coluna 1 = nome; candidatos sem nome na planilha ficam com a sigla do partido
+    (1986, 'ba', 'governador', f'{ACERVO}/BA/Resultados/BA 1986.xlsx', None, 0,
+     {2: ('WALDIR PIRES', 'PMDB'), 3: ('JOSAPHAT MARINHO', 'PFL'), 4: ('PMB', 'PMB'), 5: ('PH', 'PH')}, {}, 'Planilha BA 1986 do acervo'),
+    (1990, 'ba', 'governador', f'{ACERVO}/BA/Resultados/BA 1990.xlsx', None, 0,
+     {2: ('ANTÔNIO CARLOS MAGALHÃES', 'PFL'), 3: ('ROBERTO SANTOS', 'PMDB'), 4: ('LÍDICE DA MATA', 'PCdoB'), 5: ('PSC', 'PSC'),
+      6: ('SÉRGIO GABRIELLI', 'PT'), 7: ('PMN', 'PMN')}, {}, 'Planilha BA 1990 do acervo'),
     (1965, 'rn', 'governador', f'{ACERVO}/RN/Resultados/RN 1965.xlsx', None, 2,
      {1: ('WALFREDO GURGEL', 'PSD'), 2: ('DINARTE MARIZ', 'UDN')}, {3: '#brancos', 4: '#nulos', 5: '#comparecimento'}, 'Planilha RN 1965 do acervo'),
 ]
@@ -95,14 +102,14 @@ for ano, uf, cargo, arq, aba, cab, cands, tots, fonte in FONTES:
     fontes.add(fonte)
     soma = collections.Counter(); sede = None; distritos = (ano, uf) in DISTRITOS
     for r in list(ws.iter_rows(values_only=True))[cab + 1:]:
-        nome = (r[1] if (ano, uf) in ZONA else r[0]) if r else None
+        nome = (r[1] if (ano, uf) in ZONA or (r and isinstance(r[0], (int, float))) else r[0]) if r else None
         if isinstance(nome, str) and distritos and nome.strip() and nome.strip() != nome.strip().upper():
             # município (minúsculas) da zona da sede acima; o que não é município hoje (distrito) vai para a sede
             if not achar_quieto(nome): nome = sede
         elif isinstance(nome, str): sede = nome
         if not isinstance(nome, str) or not nome.strip() or PULAR.match(nome.strip()): continue
         nome = re.sub(r'^\d+°\s*', '', nome.strip())
-        ib = achar(nome)
+        ib = str(int(r[0])) if isinstance(r[0], (int, float)) and str(int(r[0])) in CODIGOS else achar(nome)
         if not ib: continue
         num = lambda c: int(r[c]) if c < len(r) and isinstance(r[c], (int, float)) else 0
         if not any(num(c) for c in cands): continue

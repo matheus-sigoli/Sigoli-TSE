@@ -1,8 +1,10 @@
 {
-  "ba-1950-gov": "/1950/ba/governador",
-  "ba-1947-gov": "/1947/ba/governador",
-  "rj-1986-gov": "/1986/rj/governador",
-  "es-1986-gov": "/1986/es/governador",
-  "br-1986-gov": "/1986/br/governador",
-  "mg-1960-gov@cel": "/1960/mg/governador"
+  "ce-1954-gov": "/1954/ce/governador",
+  "ce-1966-sen": "/1966/ce/senador",
+  "ce-1978-depf": "/1978/ce/deputado-federal",
+  "ce-1950-sen": "/1950/ce/senador",
+  "pe-1986-gov": "/1986/pe/governador",
+  "pe-1986-sen": "/1986/pe/senador",
+  "ba-1990-gov": "/1990/ba/governador",
+  "ba-1986-gov@cel": "/1986/ba/governador"
 }
