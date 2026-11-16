@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from comum import ibge_por_nome, gravar, chave
 achar = ibge_por_nome('ba')
 ANOS = {
-    1947: ([('OTÁVIO MANGABEIRA', 'UDN'), ('MEDEIROS NETO', 'PSD')], None, 'Representação política: resultado da eleição para Governo do Estado (19/01/1947)'),
+    1947: ([('OTÁVIO MANGABEIRA', 'UDN'), ('MEDEIROS NETO', 'PSD')], None, 'TRE-BA, resultado da eleição para Governo do Estado (19/01/1947)'),
     1950: ([('RÉGIS PACHECO', 'PSD'), ('JURACI MAGALHÃES', 'UDN')], ('#brancos', '#nulos', '#comparecimento'), 'TRE-BA, eleições de 3/10/1950, Governador do Estado'),
 }
 for ano, (cands, tots, fonte) in ANOS.items():
