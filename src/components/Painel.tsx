@@ -138,7 +138,7 @@ function Painel(p: Props) {
         {arquivo && !arquivo.resumo && arquivo.oficial ? (
           <p className="subtitulo">
             Total do estado: resultado final oficial{arquivo.oficial.fonte ? ` (${arquivo.oficial.fonte.split(',')[0]})` : ''}. O mapa
-            tem {arquivo.oficial.municipios} {/zona eleitoral/.test(arquivo.fonte ?? '') ? 'zonas eleitorais' : 'municípios com resultado por município'}.
+            tem {arquivo.oficial.municipios} {/zona eleitoral/.test(arquivo.fonte ?? '') ? 'municípios com resultado (por zona eleitoral)' : 'municípios com resultado por município'}.
           </p>
         ) : null}
         {cargo.turnos.length > 1 && p.ano >= 1989 ? (
