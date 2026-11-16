@@ -533,7 +533,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         ) : null}
         {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">
-          Malha: IBGE{cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
+          Malha: IBGE{cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
           {nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
           {cid && nivel === 'bairros' ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}
           {(cid || regiaoLocais) && nivel === 'locais'
