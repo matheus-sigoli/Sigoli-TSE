@@ -2,7 +2,9 @@
   "br-1955-pres": "/1955/br/presidente",
   "br-1955-vice": "/1955/br/vice-presidente",
   "sp-1955-pres": "/1955/sp/presidente",
-  "mg-1955-gov": "/1955/mg/governador",
-  "mt-1955-gov": "/1955/mt/governador",
+  "ba-1958-gov": "/1958/ba/governador",
+  "ba-1958-sen": "/1958/ba/senador",
+  "ba-1954-gov": "/1954/ba/governador",
+  "mt-1954-sen": "/1954/mt/senador",
   "rj-1955-vice@cel": "/1955/rj/vice-presidente"
 }

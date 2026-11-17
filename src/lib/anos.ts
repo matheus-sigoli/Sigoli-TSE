@@ -128,9 +128,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1958, titulo: 'Eleições 1958', datas: '3 de outubro',
-    cargos: 'Governador (CE, RS e SP), Senador (CE e RS) e Deputados (RS)', disponivel: true, rota: '/1958/ce/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (BA, CE, RS e SP), Senador (BA, CE e RS) e Deputados (RS)', disponivel: true, rota: '/1958/ba/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS e acervo Sigoli.TSE (por município)',
+    fonte: 'TRE-RS, TRE-BA, TRE-CE e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1955, titulo: 'Eleições 1955', datas: '3 de outubro',
@@ -140,9 +140,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1954, titulo: 'Eleições 1954', datas: '3 de outubro',
-    cargos: 'Governador e Senador (CE e RS) e Deputados (RS)', disponivel: true, rota: '/1954/ce/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (BA, CE e RS), Senador (CE, MT e RS; MT por junta apuradora) e Deputados (RS)', disponivel: true, rota: '/1954/ba/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS e TRE-CE (por município)',
+    fonte: 'TRE-RS, TRE-BA, TRE-CE e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',
