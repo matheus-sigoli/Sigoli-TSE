@@ -25,14 +25,24 @@ s = []
 for m, v in blocos('data/tre/fontes/ba-1954/governador.txt', 5):
     for (n, p), x in zip([('ANTÔNIO BALBINO', 'PSD'), ('PEDRO CALMON', 'UDN')], v): s.append(('governador', 1, ib(m), '_' + chave(n), n, p, x))
     s += [('governador', 1, ib(m), '#brancos', '', '', v[2]), ('governador', 1, ib(m), '#nulos', '', '', v[3])]
-gravar('data/tre/1954/ba.csv', s, {('governador', '_' + chave('ANTÔNIO BALBINO')): 'S'},
+G = [m for m, _ in blocos('data/tre/fontes/ba-1954/governador.txt', 5)]
+L = [l.split() for l in open('data/tre/fontes/ba-1954/senador.txt', encoding='utf8') if l.strip() and not l.startswith('#')]
+SEN54 = [('ERNESTO SIMÕES FILHO', 'PSD'), ('HÉLIO DE BURGOS CABAL', 'N/I'), ('LIMA TEIXEIRA', 'PTB'), ('JURACY MAGALHÃES', 'UDN'), ('PINTO ALEIXO', 'N/I')]
+k = 0; j = 0
+while j < len(L):
+    n = int(L[j][1]); R = [list(map(int, r)) for r in L[j + 1:j + 8]]; j += 8
+    for c in range(n):
+        i = ib(G[k]); k += 1
+        for (nm, p), r in zip(SEN54, R): s.append(('senador', 1, i, '_' + chave(nm), nm, p, r[c]))
+        s += [('senador', 1, i, '#brancos', '', '', R[5][c]), ('senador', 1, i, '#nulos', '', '', R[6][c])]
+gravar('data/tre/1954/ba.csv', s, {('governador', '_' + chave('ANTÔNIO BALBINO')): 'S', ('senador', '_' + chave('JURACY MAGALHÃES')): 'S', ('senador', '_' + chave('LIMA TEIXEIRA')): 'S'},
        fonte='TRE-BA, Resultado final das eleições de 3 de outubro de 1954 (por município)')
 s = []
 for m, v in blocos('data/tre/fontes/ba-1958/majoritarias.txt', 11):
     i = ib(m)
-    for (n, p), x in zip([('OCTÁVIO MANGABEIRA', 'PL'), ('EDUARDO CATALÃO', 'N/I')], v[:2]): s.append(('senador', 1, i, '_' + chave(n), n, p, x))
+    for (n, p), x in zip([('OCTÁVIO MANGABEIRA', 'PL'), ('EDUARDO CATALÃO', 'PTB')], v[:2]): s.append(('senador', 1, i, '_' + chave(n), n, p, x))
     s += [('senador', 1, i, '#brancos', '', '', v[2]), ('senador', 1, i, '#nulos', '', '', v[3])]
-    for (n, p), x in zip([('JURACY MAGALHÃES', 'UDN'), ('FARANI PEDREIRA DE FREITAS', 'PSD'), ('TARCILO VIEIRA DE MELLO', 'N/I')], v[5:8]):
+    for (n, p), x in zip([('JURACY MAGALHÃES', 'UDN'), ('FARANI PEDREIRA DE FREITAS', 'PSD'), ('TARCILO VIEIRA DE MELLO', 'PDC')], v[5:8]):
         s.append(('governador', 1, i, '_' + chave(n), n, p, x))
     s += [('governador', 1, i, '#brancos', '', '', v[8]), ('governador', 1, i, '#nulos', '', '', v[9])]
 gravar('data/tre/1958/ba.csv', s, {('governador', '_' + chave('JURACY MAGALHÃES')): 'S', ('senador', '_' + chave('OCTÁVIO MANGABEIRA')): 'S'},
