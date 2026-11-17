@@ -1,0 +1,54 @@
+# SC 1950 senador, mesma fonte, II - Senado Federal, p. 3. Só votos dos candidatos.
+# municipio;carlos_gomes_de_oliveira;nereu_ramos
+Araquari;828;1190
+Araranguá;2705;2461
+Biguaçu;1649;1377
+Blumenau;5180;3273
+Bom Retiro;1941;1489
+Brusque;4104;1691
+Caçador;2540;2295
+Camboriú;943;916
+Campo Alegre;505;418
+Campos Novos;1990;2476
+Canoinhas;4536;2195
+Capinzal;1480;1429
+Concórdia;3358;2784
+Criciúma;3752;2467
+Curitibanos;1818;2134
+Florianópolis;8990;8076
+Gaspar;1502;875
+Guaramirim;2053;1358
+Ibirama;2790;1062
+Imaruí;828;1893
+Indaial;2360;1391
+Itajaí;6099;4728
+Itaiópolis;858;1274
+Ituporanga;2075;1302
+Jaguaruna;471;939
+Jaraguá do Sul;3463;1967
+Joaçaba;4837;2588
+Joinville;8069;2639
+Laguna;3448;2800
+Lages;4129;8358
+Mafra;2079;1743
+Nova Trento;1130;791
+Orleans;2682;1714
+Palhoça;3163;3491
+Piratuba;1133;924
+Porto Belo;570;755
+Porto União;2440;1475
+Rio do Sul;5797;2311
+Rodeio;2368;663
+São Bento do Sul;2652;745
+São Francisco do Sul;2731;1128
+São Joaquim;2750;2307
+São José;1584;2056
+Taió;1576;624
+Tangará;1579;872
+Tijucas;2675;2791
+Timbó;1910;1630
+Tubarão;6236;5274
+Turvo;1529;2151
+Urussanga;2346;1977
+Videira;1743;1442
+Chapecó;4559;5170

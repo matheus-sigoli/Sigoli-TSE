@@ -1,0 +1,38 @@
+# SC 1947 governador por zona eleitoral, TRE-SC "Apuração final do pleito de 19 de janeiro de 1947 e renovação de 30 de março de 1947" (acervo, Mapas/SC/SC 1947.pdf)
+# (votantes da folha nem sempre fecham com os votos de governador; o mapa usa só os votos)
+# zona;sede;votantes;aderbal_ramos_da_silva;irineu_bornhausen;carlos_sada;brancos;nulos
+1;Araranguá;5325;2720;2423;76;84;22
+2;Biguaçu;2325;1191;1114;1;12;7
+3;Blumenau;10052;4014;5449;226;168;195
+4;Bom Retiro;3324;1627;1451;12;34;93
+5;Brusque;4110;2296;1460;288;61;5
+6;Caçador;6669;2417;3752;20;65;276
+7;Campos Novos;5894;3127;2603;3;66;95
+8;Canoinhas;5214;2634;2129;8;58;260
+9;Concórdia;5223;2049;2891;4;43;234
+10;Criciúma;4062;2668;1277;28;72;17
+11;Curitibanos;2859;1726;966;15;53;99
+12;Florianópolis;5015;2743;2166;19;59;28
+13;Florianópolis;8781;4290;4290;51;101;49
+14;Ibirama;2980;1197;1703;44;30;6
+15;Indaial;5790;2506;3228;7;28;21
+16;Itajaí;10131;4835;4951;88;45;204
+17;Jaraguá do Sul;5116;1493;3009;544;34;36
+18;Joaçaba;5177;2458;2630;0;46;43
+19;Joinville;8915;3117;5433;214;74;77
+20;Laguna;6630;4017;2342;65;83;123
+21;Lages;7775;6072;1355;35;204;109
+22;Mafra;6066;3987;1858;46;125;50
+23;Orleans;3601;2493;731;55;51;143
+24;Palhoça;5017;2808;2046;17;39;107
+25;Porto União;3549;1602;1731;12;72;132
+26;Rio do Sul;6991;3079;3156;417;82;125
+27;São Francisco do Sul;4623;2166;2068;40;61;146
+28;São Joaquim;3242;2107;1094;1;30;10
+29;São José;3184;1823;1282;16;39;24
+30;Serra Alta;3764;1643;1937;12;24;35
+31;Tijucas;6176;3709;2315;10;60;82
+32;Timbó;3064;1470;1569;0;25;0
+33;Tubarão;7139;4711;1907;46;48;76
+34;Urussanga;2799;1590;931;118;37;123
+35;Chapecó;5720;3355;2046;0;89;230

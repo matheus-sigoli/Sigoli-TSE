@@ -1,0 +1,54 @@
+# SC 1950 governador, TRE-SC "Resenha Eleitoral" (jan.-fev. 1951), IV - Governador, p. 6 (acervo, Mapas/SC/SC 1950.pdf). Só votos dos candidatos.
+# municipio;irineu_bornhausen;udo_deeke
+Araquari;814;1261
+Araranguá;2808;2426
+Biguaçu;1714;1340
+Blumenau;4982;4484
+Bom Retiro;2038;1463
+Brusque;4558;1748
+Caçador;2492;2519
+Camboriú;949;912
+Campo Alegre;505;441
+Campos Novos;1989;2588
+Canoinhas;3507;3177
+Capinzal;1574;1407
+Concórdia;3855;2525
+Criciúma;4068;2331
+Curitibanos;1911;2184
+Florianópolis;8984;8218
+Gaspar;1574;951
+Guaramirim;1916;1528
+Ibirama;2632;1324
+Imaruí;917;1817
+Indaial;2091;1864
+Itajaí;6140;4966
+Itaiópolis;952;1369
+Ituporanga;1943;1515
+Jaguaruna;539;908
+Jaraguá do Sul;3252;2404
+Joaçaba;4899;2675
+Joinville;6671;4249
+Laguna;3597;2923
+Lages;4787;7983
+Mafra;2240;1846
+Nova Trento;1183;801
+Orleans;2904;1529
+Palhoça;3164;3462
+Piratuba;1137;968
+Porto Belo;597;756
+Porto União;2781;1600
+Rio do Sul;5220;3438
+Rodeio;2374;1010
+São Bento do Sul;2193;1295
+São Francisco do Sul;2126;1706
+São Joaquim;2940;2192
+São José;1672;2032
+Taió;1585;744
+Tangará;1610;906
+Tijucas;2800;2698
+Timbó;2180;1735
+Tubarão;6624;4958
+Turvo;1613;2099
+Urussanga;2512;1798
+Videira;2224;1275
+Chapecó;6737;5319

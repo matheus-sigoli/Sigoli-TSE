@@ -1,0 +1,196 @@
+# SC 1965 governador, TRE-SC "Eleição realizada em 3 de outubro de 1965 — Governo do Estado — votação obtida pelos candidatos, por município" (acervo, Mapas/SC/SC 1965.pdf)
+# municipio;votantes;ivo_silveira;antonio_carlos_konder_reis;brancos;nulos
+Abelardo Luz;2092;1017;1009;20;46
+Agrolândia;1444;622;791;22;9
+Agronômica;1698;739;923;19;17
+Água Doce;1760;902;814;18;25
+Águas de Chapecó;1275;662;602;4;7
+Águas Mornas;1529;516;981;22;10
+Alfredo Wagner;2611;1345;1225;18;23
+Anchieta;628;335;287;4;2
+Angelina;2041;1071;909;46;15
+Anita Garibaldi;3011;1522;1443;26;20
+Anitápolis;1127;572;533;9;13
+Antônio Carlos;1802;669;1095;21;17
+Araquari;2061;1335;668;19;39
+Araranguá;7518;3348;4024;73;73
+Armazém;2085;907;1148;16;14
+Arroio Trinta;731;221;500;4;6
+Ascurra;1291;574;705;9;3
+Atalanta;1551;562;960;14;15
+Aurora;1542;444;1053;19;26
+Balneário Camboriú;1871;899;930;24;18
+Barra Velha;2199;1412;738;24;25
+Benedito Novo;3331;1697;1608;15;11
+Biguaçu;3660;1771;1816;37;36
+Blumenau;25555;12192;12860;221;282
+Bom Retiro;2963;1518;1367;25;52
+Botuverá;984;349;623;6;6
+Braço do Norte;3216;1468;1698;14;38
+Brusque;10123;4534;5388;99;102
+Caçador;6058;3334;2463;107;154
+Caibi;839;411;417;6;5
+Camboriú;2981;1347;1583;28;23
+Campo Alegre;1702;910;724;27;38
+Campo Belo do Sul;2530;1386;1094;21;29
+Campo Erê;1509;751;714;16;28
+Campos Novos;8311;5001;2947;173;190
+Canelinha;1788;912;843;20;13
+Canoinhas;7460;3153;3927;172;208
+Capinzal;2626;1478;1107;26;15
+Catanduvas;1323;830;469;13;11
+Caxambu do Sul;1662;879;768;7;8
+Chapecó;7665;4512;2977;80;96
+Concórdia;11003;5192;5505;198;108
+Coronel Freitas;1962;1059;860;14;29
+Corupá;1817;967;783;36;31
+Criciúma;14296;7929;5965;198;204
+Cunha Porã;2264;1007;1217;19;21
+Curitibanos;6932;3655;3080;79;109
+Descanso;1598;743;823;19;13
+Dionísio Cerqueira;1788;849;862;47;30
+Dois Irmãos;613;295;303;3;12
+Dona Emma;1041;438;586;11;6
+Erval Velho;1428;689;718;12;9
+Faxinal dos Guedes;968;596;345;10;17
+Florianópolis;36291;18290;16325;435;1244
+Fraiburgo;1355;816;459;35;45
+Galvão;968;483;468;12;5
+Ganchos;1037;551;464;14;7
+Garopaba;1214;826;365;14;9
+Garuva;1266;806;409;20;31
+Gaspar;5679;2668;2909;67;35
+Grão Pará;1420;1005;379;5;31
+Gravatal;2093;1192;876;11;14
+Guabiruba;1788;694;1064;20;10
+Guaraciaba;1495;721;757;8;9
+Guaramirim;2639;1354;1237;19;29
+Guarujá do Sul;849;407;433;6;3
+Herval d'Oeste;2944;1644;1212;38;50
+Ibicaré;1372;658;673;21;20
+Ibirama;5919;3043;2746;63;67
+Içara;2735;1745;933;32;25
+Ilhota;2895;1455;1398;19;23
+Imaruí;4401;2580;1728;50;43
+Imbituba;3869;2100;1636;57;76
+Imbuia;793;374;416;1;2
+Indaial;6126;3223;2768;89;46
+Ipira;1323;483;803;15;22
+Ipumirim;1430;729;676;16;9
+Irani;905;450;440;7;8
+Irineópolis;1309;553;707;21;28
+Itá;1683;564;1081;25;13
+Itaiópolis;4669;2040;2331;67;231
+Itajaí;13329;6664;6234;220;211
+Itapema;738;388;338;9;3
+Itapiranga;4830;2086;2641;47;56
+Ituporanga;4224;1979;2165;49;31
+Jaborá;1244;555;650;18;21
+Jacinto Machado;2485;1236;1188;34;27
+Jaguaruna;3128;1775;1264;41;48
+Jaraguá do Sul;8971;3746;5078;85;62
+Joaçaba;5412;2628;2586;108;90
+Joinville;31632;16581;13638;624;789
+Lacerdópolis;801;262;529;8;2
+Lages;23674;14404;8577;272;421
+Laguna;8043;4326;3390;116;211
+Laurentino;1228;501;710;9;8
+Lauro Müller;3854;1725;2075;27;27
+Lebon Régis;2133;1032;1015;46;40
+Leoberto Leal;791;288;497;4;2
+Lontras;1874;848;993;24;9
+Luiz Alves;2536;1136;1371;16;13
+Mafra;9324;4595;4404;123;202
+Major Gercino;1216;622;569;12;13
+Major Vieira;1317;476;757;62;22
+Maravilha;2117;1168;916;10;23
+Massaranduba;2787;1435;1300;33;19
+Matos Costa;964;576;343;13;32
+Meleiro;2129;908;1179;21;21
+Modelo;1262;646;599;10;7
+Mondaí;3257;1259;1940;30;28
+Monte Castelo;1170;741;391;16;22
+Morro da Fumaça;1436;734;672;13;17
+Navegantes;1931;1093;795;16;27
+Nova Erechim;418;309;97;1;11
+Nova Trento;2616;1049;1499;41;27
+Nova Veneza;2397;1090;1267;29;11
+Orleans;4298;2154;2073;43;26
+Ouro;1879;701;1122;32;24
+Palhoça;4518;2829;1588;38;63
+Palma Sola;601;386;203;6;6
+Palmitos;3316;1672;1574;43;27
+Papanduva;2329;914;1303;50;62
+Paulo Lopes;1185;654;512;9;10
+Pedras Grandes;1651;763;861;11;16
+Penha;1490;819;655;12;4
+Peritiba;827;263;553;9;2
+Petrolândia;1711;753;935;7;16
+Balneário Piçarras;1095;567;510;13;5
+Pinhalzinho;1123;597;518;3;5
+Pinheiro Preto;608;239;349;13;7
+Piratuba;1597;830;703;23;41
+Pomerode;4168;1954;2055;63;96
+Ponte Alta;2227;704;1460;30;33
+Ponte Serrada;1154;637;495;12;10
+Porto Belo;1630;728;846;40;16
+Porto União;4317;2422;1752;57;86
+Pouso Redondo;2777;1198;1545;18;16
+Praia Grande;1775;778;968;16;13
+Presidente Getúlio;3094;1679;1379;22;14
+Presidente Nereu;970;442;519;6;3
+Quilombo;1386;722;643;5;16
+Rancho Queimado;754;268;475;7;4
+Rio das Antas;1858;904;897;23;34
+Rio do Campo;1109;601;413;5;89
+Rio d'Oeste;2646;1203;1411;21;11
+Rio dos Cedros;3050;1509;1506;22;13
+Rio do Sul;8224;4419;3671;53;81
+Rio Fortuna;1297;557;724;4;12
+Rio Negrinho;3184;1971;1104;52;54
+Rodeio;2605;1176;1346;53;30
+Romelândia;709;300;403;5;1
+Salete;1251;652;571;7;21
+Salto Veloso;635;298;321;5;11
+Santa Cecília;1662;1088;515;26;33
+Santa Rosa de Lima;553;248;296;6;3
+Santo Amaro da Imperatriz;3049;1495;1503;28;23
+São Bento do Sul;4857;2859;1895;40;63
+São Bonifácio;1092;489;584;9;10
+São Carlos;2443;973;1416;19;35
+São Domingos;1114;589;507;10;8
+São Francisco do Sul;4985;3122;1645;63;155
+São João Batista;2845;1512;1272;42;19
+São João do Sul;1875;927;902;27;19
+São Joaquim;9209;4373;4513;81;242
+São José;6177;2897;3086;74;120
+São José do Cedro;2094;938;1130;11;15
+São José do Cerrito;2672;1508;1082;29;53
+São Lourenço do Oeste;2250;1409;758;36;47
+São Ludgero;1136;327;784;6;19
+São Martinho;1143;441;673;15;14
+São Miguel do Oeste;3349;1824;1444;32;49
+Saudades;1369;524;811;18;16
+Schroeder;945;314;620;7;4
+Seara;2903;1681;1142;45;35
+Siderópolis;3777;1764;1972;17;24
+Sombrio;4517;2173;2266;51;27
+Taió;5516;2743;2646;61;66
+Tangará;3574;1583;1863;49;79
+Tijucas;3742;1923;1762;27;30
+Timbó;3943;2002;1880;39;22
+Três Barras;1035;539;456;19;21
+Treze de Maio;1768;852;892;10;14
+Treze Tílias;747;307;423;5;12
+Trombudo Central;2497;1247;1203;32;15
+Tubarão;14232;7592;6264;147;229
+Turvo;4165;2055;2057;40;38
+Urubici;3370;1613;1688;24;45
+Urussanga;4698;2361;2251;48;38
+Vargeão;601;370;223;7;1
+Vidal Ramos;2007;826;1145;20;16
+Videira;5177;2421;2585;82;90
+Witmarsum;980;468;477;19;16
+Xanxerê;4187;2231;1771;37;148
+Xavantina;1156;571;552;19;14
+Xaxim;4328;2211;2033;28;62
