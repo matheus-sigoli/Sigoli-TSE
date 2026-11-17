@@ -64,15 +64,15 @@ export const ELEICOES: Eleicao[] = [
     zonasSo: { cargos: ['presidente'], ufs: ['ac', 'al', 'am', 'ap', 'ba', 'go', 'ma', 'ms', 'pb', 'pe', 'pi', 'ro', 'rs', 'sc', 'se', 'sp', 'to'] },
   },
   {
-    ano: 1989, titulo: 'Eleição Presidencial 1989', datas: '15 de novembro e 17 de dezembro',
-    cargos: 'Presidente', disponivel: true, rota: '/1989/br/presidente?t=2', semLocais: true, semZonas: true, soCargos: ['presidente'],
-    fonte: 'Geografia do Voto (IpeaData com correções), conferido com o TSE por UF',
-  },
-  {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
     cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, MA, MG, MS, MT, PA, RJ, RN, RO, RS e SP), Senador (CE, MS, PA, RN, RO e RS) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'Acervo Sigoli.TSE e TREs (por município)',
+  },
+  {
+    ano: 1989, titulo: 'Eleição Presidencial 1989', datas: '15 de novembro e 17 de dezembro',
+    cargos: 'Presidente', disponivel: true, rota: '/1989/br/presidente?t=2', semLocais: true, semZonas: true, soCargos: ['presidente'],
+    fonte: 'Geografia do Voto (IpeaData com correções), conferido com o TSE por UF',
   },
   {
     ano: 1986, titulo: 'Eleições 1986', datas: '15 de novembro',
@@ -134,9 +134,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1955, titulo: 'Eleições 1955', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto AL, MG e MT; MG por zona eleitoral)', disponivel: true, rota: '/1955/mg/governador', semLocais: true, semZonas: true,
-    soCargos: ['governador'],
-    fonte: 'TRE-MG (por zona eleitoral) e acervo Sigoli.TSE (por município)',
+    cargos: 'Presidente e Vice-Presidente (todo o Brasil) e Governador (por enquanto AL, MG e MT; MG por zona eleitoral)', disponivel: true, rota: '/1955/br/presidente', semLocais: true, semZonas: true,
+    soCargos: ['presidente', 'vice-presidente', 'governador'],
+    fonte: 'Acervo Sigoli.TSE (banco de dados de Presidente e Vice por município), TRE-MG (por zona eleitoral)',
   },
   {
     ano: 1954, titulo: 'Eleições 1954', datas: '3 de outubro',

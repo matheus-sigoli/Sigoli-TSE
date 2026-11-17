@@ -1,0 +1,991 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+presidente;1;4201406;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1701;S
+presidente;1;4201406;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1669;
+presidente;1;4201406;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;498;
+presidente;1;4201406;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;373;
+presidente;1;4201406;#brancos;;;44;
+presidente;1;4201406;#nulos;;;55;
+presidente;1;4201406;#comparecimento;;;4340;
+presidente;1;4201406;#eleitorado;;;5576;
+presidente;1;4217709;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1663;S
+presidente;1;4217709;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1660;
+presidente;1;4217709;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;148;
+presidente;1;4217709;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;131;
+presidente;1;4217709;#brancos;;;37;
+presidente;1;4217709;#nulos;;;52;
+presidente;1;4217709;#comparecimento;;;3691;
+presidente;1;4217709;#eleitorado;;;4716;
+presidente;1;4218806;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2645;S
+presidente;1;4218806;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1501;
+presidente;1;4218806;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;417;
+presidente;1;4218806;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1091;
+presidente;1;4218806;#brancos;;;64;
+presidente;1;4218806;#nulos;;;81;
+presidente;1;4218806;#comparecimento;;;5799;
+presidente;1;4218806;#eleitorado;;;7719;
+presidente;1;4202305;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1844;S
+presidente;1;4202305;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1245;
+presidente;1;4202305;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;392;
+presidente;1;4202305;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;662;
+presidente;1;4202305;#brancos;;;46;
+presidente;1;4202305;#nulos;;;113;
+presidente;1;4202305;#comparecimento;;;4302;
+presidente;1;4202305;#eleitorado;;;6165;
+presidente;1;4202404;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2151;S
+presidente;1;4202404;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1088;
+presidente;1;4202404;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;4958;
+presidente;1;4202404;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;3208;
+presidente;1;4202404;#brancos;;;160;
+presidente;1;4202404;#nulos;;;66;
+presidente;1;4202404;#comparecimento;;;11631;
+presidente;1;4202404;#eleitorado;;;18390;
+presidente;1;4205902;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1223;S
+presidente;1;4205902;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;544;
+presidente;1;4205902;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;374;
+presidente;1;4205902;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1100;
+presidente;1;4205902;#brancos;;;40;
+presidente;1;4205902;#nulos;;;24;
+presidente;1;4205902;#comparecimento;;;3305;
+presidente;1;4205902;#eleitorado;;;4591;
+presidente;1;4202602;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1462;S
+presidente;1;4202602;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1595;
+presidente;1;4202602;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;476;
+presidente;1;4202602;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;205;
+presidente;1;4202602;#brancos;;;57;
+presidente;1;4202602;#nulos;;;285;
+presidente;1;4202602;#comparecimento;;;4080;
+presidente;1;4202602;#eleitorado;;;6306;
+presidente;1;4202909;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2852;S
+presidente;1;4202909;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1315;
+presidente;1;4202909;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1306;
+presidente;1;4202909;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;3942;
+presidente;1;4202909;#brancos;;;95;
+presidente;1;4202909;#nulos;;;100;
+presidente;1;4202909;#comparecimento;;;9610;
+presidente;1;4202909;#eleitorado;;;13019;
+presidente;1;4211504;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;892;S
+presidente;1;4211504;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;862;
+presidente;1;4211504;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;324;
+presidente;1;4211504;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;492;
+presidente;1;4211504;#brancos;;;63;
+presidente;1;4211504;#nulos;;;75;
+presidente;1;4211504;#comparecimento;;;2708;
+presidente;1;4211504;#eleitorado;;;3293;
+presidente;1;4203006;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1615;S
+presidente;1;4203006;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;961;
+presidente;1;4203006;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1400;
+presidente;1;4203006;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1159;
+presidente;1;4203006;#brancos;;;42;
+presidente;1;4203006;#nulos;;;50;
+presidente;1;4203006;#comparecimento;;;5227;
+presidente;1;4203006;#eleitorado;;;7912;
+presidente;1;4203600;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2604;S
+presidente;1;4203600;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1962;
+presidente;1;4203600;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1001;
+presidente;1;4203600;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;142;
+presidente;1;4203600;#brancos;;;115;
+presidente;1;4203600;#nulos;;;223;
+presidente;1;4203600;#comparecimento;;;6047;
+presidente;1;4203600;#eleitorado;;;8630;
+presidente;1;4203907;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1606;S
+presidente;1;4203907;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1934;
+presidente;1;4203907;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;471;
+presidente;1;4203907;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;322;
+presidente;1;4203907;#brancos;;;49;
+presidente;1;4203907;#nulos;;;259;
+presidente;1;4203907;#comparecimento;;;4641;
+presidente;1;4203907;#eleitorado;;;6414;
+presidente;1;4203808;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;3332;S
+presidente;1;4203808;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1691;
+presidente;1;4203808;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;613;
+presidente;1;4203808;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;975;
+presidente;1;4203808;#brancos;;;96;
+presidente;1;4203808;#nulos;;;579;
+presidente;1;4203808;#comparecimento;;;7286;
+presidente;1;4203808;#eleitorado;;;10457;
+presidente;1;4212205;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;867;S
+presidente;1;4212205;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;179;
+presidente;1;4212205;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;102;
+presidente;1;4212205;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;133;
+presidente;1;4212205;#brancos;;;32;
+presidente;1;4212205;#nulos;;;77;
+presidente;1;4212205;#comparecimento;;;1390;
+presidente;1;4212205;#eleitorado;;;2357;
+presidente;1;4204301;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2398;S
+presidente;1;4204301;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1518;
+presidente;1;4204301;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1058;
+presidente;1;4204301;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;867;
+presidente;1;4204301;#brancos;;;105;
+presidente;1;4204301;#nulos;;;55;
+presidente;1;4204301;#comparecimento;;;6001;
+presidente;1;4204301;#eleitorado;;;6533;
+presidente;1;4213104;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;813;S
+presidente;1;4213104;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;848;
+presidente;1;4213104;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;212;
+presidente;1;4213104;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;456;
+presidente;1;4213104;#brancos;;;60;
+presidente;1;4213104;#nulos;;;22;
+presidente;1;4213104;#comparecimento;;;2411;
+presidente;1;4213104;#eleitorado;;;4065;
+presidente;1;4217501;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1012;S
+presidente;1;4217501;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1478;
+presidente;1;4217501;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;410;
+presidente;1;4217501;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;287;
+presidente;1;4217501;#brancos;;;51;
+presidente;1;4217501;#nulos;;;48;
+presidente;1;4217501;#comparecimento;;;3286;
+presidente;1;4217501;#eleitorado;;;4348;
+presidente;1;4204608;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;5182;S
+presidente;1;4204608;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1423;
+presidente;1;4204608;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;990;
+presidente;1;4204608;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1470;
+presidente;1;4204608;#brancos;;;131;
+presidente;1;4204608;#nulos;;;71;
+presidente;1;4204608;#comparecimento;;;9267;
+presidente;1;4204608;#eleitorado;;;13074;
+presidente;1;4204806;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2558;S
+presidente;1;4204806;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1574;
+presidente;1;4204806;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1313;
+presidente;1;4204806;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;490;
+presidente;1;4204806;#brancos;;;172;
+presidente;1;4204806;#nulos;;;573;
+presidente;1;4204806;#comparecimento;;;6680;
+presidente;1;4204806;#eleitorado;;;9947;
+presidente;1;4205407;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;10205;S
+presidente;1;4205407;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;7077;
+presidente;1;4205407;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;4167;
+presidente;1;4205407;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;574;
+presidente;1;4205407;#brancos;;;231;
+presidente;1;4205407;#nulos;;;364;
+presidente;1;4205407;#comparecimento;;;22618;
+presidente;1;4205407;#eleitorado;;;31799;
+presidente;1;4206900;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;518;S
+presidente;1;4206900;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;442;
+presidente;1;4206900;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;966;
+presidente;1;4206900;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;938;
+presidente;1;4206900;#brancos;;;54;
+presidente;1;4206900;#nulos;;;66;
+presidente;1;4206900;#comparecimento;;;2984;
+presidente;1;4206900;#eleitorado;;;4310;
+presidente;1;4214003;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;469;S
+presidente;1;4214003;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;311;
+presidente;1;4214003;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;489;
+presidente;1;4214003;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;746;
+presidente;1;4214003;#brancos;;;23;
+presidente;1;4214003;#nulos;;;46;
+presidente;1;4214003;#comparecimento;;;2084;
+presidente;1;4214003;#eleitorado;;;3716;
+presidente;1;4207502;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1361;S
+presidente;1;4207502;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;847;
+presidente;1;4207502;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;931;
+presidente;1;4207502;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1267;
+presidente;1;4207502;#brancos;;;43;
+presidente;1;4207502;#nulos;;;25;
+presidente;1;4207502;#comparecimento;;;4474;
+presidente;1;4207502;#eleitorado;;;6194;
+presidente;1;4215109;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;431;S
+presidente;1;4215109;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1146;
+presidente;1;4215109;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;886;
+presidente;1;4215109;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1400;
+presidente;1;4215109;#brancos;;;82;
+presidente;1;4215109;#nulos;;;39;
+presidente;1;4215109;#comparecimento;;;3984;
+presidente;1;4215109;#eleitorado;;;5766;
+presidente;1;4208203;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;6710;S
+presidente;1;4208203;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;3836;
+presidente;1;4208203;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1625;
+presidente;1;4208203;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;2255;
+presidente;1;4208203;#brancos;;;154;
+presidente;1;4208203;#nulos;;;174;
+presidente;1;4208203;#comparecimento;;;14754;
+presidente;1;4208203;#eleitorado;;;22771;
+presidente;1;4203204;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1315;S
+presidente;1;4203204;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1016;
+presidente;1;4203204;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;138;
+presidente;1;4203204;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;262;
+presidente;1;4203204;#brancos;;;56;
+presidente;1;4203204;#nulos;;;43;
+presidente;1;4203204;#comparecimento;;;2830;
+presidente;1;4203204;#eleitorado;;;3532;
+presidente;1;4208906;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;761;S
+presidente;1;4208906;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1364;
+presidente;1;4208906;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1095;
+presidente;1;4208906;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;3294;
+presidente;1;4208906;#brancos;;;142;
+presidente;1;4208906;#nulos;;;89;
+presidente;1;4208906;#comparecimento;;;6745;
+presidente;1;4208906;#eleitorado;;;9270;
+presidente;1;4206504;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1343;S
+presidente;1;4206504;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;864;
+presidente;1;4206504;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;650;
+presidente;1;4206504;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;759;
+presidente;1;4206504;#brancos;;;117;
+presidente;1;4206504;#nulos;;;47;
+presidente;1;4206504;#comparecimento;;;3780;
+presidente;1;4206504;#eleitorado;;;6387;
+presidente;1;4209003;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2944;S
+presidente;1;4209003;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;3560;
+presidente;1;4209003;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1119;
+presidente;1;4209003;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;542;
+presidente;1;4209003;#brancos;;;52;
+presidente;1;4209003;#nulos;;;190;
+presidente;1;4209003;#comparecimento;;;8407;
+presidente;1;4209003;#eleitorado;;;10194;
+presidente;1;4206702;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;831;S
+presidente;1;4206702;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;685;
+presidente;1;4206702;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;279;
+presidente;1;4206702;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;58;
+presidente;1;4206702;#brancos;;;12;
+presidente;1;4206702;#nulos;;;41;
+presidente;1;4206702;#comparecimento;;;1906;
+presidente;1;4206702;#eleitorado;;;2609;
+presidente;1;4217907;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;564;S
+presidente;1;4217907;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;782;
+presidente;1;4217907;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;766;
+presidente;1;4217907;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;342;
+presidente;1;4217907;#brancos;;;25;
+presidente;1;4217907;#nulos;;;149;
+presidente;1;4217907;#comparecimento;;;2628;
+presidente;1;4217907;#eleitorado;;;4830;
+presidente;1;4209102;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;5105;S
+presidente;1;4209102;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;2193;
+presidente;1;4209102;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;3847;
+presidente;1;4209102;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;3695;
+presidente;1;4209102;#brancos;;;141;
+presidente;1;4209102;#nulos;;;76;
+presidente;1;4209102;#comparecimento;;;15057;
+presidente;1;4209102;#eleitorado;;;18549;
+presidente;1;4209409;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;3660;S
+presidente;1;4209409;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1423;
+presidente;1;4209409;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1396;
+presidente;1;4209409;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;798;
+presidente;1;4209409;#brancos;;;90;
+presidente;1;4209409;#nulos;;;177;
+presidente;1;4209409;#comparecimento;;;7544;
+presidente;1;4209409;#eleitorado;;;11095;
+presidente;1;4207205;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1787;S
+presidente;1;4207205;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;732;
+presidente;1;4207205;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;460;
+presidente;1;4207205;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;646;
+presidente;1;4207205;#brancos;;;32;
+presidente;1;4207205;#nulos;;;134;
+presidente;1;4207205;#comparecimento;;;3791;
+presidente;1;4207205;#eleitorado;;;5664;
+presidente;1;4209300;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;6860;S
+presidente;1;4209300;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;4203;
+presidente;1;4209300;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;2399;
+presidente;1;4209300;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;579;
+presidente;1;4209300;#brancos;;;203;
+presidente;1;4209300;#nulos;;;362;
+presidente;1;4209300;#comparecimento;;;14606;
+presidente;1;4209300;#eleitorado;;;26310;
+presidente;1;4210100;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1793;S
+presidente;1;4210100;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;959;
+presidente;1;4210100;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1009;
+presidente;1;4210100;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1478;
+presidente;1;4210100;#brancos;;;90;
+presidente;1;4210100;#nulos;;;235;
+presidente;1;4210100;#comparecimento;;;5564;
+presidente;1;4210100;#eleitorado;;;6968;
+presidente;1;4208104;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;765;S
+presidente;1;4208104;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;917;
+presidente;1;4208104;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;427;
+presidente;1;4208104;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;751;
+presidente;1;4208104;#brancos;;;78;
+presidente;1;4208104;#nulos;;;147;
+presidente;1;4208104;#comparecimento;;;3085;
+presidente;1;4208104;#eleitorado;;;4219;
+presidente;1;4211702;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2896;S
+presidente;1;4211702;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1262;
+presidente;1;4211702;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;493;
+presidente;1;4211702;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;885;
+presidente;1;4211702;#brancos;;;40;
+presidente;1;4211702;#nulos;;;49;
+presidente;1;4211702;#comparecimento;;;5625;
+presidente;1;4211702;#eleitorado;;;8230;
+presidente;1;4211900;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;4150;S
+presidente;1;4211900;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;2728;
+presidente;1;4211900;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;653;
+presidente;1;4211900;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;345;
+presidente;1;4211900;#brancos;;;115;
+presidente;1;4211900;#nulos;;;293;
+presidente;1;4211900;#comparecimento;;;8284;
+presidente;1;4211900;#eleitorado;;;10963;
+presidente;1;4213609;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2102;S
+presidente;1;4213609;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1159;
+presidente;1;4213609;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;629;
+presidente;1;4213609;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;663;
+presidente;1;4213609;#brancos;;;91;
+presidente;1;4213609;#nulos;;;142;
+presidente;1;4213609;#comparecimento;;;4786;
+presidente;1;4213609;#eleitorado;;;7562;
+presidente;1;4214805;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2621;S
+presidente;1;4214805;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1779;
+presidente;1;4214805;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;3267;
+presidente;1;4214805;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;3776;
+presidente;1;4214805;#brancos;;;207;
+presidente;1;4214805;#nulos;;;195;
+presidente;1;4214805;#comparecimento;;;11845;
+presidente;1;4214805;#eleitorado;;;15836;
+presidente;1;4208500;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1155;S
+presidente;1;4208500;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1192;
+presidente;1;4208500;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;716;
+presidente;1;4208500;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;480;
+presidente;1;4208500;#brancos;;;56;
+presidente;1;4208500;#nulos;;;84;
+presidente;1;4208500;#comparecimento;;;3683;
+presidente;1;4208500;#eleitorado;;;6384;
+presidente;1;4217808;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;403;S
+presidente;1;4217808;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;357;
+presidente;1;4217808;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;284;
+presidente;1;4217808;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1278;
+presidente;1;4217808;#brancos;;;51;
+presidente;1;4217808;#nulos;;;61;
+presidente;1;4217808;#comparecimento;;;2434;
+presidente;1;4217808;#eleitorado;;;3402;
+presidente;1;4216206;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2340;S
+presidente;1;4216206;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1042;
+presidente;1;4216206;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;561;
+presidente;1;4216206;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;381;
+presidente;1;4216206;#brancos;;;63;
+presidente;1;4216206;#nulos;;;32;
+presidente;1;4216206;#comparecimento;;;4419;
+presidente;1;4216206;#eleitorado;;;6491;
+presidente;1;4201307;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1516;S
+presidente;1;4201307;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;541;
+presidente;1;4201307;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;147;
+presidente;1;4201307;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;230;
+presidente;1;4201307;#brancos;;;45;
+presidente;1;4201307;#nulos;;;21;
+presidente;1;4201307;#comparecimento;;;2500;
+presidente;1;4201307;#eleitorado;;;3658;
+presidente;1;4216503;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2842;S
+presidente;1;4216503;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;3269;
+presidente;1;4216503;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;460;
+presidente;1;4216503;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;179;
+presidente;1;4216503;#brancos;;;92;
+presidente;1;4216503;#nulos;;;251;
+presidente;1;4216503;#comparecimento;;;7093;
+presidente;1;4216503;#eleitorado;;;7825;
+presidente;1;4216602;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2002;S
+presidente;1;4216602;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1812;
+presidente;1;4216602;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;723;
+presidente;1;4216602;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;280;
+presidente;1;4216602;#brancos;;;48;
+presidente;1;4216602;#nulos;;;50;
+presidente;1;4216602;#comparecimento;;;4915;
+presidente;1;4216602;#eleitorado;;;7010;
+presidente;1;4215802;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;596;S
+presidente;1;4215802;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;747;
+presidente;1;4215802;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;537;
+presidente;1;4215802;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;782;
+presidente;1;4215802;#brancos;;;30;
+presidente;1;4215802;#nulos;;;21;
+presidente;1;4215802;#comparecimento;;;2713;
+presidente;1;4215802;#eleitorado;;;3478;
+presidente;1;4203303;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;430;S
+presidente;1;4203303;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;460;
+presidente;1;4203303;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;102;
+presidente;1;4203303;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;196;
+presidente;1;4203303;#brancos;;;39;
+presidente;1;4203303;#nulos;;;11;
+presidente;1;4203303;#comparecimento;;;1238;
+presidente;1;4203303;#eleitorado;;;1580;
+presidente;1;4215000;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;541;S
+presidente;1;4215000;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;176;
+presidente;1;4215000;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;157;
+presidente;1;4215000;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1014;
+presidente;1;4215000;#brancos;;;30;
+presidente;1;4215000;#nulos;;;18;
+presidente;1;4215000;#comparecimento;;;1936;
+presidente;1;4215000;#eleitorado;;;2594;
+presidente;1;4218004;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;3375;S
+presidente;1;4218004;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;2540;
+presidente;1;4218004;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;344;
+presidente;1;4218004;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;373;
+presidente;1;4218004;#brancos;;;129;
+presidente;1;4218004;#nulos;;;108;
+presidente;1;4218004;#comparecimento;;;6869;
+presidente;1;4218004;#eleitorado;;;9343;
+presidente;1;4213500;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;905;S
+presidente;1;4213500;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;510;
+presidente;1;4213500;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;160;
+presidente;1;4213500;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;37;
+presidente;1;4213500;#brancos;;;54;
+presidente;1;4213500;#nulos;;;23;
+presidente;1;4213500;#comparecimento;;;1689;
+presidente;1;4213500;#eleitorado;;;2409;
+presidente;1;4218202;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;645;S
+presidente;1;4218202;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1106;
+presidente;1;4218202;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;607;
+presidente;1;4218202;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;2038;
+presidente;1;4218202;#brancos;;;52;
+presidente;1;4218202;#nulos;;;55;
+presidente;1;4218202;#comparecimento;;;4503;
+presidente;1;4218202;#eleitorado;;;5756;
+presidente;1;4218707;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;6909;S
+presidente;1;4218707;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;2765;
+presidente;1;4218707;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1451;
+presidente;1;4218707;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1868;
+presidente;1;4218707;#brancos;;;140;
+presidente;1;4218707;#nulos;;;130;
+presidente;1;4218707;#comparecimento;;;13263;
+presidente;1;4218707;#eleitorado;;;19170;
+presidente;1;4208807;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1358;S
+presidente;1;4208807;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;416;
+presidente;1;4208807;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;290;
+presidente;1;4208807;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;76;
+presidente;1;4208807;#brancos;;;28;
+presidente;1;4208807;#nulos;;;40;
+presidente;1;4208807;#comparecimento;;;2208;
+presidente;1;4208807;#eleitorado;;;2810;
+presidente;1;4219002;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;3379;S
+presidente;1;4219002;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1458;
+presidente;1;4219002;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;438;
+presidente;1;4219002;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1190;
+presidente;1;4219002;#brancos;;;80;
+presidente;1;4219002;#nulos;;;71;
+presidente;1;4219002;#comparecimento;;;6616;
+presidente;1;4219002;#eleitorado;;;9563;
+presidente;1;4204202;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;2574;S
+presidente;1;4204202;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;827;
+presidente;1;4204202;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1465;
+presidente;1;4204202;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;343;
+presidente;1;4204202;#brancos;;;81;
+presidente;1;4204202;#nulos;;;111;
+presidente;1;4204202;#comparecimento;;;5401;
+presidente;1;4204202;#eleitorado;;;6187;
+presidente;1;4205001;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;342;S
+presidente;1;4205001;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;176;
+presidente;1;4205001;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;322;
+presidente;1;4205001;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;129;
+presidente;1;4205001;#brancos;;;17;
+presidente;1;4205001;#nulos;;;24;
+presidente;1;4205001;#comparecimento;;;1010;
+presidente;1;4205001;#eleitorado;;;1320;
+presidente;1;4208401;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;187;S
+presidente;1;4208401;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;280;
+presidente;1;4208401;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;286;
+presidente;1;4208401;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;1910;
+presidente;1;4208401;#brancos;;;50;
+presidente;1;4208401;#nulos;;;126;
+presidente;1;4208401;#comparecimento;;;2839;
+presidente;1;4208401;#eleitorado;;;3296;
+presidente;1;4211009;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;245;S
+presidente;1;4211009;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;248;
+presidente;1;4211009;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;311;
+presidente;1;4211009;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;538;
+presidente;1;4211009;#brancos;;;18;
+presidente;1;4211009;#nulos;;;361;
+presidente;1;4211009;#comparecimento;;;1721;
+presidente;1;4211009;#eleitorado;;;2186;
+presidente;1;4212106;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;322;S
+presidente;1;4212106;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;861;
+presidente;1;4212106;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;515;
+presidente;1;4212106;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;548;
+presidente;1;4212106;#brancos;;;33;
+presidente;1;4212106;#nulos;;;213;
+presidente;1;4212106;#comparecimento;;;2492;
+presidente;1;4212106;#eleitorado;;;3016;
+presidente;1;4216008;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;405;S
+presidente;1;4216008;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1019;
+presidente;1;4216008;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;334;
+presidente;1;4216008;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;654;
+presidente;1;4216008;#brancos;;;22;
+presidente;1;4216008;#nulos;;;30;
+presidente;1;4216008;#comparecimento;;;2464;
+presidente;1;4216008;#eleitorado;;;2957;
+presidente;1;4217204;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;155;S
+presidente;1;4217204;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;288;
+presidente;1;4217204;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;740;
+presidente;1;4217204;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;448;
+presidente;1;4217204;#brancos;;;22;
+presidente;1;4217204;#nulos;;;56;
+presidente;1;4217204;#comparecimento;;;1709;
+presidente;1;4217204;#eleitorado;;;2046;
+presidente;1;4219507;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;927;S
+presidente;1;4219507;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;548;
+presidente;1;4219507;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;674;
+presidente;1;4219507;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;155;
+presidente;1;4219507;#brancos;;;35;
+presidente;1;4219507;#nulos;;;55;
+presidente;1;4219507;#comparecimento;;;2394;
+presidente;1;4219507;#eleitorado;;;3047;
+presidente;1;4219705;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;762;S
+presidente;1;4219705;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;478;
+presidente;1;4219705;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;618;
+presidente;1;4219705;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;70;
+presidente;1;4219705;#brancos;;;28;
+presidente;1;4219705;#nulos;;;31;
+presidente;1;4219705;#comparecimento;;;1987;
+presidente;1;4219705;#eleitorado;;;2484;
+presidente;1;4219309;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;813;S
+presidente;1;4219309;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;1739;
+presidente;1;4219309;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1165;
+presidente;1;4219309;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;407;
+presidente;1;4219309;#brancos;;;58;
+presidente;1;4219309;#nulos;;;82;
+presidente;1;4219309;#comparecimento;;;4264;
+presidente;1;4219309;#eleitorado;;;5630;
+vice-presidente;1;4201406;_JOAOGOULART;JOÃO GOULART;PTB;1948;S
+vice-presidente;1;4201406;_MILTONCAMPOS;MILTON CAMPOS;UDN;2117;
+vice-presidente;1;4201406;_DANTONCOELHO;DANTON COELHO;PSP;88;
+vice-presidente;1;4201406;#brancos;;;169;
+vice-presidente;1;4201406;#nulos;;;18;
+vice-presidente;1;4201406;#comparecimento;;;4340;
+vice-presidente;1;4201406;#eleitorado;;;5576;
+vice-presidente;1;4217709;_JOAOGOULART;JOÃO GOULART;PTB;1716;S
+vice-presidente;1;4217709;_MILTONCAMPOS;MILTON CAMPOS;UDN;1764;
+vice-presidente;1;4217709;_DANTONCOELHO;DANTON COELHO;PSP;42;
+vice-presidente;1;4217709;#brancos;;;136;
+vice-presidente;1;4217709;#nulos;;;33;
+vice-presidente;1;4217709;#comparecimento;;;3691;
+vice-presidente;1;4217709;#eleitorado;;;4716;
+vice-presidente;1;4218806;_JOAOGOULART;JOÃO GOULART;PTB;2847;S
+vice-presidente;1;4218806;_MILTONCAMPOS;MILTON CAMPOS;UDN;2488;
+vice-presidente;1;4218806;_DANTONCOELHO;DANTON COELHO;PSP;79;
+vice-presidente;1;4218806;#brancos;;;353;
+vice-presidente;1;4218806;#nulos;;;32;
+vice-presidente;1;4218806;#comparecimento;;;5799;
+vice-presidente;1;4218806;#eleitorado;;;7719;
+vice-presidente;1;4202305;_JOAOGOULART;JOÃO GOULART;PTB;1952;S
+vice-presidente;1;4202305;_MILTONCAMPOS;MILTON CAMPOS;UDN;2015;
+vice-presidente;1;4202305;_DANTONCOELHO;DANTON COELHO;PSP;79;
+vice-presidente;1;4202305;#brancos;;;171;
+vice-presidente;1;4202305;#nulos;;;85;
+vice-presidente;1;4202305;#comparecimento;;;4302;
+vice-presidente;1;4202305;#eleitorado;;;6165;
+vice-presidente;1;4202404;_JOAOGOULART;JOÃO GOULART;PTB;3235;S
+vice-presidente;1;4202404;_MILTONCAMPOS;MILTON CAMPOS;UDN;4905;
+vice-presidente;1;4202404;_DANTONCOELHO;DANTON COELHO;PSP;1215;
+vice-presidente;1;4202404;#brancos;;;2230;
+vice-presidente;1;4202404;#nulos;;;46;
+vice-presidente;1;4202404;#comparecimento;;;11631;
+vice-presidente;1;4202404;#eleitorado;;;18390;
+vice-presidente;1;4205902;_JOAOGOULART;JOÃO GOULART;PTB;1234;S
+vice-presidente;1;4205902;_MILTONCAMPOS;MILTON CAMPOS;UDN;1589;
+vice-presidente;1;4205902;_DANTONCOELHO;DANTON COELHO;PSP;91;
+vice-presidente;1;4205902;#brancos;;;382;
+vice-presidente;1;4205902;#nulos;;;9;
+vice-presidente;1;4205902;#comparecimento;;;3305;
+vice-presidente;1;4205902;#eleitorado;;;4591;
+vice-presidente;1;4202602;_JOAOGOULART;JOÃO GOULART;PTB;1617;S
+vice-presidente;1;4202602;_MILTONCAMPOS;MILTON CAMPOS;UDN;1861;
+vice-presidente;1;4202602;_DANTONCOELHO;DANTON COELHO;PSP;112;
+vice-presidente;1;4202602;#brancos;;;228;
+vice-presidente;1;4202602;#nulos;;;262;
+vice-presidente;1;4202602;#comparecimento;;;4080;
+vice-presidente;1;4202602;#eleitorado;;;6306;
+vice-presidente;1;4202909;_JOAOGOULART;JOÃO GOULART;PTB;3446;S
+vice-presidente;1;4202909;_MILTONCAMPOS;MILTON CAMPOS;UDN;4729;
+vice-presidente;1;4202909;_DANTONCOELHO;DANTON COELHO;PSP;441;
+vice-presidente;1;4202909;#brancos;;;956;
+vice-presidente;1;4202909;#nulos;;;38;
+vice-presidente;1;4202909;#comparecimento;;;9610;
+vice-presidente;1;4202909;#eleitorado;;;13019;
+vice-presidente;1;4211504;_JOAOGOULART;JOÃO GOULART;PTB;930;S
+vice-presidente;1;4211504;_MILTONCAMPOS;MILTON CAMPOS;UDN;1148;
+vice-presidente;1;4211504;_DANTONCOELHO;DANTON COELHO;PSP;290;
+vice-presidente;1;4211504;#brancos;;;289;
+vice-presidente;1;4211504;#nulos;;;51;
+vice-presidente;1;4211504;#comparecimento;;;2708;
+vice-presidente;1;4211504;#eleitorado;;;3293;
+vice-presidente;1;4203006;_JOAOGOULART;JOÃO GOULART;PTB;2102;S
+vice-presidente;1;4203006;_MILTONCAMPOS;MILTON CAMPOS;UDN;2345;
+vice-presidente;1;4203006;_DANTONCOELHO;DANTON COELHO;PSP;368;
+vice-presidente;1;4203006;#brancos;;;382;
+vice-presidente;1;4203006;#nulos;;;30;
+vice-presidente;1;4203006;#comparecimento;;;5227;
+vice-presidente;1;4203006;#eleitorado;;;7912;
+vice-presidente;1;4203600;_JOAOGOULART;JOÃO GOULART;PTB;3008;S
+vice-presidente;1;4203600;_MILTONCAMPOS;MILTON CAMPOS;UDN;2115;
+vice-presidente;1;4203600;_DANTONCOELHO;DANTON COELHO;PSP;340;
+vice-presidente;1;4203600;#brancos;;;433;
+vice-presidente;1;4203600;#nulos;;;151;
+vice-presidente;1;4203600;#comparecimento;;;6047;
+vice-presidente;1;4203600;#eleitorado;;;8630;
+vice-presidente;1;4203907;_JOAOGOULART;JOÃO GOULART;PTB;1963;S
+vice-presidente;1;4203907;_MILTONCAMPOS;MILTON CAMPOS;UDN;2144;
+vice-presidente;1;4203907;_DANTONCOELHO;DANTON COELHO;PSP;98;
+vice-presidente;1;4203907;#brancos;;;201;
+vice-presidente;1;4203907;#nulos;;;235;
+vice-presidente;1;4203907;#comparecimento;;;4641;
+vice-presidente;1;4203907;#eleitorado;;;6414;
+vice-presidente;1;4203808;_JOAOGOULART;JOÃO GOULART;PTB;3407;S
+vice-presidente;1;4203808;_MILTONCAMPOS;MILTON CAMPOS;UDN;2735;
+vice-presidente;1;4203808;_DANTONCOELHO;DANTON COELHO;PSP;182;
+vice-presidente;1;4203808;#brancos;;;410;
+vice-presidente;1;4203808;#nulos;;;552;
+vice-presidente;1;4203808;#comparecimento;;;7286;
+vice-presidente;1;4203808;#eleitorado;;;10457;
+vice-presidente;1;4212205;_JOAOGOULART;JOÃO GOULART;PTB;935;S
+vice-presidente;1;4212205;_MILTONCAMPOS;MILTON CAMPOS;UDN;220;
+vice-presidente;1;4212205;_DANTONCOELHO;DANTON COELHO;PSP;39;
+vice-presidente;1;4212205;#brancos;;;127;
+vice-presidente;1;4212205;#nulos;;;69;
+vice-presidente;1;4212205;#comparecimento;;;1390;
+vice-presidente;1;4212205;#eleitorado;;;2357;
+vice-presidente;1;4204301;_JOAOGOULART;JOÃO GOULART;PTB;2818;S
+vice-presidente;1;4204301;_MILTONCAMPOS;MILTON CAMPOS;UDN;2455;
+vice-presidente;1;4204301;_DANTONCOELHO;DANTON COELHO;PSP;292;
+vice-presidente;1;4204301;#brancos;;;375;
+vice-presidente;1;4204301;#nulos;;;61;
+vice-presidente;1;4204301;#comparecimento;;;6001;
+vice-presidente;1;4204301;#eleitorado;;;6533;
+vice-presidente;1;4213104;_JOAOGOULART;JOÃO GOULART;PTB;939;S
+vice-presidente;1;4213104;_MILTONCAMPOS;MILTON CAMPOS;UDN;1168;
+vice-presidente;1;4213104;_DANTONCOELHO;DANTON COELHO;PSP;79;
+vice-presidente;1;4213104;#brancos;;;204;
+vice-presidente;1;4213104;#nulos;;;21;
+vice-presidente;1;4213104;#comparecimento;;;2411;
+vice-presidente;1;4213104;#eleitorado;;;4065;
+vice-presidente;1;4217501;_JOAOGOULART;JOÃO GOULART;PTB;1199;S
+vice-presidente;1;4217501;_MILTONCAMPOS;MILTON CAMPOS;UDN;1726;
+vice-presidente;1;4217501;_DANTONCOELHO;DANTON COELHO;PSP;159;
+vice-presidente;1;4217501;#brancos;;;156;
+vice-presidente;1;4217501;#nulos;;;46;
+vice-presidente;1;4217501;#comparecimento;;;3286;
+vice-presidente;1;4217501;#eleitorado;;;4348;
+vice-presidente;1;4204608;_JOAOGOULART;JOÃO GOULART;PTB;5815;S
+vice-presidente;1;4204608;_MILTONCAMPOS;MILTON CAMPOS;UDN;2881;
+vice-presidente;1;4204608;_DANTONCOELHO;DANTON COELHO;PSP;151;
+vice-presidente;1;4204608;#brancos;;;381;
+vice-presidente;1;4204608;#nulos;;;39;
+vice-presidente;1;4204608;#comparecimento;;;9267;
+vice-presidente;1;4204608;#eleitorado;;;13074;
+vice-presidente;1;4204806;_JOAOGOULART;JOÃO GOULART;PTB;2969;S
+vice-presidente;1;4204806;_MILTONCAMPOS;MILTON CAMPOS;UDN;2180;
+vice-presidente;1;4204806;_DANTONCOELHO;DANTON COELHO;PSP;353;
+vice-presidente;1;4204806;#brancos;;;702;
+vice-presidente;1;4204806;#nulos;;;476;
+vice-presidente;1;4204806;#comparecimento;;;6680;
+vice-presidente;1;4204806;#eleitorado;;;9947;
+vice-presidente;1;4205407;_JOAOGOULART;JOÃO GOULART;PTB;11899;S
+vice-presidente;1;4205407;_MILTONCAMPOS;MILTON CAMPOS;UDN;8762;
+vice-presidente;1;4205407;_DANTONCOELHO;DANTON COELHO;PSP;705;
+vice-presidente;1;4205407;#brancos;;;893;
+vice-presidente;1;4205407;#nulos;;;359;
+vice-presidente;1;4205407;#comparecimento;;;22618;
+vice-presidente;1;4205407;#eleitorado;;;31799;
+vice-presidente;1;4206900;_JOAOGOULART;JOÃO GOULART;PTB;1109;S
+vice-presidente;1;4206900;_MILTONCAMPOS;MILTON CAMPOS;UDN;1408;
+vice-presidente;1;4206900;_DANTONCOELHO;DANTON COELHO;PSP;196;
+vice-presidente;1;4206900;#brancos;;;209;
+vice-presidente;1;4206900;#nulos;;;62;
+vice-presidente;1;4206900;#comparecimento;;;2984;
+vice-presidente;1;4206900;#eleitorado;;;4310;
+vice-presidente;1;4214003;_JOAOGOULART;JOÃO GOULART;PTB;740;S
+vice-presidente;1;4214003;_MILTONCAMPOS;MILTON CAMPOS;UDN;965;
+vice-presidente;1;4214003;_DANTONCOELHO;DANTON COELHO;PSP;108;
+vice-presidente;1;4214003;#brancos;;;245;
+vice-presidente;1;4214003;#nulos;;;26;
+vice-presidente;1;4214003;#comparecimento;;;2084;
+vice-presidente;1;4214003;#eleitorado;;;3716;
+vice-presidente;1;4207502;_JOAOGOULART;JOÃO GOULART;PTB;1516;S
+vice-presidente;1;4207502;_MILTONCAMPOS;MILTON CAMPOS;UDN;2373;
+vice-presidente;1;4207502;_DANTONCOELHO;DANTON COELHO;PSP;202;
+vice-presidente;1;4207502;#brancos;;;369;
+vice-presidente;1;4207502;#nulos;;;14;
+vice-presidente;1;4207502;#comparecimento;;;4474;
+vice-presidente;1;4207502;#eleitorado;;;6194;
+vice-presidente;1;4215109;_JOAOGOULART;JOÃO GOULART;PTB;591;S
+vice-presidente;1;4215109;_MILTONCAMPOS;MILTON CAMPOS;UDN;2775;
+vice-presidente;1;4215109;_DANTONCOELHO;DANTON COELHO;PSP;200;
+vice-presidente;1;4215109;#brancos;;;408;
+vice-presidente;1;4215109;#nulos;;;10;
+vice-presidente;1;4215109;#comparecimento;;;3984;
+vice-presidente;1;4215109;#eleitorado;;;5766;
+vice-presidente;1;4208203;_JOAOGOULART;JOÃO GOULART;PTB;7547;S
+vice-presidente;1;4208203;_MILTONCAMPOS;MILTON CAMPOS;UDN;6158;
+vice-presidente;1;4208203;_DANTONCOELHO;DANTON COELHO;PSP;415;
+vice-presidente;1;4208203;#brancos;;;503;
+vice-presidente;1;4208203;#nulos;;;131;
+vice-presidente;1;4208203;#comparecimento;;;14754;
+vice-presidente;1;4208203;#eleitorado;;;22771;
+vice-presidente;1;4203204;_JOAOGOULART;JOÃO GOULART;PTB;1363;S
+vice-presidente;1;4203204;_MILTONCAMPOS;MILTON CAMPOS;UDN;1210;
+vice-presidente;1;4203204;_DANTONCOELHO;DANTON COELHO;PSP;27;
+vice-presidente;1;4203204;#brancos;;;175;
+vice-presidente;1;4203204;#nulos;;;55;
+vice-presidente;1;4203204;#comparecimento;;;2830;
+vice-presidente;1;4203204;#eleitorado;;;3532;
+vice-presidente;1;4208906;_JOAOGOULART;JOÃO GOULART;PTB;2128;S
+vice-presidente;1;4208906;_MILTONCAMPOS;MILTON CAMPOS;UDN;2797;
+vice-presidente;1;4208906;_DANTONCOELHO;DANTON COELHO;PSP;356;
+vice-presidente;1;4208906;#brancos;;;1433;
+vice-presidente;1;4208906;#nulos;;;31;
+vice-presidente;1;4208906;#comparecimento;;;6745;
+vice-presidente;1;4208906;#eleitorado;;;9270;
+vice-presidente;1;4206504;_JOAOGOULART;JOÃO GOULART;PTB;1572;S
+vice-presidente;1;4206504;_MILTONCAMPOS;MILTON CAMPOS;UDN;1456;
+vice-presidente;1;4206504;_DANTONCOELHO;DANTON COELHO;PSP;196;
+vice-presidente;1;4206504;#brancos;;;539;
+vice-presidente;1;4206504;#nulos;;;17;
+vice-presidente;1;4206504;#comparecimento;;;3780;
+vice-presidente;1;4206504;#eleitorado;;;6387;
+vice-presidente;1;4209003;_JOAOGOULART;JOÃO GOULART;PTB;3374;S
+vice-presidente;1;4209003;_MILTONCAMPOS;MILTON CAMPOS;UDN;4206;
+vice-presidente;1;4209003;_DANTONCOELHO;DANTON COELHO;PSP;326;
+vice-presidente;1;4209003;#brancos;;;362;
+vice-presidente;1;4209003;#nulos;;;139;
+vice-presidente;1;4209003;#comparecimento;;;8407;
+vice-presidente;1;4209003;#eleitorado;;;10194;
+vice-presidente;1;4206702;_JOAOGOULART;JOÃO GOULART;PTB;867;S
+vice-presidente;1;4206702;_MILTONCAMPOS;MILTON CAMPOS;UDN;839;
+vice-presidente;1;4206702;_DANTONCOELHO;DANTON COELHO;PSP;71;
+vice-presidente;1;4206702;#brancos;;;104;
+vice-presidente;1;4206702;#nulos;;;25;
+vice-presidente;1;4206702;#comparecimento;;;1906;
+vice-presidente;1;4206702;#eleitorado;;;2609;
+vice-presidente;1;4217907;_JOAOGOULART;JOÃO GOULART;PTB;677;S
+vice-presidente;1;4217907;_MILTONCAMPOS;MILTON CAMPOS;UDN;1461;
+vice-presidente;1;4217907;_DANTONCOELHO;DANTON COELHO;PSP;115;
+vice-presidente;1;4217907;#brancos;;;246;
+vice-presidente;1;4217907;#nulos;;;129;
+vice-presidente;1;4217907;#comparecimento;;;2628;
+vice-presidente;1;4217907;#eleitorado;;;4830;
+vice-presidente;1;4209102;_JOAOGOULART;JOÃO GOULART;PTB;5775;S
+vice-presidente;1;4209102;_MILTONCAMPOS;MILTON CAMPOS;UDN;7645;
+vice-presidente;1;4209102;_DANTONCOELHO;DANTON COELHO;PSP;598;
+vice-presidente;1;4209102;#brancos;;;980;
+vice-presidente;1;4209102;#nulos;;;59;
+vice-presidente;1;4209102;#comparecimento;;;15057;
+vice-presidente;1;4209102;#eleitorado;;;18549;
+vice-presidente;1;4209409;_JOAOGOULART;JOÃO GOULART;PTB;4403;S
+vice-presidente;1;4209409;_MILTONCAMPOS;MILTON CAMPOS;UDN;2213;
+vice-presidente;1;4209409;_DANTONCOELHO;DANTON COELHO;PSP;341;
+vice-presidente;1;4209409;#brancos;;;428;
+vice-presidente;1;4209409;#nulos;;;159;
+vice-presidente;1;4209409;#comparecimento;;;7544;
+vice-presidente;1;4209409;#eleitorado;;;11095;
+vice-presidente;1;4207205;_JOAOGOULART;JOÃO GOULART;PTB;1844;S
+vice-presidente;1;4207205;_MILTONCAMPOS;MILTON CAMPOS;UDN;1418;
+vice-presidente;1;4207205;_DANTONCOELHO;DANTON COELHO;PSP;222;
+vice-presidente;1;4207205;#brancos;;;175;
+vice-presidente;1;4207205;#nulos;;;132;
+vice-presidente;1;4207205;#comparecimento;;;3791;
+vice-presidente;1;4207205;#eleitorado;;;5664;
+vice-presidente;1;4209300;_JOAOGOULART;JOÃO GOULART;PTB;7801;S
+vice-presidente;1;4209300;_MILTONCAMPOS;MILTON CAMPOS;UDN;5249;
+vice-presidente;1;4209300;_DANTONCOELHO;DANTON COELHO;PSP;525;
+vice-presidente;1;4209300;#brancos;;;840;
+vice-presidente;1;4209300;#nulos;;;191;
+vice-presidente;1;4209300;#comparecimento;;;14606;
+vice-presidente;1;4209300;#eleitorado;;;26310;
+vice-presidente;1;4210100;_JOAOGOULART;JOÃO GOULART;PTB;2435;S
+vice-presidente;1;4210100;_MILTONCAMPOS;MILTON CAMPOS;UDN;1814;
+vice-presidente;1;4210100;_DANTONCOELHO;DANTON COELHO;PSP;327;
+vice-presidente;1;4210100;#brancos;;;810;
+vice-presidente;1;4210100;#nulos;;;178;
+vice-presidente;1;4210100;#comparecimento;;;5564;
+vice-presidente;1;4210100;#eleitorado;;;6968;
+vice-presidente;1;4208104;_JOAOGOULART;JOÃO GOULART;PTB;902;S
+vice-presidente;1;4208104;_MILTONCAMPOS;MILTON CAMPOS;UDN;1272;
+vice-presidente;1;4208104;_DANTONCOELHO;DANTON COELHO;PSP;187;
+vice-presidente;1;4208104;#brancos;;;609;
+vice-presidente;1;4208104;#nulos;;;115;
+vice-presidente;1;4208104;#comparecimento;;;3085;
+vice-presidente;1;4208104;#eleitorado;;;4219;
+vice-presidente;1;4211702;_JOAOGOULART;JOÃO GOULART;PTB;3292;S
+vice-presidente;1;4211702;_MILTONCAMPOS;MILTON CAMPOS;UDN;1953;
+vice-presidente;1;4211702;_DANTONCOELHO;DANTON COELHO;PSP;149;
+vice-presidente;1;4211702;#brancos;;;197;
+vice-presidente;1;4211702;#nulos;;;34;
+vice-presidente;1;4211702;#comparecimento;;;5625;
+vice-presidente;1;4211702;#eleitorado;;;8230;
+vice-presidente;1;4211900;_JOAOGOULART;JOÃO GOULART;PTB;4348;S
+vice-presidente;1;4211900;_MILTONCAMPOS;MILTON CAMPOS;UDN;3259;
+vice-presidente;1;4211900;_DANTONCOELHO;DANTON COELHO;PSP;163;
+vice-presidente;1;4211900;#brancos;;;233;
+vice-presidente;1;4211900;#nulos;;;281;
+vice-presidente;1;4211900;#comparecimento;;;8284;
+vice-presidente;1;4211900;#eleitorado;;;10963;
+vice-presidente;1;4213609;_JOAOGOULART;JOÃO GOULART;PTB;2459;S
+vice-presidente;1;4213609;_MILTONCAMPOS;MILTON CAMPOS;UDN;1387;
+vice-presidente;1;4213609;_DANTONCOELHO;DANTON COELHO;PSP;230;
+vice-presidente;1;4213609;#brancos;;;612;
+vice-presidente;1;4213609;#nulos;;;98;
+vice-presidente;1;4213609;#comparecimento;;;4786;
+vice-presidente;1;4213609;#eleitorado;;;7562;
+vice-presidente;1;4214805;_JOAOGOULART;JOÃO GOULART;PTB;3262;S
+vice-presidente;1;4214805;_MILTONCAMPOS;MILTON CAMPOS;UDN;6723;
+vice-presidente;1;4214805;_DANTONCOELHO;DANTON COELHO;PSP;636;
+vice-presidente;1;4214805;#brancos;;;1112;
+vice-presidente;1;4214805;#nulos;;;112;
+vice-presidente;1;4214805;#comparecimento;;;11845;
+vice-presidente;1;4214805;#eleitorado;;;15836;
+vice-presidente;1;4208500;_JOAOGOULART;JOÃO GOULART;PTB;1198;S
+vice-presidente;1;4208500;_MILTONCAMPOS;MILTON CAMPOS;UDN;1760;
+vice-presidente;1;4208500;_DANTONCOELHO;DANTON COELHO;PSP;214;
+vice-presidente;1;4208500;#brancos;;;450;
+vice-presidente;1;4208500;#nulos;;;61;
+vice-presidente;1;4208500;#comparecimento;;;3683;
+vice-presidente;1;4208500;#eleitorado;;;6384;
+vice-presidente;1;4217808;_JOAOGOULART;JOÃO GOULART;PTB;585;S
+vice-presidente;1;4217808;_MILTONCAMPOS;MILTON CAMPOS;UDN;1399;
+vice-presidente;1;4217808;_DANTONCOELHO;DANTON COELHO;PSP;88;
+vice-presidente;1;4217808;#brancos;;;331;
+vice-presidente;1;4217808;#nulos;;;31;
+vice-presidente;1;4217808;#comparecimento;;;2434;
+vice-presidente;1;4217808;#eleitorado;;;3402;
+vice-presidente;1;4216206;_JOAOGOULART;JOÃO GOULART;PTB;2664;S
+vice-presidente;1;4216206;_MILTONCAMPOS;MILTON CAMPOS;UDN;1344;
+vice-presidente;1;4216206;_DANTONCOELHO;DANTON COELHO;PSP;144;
+vice-presidente;1;4216206;#brancos;;;244;
+vice-presidente;1;4216206;#nulos;;;23;
+vice-presidente;1;4216206;#comparecimento;;;4419;
+vice-presidente;1;4216206;#eleitorado;;;6491;
+vice-presidente;1;4201307;_JOAOGOULART;JOÃO GOULART;PTB;1603;S
+vice-presidente;1;4201307;_MILTONCAMPOS;MILTON CAMPOS;UDN;710;
+vice-presidente;1;4201307;_DANTONCOELHO;DANTON COELHO;PSP;53;
+vice-presidente;1;4201307;#brancos;;;124;
+vice-presidente;1;4201307;#nulos;;;10;
+vice-presidente;1;4201307;#comparecimento;;;2500;
+vice-presidente;1;4201307;#eleitorado;;;3658;
+vice-presidente;1;4216503;_JOAOGOULART;JOÃO GOULART;PTB;2953;S
+vice-presidente;1;4216503;_MILTONCAMPOS;MILTON CAMPOS;UDN;3538;
+vice-presidente;1;4216503;_DANTONCOELHO;DANTON COELHO;PSP;126;
+vice-presidente;1;4216503;#brancos;;;299;
+vice-presidente;1;4216503;#nulos;;;177;
+vice-presidente;1;4216503;#comparecimento;;;7093;
+vice-presidente;1;4216503;#eleitorado;;;7825;
+vice-presidente;1;4216602;_JOAOGOULART;JOÃO GOULART;PTB;2184;S
+vice-presidente;1;4216602;_MILTONCAMPOS;MILTON CAMPOS;UDN;2359;
+vice-presidente;1;4216602;_DANTONCOELHO;DANTON COELHO;PSP;150;
+vice-presidente;1;4216602;#brancos;;;205;
+vice-presidente;1;4216602;#nulos;;;17;
+vice-presidente;1;4216602;#comparecimento;;;4915;
+vice-presidente;1;4216602;#eleitorado;;;7010;
+vice-presidente;1;4215802;_JOAOGOULART;JOÃO GOULART;PTB;818;S
+vice-presidente;1;4215802;_MILTONCAMPOS;MILTON CAMPOS;UDN;1187;
+vice-presidente;1;4215802;_DANTONCOELHO;DANTON COELHO;PSP;209;
+vice-presidente;1;4215802;#brancos;;;487;
+vice-presidente;1;4215802;#nulos;;;12;
+vice-presidente;1;4215802;#comparecimento;;;2713;
+vice-presidente;1;4215802;#eleitorado;;;3478;
+vice-presidente;1;4203303;_JOAOGOULART;JOÃO GOULART;PTB;487;S
+vice-presidente;1;4203303;_MILTONCAMPOS;MILTON CAMPOS;UDN;514;
+vice-presidente;1;4203303;_DANTONCOELHO;DANTON COELHO;PSP;44;
+vice-presidente;1;4203303;#brancos;;;189;
+vice-presidente;1;4203303;#nulos;;;4;
+vice-presidente;1;4203303;#comparecimento;;;1238;
+vice-presidente;1;4203303;#eleitorado;;;1580;
+vice-presidente;1;4215000;_JOAOGOULART;JOÃO GOULART;PTB;629;S
+vice-presidente;1;4215000;_MILTONCAMPOS;MILTON CAMPOS;UDN;813;
+vice-presidente;1;4215000;_DANTONCOELHO;DANTON COELHO;PSP;64;
+vice-presidente;1;4215000;#brancos;;;423;
+vice-presidente;1;4215000;#nulos;;;7;
+vice-presidente;1;4215000;#comparecimento;;;1936;
+vice-presidente;1;4215000;#eleitorado;;;2594;
+vice-presidente;1;4218004;_JOAOGOULART;JOÃO GOULART;PTB;3516;S
+vice-presidente;1;4218004;_MILTONCAMPOS;MILTON CAMPOS;UDN;2794;
+vice-presidente;1;4218004;_DANTONCOELHO;DANTON COELHO;PSP;140;
+vice-presidente;1;4218004;#brancos;;;372;
+vice-presidente;1;4218004;#nulos;;;47;
+vice-presidente;1;4218004;#comparecimento;;;6869;
+vice-presidente;1;4218004;#eleitorado;;;9343;
+vice-presidente;1;4213500;_JOAOGOULART;JOÃO GOULART;PTB;951;S
+vice-presidente;1;4213500;_MILTONCAMPOS;MILTON CAMPOS;UDN;568;
+vice-presidente;1;4213500;_DANTONCOELHO;DANTON COELHO;PSP;44;
+vice-presidente;1;4213500;#brancos;;;113;
+vice-presidente;1;4213500;#nulos;;;13;
+vice-presidente;1;4213500;#comparecimento;;;1689;
+vice-presidente;1;4213500;#eleitorado;;;2409;
+vice-presidente;1;4218202;_JOAOGOULART;JOÃO GOULART;PTB;1013;S
+vice-presidente;1;4218202;_MILTONCAMPOS;MILTON CAMPOS;UDN;2618;
+vice-presidente;1;4218202;_DANTONCOELHO;DANTON COELHO;PSP;213;
+vice-presidente;1;4218202;#brancos;;;644;
+vice-presidente;1;4218202;#nulos;;;15;
+vice-presidente;1;4218202;#comparecimento;;;4503;
+vice-presidente;1;4218202;#eleitorado;;;5756;
+vice-presidente;1;4218707;_JOAOGOULART;JOÃO GOULART;PTB;7550;S
+vice-presidente;1;4218707;_MILTONCAMPOS;MILTON CAMPOS;UDN;4805;
+vice-presidente;1;4218707;_DANTONCOELHO;DANTON COELHO;PSP;325;
+vice-presidente;1;4218707;#brancos;;;507;
+vice-presidente;1;4218707;#nulos;;;76;
+vice-presidente;1;4218707;#comparecimento;;;13263;
+vice-presidente;1;4218707;#eleitorado;;;19170;
+vice-presidente;1;4208807;_JOAOGOULART;JOÃO GOULART;PTB;1435;S
+vice-presidente;1;4208807;_MILTONCAMPOS;MILTON CAMPOS;UDN;562;
+vice-presidente;1;4208807;_DANTONCOELHO;DANTON COELHO;PSP;85;
+vice-presidente;1;4208807;#brancos;;;105;
+vice-presidente;1;4208807;#nulos;;;21;
+vice-presidente;1;4208807;#comparecimento;;;2208;
+vice-presidente;1;4208807;#eleitorado;;;2810;
+vice-presidente;1;4219002;_JOAOGOULART;JOÃO GOULART;PTB;3687;S
+vice-presidente;1;4219002;_MILTONCAMPOS;MILTON CAMPOS;UDN;2595;
+vice-presidente;1;4219002;_DANTONCOELHO;DANTON COELHO;PSP;45;
+vice-presidente;1;4219002;#brancos;;;255;
+vice-presidente;1;4219002;#nulos;;;34;
+vice-presidente;1;4219002;#comparecimento;;;6616;
+vice-presidente;1;4219002;#eleitorado;;;9563;
+vice-presidente;1;4204202;_JOAOGOULART;JOÃO GOULART;PTB;2960;S
+vice-presidente;1;4204202;_MILTONCAMPOS;MILTON CAMPOS;UDN;1451;
+vice-presidente;1;4204202;_DANTONCOELHO;DANTON COELHO;PSP;568;
+vice-presidente;1;4204202;#brancos;;;334;
+vice-presidente;1;4204202;#nulos;;;88;
+vice-presidente;1;4204202;#comparecimento;;;5401;
+vice-presidente;1;4204202;#eleitorado;;;6187;
+vice-presidente;1;4205001;_JOAOGOULART;JOÃO GOULART;PTB;468;S
+vice-presidente;1;4205001;_MILTONCAMPOS;MILTON CAMPOS;UDN;399;
+vice-presidente;1;4205001;_DANTONCOELHO;DANTON COELHO;PSP;55;
+vice-presidente;1;4205001;#brancos;;;81;
+vice-presidente;1;4205001;#nulos;;;7;
+vice-presidente;1;4205001;#comparecimento;;;1010;
+vice-presidente;1;4205001;#eleitorado;;;1320;
+vice-presidente;1;4208401;_JOAOGOULART;JOÃO GOULART;PTB;242;S
+vice-presidente;1;4208401;_MILTONCAMPOS;MILTON CAMPOS;UDN;1469;
+vice-presidente;1;4208401;_DANTONCOELHO;DANTON COELHO;PSP;89;
+vice-presidente;1;4208401;#brancos;;;926;
+vice-presidente;1;4208401;#nulos;;;113;
+vice-presidente;1;4208401;#comparecimento;;;2839;
+vice-presidente;1;4208401;#eleitorado;;;3296;
+vice-presidente;1;4211009;_JOAOGOULART;JOÃO GOULART;PTB;338;S
+vice-presidente;1;4211009;_MILTONCAMPOS;MILTON CAMPOS;UDN;637;
+vice-presidente;1;4211009;_DANTONCOELHO;DANTON COELHO;PSP;98;
+vice-presidente;1;4211009;#brancos;;;296;
+vice-presidente;1;4211009;#nulos;;;352;
+vice-presidente;1;4211009;#comparecimento;;;1721;
+vice-presidente;1;4211009;#eleitorado;;;2186;
+vice-presidente;1;4212106;_JOAOGOULART;JOÃO GOULART;PTB;509;S
+vice-presidente;1;4212106;_MILTONCAMPOS;MILTON CAMPOS;UDN;1300;
+vice-presidente;1;4212106;_DANTONCOELHO;DANTON COELHO;PSP;233;
+vice-presidente;1;4212106;#brancos;;;254;
+vice-presidente;1;4212106;#nulos;;;196;
+vice-presidente;1;4212106;#comparecimento;;;2492;
+vice-presidente;1;4212106;#eleitorado;;;3016;
+vice-presidente;1;4216008;_JOAOGOULART;JOÃO GOULART;PTB;546;S
+vice-presidente;1;4216008;_MILTONCAMPOS;MILTON CAMPOS;UDN;1595;
+vice-presidente;1;4216008;_DANTONCOELHO;DANTON COELHO;PSP;140;
+vice-presidente;1;4216008;#brancos;;;168;
+vice-presidente;1;4216008;#nulos;;;15;
+vice-presidente;1;4216008;#comparecimento;;;2464;
+vice-presidente;1;4216008;#eleitorado;;;2957;
+vice-presidente;1;4217204;_JOAOGOULART;JOÃO GOULART;PTB;263;S
+vice-presidente;1;4217204;_MILTONCAMPOS;MILTON CAMPOS;UDN;1137;
+vice-presidente;1;4217204;_DANTONCOELHO;DANTON COELHO;PSP;113;
+vice-presidente;1;4217204;#brancos;;;157;
+vice-presidente;1;4217204;#nulos;;;39;
+vice-presidente;1;4217204;#comparecimento;;;1709;
+vice-presidente;1;4217204;#eleitorado;;;2046;
+vice-presidente;1;4219507;_JOAOGOULART;JOÃO GOULART;PTB;1169;S
+vice-presidente;1;4219507;_MILTONCAMPOS;MILTON CAMPOS;UDN;811;
+vice-presidente;1;4219507;_DANTONCOELHO;DANTON COELHO;PSP;148;
+vice-presidente;1;4219507;#brancos;;;238;
+vice-presidente;1;4219507;#nulos;;;28;
+vice-presidente;1;4219507;#comparecimento;;;2394;
+vice-presidente;1;4219507;#eleitorado;;;3047;
+vice-presidente;1;4219705;_JOAOGOULART;JOÃO GOULART;PTB;940;S
+vice-presidente;1;4219705;_MILTONCAMPOS;MILTON CAMPOS;UDN;592;
+vice-presidente;1;4219705;_DANTONCOELHO;DANTON COELHO;PSP;200;
+vice-presidente;1;4219705;#brancos;;;246;
+vice-presidente;1;4219705;#nulos;;;9;
+vice-presidente;1;4219705;#comparecimento;;;1987;
+vice-presidente;1;4219705;#eleitorado;;;2484;
+vice-presidente;1;4219309;_JOAOGOULART;JOÃO GOULART;PTB;1162;S
+vice-presidente;1;4219309;_MILTONCAMPOS;MILTON CAMPOS;UDN;2399;
+vice-presidente;1;4219309;_DANTONCOELHO;DANTON COELHO;PSP;370;
+vice-presidente;1;4219309;#brancos;;;295;
+vice-presidente;1;4219309;#nulos;;;38;
+vice-presidente;1;4219309;#comparecimento;;;4264;
+vice-presidente;1;4219309;#eleitorado;;;5630;

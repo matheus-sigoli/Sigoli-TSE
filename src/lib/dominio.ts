@@ -1,6 +1,6 @@
 /** Vocabulário do Sigoli.TSE — ver CONTEXT.md. */
 
-export type CargoSlug = 'presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual';
+export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual';
 export type Turno = 1 | 2;
 export type TipoCargo = 'maj' | 'prop';
 
@@ -15,6 +15,8 @@ export interface Cargo {
 
 export const CARGOS: Cargo[] = [
   { slug: 'presidente', nome: 'Presidente', curto: 'Presidente', tipo: 'maj', turnos: [1, 2], federal: true },
+  // República de 1946: o Vice-Presidente tinha eleição própria (1945–1960)
+  { slug: 'vice-presidente', nome: 'Vice-Presidente', curto: 'Vice-Presidente', tipo: 'maj', turnos: [1], federal: true },
   { slug: 'governador', nome: 'Governador', curto: 'Governador', tipo: 'maj', turnos: [1, 2], federal: false },
   { slug: 'senador', nome: 'Senador', curto: 'Senador', tipo: 'maj', turnos: [1], federal: false },
   { slug: 'deputado-federal', nome: 'Deputado Federal', curto: 'Dep. Federal', tipo: 'prop', turnos: [1], federal: false },

@@ -1,0 +1,31 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+presidente;1;1100205;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1426;S
+presidente;1;1100205;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;180;
+presidente;1;1100205;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;2761;
+presidente;1;1100205;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;108;
+presidente;1;1100205;#brancos;;;35;
+presidente;1;1100205;#nulos;;;65;
+presidente;1;1100205;#comparecimento;;;4575;
+presidente;1;1100205;#eleitorado;;;2867;
+presidente;1;1100106;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;313;S
+presidente;1;1100106;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;118;
+presidente;1;1100106;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;698;
+presidente;1;1100106;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;24;
+presidente;1;1100106;#brancos;;;8;
+presidente;1;1100106;#nulos;;;45;
+presidente;1;1100106;#comparecimento;;;1206;
+presidente;1;1100106;#eleitorado;;;4128;
+vice-presidente;1;1100106;_JOAOGOULART;JOÃO GOULART;PTB;328;S
+vice-presidente;1;1100106;_MILTONCAMPOS;MILTON CAMPOS;UDN;114;
+vice-presidente;1;1100106;_DANTONCOELHO;DANTON COELHO;PSP;660;
+vice-presidente;1;1100106;#brancos;;;68;
+vice-presidente;1;1100106;#nulos;;;36;
+vice-presidente;1;1100106;#comparecimento;;;1206;
+vice-presidente;1;1100106;#eleitorado;;;4128;
+vice-presidente;1;1100205;_JOAOGOULART;JOÃO GOULART;PTB;1597;S
+vice-presidente;1;1100205;_MILTONCAMPOS;MILTON CAMPOS;UDN;225;
+vice-presidente;1;1100205;_DANTONCOELHO;DANTON COELHO;PSP;2516;
+vice-presidente;1;1100205;#brancos;;;197;
+vice-presidente;1;1100205;#nulos;;;40;
+vice-presidente;1;1100205;#comparecimento;;;4575;
+vice-presidente;1;1100205;#eleitorado;;;2867;

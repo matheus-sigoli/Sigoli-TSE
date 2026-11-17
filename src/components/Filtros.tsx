@@ -65,7 +65,7 @@ const DICA_CIDADE: Record<string, string> = {
 };
 const UNIDADE: Record<Nivel, string> = { municipios: 'no município', zonas: 'na zona', bairros: 'no bairro', locais: 'no local' };
 
-const ANOS_NO_AR = ELEICOES.filter((e) => e.disponivel).map((e) => e.ano);
+const ANOS_NO_AR = ELEICOES.filter((e) => e.disponivel).map((e) => e.ano).sort((a, b) => b - a);
 const UFS_ORDENADAS = Object.entries(UFS).sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
 
 // na faixa de anos rolável (celular), deixa o ano escolhido à vista

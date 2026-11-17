@@ -44,9 +44,9 @@ export const geoDoAno = (ano: number, nome: string) => (ano === 2026 ? `/geo/${n
 export const urlResultado = (ano: number, cargo: CargoSlug, turno: Turno, abr: string) =>
   `/data/${ano}/${cargo}/${turno}/${abr === 'exterior' ? 'zz' : abr}.json`;
 
-/** Presidente usa um arquivo nacional único também na visão por UF. */
+/** Presidente (e o Vice-Presidente eleito à parte, até 1960) usa um arquivo nacional único também na visão por UF. */
 export const urlResultadoParaTela = (ano: number, cargo: CargoSlug, turno: Turno, abr: string) =>
-  cargo === 'presidente' && abr !== 'exterior' ? urlResultado(ano, cargo, turno, 'br') : urlResultado(ano, cargo, turno, abr);
+  (cargo === 'presidente' || cargo === 'vice-presidente') && abr !== 'exterior' ? urlResultado(ano, cargo, turno, 'br') : urlResultado(ano, cargo, turno, abr);
 
 const arquivoMalha = (abr: string) => (abr === 'br' ? 'br.json' : abr === 'exterior' ? 'mundo.json' : `uf/${abr}.json`);
 /**

@@ -1,8 +1,8 @@
 {
-  "ba-1950-gov": "/1950/ba/governador",
-  "ba-1947-gov": "/1947/ba/governador",
-  "rj-1986-gov": "/1986/rj/governador",
-  "es-1986-gov": "/1986/es/governador",
-  "br-1986-gov": "/1986/br/governador",
-  "mg-1960-gov@cel": "/1960/mg/governador"
+  "br-1955-pres": "/1955/br/presidente",
+  "br-1955-vice": "/1955/br/vice-presidente",
+  "sp-1955-pres": "/1955/sp/presidente",
+  "mg-1955-gov": "/1955/mg/governador",
+  "mt-1955-gov": "/1955/mt/governador",
+  "rj-1955-vice@cel": "/1955/rj/vice-presidente"
 }
