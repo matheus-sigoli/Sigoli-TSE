@@ -65,6 +65,9 @@ FONTES = [
      {1: ('LUIZ ROCHA', 'PDS'), 2: ('RENATO ARCHER', 'PMDB'), 3: ('PT', 'PT'), 4: ('PDT', 'PDT'), 5: ('PTB', 'PTB')}, {}, 'Relatório do Maranhão 1982-1990 (acervo)'),
     (1986, 'ma', 'governador', f'{ACERVO}/MA/Resultados/Maranhão 1982-1990 Relatorio.xlsx', 'Governador do Estado - 1986', 1,
      {1: ('JOÃO CASTELO', 'PDS'), 2: ('EPITÁCIO CAFETEIRA', 'PMDB'), 3: ('PT', 'PT')}, {}, 'Relatório do Maranhão 1982-1990 (acervo)'),
+    # Senado 1990: a aba só tem os votos de parte dos municípios (os demais ficam sem dado no mapa)
+    (1990, 'ma', 'senador', f'{ACERVO}/MA/Resultados/Maranhão 1982-1990 Relatorio.xlsx', 'Senador do Maranhão - 1990', 1,
+     {1: ('EPITÁCIO CAFETEIRA', 'PDC'), 2: ('PSC', 'PSC'), 3: ('PDT', 'PDT')}, {}, 'Relatório do Maranhão 1982-1990 (acervo; Senado incompleto)'),
     # BA: coluna 0 = código IBGE, coluna 1 = nome; candidatos sem nome na planilha ficam com a sigla do partido
     (1986, 'ba', 'governador', f'{ACERVO}/BA/Resultados/BA 1986.xlsx', None, 0,
      {2: ('WALDIR PIRES', 'PMDB'), 3: ('JOSAPHAT MARINHO', 'PFL'), 4: ('PMB', 'PMB'), 5: ('PH', 'PH')}, {}, 'Planilha BA 1986 do acervo'),

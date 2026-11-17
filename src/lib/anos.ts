@@ -65,7 +65,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
-    cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, MA, MG, MS, MT, PA, RJ, RN, RO, RS e SP), Senador (CE, MS, PA, RN, RO e RS) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, MA, MG, MS, MT, PA, RJ, RN, RO, RS e SP), Senador (CE, MS, PA, RN, RO e RS; MA só com parte dos municípios) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'Acervo Sigoli.TSE e TREs (por município)',
   },
@@ -92,9 +92,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1974, titulo: 'Eleições 1974', datas: '15 de novembro',
-    cargos: 'Senador (CE, RS e SP) e Deputados (RS)', disponivel: true, rota: '/1974/sp/senador', semLocais: true, semZonas: true,
+    cargos: 'Senador (CE, MT, RS e SP; MT por partido) e Deputados (RS)', disponivel: true, rota: '/1974/sp/senador', semLocais: true, semZonas: true,
     soCargos: ['senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS, TRE-CE e acervo Sigoli.TSE (por município)',
+    fonte: 'TRE-RS, TRE-CE, TRE-MT e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1970, titulo: 'Eleições 1970', datas: '15 de novembro',
@@ -140,9 +140,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1954, titulo: 'Eleições 1954', datas: '3 de outubro',
-    cargos: 'Governador (BA, CE e RS), Senador (CE, MT e RS; MT por junta apuradora) e Deputados (RS)', disponivel: true, rota: '/1954/ba/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (BA, CE, ES, RJ e RS), Senador (BA, CE, ES, MT, RJ e RS; MT por junta apuradora) e Deputados (RS)', disponivel: true, rota: '/1954/ba/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS, TRE-BA, TRE-CE e acervo Sigoli.TSE (por município)',
+    fonte: 'TRE-RS, TRE-BA, TRE-CE, TRE-ES, TRE-RJ e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',

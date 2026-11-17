@@ -1,0 +1,61 @@
+# RJ 1954 governador, TRE-RJ "Resultado Geral das Eleições de 3 de Outubro de 1954" (1955), Sistema Majoritário, p. 75 do PDF
+# municipio;tinoco;dorval;pereira_pinto;miguel_couto;brancos;nulos
+Angra dos Reis;608;0;1408;2215;161;6
+Parati;7;0;779;597;15;1
+Araruama;60;41;3277;1751;252;60
+Saquarema;30;306;1095;1887;123;20
+Barra do Piraí;2294;50;2419;4327;328;222
+Mendes;142;154;560;1660;202;30
+Barra Mansa;1020;260;2498;5042;896;77
+Volta Redonda;1078;440;1960;6916;1063;59
+Bom Jesus do Itabapoana;41;0;3195;3898;234;36
+Cabo Frio;721;14;852;2334;303;50
+São Pedro da Aldeia;40;2;1403;1694;76;34
+Cambuci;11;0;1852;4311;147;59
+Campos dos Goytacazes;5950;225;19315;17141;1657;757
+Cantagalo;115;0;1620;2906;89;12
+Cordeiro;139;0;481;1174;38;6
+Duas Barras;47;0;277;1593;54;15
+São Sebastião do Alto;2;0;481;1404;34;5
+Carmo;4;0;602;1785;58;21
+Sumidouro;23;1;393;1410;38;43
+Duque de Caxias;2159;615;5286;8067;2811;2211
+Itaboraí;396;2;2810;3176;126;557
+Itaguaí;344;254;1523;3600;525;49
+Mangaratiba;7;2;806;1625;112;9
+Itaocara;32;1;1488;2630;94;53
+Itaperuna;452;25;4077;6571;324;338
+Itaverá;26;10;932;2049;44;7
+Macaé;1820;312;2302;2784;348;293
+Casimiro de Abreu;45;1;453;1070;41;27
+Conceição de Macabu;48;1;422;897;53;22
+Magé;1004;2;866;4841;395;35
+Valença;1091;6;3023;4746;570;34
+Rio das Flores;159;0;618;663;39;4
+Miracema;78;18;3211;1232;131;75
+Niterói;20889;600;23941;19939;3399;595
+Nova Friburgo;744;15;4636;6665;295;88
+Cachoeiras de Macacu;303;3;936;1556;65;36
+Nova Iguaçu;2824;1797;14193;20268;4217;1045
+Paraíba do Sul;323;117;1527;3004;168;45
+Petrópolis;4707;3000;9913;9230;1818;126
+Piraí;427;3;1309;2928;188;201
+Resende;787;331;1684;4566;861;19
+Rio Bonito;227;2;2101;2569;177;22
+Silva Jardim;13;0;420;1197;41;14
+Santa Maria Madalena;63;2;1818;1320;50;49
+Santo Antônio de Pádua;22;40;4003;4926;233;243
+São Fidélis;86;88;1772;4169;137;30
+São Gonçalo;12597;642;10445;10378;3428;436
+Maricá;295;9;890;1684;238;23
+São João da Barra;84;8;4368;4304;183;295
+Teresópolis;644;1225;3116;4567;0;535
+Trajano de Moraes;31;0;706;2044;89;55
+Três Rios;3550;233;1539;2264;290;84
+Sapucaia;69;284;557;2429;115;30
+Vassouras;1096;21;3968;6635;418;212
+Bom Jardim;35;1;2210;2295;101;0
+Natividade;25;2;2425;3815;174;8
+Nilópolis;3024;734;7061;9418;3719;134
+Porciúncula;191;0;747;2301;112;16
+São João de Meriti;1473;892;4383;6095;1958;1617
