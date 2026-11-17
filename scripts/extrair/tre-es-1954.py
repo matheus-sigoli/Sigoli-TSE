@@ -3,15 +3,14 @@
 (PDF do acervo, Mapas/ES/Resultados/ES 1954.pdf), resultados por município transcritos à mão em
 data/tre/fontes/es-1954/majoritarias.txt (cada município conferido com o total de votantes: governador = votantes,
 senado = 2 × votantes). Baixo Guandu (7ª zona) fica sem governador: a página do relatório com esse quadro falta no PDF.
-Partidos: Eurico Salles pela Aliança PSD-UDN-PDC (PSD); Francisco Lacerda de Aguiar pela Coligação Democrática
-(PSP-PTB-PR-PRP), sem partido próprio confirmado (N/I); Attílio Vivacqua (PR), Asdrúbal Soares (PSP), Ary Vianna (PSD),
-Dulcino Monteiro de Castro (N/I). Uso: python3 scripts/extrair/tre-es-1954.py"""
+Partidos: Eurico Salles (PSD), Francisco Lacerda de Aguiar (PTB, pela Coligação Democrática), Attílio Vivacqua (PR),
+Asdrúbal Soares (PSP), Ary Vianna (PSD), Dulcino Monteiro de Castro (UDN). Uso: python3 scripts/extrair/tre-es-1954.py"""
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from comum import ibge_por_nome, gravar, chave
 achar = ibge_por_nome('es')
-GOV = [('EURICO DE AGUIAR SALLES', 'PSD'), ('FRANCISCO LACERDA DE AGUIAR', 'N/I')]
-SEN = [('ARY VIANNA', 'PSD'), ('DULCINO MONTEIRO DE CASTRO', 'N/I'), ('ASDRÚBAL SOARES', 'PSP'), ('ATTÍLIO VIVACQUA', 'PR')]
+GOV = [('EURICO DE AGUIAR SALLES', 'PSD'), ('FRANCISCO LACERDA DE AGUIAR', 'PTB')]
+SEN = [('ARY VIANNA', 'PSD'), ('DULCINO MONTEIRO DE CASTRO', 'UDN'), ('ASDRÚBAL SOARES', 'PSP'), ('ATTÍLIO VIVACQUA', 'PR')]
 s = []; fora = []
 for l in open('data/tre/fontes/es-1954/majoritarias.txt', encoding='utf8'):
     if l.startswith('#') or not l.strip(): continue

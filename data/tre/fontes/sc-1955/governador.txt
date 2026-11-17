@@ -1,0 +1,68 @@
+# SC 1955 governador, TRE-SC "Mapa geral, por município, do pleito de 3 de outubro de 1955" (acervo, Mapas/SC/SC 1955.pdf)
+# municipio;gallotti;jorge_lacerda;brancos;nulos
+Araquari;1561;896;36;7
+Araranguá;1894;2350;74;20
+Biguaçu;2006;2202;64;30
+Blumenau;3733;7521;333;44
+Bom Retiro;1910;2078;55;37
+Brusque;4038;5375;181;16
+Caçador;2308;2698;195;26
+Camboriú;1394;1386;28;22
+Campo Alegre;703;492;37;6
+Campos Novos;3266;2606;130;45
+Canoinhas;3391;3219;130;546
+Capinzal;2106;2188;45;302
+Chapecó;2964;2275;127;35
+Concórdia;2969;2906;103;23
+Criciúma;5547;3576;122;22
+Curitibanos;3298;2880;257;245
+Dionísio Cerqueira;529;466;7;8
+Florianópolis;12474;9806;177;161
+Gaspar;1412;1823;43;27
+Guaramirim;2043;1703;22;12
+Herval d'Oeste;1044;841;8;13
+Ibirama;1756;1176;45;7
+Imaruí;1995;1697;51;48
+Indaial;2039;2379;45;11
+Itaiópolis;1238;1742;76;29
+Itajaí;7368;7130;187;69
+Itapiranga;475;2236;9;119
+Ituporanga;1729;1915;31;8
+Jaguaruna;1363;809;28;8
+Jaraguá do Sul;3405;3243;82;15
+Joaçaba;3709;4419;143;136
+Joinville;5822;8966;200;69
+Laguna;4099;3299;119;27
+Lages;8425;5755;298;128
+Mafra;2680;2631;216;37
+Mondaí;629;724;3;365
+Nova Trento;1144;1526;30;8
+Orleans;2972;2503;76;74
+Palhoça;4448;3442;83;311
+Palmitos;840;1439;6;207
+Papanduva;911;396;8;75
+Piratuba;990;1404;9;8
+Porto Belo;969;689;22;9
+Porto União;2617;1892;232;45
+Presidente Getúlio;1245;829;6;4
+Rio do Sul;5051;6447;157;190
+Rio Negrinho;739;1174;13;10
+Rodeio;1069;2874;39;2
+São Bento do Sul;1072;1599;34;8
+São Carlos;703;1733;8;20
+São Francisco do Sul;2602;1776;23;18
+São Joaquim;3185;3790;73;45
+São José;2337;2511;51;16
+São Miguel do Oeste;408;1250;8;43
+Seara;1709;1528;26;23
+Sombrio;1770;1837;12;72
+Taió;994;1416;8;16
+Tangará;936;1549;24;119
+Tijucas;3817;2897;65;90
+Timbó;1923;2538;35;7
+Tubarão;7597;5448;183;35
+Turvo;2943;2815;19;22
+Urussanga;3480;3009;67;60
+Videira;1437;2685;109;33
+Xanxerê;1106;1251;5;32
+Xaxim;1076;893;8;10

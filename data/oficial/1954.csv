@@ -1,3 +1,7 @@
 cargo;turno;uf;candidato;partido;votos;eleito;fonte
-governador;1;es;FRANCISCO LACERDA DE AGUIAR;N/I;95389;S;Biblioteca Digital do TSE, total do estado (no mapa falta o governador de Baixo Guandu)
+governador;1;es;FRANCISCO LACERDA DE AGUIAR;PTB;95389;S;Biblioteca Digital do TSE, total do estado (no mapa falta o governador de Baixo Guandu)
 governador;1;es;EURICO DE AGUIAR SALLES;PSD;77467;;Biblioteca Digital do TSE, total do estado (no mapa falta o governador de Baixo Guandu)
+senador;1;pe;JARBAS MARANHÃO;UDN;208077;S;Agência Senado, Todas as eleições para o Senado em Pernambuco (total do estado)
+senador;1;pe;NOVAES FILHO;PSD;204091;S;Agência Senado, Todas as eleições para o Senado em Pernambuco (total do estado)
+senador;1;pe;JOÃO INÁCIO RIBEIRO ROMA;PSD;199584;;Agência Senado, Todas as eleições para o Senado em Pernambuco (total do estado)
+senador;1;pe;BARBOSA LIMA SOBRINHO;UDN;196042;;Agência Senado, Todas as eleições para o Senado em Pernambuco (total do estado)

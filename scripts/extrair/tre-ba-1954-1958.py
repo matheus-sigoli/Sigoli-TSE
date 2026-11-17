@@ -23,11 +23,11 @@ def ib(m):
     return x
 s = []
 for m, v in blocos('data/tre/fontes/ba-1954/governador.txt', 5):
-    for (n, p), x in zip([('ANTÔNIO BALBINO', 'PSD'), ('PEDRO CALMON', 'UDN')], v): s.append(('governador', 1, ib(m), '_' + chave(n), n, p, x))
+    for (n, p), x in zip([('ANTÔNIO BALBINO', 'PTB'), ('PEDRO CALMON', 'PSD')], v): s.append(('governador', 1, ib(m), '_' + chave(n), n, p, x))
     s += [('governador', 1, ib(m), '#brancos', '', '', v[2]), ('governador', 1, ib(m), '#nulos', '', '', v[3])]
 G = [m for m, _ in blocos('data/tre/fontes/ba-1954/governador.txt', 5)]
 L = [l.split() for l in open('data/tre/fontes/ba-1954/senador.txt', encoding='utf8') if l.strip() and not l.startswith('#')]
-SEN54 = [('ERNESTO SIMÕES FILHO', 'PSD'), ('HÉLIO DE BURGOS CABAL', 'N/I'), ('LIMA TEIXEIRA', 'PTB'), ('JURACY MAGALHÃES', 'UDN'), ('PINTO ALEIXO', 'N/I')]
+SEN54 = [('ERNESTO SIMÕES FILHO', 'PSD'), ('HÉLIO DE BURGOS CABAL', 'PR'), ('LIMA TEIXEIRA', 'PTB'), ('JURACY MAGALHÃES', 'UDN'), ('PINTO ALEIXO', 'PSD')]
 k = 0; j = 0
 while j < len(L):
     n = int(L[j][1]); R = [list(map(int, r)) for r in L[j + 1:j + 8]]; j += 8
