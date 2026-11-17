@@ -3,3 +3,5 @@ ano;cargo;de;para;obs
 1982;governador;2503753;2503704;PB: votos na linha de Cajazeirinhas (criado em 1994) são de Cajazeiras
 1982;governador;4124020;4124053;PR: votos na linha de Santa Tereza do Oeste (criado em 1989) são de Santa Terezinha de Itaipu
 1982;governador;2900355;2900504;BA: votos na linha de Adustina (criado em 1989) são de Érico Cardoso (então Água Quente)
+1955;governador;5100359;5100300;MT: a linha "Alto Araguaia / Alto Taquari / Pontal do Araguaia" tem o código de Alto Boa Vista (criado em 1991)
+1955;governador;5107002;5107008;MT: a linha "Poxoréu / Dom Aquino / ..." tem o código 5107002, que não existe (Poxoréu é 5107008)

@@ -1,0 +1,16 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+presidente;1;1400100;_JUSCELINOKUBITSCHEK;JUSCELINO KUBITSCHEK;PSD;1828;S
+presidente;1;1400100;_JUAREZTAVORA;JUAREZ TÁVORA;UDN;448;
+presidente;1;1400100;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;325;
+presidente;1;1400100;_PLINIOSALGADO;PLÍNIO SALGADO;PRP;33;
+presidente;1;1400100;#brancos;;;39;
+presidente;1;1400100;#nulos;;;44;
+presidente;1;1400100;#comparecimento;;;2717;
+presidente;1;1400100;#eleitorado;;;5675;
+vice-presidente;1;1400100;_JOAOGOULART;JOÃO GOULART;PTB;1962;S
+vice-presidente;1;1400100;_MILTONCAMPOS;MILTON CAMPOS;UDN;426;
+vice-presidente;1;1400100;_DANTONCOELHO;DANTON COELHO;PSP;163;
+vice-presidente;1;1400100;#brancos;;;122;
+vice-presidente;1;1400100;#nulos;;;44;
+vice-presidente;1;1400100;#comparecimento;;;2717;
+vice-presidente;1;1400100;#eleitorado;;;5675;
