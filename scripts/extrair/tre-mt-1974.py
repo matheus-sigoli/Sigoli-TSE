@@ -9,11 +9,12 @@ sys.path.insert(0, os.path.dirname(__file__))
 from comum import ibge_por_nome, gravar, chave
 mt, ms = ibge_por_nome('mt'), ibge_por_nome('ms')
 NOMES = {'Mato Grosso': 'Vila Bela da Santíssima Trindade'}
+CODIGOS = {'Paranaíba': '5006309'}  # o nome sozinho acharia Paranaíta-MT
 CANDS = [('MENDES CANALE', 'ARENA'), ('BEZERRA NETO', 'MDB')]
 s = []; fora = []
 for l in open('data/tre/fontes/mt-1974/senado.txt', encoding='utf8'):
     if l.startswith('#') or not l.strip(): continue
-    p = l.strip().split(';'); ib = mt(NOMES.get(p[1], p[1])) or ms(p[1])
+    p = l.strip().split(';'); ib = CODIGOS.get(p[1]) or mt(NOMES.get(p[1], p[1])) or ms(p[1])
     if not ib: fora.append(p[1]); continue
     v = list(map(int, p[3:]))
     for (n, pt), x in zip(CANDS, v): s.append(('senador', 1, ib, '_' + chave(n), n, pt, x))
