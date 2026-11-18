@@ -1470,8 +1470,8 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2600302,26012,Brejo Pernambucano,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
 2600401,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260003,Palmares,2601,Recife
 2600500,26007,Vale do Ipanema,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
-2600609,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim ¿ Pesqueira,2602,Caruaru
-2600708,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2600609,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim - Pesqueira,2602,Caruaru
+2600708,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2600807,26012,Brejo Pernambucano,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
 2600906,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260018,Escada - Ribeirão,2601,Recife
 2601003,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
@@ -1482,7 +1482,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2601409,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260007,Barreiros - Sirinhaém,2601,Recife
 2601508,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260003,Palmares,2601,Recife
 2601607,26006,Itaparica,2602,São Francisco Pernambucano,260017,Salgueiro,2604,Petrolina
-2601706,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim ¿ Pesqueira,2602,Caruaru
+2601706,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim - Pesqueira,2602,Caruaru
 2601805,26004,Sertão do Moxotó,2601,Sertão Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2601904,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
 2602001,26001,Araripina,2601,Sertão Pernambucano,260016,Araripina,2604,Petrolina
@@ -1502,7 +1502,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2603405,26003,Pajeú,2601,Sertão Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2603454,26017,Recife,2605,Metropolitana de Recife,260001,Recife,2601,Recife
 2603504,26012,Brejo Pernambucano,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
-2603603,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2603603,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2603702,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
 2603801,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
 2603900,26003,Pajeú,2601,Sertão Pernambucano,260014,Afogados da Ingazeira,2603,Serra Talhada
@@ -1514,7 +1514,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2604304,26002,Salgueiro,2601,Sertão Pernambucano,260017,Salgueiro,2604,Petrolina
 2604403,26014,Vitória de Santo Antão,2604,Mata Pernambucana,260005,Vitória de Santo Antão,2601,Recife
 2604502,26014,Vitória de Santo Antão,2604,Mata Pernambucana,260009,Caruaru,2602,Caruaru
-2604601,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2604601,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2604700,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
 2604809,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260018,Escada - Ribeirão,2601,Recife
 2604908,26010,Médio Capibaribe,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
@@ -1525,14 +1525,14 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2605301,26001,Araripina,2601,Sertão Pernambucano,260016,Araripina,2604,Petrolina
 2605400,26010,Médio Capibaribe,2603,Agreste Pernambucano,260004,Limoeiro,2601,Recife
 2605459,26019,Fernando de Noronha,2605,Metropolitana de Recife,260001,Recife,2601,Recife
-2605509,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2605509,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2605608,26003,Pajeú,2601,Sertão Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2605707,26006,Itaparica,2602,São Francisco Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2605806,26009,Alto Capibaribe,2603,Agreste Pernambucano,260008,Surubim,2601,Recife
 2605905,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260003,Palmares,2601,Recife
 2606002,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
 2606101,26014,Vitória de Santo Antão,2604,Mata Pernambucana,260005,Vitória de Santo Antão,2601,Recife
-2606200,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2606200,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2606309,26001,Araripina,2601,Sertão Pernambucano,260016,Araripina,2604,Petrolina
 2606408,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
 2606507,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
@@ -1547,10 +1547,10 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2607406,26006,Itaparica,2602,São Francisco Pernambucano,260017,Salgueiro,2604,Petrolina
 2607505,26007,Vale do Ipanema,2603,Agreste Pernambucano,260011,Arcoverde,2602,Caruaru
 2607604,26016,Itamaracá,2605,Metropolitana de Recife,260001,Recife,2601,Recife
-2607653,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2607653,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2607703,26003,Pajeú,2601,Sertão Pernambucano,260014,Afogados da Ingazeira,2603,Serra Talhada
 2607752,26016,Itamaracá,2605,Metropolitana de Recife,260001,Recife,2601,Recife
-2607802,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2607802,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2607901,26017,Recife,2605,Metropolitana de Recife,260001,Recife,2601,Recife
 2607950,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260003,Palmares,2601,Recife
 2608008,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
@@ -1567,7 +1567,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2608750,26005,Petrolina,2602,São Francisco Pernambucano,260015,Petrolina,2604,Petrolina
 2608800,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
 2608909,26010,Médio Capibaribe,2603,Agreste Pernambucano,260004,Limoeiro,2601,Recife
-2609006,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2609006,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2609105,26010,Médio Capibaribe,2603,Agreste Pernambucano,260004,Limoeiro,2601,Recife
 2609154,26004,Sertão do Moxotó,2601,Sertão Pernambucano,260011,Arcoverde,2602,Caruaru
 2609204,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260003,Palmares,2601,Recife
@@ -1587,10 +1587,10 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2610608,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260001,Recife,2601,Recife
 2610707,26017,Recife,2605,Metropolitana de Recife,260001,Recife,2601,Recife
 2610806,26007,Vale do Ipanema,2603,Agreste Pernambucano,260011,Arcoverde,2602,Caruaru
-2610905,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim ¿ Pesqueira,2602,Caruaru
+2610905,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim - Pesqueira,2602,Caruaru
 2611002,26006,Itaparica,2602,São Francisco Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2611101,26005,Petrolina,2602,São Francisco Pernambucano,260015,Petrolina,2604,Petrolina
-2611200,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim ¿ Pesqueira,2602,Caruaru
+2611200,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim - Pesqueira,2602,Caruaru
 2611309,26014,Vitória de Santo Antão,2604,Mata Pernambucana,260005,Vitória de Santo Antão,2601,Recife
 2611408,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260018,Escada - Ribeirão,2601,Recife
 2611507,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260010,Garanhuns,2602,Caruaru
@@ -1603,7 +1603,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2612109,26010,Médio Capibaribe,2603,Agreste Pernambucano,260004,Limoeiro,2601,Recife
 2612208,26002,Salgueiro,2601,Sertão Pernambucano,260017,Salgueiro,2604,Petrolina
 2612307,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
-2612406,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim ¿ Pesqueira,2602,Caruaru
+2612406,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim - Pesqueira,2602,Caruaru
 2612455,26001,Araripina,2601,Sertão Pernambucano,260016,Araripina,2604,Petrolina
 2612471,26003,Pajeú,2601,Sertão Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2612505,26009,Alto Capibaribe,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
@@ -1612,7 +1612,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2612703,26009,Alto Capibaribe,2603,Agreste Pernambucano,260008,Surubim,2601,Recife
 2612802,26003,Pajeú,2601,Sertão Pernambucano,260014,Afogados da Ingazeira,2603,Serra Talhada
 2612901,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260003,Palmares,2601,Recife
-2613008,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim ¿ Pesqueira,2602,Caruaru
+2613008,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim - Pesqueira,2602,Caruaru
 2613107,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
 2613206,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
 2613305,26012,Brejo Pernambucano,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
@@ -1620,7 +1620,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2613503,26002,Salgueiro,2601,Sertão Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2613602,26003,Pajeú,2601,Sertão Pernambucano,260014,Afogados da Ingazeira,2603,Serra Talhada
 2613701,26017,Recife,2605,Metropolitana de Recife,260001,Recife,2601,Recife
-2613800,26010,Médio Capibaribe,2603,Agreste Pernambucano,260002,Goiana ¿ Timbaúba,2601,Recife
+2613800,26010,Médio Capibaribe,2603,Agreste Pernambucano,260002,Goiana - Timbaúba,2601,Recife
 2613909,26003,Pajeú,2601,Sertão Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2614006,26002,Salgueiro,2601,Sertão Pernambucano,260017,Salgueiro,2604,Petrolina
 2614105,26004,Sertão do Moxotó,2601,Sertão Pernambucano,260011,Arcoverde,2602,Caruaru
@@ -1629,13 +1629,13 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2614402,26003,Pajeú,2601,Sertão Pernambucano,260014,Afogados da Ingazeira,2603,Serra Talhada
 2614501,26009,Alto Capibaribe,2603,Agreste Pernambucano,260008,Surubim,2601,Recife
 2614600,26003,Pajeú,2601,Sertão Pernambucano,260014,Afogados da Ingazeira,2603,Serra Talhada
-2614709,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim ¿ Pesqueira,2602,Caruaru
+2614709,26008,Vale do Ipojuca,2603,Agreste Pernambucano,260012,Belo Jardim - Pesqueira,2602,Caruaru
 2614808,26006,Itaparica,2602,São Francisco Pernambucano,260013,Serra Talhada,2603,Serra Talhada
 2614857,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260007,Barreiros - Sirinhaém,2601,Recife
 2615003,26009,Alto Capibaribe,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
 2615102,26011,Garanhuns,2603,Agreste Pernambucano,260010,Garanhuns,2602,Caruaru
 2615201,26005,Petrolina,2602,São Francisco Pernambucano,260017,Salgueiro,2604,Petrolina
-2615300,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2615300,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2615409,26009,Alto Capibaribe,2603,Agreste Pernambucano,260009,Caruaru,2602,Caruaru
 2615508,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260006,Carpina,2601,Recife
 2615607,26001,Araripina,2601,Sertão Pernambucano,260016,Araripina,2604,Petrolina
@@ -1646,7 +1646,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2616100,26002,Salgueiro,2601,Sertão Pernambucano,260017,Salgueiro,2604,Petrolina
 2616183,26009,Alto Capibaribe,2603,Agreste Pernambucano,260008,Surubim,2601,Recife
 2616209,26009,Alto Capibaribe,2603,Agreste Pernambucano,260008,Surubim,2601,Recife
-2616308,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana ¿ Timbaúba,2601,Recife
+2616308,26013,Mata Setentrional Pernambucana,2604,Mata Pernambucana,260002,Goiana - Timbaúba,2601,Recife
 2616407,26014,Vitória de Santo Antão,2604,Mata Pernambucana,260005,Vitória de Santo Antão,2601,Recife
 2616506,26015,Mata Meridional Pernambucana,2604,Mata Pernambucana,260003,Palmares,2601,Recife
 2700102,27001,Serrana do Sertão Alagoano,2701,Sertão Alagoano,270009,Delmiro Gouveia,2702,Arapiraca
@@ -1655,9 +1655,9 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2700409,27009,Mata Alagoana,2703,Leste Alagoano,270006,Atalaia,2701,Maceió
 2700508,27011,Maceió,2703,Leste Alagoano,270001,Maceió,2701,Maceió
 2700607,27011,Maceió,2703,Leste Alagoano,270001,Maceió,2701,Maceió
-2700706,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores ¿ Batalha,2702,Arapiraca
+2700706,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca
 2700805,27005,Palmeira dos Índios,2702,Agreste Alagoano,270008,Palmeira dos Índios,2702,Arapiraca
-2700904,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores ¿ Batalha,2702,Arapiraca
+2700904,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca
 2701001,27012,São Miguel dos Campos,2703,Leste Alagoano,270004,São Miguel dos Campos,2701,Maceió
 2701100,27009,Mata Alagoana,2703,Leste Alagoano,270005,União dos Palmares,2701,Maceió
 2701209,27005,Palmeira dos Índios,2702,Agreste Alagoano,270008,Palmeira dos Índios,2702,Arapiraca
@@ -1685,7 +1685,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2703106,27005,Palmeira dos Índios,2702,Agreste Alagoano,270008,Palmeira dos Índios,2702,Arapiraca
 2703205,27013,Penedo,2703,Leste Alagoano,270003,Penedo,2701,Maceió
 2703304,27001,Serrana do Sertão Alagoano,2701,Sertão Alagoano,270009,Delmiro Gouveia,2702,Arapiraca
-2703403,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores ¿ Batalha,2702,Arapiraca
+2703403,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca
 2703502,27009,Mata Alagoana,2703,Leste Alagoano,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió
 2703601,27010,Litoral Norte Alagoano,2703,Leste Alagoano,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió
 2703700,27004,Batalha,2701,Sertão Alagoano,270007,Arapiraca,2702,Arapiraca
@@ -1706,17 +1706,17 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2705101,27009,Mata Alagoana,2703,Leste Alagoano,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió
 2705200,27009,Mata Alagoana,2703,Leste Alagoano,270001,Maceió,2701,Maceió
 2705309,27005,Palmeira dos Índios,2702,Agreste Alagoano,270008,Palmeira dos Índios,2702,Arapiraca
-2705408,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores ¿ Batalha,2702,Arapiraca
+2705408,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca
 2705507,27009,Mata Alagoana,2703,Leste Alagoano,270005,União dos Palmares,2701,Maceió
 2705606,27009,Mata Alagoana,2703,Leste Alagoano,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió
-2705705,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores ¿ Batalha,2702,Arapiraca
+2705705,27004,Batalha,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca
 2705804,27002,Alagoana do Sertão do São Francisco,2701,Sertão Alagoano,270009,Delmiro Gouveia,2702,Arapiraca
 2705903,27007,Traipu,2702,Agreste Alagoano,270007,Arapiraca,2702,Arapiraca
 2706000,27004,Batalha,2701,Sertão Alagoano,270010,Santana do Ipanema,2702,Arapiraca
 2706109,27003,Santana do Ipanema,2701,Sertão Alagoano,270010,Santana do Ipanema,2702,Arapiraca
-2706208,27003,Santana do Ipanema,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores ¿ Batalha,2702,Arapiraca
+2706208,27003,Santana do Ipanema,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca
 2706307,27005,Palmeira dos Índios,2702,Agreste Alagoano,270008,Palmeira dos Índios,2702,Arapiraca
-2706406,27003,Santana do Ipanema,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores ¿ Batalha,2702,Arapiraca
+2706406,27003,Santana do Ipanema,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca
 2706422,27001,Serrana do Sertão Alagoano,2701,Sertão Alagoano,270009,Delmiro Gouveia,2702,Arapiraca
 2706448,27011,Maceió,2703,Leste Alagoano,270001,Maceió,2701,Maceió
 2706505,27010,Litoral Norte Alagoano,2703,Leste Alagoano,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió
@@ -1738,7 +1738,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2708105,27008,Serrana dos Quilombos,2703,Leste Alagoano,270005,União dos Palmares,2701,Maceió
 2708204,27007,Traipu,2702,Agreste Alagoano,270003,Penedo,2701,Maceió
 2708303,27008,Serrana dos Quilombos,2703,Leste Alagoano,270005,União dos Palmares,2701,Maceió
-2708402,27003,Santana do Ipanema,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores ¿ Batalha,2702,Arapiraca
+2708402,27003,Santana do Ipanema,2701,Sertão Alagoano,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca
 2708501,27009,Mata Alagoana,2703,Leste Alagoano,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió
 2708600,27012,São Miguel dos Campos,2703,Leste Alagoano,270004,São Miguel dos Campos,2701,Maceió
 2708709,27010,Litoral Norte Alagoano,2703,Leste Alagoano,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió
@@ -1834,8 +1834,8 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2900504,29025,Livramento do Brumado,2906,Centro Sul Baiano,290013,Brumado,2904,Vitória da Conquista
 2900603,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2900702,29017,Alagoinhas,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
-2900801,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
-2900900,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2900801,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
+2900900,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2901007,29024,Jequié,2906,Centro Sul Baiano,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
 2901106,29019,Catu,2905,Metropolitana de Salvador,290029,Feira de Santana,2910,Feira de Santana
 2901155,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
@@ -1853,13 +1853,13 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2902054,29017,Alagoinhas,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
 2902104,29016,Serrinha,2904,Nordeste Baiano,290033,Serrinha,2910,Feira de Santana
 2902203,29017,Alagoinhas,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
-2902252,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus ¿ Itabuna
-2902302,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré ¿ Maragogipe,2902,Santo Antônio de Jesus
-2902401,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2902252,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus - Itabuna
+2902302,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus
+2902401,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2902500,29001,Barreiras,2901,Extremo Oeste Baiano,290018,Barreiras,2906,Barreiras
 2902609,29011,Itaberaba,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2902658,29015,Ribeira do Pombal,2904,Nordeste Baiano,290025,Ribeira do Pombal,2909,Paulo Afonso
-2902708,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique ¿ Barra,2907,Irecê
+2902708,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique - Barra,2907,Irecê
 2902807,29023,Seabra,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2902906,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2903003,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
@@ -1867,8 +1867,8 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2903201,29001,Barreiras,2901,Extremo Oeste Baiano,290018,Barreiras,2906,Barreiras
 2903235,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2903276,29016,Serrinha,2904,Nordeste Baiano,290033,Serrinha,2910,Feira de Santana
-2903300,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
-2903409,29031,Ilhéus-Itabuna,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus ¿ Itabuna
+2903300,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
+2903409,29031,Ilhéus-Itabuna,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna
 2903508,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2903607,29016,Serrinha,2904,Nordeste Baiano,290033,Serrinha,2910,Feira de Santana
 2903706,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
@@ -1881,10 +1881,10 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2904209,29022,Boquira,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
 2904308,29024,Jequié,2906,Centro Sul Baiano,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
 2904407,29002,Cotegipe,2901,Extremo Oeste Baiano,290018,Barreiras,2906,Barreiras
-2904506,29022,Boquira,2906,Centro Sul Baiano,290021,Xique-Xique ¿ Barra,2907,Irecê
+2904506,29022,Boquira,2906,Centro Sul Baiano,290021,Xique-Xique - Barra,2907,Irecê
 2904605,29027,Brumado,2906,Centro Sul Baiano,290013,Brumado,2904,Vitória da Conquista
-2904704,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
-2904753,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique ¿ Barra,2907,Irecê
+2904704,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
+2904753,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique - Barra,2907,Irecê
 2904803,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2904852,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290004,Cruz das Almas,2902,Santo Antônio de Jesus
 2904902,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290004,Cruz das Almas,2902,Santo Antônio de Jesus
@@ -1895,14 +1895,14 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2905305,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2905404,29030,Valença,2907,Sul Baiano,290005,Valença,2902,Santo Antônio de Jesus
 2905503,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
-2905602,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus ¿ Itabuna
+2905602,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus - Itabuna
 2905701,29021,Salvador,2905,Metropolitana de Salvador,290001,Salvador,2901,Salvador
 2905800,29030,Valença,2907,Sul Baiano,290005,Valença,2902,Santo Antônio de Jesus
 2905909,29004,Juazeiro,2902,Vale São-Franciscano da Bahia,290022,Juazeiro,2908,Juazeiro
 2906006,29008,Senhor do Bonfim,2903,Centro Norte Baiano,290023,Senhor do Bonfim,2908,Juazeiro
 2906105,29003,Santa Maria da Vitória,2901,Extremo Oeste Baiano,290019,Santa Maria da Vitoria,2906,Barreiras
 2906204,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
-2906303,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus ¿ Itabuna
+2906303,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus - Itabuna
 2906402,29016,Serrinha,2904,Nordeste Baiano,290029,Feira de Santana,2910,Feira de Santana
 2906501,29021,Salvador,2905,Metropolitana de Salvador,290001,Salvador,2901,Salvador
 2906600,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
@@ -1912,7 +1912,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2906857,29016,Serrinha,2904,Nordeste Baiano,290029,Feira de Santana,2910,Feira de Santana
 2906873,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
 2906899,29027,Brumado,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
-2906907,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2906907,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2907004,29018,Entre Rios,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
 2907103,29007,Bom Jesus da Lapa,2902,Vale São-Franciscano da Bahia,290016,Guanambi,2905,Guanambi
 2907202,29004,Juazeiro,2902,Vale São-Franciscano da Bahia,290022,Juazeiro,2908,Juazeiro
@@ -1924,7 +1924,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2907707,29005,Paulo Afonso,2902,Vale São-Franciscano da Bahia,290024,Paulo Afonso,2909,Paulo Afonso
 2907806,29015,Ribeira do Pombal,2904,Nordeste Baiano,290027,Cícero Dantas,2909,Paulo Afonso
 2907905,29015,Ribeira do Pombal,2904,Nordeste Baiano,290025,Ribeira do Pombal,2909,Paulo Afonso
-2908002,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2908002,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2908101,29003,Santa Maria da Vitória,2901,Extremo Oeste Baiano,290019,Santa Maria da Vitoria,2906,Barreiras
 2908200,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2908309,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290004,Cruz das Almas,2902,Santo Antônio de Jesus
@@ -1953,75 +1953,75 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2910503,29018,Entre Rios,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
 2910602,29018,Entre Rios,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
 2910701,29014,Euclides da Cunha,2904,Nordeste Baiano,290026,Euclides da Cunha,2909,Paulo Afonso
-2910727,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus ¿ Itabuna
+2910727,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna
 2910750,29015,Ribeira do Pombal,2904,Nordeste Baiano,290027,Cícero Dantas,2909,Paulo Afonso
 2910776,29007,Bom Jesus da Lapa,2902,Vale São-Franciscano da Bahia,290016,Guanambi,2905,Guanambi
 2910800,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2910859,29008,Senhor do Bonfim,2903,Centro Norte Baiano,290023,Senhor do Bonfim,2908,Juazeiro
-2910909,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
-2911006,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2910909,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
+2911006,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2911105,29001,Barreiras,2901,Extremo Oeste Baiano,290018,Barreiras,2906,Barreiras
 2911204,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
 2911253,29016,Serrinha,2904,Nordeste Baiano,290029,Feira de Santana,2910,Feira de Santana
-2911303,29009,Irecê,2903,Centro Norte Baiano,290021,Xique-Xique ¿ Barra,2907,Irecê
+2911303,29009,Irecê,2903,Centro Norte Baiano,290021,Xique-Xique - Barra,2907,Irecê
 2911402,29005,Paulo Afonso,2902,Vale São-Franciscano da Bahia,290024,Paulo Afonso,2909,Paulo Afonso
 2911501,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
 2911600,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290004,Cruz das Almas,2902,Santo Antônio de Jesus
 2911659,29027,Brumado,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
 2911709,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
-2911808,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus ¿ Itabuna
+2911808,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna
 2911857,29015,Ribeira do Pombal,2904,Nordeste Baiano,290027,Cícero Dantas,2909,Paulo Afonso
 2911907,29011,Itaberaba,2903,Centro Norte Baiano,290031,Itaberaba,2910,Feira de Santana
 2912004,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
-2912103,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2912103,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2912202,29023,Seabra,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
-2912301,29028,Vitória da Conquista,2906,Centro Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2912301,29028,Vitória da Conquista,2906,Centro Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2912400,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2912509,29022,Boquira,2906,Centro Sul Baiano,290017,Bom Jesus da Lapa,2905,Guanambi
 2912608,29011,Itaberaba,2903,Centro Norte Baiano,290031,Itaberaba,2910,Feira de Santana
-2912707,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
-2912806,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2912707,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
+2912806,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2912905,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
 2913002,29022,Boquira,2906,Centro Sul Baiano,290034,Seabra,2910,Feira de Santana
 2913101,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
-2913200,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique ¿ Barra,2907,Irecê
+2913200,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique - Barra,2907,Irecê
 2913309,29016,Serrinha,2904,Nordeste Baiano,290029,Feira de Santana,2910,Feira de Santana
 2913408,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
 2913457,29030,Valença,2907,Sul Baiano,290005,Valença,2902,Santo Antônio de Jesus
 2913507,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
-2913606,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2913606,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2913705,29017,Alagoinhas,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
 2913804,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2913903,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
 2914000,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
-2914109,29022,Boquira,2906,Centro Sul Baiano,290021,Xique-Xique ¿ Barra,2907,Irecê
+2914109,29022,Boquira,2906,Centro Sul Baiano,290021,Xique-Xique - Barra,2907,Irecê
 2914208,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2914307,29024,Jequié,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2914406,29009,Irecê,2903,Centro Norte Baiano,290034,Seabra,2910,Feira de Santana
 2914505,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2914604,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
-2914653,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus ¿ Itabuna
+2914653,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna
 2914703,29011,Itaberaba,2903,Centro Norte Baiano,290031,Itaberaba,2910,Feira de Santana
-2914802,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
-2914901,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2914802,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
+2914901,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2915007,29023,Seabra,2906,Centro Sul Baiano,290031,Itaberaba,2910,Feira de Santana
 2915106,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2915205,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
-2915304,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus ¿ Itabuna
+2915304,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna
 2915353,29006,Barra,2902,Vale São-Franciscano da Bahia,290020,Irecê,2907,Irecê
-2915403,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
-2915502,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
-2915601,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2915403,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
+2915502,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
+2915601,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2915700,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
 2915809,29029,Itapetinga,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2915908,29019,Catu,2905,Metropolitana de Salvador,290001,Salvador,2901,Salvador
-2916005,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
-2916104,29021,Salvador,2905,Metropolitana de Salvador,290006,Nazaré ¿ Maragogipe,2902,Santo Antônio de Jesus
-2916203,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
-2916302,29031,Ilhéus-Itabuna,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus ¿ Itabuna
+2916005,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
+2916104,29021,Salvador,2905,Metropolitana de Salvador,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus
+2916203,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
+2916302,29031,Ilhéus-Itabuna,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna
 2916401,29029,Itapetinga,2906,Centro Sul Baiano,290015,Itapetinga,2904,Vitória da Conquista
 2916500,29015,Ribeira do Pombal,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
-2916609,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2916609,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2916708,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2916807,29029,Itapetinga,2906,Centro Sul Baiano,290015,Itapetinga,2904,Vitória da Conquista
 2916856,29012,Feira de Santana,2903,Centro Norte Baiano,290004,Cruz das Almas,2902,Santo Antônio de Jesus
@@ -2036,7 +2036,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2917508,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
 2917607,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2917706,29008,Senhor do Bonfim,2903,Centro Norte Baiano,290023,Senhor do Bonfim,2908,Juazeiro
-2917805,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré ¿ Maragogipe,2902,Santo Antônio de Jesus
+2917805,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus
 2917904,29018,Entre Rios,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
 2918001,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2918100,29013,Jeremoabo,2904,Nordeste Baiano,290028,Jeremoabo,2909,Paulo Afonso
@@ -2044,14 +2044,14 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2918308,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2918357,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2918407,29004,Juazeiro,2902,Vale São-Franciscano da Bahia,290022,Juazeiro,2908,Juazeiro
-2918456,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2918456,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2918506,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
-2918555,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus ¿ Itabuna
+2918555,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus - Itabuna
 2918605,29023,Seabra,2906,Centro Sul Baiano,290013,Brumado,2904,Vitória da Conquista
 2918704,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2918753,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
 2918803,29024,Jequié,2906,Centro Sul Baiano,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
-2918902,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2918902,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2919009,29011,Itaberaba,2903,Centro Norte Baiano,290031,Itaberaba,2910,Feira de Santana
 2919058,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2919108,29016,Serrinha,2904,Nordeste Baiano,290029,Feira de Santana,2910,Feira de Santana
@@ -2074,30 +2074,30 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2920403,29028,Vitória da Conquista,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2920452,29002,Cotegipe,2901,Extremo Oeste Baiano,290018,Barreiras,2906,Barreiras
 2920502,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
-2920601,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré ¿ Maragogipe,2902,Santo Antônio de Jesus
-2920700,29030,Valença,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2920601,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus
+2920700,29030,Valença,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2920809,29024,Jequié,2906,Centro Sul Baiano,290031,Itaberaba,2910,Feira de Santana
-2920908,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus ¿ Itabuna
+2920908,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus - Itabuna
 2921005,29019,Catu,2905,Metropolitana de Salvador,290001,Salvador,2901,Salvador
 2921054,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
-2921104,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2921104,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2921203,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
 2921302,29024,Jequié,2906,Centro Sul Baiano,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
 2921401,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
 2921450,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2921500,29014,Euclides da Cunha,2904,Nordeste Baiano,290026,Euclides da Cunha,2909,Paulo Afonso
-2921609,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique ¿ Barra,2907,Irecê
+2921609,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique - Barra,2907,Irecê
 2921708,29010,Jacobina,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2921807,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
 2921906,29023,Seabra,2906,Centro Sul Baiano,290034,Seabra,2910,Feira de Santana
-2922003,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2922003,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2922052,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2922102,29011,Itaberaba,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2922201,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
-2922250,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique ¿ Barra,2907,Irecê
+2922250,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique - Barra,2907,Irecê
 2922300,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290004,Cruz das Almas,2902,Santo Antônio de Jesus
 2922409,29024,Jequié,2906,Centro Sul Baiano,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
-2922508,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré ¿ Maragogipe,2902,Santo Antônio de Jesus
+2922508,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus
 2922607,29030,Valença,2907,Sul Baiano,290005,Valença,2902,Santo Antônio de Jesus
 2922656,29014,Euclides da Cunha,2904,Nordeste Baiano,290032,Conceição do Coité,2910,Feira de Santana
 2922706,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
@@ -2106,11 +2106,11 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2922805,29024,Jequié,2906,Centro Sul Baiano,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
 2922854,29023,Seabra,2906,Centro Sul Baiano,290031,Itaberaba,2910,Feira de Santana
 2922904,29015,Ribeira do Pombal,2904,Nordeste Baiano,290025,Ribeira do Pombal,2909,Paulo Afonso
-2923001,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2923001,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2923035,29022,Boquira,2906,Centro Sul Baiano,290034,Seabra,2910,Feira de Santana
 2923050,29015,Ribeira do Pombal,2904,Nordeste Baiano,290028,Jeremoabo,2909,Paulo Afonso
 2923100,29015,Ribeira do Pombal,2904,Nordeste Baiano,290025,Ribeira do Pombal,2909,Paulo Afonso
-2923209,29022,Boquira,2906,Centro Sul Baiano,290021,Xique-Xique ¿ Barra,2907,Irecê
+2923209,29022,Boquira,2906,Centro Sul Baiano,290021,Xique-Xique - Barra,2907,Irecê
 2923308,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2923357,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
 2923407,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
@@ -2118,7 +2118,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2923605,29025,Livramento do Brumado,2906,Centro Sul Baiano,290013,Brumado,2904,Vitória da Conquista
 2923704,29007,Bom Jesus da Lapa,2902,Vale São-Franciscano da Bahia,290017,Bom Jesus da Lapa,2905,Guanambi
 2923803,29015,Ribeira do Pombal,2904,Nordeste Baiano,290027,Cícero Dantas,2909,Paulo Afonso
-2923902,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus ¿ Itabuna
+2923902,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus - Itabuna
 2924009,29005,Paulo Afonso,2902,Vale São-Franciscano da Bahia,290024,Paulo Afonso,2909,Paulo Afonso
 2924058,29016,Serrinha,2904,Nordeste Baiano,290029,Feira de Santana,2910,Feira de Santana
 2924108,29012,Feira de Santana,2903,Centro Norte Baiano,290002,Alagoinhas,2901,Salvador
@@ -2136,9 +2136,9 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2925105,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2925204,29019,Catu,2905,Metropolitana de Salvador,290001,Salvador,2901,Salvador
 2925253,29010,Jacobina,2903,Centro Norte Baiano,290023,Senhor do Bonfim,2908,Juazeiro
-2925303,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus ¿ Itabuna
+2925303,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna
 2925402,29029,Itapetinga,2906,Centro Sul Baiano,290015,Itapetinga,2904,Vitória da Conquista
-2925501,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2925501,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2925600,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2925709,29027,Brumado,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2925758,29030,Valença,2907,Sul Baiano,290005,Valença,2902,Santo Antônio de Jesus
@@ -2160,15 +2160,15 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2927002,29017,Alagoinhas,2904,Nordeste Baiano,290002,Alagoinhas,2901,Salvador
 2927101,29005,Paulo Afonso,2902,Vale São-Franciscano da Bahia,290024,Paulo Afonso,2909,Paulo Afonso
 2927200,29011,Itaberaba,2903,Centro Norte Baiano,290031,Itaberaba,2910,Feira de Santana
-2927309,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré ¿ Maragogipe,2902,Santo Antônio de Jesus
+2927309,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus
 2927408,29021,Salvador,2905,Metropolitana de Salvador,290001,Salvador,2901,Salvador
 2927507,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2927606,29013,Jeremoabo,2904,Nordeste Baiano,290024,Paulo Afonso,2909,Paulo Afonso
-2927705,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus ¿ Itabuna
-2927804,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2927705,29032,Porto Seguro,2907,Sul Baiano,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna
+2927804,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2927903,29024,Jequié,2906,Centro Sul Baiano,290012,Jequié,2904,Vitória da Conquista
 2928000,29016,Serrinha,2904,Nordeste Baiano,290032,Conceição do Coité,2910,Feira de Santana
-2928059,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus ¿ Itabuna
+2928059,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus - Itabuna
 2928109,29003,Santa Maria da Vitória,2901,Extremo Oeste Baiano,290019,Santa Maria da Vitoria,2906,Barreiras
 2928208,29003,Santa Maria da Vitória,2901,Extremo Oeste Baiano,290018,Barreiras,2906,Barreiras
 2928307,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
@@ -2185,7 +2185,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2929206,29021,Salvador,2905,Metropolitana de Salvador,290001,Salvador,2901,Salvador
 2929255,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2929305,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
-2929354,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2929354,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2929370,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
 2929404,29024,Jequié,2906,Centro Sul Baiano,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
 2929503,29019,Catu,2905,Metropolitana de Salvador,290001,Salvador,2901,Salvador
@@ -2213,7 +2213,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2931103,29012,Feira de Santana,2903,Centro Norte Baiano,290029,Feira de Santana,2910,Feira de Santana
 2931202,29030,Valença,2907,Sul Baiano,290005,Valença,2902,Santo Antônio de Jesus
 2931301,29011,Itaberaba,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
-2931350,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2931350,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2931400,29012,Feira de Santana,2903,Centro Norte Baiano,290002,Alagoinhas,2901,Salvador
 2931509,29016,Serrinha,2904,Nordeste Baiano,290033,Serrinha,2910,Feira de Santana
 2931608,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
@@ -2222,13 +2222,13 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2931905,29014,Euclides da Cunha,2904,Nordeste Baiano,290025,Ribeira do Pombal,2909,Paulo Afonso
 2932002,29014,Euclides da Cunha,2904,Nordeste Baiano,290022,Juazeiro,2908,Juazeiro
 2932101,29024,Jequié,2906,Centro Sul Baiano,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
-2932200,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2932200,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2932309,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
 2932408,29009,Irecê,2903,Centro Norte Baiano,290020,Irecê,2907,Irecê
 2932457,29008,Senhor do Bonfim,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
-2932507,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus ¿ Itabuna
+2932507,29031,Ilhéus-Itabuna,2907,Sul Baiano,290010,Camacan,2903,Ilhéus - Itabuna
 2932606,29026,Guanambi,2906,Centro Sul Baiano,290016,Guanambi,2905,Guanambi
-2932705,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus ¿ Itabuna,2903,Ilhéus ¿ Itabuna
+2932705,29031,Ilhéus-Itabuna,2907,Sul Baiano,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna
 2932804,29023,Seabra,2906,Centro Sul Baiano,290031,Itaberaba,2910,Feira de Santana
 2932903,29030,Valença,2907,Sul Baiano,290005,Valença,2902,Santo Antônio de Jesus
 2933000,29016,Serrinha,2904,Nordeste Baiano,290032,Conceição do Coité,2910,Feira de Santana
@@ -2236,13 +2236,13 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 2933109,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
 2933158,29010,Jacobina,2903,Centro Norte Baiano,290030,Jacobina,2910,Feira de Santana
 2933174,29020,Santo Antônio de Jesus,2905,Metropolitana de Salvador,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus
-2933208,29021,Salvador,2905,Metropolitana de Salvador,290006,Nazaré ¿ Maragogipe,2902,Santo Antônio de Jesus
-2933257,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus ¿ Itabuna
+2933208,29021,Salvador,2905,Metropolitana de Salvador,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus
+2933257,29032,Porto Seguro,2907,Sul Baiano,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna
 2933307,29028,Vitória da Conquista,2906,Centro Sul Baiano,290011,Vitória da Conquista,2904,Vitória da Conquista
 2933406,29023,Seabra,2906,Centro Sul Baiano,290031,Itaberaba,2910,Feira de Santana
 2933455,29002,Cotegipe,2901,Extremo Oeste Baiano,290018,Barreiras,2906,Barreiras
 2933505,29031,Ilhéus-Itabuna,2907,Sul Baiano,290014,Ipiaú,2904,Vitória da Conquista
-2933604,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique ¿ Barra,2907,Irecê
+2933604,29006,Barra,2902,Vale São-Franciscano da Bahia,290021,Xique-Xique - Barra,2907,Irecê
 3100104,31019,Patrocínio,3105,Triângulo Mineiro/Alto Paranaíba,310061,Monte Carmelo,3111,Uberlândia
 3100203,31024,Três Marias,3106,Central Mineira,310070,Abaeté,3113,Divinópolis
 3100302,31061,Manhuaçu,3112,Zona da Mata,310028,Manhuaçu,3106,Juíz de Fora
@@ -3510,7 +3510,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 3521101,35026,Rio Claro,3506,Piracicaba,350046,Rio Claro,3510,Campinas
 3521150,35004,São José do Rio Preto,3501,São José do Rio Preto,350025,São José do Rio Preto,3507,São José do Rio Preto
 3521200,35044,Capão Bonito,3511,Itapetininga,350005,Registro,3502,Sorocaba
-3521309,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra ¿ Orlândia,3508,Ribeirão Preto
+3521309,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto
 3521408,35027,Limeira,3506,Piracicaba,350042,Limeira,3510,Campinas
 3521507,35008,Novo Horizonte,3501,São José do Rio Preto,350025,São José do Rio Preto,3507,São José do Rio Preto
 3521606,35035,Adamantina,3508,Presidente Prudente,350020,Dracena,3505,Presidente Prudente
@@ -3622,7 +3622,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 3531605,35034,Dracena,3508,Presidente Prudente,350020,Dracena,3505,Presidente Prudente
 3531704,35049,Campos do Jordão,3513,Vale do Paraíba Paulista,350049,São José dos Campos,3511,São José dos Campos
 3531803,35032,Campinas,3507,Campinas,350038,Campinas,3510,Campinas
-3531902,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra ¿ Orlândia,3508,Ribeirão Preto
+3531902,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto
 3532009,35048,Bragança Paulista,3512,Macro Metropolitana Paulista,350039,Jundiaí,3510,Campinas
 3532058,35024,Araraquara,3505,Araraquara,350036,Araraquara,3509,Araraquara
 3532108,35016,Andradina,3503,Araçatuba,350024,Andradina,3506,Araçatuba
@@ -3645,14 +3645,14 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 3533304,35006,Auriflama,3501,São José do Rio Preto,350022,Araçatuba,3506,Araçatuba
 3533403,35032,Campinas,3507,Campinas,350038,Campinas,3510,Campinas
 3533502,35008,Novo Horizonte,3501,São José do Rio Preto,350025,São José do Rio Preto,3507,São José do Rio Preto
-3533601,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra ¿ Orlândia,3508,Ribeirão Preto
+3533601,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto
 3533700,35038,Marília,3509,Marília,350013,Marília,3504,Marília
 3533809,35040,Ourinhos,3510,Assis,350007,Avaré,3502,Sorocaba
 3533908,35004,São José do Rio Preto,3501,São José do Rio Preto,350032,Barretos,3508,Ribeirão Preto
 3534005,35004,São José do Rio Preto,3501,São José do Rio Preto,350025,São José do Rio Preto,3507,São José do Rio Preto
 3534104,35038,Marília,3509,Marília,350013,Marília,3504,Marília
 3534203,35004,São José do Rio Preto,3501,São José do Rio Preto,350025,São José do Rio Preto,3507,São José do Rio Preto
-3534302,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra ¿ Orlândia,3508,Ribeirão Preto
+3534302,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto
 3534401,35057,Osasco,3515,Metropolitana de São Paulo,350001,São Paulo,3501,São Paulo
 3534500,35038,Marília,3509,Marília,350013,Marília,3504,Marília
 3534609,35035,Adamantina,3508,Presidente Prudente,350019,Adamantina - Lucélia,3505,Presidente Prudente
@@ -3769,7 +3769,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 3544608,35019,Lins,3504,Bauru,350012,Lins,3503,Bauru
 3544707,35035,Adamantina,3508,Presidente Prudente,350019,Adamantina - Lucélia,3505,Presidente Prudente
 3544806,35008,Novo Horizonte,3501,São José do Rio Preto,350025,São José do Rio Preto,3507,São José do Rio Preto
-3544905,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra ¿ Orlândia,3508,Ribeirão Preto
+3544905,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto
 3545001,35062,Mogi das Cruzes,3515,Metropolitana de São Paulo,350001,São Paulo,3501,São Paulo
 3545100,35035,Adamantina,3508,Presidente Prudente,350019,Adamantina - Lucélia,3505,Presidente Prudente
 3545159,35028,Piracicaba,3506,Piracicaba,350040,Piracicaba,3510,Campinas
@@ -3818,7 +3818,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 3549201,35002,Fernandópolis,3501,São José do Rio Preto,350029,Fernandópolis,3507,São José do Rio Preto
 3549250,35006,Auriflama,3501,São José do Rio Preto,350029,Fernandópolis,3507,São José do Rio Preto
 3549300,35034,Dracena,3508,Presidente Prudente,350020,Dracena,3505,Presidente Prudente
-3549409,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra ¿ Orlândia,3508,Ribeirão Preto
+3549409,35010,São Joaquim da Barra,3502,Ribeirão Preto,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto
 3549508,35012,Franca,3502,Ribeirão Preto,350033,Franca,3508,Ribeirão Preto
 3549607,35052,Bananal,3513,Vale do Paraíba Paulista,350053,Cruzeiro,3511,São José dos Campos
 3549706,35030,São João da Boa Vista,3507,Campinas,350047,São José do Rio Pardo - Mococa,3510,Campinas
@@ -3939,7 +3939,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4102109,41006,Astorga,4103,Norte Central Paranaense,410014,Maringá,4104,Maringá
 4102208,41006,Astorga,4103,Norte Central Paranaense,410014,Maringá,4104,Maringá
 4102307,41037,Curitiba,4110,Metropolitana de Curitiba,410001,Curitiba,4101,Curitiba
-4102406,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4102406,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4102505,41005,Campo Mourão,4102,Centro Ocidental Paranaense,410015,Campo Mourão,4104,Maringá
 4102604,41026,Francisco Beltrão,4107,Sudoeste Paranaense,410009,Francisco Beltrão,4103,Cascavel
 4102703,41016,Jacarezinho,4104,Norte Pioneiro Paranaense,410022,Santo Antônio da Platina,4105,Londrina
@@ -3991,11 +3991,11 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4105706,41030,Palmas,4108,Centro-Sul Paranaense,410010,Pato Branco,4103,Cascavel
 4105805,41037,Curitiba,4110,Metropolitana de Curitiba,410001,Curitiba,4101,Curitiba
 4105904,41006,Astorga,4103,Norte Central Paranaense,410019,Paranacity - Colorado,4104,Maringá
-4106001,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4106001,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4106100,41017,Ibaiti,4104,Norte Pioneiro Paranaense,410026,Ibaiti,4105,Londrina
 4106209,41037,Curitiba,4110,Metropolitana de Curitiba,410001,Curitiba,4101,Curitiba
 4106308,41023,Cascavel,4106,Oeste Paranaense,410006,Cascavel,4103,Cascavel
-4106407,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4106407,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4106456,41030,Palmas,4108,Centro-Sul Paranaense,410010,Pato Branco,4103,Cascavel
 4106506,41027,Pato Branco,4107,Sudoeste Paranaense,410010,Pato Branco,4103,Cascavel
 4106555,41005,Campo Mourão,4102,Centro Ocidental Paranaense,410015,Campo Mourão,4104,Maringá
@@ -4067,7 +4067,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4110805,41005,Campo Mourão,4102,Centro Ocidental Paranaense,410015,Campo Mourão,4104,Maringá
 4110904,41006,Astorga,4103,Norte Central Paranaense,410019,Paranacity - Colorado,4104,Maringá
 4110953,41024,Foz do Iguaçu,4106,Oeste Paranaense,410007,Foz do Iguaçu,4103,Cascavel
-4111001,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4111001,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4111100,41008,Floraí,4103,Norte Central Paranaense,410014,Maringá,4104,Maringá
 4111209,41027,Pato Branco,4107,Sudoeste Paranaense,410010,Pato Branco,4103,Cascavel
 4111258,41037,Curitiba,4110,Metropolitana de Curitiba,410001,Curitiba,4101,Curitiba
@@ -4096,7 +4096,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4113205,41036,Lapa,4110,Metropolitana de Curitiba,410001,Curitiba,4101,Curitiba
 4113254,41028,Pitanga,4108,Centro-Sul Paranaense,410005,Pitanga,4102,Guarapuava
 4113304,41029,Guarapuava,4108,Centro-Sul Paranaense,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel
-4113403,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4113403,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4113429,41013,Ivaiporã,4103,Norte Central Paranaense,410025,Ivaiporã,4105,Londrina
 4113452,41023,Cascavel,4106,Oeste Paranaense,410006,Cascavel,4103,Cascavel
 4113502,41001,Paranavaí,4101,Noroeste Paranaense,410020,Loanda,4104,Maringá
@@ -4139,16 +4139,16 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4116307,41006,Astorga,4103,Norte Central Paranaense,410014,Maringá,4104,Maringá
 4116406,41006,Astorga,4103,Norte Central Paranaense,410019,Paranacity - Colorado,4104,Maringá
 4116505,41001,Paranavaí,4101,Noroeste Paranaense,410017,Paranavaí,4104,Maringá
-4116604,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4116604,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4116703,41023,Cascavel,4106,Oeste Paranaense,410006,Cascavel,4103,Cascavel
 4116802,41004,Goioerê,4102,Centro Ocidental Paranaense,410015,Campo Mourão,4104,Maringá
 4116901,41006,Astorga,4103,Norte Central Paranaense,410014,Maringá,4104,Maringá
 4116950,41026,Francisco Beltrão,4107,Sudoeste Paranaense,410009,Francisco Beltrão,4103,Cascavel
-4117008,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4117008,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4117057,41029,Guarapuava,4108,Centro-Sul Paranaense,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel
 4117107,41001,Paranavaí,4101,Noroeste Paranaense,410017,Paranavaí,4104,Maringá
 4117206,41002,Umuarama,4101,Noroeste Paranaense,410016,Umuarama,4104,Maringá
-4117214,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4117214,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4117222,41022,Toledo,4106,Oeste Paranaense,410013,Marechal Cândido Rondon,4103,Cascavel
 4117255,41026,Francisco Beltrão,4107,Sudoeste Paranaense,410012,Dois Vizinhos,4103,Cascavel
 4117271,41013,Ivaiporã,4103,Norte Central Paranaense,410005,Pitanga,4102,Guarapuava
@@ -4206,7 +4206,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4121109,41005,Campo Mourão,4102,Centro Ocidental Paranaense,410015,Campo Mourão,4104,Maringá
 4121208,41039,Rio Negro,4110,Metropolitana de Curitiba,410001,Curitiba,4101,Curitiba
 4121257,41024,Foz do Iguaçu,4106,Oeste Paranaense,410006,Cascavel,4103,Cascavel
-4121307,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4121307,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4121356,41004,Goioerê,4102,Centro Ocidental Paranaense,410015,Campo Mourão,4104,Maringá
 4121406,41025,Capanema,4107,Sudoeste Paranaense,410009,Francisco Beltrão,4103,Cascavel
 4121505,41032,Irati,4109,Sudeste Paranaense,410029,Irati,4106,Ponta Grossa
@@ -4229,8 +4229,8 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4122800,41026,Francisco Beltrão,4107,Sudoeste Paranaense,410009,Francisco Beltrão,4103,Cascavel
 4122909,41018,Wenceslau Braz,4104,Norte Pioneiro Paranaense,410022,Santo Antônio da Platina,4105,Londrina
 4123006,41026,Francisco Beltrão,4107,Sudoeste Paranaense,410012,Dois Vizinhos,4103,Cascavel
-4123105,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
-4123204,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4123105,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
+4123204,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4123303,41001,Paranavaí,4101,Noroeste Paranaense,410020,Loanda,4104,Maringá
 4123402,41006,Astorga,4103,Norte Central Paranaense,410014,Maringá,4104,Maringá
 4123501,41022,Toledo,4106,Oeste Paranaense,410008,Toledo,4103,Cascavel
@@ -4239,18 +4239,18 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4123808,41025,Capanema,4107,Sudoeste Paranaense,410009,Francisco Beltrão,4103,Cascavel
 4123824,41023,Cascavel,4106,Oeste Paranaense,410006,Cascavel,4103,Cascavel
 4123857,41028,Pitanga,4108,Centro-Sul Paranaense,410005,Pitanga,4102,Guarapuava
-4123907,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4123907,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4123956,41001,Paranavaí,4101,Noroeste Paranaense,410020,Loanda,4104,Maringá
 4124004,41018,Wenceslau Braz,4104,Norte Pioneiro Paranaense,410022,Santo Antônio da Platina,4105,Londrina
 4124020,41023,Cascavel,4106,Oeste Paranaense,410006,Cascavel,4103,Cascavel
 4124053,41024,Foz do Iguaçu,4106,Oeste Paranaense,410007,Foz do Iguaçu,4103,Cascavel
 4124103,41016,Jacarezinho,4104,Norte Pioneiro Paranaense,410022,Santo Antônio da Platina,4105,Londrina
 4124202,41001,Paranavaí,4101,Noroeste Paranaense,410017,Paranavaí,4104,Maringá
-4124301,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4124301,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4124400,41026,Francisco Beltrão,4107,Sudoeste Paranaense,410009,Francisco Beltrão,4103,Cascavel
 4124509,41006,Astorga,4103,Norte Central Paranaense,410019,Paranacity - Colorado,4104,Maringá
 4124608,41001,Paranavaí,4101,Noroeste Paranaense,410017,Paranavaí,4104,Maringá
-4124707,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4124707,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4124806,41027,Pato Branco,4107,Sudoeste Paranaense,410010,Pato Branco,4103,Cascavel
 4124905,41001,Paranavaí,4101,Noroeste Paranaense,410017,Paranavaí,4104,Maringá
 4125001,41013,Ivaiporã,4103,Norte Central Paranaense,410025,Ivaiporã,4105,Londrina
@@ -4267,14 +4267,14 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4125753,41022,Toledo,4106,Oeste Paranaense,410008,Toledo,4103,Cascavel
 4125803,41013,Ivaiporã,4103,Norte Central Paranaense,410023,Apucarana,4105,Londrina
 4125902,41001,Paranavaí,4101,Noroeste Paranaense,410020,Loanda,4104,Maringá
-4126009,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4126009,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4126108,41003,Cianorte,4101,Noroeste Paranaense,410018,Cianorte,4104,Maringá
-4126207,41017,Ibaiti,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4126207,41017,Ibaiti,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4126256,41009,Maringá,4103,Norte Central Paranaense,410014,Maringá,4104,Maringá
 4126272,41027,Pato Branco,4107,Sudoeste Paranaense,410010,Pato Branco,4103,Cascavel
 4126306,41020,Jaguariaíva,4105,Centro Oriental Paranaense,410027,Ponta Grossa,4106,Ponta Grossa
 4126355,41024,Foz do Iguaçu,4106,Oeste Paranaense,410007,Foz do Iguaçu,4103,Cascavel
-4126405,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4126405,41015,Cornélio Procópio,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4126504,41007,Porecatu,4103,Norte Central Paranaense,410021,Londrina,4105,Londrina
 4126603,41018,Wenceslau Braz,4104,Norte Pioneiro Paranaense,410022,Santo Antônio da Platina,4105,Londrina
 4126652,41027,Pato Branco,4107,Sudoeste Paranaense,410010,Pato Branco,4103,Cascavel
@@ -4300,7 +4300,7 @@ ibge,micro,nome_micro,meso,nome_meso,imediata,nome_imediata,intermediaria,nome_i
 4128104,41002,Umuarama,4101,Noroeste Paranaense,410016,Umuarama,4104,Maringá
 4128203,41033,União da Vitória,4109,Sudeste Paranaense,410003,União da Vitória,4101,Curitiba
 4128302,41006,Astorga,4103,Norte Central Paranaense,410014,Maringá,4104,Maringá
-4128401,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio ¿ Bandeirantes,4105,Londrina
+4128401,41014,Assaí,4104,Norte Pioneiro Paranaense,410024,Cornélio Procópio - Bandeirantes,4105,Londrina
 4128500,41018,Wenceslau Braz,4104,Norte Pioneiro Paranaense,410022,Santo Antônio da Platina,4105,Londrina
 4128534,41019,Telêmaco Borba,4105,Centro Oriental Paranaense,410028,Telêmaco Borba,4106,Ponta Grossa
 4128559,41024,Foz do Iguaçu,4106,Oeste Paranaense,410006,Cascavel,4103,Cascavel

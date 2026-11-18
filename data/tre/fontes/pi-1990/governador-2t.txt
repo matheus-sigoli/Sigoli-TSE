@@ -1,0 +1,61 @@
+# PI 1990 governador 2º turno (25-11-1990), votação por município, p. 23 de publicação do TRE-PI (acervo, Mapas/PI/Resultados/1990 2T.jpg). Só a primeira página (municípios 1 a 59, em ordem alfabética).
+# municipio;freitas_neto;wall_ferraz;brancos;nulos;total
+Agricolândia;1862;1037;73;96;3068
+Água Branca;4725;2514;110;351;7700
+Alagoinha do Piauí;2356;768;65;130;3319
+Alto Longá;3897;4596;136;178;8807
+Altos;9188;7917;660;1449;19214
+Amarante;4083;3389;180;521;8173
+Angical do Piauí;2386;1609;63;226;4284
+Anísio de Abreu;3705;856;70;92;4723
+Antônio Almeida;1323;624;47;74;2068
+Aroazes;3047;985;92;119;4243
+Arraial;1350;925;33;99;2407
+Avelino Lopes;2239;2987;37;99;5362
+Barras;8461;9928;323;637;19349
+Barreiras do Piauí;1053;575;41;76;1745
+Barro Duro;2968;1097;67;150;4282
+Batalha;5715;3368;170;391;9644
+Beneditinos;3970;1544;119;222;5855
+Bertolínia;1377;2550;50;82;4059
+Bocaina;1707;1308;31;77;3123
+Bom Jesus;5347;1397;163;367;7274
+Buriti dos Lopes;8445;4585;313;1051;14394
+Campinas do Piauí;2070;463;27;118;2678
+Campo Maior;14704;16449;382;1957;33492
+Canto do Buriti;6859;5204;207;253;12523
+Capitão de Campos;2425;2507;87;181;5200
+Caracol;3753;865;82;190;4890
+Castelo do Piauí;9387;3740;176;490;13793
+Cocal;4986;6641;149;248;12024
+Conceição do Canindé;2709;1040;69;75;3893
+Corrente;5927;3534;210;364;10035
+Cristalândia do Piauí;2144;649;31;38;2862
+Cristino Castro;2693;1497;74;175;4439
+Curimatá;4310;673;85;195;5263
+Demerval Lobão;2940;3337;161;386;6824
+Dirceu Arcoverde;3356;1532;83;169;5140
+Dom Expedito Lopes;1423;1442;65;95;3025
+Domingos Mourão;1253;784;28;65;2130
+Dom Inocêncio;3373;365;29;59;3826
+Elesbão Veloso;4994;3130;78;280;8482
+Eliseu Martins;2435;1050;82;146;3713
+Esperantina;6761;6261;276;896;14194
+Flores do Piauí;1281;864;26;32;2203
+Floriano;9694;8013;420;1529;19656
+Francinópolis;1784;900;56;126;2866
+Francisco Ayres;1567;911;46;127;2651
+Francisco Santos;2146;1277;38;198;3659
+Fronteiras;3993;3744;154;207;8098
+Gilbués;1808;1773;81;204;3866
+Guadalupe;2505;1614;71;313;4503
+Hugo Napoleão;1498;743;29;48;2318
+Inhuma;4142;2088;59;161;6450
+Ipiranga do Piauí;2323;1283;51;160;3817
+Isaías Coelho;2066;883;68;176;3193
+Itainópolis;4339;1183;182;656;6360
+Itaueira;2474;2947;66;88;5575
+Jaicós;5686;7719;158;379;13942
+Jerumenha;1743;1782;40;112;3677
+Joaquim Pires;2613;2245;111;244;5213
+José de Freitas;8050;5848;265;392;14555

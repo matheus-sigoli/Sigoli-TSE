@@ -1,0 +1,296 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+governador;2;2200103;_FREITASNETO;FREITAS NETO;PFL;1862;S
+governador;2;2200103;_WALLFERRAZ;WALL FERRAZ;PSDB;1037;
+governador;2;2200103;#brancos;;;73;
+governador;2;2200103;#nulos;;;96;
+governador;2;2200103;#comparecimento;;;3068;
+governador;2;2200202;_FREITASNETO;FREITAS NETO;PFL;4725;S
+governador;2;2200202;_WALLFERRAZ;WALL FERRAZ;PSDB;2514;
+governador;2;2200202;#brancos;;;110;
+governador;2;2200202;#nulos;;;351;
+governador;2;2200202;#comparecimento;;;7700;
+governador;2;2200251;_FREITASNETO;FREITAS NETO;PFL;2356;S
+governador;2;2200251;_WALLFERRAZ;WALL FERRAZ;PSDB;768;
+governador;2;2200251;#brancos;;;65;
+governador;2;2200251;#nulos;;;130;
+governador;2;2200251;#comparecimento;;;3319;
+governador;2;2200301;_FREITASNETO;FREITAS NETO;PFL;3897;S
+governador;2;2200301;_WALLFERRAZ;WALL FERRAZ;PSDB;4596;
+governador;2;2200301;#brancos;;;136;
+governador;2;2200301;#nulos;;;178;
+governador;2;2200301;#comparecimento;;;8807;
+governador;2;2200400;_FREITASNETO;FREITAS NETO;PFL;9188;S
+governador;2;2200400;_WALLFERRAZ;WALL FERRAZ;PSDB;7917;
+governador;2;2200400;#brancos;;;660;
+governador;2;2200400;#nulos;;;1449;
+governador;2;2200400;#comparecimento;;;19214;
+governador;2;2200509;_FREITASNETO;FREITAS NETO;PFL;4083;S
+governador;2;2200509;_WALLFERRAZ;WALL FERRAZ;PSDB;3389;
+governador;2;2200509;#brancos;;;180;
+governador;2;2200509;#nulos;;;521;
+governador;2;2200509;#comparecimento;;;8173;
+governador;2;2200608;_FREITASNETO;FREITAS NETO;PFL;2386;S
+governador;2;2200608;_WALLFERRAZ;WALL FERRAZ;PSDB;1609;
+governador;2;2200608;#brancos;;;63;
+governador;2;2200608;#nulos;;;226;
+governador;2;2200608;#comparecimento;;;4284;
+governador;2;2200707;_FREITASNETO;FREITAS NETO;PFL;3705;S
+governador;2;2200707;_WALLFERRAZ;WALL FERRAZ;PSDB;856;
+governador;2;2200707;#brancos;;;70;
+governador;2;2200707;#nulos;;;92;
+governador;2;2200707;#comparecimento;;;4723;
+governador;2;2200806;_FREITASNETO;FREITAS NETO;PFL;1323;S
+governador;2;2200806;_WALLFERRAZ;WALL FERRAZ;PSDB;624;
+governador;2;2200806;#brancos;;;47;
+governador;2;2200806;#nulos;;;74;
+governador;2;2200806;#comparecimento;;;2068;
+governador;2;2200905;_FREITASNETO;FREITAS NETO;PFL;3047;S
+governador;2;2200905;_WALLFERRAZ;WALL FERRAZ;PSDB;985;
+governador;2;2200905;#brancos;;;92;
+governador;2;2200905;#nulos;;;119;
+governador;2;2200905;#comparecimento;;;4243;
+governador;2;2201002;_FREITASNETO;FREITAS NETO;PFL;1350;S
+governador;2;2201002;_WALLFERRAZ;WALL FERRAZ;PSDB;925;
+governador;2;2201002;#brancos;;;33;
+governador;2;2201002;#nulos;;;99;
+governador;2;2201002;#comparecimento;;;2407;
+governador;2;2201101;_FREITASNETO;FREITAS NETO;PFL;2239;S
+governador;2;2201101;_WALLFERRAZ;WALL FERRAZ;PSDB;2987;
+governador;2;2201101;#brancos;;;37;
+governador;2;2201101;#nulos;;;99;
+governador;2;2201101;#comparecimento;;;5362;
+governador;2;2201200;_FREITASNETO;FREITAS NETO;PFL;8461;S
+governador;2;2201200;_WALLFERRAZ;WALL FERRAZ;PSDB;9928;
+governador;2;2201200;#brancos;;;323;
+governador;2;2201200;#nulos;;;637;
+governador;2;2201200;#comparecimento;;;19349;
+governador;2;2201309;_FREITASNETO;FREITAS NETO;PFL;1053;S
+governador;2;2201309;_WALLFERRAZ;WALL FERRAZ;PSDB;575;
+governador;2;2201309;#brancos;;;41;
+governador;2;2201309;#nulos;;;76;
+governador;2;2201309;#comparecimento;;;1745;
+governador;2;2201408;_FREITASNETO;FREITAS NETO;PFL;2968;S
+governador;2;2201408;_WALLFERRAZ;WALL FERRAZ;PSDB;1097;
+governador;2;2201408;#brancos;;;67;
+governador;2;2201408;#nulos;;;150;
+governador;2;2201408;#comparecimento;;;4282;
+governador;2;2201507;_FREITASNETO;FREITAS NETO;PFL;5715;S
+governador;2;2201507;_WALLFERRAZ;WALL FERRAZ;PSDB;3368;
+governador;2;2201507;#brancos;;;170;
+governador;2;2201507;#nulos;;;391;
+governador;2;2201507;#comparecimento;;;9644;
+governador;2;2201606;_FREITASNETO;FREITAS NETO;PFL;3970;S
+governador;2;2201606;_WALLFERRAZ;WALL FERRAZ;PSDB;1544;
+governador;2;2201606;#brancos;;;119;
+governador;2;2201606;#nulos;;;222;
+governador;2;2201606;#comparecimento;;;5855;
+governador;2;2201705;_FREITASNETO;FREITAS NETO;PFL;1377;S
+governador;2;2201705;_WALLFERRAZ;WALL FERRAZ;PSDB;2550;
+governador;2;2201705;#brancos;;;50;
+governador;2;2201705;#nulos;;;82;
+governador;2;2201705;#comparecimento;;;4059;
+governador;2;2201804;_FREITASNETO;FREITAS NETO;PFL;1707;S
+governador;2;2201804;_WALLFERRAZ;WALL FERRAZ;PSDB;1308;
+governador;2;2201804;#brancos;;;31;
+governador;2;2201804;#nulos;;;77;
+governador;2;2201804;#comparecimento;;;3123;
+governador;2;2201903;_FREITASNETO;FREITAS NETO;PFL;5347;S
+governador;2;2201903;_WALLFERRAZ;WALL FERRAZ;PSDB;1397;
+governador;2;2201903;#brancos;;;163;
+governador;2;2201903;#nulos;;;367;
+governador;2;2201903;#comparecimento;;;7274;
+governador;2;2202000;_FREITASNETO;FREITAS NETO;PFL;8445;S
+governador;2;2202000;_WALLFERRAZ;WALL FERRAZ;PSDB;4585;
+governador;2;2202000;#brancos;;;313;
+governador;2;2202000;#nulos;;;1051;
+governador;2;2202000;#comparecimento;;;14394;
+governador;2;2202109;_FREITASNETO;FREITAS NETO;PFL;2070;S
+governador;2;2202109;_WALLFERRAZ;WALL FERRAZ;PSDB;463;
+governador;2;2202109;#brancos;;;27;
+governador;2;2202109;#nulos;;;118;
+governador;2;2202109;#comparecimento;;;2678;
+governador;2;2202208;_FREITASNETO;FREITAS NETO;PFL;14704;S
+governador;2;2202208;_WALLFERRAZ;WALL FERRAZ;PSDB;16449;
+governador;2;2202208;#brancos;;;382;
+governador;2;2202208;#nulos;;;1957;
+governador;2;2202208;#comparecimento;;;33492;
+governador;2;2202307;_FREITASNETO;FREITAS NETO;PFL;6859;S
+governador;2;2202307;_WALLFERRAZ;WALL FERRAZ;PSDB;5204;
+governador;2;2202307;#brancos;;;207;
+governador;2;2202307;#nulos;;;253;
+governador;2;2202307;#comparecimento;;;12523;
+governador;2;2202406;_FREITASNETO;FREITAS NETO;PFL;2425;S
+governador;2;2202406;_WALLFERRAZ;WALL FERRAZ;PSDB;2507;
+governador;2;2202406;#brancos;;;87;
+governador;2;2202406;#nulos;;;181;
+governador;2;2202406;#comparecimento;;;5200;
+governador;2;2202505;_FREITASNETO;FREITAS NETO;PFL;3753;S
+governador;2;2202505;_WALLFERRAZ;WALL FERRAZ;PSDB;865;
+governador;2;2202505;#brancos;;;82;
+governador;2;2202505;#nulos;;;190;
+governador;2;2202505;#comparecimento;;;4890;
+governador;2;2202604;_FREITASNETO;FREITAS NETO;PFL;9387;S
+governador;2;2202604;_WALLFERRAZ;WALL FERRAZ;PSDB;3740;
+governador;2;2202604;#brancos;;;176;
+governador;2;2202604;#nulos;;;490;
+governador;2;2202604;#comparecimento;;;13793;
+governador;2;2202703;_FREITASNETO;FREITAS NETO;PFL;4986;S
+governador;2;2202703;_WALLFERRAZ;WALL FERRAZ;PSDB;6641;
+governador;2;2202703;#brancos;;;149;
+governador;2;2202703;#nulos;;;248;
+governador;2;2202703;#comparecimento;;;12024;
+governador;2;2202802;_FREITASNETO;FREITAS NETO;PFL;2709;S
+governador;2;2202802;_WALLFERRAZ;WALL FERRAZ;PSDB;1040;
+governador;2;2202802;#brancos;;;69;
+governador;2;2202802;#nulos;;;75;
+governador;2;2202802;#comparecimento;;;3893;
+governador;2;2202901;_FREITASNETO;FREITAS NETO;PFL;5927;S
+governador;2;2202901;_WALLFERRAZ;WALL FERRAZ;PSDB;3534;
+governador;2;2202901;#brancos;;;210;
+governador;2;2202901;#nulos;;;364;
+governador;2;2202901;#comparecimento;;;10035;
+governador;2;2203008;_FREITASNETO;FREITAS NETO;PFL;2144;S
+governador;2;2203008;_WALLFERRAZ;WALL FERRAZ;PSDB;649;
+governador;2;2203008;#brancos;;;31;
+governador;2;2203008;#nulos;;;38;
+governador;2;2203008;#comparecimento;;;2862;
+governador;2;2203107;_FREITASNETO;FREITAS NETO;PFL;2693;S
+governador;2;2203107;_WALLFERRAZ;WALL FERRAZ;PSDB;1497;
+governador;2;2203107;#brancos;;;74;
+governador;2;2203107;#nulos;;;175;
+governador;2;2203107;#comparecimento;;;4439;
+governador;2;2203206;_FREITASNETO;FREITAS NETO;PFL;4310;S
+governador;2;2203206;_WALLFERRAZ;WALL FERRAZ;PSDB;673;
+governador;2;2203206;#brancos;;;85;
+governador;2;2203206;#nulos;;;195;
+governador;2;2203206;#comparecimento;;;5263;
+governador;2;2203305;_FREITASNETO;FREITAS NETO;PFL;2940;S
+governador;2;2203305;_WALLFERRAZ;WALL FERRAZ;PSDB;3337;
+governador;2;2203305;#brancos;;;161;
+governador;2;2203305;#nulos;;;386;
+governador;2;2203305;#comparecimento;;;6824;
+governador;2;2203354;_FREITASNETO;FREITAS NETO;PFL;3356;S
+governador;2;2203354;_WALLFERRAZ;WALL FERRAZ;PSDB;1532;
+governador;2;2203354;#brancos;;;83;
+governador;2;2203354;#nulos;;;169;
+governador;2;2203354;#comparecimento;;;5140;
+governador;2;2203404;_FREITASNETO;FREITAS NETO;PFL;1423;S
+governador;2;2203404;_WALLFERRAZ;WALL FERRAZ;PSDB;1442;
+governador;2;2203404;#brancos;;;65;
+governador;2;2203404;#nulos;;;95;
+governador;2;2203404;#comparecimento;;;3025;
+governador;2;2203420;_FREITASNETO;FREITAS NETO;PFL;1253;S
+governador;2;2203420;_WALLFERRAZ;WALL FERRAZ;PSDB;784;
+governador;2;2203420;#brancos;;;28;
+governador;2;2203420;#nulos;;;65;
+governador;2;2203420;#comparecimento;;;2130;
+governador;2;2203453;_FREITASNETO;FREITAS NETO;PFL;3373;S
+governador;2;2203453;_WALLFERRAZ;WALL FERRAZ;PSDB;365;
+governador;2;2203453;#brancos;;;29;
+governador;2;2203453;#nulos;;;59;
+governador;2;2203453;#comparecimento;;;3826;
+governador;2;2203503;_FREITASNETO;FREITAS NETO;PFL;4994;S
+governador;2;2203503;_WALLFERRAZ;WALL FERRAZ;PSDB;3130;
+governador;2;2203503;#brancos;;;78;
+governador;2;2203503;#nulos;;;280;
+governador;2;2203503;#comparecimento;;;8482;
+governador;2;2203602;_FREITASNETO;FREITAS NETO;PFL;2435;S
+governador;2;2203602;_WALLFERRAZ;WALL FERRAZ;PSDB;1050;
+governador;2;2203602;#brancos;;;82;
+governador;2;2203602;#nulos;;;146;
+governador;2;2203602;#comparecimento;;;3713;
+governador;2;2203701;_FREITASNETO;FREITAS NETO;PFL;6761;S
+governador;2;2203701;_WALLFERRAZ;WALL FERRAZ;PSDB;6261;
+governador;2;2203701;#brancos;;;276;
+governador;2;2203701;#nulos;;;896;
+governador;2;2203701;#comparecimento;;;14194;
+governador;2;2203800;_FREITASNETO;FREITAS NETO;PFL;1281;S
+governador;2;2203800;_WALLFERRAZ;WALL FERRAZ;PSDB;864;
+governador;2;2203800;#brancos;;;26;
+governador;2;2203800;#nulos;;;32;
+governador;2;2203800;#comparecimento;;;2203;
+governador;2;2203909;_FREITASNETO;FREITAS NETO;PFL;9694;S
+governador;2;2203909;_WALLFERRAZ;WALL FERRAZ;PSDB;8013;
+governador;2;2203909;#brancos;;;420;
+governador;2;2203909;#nulos;;;1529;
+governador;2;2203909;#comparecimento;;;19656;
+governador;2;2204006;_FREITASNETO;FREITAS NETO;PFL;1784;S
+governador;2;2204006;_WALLFERRAZ;WALL FERRAZ;PSDB;900;
+governador;2;2204006;#brancos;;;56;
+governador;2;2204006;#nulos;;;126;
+governador;2;2204006;#comparecimento;;;2866;
+governador;2;2204105;_FREITASNETO;FREITAS NETO;PFL;1567;S
+governador;2;2204105;_WALLFERRAZ;WALL FERRAZ;PSDB;911;
+governador;2;2204105;#brancos;;;46;
+governador;2;2204105;#nulos;;;127;
+governador;2;2204105;#comparecimento;;;2651;
+governador;2;2204204;_FREITASNETO;FREITAS NETO;PFL;2146;S
+governador;2;2204204;_WALLFERRAZ;WALL FERRAZ;PSDB;1277;
+governador;2;2204204;#brancos;;;38;
+governador;2;2204204;#nulos;;;198;
+governador;2;2204204;#comparecimento;;;3659;
+governador;2;2204303;_FREITASNETO;FREITAS NETO;PFL;3993;S
+governador;2;2204303;_WALLFERRAZ;WALL FERRAZ;PSDB;3744;
+governador;2;2204303;#brancos;;;154;
+governador;2;2204303;#nulos;;;207;
+governador;2;2204303;#comparecimento;;;8098;
+governador;2;2204402;_FREITASNETO;FREITAS NETO;PFL;1808;S
+governador;2;2204402;_WALLFERRAZ;WALL FERRAZ;PSDB;1773;
+governador;2;2204402;#brancos;;;81;
+governador;2;2204402;#nulos;;;204;
+governador;2;2204402;#comparecimento;;;3866;
+governador;2;2204501;_FREITASNETO;FREITAS NETO;PFL;2505;S
+governador;2;2204501;_WALLFERRAZ;WALL FERRAZ;PSDB;1614;
+governador;2;2204501;#brancos;;;71;
+governador;2;2204501;#nulos;;;313;
+governador;2;2204501;#comparecimento;;;4503;
+governador;2;2204600;_FREITASNETO;FREITAS NETO;PFL;1498;S
+governador;2;2204600;_WALLFERRAZ;WALL FERRAZ;PSDB;743;
+governador;2;2204600;#brancos;;;29;
+governador;2;2204600;#nulos;;;48;
+governador;2;2204600;#comparecimento;;;2318;
+governador;2;2204709;_FREITASNETO;FREITAS NETO;PFL;4142;S
+governador;2;2204709;_WALLFERRAZ;WALL FERRAZ;PSDB;2088;
+governador;2;2204709;#brancos;;;59;
+governador;2;2204709;#nulos;;;161;
+governador;2;2204709;#comparecimento;;;6450;
+governador;2;2204808;_FREITASNETO;FREITAS NETO;PFL;2323;S
+governador;2;2204808;_WALLFERRAZ;WALL FERRAZ;PSDB;1283;
+governador;2;2204808;#brancos;;;51;
+governador;2;2204808;#nulos;;;160;
+governador;2;2204808;#comparecimento;;;3817;
+governador;2;2204907;_FREITASNETO;FREITAS NETO;PFL;2066;S
+governador;2;2204907;_WALLFERRAZ;WALL FERRAZ;PSDB;883;
+governador;2;2204907;#brancos;;;68;
+governador;2;2204907;#nulos;;;176;
+governador;2;2204907;#comparecimento;;;3193;
+governador;2;2205003;_FREITASNETO;FREITAS NETO;PFL;4339;S
+governador;2;2205003;_WALLFERRAZ;WALL FERRAZ;PSDB;1183;
+governador;2;2205003;#brancos;;;182;
+governador;2;2205003;#nulos;;;656;
+governador;2;2205003;#comparecimento;;;6360;
+governador;2;2205102;_FREITASNETO;FREITAS NETO;PFL;2474;S
+governador;2;2205102;_WALLFERRAZ;WALL FERRAZ;PSDB;2947;
+governador;2;2205102;#brancos;;;66;
+governador;2;2205102;#nulos;;;88;
+governador;2;2205102;#comparecimento;;;5575;
+governador;2;2205201;_FREITASNETO;FREITAS NETO;PFL;5686;S
+governador;2;2205201;_WALLFERRAZ;WALL FERRAZ;PSDB;7719;
+governador;2;2205201;#brancos;;;158;
+governador;2;2205201;#nulos;;;379;
+governador;2;2205201;#comparecimento;;;13942;
+governador;2;2205300;_FREITASNETO;FREITAS NETO;PFL;1743;S
+governador;2;2205300;_WALLFERRAZ;WALL FERRAZ;PSDB;1782;
+governador;2;2205300;#brancos;;;40;
+governador;2;2205300;#nulos;;;112;
+governador;2;2205300;#comparecimento;;;3677;
+governador;2;2205409;_FREITASNETO;FREITAS NETO;PFL;2613;S
+governador;2;2205409;_WALLFERRAZ;WALL FERRAZ;PSDB;2245;
+governador;2;2205409;#brancos;;;111;
+governador;2;2205409;#nulos;;;244;
+governador;2;2205409;#comparecimento;;;5213;
+governador;2;2205508;_FREITASNETO;FREITAS NETO;PFL;8050;S
+governador;2;2205508;_WALLFERRAZ;WALL FERRAZ;PSDB;5848;
+governador;2;2205508;#brancos;;;265;
+governador;2;2205508;#nulos;;;392;
+governador;2;2205508;#comparecimento;;;14555;

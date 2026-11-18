@@ -65,7 +65,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
-    cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, MA, MG, MS, MT, PA, RJ, RN, RO, RS e SP), Senador (CE, MS, PA, RN, RO e RS; MA só com parte dos municípios) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, MA, MG, MS, MT, PA, PI, RJ, RN, RO, RS e SP; PI só no 2º turno e metade dos municípios), Senador (CE, MS, PA, RN, RO e RS; MA só com parte dos municípios) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'Acervo Sigoli.TSE e TREs (por município)',
   },
@@ -122,9 +122,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1960, titulo: 'Eleições 1960', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto AL, MG e SC)', disponivel: true, rota: '/1960/mg/governador', semLocais: true, semZonas: true,
-    soCargos: ['governador'],
-    fonte: 'TRE-MG, TRE-SC e acervo Sigoli.TSE (por município)',
+    cargos: 'Governador (por enquanto AL, MG, PR e SC) e Presidente e Vice-Presidente (por enquanto só PR por município; total do Brasil oficial)', disponivel: true, rota: '/1960/mg/governador', semLocais: true, semZonas: true,
+    soCargos: ['presidente', 'vice-presidente', 'governador'],
+    fonte: 'TRE-MG, TRE-PR, TRE-SC e acervo Sigoli.TSE (por município); total do Brasil para Presidente e Vice pelo IBGE',
   },
   {
     ano: 1958, titulo: 'Eleições 1958', datas: '3 de outubro',
@@ -134,9 +134,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1955, titulo: 'Eleições 1955', datas: '3 de outubro',
-    cargos: 'Presidente e Vice-Presidente (todo o Brasil) e Governador (por enquanto AL, MG, MT e SC; MG por zona eleitoral)', disponivel: true, rota: '/1955/br/presidente', semLocais: true, semZonas: true,
+    cargos: 'Presidente e Vice-Presidente (todo o Brasil) e Governador (por enquanto AL, MG, MT, PR e SC; MG por zona eleitoral)', disponivel: true, rota: '/1955/br/presidente', semLocais: true, semZonas: true,
     soCargos: ['presidente', 'vice-presidente', 'governador'],
-    fonte: 'Acervo Sigoli.TSE (banco de dados de Presidente e Vice por município), TRE-MG (por zona eleitoral) e TRE-SC (por município)',
+    fonte: 'Acervo Sigoli.TSE (banco de dados de Presidente e Vice por município), TRE-MG (por zona eleitoral), TRE-PR e TRE-SC (por município)',
   },
   {
     ano: 1954, titulo: 'Eleições 1954', datas: '3 de outubro',
