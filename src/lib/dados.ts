@@ -345,14 +345,15 @@ export const useMunicipios = (ano: number) =>
 
 /**
  * Regiões do IBGE dentro do estado (scripts/regioes.mjs): micro e mesorregiões; regiões imediatas e intermediárias
- * (códigos com prefixo im/in). A meso é o `pai` da micro; a intermediária, o da imediata.
+ * (códigos com prefixo im/in) e regiões metropolitanas (prefixo rm). A meso é o `pai` da micro; a intermediária, o da imediata.
  */
-export type TipoRegiao = 'micro' | 'meso' | 'imediata' | 'intermediaria';
+export type TipoRegiao = 'micro' | 'meso' | 'imediata' | 'intermediaria' | 'metropolitana';
 export interface Regiao { tipo: TipoRegiao; nome: string; uf: string; pai?: string }
-export interface Regioes { regioes: Record<string, Regiao>; /** ibge → [microrregião, região imediata] */ municipios: Record<string, string[]> }
-export const useRegioes = () => useArquivo<Regioes>(() => buscar('/geo/regioes.json'), 'regioes:4');
+export interface Regioes { regioes: Record<string, Regiao>; /** ibge → [microrregião, região imediata, região metropolitana?] */ municipios: Record<string, string[]> }
+export const useRegioes = () => useArquivo<Regioes>(() => buscar('/geo/regioes.json'), 'regioes:5');
 export const NOME_TIPO_REGIAO: Record<TipoRegiao, string> = {
   micro: 'Microrregião', meso: 'Mesorregião', imediata: 'Região imediata', intermediaria: 'Região intermediária',
+  metropolitana: 'Região metropolitana',
 };
 
 /** Grandes regiões do país (no Brasil, `reg` = siglas separadas por vírgula, ex.: "S,SE"); o dígito é o 1º do código do IBGE */

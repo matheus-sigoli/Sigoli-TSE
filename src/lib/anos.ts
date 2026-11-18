@@ -173,6 +173,8 @@ export const temPresidente = (ano: number) => !ELEICOES.find((e) => e.ano === an
 
 /** o ano tem o cargo (1998 sem Presidente; 1989 só Presidente) */
 export const temCargo = (ano: number, cargo: string) => {
+  // o vice-presidente só tinha eleição própria até 1960; depois é eleito com o presidente
+  if (cargo === 'vice-presidente' && ano > 1960) return false;
   const e = ELEICOES.find((x) => x.ano === ano);
   if (e?.soCargos) return e.soCargos.includes(cargo);
   return cargo !== 'presidente' || !e?.semPresidente;

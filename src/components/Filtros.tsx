@@ -105,11 +105,11 @@ function Filtros(p: Props) {
     [p.locaisDaCidade],
   );
 
-  // as quatro divisões do IBGE presentes na malha da UF
+  // regiões intermediárias, imediatas e metropolitanas (IBGE) presentes na malha da UF
   const opcoesRegiao = useMemo(() => {
     if (!p.malha || !p.regioes || p.abr === 'br' || p.abr === 'exterior') return null;
     const { regioes, municipios } = p.regioes;
-    const por: Record<TipoRegiao, Set<string>> = { meso: new Set(), micro: new Set(), intermediaria: new Set(), imediata: new Set() };
+    const por: Record<TipoRegiao, Set<string>> = { meso: new Set(), micro: new Set(), intermediaria: new Set(), imediata: new Set(), metropolitana: new Set() };
     for (const f of p.malha.municipios.features) {
       for (const c of municipios[String((f.properties as { id?: string } | null)?.id ?? f.id)] ?? []) {
         const r = regioes[c];
@@ -118,10 +118,10 @@ function Filtros(p: Props) {
         if (r.pai && regioes[r.pai]) por[regioes[r.pai].tipo].add(r.pai);
       }
     }
-    if (!por.micro.size && !por.imediata.size) return null;
+    if (!por.imediata.size) return null;
     const nome = (c: string) => regioes[c]?.nome ?? c;
     const ord = (s: Set<string>) => [...s].sort((a, b) => nome(a).localeCompare(nome(b), 'pt-BR')).map((c) => ({ c, nome: nome(c) }));
-    return { mesos: ord(por.meso), micros: ord(por.micro), intermediarias: ord(por.intermediaria), imediatas: ord(por.imediata) };
+    return { intermediarias: ord(por.intermediaria), imediatas: ord(por.imediata), metropolitanas: ord(por.metropolitana) };
   }, [p.malha, p.regioes, p.abr]);
   // no Brasil: grandes regiões, uma ou várias (ex.: Sul e Sudeste)
   // no exterior: continentes e regiões do mundo, do mesmo jeito
@@ -195,18 +195,17 @@ function Filtros(p: Props) {
           <label htmlFor={idReg}>Região</label>
           <select id={idReg} className="select" value={p.regiaoSelecionada ?? ''} onChange={(e) => p.aoMudarRegiao(e.target.value || null)}>
             <option value="">Estado inteiro</option>
-            <optgroup label="Mesorregiões">
-              {opcoesRegiao.mesos.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
-            </optgroup>
-            <optgroup label="Microrregiões">
-              {opcoesRegiao.micros.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
-            </optgroup>
             <optgroup label="Regiões intermediárias">
               {opcoesRegiao.intermediarias.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
             </optgroup>
             <optgroup label="Regiões imediatas">
               {opcoesRegiao.imediatas.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
             </optgroup>
+            {opcoesRegiao.metropolitanas.length ? (
+              <optgroup label="Regiões metropolitanas">
+                {opcoesRegiao.metropolitanas.map((r) => <option key={r.c} value={r.c}>{r.nome}</option>)}
+              </optgroup>
+            ) : null}
           </select>
         </div>
       ) : null}
