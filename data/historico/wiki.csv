@@ -1,0 +1,118 @@
+ano;uf;cargo;de;nome;partido
+1947;ba;governador;MEDEIROS NETO;;PTB
+1947;pe;governador;PELÓPIDAS SILVEIRA;;ED
+1947;pe;governador;EURICO DE SOUZA LEÃO;;PR
+1950;al;governador;PST;Luís Campos Teixeira;
+1950;ma;governador;PSD;Saturnino Bello;
+1954;es;governador;EURICO DE AGUIAR SALLES;;PSP
+1954;ba;senador;ERNESTO SIMÕES FILHO;;PL
+1954;es;senador;ASDRÚBAL SOARES;;PR
+1954;pe;senador;JARBAS MARANHÃO;;PST
+1954;pe;senador;BARBOSA LIMA SOBRINHO;;PST
+1954;rj;senador;PAULO DA SILVA FERNANDES;;PTB
+1955;al;governador;UDN;Afrânio Lages;
+1958;sp;governador;PST;Auro de Moura Andrade;
+1960;al;governador;PSP;Abraão Moura;
+1960;al;governador;PDC;Silvestre Péricles;
+1960;al;governador;PTB;Ary Pitombo;
+1962;pe;governador;JOÃO CLEOFAS;;PR
+1962;es;senador;RAUL GIUBERTI;;PSP
+1962;es;senador;OLYMPIO JOSÉ DE ABREU;;PSD
+1962;pe;senador;MENDONÇA DE MELO;;PRT
+1965;al;governador;UDN;Rui Palmeira;
+1965;al;governador;PDC;Arnon de Melo;
+1965;al;governador;MTR;Geraldo Sampaio;
+1965;al;governador;PST;João Lins;
+1965;ma;governador;PDC;Costa Rodrigues;
+1965;ma;governador;PTB;Renato Archer;
+1982;ac;governador;PDS;Jorge Kalume;
+1982;ac;governador;PT;Nilson Mourão;
+1982;ac;governador;PTB;Natalino Brito Filho;
+1982;al;governador;PMDB;José Costa;
+1982;am;governador;PDS;Josué Filho;
+1982;am;governador;PT;Osvaldo Coelho;
+1982;am;governador;PTB;Plínio Coelho;
+1982;ba;governador;PMDB;Roberto Santos;
+1982;ba;governador;PT;Edival Passos;
+1982;ce;governador;PMDB;Mauro Benevides;
+1982;ce;governador;PT;Américo Barreira;
+1982;es;governador;PDS;Carlos von Schilgen;
+1982;es;governador;PT;Perly Cipriano;
+1982;es;governador;PDT;Osvaldo Mármore;
+1982;go;governador;PDS;Otávio Lage;
+1982;go;governador;PT;Athos Magno Costa e Silva;
+1982;go;governador;PDT;Paulo César Timm;
+1982;ma;governador;PDT;Reginaldo Carvalho de Sousa;
+1982;ma;governador;PT;Osvaldo de Alencar Rocha;
+1982;ma;governador;PTB;Cesário Coimbra;
+1982;mg;governador;PT;Sandra Starling;
+1982;mg;governador;PDT;Theotônio dos Santos;
+1982;ms;governador;PDS;José Elias Moreira;
+1982;ms;governador;PDT;Wilson Fadul;
+1982;ms;governador;PT;Antônio Carlos de Oliveira;
+1982;mt;governador;PMDB;Raimundo Pombo;
+1982;mt;governador;PDT;Anacleto Ciocari;
+1982;mt;governador;PT;João Antônio Cabral de Monlevade;
+1982;pa;governador;PDS;Oziel Carneiro;
+1982;pa;governador;PT;Hélio Vieira Dourado;
+1982;pa;governador;PTB;Mário Nazareno Machado Sampaio;
+1982;pb;governador;PMDB;Antônio Mariz;
+1982;pb;governador;PT;Francisco Derly Pereira;
+1982;pe;governador;PMDB;Marcos Freire;
+1982;pe;governador;PTB;Antônio Melo Costa;
+1982;pe;governador;PT;Manoel da Conceição Santos;
+1982;pi;governador;PMDB;Alberto Silva;
+1982;pi;governador;PT;José Ribamar dos Santos;
+1982;pr;governador;PDS;Saul Raiz;
+1982;pr;governador;PTB;Vilela de Magalhães;
+1982;pr;governador;PT;Edésio Passos;
+1982;pr;governador;PDT;Edson Sá;
+1982;rj;governador;PT;Lysâneas Maciel;
+1982;rn;governador;PMDB;Aluízio Alves;
+1982;rn;governador;PT;Rubens Manoel de Lemos;
+1982;rn;governador;PTB;Vicente Cabral de Brito;
+1982;rs;governador;PT;Olívio Dutra;
+1982;sc;governador;PMDB;Jaison Barreto;
+1982;sc;governador;PT;Eurides Mescolotto;
+1982;sc;governador;PDT;Lígia Doutel de Andrade;
+1982;sc;governador;PTB;Osmar Cunha;
+1982;se;governador;PMDB;Gilvan Rocha;
+1982;se;governador;PT;Marcélio Bomfim Rocha;
+1982;se;governador;PDT;Manoel Ferreira Santos;
+1982;sp;governador;LULA;Luiz Inácio Lula da Silva;
+1982;sp;governador;PDT;Rogê Ferreira;
+1986;ba;governador;PMB;Delma Gama;
+1986;ba;governador;PH;Agostinho Barbosa Rocha;
+1986;es;governador;PFL;Elcio Alvares;
+1986;es;governador;PT-PSB;Arlindo Villaschi Filho;
+1986;es;governador;PDT;Rubens Gomes;
+1986;ma;governador;PT;Delta Martins;
+1986;mg;governador;PDS;Murilo Badaró;
+1986;mg;governador;PT;Fernando Viana Cabral;
+1986;mg;governador;PS;Onaldo Janotti;
+1986;mg;governador;PSC;Vítor Nosseis;
+1986;mt;governador;FREDERICO CAMPOS;;PDS
+1986;rj;governador;PND;Wagner Cavalcanti;
+1986;se;governador;PMDB;José Carlos Teixeira;
+1986;se;governador;PT;Tânia Magno da Silva;
+1986;sp;governador;PH;Teotônio Simões;
+1986;ce;senador;CÉSAR CALS DE OLIVEIRA FILHO;;PDS
+1986;ce;senador;EDUARDO RÉGIS MONTE JUCÁ;;PSB
+1986;ce;senador;OLGA NUNES DA SILVA;;PL
+1986;pe;senador;IVAN MAURÍCIO;;PSB
+1986;pe;senador;JACOB TUMAJAN;;PDT
+1990;ac;governador;PMDB;Osmir Lima;
+1990;ac;governador;PL;Rubem Branquinho;
+1990;ac;governador;PSDB;Ressini Jarude;
+1990;ba;governador;PMN;Antônio Mendes Filho;
+1990;ro;governador;OLAVO GOMES PIRES;;PTB
+1990;ro;governador;OSWALDO PIANA FILHO;;PTR
+1990;sp;governador;PRP;Ademar de Barros Filho;
+1990;sp;governador;PLH;Sônia Ishikawa;
+1990;sp;governador;PST;Miguel Mendonça;
+1990;ma;senador;PDT;Wagner Lago;
+1990;pa;senador;HELIO VIEIRA DOURADO;;PSC
+1990;rn;senador;CARLOS ALBERTO DE SOUSA;;PDC
+1990;rn;senador;JOSE DE ANCHIETA FERREIRA LOPES;;PCdoB
+1954;pe;senador;NOVAES FILHO;;PL
+1974;sp;senador;FRANCO MONTORO;Orestes Quércia;MDB

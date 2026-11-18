@@ -9,6 +9,7 @@
  * o código da intermediária (4 dígitos) repete o de mesorregiões.
  * Saída: { regioes: { código: { tipo: 'micro' | 'meso' | 'imediata' | 'intermediaria', nome, uf, pai? } },
  *          municipios: { ibge: [micro, imediata] } }   (meso e intermediária são o `pai`)
+ *   e regiões metropolitanas (data/ibge/regioes-metropolitanas.csv, IBGE): municipios[ibge][2] = rm{id}
  * Uso: node scripts/regioes.mjs
  */
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -31,6 +32,20 @@ for (const l of linhas) {
   regioes[`im${ime}`] ??= { tipo: 'imediata', nome: nomeIme, uf, pai: `in${int}` };
   municipios[ibge] = [micro, `im${ime}`];
 }
+// regiões metropolitanas (IBGE, API de localidades; extraída em 2026 pelo projeto gisbr): código rm{id}.
+// Colares, entornos e áreas de expansão sem nome próprio levam o nome da RM de mesmo prefixo.
+const rms = readFileSync('data/ibge/regioes-metropolitanas.csv', 'utf8').split(/\r?\n/).filter((l) => l && !l.startsWith('#')).slice(1).map((l) => l.split(';'));
+const nomeRm = {};
+for (const [id, nome] of rms) if (/^Região Metropolitana/.test(nome)) nomeRm[id.slice(0, 4)] ??= nome;
+for (const [id, nome, uf, ibge] of rms) {
+  let n = nome;
+  if (!/^Região Metropolitana/.test(nome) && !nome.replace(/^(Colar|Entorno|Área de Expansão) Metropolitan[ao]\s*/, '').trim()) {
+    const rm = nomeRm[id.slice(0, 4)];
+    if (rm) n = `${nome} (${rm.replace(/^Região Metropolitana/, 'RM')})`;
+  }
+  regioes[`rm${id}`] ??= { tipo: 'metropolitana', nome: n.replace(/^Região Metropolitana/, 'RM'), uf: uf.toLowerCase() };
+  if (municipios[ibge]) municipios[ibge][2] = `rm${id}`;
+}
 writeFileSync('public/geo/regioes.json', JSON.stringify({ regioes, municipios }));
 const n = (t) => Object.values(regioes).filter((r) => r.tipo === t).length;
-console.log(`regioes.json: ${n('micro')} micro, ${n('meso')} meso, ${n('imediata')} imediatas, ${n('intermediaria')} intermediárias, ${Object.keys(municipios).length} municípios`);
+console.log(`regioes.json: ${n('metropolitana')} metropolitanas, ${n('micro')} micro, ${n('meso')} meso, ${n('imediata')} imediatas, ${n('intermediaria')} intermediárias, ${Object.keys(municipios).length} municípios`);
