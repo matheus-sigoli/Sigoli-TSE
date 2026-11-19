@@ -104,9 +104,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1966, titulo: 'Eleições 1966', datas: '15 de novembro',
-    cargos: 'Senador e Deputado Federal (CE e RS) e Deputado Estadual (CE)', disponivel: true, rota: '/1966/ce/senador', semLocais: true, semZonas: true,
+    cargos: 'Senador (CE, PR e RS), Deputado Federal (CE e RS) e Deputado Estadual (CE)', disponivel: true, rota: '/1966/ce/senador', semLocais: true, semZonas: true,
     soCargos: ['senador', 'deputado-federal', 'deputado-estadual'],
-    fonte: 'TRE-RS e TRE-CE (por município)',
+    fonte: 'TRE-RS, TRE-CE e TRE-PR (por município)',
   },
   {
     ano: 1965, titulo: 'Eleições 1965', datas: '3 de outubro',

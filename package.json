@@ -20,7 +20,9 @@
     "bairros": "node --max-old-space-size=6144 scripts/bairros.mjs",
     "areas": "node --max-old-space-size=6144 scripts/areas-locais.mjs --de locais/saida_sigoli",
     "zonas": "node --max-old-space-size=6144 scripts/zonas-locais.mjs --baixar",
-    "pintam": "node scripts/pintam.mjs"
+    "pintam": "node scripts/pintam.mjs",
+    "build:cloudflare": "next build && rm -rf out/data",
+    "build:dados": "rm -rf dist-dados && mkdir -p dist-dados && cp -r public/data dist-dados/data && cp cloudflare/dados-headers dist-dados/_headers"
   },
   "dependencies": {
     "lottie-web": "5.13.0",

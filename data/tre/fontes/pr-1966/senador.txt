@@ -1,0 +1,355 @@
+# TRE-PR, eleições de 15/11/1966, Senador por zona e município (PDF do acervo PR 1966.pdf, p. 20-27)
+# municipio;maculan(MDB);ney_braga(ARENA);afonso_camargo(MDB); "=" = total da zona (conferência)
+Curitiba;6089;20711;5063
+Curitiba;7899;20404;4629
+Rio Branco do Sul;1317;1107;214
+=;9216;21511;4843
+Curitiba;12198;22427;5157
+Piraquara;1003;2163;222
+Campina Grande do Sul;323;588;202
+Quatro Barras;260;554;84
+=;13784;25732;5665
+Curitiba;9028;23652;5905
+Paranaguá;5034;7380;769
+Guaraqueçaba;251;595;77
+=;5285;7975;846
+Antonina;1020;2400;157
+Cerro Azul;585;915;80
+São José dos Pinhais;1412;4171;1409
+Agudos do Sul;300;956;225
+Guaratuba;296;1425;344
+Mandirituba;611;1261;306
+Tijucas do Sul;349;1053;227
+=;2968;8866;2511
+Campo Largo;1426;4710;1023
+Balsa Nova;350;863;141
+=;1776;5573;1164
+Lapa;1269;5146;577
+Contenda;343;1436;187
+Antônio Olinto;287;761;92
+=;1899;7343;856
+Rio Negro;845;3248;560
+Campo do Tenente;132;665;61
+Quitandinha;361;1360;235
+Piên;284;733;247
+=;1622;6006;1103
+São Mateus do Sul;1018;3141;633
+Palmeira;1636;3416;887
+Porto Amazonas;397;1081;150
+=;2033;4497;1037
+Ponta Grossa;4234;8332;1940
+Ponta Grossa;3880;8410;1891
+Castro;1506;4393;691
+Tibagi;752;1618;146
+Ortigueira;507;1202;119
+Telêmaco Borba;3126;3250;275
+=;4385;6070;540
+Jaguariaíva;949;1591;117
+Arapoti;635;878;160
+=;1584;2469;277
+Tomazina;801;2024;246
+Pinhalão;492;870;78
+Jaboti;184;607;37
+=;1477;3501;361
+Wenceslau Braz;1407;1225;142
+São José da Boa Vista;223;768;48
+Santana do Itararé;149;526;59
+=;1779;2519;249
+Siqueira Campos;869;3037;315
+Salto do Itararé;264;987;73
+=;1133;4024;388
+Santo Antônio da Platina;1211;2791;548
+Ribeirão Claro;432;1845;673
+Jacarezinho;2127;5047;548
+Barra do Jacaré;131;396;30
+=;2258;5443;578
+Cambará;1237;4592;263
+Cornélio Procópio;2316;6218;396
+Leópolis;555;1224;79
+Sertaneja;377;1120;49
+=;3248;8562;524
+Piraí do Sul;766;2451;443
+Apucarana;3924;5871;1399
+Borrazópolis;845;1473;118
+Cambira;596;1382;91
+=;5365;8726;1608
+Imbituva;898;3082;490
+Prudentópolis;1401;3469;781
+Campo Mourão;1452;5590;703
+Mamborê;525;1651;164
+Iretama;162;610;36
+Roncador;119;1051;69
+Nova Cantu;167;736;239
+Janiópolis;469;1747;251
+Boa Esperança;189;848;46
+Barbosa Ferraz;299;1693;51
+Fênix;363;897;35
+=;3745;14823;1594
+Palmas;912;2254;487
+Mangueirinha;420;1461;61
+=;1332;3715;548
+União da Vitória;3251;4306;660
+Paula Freitas;344;604;35
+Porto Vitória;208;634;24
+Cruz Machado;514;1269;117
+General Carneiro;497;786;62
+Paulo Frontin;323;745;69
+Bituruna;562;1132;71
+=;5699;9476;1038
+Irati;1888;5913;1928
+Assaí;1217;3015;167
+São Sebastião da Amoreira;493;952;41
+Nova América da Colina;531;897;59
+=;2241;4864;267
+Ipiranga;451;1413;229
+Ivaí;424;1304;151
+=;875;2717;380
+Mallet;540;1510;344
+Pitanga;1478;3909;1023
+Palmital;342;1341;152
+=;1820;5250;1175
+Reserva;430;2533;269
+Cândido de Abreu;695;2036;131
+=;1125;4569;400
+Sertanópolis;1084;1980;99
+Londrina;4365;9821;719
+Londrina;4162;10181;668
+Guarapuava;3057;8835;2604
+Guarapuava;284;645;185
+Inácio Martins;284;786;165
+Pinhão;506;1362;363
+=;1074;2793;713
+Laranjeiras do Sul;1404;3741;603
+Guaraniaçu;884;1320;122
+=;2288;5061;725
+Foz do Iguaçu;856;2201;337
+Medianeira;756;3392;660
+Matelândia;686;2817;220
+São Miguel do Iguaçu;317;1520;79
+=;2615;9930;1296
+Clevelândia;871;1697;255
+Mariópolis;437;1040;201
+=;1308;2737;456
+Bocaiúva do Sul;826;1536;248
+Adrianópolis;262;1196;86
+=;1088;2732;334
+Colombo;1217;1894;298
+Almirante Tamandaré;1070;2068;512
+=;2287;3962;810
+Araucária;1442;2803;345
+Morretes;1260;1857;312
+São João do Triunfo;651;1289;365
+Teixeira Soares;539;1326;223
+Sengés;509;1235;100
+Joaquim Távora;938;1443;196
+Quatiguá;611;704;116
+Guapirama;165;243;38
+=;1714;2390;350
+Carlópolis;786;2197;341
+Andirá;751;2123;424
+Itambaracá;484;1046;263
+=;1235;3169;687
+Bandeirantes;1176;3309;551
+Santa Amélia;356;563;48
+Santa Mariana;1137;2260;174
+=;2669;6132;773
+Rolândia;2910;5986;280
+Mandaguari;1759;2743;155
+Arapongas;1839;7755;231
+Sabáudia;364;1350;46
+=;2203;9105;277
+Rebouças;707;1098;932
+Rio Azul;530;1456;289
+=;1237;2554;1221
+São Jerônimo da Serra;417;1451;76
+Sapopema;185;819;68
+Santa Cecília do Pavão;605;949;71
+Curiúva;696;1323;105
+=;1903;4542;320
+Jaguapitã;631;2506;142
+Guaraci;428;1563;49
+Centenário do Sul;648;1861;122
+Lupionópolis;500;976;39
+Cafeara;316;810;57
+=;2523;7716;409
+Porecatu;1065;2664;206
+Miraselva;275;707;30
+Florestópolis;341;1012;42
+=;1681;4383;278
+Maringá;6600;17133;805
+Ivatuba;465;1056;33
+Doutor Camargo;417;1056;63
+Paiçandu;721;1548;68
+Floresta;355;921;35
+=;8558;21714;1004
+Astorga;1055;3606;173
+Santa Fé;474;989;24
+Munhoz de Melo;334;817;21
+Flórida;184;791;19
+Iguaraçu;416;1069;35
+Lobato;363;759;26
+=;2826;8031;298
+Cascavel;2910;5964;690
+Catanduvas;551;924;102
+Formosa do Oeste;368;1686;65
+Corbélia;999;2020;119
+Capitão Leônidas Marques;938;1228;81
+=;5766;11822;1057
+Francisco Beltrão;2153;2753;389
+Marmeleiro;584;1145;145
+Renascença;389;1100;158
+Enéas Marques;543;1239;121
+Salto do Lontra;1355;2383;115
+=;5024;8620;928
+Jandaia do Sul;1434;2226;109
+Bom Sucesso;498;1145;56
+São Pedro do Ivaí;757;987;80
+Marumbi;387;1135;32
+Kaloré;458;947;65
+=;3534;6440;342
+Nova Esperança;2454;3809;163
+Uniflor;351;969;30
+Cruzeiro do Sul;224;578;24
+Atalaia;289;753;27
+Floraí;574;2091;54
+Presidente Castelo Branco;311;647;27
+=;4203;8847;325
+Paranavaí;2441;6286;1031
+Amaporã;268;1069;58
+Nova Aliança do Ivaí;94;359;26
+Tamboara;355;1645;93
+Guairaçá;353;1550;68
+Terra Rica;424;1826;63
+=;3935;12735;1339
+Pato Branco;2266;3595;574
+Itapejara d'Oeste;700;1064;143
+Dois Vizinhos;1466;2011;231
+Vitorino;371;949;88
+Verê;432;1571;43
+=;5235;9190;1079
+Peabiru;1047;1797;223
+Engenheiro Beltrão;594;1890;101
+Araruna;663;2181;148
+Terra Boa;1581;1968;67
+Quinta do Sol;348;639;36
+=;4233;8475;575
+Toledo;1201;5694;704
+Marechal Cândido Rondon;2106;5827;355
+Palotina;731;2842;232
+Assis Chateaubriand;379;2036;162
+=;4417;16399;1453
+Araruva;1290;1572;118
+Rio Bom;220;816;54
+Faxinal;1074;2174;94
+Califórnia;538;963;138
+=;3122;5525;404
+Bela Vista do Paraíso;1251;2534;173
+Alvorada do Sul;289;1269;49
+=;1540;3803;222
+Cambé;1721;3968;161
+Ibaiti;872;2916;129
+Japira;142;527;41
+=;1014;3443;170
+Ibiporã;1834;3065;195
+Marialva;1446;3546;318
+Itambé;795;1312;119
+=;2241;4858;437
+Ribeirão do Pinhal;466;2118;94
+Abatiá;328;933;69
+Jundiaí do Sul;205;1281;53
+Conselheiro Mairinck;361;1076;101
+=;1360;5408;317
+Santo Antônio do Sudoeste;1474;2364;123
+Realeza;835;1408;54
+Planalto;762;1541;97
+Ampére;885;1269;50
+Santa Izabel do Oeste;748;1925;68
+Capanema;881;2083;148
+Pérola d'Oeste;720;1856;58
+Barracão;565;1497;103
+Salgado Filho;243;1046;38
+=;7113;14989;739
+Uraí;1070;2064;116
+Rancho Alegre;447;1159;207
+Jataizinho;640;1222;78
+=;2157;4445;401
+Loanda;740;2500;156
+Porto Rico;169;412;23
+Santa Cruz de Monte Castelo;581;1177;103
+Querência do Norte;453;968;122
+São Pedro do Paraná;55;295;26
+=;1998;5352;430
+Cruzeiro do Oeste;692;3091;295
+Tuneiras do Oeste;502;1430;104
+Tapejara;463;1122;100
+=;1657;5643;499
+Alto Paraná;1040;2654;233
+São João do Caiuá;644;1056;65
+Santo Antônio do Caiuá;397;1181;51
+=;2081;4891;349
+Cianorte;3766;5249;363
+Jussara;1043;1138;64
+Rondon;984;3481;182
+Cidade Gaúcha;918;4272;336
+Guaporema;259;1418;85
+São Tomé;686;1152;99
+Japurá;763;1390;111
+=;8419;18100;1240
+Umuarama;1464;4999;355
+Icaraíma;516;1572;93
+Xambrê;1461;3905;299
+Maria Helena;335;1179;61
+Alto Piquiri;869;2656;171
+=;4645;14311;979
+Guaíra;755;2178;198
+Terra Roxa;464;2276;132
+=;1219;4454;330
+Paranacity;474;1480;59
+Inajá;260;1304;43
+Paranapoema;72;302;12
+Jardim Olinda;60;224;15
+=;866;3310;129
+Goioerê;909;2768;311
+Mariluz;170;1120;58
+Moreira Sales;285;1822;103
+=;1364;5710;472
+Ivaiporã;2147;4606;319
+Manoel Ribas;436;1217;91
+Jardim Alegre;962;1725;191
+São João do Ivaí;518;1353;58
+=;4063;8901;659
+Santa Isabel do Ivaí;1076;1613;149
+Planaltina do Paraná;189;868;36
+=;1265;2481;185
+Colorado;631;1644;83
+Santo Inácio;167;1049;106
+Itaguajé;326;814;46
+Santa Inês;305;900;54
+Nossa Senhora das Graças;352;854;45
+=;1781;5261;334
+Nova Londrina;629;1541;396
+Diamante do Norte;88;579;14
+Itaúna do Sul;276;391;43
+=;993;2511;453
+Iporã;1567;2836;196
+Ubiratã;952;2548;184
+Campina da Lagoa;572;1790;84
+=;1524;4338;268
+Congonhinhas;1015;2203;155
+Santo Antônio do Paraíso;310;679;34
+Nova Fátima;652;1757;140
+=;1977;4639;329
+Paraíso do Norte;697;1912;100
+São Carlos do Ivaí;271;1330;47
+Mirador;118;432;49
+=;1086;3674;196
+Coronel Vivida;1304;2415;155
+Mandaguaçu;945;2022;69
+Ourizona;400;783;20
+São Jorge do Ivaí;941;1621;77
+=;2286;4426;166
+Chopinzinho;874;2008;361
+São João;766;1121;226
+São Jorge d'Oeste;312;1192;114
+=;1952;4321;701
+Primeiro de Maio;767;1881;117

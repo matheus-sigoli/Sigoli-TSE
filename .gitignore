@@ -15,3 +15,4 @@ data/tre/fontes/pr/
 data/tre/fontes/tse/
 data/malhas-historicas/*/*.geojson.gz
 data/malhas-historicas/_saida/
+dist-dados/
