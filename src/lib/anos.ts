@@ -122,9 +122,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1960, titulo: 'Eleições 1960', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto AL, MG, PR e SC) e Presidente e Vice-Presidente (por enquanto só PR por município; total do Brasil oficial)', disponivel: true, rota: '/1960/mg/governador', semLocais: true, semZonas: true,
+    cargos: 'Presidente e Vice-Presidente (todo o Brasil, menos Amapá e Rio Branco) e Governador (por enquanto AL, MG, PR e SC)', disponivel: true, rota: '/1960/br/presidente', semLocais: true, semZonas: true,
     soCargos: ['presidente', 'vice-presidente', 'governador'],
-    fonte: 'TRE-MG, TRE-PR, TRE-SC e acervo Sigoli.TSE (por município); total do Brasil para Presidente e Vice pelo IBGE',
+    fonte: 'Acervo Sigoli.TSE (mapas de apuração de Presidente e Vice por município), TRE-MG, TRE-PR e TRE-SC (por município); total do Brasil pelo IBGE',
   },
   {
     ano: 1958, titulo: 'Eleições 1958', datas: '3 de outubro',
@@ -152,7 +152,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1947, titulo: 'Eleições 1947', datas: '19 de janeiro',
-    cargos: 'Governador (por enquanto BA, MG, PE, SC e SP; MG, PE e SC por zona eleitoral) e Senador (PE, por zona eleitoral)', disponivel: true, rota: '/1947/mg/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto BA, MG, PE, PR, SC e SP; MG, PE e SC por zona eleitoral) e Senador (PE, por zona eleitoral)', disponivel: true, rota: '/1947/mg/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador'],
     fonte: 'TRE-MG, TRE-PE e TRE-SC (por zona eleitoral), TRE-BA e acervo Sigoli.TSE (por município)',
   },

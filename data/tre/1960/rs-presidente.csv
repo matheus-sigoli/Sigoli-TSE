@@ -1,0 +1,1825 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+presidente;1;4314902;_JANIOQUADROS;JÂNIO QUADROS;PTN;77690;S
+presidente;1;4314902;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;57571;
+presidente;1;4314902;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;58198;
+presidente;1;4314902;#brancos;;;2913;
+presidente;1;4314902;#nulos;;;8463;
+presidente;1;4314902;#comparecimento;;;204835;
+vice-presidente;1;4314902;_JOAOGOULART;JOÃO GOULART;PTB;68223;S
+vice-presidente;1;4314902;_MILTONCAMPOS;MILTON CAMPOS;UDN;12374;
+vice-presidente;1;4314902;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;111683;
+vice-presidente;1;4314902;#brancos;;;4936;
+vice-presidente;1;4314902;#nulos;;;7619;
+vice-presidente;1;4314902;#comparecimento;;;204835;
+presidente;1;4308706;_JANIOQUADROS;JÂNIO QUADROS;PTN;1577;S
+presidente;1;4308706;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1078;
+presidente;1;4308706;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;568;
+presidente;1;4308706;#brancos;;;73;
+presidente;1;4308706;#nulos;;;88;
+presidente;1;4308706;#comparecimento;;;3384;
+vice-presidente;1;4308706;_JOAOGOULART;JOÃO GOULART;PTB;1179;S
+vice-presidente;1;4308706;_MILTONCAMPOS;MILTON CAMPOS;UDN;380;
+vice-presidente;1;4308706;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1538;
+vice-presidente;1;4308706;#brancos;;;239;
+vice-presidente;1;4308706;#nulos;;;48;
+vice-presidente;1;4308706;#comparecimento;;;3384;
+presidente;1;4300901;_JANIOQUADROS;JÂNIO QUADROS;PTN;1754;S
+presidente;1;4300901;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1041;
+presidente;1;4300901;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;544;
+presidente;1;4300901;#brancos;;;123;
+presidente;1;4300901;#nulos;;;136;
+presidente;1;4300901;#comparecimento;;;3598;
+vice-presidente;1;4300901;_JOAOGOULART;JOÃO GOULART;PTB;1071;S
+vice-presidente;1;4300901;_MILTONCAMPOS;MILTON CAMPOS;UDN;434;
+vice-presidente;1;4300901;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1790;
+vice-presidente;1;4300901;#brancos;;;209;
+vice-presidente;1;4300901;#nulos;;;94;
+vice-presidente;1;4300901;#comparecimento;;;3598;
+presidente;1;4307500;_JANIOQUADROS;JÂNIO QUADROS;PTN;2452;S
+presidente;1;4307500;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2175;
+presidente;1;4307500;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;359;
+presidente;1;4307500;#brancos;;;254;
+presidente;1;4307500;#nulos;;;212;
+presidente;1;4307500;#comparecimento;;;5452;
+vice-presidente;1;4307500;_JOAOGOULART;JOÃO GOULART;PTB;2265;S
+vice-presidente;1;4307500;_MILTONCAMPOS;MILTON CAMPOS;UDN;338;
+vice-presidente;1;4307500;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2245;
+vice-presidente;1;4307500;#brancos;;;457;
+vice-presidente;1;4307500;#nulos;;;147;
+vice-presidente;1;4307500;#comparecimento;;;5452;
+presidente;1;4300406;_JANIOQUADROS;JÂNIO QUADROS;PTN;6715;S
+presidente;1;4300406;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;7261;
+presidente;1;4300406;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;826;
+presidente;1;4300406;#brancos;;;229;
+presidente;1;4300406;#nulos;;;252;
+presidente;1;4300406;#comparecimento;;;15283;
+vice-presidente;1;4300406;_JOAOGOULART;JOÃO GOULART;PTB;7135;S
+vice-presidente;1;4300406;_MILTONCAMPOS;MILTON CAMPOS;UDN;4626;
+vice-presidente;1;4300406;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2926;
+vice-presidente;1;4300406;#brancos;;;415;
+vice-presidente;1;4300406;#nulos;;;181;
+vice-presidente;1;4300406;#comparecimento;;;15283;
+presidente;1;4300802;_JANIOQUADROS;JÂNIO QUADROS;PTN;1790;S
+presidente;1;4300802;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1088;
+presidente;1;4300802;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;253;
+presidente;1;4300802;#brancos;;;56;
+presidente;1;4300802;#nulos;;;55;
+presidente;1;4300802;#comparecimento;;;3242;
+vice-presidente;1;4300802;_JOAOGOULART;JOÃO GOULART;PTB;1124;S
+vice-presidente;1;4300802;_MILTONCAMPOS;MILTON CAMPOS;UDN;221;
+vice-presidente;1;4300802;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1748;
+vice-presidente;1;4300802;#brancos;;;95;
+vice-presidente;1;4300802;#nulos;;;54;
+vice-presidente;1;4300802;#comparecimento;;;3242;
+presidente;1;4301602;_JANIOQUADROS;JÂNIO QUADROS;PTN;6428;S
+presidente;1;4301602;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;9828;
+presidente;1;4301602;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1090;
+presidente;1;4301602;#brancos;;;554;
+presidente;1;4301602;#nulos;;;460;
+presidente;1;4301602;#comparecimento;;;18360;
+vice-presidente;1;4301602;_JOAOGOULART;JOÃO GOULART;PTB;9651;S
+vice-presidente;1;4301602;_MILTONCAMPOS;MILTON CAMPOS;UDN;3099;
+vice-presidente;1;4301602;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4407;
+vice-presidente;1;4301602;#brancos;;;877;
+vice-presidente;1;4301602;#nulos;;;326;
+vice-presidente;1;4301602;#comparecimento;;;18360;
+presidente;1;4311502;_JANIOQUADROS;JÂNIO QUADROS;PTN;1215;S
+presidente;1;4311502;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1004;
+presidente;1;4311502;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;131;
+presidente;1;4311502;#brancos;;;168;
+presidente;1;4311502;#nulos;;;90;
+presidente;1;4311502;#comparecimento;;;2608;
+vice-presidente;1;4311502;_JOAOGOULART;JOÃO GOULART;PTB;1016;S
+vice-presidente;1;4311502;_MILTONCAMPOS;MILTON CAMPOS;UDN;747;
+vice-presidente;1;4311502;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;528;
+vice-presidente;1;4311502;#brancos;;;243;
+vice-presidente;1;4311502;#nulos;;;74;
+vice-presidente;1;4311502;#comparecimento;;;2608;
+presidente;1;4302105;_JANIOQUADROS;JÂNIO QUADROS;PTN;4056;S
+presidente;1;4302105;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3557;
+presidente;1;4302105;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1269;
+presidente;1;4302105;#brancos;;;326;
+presidente;1;4302105;#nulos;;;360;
+presidente;1;4302105;#comparecimento;;;9568;
+vice-presidente;1;4302105;_JOAOGOULART;JOÃO GOULART;PTB;3637;S
+vice-presidente;1;4302105;_MILTONCAMPOS;MILTON CAMPOS;UDN;281;
+vice-presidente;1;4302105;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4946;
+vice-presidente;1;4302105;#brancos;;;358;
+vice-presidente;1;4302105;#nulos;;;346;
+vice-presidente;1;4302105;#comparecimento;;;9568;
+presidente;1;4308607;_JANIOQUADROS;JÂNIO QUADROS;PTN;3069;S
+presidente;1;4308607;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1972;
+presidente;1;4308607;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;377;
+presidente;1;4308607;#brancos;;;122;
+presidente;1;4308607;#nulos;;;183;
+presidente;1;4308607;#comparecimento;;;5723;
+vice-presidente;1;4308607;_JOAOGOULART;JOÃO GOULART;PTB;2077;S
+vice-presidente;1;4308607;_MILTONCAMPOS;MILTON CAMPOS;UDN;112;
+vice-presidente;1;4308607;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3212;
+vice-presidente;1;4308607;#brancos;;;148;
+vice-presidente;1;4308607;#nulos;;;174;
+vice-presidente;1;4308607;#comparecimento;;;5723;
+presidente;1;4304804;_JANIOQUADROS;JÂNIO QUADROS;PTN;1236;S
+presidente;1;4304804;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;740;
+presidente;1;4304804;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;74;
+presidente;1;4304804;#brancos;;;54;
+presidente;1;4304804;#nulos;;;83;
+presidente;1;4304804;#comparecimento;;;2187;
+vice-presidente;1;4304804;_JOAOGOULART;JOÃO GOULART;PTB;661;S
+vice-presidente;1;4304804;_MILTONCAMPOS;MILTON CAMPOS;UDN;89;
+vice-presidente;1;4304804;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1274;
+vice-presidente;1;4304804;#brancos;;;76;
+vice-presidente;1;4304804;#nulos;;;87;
+vice-presidente;1;4304804;#comparecimento;;;2187;
+presidente;1;4302808;_JANIOQUADROS;JÂNIO QUADROS;PTN;3992;S
+presidente;1;4302808;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2175;
+presidente;1;4302808;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;373;
+presidente;1;4302808;#brancos;;;294;
+presidente;1;4302808;#nulos;;;217;
+presidente;1;4302808;#comparecimento;;;7051;
+vice-presidente;1;4302808;_JOAOGOULART;JOÃO GOULART;PTB;2227;S
+vice-presidente;1;4302808;_MILTONCAMPOS;MILTON CAMPOS;UDN;2339;
+vice-presidente;1;4302808;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1834;
+vice-presidente;1;4302808;#brancos;;;483;
+vice-presidente;1;4302808;#nulos;;;168;
+vice-presidente;1;4302808;#comparecimento;;;7051;
+presidente;1;4303004;_JANIOQUADROS;JÂNIO QUADROS;PTN;6487;S
+presidente;1;4303004;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;6554;
+presidente;1;4303004;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;3817;
+presidente;1;4303004;#brancos;;;396;
+presidente;1;4303004;#nulos;;;454;
+presidente;1;4303004;#comparecimento;;;17708;
+vice-presidente;1;4303004;_JOAOGOULART;JOÃO GOULART;PTB;7350;S
+vice-presidente;1;4303004;_MILTONCAMPOS;MILTON CAMPOS;UDN;2344;
+vice-presidente;1;4303004;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;6927;
+vice-presidente;1;4303004;#brancos;;;759;
+vice-presidente;1;4303004;#nulos;;;328;
+vice-presidente;1;4303004;#comparecimento;;;17708;
+presidente;1;4315503;_JANIOQUADROS;JÂNIO QUADROS;PTN;1256;S
+presidente;1;4315503;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;802;
+presidente;1;4315503;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;350;
+presidente;1;4315503;#brancos;;;99;
+presidente;1;4315503;#nulos;;;96;
+presidente;1;4315503;#comparecimento;;;2603;
+vice-presidente;1;4315503;_JOAOGOULART;JOÃO GOULART;PTB;883;S
+vice-presidente;1;4315503;_MILTONCAMPOS;MILTON CAMPOS;UDN;232;
+vice-presidente;1;4315503;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1267;
+vice-presidente;1;4315503;#brancos;;;141;
+vice-presidente;1;4315503;#nulos;;;80;
+vice-presidente;1;4315503;#comparecimento;;;2603;
+presidente;1;4300109;_JANIOQUADROS;JÂNIO QUADROS;PTN;961;S
+presidente;1;4300109;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;506;
+presidente;1;4300109;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;813;
+presidente;1;4300109;#brancos;;;88;
+presidente;1;4300109;#nulos;;;111;
+presidente;1;4300109;#comparecimento;;;2479;
+vice-presidente;1;4300109;_JOAOGOULART;JOÃO GOULART;PTB;516;S
+vice-presidente;1;4300109;_MILTONCAMPOS;MILTON CAMPOS;UDN;227;
+vice-presidente;1;4300109;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1444;
+vice-presidente;1;4300109;#brancos;;;226;
+vice-presidente;1;4300109;#nulos;;;66;
+vice-presidente;1;4300109;#comparecimento;;;2479;
+presidente;1;4319505;_JANIOQUADROS;JÂNIO QUADROS;PTN;3288;S
+presidente;1;4319505;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2216;
+presidente;1;4319505;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1541;
+presidente;1;4319505;#brancos;;;184;
+presidente;1;4319505;#nulos;;;192;
+presidente;1;4319505;#comparecimento;;;7421;
+vice-presidente;1;4319505;_JOAOGOULART;JOÃO GOULART;PTB;2440;S
+vice-presidente;1;4319505;_MILTONCAMPOS;MILTON CAMPOS;UDN;299;
+vice-presidente;1;4319505;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4167;
+vice-presidente;1;4319505;#brancos;;;410;
+vice-presidente;1;4319505;#nulos;;;105;
+vice-presidente;1;4319505;#comparecimento;;;7421;
+presidente;1;4308102;_JANIOQUADROS;JÂNIO QUADROS;PTN;1847;S
+presidente;1;4308102;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1154;
+presidente;1;4308102;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;413;
+presidente;1;4308102;#brancos;;;97;
+presidente;1;4308102;#nulos;;;97;
+presidente;1;4308102;#comparecimento;;;3608;
+vice-presidente;1;4308102;_JOAOGOULART;JOÃO GOULART;PTB;1017;S
+vice-presidente;1;4308102;_MILTONCAMPOS;MILTON CAMPOS;UDN;147;
+vice-presidente;1;4308102;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2201;
+vice-presidente;1;4308102;#brancos;;;164;
+vice-presidente;1;4308102;#nulos;;;79;
+vice-presidente;1;4308102;#comparecimento;;;3608;
+presidente;1;4313201;_JANIOQUADROS;JÂNIO QUADROS;PTN;1685;S
+presidente;1;4313201;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;688;
+presidente;1;4313201;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;965;
+presidente;1;4313201;#brancos;;;88;
+presidente;1;4313201;#nulos;;;67;
+presidente;1;4313201;#comparecimento;;;3493;
+vice-presidente;1;4313201;_JOAOGOULART;JOÃO GOULART;PTB;782;S
+vice-presidente;1;4313201;_MILTONCAMPOS;MILTON CAMPOS;UDN;299;
+vice-presidente;1;4313201;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2156;
+vice-presidente;1;4313201;#brancos;;;215;
+vice-presidente;1;4313201;#nulos;;;41;
+vice-presidente;1;4313201;#comparecimento;;;3493;
+presidente;1;4303509;_JANIOQUADROS;JÂNIO QUADROS;PTN;4225;S
+presidente;1;4303509;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3580;
+presidente;1;4303509;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;679;
+presidente;1;4303509;#brancos;;;537;
+presidente;1;4303509;#nulos;;;342;
+presidente;1;4303509;#comparecimento;;;9363;
+vice-presidente;1;4303509;_JOAOGOULART;JOÃO GOULART;PTB;4016;S
+vice-presidente;1;4303509;_MILTONCAMPOS;MILTON CAMPOS;UDN;969;
+vice-presidente;1;4303509;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3410;
+vice-presidente;1;4303509;#brancos;;;654;
+vice-presidente;1;4303509;#nulos;;;314;
+vice-presidente;1;4303509;#comparecimento;;;9363;
+presidente;1;4304200;_JANIOQUADROS;JÂNIO QUADROS;PTN;2016;S
+presidente;1;4304200;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;997;
+presidente;1;4304200;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1011;
+presidente;1;4304200;#brancos;;;250;
+presidente;1;4304200;#nulos;;;218;
+presidente;1;4304200;#comparecimento;;;4492;
+vice-presidente;1;4304200;_JOAOGOULART;JOÃO GOULART;PTB;1226;S
+vice-presidente;1;4304200;_MILTONCAMPOS;MILTON CAMPOS;UDN;879;
+vice-presidente;1;4304200;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1829;
+vice-presidente;1;4304200;#brancos;;;410;
+vice-presidente;1;4304200;#nulos;;;148;
+vice-presidente;1;4304200;#comparecimento;;;4492;
+presidente;1;4304507;_JANIOQUADROS;JÂNIO QUADROS;PTN;5288;S
+presidente;1;4304507;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3858;
+presidente;1;4304507;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;669;
+presidente;1;4304507;#brancos;;;328;
+presidente;1;4304507;#nulos;;;246;
+presidente;1;4304507;#comparecimento;;;10389;
+vice-presidente;1;4304507;_JOAOGOULART;JOÃO GOULART;PTB;4117;S
+vice-presidente;1;4304507;_MILTONCAMPOS;MILTON CAMPOS;UDN;3918;
+vice-presidente;1;4304507;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1650;
+vice-presidente;1;4304507;#brancos;;;535;
+vice-presidente;1;4304507;#nulos;;;169;
+vice-presidente;1;4304507;#comparecimento;;;10389;
+presidente;1;4304705;_JANIOQUADROS;JÂNIO QUADROS;PTN;4389;S
+presidente;1;4304705;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3518;
+presidente;1;4304705;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1322;
+presidente;1;4304705;#brancos;;;268;
+presidente;1;4304705;#nulos;;;242;
+presidente;1;4304705;#comparecimento;;;9739;
+vice-presidente;1;4304705;_JOAOGOULART;JOÃO GOULART;PTB;3749;S
+vice-presidente;1;4304705;_MILTONCAMPOS;MILTON CAMPOS;UDN;878;
+vice-presidente;1;4304705;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4468;
+vice-presidente;1;4304705;#brancos;;;496;
+vice-presidente;1;4304705;#nulos;;;148;
+vice-presidente;1;4304705;#comparecimento;;;9739;
+presidente;1;4312658;_JANIOQUADROS;JÂNIO QUADROS;PTN;1707;S
+presidente;1;4312658;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1225;
+presidente;1;4312658;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;387;
+presidente;1;4312658;#brancos;;;98;
+presidente;1;4312658;#nulos;;;98;
+presidente;1;4312658;#comparecimento;;;3515;
+vice-presidente;1;4312658;_JOAOGOULART;JOÃO GOULART;PTB;1307;S
+vice-presidente;1;4312658;_MILTONCAMPOS;MILTON CAMPOS;UDN;320;
+vice-presidente;1;4312658;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1605;
+vice-presidente;1;4312658;#brancos;;;227;
+vice-presidente;1;4312658;#nulos;;;56;
+vice-presidente;1;4312658;#comparecimento;;;3515;
+presidente;1;4321006;_JANIOQUADROS;JÂNIO QUADROS;PTN;1931;S
+presidente;1;4321006;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1347;
+presidente;1;4321006;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;283;
+presidente;1;4321006;#brancos;;;123;
+presidente;1;4321006;#nulos;;;127;
+presidente;1;4321006;#comparecimento;;;3811;
+vice-presidente;1;4321006;_JOAOGOULART;JOÃO GOULART;PTB;1394;S
+vice-presidente;1;4321006;_MILTONCAMPOS;MILTON CAMPOS;UDN;343;
+vice-presidente;1;4321006;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1769;
+vice-presidente;1;4321006;#brancos;;;220;
+vice-presidente;1;4321006;#nulos;;;85;
+vice-presidente;1;4321006;#comparecimento;;;3811;
+presidente;1;4305108;_JANIOQUADROS;JÂNIO QUADROS;PTN;15012;S
+presidente;1;4305108;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;9867;
+presidente;1;4305108;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;5062;
+presidente;1;4305108;#brancos;;;597;
+presidente;1;4305108;#nulos;;;758;
+presidente;1;4305108;#comparecimento;;;31296;
+vice-presidente;1;4305108;_JOAOGOULART;JOÃO GOULART;PTB;10878;S
+vice-presidente;1;4305108;_MILTONCAMPOS;MILTON CAMPOS;UDN;2158;
+vice-presidente;1;4305108;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;16599;
+vice-presidente;1;4305108;#brancos;;;987;
+vice-presidente;1;4305108;#nulos;;;674;
+vice-presidente;1;4305108;#comparecimento;;;31296;
+presidente;1;4306106;_JANIOQUADROS;JÂNIO QUADROS;PTN;5628;S
+presidente;1;4306106;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;5930;
+presidente;1;4306106;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;940;
+presidente;1;4306106;#brancos;;;287;
+presidente;1;4306106;#nulos;;;258;
+presidente;1;4306106;#comparecimento;;;13043;
+vice-presidente;1;4306106;_JOAOGOULART;JOÃO GOULART;PTB;5928;S
+vice-presidente;1;4306106;_MILTONCAMPOS;MILTON CAMPOS;UDN;1880;
+vice-presidente;1;4306106;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4578;
+vice-presidente;1;4306106;#brancos;;;469;
+vice-presidente;1;4306106;#nulos;;;188;
+vice-presidente;1;4306106;#comparecimento;;;13043;
+presidente;1;4313904;_JANIOQUADROS;JÂNIO QUADROS;PTN;2159;S
+presidente;1;4313904;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1550;
+presidente;1;4313904;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;577;
+presidente;1;4313904;#brancos;;;218;
+presidente;1;4313904;#nulos;;;217;
+presidente;1;4313904;#comparecimento;;;4721;
+vice-presidente;1;4313904;_JOAOGOULART;JOÃO GOULART;PTB;1481;S
+vice-presidente;1;4313904;_MILTONCAMPOS;MILTON CAMPOS;UDN;475;
+vice-presidente;1;4313904;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2126;
+vice-presidente;1;4313904;#brancos;;;514;
+vice-presidente;1;4313904;#nulos;;;125;
+vice-presidente;1;4313904;#comparecimento;;;4721;
+presidente;1;4310009;_JANIOQUADROS;JÂNIO QUADROS;PTN;2299;S
+presidente;1;4310009;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1498;
+presidente;1;4310009;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;250;
+presidente;1;4310009;#brancos;;;71;
+presidente;1;4310009;#nulos;;;85;
+presidente;1;4310009;#comparecimento;;;4203;
+vice-presidente;1;4310009;_JOAOGOULART;JOÃO GOULART;PTB;1388;S
+vice-presidente;1;4310009;_MILTONCAMPOS;MILTON CAMPOS;UDN;1002;
+vice-presidente;1;4310009;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1631;
+vice-presidente;1;4310009;#brancos;;;134;
+vice-presidente;1;4310009;#nulos;;;48;
+vice-presidente;1;4310009;#comparecimento;;;4203;
+presidente;1;4316709;_JANIOQUADROS;JÂNIO QUADROS;PTN;996;S
+presidente;1;4316709;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1079;
+presidente;1;4316709;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;62;
+presidente;1;4316709;#brancos;;;75;
+presidente;1;4316709;#nulos;;;64;
+presidente;1;4316709;#comparecimento;;;2276;
+vice-presidente;1;4316709;_JOAOGOULART;JOÃO GOULART;PTB;1002;S
+vice-presidente;1;4316709;_MILTONCAMPOS;MILTON CAMPOS;UDN;444;
+vice-presidente;1;4316709;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;651;
+vice-presidente;1;4316709;#brancos;;;132;
+vice-presidente;1;4316709;#nulos;;;47;
+vice-presidente;1;4316709;#comparecimento;;;2276;
+presidente;1;4306601;_JANIOQUADROS;JÂNIO QUADROS;PTN;4653;S
+presidente;1;4306601;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3931;
+presidente;1;4306601;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;344;
+presidente;1;4306601;#brancos;;;226;
+presidente;1;4306601;#nulos;;;181;
+presidente;1;4306601;#comparecimento;;;9335;
+vice-presidente;1;4306601;_JOAOGOULART;JOÃO GOULART;PTB;4017;S
+vice-presidente;1;4306601;_MILTONCAMPOS;MILTON CAMPOS;UDN;2311;
+vice-presidente;1;4306601;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2569;
+vice-presidente;1;4306601;#brancos;;;272;
+vice-presidente;1;4306601;#nulos;;;166;
+vice-presidente;1;4306601;#comparecimento;;;9335;
+presidente;1;4306908;_JANIOQUADROS;JÂNIO QUADROS;PTN;3641;S
+presidente;1;4306908;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2469;
+presidente;1;4306908;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;396;
+presidente;1;4306908;#brancos;;;248;
+presidente;1;4306908;#nulos;;;311;
+presidente;1;4306908;#comparecimento;;;7065;
+vice-presidente;1;4306908;_JOAOGOULART;JOÃO GOULART;PTB;2700;S
+vice-presidente;1;4306908;_MILTONCAMPOS;MILTON CAMPOS;UDN;1583;
+vice-presidente;1;4306908;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2110;
+vice-presidente;1;4306908;#brancos;;;431;
+vice-presidente;1;4306908;#nulos;;;241;
+vice-presidente;1;4306908;#comparecimento;;;7065;
+presidente;1;4307005;_JANIOQUADROS;JÂNIO QUADROS;PTN;5781;S
+presidente;1;4307005;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;5029;
+presidente;1;4307005;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;3155;
+presidente;1;4307005;#brancos;;;321;
+presidente;1;4307005;#nulos;;;379;
+presidente;1;4307005;#comparecimento;;;14665;
+vice-presidente;1;4307005;_JOAOGOULART;JOÃO GOULART;PTB;5567;S
+vice-presidente;1;4307005;_MILTONCAMPOS;MILTON CAMPOS;UDN;1841;
+vice-presidente;1;4307005;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;6366;
+vice-presidente;1;4307005;#brancos;;;598;
+vice-presidente;1;4307005;#nulos;;;293;
+vice-presidente;1;4307005;#comparecimento;;;14665;
+presidente;1;4319703;_JANIOQUADROS;JÂNIO QUADROS;PTN;668;S
+presidente;1;4319703;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;835;
+presidente;1;4319703;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;114;
+presidente;1;4319703;#brancos;;;112;
+presidente;1;4319703;#nulos;;;74;
+presidente;1;4319703;#comparecimento;;;1803;
+vice-presidente;1;4319703;_JOAOGOULART;JOÃO GOULART;PTB;582;S
+vice-presidente;1;4319703;_MILTONCAMPOS;MILTON CAMPOS;UDN;442;
+vice-presidente;1;4319703;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;557;
+vice-presidente;1;4319703;#brancos;;;155;
+vice-presidente;1;4319703;#nulos;;;67;
+vice-presidente;1;4319703;#comparecimento;;;1803;
+presidente;1;4307203;_JANIOQUADROS;JÂNIO QUADROS;PTN;529;S
+presidente;1;4307203;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;506;
+presidente;1;4307203;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;178;
+presidente;1;4307203;#brancos;;;69;
+presidente;1;4307203;#nulos;;;49;
+presidente;1;4307203;#comparecimento;;;1331;
+vice-presidente;1;4307203;_JOAOGOULART;JOÃO GOULART;PTB;598;S
+vice-presidente;1;4307203;_MILTONCAMPOS;MILTON CAMPOS;UDN;123;
+vice-presidente;1;4307203;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;470;
+vice-presidente;1;4307203;#brancos;;;105;
+vice-presidente;1;4307203;#nulos;;;35;
+vice-presidente;1;4307203;#comparecimento;;;1331;
+presidente;1;4307807;_JANIOQUADROS;JÂNIO QUADROS;PTN;3552;S
+presidente;1;4307807;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1974;
+presidente;1;4307807;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1534;
+presidente;1;4307807;#brancos;;;241;
+presidente;1;4307807;#nulos;;;281;
+presidente;1;4307807;#comparecimento;;;7582;
+vice-presidente;1;4307807;_JOAOGOULART;JOÃO GOULART;PTB;2387;S
+vice-presidente;1;4307807;_MILTONCAMPOS;MILTON CAMPOS;UDN;464;
+vice-presidente;1;4307807;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4085;
+vice-presidente;1;4307807;#brancos;;;514;
+vice-presidente;1;4307807;#nulos;;;132;
+vice-presidente;1;4307807;#comparecimento;;;7582;
+presidente;1;4302402;_JANIOQUADROS;JÂNIO QUADROS;PTN;864;S
+presidente;1;4302402;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;628;
+presidente;1;4302402;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;154;
+presidente;1;4302402;#brancos;;;63;
+presidente;1;4302402;#nulos;;;50;
+presidente;1;4302402;#comparecimento;;;1759;
+vice-presidente;1;4302402;_JOAOGOULART;JOÃO GOULART;PTB;661;S
+vice-presidente;1;4302402;_MILTONCAMPOS;MILTON CAMPOS;UDN;272;
+vice-presidente;1;4302402;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;701;
+vice-presidente;1;4302402;#brancos;;;90;
+vice-presidente;1;4302402;#nulos;;;35;
+vice-presidente;1;4302402;#comparecimento;;;1759;
+presidente;1;4309407;_JANIOQUADROS;JÂNIO QUADROS;PTN;3106;S
+presidente;1;4309407;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3318;
+presidente;1;4309407;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;525;
+presidente;1;4309407;#brancos;;;210;
+presidente;1;4309407;#nulos;;;235;
+presidente;1;4309407;#comparecimento;;;7394;
+vice-presidente;1;4309407;_JOAOGOULART;JOÃO GOULART;PTB;3544;S
+vice-presidente;1;4309407;_MILTONCAMPOS;MILTON CAMPOS;UDN;205;
+vice-presidente;1;4309407;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3184;
+vice-presidente;1;4309407;#brancos;;;308;
+vice-presidente;1;4309407;#nulos;;;153;
+vice-presidente;1;4309407;#comparecimento;;;7394;
+presidente;1;4304903;_JANIOQUADROS;JÂNIO QUADROS;PTN;1585;S
+presidente;1;4304903;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1226;
+presidente;1;4304903;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;232;
+presidente;1;4304903;#brancos;;;102;
+presidente;1;4304903;#nulos;;;109;
+presidente;1;4304903;#comparecimento;;;3254;
+vice-presidente;1;4304903;_JOAOGOULART;JOÃO GOULART;PTB;1378;S
+vice-presidente;1;4304903;_MILTONCAMPOS;MILTON CAMPOS;UDN;233;
+vice-presidente;1;4304903;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1388;
+vice-presidente;1;4304903;#brancos;;;175;
+vice-presidente;1;4304903;#nulos;;;80;
+vice-presidente;1;4304903;#comparecimento;;;3254;
+presidente;1;4312609;_JANIOQUADROS;JÂNIO QUADROS;PTN;1050;S
+presidente;1;4312609;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;679;
+presidente;1;4312609;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;110;
+presidente;1;4312609;#brancos;;;92;
+presidente;1;4312609;#nulos;;;97;
+presidente;1;4312609;#comparecimento;;;2028;
+vice-presidente;1;4312609;_JOAOGOULART;JOÃO GOULART;PTB;716;S
+vice-presidente;1;4312609;_MILTONCAMPOS;MILTON CAMPOS;UDN;59;
+vice-presidente;1;4312609;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1044;
+vice-presidente;1;4312609;#brancos;;;152;
+vice-presidente;1;4312609;#nulos;;;57;
+vice-presidente;1;4312609;#comparecimento;;;2028;
+presidente;1;4320404;_JANIOQUADROS;JÂNIO QUADROS;PTN;797;S
+presidente;1;4320404;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;774;
+presidente;1;4320404;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;235;
+presidente;1;4320404;#brancos;;;33;
+presidente;1;4320404;#nulos;;;55;
+presidente;1;4320404;#comparecimento;;;1894;
+vice-presidente;1;4320404;_JOAOGOULART;JOÃO GOULART;PTB;781;S
+vice-presidente;1;4320404;_MILTONCAMPOS;MILTON CAMPOS;UDN;72;
+vice-presidente;1;4320404;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;941;
+vice-presidente;1;4320404;#brancos;;;80;
+vice-presidente;1;4320404;#nulos;;;20;
+vice-presidente;1;4320404;#comparecimento;;;1894;
+presidente;1;4310207;_JANIOQUADROS;JÂNIO QUADROS;PTN;6453;S
+presidente;1;4310207;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;5334;
+presidente;1;4310207;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1928;
+presidente;1;4310207;#brancos;;;306;
+presidente;1;4310207;#nulos;;;297;
+presidente;1;4310207;#comparecimento;;;14318;
+vice-presidente;1;4310207;_JOAOGOULART;JOÃO GOULART;PTB;5272;S
+vice-presidente;1;4310207;_MILTONCAMPOS;MILTON CAMPOS;UDN;823;
+vice-presidente;1;4310207;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;7507;
+vice-presidente;1;4310207;#brancos;;;496;
+vice-presidente;1;4310207;#nulos;;;220;
+vice-presidente;1;4310207;#comparecimento;;;14318;
+presidente;1;4317806;_JANIOQUADROS;JÂNIO QUADROS;PTN;1485;S
+presidente;1;4317806;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1207;
+presidente;1;4317806;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;257;
+presidente;1;4317806;#brancos;;;140;
+presidente;1;4317806;#nulos;;;164;
+presidente;1;4317806;#comparecimento;;;3253;
+vice-presidente;1;4317806;_JOAOGOULART;JOÃO GOULART;PTB;1325;S
+vice-presidente;1;4317806;_MILTONCAMPOS;MILTON CAMPOS;UDN;318;
+vice-presidente;1;4317806;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1221;
+vice-presidente;1;4317806;#brancos;;;269;
+vice-presidente;1;4317806;#nulos;;;120;
+vice-presidente;1;4317806;#comparecimento;;;3253;
+presidente;1;4310603;_JANIOQUADROS;JÂNIO QUADROS;PTN;2231;S
+presidente;1;4310603;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2082;
+presidente;1;4310603;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;192;
+presidente;1;4310603;#brancos;;;173;
+presidente;1;4310603;#nulos;;;100;
+presidente;1;4310603;#comparecimento;;;4778;
+vice-presidente;1;4310603;_JOAOGOULART;JOÃO GOULART;PTB;2156;S
+vice-presidente;1;4310603;_MILTONCAMPOS;MILTON CAMPOS;UDN;856;
+vice-presidente;1;4310603;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1533;
+vice-presidente;1;4310603;#brancos;;;148;
+vice-presidente;1;4310603;#nulos;;;85;
+vice-presidente;1;4310603;#comparecimento;;;4778;
+presidente;1;4311007;_JANIOQUADROS;JÂNIO QUADROS;PTN;2208;S
+presidente;1;4311007;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2540;
+presidente;1;4311007;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;383;
+presidente;1;4311007;#brancos;;;88;
+presidente;1;4311007;#nulos;;;90;
+presidente;1;4311007;#comparecimento;;;5309;
+vice-presidente;1;4311007;_JOAOGOULART;JOÃO GOULART;PTB;2522;S
+vice-presidente;1;4311007;_MILTONCAMPOS;MILTON CAMPOS;UDN;1213;
+vice-presidente;1;4311007;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1393;
+vice-presidente;1;4311007;#brancos;;;93;
+vice-presidente;1;4311007;#nulos;;;88;
+vice-presidente;1;4311007;#comparecimento;;;5309;
+presidente;1;4311106;_JANIOQUADROS;JÂNIO QUADROS;PTN;2297;S
+presidente;1;4311106;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1478;
+presidente;1;4311106;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;161;
+presidente;1;4311106;#brancos;;;179;
+presidente;1;4311106;#nulos;;;85;
+presidente;1;4311106;#comparecimento;;;4200;
+vice-presidente;1;4311106;_JOAOGOULART;JOÃO GOULART;PTB;1443;S
+vice-presidente;1;4311106;_MILTONCAMPOS;MILTON CAMPOS;UDN;1097;
+vice-presidente;1;4311106;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1414;
+vice-presidente;1;4311106;#brancos;;;144;
+vice-presidente;1;4311106;#nulos;;;102;
+vice-presidente;1;4311106;#comparecimento;;;4200;
+presidente;1;4311205;_JANIOQUADROS;JÂNIO QUADROS;PTN;2306;S
+presidente;1;4311205;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2042;
+presidente;1;4311205;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;283;
+presidente;1;4311205;#brancos;;;211;
+presidente;1;4311205;#nulos;;;163;
+presidente;1;4311205;#comparecimento;;;5005;
+vice-presidente;1;4311205;_JOAOGOULART;JOÃO GOULART;PTB;2021;S
+vice-presidente;1;4311205;_MILTONCAMPOS;MILTON CAMPOS;UDN;1089;
+vice-presidente;1;4311205;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1522;
+vice-presidente;1;4311205;#brancos;;;211;
+vice-presidente;1;4311205;#nulos;;;162;
+vice-presidente;1;4311205;#comparecimento;;;5005;
+presidente;1;4308003;_JANIOQUADROS;JÂNIO QUADROS;PTN;1662;S
+presidente;1;4308003;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;881;
+presidente;1;4308003;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;491;
+presidente;1;4308003;#brancos;;;151;
+presidente;1;4308003;#nulos;;;110;
+presidente;1;4308003;#comparecimento;;;3295;
+vice-presidente;1;4308003;_JOAOGOULART;JOÃO GOULART;PTB;805;S
+vice-presidente;1;4308003;_MILTONCAMPOS;MILTON CAMPOS;UDN;81;
+vice-presidente;1;4308003;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2159;
+vice-presidente;1;4308003;#brancos;;;130;
+vice-presidente;1;4308003;#nulos;;;120;
+vice-presidente;1;4308003;#comparecimento;;;3295;
+presidente;1;4313102;_JANIOQUADROS;JÂNIO QUADROS;PTN;774;S
+presidente;1;4313102;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;398;
+presidente;1;4313102;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;76;
+presidente;1;4313102;#brancos;;;36;
+presidente;1;4313102;#nulos;;;45;
+presidente;1;4313102;#comparecimento;;;1329;
+vice-presidente;1;4313102;_JOAOGOULART;JOÃO GOULART;PTB;335;S
+vice-presidente;1;4313102;_MILTONCAMPOS;MILTON CAMPOS;UDN;98;
+vice-presidente;1;4313102;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;822;
+vice-presidente;1;4313102;#brancos;;;35;
+vice-presidente;1;4313102;#nulos;;;39;
+vice-presidente;1;4313102;#comparecimento;;;1329;
+presidente;1;4311304;_JANIOQUADROS;JÂNIO QUADROS;PTN;3677;S
+presidente;1;4311304;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2401;
+presidente;1;4311304;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;883;
+presidente;1;4311304;#brancos;;;261;
+presidente;1;4311304;#nulos;;;338;
+presidente;1;4311304;#comparecimento;;;7560;
+vice-presidente;1;4311304;_JOAOGOULART;JOÃO GOULART;PTB;2680;S
+vice-presidente;1;4311304;_MILTONCAMPOS;MILTON CAMPOS;UDN;1122;
+vice-presidente;1;4311304;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3027;
+vice-presidente;1;4311304;#brancos;;;482;
+vice-presidente;1;4311304;#nulos;;;249;
+vice-presidente;1;4311304;#comparecimento;;;7560;
+presidente;1;4316600;_JANIOQUADROS;JÂNIO QUADROS;PTN;1956;S
+presidente;1;4316600;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1296;
+presidente;1;4316600;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;341;
+presidente;1;4316600;#brancos;;;99;
+presidente;1;4316600;#nulos;;;99;
+presidente;1;4316600;#comparecimento;;;3791;
+vice-presidente;1;4316600;_JOAOGOULART;JOÃO GOULART;PTB;1423;S
+vice-presidente;1;4316600;_MILTONCAMPOS;MILTON CAMPOS;UDN;386;
+vice-presidente;1;4316600;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1727;
+vice-presidente;1;4316600;#brancos;;;169;
+vice-presidente;1;4316600;#nulos;;;86;
+vice-presidente;1;4316600;#comparecimento;;;3791;
+presidente;1;4318606;_JANIOQUADROS;JÂNIO QUADROS;PTN;1138;S
+presidente;1;4318606;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;907;
+presidente;1;4318606;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;101;
+presidente;1;4318606;#brancos;;;102;
+presidente;1;4318606;#nulos;;;88;
+presidente;1;4318606;#comparecimento;;;2336;
+vice-presidente;1;4318606;_JOAOGOULART;JOÃO GOULART;PTB;932;S
+vice-presidente;1;4318606;_MILTONCAMPOS;MILTON CAMPOS;UDN;158;
+vice-presidente;1;4318606;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1006;
+vice-presidente;1;4318606;#brancos;;;145;
+vice-presidente;1;4318606;#nulos;;;95;
+vice-presidente;1;4318606;#comparecimento;;;2336;
+presidente;1;4311403;_JANIOQUADROS;JÂNIO QUADROS;PTN;6152;S
+presidente;1;4311403;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3698;
+presidente;1;4311403;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1039;
+presidente;1;4311403;#brancos;;;396;
+presidente;1;4311403;#nulos;;;671;
+presidente;1;4311403;#comparecimento;;;11956;
+vice-presidente;1;4311403;_JOAOGOULART;JOÃO GOULART;PTB;3909;S
+vice-presidente;1;4311403;_MILTONCAMPOS;MILTON CAMPOS;UDN;458;
+vice-presidente;1;4311403;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;6414;
+vice-presidente;1;4311403;#brancos;;;670;
+vice-presidente;1;4311403;#nulos;;;505;
+vice-presidente;1;4311403;#comparecimento;;;11956;
+presidente;1;4301008;_JANIOQUADROS;JÂNIO QUADROS;PTN;2834;S
+presidente;1;4301008;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1910;
+presidente;1;4301008;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;742;
+presidente;1;4301008;#brancos;;;186;
+presidente;1;4301008;#nulos;;;210;
+presidente;1;4301008;#comparecimento;;;5882;
+vice-presidente;1;4301008;_JOAOGOULART;JOÃO GOULART;PTB;2009;S
+vice-presidente;1;4301008;_MILTONCAMPOS;MILTON CAMPOS;UDN;431;
+vice-presidente;1;4301008;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2967;
+vice-presidente;1;4301008;#brancos;;;339;
+vice-presidente;1;4301008;#nulos;;;136;
+vice-presidente;1;4301008;#comparecimento;;;5882;
+presidente;1;4317103;_JANIOQUADROS;JÂNIO QUADROS;PTN;5701;S
+presidente;1;4317103;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;8438;
+presidente;1;4317103;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;986;
+presidente;1;4317103;#brancos;;;380;
+presidente;1;4317103;#nulos;;;368;
+presidente;1;4317103;#comparecimento;;;15873;
+vice-presidente;1;4317103;_JOAOGOULART;JOÃO GOULART;PTB;8384;S
+vice-presidente;1;4317103;_MILTONCAMPOS;MILTON CAMPOS;UDN;3604;
+vice-presidente;1;4317103;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3052;
+vice-presidente;1;4317103;#brancos;;;560;
+vice-presidente;1;4317103;#nulos;;;273;
+vice-presidente;1;4317103;#comparecimento;;;15873;
+presidente;1;4312401;_JANIOQUADROS;JÂNIO QUADROS;PTN;6234;S
+presidente;1;4312401;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3908;
+presidente;1;4312401;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;2608;
+presidente;1;4312401;#brancos;;;344;
+presidente;1;4312401;#nulos;;;366;
+presidente;1;4312401;#comparecimento;;;13460;
+vice-presidente;1;4312401;_JOAOGOULART;JOÃO GOULART;PTB;4125;S
+vice-presidente;1;4312401;_MILTONCAMPOS;MILTON CAMPOS;UDN;659;
+vice-presidente;1;4312401;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;7817;
+vice-presidente;1;4312401;#brancos;;;662;
+vice-presidente;1;4312401;#nulos;;;197;
+vice-presidente;1;4312401;#comparecimento;;;13460;
+presidente;1;4313706;_JANIOQUADROS;JÂNIO QUADROS;PTN;4074;S
+presidente;1;4313706;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3967;
+presidente;1;4313706;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;788;
+presidente;1;4313706;#brancos;;;385;
+presidente;1;4313706;#nulos;;;401;
+presidente;1;4313706;#comparecimento;;;9615;
+vice-presidente;1;4313706;_JOAOGOULART;JOÃO GOULART;PTB;4302;S
+vice-presidente;1;4313706;_MILTONCAMPOS;MILTON CAMPOS;UDN;1375;
+vice-presidente;1;4313706;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3021;
+vice-presidente;1;4313706;#brancos;;;623;
+vice-presidente;1;4313706;#nulos;;;294;
+vice-presidente;1;4313706;#comparecimento;;;9615;
+presidente;1;4305306;_JANIOQUADROS;JÂNIO QUADROS;PTN;927;S
+presidente;1;4305306;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;711;
+presidente;1;4305306;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;164;
+presidente;1;4305306;#brancos;;;79;
+presidente;1;4305306;#nulos;;;95;
+presidente;1;4305306;#comparecimento;;;1976;
+vice-presidente;1;4305306;_JOAOGOULART;JOÃO GOULART;PTB;769;S
+vice-presidente;1;4305306;_MILTONCAMPOS;MILTON CAMPOS;UDN;162;
+vice-presidente;1;4305306;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;787;
+vice-presidente;1;4305306;#brancos;;;217;
+vice-presidente;1;4305306;#nulos;;;41;
+vice-presidente;1;4305306;#comparecimento;;;1976;
+presidente;1;4320206;_JANIOQUADROS;JÂNIO QUADROS;PTN;1272;S
+presidente;1;4320206;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1067;
+presidente;1;4320206;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;360;
+presidente;1;4320206;#brancos;;;144;
+presidente;1;4320206;#nulos;;;158;
+presidente;1;4320206;#comparecimento;;;3001;
+vice-presidente;1;4320206;_JOAOGOULART;JOÃO GOULART;PTB;1234;S
+vice-presidente;1;4320206;_MILTONCAMPOS;MILTON CAMPOS;UDN;579;
+vice-presidente;1;4320206;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;828;
+vice-presidente;1;4320206;#brancos;;;274;
+vice-presidente;1;4320206;#nulos;;;86;
+vice-presidente;1;4320206;#comparecimento;;;3001;
+presidente;1;4314100;_JANIOQUADROS;JÂNIO QUADROS;PTN;8693;S
+presidente;1;4314100;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;7031;
+presidente;1;4314100;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;3957;
+presidente;1;4314100;#brancos;;;555;
+presidente;1;4314100;#nulos;;;680;
+presidente;1;4314100;#comparecimento;;;20916;
+vice-presidente;1;4314100;_JOAOGOULART;JOÃO GOULART;PTB;8022;S
+vice-presidente;1;4314100;_MILTONCAMPOS;MILTON CAMPOS;UDN;1817;
+vice-presidente;1;4314100;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;9609;
+vice-presidente;1;4314100;#brancos;;;880;
+vice-presidente;1;4314100;#nulos;;;588;
+vice-presidente;1;4314100;#comparecimento;;;20916;
+presidente;1;4314407;_JANIOQUADROS;JÂNIO QUADROS;PTN;13557;S
+presidente;1;4314407;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;11839;
+presidente;1;4314407;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;16203;
+presidente;1;4314407;#brancos;;;641;
+presidente;1;4314407;#nulos;;;799;
+presidente;1;4314407;#comparecimento;;;43039;
+vice-presidente;1;4314407;_JOAOGOULART;JOÃO GOULART;PTB;15628;S
+vice-presidente;1;4314407;_MILTONCAMPOS;MILTON CAMPOS;UDN;6488;
+vice-presidente;1;4314407;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;18963;
+vice-presidente;1;4314407;#brancos;;;1399;
+vice-presidente;1;4314407;#nulos;;;561;
+vice-presidente;1;4314407;#comparecimento;;;43039;
+presidente;1;4314209;_JANIOQUADROS;JÂNIO QUADROS;PTN;1006;S
+presidente;1;4314209;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;945;
+presidente;1;4314209;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;561;
+presidente;1;4314209;#brancos;;;61;
+presidente;1;4314209;#nulos;;;79;
+presidente;1;4314209;#comparecimento;;;2652;
+vice-presidente;1;4314209;_JOAOGOULART;JOÃO GOULART;PTB;1191;S
+vice-presidente;1;4314209;_MILTONCAMPOS;MILTON CAMPOS;UDN;546;
+vice-presidente;1;4314209;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;725;
+vice-presidente;1;4314209;#brancos;;;145;
+vice-presidente;1;4314209;#nulos;;;45;
+vice-presidente;1;4314209;#comparecimento;;;2652;
+presidente;1;4314506;_JANIOQUADROS;JÂNIO QUADROS;PTN;1292;S
+presidente;1;4314506;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;941;
+presidente;1;4314506;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;97;
+presidente;1;4314506;#brancos;;;77;
+presidente;1;4314506;#nulos;;;153;
+presidente;1;4314506;#comparecimento;;;2560;
+vice-presidente;1;4314506;_JOAOGOULART;JOÃO GOULART;PTB;978;S
+vice-presidente;1;4314506;_MILTONCAMPOS;MILTON CAMPOS;UDN;1071;
+vice-presidente;1;4314506;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;253;
+vice-presidente;1;4314506;#brancos;;;101;
+vice-presidente;1;4314506;#nulos;;;157;
+vice-presidente;1;4314506;#comparecimento;;;2560;
+presidente;1;4315305;_JANIOQUADROS;JÂNIO QUADROS;PTN;2392;S
+presidente;1;4315305;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2318;
+presidente;1;4315305;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;264;
+presidente;1;4315305;#brancos;;;111;
+presidente;1;4315305;#nulos;;;132;
+presidente;1;4315305;#comparecimento;;;5217;
+vice-presidente;1;4315305;_JOAOGOULART;JOÃO GOULART;PTB;2319;S
+vice-presidente;1;4315305;_MILTONCAMPOS;MILTON CAMPOS;UDN;1164;
+vice-presidente;1;4315305;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1450;
+vice-presidente;1;4315305;#brancos;;;205;
+vice-presidente;1;4315305;#nulos;;;79;
+vice-presidente;1;4315305;#comparecimento;;;5217;
+presidente;1;4315602;_JANIOQUADROS;JÂNIO QUADROS;PTN;6623;S
+presidente;1;4315602;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;10189;
+presidente;1;4315602;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;9173;
+presidente;1;4315602;#brancos;;;487;
+presidente;1;4315602;#nulos;;;839;
+presidente;1;4315602;#comparecimento;;;27311;
+vice-presidente;1;4315602;_JOAOGOULART;JOÃO GOULART;PTB;10652;S
+vice-presidente;1;4315602;_MILTONCAMPOS;MILTON CAMPOS;UDN;1617;
+vice-presidente;1;4315602;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;13347;
+vice-presidente;1;4315602;#brancos;;;1006;
+vice-presidente;1;4315602;#nulos;;;689;
+vice-presidente;1;4315602;#comparecimento;;;27311;
+presidente;1;4318507;_JANIOQUADROS;JÂNIO QUADROS;PTN;1819;S
+presidente;1;4318507;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1467;
+presidente;1;4318507;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;816;
+presidente;1;4318507;#brancos;;;164;
+presidente;1;4318507;#nulos;;;240;
+presidente;1;4318507;#comparecimento;;;4506;
+vice-presidente;1;4318507;_JOAOGOULART;JOÃO GOULART;PTB;1741;S
+vice-presidente;1;4318507;_MILTONCAMPOS;MILTON CAMPOS;UDN;599;
+vice-presidente;1;4318507;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1624;
+vice-presidente;1;4318507;#brancos;;;384;
+vice-presidente;1;4318507;#nulos;;;158;
+vice-presidente;1;4318507;#comparecimento;;;4506;
+presidente;1;4315701;_JANIOQUADROS;JÂNIO QUADROS;PTN;3514;S
+presidente;1;4315701;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3062;
+presidente;1;4315701;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1656;
+presidente;1;4315701;#brancos;;;439;
+presidente;1;4315701;#nulos;;;475;
+presidente;1;4315701;#comparecimento;;;9146;
+vice-presidente;1;4315701;_JOAOGOULART;JOÃO GOULART;PTB;3542;S
+vice-presidente;1;4315701;_MILTONCAMPOS;MILTON CAMPOS;UDN;874;
+vice-presidente;1;4315701;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3487;
+vice-presidente;1;4315701;#brancos;;;894;
+vice-presidente;1;4315701;#nulos;;;349;
+vice-presidente;1;4315701;#comparecimento;;;9146;
+presidente;1;4316402;_JANIOQUADROS;JÂNIO QUADROS;PTN;2681;S
+presidente;1;4316402;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2924;
+presidente;1;4316402;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;305;
+presidente;1;4316402;#brancos;;;202;
+presidente;1;4316402;#nulos;;;148;
+presidente;1;4316402;#comparecimento;;;6260;
+vice-presidente;1;4316402;_JOAOGOULART;JOÃO GOULART;PTB;3039;S
+vice-presidente;1;4316402;_MILTONCAMPOS;MILTON CAMPOS;UDN;961;
+vice-presidente;1;4316402;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1868;
+vice-presidente;1;4316402;#brancos;;;268;
+vice-presidente;1;4316402;#nulos;;;124;
+vice-presidente;1;4316402;#comparecimento;;;6260;
+presidente;1;4316808;_JANIOQUADROS;JÂNIO QUADROS;PTN;8132;S
+presidente;1;4316808;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2945;
+presidente;1;4316808;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;3949;
+presidente;1;4316808;#brancos;;;343;
+presidente;1;4316808;#nulos;;;396;
+presidente;1;4316808;#comparecimento;;;15765;
+vice-presidente;1;4316808;_JOAOGOULART;JOÃO GOULART;PTB;3474;S
+vice-presidente;1;4316808;_MILTONCAMPOS;MILTON CAMPOS;UDN;1364;
+vice-presidente;1;4316808;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;9981;
+vice-presidente;1;4316808;#brancos;;;713;
+vice-presidente;1;4316808;#nulos;;;233;
+vice-presidente;1;4316808;#comparecimento;;;15765;
+presidente;1;4322608;_JANIOQUADROS;JÂNIO QUADROS;PTN;3159;S
+presidente;1;4322608;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2079;
+presidente;1;4322608;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1069;
+presidente;1;4322608;#brancos;;;249;
+presidente;1;4322608;#nulos;;;278;
+presidente;1;4322608;#comparecimento;;;6834;
+vice-presidente;1;4322608;_JOAOGOULART;JOÃO GOULART;PTB;2158;S
+vice-presidente;1;4322608;_MILTONCAMPOS;MILTON CAMPOS;UDN;439;
+vice-presidente;1;4322608;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3560;
+vice-presidente;1;4322608;#brancos;;;526;
+vice-presidente;1;4322608;#nulos;;;151;
+vice-presidente;1;4322608;#comparecimento;;;6834;
+presidente;1;4322707;_JANIOQUADROS;JÂNIO QUADROS;PTN;1215;S
+presidente;1;4322707;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;304;
+presidente;1;4322707;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;381;
+presidente;1;4322707;#brancos;;;67;
+presidente;1;4322707;#nulos;;;59;
+presidente;1;4322707;#comparecimento;;;2026;
+vice-presidente;1;4322707;_JOAOGOULART;JOÃO GOULART;PTB;391;S
+vice-presidente;1;4322707;_MILTONCAMPOS;MILTON CAMPOS;UDN;221;
+vice-presidente;1;4322707;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1243;
+vice-presidente;1;4322707;#brancos;;;130;
+vice-presidente;1;4322707;#nulos;;;41;
+vice-presidente;1;4322707;#comparecimento;;;2026;
+presidente;1;4316907;_JANIOQUADROS;JÂNIO QUADROS;PTN;11624;S
+presidente;1;4316907;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;12296;
+presidente;1;4316907;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;4702;
+presidente;1;4316907;#brancos;;;438;
+presidente;1;4316907;#nulos;;;527;
+presidente;1;4316907;#comparecimento;;;29587;
+vice-presidente;1;4316907;_JOAOGOULART;JOÃO GOULART;PTB;12611;S
+vice-presidente;1;4316907;_MILTONCAMPOS;MILTON CAMPOS;UDN;1499;
+vice-presidente;1;4316907;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;14452;
+vice-presidente;1;4316907;#brancos;;;516;
+vice-presidente;1;4316907;#nulos;;;509;
+vice-presidente;1;4316907;#comparecimento;;;29587;
+presidente;1;4317202;_JANIOQUADROS;JÂNIO QUADROS;PTN;3589;S
+presidente;1;4317202;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2900;
+presidente;1;4317202;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1752;
+presidente;1;4317202;#brancos;;;236;
+presidente;1;4317202;#nulos;;;281;
+presidente;1;4317202;#comparecimento;;;8758;
+vice-presidente;1;4317202;_JOAOGOULART;JOÃO GOULART;PTB;3123;S
+vice-presidente;1;4317202;_MILTONCAMPOS;MILTON CAMPOS;UDN;440;
+vice-presidente;1;4317202;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4546;
+vice-presidente;1;4317202;#brancos;;;493;
+vice-presidente;1;4317202;#nulos;;;156;
+vice-presidente;1;4317202;#comparecimento;;;8758;
+presidente;1;4317905;_JANIOQUADROS;JÂNIO QUADROS;PTN;2257;S
+presidente;1;4317905;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1478;
+presidente;1;4317905;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;546;
+presidente;1;4317905;#brancos;;;147;
+presidente;1;4317905;#nulos;;;167;
+presidente;1;4317905;#comparecimento;;;4595;
+vice-presidente;1;4317905;_JOAOGOULART;JOÃO GOULART;PTB;1554;S
+vice-presidente;1;4317905;_MILTONCAMPOS;MILTON CAMPOS;UDN;198;
+vice-presidente;1;4317905;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2445;
+vice-presidente;1;4317905;#brancos;;;297;
+vice-presidente;1;4317905;#nulos;;;101;
+vice-presidente;1;4317905;#comparecimento;;;4595;
+presidente;1;4322301;_JANIOQUADROS;JÂNIO QUADROS;PTN;839;S
+presidente;1;4322301;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;917;
+presidente;1;4322301;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;449;
+presidente;1;4322301;#brancos;;;110;
+presidente;1;4322301;#nulos;;;113;
+presidente;1;4322301;#comparecimento;;;2428;
+vice-presidente;1;4322301;_JOAOGOULART;JOÃO GOULART;PTB;1042;S
+vice-presidente;1;4322301;_MILTONCAMPOS;MILTON CAMPOS;UDN;94;
+vice-presidente;1;4322301;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;988;
+vice-presidente;1;4322301;#brancos;;;214;
+vice-presidente;1;4322301;#nulos;;;90;
+vice-presidente;1;4322301;#comparecimento;;;2428;
+presidente;1;4315008;_JANIOQUADROS;JÂNIO QUADROS;PTN;652;S
+presidente;1;4315008;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;893;
+presidente;1;4315008;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;123;
+presidente;1;4315008;#brancos;;;80;
+presidente;1;4315008;#nulos;;;110;
+presidente;1;4315008;#comparecimento;;;1858;
+vice-presidente;1;4315008;_JOAOGOULART;JOÃO GOULART;PTB;950;S
+vice-presidente;1;4315008;_MILTONCAMPOS;MILTON CAMPOS;UDN;101;
+vice-presidente;1;4315008;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;588;
+vice-presidente;1;4315008;#brancos;;;140;
+vice-presidente;1;4315008;#nulos;;;79;
+vice-presidente;1;4315008;#comparecimento;;;1858;
+presidente;1;4317301;_JANIOQUADROS;JÂNIO QUADROS;PTN;2048;S
+presidente;1;4317301;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1475;
+presidente;1;4317301;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;293;
+presidente;1;4317301;#brancos;;;242;
+presidente;1;4317301;#nulos;;;125;
+presidente;1;4317301;#comparecimento;;;4183;
+vice-presidente;1;4317301;_JOAOGOULART;JOÃO GOULART;PTB;1385;S
+vice-presidente;1;4317301;_MILTONCAMPOS;MILTON CAMPOS;UDN;618;
+vice-presidente;1;4317301;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1864;
+vice-presidente;1;4317301;#brancos;;;183;
+vice-presidente;1;4317301;#nulos;;;133;
+vice-presidente;1;4317301;#comparecimento;;;4183;
+presidente;1;4317400;_JANIOQUADROS;JÂNIO QUADROS;PTN;5295;S
+presidente;1;4317400;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;4295;
+presidente;1;4317400;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;356;
+presidente;1;4317400;#brancos;;;260;
+presidente;1;4317400;#nulos;;;227;
+presidente;1;4317400;#comparecimento;;;10433;
+vice-presidente;1;4317400;_JOAOGOULART;JOÃO GOULART;PTB;4479;S
+vice-presidente;1;4317400;_MILTONCAMPOS;MILTON CAMPOS;UDN;2501;
+vice-presidente;1;4317400;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2934;
+vice-presidente;1;4317400;#brancos;;;341;
+vice-presidente;1;4317400;#nulos;;;178;
+vice-presidente;1;4317400;#comparecimento;;;10433;
+presidente;1;4317509;_JANIOQUADROS;JÂNIO QUADROS;PTN;7134;S
+presidente;1;4317509;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;7095;
+presidente;1;4317509;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1983;
+presidente;1;4317509;#brancos;;;330;
+presidente;1;4317509;#nulos;;;604;
+presidente;1;4317509;#comparecimento;;;17146;
+vice-presidente;1;4317509;_JOAOGOULART;JOÃO GOULART;PTB;7676;S
+vice-presidente;1;4317509;_MILTONCAMPOS;MILTON CAMPOS;UDN;1398;
+vice-presidente;1;4317509;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;6989;
+vice-presidente;1;4317509;#brancos;;;594;
+vice-presidente;1;4317509;#nulos;;;489;
+vice-presidente;1;4317509;#comparecimento;;;17146;
+presidente;1;4309001;_JANIOQUADROS;JÂNIO QUADROS;PTN;1511;S
+presidente;1;4309001;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1624;
+presidente;1;4309001;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;989;
+presidente;1;4309001;#brancos;;;204;
+presidente;1;4309001;#nulos;;;351;
+presidente;1;4309001;#comparecimento;;;4679;
+vice-presidente;1;4309001;_JOAOGOULART;JOÃO GOULART;PTB;1949;S
+vice-presidente;1;4309001;_MILTONCAMPOS;MILTON CAMPOS;UDN;299;
+vice-presidente;1;4309001;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1868;
+vice-presidente;1;4309001;#brancos;;;336;
+vice-presidente;1;4309001;#nulos;;;227;
+vice-presidente;1;4309001;#comparecimento;;;4679;
+presidente;1;4309506;_JANIOQUADROS;JÂNIO QUADROS;PTN;826;S
+presidente;1;4309506;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;636;
+presidente;1;4309506;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;165;
+presidente;1;4309506;#brancos;;;57;
+presidente;1;4309506;#nulos;;;143;
+presidente;1;4309506;#comparecimento;;;1827;
+vice-presidente;1;4309506;_JOAOGOULART;JOÃO GOULART;PTB;748;S
+vice-presidente;1;4309506;_MILTONCAMPOS;MILTON CAMPOS;UDN;71;
+vice-presidente;1;4309506;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;782;
+vice-presidente;1;4309506;#brancos;;;109;
+vice-presidente;1;4309506;#nulos;;;117;
+vice-presidente;1;4309506;#comparecimento;;;1827;
+presidente;1;4317608;_JANIOQUADROS;JÂNIO QUADROS;PTN;5056;S
+presidente;1;4317608;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2909;
+presidente;1;4317608;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;847;
+presidente;1;4317608;#brancos;;;320;
+presidente;1;4317608;#nulos;;;303;
+presidente;1;4317608;#comparecimento;;;9435;
+vice-presidente;1;4317608;_JOAOGOULART;JOÃO GOULART;PTB;3239;S
+vice-presidente;1;4317608;_MILTONCAMPOS;MILTON CAMPOS;UDN;1390;
+vice-presidente;1;4317608;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3935;
+vice-presidente;1;4317608;#brancos;;;653;
+vice-presidente;1;4317608;#nulos;;;218;
+vice-presidente;1;4317608;#comparecimento;;;9435;
+presidente;1;4318002;_JANIOQUADROS;JÂNIO QUADROS;PTN;4734;S
+presidente;1;4318002;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;5319;
+presidente;1;4318002;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;467;
+presidente;1;4318002;#brancos;;;491;
+presidente;1;4318002;#nulos;;;191;
+presidente;1;4318002;#comparecimento;;;11202;
+vice-presidente;1;4318002;_JOAOGOULART;JOÃO GOULART;PTB;6353;S
+vice-presidente;1;4318002;_MILTONCAMPOS;MILTON CAMPOS;UDN;518;
+vice-presidente;1;4318002;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3779;
+vice-presidente;1;4318002;#brancos;;;335;
+vice-presidente;1;4318002;#nulos;;;217;
+vice-presidente;1;4318002;#comparecimento;;;11202;
+presidente;1;4318200;_JANIOQUADROS;JÂNIO QUADROS;PTN;3478;S
+presidente;1;4318200;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2526;
+presidente;1;4318200;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;897;
+presidente;1;4318200;#brancos;;;402;
+presidente;1;4318200;#nulos;;;261;
+presidente;1;4318200;#comparecimento;;;7564;
+vice-presidente;1;4318200;_JOAOGOULART;JOÃO GOULART;PTB;3013;S
+vice-presidente;1;4318200;_MILTONCAMPOS;MILTON CAMPOS;UDN;1226;
+vice-presidente;1;4318200;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2455;
+vice-presidente;1;4318200;#brancos;;;671;
+vice-presidente;1;4318200;#nulos;;;199;
+vice-presidente;1;4318200;#comparecimento;;;7564;
+presidente;1;4318309;_JANIOQUADROS;JÂNIO QUADROS;PTN;4320;S
+presidente;1;4318309;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;4203;
+presidente;1;4318309;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;494;
+presidente;1;4318309;#brancos;;;280;
+presidente;1;4318309;#nulos;;;247;
+presidente;1;4318309;#comparecimento;;;9544;
+vice-presidente;1;4318309;_JOAOGOULART;JOÃO GOULART;PTB;4185;S
+vice-presidente;1;4318309;_MILTONCAMPOS;MILTON CAMPOS;UDN;1958;
+vice-presidente;1;4318309;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2819;
+vice-presidente;1;4318309;#brancos;;;392;
+vice-presidente;1;4318309;#nulos;;;190;
+vice-presidente;1;4318309;#comparecimento;;;9544;
+presidente;1;4318408;_JANIOQUADROS;JÂNIO QUADROS;PTN;2865;S
+presidente;1;4318408;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3980;
+presidente;1;4318408;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1252;
+presidente;1;4318408;#brancos;;;457;
+presidente;1;4318408;#nulos;;;389;
+presidente;1;4318408;#comparecimento;;;8943;
+vice-presidente;1;4318408;_JOAOGOULART;JOÃO GOULART;PTB;4621;S
+vice-presidente;1;4318408;_MILTONCAMPOS;MILTON CAMPOS;UDN;464;
+vice-presidente;1;4318408;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2921;
+vice-presidente;1;4318408;#brancos;;;651;
+vice-presidente;1;4318408;#nulos;;;286;
+vice-presidente;1;4318408;#comparecimento;;;8943;
+presidente;1;4308805;_JANIOQUADROS;JÂNIO QUADROS;PTN;1082;S
+presidente;1;4308805;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;819;
+presidente;1;4308805;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;437;
+presidente;1;4308805;#brancos;;;93;
+presidente;1;4308805;#nulos;;;127;
+presidente;1;4308805;#comparecimento;;;2558;
+vice-presidente;1;4308805;_JOAOGOULART;JOÃO GOULART;PTB;982;S
+vice-presidente;1;4308805;_MILTONCAMPOS;MILTON CAMPOS;UDN;127;
+vice-presidente;1;4308805;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1151;
+vice-presidente;1;4308805;#brancos;;;222;
+vice-presidente;1;4308805;#nulos;;;76;
+vice-presidente;1;4308805;#comparecimento;;;2558;
+presidente;1;4322004;_JANIOQUADROS;JÂNIO QUADROS;PTN;1562;S
+presidente;1;4322004;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1001;
+presidente;1;4322004;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;272;
+presidente;1;4322004;#brancos;;;124;
+presidente;1;4322004;#nulos;;;120;
+presidente;1;4322004;#comparecimento;;;3079;
+vice-presidente;1;4322004;_JOAOGOULART;JOÃO GOULART;PTB;1063;S
+vice-presidente;1;4322004;_MILTONCAMPOS;MILTON CAMPOS;UDN;590;
+vice-presidente;1;4322004;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1130;
+vice-presidente;1;4322004;#brancos;;;220;
+vice-presidente;1;4322004;#nulos;;;76;
+vice-presidente;1;4322004;#comparecimento;;;3079;
+presidente;1;4318705;_JANIOQUADROS;JÂNIO QUADROS;PTN;6380;S
+presidente;1;4318705;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;4982;
+presidente;1;4318705;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;4615;
+presidente;1;4318705;#brancos;;;358;
+presidente;1;4318705;#nulos;;;477;
+presidente;1;4318705;#comparecimento;;;16812;
+vice-presidente;1;4318705;_JOAOGOULART;JOÃO GOULART;PTB;5666;S
+vice-presidente;1;4318705;_MILTONCAMPOS;MILTON CAMPOS;UDN;973;
+vice-presidente;1;4318705;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;9201;
+vice-presidente;1;4318705;#brancos;;;646;
+vice-presidente;1;4318705;#nulos;;;326;
+vice-presidente;1;4318705;#comparecimento;;;16812;
+presidente;1;4307708;_JANIOQUADROS;JÂNIO QUADROS;PTN;1480;S
+presidente;1;4307708;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1544;
+presidente;1;4307708;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;2458;
+presidente;1;4307708;#brancos;;;131;
+presidente;1;4307708;#nulos;;;224;
+presidente;1;4307708;#comparecimento;;;5837;
+vice-presidente;1;4307708;_JOAOGOULART;JOÃO GOULART;PTB;1930;S
+vice-presidente;1;4307708;_MILTONCAMPOS;MILTON CAMPOS;UDN;235;
+vice-presidente;1;4307708;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3228;
+vice-presidente;1;4307708;#brancos;;;293;
+vice-presidente;1;4307708;#nulos;;;151;
+vice-presidente;1;4307708;#comparecimento;;;5837;
+presidente;1;4306403;_JANIOQUADROS;JÂNIO QUADROS;PTN;2255;S
+presidente;1;4306403;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;388;
+presidente;1;4306403;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;649;
+presidente;1;4306403;#brancos;;;89;
+presidente;1;4306403;#nulos;;;76;
+presidente;1;4306403;#comparecimento;;;3457;
+vice-presidente;1;4306403;_JOAOGOULART;JOÃO GOULART;PTB;462;S
+vice-presidente;1;4306403;_MILTONCAMPOS;MILTON CAMPOS;UDN;381;
+vice-presidente;1;4306403;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2385;
+vice-presidente;1;4306403;#brancos;;;184;
+vice-presidente;1;4306403;#nulos;;;45;
+vice-presidente;1;4306403;#comparecimento;;;3457;
+presidente;1;4307609;_JANIOQUADROS;JÂNIO QUADROS;PTN;1477;S
+presidente;1;4307609;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1635;
+presidente;1;4307609;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;568;
+presidente;1;4307609;#brancos;;;77;
+presidente;1;4307609;#nulos;;;62;
+presidente;1;4307609;#comparecimento;;;3819;
+vice-presidente;1;4307609;_JOAOGOULART;JOÃO GOULART;PTB;1560;S
+vice-presidente;1;4307609;_MILTONCAMPOS;MILTON CAMPOS;UDN;163;
+vice-presidente;1;4307609;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1950;
+vice-presidente;1;4307609;#brancos;;;106;
+vice-presidente;1;4307609;#nulos;;;40;
+vice-presidente;1;4307609;#comparecimento;;;3819;
+presidente;1;4318903;_JANIOQUADROS;JÂNIO QUADROS;PTN;5381;S
+presidente;1;4318903;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;4384;
+presidente;1;4318903;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;487;
+presidente;1;4318903;#brancos;;;462;
+presidente;1;4318903;#nulos;;;480;
+presidente;1;4318903;#comparecimento;;;11194;
+vice-presidente;1;4318903;_JOAOGOULART;JOÃO GOULART;PTB;4988;S
+vice-presidente;1;4318903;_MILTONCAMPOS;MILTON CAMPOS;UDN;3153;
+vice-presidente;1;4318903;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2131;
+vice-presidente;1;4318903;#brancos;;;500;
+vice-presidente;1;4318903;#nulos;;;422;
+vice-presidente;1;4318903;#comparecimento;;;11194;
+presidente;1;4305207;_JANIOQUADROS;JÂNIO QUADROS;PTN;4441;S
+presidente;1;4305207;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2615;
+presidente;1;4305207;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;489;
+presidente;1;4305207;#brancos;;;267;
+presidente;1;4305207;#nulos;;;237;
+presidente;1;4305207;#comparecimento;;;8049;
+vice-presidente;1;4305207;_JOAOGOULART;JOÃO GOULART;PTB;2944;S
+vice-presidente;1;4305207;_MILTONCAMPOS;MILTON CAMPOS;UDN;935;
+vice-presidente;1;4305207;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3656;
+vice-presidente;1;4305207;#brancos;;;331;
+vice-presidente;1;4305207;#nulos;;;183;
+vice-presidente;1;4305207;#comparecimento;;;8049;
+presidente;1;4320701;_JANIOQUADROS;JÂNIO QUADROS;PTN;2679;S
+presidente;1;4320701;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1948;
+presidente;1;4320701;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;487;
+presidente;1;4320701;#brancos;;;131;
+presidente;1;4320701;#nulos;;;159;
+presidente;1;4320701;#comparecimento;;;5404;
+vice-presidente;1;4320701;_JOAOGOULART;JOÃO GOULART;PTB;1876;S
+vice-presidente;1;4320701;_MILTONCAMPOS;MILTON CAMPOS;UDN;423;
+vice-presidente;1;4320701;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2760;
+vice-presidente;1;4320701;#brancos;;;270;
+vice-presidente;1;4320701;#nulos;;;75;
+vice-presidente;1;4320701;#comparecimento;;;5404;
+presidente;1;4320800;_JANIOQUADROS;JÂNIO QUADROS;PTN;5108;S
+presidente;1;4320800;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;4141;
+presidente;1;4320800;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;775;
+presidente;1;4320800;#brancos;;;378;
+presidente;1;4320800;#nulos;;;331;
+presidente;1;4320800;#comparecimento;;;10733;
+vice-presidente;1;4320800;_JOAOGOULART;JOÃO GOULART;PTB;4522;S
+vice-presidente;1;4320800;_MILTONCAMPOS;MILTON CAMPOS;UDN;1420;
+vice-presidente;1;4320800;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3838;
+vice-presidente;1;4320800;#brancos;;;720;
+vice-presidente;1;4320800;#nulos;;;233;
+vice-presidente;1;4320800;#comparecimento;;;10733;
+presidente;1;4301404;_JANIOQUADROS;JÂNIO QUADROS;PTN;923;S
+presidente;1;4301404;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;457;
+presidente;1;4301404;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;234;
+presidente;1;4301404;#brancos;;;106;
+presidente;1;4301404;#nulos;;;97;
+presidente;1;4301404;#comparecimento;;;1817;
+vice-presidente;1;4301404;_JOAOGOULART;JOÃO GOULART;PTB;640;S
+vice-presidente;1;4301404;_MILTONCAMPOS;MILTON CAMPOS;UDN;87;
+vice-presidente;1;4301404;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;808;
+vice-presidente;1;4301404;#brancos;;;215;
+vice-presidente;1;4301404;#nulos;;;67;
+vice-presidente;1;4301404;#comparecimento;;;1817;
+presidente;1;4321204;_JANIOQUADROS;JÂNIO QUADROS;PTN;4062;S
+presidente;1;4321204;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2527;
+presidente;1;4321204;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1840;
+presidente;1;4321204;#brancos;;;201;
+presidente;1;4321204;#nulos;;;200;
+presidente;1;4321204;#comparecimento;;;8830;
+vice-presidente;1;4321204;_JOAOGOULART;JOÃO GOULART;PTB;2903;S
+vice-presidente;1;4321204;_MILTONCAMPOS;MILTON CAMPOS;UDN;1362;
+vice-presidente;1;4321204;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4008;
+vice-presidente;1;4321204;#brancos;;;414;
+vice-presidente;1;4321204;#nulos;;;143;
+vice-presidente;1;4321204;#comparecimento;;;8830;
+presidente;1;4316006;_JANIOQUADROS;JÂNIO QUADROS;PTN;1282;S
+presidente;1;4316006;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1090;
+presidente;1;4316006;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;473;
+presidente;1;4316006;#brancos;;;85;
+presidente;1;4316006;#nulos;;;96;
+presidente;1;4316006;#comparecimento;;;3026;
+vice-presidente;1;4316006;_JOAOGOULART;JOÃO GOULART;PTB;1099;S
+vice-presidente;1;4316006;_MILTONCAMPOS;MILTON CAMPOS;UDN;352;
+vice-presidente;1;4316006;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1327;
+vice-presidente;1;4316006;#brancos;;;185;
+vice-presidente;1;4316006;#nulos;;;63;
+vice-presidente;1;4316006;#comparecimento;;;3026;
+presidente;1;4321709;_JANIOQUADROS;JÂNIO QUADROS;PTN;631;S
+presidente;1;4321709;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;261;
+presidente;1;4321709;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;320;
+presidente;1;4321709;#brancos;;;52;
+presidente;1;4321709;#nulos;;;55;
+presidente;1;4321709;#comparecimento;;;1319;
+vice-presidente;1;4321709;_JOAOGOULART;JOÃO GOULART;PTB;291;S
+vice-presidente;1;4321709;_MILTONCAMPOS;MILTON CAMPOS;UDN;192;
+vice-presidente;1;4321709;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;715;
+vice-presidente;1;4321709;#brancos;;;92;
+vice-presidente;1;4321709;#nulos;;;29;
+vice-presidente;1;4321709;#comparecimento;;;1319;
+presidente;1;4321303;_JANIOQUADROS;JÂNIO QUADROS;PTN;2690;S
+presidente;1;4321303;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1882;
+presidente;1;4321303;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;396;
+presidente;1;4321303;#brancos;;;182;
+presidente;1;4321303;#nulos;;;166;
+presidente;1;4321303;#comparecimento;;;5316;
+vice-presidente;1;4321303;_JOAOGOULART;JOÃO GOULART;PTB;1920;S
+vice-presidente;1;4321303;_MILTONCAMPOS;MILTON CAMPOS;UDN;1428;
+vice-presidente;1;4321303;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1529;
+vice-presidente;1;4321303;#brancos;;;334;
+vice-presidente;1;4321303;#nulos;;;105;
+vice-presidente;1;4321303;#comparecimento;;;5316;
+presidente;1;4322400;_JANIOQUADROS;JÂNIO QUADROS;PTN;7217;S
+presidente;1;4322400;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;8439;
+presidente;1;4322400;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1871;
+presidente;1;4322400;#brancos;;;313;
+presidente;1;4322400;#nulos;;;374;
+presidente;1;4322400;#comparecimento;;;18214;
+vice-presidente;1;4322400;_JOAOGOULART;JOÃO GOULART;PTB;8281;S
+vice-presidente;1;4322400;_MILTONCAMPOS;MILTON CAMPOS;UDN;3211;
+vice-presidente;1;4322400;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;5975;
+vice-presidente;1;4322400;#brancos;;;423;
+vice-presidente;1;4322400;#nulos;;;324;
+vice-presidente;1;4322400;#comparecimento;;;18214;
+presidente;1;4322509;_JANIOQUADROS;JÂNIO QUADROS;PTN;6853;S
+presidente;1;4322509;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;5171;
+presidente;1;4322509;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;829;
+presidente;1;4322509;#brancos;;;357;
+presidente;1;4322509;#nulos;;;267;
+presidente;1;4322509;#comparecimento;;;13477;
+vice-presidente;1;4322509;_JOAOGOULART;JOÃO GOULART;PTB;5443;S
+vice-presidente;1;4322509;_MILTONCAMPOS;MILTON CAMPOS;UDN;3712;
+vice-presidente;1;4322509;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3609;
+vice-presidente;1;4322509;#brancos;;;517;
+vice-presidente;1;4322509;#nulos;;;196;
+vice-presidente;1;4322509;#comparecimento;;;13477;
+presidente;1;4323002;_JANIOQUADROS;JÂNIO QUADROS;PTN;4306;S
+presidente;1;4323002;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2700;
+presidente;1;4323002;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;2748;
+presidente;1;4323002;#brancos;;;267;
+presidente;1;4323002;#nulos;;;445;
+presidente;1;4323002;#comparecimento;;;10466;
+vice-presidente;1;4323002;_JOAOGOULART;JOÃO GOULART;PTB;3463;S
+vice-presidente;1;4323002;_MILTONCAMPOS;MILTON CAMPOS;UDN;928;
+vice-presidente;1;4323002;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;5140;
+vice-presidente;1;4323002;#brancos;;;640;
+vice-presidente;1;4323002;#nulos;;;295;
+vice-presidente;1;4323002;#comparecimento;;;10466;
+presidente;1;4307906;_JANIOQUADROS;JÂNIO QUADROS;PTN;2745;S
+presidente;1;4307906;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1925;
+presidente;1;4307906;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;514;
+presidente;1;4307906;#brancos;;;128;
+presidente;1;4307906;#nulos;;;116;
+presidente;1;4307906;#comparecimento;;;5428;
+vice-presidente;1;4307906;_JOAOGOULART;JOÃO GOULART;PTB;1945;S
+vice-presidente;1;4307906;_MILTONCAMPOS;MILTON CAMPOS;UDN;556;
+vice-presidente;1;4307906;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2633;
+vice-presidente;1;4307906;#brancos;;;210;
+vice-presidente;1;4307906;#nulos;;;84;
+vice-presidente;1;4307906;#comparecimento;;;5428;
+presidente;1;4311809;_JANIOQUADROS;JÂNIO QUADROS;PTN;3052;S
+presidente;1;4311809;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1057;
+presidente;1;4311809;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;391;
+presidente;1;4311809;#brancos;;;146;
+presidente;1;4311809;#nulos;;;167;
+presidente;1;4311809;#comparecimento;;;4813;
+vice-presidente;1;4311809;_JOAOGOULART;JOÃO GOULART;PTB;1241;S
+vice-presidente;1;4311809;_MILTONCAMPOS;MILTON CAMPOS;UDN;445;
+vice-presidente;1;4311809;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2719;
+vice-presidente;1;4311809;#brancos;;;320;
+vice-presidente;1;4311809;#nulos;;;88;
+vice-presidente;1;4311809;#comparecimento;;;4813;
+presidente;1;4320909;_JANIOQUADROS;JÂNIO QUADROS;PTN;2340;S
+presidente;1;4320909;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1000;
+presidente;1;4320909;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;296;
+presidente;1;4320909;#brancos;;;82;
+presidente;1;4320909;#nulos;;;95;
+presidente;1;4320909;#comparecimento;;;3813;
+vice-presidente;1;4320909;_JOAOGOULART;JOÃO GOULART;PTB;1228;S
+vice-presidente;1;4320909;_MILTONCAMPOS;MILTON CAMPOS;UDN;778;
+vice-presidente;1;4320909;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1612;
+vice-presidente;1;4320909;#brancos;;;139;
+vice-presidente;1;4320909;#nulos;;;56;
+vice-presidente;1;4320909;#comparecimento;;;3813;
+presidente;1;4302303;_JANIOQUADROS;JÂNIO QUADROS;PTN;2775;S
+presidente;1;4302303;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1814;
+presidente;1;4302303;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;365;
+presidente;1;4302303;#brancos;;;226;
+presidente;1;4302303;#nulos;;;153;
+presidente;1;4302303;#comparecimento;;;5333;
+vice-presidente;1;4302303;_JOAOGOULART;JOÃO GOULART;PTB;1997;S
+vice-presidente;1;4302303;_MILTONCAMPOS;MILTON CAMPOS;UDN;2064;
+vice-presidente;1;4302303;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;811;
+vice-presidente;1;4302303;#brancos;;;341;
+vice-presidente;1;4302303;#nulos;;;120;
+vice-presidente;1;4302303;#comparecimento;;;5333;
+presidente;1;4302907;_JANIOQUADROS;JÂNIO QUADROS;PTN;2087;S
+presidente;1;4302907;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2058;
+presidente;1;4302907;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;250;
+presidente;1;4302907;#brancos;;;129;
+presidente;1;4302907;#nulos;;;161;
+presidente;1;4302907;#comparecimento;;;4685;
+vice-presidente;1;4302907;_JOAOGOULART;JOÃO GOULART;PTB;2127;S
+vice-presidente;1;4302907;_MILTONCAMPOS;MILTON CAMPOS;UDN;377;
+vice-presidente;1;4302907;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1872;
+vice-presidente;1;4302907;#brancos;;;196;
+vice-presidente;1;4302907;#nulos;;;113;
+vice-presidente;1;4302907;#comparecimento;;;4685;
+presidente;1;4304408;_JANIOQUADROS;JÂNIO QUADROS;PTN;1591;S
+presidente;1;4304408;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1237;
+presidente;1;4304408;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;613;
+presidente;1;4304408;#brancos;;;72;
+presidente;1;4304408;#nulos;;;105;
+presidente;1;4304408;#comparecimento;;;3618;
+vice-presidente;1;4304408;_JOAOGOULART;JOÃO GOULART;PTB;1395;S
+vice-presidente;1;4304408;_MILTONCAMPOS;MILTON CAMPOS;UDN;222;
+vice-presidente;1;4304408;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1772;
+vice-presidente;1;4304408;#brancos;;;162;
+vice-presidente;1;4304408;#nulos;;;67;
+vice-presidente;1;4304408;#comparecimento;;;3618;
+presidente;1;4309100;_JANIOQUADROS;JÂNIO QUADROS;PTN;1215;S
+presidente;1;4309100;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;905;
+presidente;1;4309100;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;455;
+presidente;1;4309100;#brancos;;;60;
+presidente;1;4309100;#nulos;;;53;
+presidente;1;4309100;#comparecimento;;;2688;
+vice-presidente;1;4309100;_JOAOGOULART;JOÃO GOULART;PTB;871;S
+vice-presidente;1;4309100;_MILTONCAMPOS;MILTON CAMPOS;UDN;89;
+vice-presidente;1;4309100;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1590;
+vice-presidente;1;4309100;#brancos;;;104;
+vice-presidente;1;4309100;#nulos;;;34;
+vice-presidente;1;4309100;#comparecimento;;;2688;
+presidente;1;4304606;_JANIOQUADROS;JÂNIO QUADROS;PTN;5720;S
+presidente;1;4304606;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;6048;
+presidente;1;4304606;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;9435;
+presidente;1;4304606;#brancos;;;398;
+presidente;1;4304606;#nulos;;;854;
+presidente;1;4304606;#comparecimento;;;22455;
+vice-presidente;1;4304606;_JOAOGOULART;JOÃO GOULART;PTB;8583;S
+vice-presidente;1;4304606;_MILTONCAMPOS;MILTON CAMPOS;UDN;826;
+vice-presidente;1;4304606;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;11468;
+vice-presidente;1;4304606;#brancos;;;974;
+vice-presidente;1;4304606;#nulos;;;604;
+vice-presidente;1;4304606;#comparecimento;;;22455;
+presidente;1;4306809;_JANIOQUADROS;JÂNIO QUADROS;PTN;4301;S
+presidente;1;4306809;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3028;
+presidente;1;4306809;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;560;
+presidente;1;4306809;#brancos;;;277;
+presidente;1;4306809;#nulos;;;348;
+presidente;1;4306809;#comparecimento;;;8514;
+vice-presidente;1;4306809;_JOAOGOULART;JOÃO GOULART;PTB;3200;S
+vice-presidente;1;4306809;_MILTONCAMPOS;MILTON CAMPOS;UDN;275;
+vice-presidente;1;4306809;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4311;
+vice-presidente;1;4306809;#brancos;;;509;
+vice-presidente;1;4306809;#nulos;;;219;
+vice-presidente;1;4306809;#comparecimento;;;8514;
+presidente;1;4315800;_JANIOQUADROS;JÂNIO QUADROS;PTN;1177;S
+presidente;1;4315800;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;719;
+presidente;1;4315800;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;520;
+presidente;1;4315800;#brancos;;;80;
+presidente;1;4315800;#nulos;;;88;
+presidente;1;4315800;#comparecimento;;;2584;
+vice-presidente;1;4315800;_JOAOGOULART;JOÃO GOULART;PTB;834;S
+vice-presidente;1;4315800;_MILTONCAMPOS;MILTON CAMPOS;UDN;122;
+vice-presidente;1;4315800;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1436;
+vice-presidente;1;4315800;#brancos;;;139;
+vice-presidente;1;4315800;#nulos;;;53;
+vice-presidente;1;4315800;#comparecimento;;;2584;
+presidente;1;4308201;_JANIOQUADROS;JÂNIO QUADROS;PTN;2280;S
+presidente;1;4308201;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;975;
+presidente;1;4308201;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;326;
+presidente;1;4308201;#brancos;;;83;
+presidente;1;4308201;#nulos;;;104;
+presidente;1;4308201;#comparecimento;;;3768;
+vice-presidente;1;4308201;_JOAOGOULART;JOÃO GOULART;PTB;940;S
+vice-presidente;1;4308201;_MILTONCAMPOS;MILTON CAMPOS;UDN;159;
+vice-presidente;1;4308201;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2425;
+vice-presidente;1;4308201;#brancos;;;177;
+vice-presidente;1;4308201;#nulos;;;67;
+vice-presidente;1;4308201;#comparecimento;;;3768;
+presidente;1;4319802;_JANIOQUADROS;JÂNIO QUADROS;PTN;1486;S
+presidente;1;4319802;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1206;
+presidente;1;4319802;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;165;
+presidente;1;4319802;#brancos;;;177;
+presidente;1;4319802;#nulos;;;127;
+presidente;1;4319802;#comparecimento;;;3161;
+vice-presidente;1;4319802;_JOAOGOULART;JOÃO GOULART;PTB;1162;S
+vice-presidente;1;4319802;_MILTONCAMPOS;MILTON CAMPOS;UDN;365;
+vice-presidente;1;4319802;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1368;
+vice-presidente;1;4319802;#brancos;;;146;
+vice-presidente;1;4319802;#nulos;;;120;
+vice-presidente;1;4319802;#comparecimento;;;3161;
+presidente;1;4308904;_JANIOQUADROS;JÂNIO QUADROS;PTN;2785;S
+presidente;1;4308904;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2515;
+presidente;1;4308904;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;890;
+presidente;1;4308904;#brancos;;;161;
+presidente;1;4308904;#nulos;;;177;
+presidente;1;4308904;#comparecimento;;;6528;
+vice-presidente;1;4308904;_JOAOGOULART;JOÃO GOULART;PTB;2743;S
+vice-presidente;1;4308904;_MILTONCAMPOS;MILTON CAMPOS;UDN;342;
+vice-presidente;1;4308904;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2965;
+vice-presidente;1;4308904;#brancos;;;360;
+vice-presidente;1;4308904;#nulos;;;118;
+vice-presidente;1;4308904;#comparecimento;;;6528;
+presidente;1;4303806;_JANIOQUADROS;JÂNIO QUADROS;PTN;1415;S
+presidente;1;4303806;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1147;
+presidente;1;4303806;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;310;
+presidente;1;4303806;#brancos;;;138;
+presidente;1;4303806;#nulos;;;152;
+presidente;1;4303806;#comparecimento;;;3162;
+vice-presidente;1;4303806;_JOAOGOULART;JOÃO GOULART;PTB;1219;S
+vice-presidente;1;4303806;_MILTONCAMPOS;MILTON CAMPOS;UDN;292;
+vice-presidente;1;4303806;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1264;
+vice-presidente;1;4303806;#brancos;;;288;
+vice-presidente;1;4303806;#nulos;;;99;
+vice-presidente;1;4303806;#comparecimento;;;3162;
+presidente;1;4309209;_JANIOQUADROS;JÂNIO QUADROS;PTN;4049;S
+presidente;1;4309209;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2340;
+presidente;1;4309209;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1973;
+presidente;1;4309209;#brancos;;;253;
+presidente;1;4309209;#nulos;;;568;
+presidente;1;4309209;#comparecimento;;;9183;
+vice-presidente;1;4309209;_JOAOGOULART;JOÃO GOULART;PTB;2700;S
+vice-presidente;1;4309209;_MILTONCAMPOS;MILTON CAMPOS;UDN;1057;
+vice-presidente;1;4309209;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4411;
+vice-presidente;1;4309209;#brancos;;;589;
+vice-presidente;1;4309209;#nulos;;;426;
+vice-presidente;1;4309209;#comparecimento;;;9183;
+presidente;1;4307104;_JANIOQUADROS;JÂNIO QUADROS;PTN;1131;S
+presidente;1;4307104;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;696;
+presidente;1;4307104;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;181;
+presidente;1;4307104;#brancos;;;89;
+presidente;1;4307104;#nulos;;;72;
+presidente;1;4307104;#comparecimento;;;2169;
+vice-presidente;1;4307104;_JOAOGOULART;JOÃO GOULART;PTB;802;S
+vice-presidente;1;4307104;_MILTONCAMPOS;MILTON CAMPOS;UDN;820;
+vice-presidente;1;4307104;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;362;
+vice-presidente;1;4307104;#brancos;;;153;
+vice-presidente;1;4307104;#nulos;;;32;
+vice-presidente;1;4307104;#comparecimento;;;2169;
+presidente;1;4310504;_JANIOQUADROS;JÂNIO QUADROS;PTN;2801;S
+presidente;1;4310504;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1877;
+presidente;1;4310504;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;478;
+presidente;1;4310504;#brancos;;;172;
+presidente;1;4310504;#nulos;;;182;
+presidente;1;4310504;#comparecimento;;;5510;
+vice-presidente;1;4310504;_JOAOGOULART;JOÃO GOULART;PTB;2155;S
+vice-presidente;1;4310504;_MILTONCAMPOS;MILTON CAMPOS;UDN;1005;
+vice-presidente;1;4310504;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1886;
+vice-presidente;1;4310504;#brancos;;;354;
+vice-presidente;1;4310504;#nulos;;;110;
+vice-presidente;1;4310504;#comparecimento;;;5510;
+presidente;1;4308508;_JANIOQUADROS;JÂNIO QUADROS;PTN;3211;S
+presidente;1;4308508;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2553;
+presidente;1;4308508;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;504;
+presidente;1;4308508;#brancos;;;225;
+presidente;1;4308508;#nulos;;;276;
+presidente;1;4308508;#comparecimento;;;6769;
+vice-presidente;1;4308508;_JOAOGOULART;JOÃO GOULART;PTB;2709;S
+vice-presidente;1;4308508;_MILTONCAMPOS;MILTON CAMPOS;UDN;490;
+vice-presidente;1;4308508;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2961;
+vice-presidente;1;4308508;#brancos;;;459;
+vice-presidente;1;4308508;#nulos;;;150;
+vice-presidente;1;4308508;#comparecimento;;;6769;
+presidente;1;4311908;_JANIOQUADROS;JÂNIO QUADROS;PTN;1594;S
+presidente;1;4311908;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1528;
+presidente;1;4311908;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;451;
+presidente;1;4311908;#brancos;;;136;
+presidente;1;4311908;#nulos;;;174;
+presidente;1;4311908;#comparecimento;;;3883;
+vice-presidente;1;4311908;_JOAOGOULART;JOÃO GOULART;PTB;1604;S
+vice-presidente;1;4311908;_MILTONCAMPOS;MILTON CAMPOS;UDN;414;
+vice-presidente;1;4311908;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1498;
+vice-presidente;1;4311908;#brancos;;;232;
+vice-presidente;1;4311908;#nulos;;;135;
+vice-presidente;1;4311908;#comparecimento;;;3883;
+presidente;1;4322905;_JANIOQUADROS;JÂNIO QUADROS;PTN;910;S
+presidente;1;4322905;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;661;
+presidente;1;4322905;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;186;
+presidente;1;4322905;#brancos;;;112;
+presidente;1;4322905;#nulos;;;128;
+presidente;1;4322905;#comparecimento;;;1997;
+vice-presidente;1;4322905;_JOAOGOULART;JOÃO GOULART;PTB;694;S
+vice-presidente;1;4322905;_MILTONCAMPOS;MILTON CAMPOS;UDN;397;
+vice-presidente;1;4322905;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;612;
+vice-presidente;1;4322905;#brancos;;;194;
+vice-presidente;1;4322905;#nulos;;;100;
+vice-presidente;1;4322905;#comparecimento;;;1997;
+presidente;1;4311700;_JANIOQUADROS;JÂNIO QUADROS;PTN;1582;S
+presidente;1;4311700;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1571;
+presidente;1;4311700;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;252;
+presidente;1;4311700;#brancos;;;151;
+presidente;1;4311700;#nulos;;;236;
+presidente;1;4311700;#comparecimento;;;3792;
+vice-presidente;1;4311700;_JOAOGOULART;JOÃO GOULART;PTB;1604;S
+vice-presidente;1;4311700;_MILTONCAMPOS;MILTON CAMPOS;UDN;478;
+vice-presidente;1;4311700;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1239;
+vice-presidente;1;4311700;#brancos;;;290;
+vice-presidente;1;4311700;#nulos;;;181;
+vice-presidente;1;4311700;#comparecimento;;;3792;
+presidente;1;4313300;_JANIOQUADROS;JÂNIO QUADROS;PTN;4123;S
+presidente;1;4313300;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2523;
+presidente;1;4313300;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;728;
+presidente;1;4313300;#brancos;;;172;
+presidente;1;4313300;#nulos;;;203;
+presidente;1;4313300;#comparecimento;;;7749;
+vice-presidente;1;4313300;_JOAOGOULART;JOÃO GOULART;PTB;2651;S
+vice-presidente;1;4313300;_MILTONCAMPOS;MILTON CAMPOS;UDN;418;
+vice-presidente;1;4313300;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;4171;
+vice-presidente;1;4313300;#brancos;;;371;
+vice-presidente;1;4313300;#nulos;;;138;
+vice-presidente;1;4313300;#comparecimento;;;7749;
+presidente;1;4313409;_JANIOQUADROS;JÂNIO QUADROS;PTN;7715;S
+presidente;1;4313409;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3104;
+presidente;1;4313409;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;3842;
+presidente;1;4313409;#brancos;;;403;
+presidente;1;4313409;#nulos;;;433;
+presidente;1;4313409;#comparecimento;;;15497;
+vice-presidente;1;4313409;_JOAOGOULART;JOÃO GOULART;PTB;3467;S
+vice-presidente;1;4313409;_MILTONCAMPOS;MILTON CAMPOS;UDN;774;
+vice-presidente;1;4313409;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;10312;
+vice-presidente;1;4313409;#brancos;;;631;
+vice-presidente;1;4313409;#nulos;;;313;
+vice-presidente;1;4313409;#comparecimento;;;15497;
+presidente;1;4303905;_JANIOQUADROS;JÂNIO QUADROS;PTN;1445;S
+presidente;1;4303905;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;755;
+presidente;1;4303905;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;597;
+presidente;1;4303905;#brancos;;;112;
+presidente;1;4303905;#nulos;;;114;
+presidente;1;4303905;#comparecimento;;;3023;
+vice-presidente;1;4303905;_JOAOGOULART;JOÃO GOULART;PTB;888;S
+vice-presidente;1;4303905;_MILTONCAMPOS;MILTON CAMPOS;UDN;99;
+vice-presidente;1;4303905;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1813;
+vice-presidente;1;4303905;#brancos;;;138;
+vice-presidente;1;4303905;#nulos;;;85;
+vice-presidente;1;4303905;#comparecimento;;;3023;
+presidente;1;4319901;_JANIOQUADROS;JÂNIO QUADROS;PTN;2152;S
+presidente;1;4319901;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;998;
+presidente;1;4319901;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;446;
+presidente;1;4319901;#brancos;;;139;
+presidente;1;4319901;#nulos;;;113;
+presidente;1;4319901;#comparecimento;;;3848;
+vice-presidente;1;4319901;_JOAOGOULART;JOÃO GOULART;PTB;997;S
+vice-presidente;1;4319901;_MILTONCAMPOS;MILTON CAMPOS;UDN;143;
+vice-presidente;1;4319901;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2439;
+vice-presidente;1;4319901;#brancos;;;192;
+vice-presidente;1;4319901;#nulos;;;77;
+vice-presidente;1;4319901;#comparecimento;;;3848;
+presidente;1;4313508;_JANIOQUADROS;JÂNIO QUADROS;PTN;4547;S
+presidente;1;4313508;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;3743;
+presidente;1;4313508;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1020;
+presidente;1;4313508;#brancos;;;270;
+presidente;1;4313508;#nulos;;;302;
+presidente;1;4313508;#comparecimento;;;9882;
+vice-presidente;1;4313508;_JOAOGOULART;JOÃO GOULART;PTB;3867;S
+vice-presidente;1;4313508;_MILTONCAMPOS;MILTON CAMPOS;UDN;2634;
+vice-presidente;1;4313508;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2668;
+vice-presidente;1;4313508;#brancos;;;510;
+vice-presidente;1;4313508;#nulos;;;203;
+vice-presidente;1;4313508;#comparecimento;;;9882;
+presidente;1;4314605;_JANIOQUADROS;JÂNIO QUADROS;PTN;1953;S
+presidente;1;4314605;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;995;
+presidente;1;4314605;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;177;
+presidente;1;4314605;#brancos;;;139;
+presidente;1;4314605;#nulos;;;123;
+presidente;1;4314605;#comparecimento;;;3387;
+vice-presidente;1;4314605;_JOAOGOULART;JOÃO GOULART;PTB;975;S
+vice-presidente;1;4314605;_MILTONCAMPOS;MILTON CAMPOS;UDN;1001;
+vice-presidente;1;4314605;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1041;
+vice-presidente;1;4314605;#brancos;;;280;
+vice-presidente;1;4314605;#nulos;;;90;
+vice-presidente;1;4314605;#comparecimento;;;3387;
+presidente;1;4318101;_JANIOQUADROS;JÂNIO QUADROS;PTN;2973;S
+presidente;1;4318101;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2344;
+presidente;1;4318101;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;140;
+presidente;1;4318101;#brancos;;;156;
+presidente;1;4318101;#nulos;;;168;
+presidente;1;4318101;#comparecimento;;;5781;
+vice-presidente;1;4318101;_JOAOGOULART;JOÃO GOULART;PTB;2393;S
+vice-presidente;1;4318101;_MILTONCAMPOS;MILTON CAMPOS;UDN;2022;
+vice-presidente;1;4318101;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1021;
+vice-presidente;1;4318101;#brancos;;;211;
+vice-presidente;1;4318101;#nulos;;;134;
+vice-presidente;1;4318101;#comparecimento;;;5781;
+presidente;1;4318804;_JANIOQUADROS;JÂNIO QUADROS;PTN;3399;S
+presidente;1;4318804;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1772;
+presidente;1;4318804;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1797;
+presidente;1;4318804;#brancos;;;229;
+presidente;1;4318804;#nulos;;;328;
+presidente;1;4318804;#comparecimento;;;7525;
+vice-presidente;1;4318804;_JOAOGOULART;JOÃO GOULART;PTB;2314;S
+vice-presidente;1;4318804;_MILTONCAMPOS;MILTON CAMPOS;UDN;1044;
+vice-presidente;1;4318804;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3398;
+vice-presidente;1;4318804;#brancos;;;490;
+vice-presidente;1;4318804;#nulos;;;279;
+vice-presidente;1;4318804;#comparecimento;;;7525;
+presidente;1;4319406;_JANIOQUADROS;JÂNIO QUADROS;PTN;2392;S
+presidente;1;4319406;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;976;
+presidente;1;4319406;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;461;
+presidente;1;4319406;#brancos;;;229;
+presidente;1;4319406;#nulos;;;204;
+presidente;1;4319406;#comparecimento;;;4262;
+vice-presidente;1;4319406;_JOAOGOULART;JOÃO GOULART;PTB;918;S
+vice-presidente;1;4319406;_MILTONCAMPOS;MILTON CAMPOS;UDN;405;
+vice-presidente;1;4319406;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2621;
+vice-presidente;1;4319406;#brancos;;;104;
+vice-presidente;1;4319406;#nulos;;;214;
+vice-presidente;1;4319406;#comparecimento;;;4262;
+presidente;1;4319604;_JANIOQUADROS;JÂNIO QUADROS;PTN;3113;S
+presidente;1;4319604;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2121;
+presidente;1;4319604;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;592;
+presidente;1;4319604;#brancos;;;184;
+presidente;1;4319604;#nulos;;;206;
+presidente;1;4319604;#comparecimento;;;6216;
+vice-presidente;1;4319604;_JOAOGOULART;JOÃO GOULART;PTB;2333;S
+vice-presidente;1;4319604;_MILTONCAMPOS;MILTON CAMPOS;UDN;1598;
+vice-presidente;1;4319604;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1856;
+vice-presidente;1;4319604;#brancos;;;246;
+vice-presidente;1;4319604;#nulos;;;183;
+vice-presidente;1;4319604;#comparecimento;;;6216;
+presidente;1;4320107;_JANIOQUADROS;JÂNIO QUADROS;PTN;2855;S
+presidente;1;4320107;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1990;
+presidente;1;4320107;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;476;
+presidente;1;4320107;#brancos;;;152;
+presidente;1;4320107;#nulos;;;172;
+presidente;1;4320107;#comparecimento;;;5645;
+vice-presidente;1;4320107;_JOAOGOULART;JOÃO GOULART;PTB;2137;S
+vice-presidente;1;4320107;_MILTONCAMPOS;MILTON CAMPOS;UDN;884;
+vice-presidente;1;4320107;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2214;
+vice-presidente;1;4320107;#brancos;;;285;
+vice-presidente;1;4320107;#nulos;;;125;
+vice-presidente;1;4320107;#comparecimento;;;5645;
+presidente;1;4312708;_JANIOQUADROS;JÂNIO QUADROS;PTN;1276;S
+presidente;1;4312708;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1195;
+presidente;1;4312708;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;211;
+presidente;1;4312708;#brancos;;;129;
+presidente;1;4312708;#nulos;;;140;
+presidente;1;4312708;#comparecimento;;;2951;
+vice-presidente;1;4312708;_JOAOGOULART;JOÃO GOULART;PTB;1336;S
+vice-presidente;1;4312708;_MILTONCAMPOS;MILTON CAMPOS;UDN;303;
+vice-presidente;1;4312708;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;961;
+vice-presidente;1;4312708;#brancos;;;260;
+vice-presidente;1;4312708;#nulos;;;91;
+vice-presidente;1;4312708;#comparecimento;;;2951;
+presidente;1;4305801;_JANIOQUADROS;JÂNIO QUADROS;PTN;1314;S
+presidente;1;4305801;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1245;
+presidente;1;4305801;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;226;
+presidente;1;4305801;#brancos;;;77;
+presidente;1;4305801;#nulos;;;92;
+presidente;1;4305801;#comparecimento;;;2954;
+vice-presidente;1;4305801;_JOAOGOULART;JOÃO GOULART;PTB;1400;S
+vice-presidente;1;4305801;_MILTONCAMPOS;MILTON CAMPOS;UDN;205;
+vice-presidente;1;4305801;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1143;
+vice-presidente;1;4305801;#brancos;;;128;
+vice-presidente;1;4305801;#nulos;;;78;
+vice-presidente;1;4305801;#comparecimento;;;2954;
+presidente;1;4321105;_JANIOQUADROS;JÂNIO QUADROS;PTN;2146;S
+presidente;1;4321105;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1473;
+presidente;1;4321105;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;270;
+presidente;1;4321105;#brancos;;;174;
+presidente;1;4321105;#nulos;;;135;
+presidente;1;4321105;#comparecimento;;;4198;
+vice-presidente;1;4321105;_JOAOGOULART;JOÃO GOULART;PTB;1627;S
+vice-presidente;1;4321105;_MILTONCAMPOS;MILTON CAMPOS;UDN;421;
+vice-presidente;1;4321105;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1791;
+vice-presidente;1;4321105;#brancos;;;260;
+vice-presidente;1;4321105;#nulos;;;99;
+vice-presidente;1;4321105;#comparecimento;;;4198;
+presidente;1;4321501;_JANIOQUADROS;JÂNIO QUADROS;PTN;2771;S
+presidente;1;4321501;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1731;
+presidente;1;4321501;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;417;
+presidente;1;4321501;#brancos;;;117;
+presidente;1;4321501;#nulos;;;302;
+presidente;1;4321501;#comparecimento;;;5338;
+vice-presidente;1;4321501;_JOAOGOULART;JOÃO GOULART;PTB;1655;S
+vice-presidente;1;4321501;_MILTONCAMPOS;MILTON CAMPOS;UDN;1136;
+vice-presidente;1;4321501;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2056;
+vice-presidente;1;4321501;#brancos;;;189;
+vice-presidente;1;4321501;#nulos;;;302;
+vice-presidente;1;4321501;#comparecimento;;;5338;
+presidente;1;4321907;_JANIOQUADROS;JÂNIO QUADROS;PTN;2041;S
+presidente;1;4321907;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1685;
+presidente;1;4321907;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1780;
+presidente;1;4321907;#brancos;;;141;
+presidente;1;4321907;#nulos;;;230;
+presidente;1;4321907;#comparecimento;;;5877;
+vice-presidente;1;4321907;_JOAOGOULART;JOÃO GOULART;PTB;1942;S
+vice-presidente;1;4321907;_MILTONCAMPOS;MILTON CAMPOS;UDN;406;
+vice-presidente;1;4321907;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3041;
+vice-presidente;1;4321907;#brancos;;;341;
+vice-presidente;1;4321907;#nulos;;;147;
+vice-presidente;1;4321907;#comparecimento;;;5877;
+presidente;1;4304002;_JANIOQUADROS;JÂNIO QUADROS;PTN;913;S
+presidente;1;4304002;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1193;
+presidente;1;4304002;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;315;
+presidente;1;4304002;#brancos;;;103;
+presidente;1;4304002;#nulos;;;171;
+presidente;1;4304002;#comparecimento;;;2695;
+vice-presidente;1;4304002;_JOAOGOULART;JOÃO GOULART;PTB;1244;S
+vice-presidente;1;4304002;_MILTONCAMPOS;MILTON CAMPOS;UDN;221;
+vice-presidente;1;4304002;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;858;
+vice-presidente;1;4304002;#brancos;;;231;
+vice-presidente;1;4304002;#nulos;;;141;
+vice-presidente;1;4304002;#comparecimento;;;2695;
+presidente;1;4321402;_JANIOQUADROS;JÂNIO QUADROS;PTN;1748;S
+presidente;1;4321402;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1668;
+presidente;1;4321402;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;834;
+presidente;1;4321402;#brancos;;;152;
+presidente;1;4321402;#nulos;;;264;
+presidente;1;4321402;#comparecimento;;;4666;
+vice-presidente;1;4321402;_JOAOGOULART;JOÃO GOULART;PTB;1817;S
+vice-presidente;1;4321402;_MILTONCAMPOS;MILTON CAMPOS;UDN;256;
+vice-presidente;1;4321402;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2144;
+vice-presidente;1;4321402;#brancos;;;239;
+vice-presidente;1;4321402;#nulos;;;210;
+vice-presidente;1;4321402;#comparecimento;;;4666;
+presidente;1;4322202;_JANIOQUADROS;JÂNIO QUADROS;PTN;3279;S
+presidente;1;4322202;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2568;
+presidente;1;4322202;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;370;
+presidente;1;4322202;#brancos;;;315;
+presidente;1;4322202;#nulos;;;262;
+presidente;1;4322202;#comparecimento;;;6794;
+vice-presidente;1;4322202;_JOAOGOULART;JOÃO GOULART;PTB;2704;S
+vice-presidente;1;4322202;_MILTONCAMPOS;MILTON CAMPOS;UDN;1381;
+vice-presidente;1;4322202;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2034;
+vice-presidente;1;4322202;#brancos;;;466;
+vice-presidente;1;4322202;#nulos;;;209;
+vice-presidente;1;4322202;#comparecimento;;;6794;
+presidente;1;4322806;_JANIOQUADROS;JÂNIO QUADROS;PTN;2931;S
+presidente;1;4322806;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2578;
+presidente;1;4322806;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;673;
+presidente;1;4322806;#brancos;;;200;
+presidente;1;4322806;#nulos;;;227;
+presidente;1;4322806;#comparecimento;;;6609;
+vice-presidente;1;4322806;_JOAOGOULART;JOÃO GOULART;PTB;2818;S
+vice-presidente;1;4322806;_MILTONCAMPOS;MILTON CAMPOS;UDN;316;
+vice-presidente;1;4322806;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3001;
+vice-presidente;1;4322806;#brancos;;;321;
+vice-presidente;1;4322806;#nulos;;;153;
+vice-presidente;1;4322806;#comparecimento;;;6609;
+presidente;1;4321808;_JANIOQUADROS;JÂNIO QUADROS;PTN;3410;S
+presidente;1;4321808;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;4152;
+presidente;1;4321808;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1078;
+presidente;1;4321808;#brancos;;;321;
+presidente;1;4321808;#nulos;;;309;
+presidente;1;4321808;#comparecimento;;;9270;
+vice-presidente;1;4321808;_JOAOGOULART;JOÃO GOULART;PTB;4387;S
+vice-presidente;1;4321808;_MILTONCAMPOS;MILTON CAMPOS;UDN;447;
+vice-presidente;1;4321808;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;3665;
+vice-presidente;1;4321808;#brancos;;;536;
+vice-presidente;1;4321808;#nulos;;;235;
+vice-presidente;1;4321808;#comparecimento;;;9270;
+presidente;1;4309605;_JANIOQUADROS;JÂNIO QUADROS;PTN;1297;S
+presidente;1;4309605;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1650;
+presidente;1;4309605;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;796;
+presidente;1;4309605;#brancos;;;161;
+presidente;1;4309605;#nulos;;;152;
+presidente;1;4309605;#comparecimento;;;4056;
+vice-presidente;1;4309605;_JOAOGOULART;JOÃO GOULART;PTB;1785;S
+vice-presidente;1;4309605;_MILTONCAMPOS;MILTON CAMPOS;UDN;352;
+vice-presidente;1;4309605;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1481;
+vice-presidente;1;4309605;#brancos;;;341;
+vice-presidente;1;4309605;#nulos;;;97;
+vice-presidente;1;4309605;#comparecimento;;;4056;
+presidente;1;4322103;_JANIOQUADROS;JÂNIO QUADROS;PTN;1087;S
+presidente;1;4322103;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;760;
+presidente;1;4322103;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;413;
+presidente;1;4322103;#brancos;;;97;
+presidente;1;4322103;#nulos;;;104;
+presidente;1;4322103;#comparecimento;;;2461;
+vice-presidente;1;4322103;_JOAOGOULART;JOÃO GOULART;PTB;874;S
+vice-presidente;1;4322103;_MILTONCAMPOS;MILTON CAMPOS;UDN;136;
+vice-presidente;1;4322103;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1207;
+vice-presidente;1;4322103;#brancos;;;173;
+vice-presidente;1;4322103;#nulos;;;71;
+vice-presidente;1;4322103;#comparecimento;;;2461;
+presidente;1;4309308;_JANIOQUADROS;JÂNIO QUADROS;PTN;2693;S
+presidente;1;4309308;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1930;
+presidente;1;4309308;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;823;
+presidente;1;4309308;#brancos;;;201;
+presidente;1;4309308;#nulos;;;246;
+presidente;1;4309308;#comparecimento;;;5893;
+vice-presidente;1;4309308;_JOAOGOULART;JOÃO GOULART;PTB;2275;S
+vice-presidente;1;4309308;_MILTONCAMPOS;MILTON CAMPOS;UDN;403;
+vice-presidente;1;4309308;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2671;
+vice-presidente;1;4309308;#brancos;;;359;
+vice-presidente;1;4309308;#nulos;;;185;
+vice-presidente;1;4309308;#comparecimento;;;5893;
+presidente;1;4301909;_JANIOQUADROS;JÂNIO QUADROS;PTN;643;S
+presidente;1;4301909;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;688;
+presidente;1;4301909;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;336;
+presidente;1;4301909;#brancos;;;62;
+presidente;1;4301909;#nulos;;;121;
+presidente;1;4301909;#comparecimento;;;1850;
+vice-presidente;1;4301909;_JOAOGOULART;JOÃO GOULART;PTB;834;S
+vice-presidente;1;4301909;_MILTONCAMPOS;MILTON CAMPOS;UDN;96;
+vice-presidente;1;4301909;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;699;
+vice-presidente;1;4301909;#brancos;;;100;
+vice-presidente;1;4301909;#nulos;;;121;
+vice-presidente;1;4301909;#comparecimento;;;1850;
+presidente;1;4306007;_JANIOQUADROS;JÂNIO QUADROS;PTN;1624;S
+presidente;1;4306007;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1138;
+presidente;1;4306007;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;863;
+presidente;1;4306007;#brancos;;;150;
+presidente;1;4306007;#nulos;;;271;
+presidente;1;4306007;#comparecimento;;;4046;
+vice-presidente;1;4306007;_JOAOGOULART;JOÃO GOULART;PTB;1307;S
+vice-presidente;1;4306007;_MILTONCAMPOS;MILTON CAMPOS;UDN;403;
+vice-presidente;1;4306007;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1852;
+vice-presidente;1;4306007;#brancos;;;276;
+vice-presidente;1;4306007;#nulos;;;208;
+vice-presidente;1;4306007;#comparecimento;;;4046;
+presidente;1;4309704;_JANIOQUADROS;JÂNIO QUADROS;PTN;1045;S
+presidente;1;4309704;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;644;
+presidente;1;4309704;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;197;
+presidente;1;4309704;#brancos;;;52;
+presidente;1;4309704;#nulos;;;95;
+presidente;1;4309704;#comparecimento;;;2033;
+vice-presidente;1;4309704;_JOAOGOULART;JOÃO GOULART;PTB;652;S
+vice-presidente;1;4309704;_MILTONCAMPOS;MILTON CAMPOS;UDN;110;
+vice-presidente;1;4309704;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1119;
+vice-presidente;1;4309704;#brancos;;;83;
+vice-presidente;1;4309704;#nulos;;;69;
+vice-presidente;1;4309704;#comparecimento;;;2033;
+presidente;1;4301305;_JANIOQUADROS;JÂNIO QUADROS;PTN;1324;S
+presidente;1;4301305;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;951;
+presidente;1;4301305;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;313;
+presidente;1;4301305;#brancos;;;99;
+presidente;1;4301305;#nulos;;;86;
+presidente;1;4301305;#comparecimento;;;2773;
+vice-presidente;1;4301305;_JOAOGOULART;JOÃO GOULART;PTB;1139;S
+vice-presidente;1;4301305;_MILTONCAMPOS;MILTON CAMPOS;UDN;746;
+vice-presidente;1;4301305;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;676;
+vice-presidente;1;4301305;#brancos;;;168;
+vice-presidente;1;4301305;#nulos;;;44;
+vice-presidente;1;4301305;#comparecimento;;;2773;

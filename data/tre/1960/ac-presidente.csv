@@ -1,0 +1,85 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+presidente;1;1200401;_JANIOQUADROS;JÂNIO QUADROS;PTN;3179;S
+presidente;1;1200401;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;2224;
+presidente;1;1200401;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;453;
+presidente;1;1200401;#brancos;;;0;
+presidente;1;1200401;#nulos;;;0;
+presidente;1;1200401;#comparecimento;;;5856;
+vice-presidente;1;1200401;_JOAOGOULART;JOÃO GOULART;PTB;3146;S
+vice-presidente;1;1200401;_MILTONCAMPOS;MILTON CAMPOS;UDN;1912;
+vice-presidente;1;1200401;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;507;
+vice-presidente;1;1200401;#brancos;;;0;
+vice-presidente;1;1200401;#nulos;;;0;
+vice-presidente;1;1200401;#comparecimento;;;5565;
+presidente;1;1200708;_JANIOQUADROS;JÂNIO QUADROS;PTN;554;S
+presidente;1;1200708;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;460;
+presidente;1;1200708;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;36;
+presidente;1;1200708;#brancos;;;0;
+presidente;1;1200708;#nulos;;;0;
+presidente;1;1200708;#comparecimento;;;1050;
+vice-presidente;1;1200708;_JOAOGOULART;JOÃO GOULART;PTB;757;S
+vice-presidente;1;1200708;_MILTONCAMPOS;MILTON CAMPOS;UDN;61;
+vice-presidente;1;1200708;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;13;
+vice-presidente;1;1200708;#brancos;;;0;
+vice-presidente;1;1200708;#nulos;;;0;
+vice-presidente;1;1200708;#comparecimento;;;831;
+presidente;1;1200104;_JANIOQUADROS;JÂNIO QUADROS;PTN;397;S
+presidente;1;1200104;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;356;
+presidente;1;1200104;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;26;
+presidente;1;1200104;#brancos;;;0;
+presidente;1;1200104;#nulos;;;0;
+presidente;1;1200104;#comparecimento;;;779;
+vice-presidente;1;1200104;_JOAOGOULART;JOÃO GOULART;PTB;567;S
+vice-presidente;1;1200104;_MILTONCAMPOS;MILTON CAMPOS;UDN;109;
+vice-presidente;1;1200104;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;67;
+vice-presidente;1;1200104;#brancos;;;0;
+vice-presidente;1;1200104;#nulos;;;0;
+vice-presidente;1;1200104;#comparecimento;;;743;
+presidente;1;1200500;_JANIOQUADROS;JÂNIO QUADROS;PTN;338;S
+presidente;1;1200500;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;337;
+presidente;1;1200500;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;18;
+presidente;1;1200500;#brancos;;;0;
+presidente;1;1200500;#nulos;;;0;
+presidente;1;1200500;#comparecimento;;;693;
+vice-presidente;1;1200500;_JOAOGOULART;JOÃO GOULART;PTB;482;S
+vice-presidente;1;1200500;_MILTONCAMPOS;MILTON CAMPOS;UDN;175;
+vice-presidente;1;1200500;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;18;
+vice-presidente;1;1200500;#brancos;;;0;
+vice-presidente;1;1200500;#nulos;;;0;
+vice-presidente;1;1200500;#comparecimento;;;675;
+presidente;1;1200302;_JANIOQUADROS;JÂNIO QUADROS;PTN;162;S
+presidente;1;1200302;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;234;
+presidente;1;1200302;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;10;
+presidente;1;1200302;#brancos;;;0;
+presidente;1;1200302;#nulos;;;0;
+presidente;1;1200302;#comparecimento;;;406;
+vice-presidente;1;1200302;_JOAOGOULART;JOÃO GOULART;PTB;269;S
+vice-presidente;1;1200302;_MILTONCAMPOS;MILTON CAMPOS;UDN;105;
+vice-presidente;1;1200302;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;19;
+vice-presidente;1;1200302;#brancos;;;0;
+vice-presidente;1;1200302;#nulos;;;0;
+vice-presidente;1;1200302;#comparecimento;;;393;
+presidente;1;1200609;_JANIOQUADROS;JÂNIO QUADROS;PTN;207;S
+presidente;1;1200609;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;327;
+presidente;1;1200609;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;44;
+presidente;1;1200609;#brancos;;;0;
+presidente;1;1200609;#nulos;;;0;
+presidente;1;1200609;#comparecimento;;;578;
+vice-presidente;1;1200609;_JOAOGOULART;JOÃO GOULART;PTB;386;S
+vice-presidente;1;1200609;_MILTONCAMPOS;MILTON CAMPOS;UDN;111;
+vice-presidente;1;1200609;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;51;
+vice-presidente;1;1200609;#brancos;;;0;
+vice-presidente;1;1200609;#nulos;;;0;
+vice-presidente;1;1200609;#comparecimento;;;548;
+presidente;1;1200203;_JANIOQUADROS;JÂNIO QUADROS;PTN;586;S
+presidente;1;1200203;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;614;
+presidente;1;1200203;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;44;
+presidente;1;1200203;#brancos;;;0;
+presidente;1;1200203;#nulos;;;0;
+presidente;1;1200203;#comparecimento;;;1244;
+vice-presidente;1;1200203;_JOAOGOULART;JOÃO GOULART;PTB;916;S
+vice-presidente;1;1200203;_MILTONCAMPOS;MILTON CAMPOS;UDN;114;
+vice-presidente;1;1200203;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;190;
+vice-presidente;1;1200203;#brancos;;;0;
+vice-presidente;1;1200203;#nulos;;;0;
+vice-presidente;1;1200203;#comparecimento;;;1220;

@@ -1,0 +1,25 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+presidente;1;1100205;_JANIOQUADROS;JÂNIO QUADROS;PTN;707;S
+presidente;1;1100205;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;1469;
+presidente;1;1100205;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1826;
+presidente;1;1100205;#brancos;;;0;
+presidente;1;1100205;#nulos;;;0;
+presidente;1;1100205;#comparecimento;;;4002;
+vice-presidente;1;1100205;_JOAOGOULART;JOÃO GOULART;PTB;1601;S
+vice-presidente;1;1100205;_MILTONCAMPOS;MILTON CAMPOS;UDN;423;
+vice-presidente;1;1100205;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;1736;
+vice-presidente;1;1100205;#brancos;;;0;
+vice-presidente;1;1100205;#nulos;;;0;
+vice-presidente;1;1100205;#comparecimento;;;3760;
+presidente;1;1100106;_JANIOQUADROS;JÂNIO QUADROS;PTN;533;S
+presidente;1;1100106;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;272;
+presidente;1;1100106;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;475;
+presidente;1;1100106;#brancos;;;0;
+presidente;1;1100106;#nulos;;;0;
+presidente;1;1100106;#comparecimento;;;1280;
+vice-presidente;1;1100106;_JOAOGOULART;JOÃO GOULART;PTB;495;S
+vice-presidente;1;1100106;_MILTONCAMPOS;MILTON CAMPOS;UDN;331;
+vice-presidente;1;1100106;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;390;
+vice-presidente;1;1100106;#brancos;;;0;
+vice-presidente;1;1100106;#nulos;;;0;
+vice-presidente;1;1100106;#comparecimento;;;1216;

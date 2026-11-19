@@ -161,7 +161,9 @@ for (const uf of nomesUf) {
     }
     escolha = melhor.m; feats = melhor.fs; fora = melhor.fo;
     // município que já existia na eleição (está na malha do IBGE de antes dela) e ficou sem dado: fica no mapa, sem cor
-    const anterior = Object.keys(TODAS).filter((m) => Number(m.slice(2)) <= Number(ANO)).sort().pop();
+    // 1947: não há malha do IBGE de antes; a de 1950 é a mais parecida com os municípios da época (os de 1940 eram
+    // bem menos), então os polígonos de 1950 sem dado ficam no mapa, sem cor, em vez de voltarem para a origem
+    const anterior = Object.keys(TODAS).filter((m) => Number(m.slice(2)) <= Math.max(Number(ANO), 1950)).sort().pop();
     // resultado por zona eleitoral (data/malhas-historicas/agrupar/{ano}-{uf}.csv): cada município vai para a sede da
     // zona; "*;vizinho" = sem a lista, os municípios sem dado vão para o vizinho com dado de maior divisa
     const arqGrupo = `data/malhas-historicas/agrupar/${ANO}-${uf}.csv`;

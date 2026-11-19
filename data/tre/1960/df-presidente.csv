@@ -1,0 +1,13 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+presidente;1;5300108;_JANIOQUADROS;JÂNIO QUADROS;PTN;7518;S
+presidente;1;5300108;_HENRIQUETEIXEIRALOTT;HENRIQUE TEIXEIRA LOTT;PSD;10444;
+presidente;1;5300108;_ADEMARDEBARROS;ADEMAR DE BARROS;PSP;1813;
+presidente;1;5300108;#brancos;;;779;
+presidente;1;5300108;#nulos;;;1288;
+presidente;1;5300108;#comparecimento;;;21842;
+vice-presidente;1;5300108;_JOAOGOULART;JOÃO GOULART;PTB;10134;S
+vice-presidente;1;5300108;_MILTONCAMPOS;MILTON CAMPOS;UDN;5686;
+vice-presidente;1;5300108;_FERNANDOFERRARI;FERNANDO FERRARI;MTR;2797;
+vice-presidente;1;5300108;#brancos;;;2185;
+vice-presidente;1;5300108;#nulos;;;1040;
+vice-presidente;1;5300108;#comparecimento;;;21842;
