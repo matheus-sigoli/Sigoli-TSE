@@ -152,7 +152,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1947, titulo: 'Eleições 1947', datas: '19 de janeiro',
-    cargos: 'Governador (por enquanto BA, MG, PE, SC e SP; MG, PE e SC por zona eleitoral) e Senador (PE, por zona eleitoral)', disponivel: true, rota: '/1947/mg/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto BA, MG, PE, PR, SC e SP; MG, PE e SC por zona eleitoral) e Senador (PE, por zona eleitoral)', disponivel: true, rota: '/1947/mg/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador'],
     fonte: 'TRE-MG, TRE-PE e TRE-SC (por zona eleitoral), TRE-BA e acervo Sigoli.TSE (por município)',
   },
