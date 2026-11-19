@@ -17,13 +17,14 @@ export class ArquivoAusente extends Error {
   }
 }
 
-/** Na Cloudflare os resultados (/data/...) ficam noutro Worker (limite de arquivos); na Vercel, no mesmo site */
+/** Na Cloudflare os resultados e as malhas (/data/..., /geo/...) ficam noutro Worker (limite de 20 mil arquivos por
+ * Worker); na Vercel, no mesmo site */
 const BASE_DADOS = process.env.NEXT_PUBLIC_DADOS_URL ?? '';
 
 export function buscar<T>(url: string): Promise<T> {
   let p = cache.get(url) as Promise<T> | undefined;
   if (!p) {
-    p = fetch(url.startsWith('/data/') ? BASE_DADOS + url : url).then(async (r) => {
+    p = fetch(url.startsWith('/data/') || url.startsWith('/geo/') ? BASE_DADOS + url : url).then(async (r) => {
       if (r.status === 404) throw new ArquivoAusente(url);
       if (!r.ok) throw new Error(`Falha ao carregar ${url} (HTTP ${r.status})`);
       return r.json() as Promise<T>;

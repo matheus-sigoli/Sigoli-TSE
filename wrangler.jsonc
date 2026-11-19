@@ -1,5 +1,5 @@
 // Site na Cloudflare (Workers, só arquivos estáticos): o build da Cloudflare roda "npm run build:cloudflare", que gera
-// out/ sem a pasta data/ (os resultados ficam no Worker sigoli-tse-dados, wrangler.dados.jsonc, porque o limite é de
+// out/ sem as pastas data/ e geo/ (resultados e malhas ficam no Worker sigoli-tse-dados, wrangler.dados.jsonc, porque o limite é de
 // 20 mil arquivos por Worker). Sem código de Worker: as requisições de arquivos estáticos não contam no plano.
 {
   "$schema": "node_modules/wrangler/config-schema.json",

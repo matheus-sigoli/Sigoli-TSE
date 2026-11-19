@@ -1,5 +1,5 @@
-// Resultados (public/data) num Worker só de arquivos estáticos, servido com CORS para o site (NEXT_PUBLIC_DADOS_URL).
-// O build da Cloudflare roda "npm run build:dados", que copia public/data para dist-dados/data com o _headers.
+// Resultados e malhas (public/data e public/geo) num Worker só de arquivos estáticos, servido com CORS para o site (NEXT_PUBLIC_DADOS_URL).
+// O build da Cloudflare roda "npm run build:dados", que copia public/data e public/geo para dist-dados/ com o _headers.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "sigoli-tse-dados",

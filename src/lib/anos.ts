@@ -98,9 +98,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1970, titulo: 'Eleições 1970', datas: '15 de novembro',
-    cargos: 'Senador e Deputado Federal (por enquanto só Rio Grande do Sul)', disponivel: true, rota: '/1970/rs/senador', semLocais: true, semZonas: true,
+    cargos: 'Senador (PR e RS) e Deputado Federal (RS)', disponivel: true, rota: '/1970/pr/senador', semLocais: true, semZonas: true,
     soCargos: ['senador', 'deputado-federal'],
-    fonte: 'TRE-RS (por município)',
+    fonte: 'TRE-RS e TRE-PR (por município)',
   },
   {
     ano: 1966, titulo: 'Eleições 1966', datas: '15 de novembro',
