@@ -12,7 +12,13 @@ export const CODIGO_UF: Record<string, string> = {
   '31': 'mg', '32': 'es', '33': 'rj', '35': 'sp', '41': 'pr', '42': 'sc', '43': 'rs', '50': 'ms',
   '51': 'mt', '52': 'go', '53': 'df',
 };
-export const ufDoIbge = (ibge: string) => CODIGO_UF[ibge.slice(0, 2)];
+/** UF do município pelo código do IBGE; com o ano, a UF da época (o MS era do MT até 1978 e o TO de GO até 1988) */
+export const ufDoIbge = (ibge: string, ano?: number) => {
+  const uf = CODIGO_UF[ibge.slice(0, 2)];
+  if (ano && uf === 'ms' && ano < 1979) return 'mt';
+  if (ano && uf === 'to' && ano < 1989) return 'go';
+  return uf;
+};
 
 /** Concorrente exibido no painel. */
 export interface Linha {
@@ -40,6 +46,8 @@ export interface Recorte {
   abr: string;
   /** municípios (chaves do arquivo) que compõem o recorte; null = abrangência inteira */
   municipios: Set<string> | null;
+  /** ano da eleição (a UF de cada município é a da época) */
+  ano?: number;
 }
 
 export interface Visao {
@@ -59,10 +67,10 @@ const zero = (): Totais => [0, 0, 0, 0, 0, 0];
 const somaT = (a: Totais, b: Totais) => { for (let i = 0; i < 6; i++) a[i] += b[i]; };
 
 /** Municípios do arquivo que pertencem à abrangência da tela. */
-export function chavesDaAbrangencia(arq: ArquivoResultado, abr: string): string[] {
+export function chavesDaAbrangencia(arq: ArquivoResultado, abr: string, ano?: number): string[] {
   const todas = Object.keys(arq.mun);
   if (abr === 'br' || abr === 'exterior' || arq.abr === abr) return todas;
-  return todas.filter((k) => ufDoIbge(k) === abr);
+  return todas.filter((k) => ufDoIbge(k, ano) === abr);
 }
 
 export function calcularVisao(
@@ -84,7 +92,7 @@ function visaoCompleta(
   { daltonico, foco, municipios, totalCores }: { daltonico: boolean; foco: Foco; municipios?: Municipio[]; totalCores?: { c: number[]; p: number[]; pintam?: { c: number[]; p: number[] } } },
 ): Visao {
   const prop = arq.tipo === 'prop';
-  const chavesTela = chavesDaAbrangencia(arq, recorte.abr);
+  const chavesTela = chavesDaAbrangencia(arq, recorte.abr, recorte.ano);
   const chavesRecorte = recorte.municipios ? chavesTela.filter((k) => recorte.municipios!.has(k)) : chavesTela;
   const usaTotalOficial = !recorte.municipios && (arq.abr === recorte.abr || (recorte.abr === 'exterior' && arq.abr === 'zz'));
 

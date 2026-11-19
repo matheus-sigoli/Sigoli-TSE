@@ -285,7 +285,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     const base = resultadoEstado.dados;
     const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p, pintam: base.pintam } : undefined;
     definirAnoCores(ano);
-    return calcularVisao(arq, { abr, municipios: recorteMunicipios }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
+    return calcularVisao(arq, { abr, municipios: recorteMunicipios, ano }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
   }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados, ano]);
 
   // ---- nomes
@@ -412,12 +412,12 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       if (abr === 'br') {
         // na visão Brasil, clicar num município abre o estado já com ele selecionado
-        const uf = ufDoIbge(id);
+        const uf = ufDoIbge(id, ano);
         if (uf) return irPara(uf, cargoSlug, { mun: id });
       }
       atualizarBusca({ mun: id === mun ? null : id });
     },
-    [abr, mun, selecao, cargoSlug, irPara, atualizarBusca, modoSoma],
+    [abr, ano, mun, selecao, cargoSlug, irPara, atualizarBusca, modoSoma],
   );
 
   // duplo clique num município (estado, sem zonas) abre a visão da cidade
