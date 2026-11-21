@@ -12,7 +12,7 @@ const CHAVES = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'] as 
 
 export const FUNDO_MAPA = paleta.mapa.fundo; // #666666
 export const BORDA_MUNICIPIO = paleta.mapa.borda_municipio; // #FFFFFF
-export const SEM_DADOS = '#7E7E7E';
+export const SEM_DADOS = '#BDBDBD'; // sem informação
 export const NEUTRO: Faixas = paleta.neutro;
 
 interface EntradaPaleta {
