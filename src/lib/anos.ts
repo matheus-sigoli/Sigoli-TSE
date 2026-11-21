@@ -146,8 +146,8 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',
-    cargos: 'Governador (por enquanto AL, BA, CE, MA e SC) e Senador (CE e SC)', disponivel: true, rota: '/1950/ba/governador', semLocais: true, semZonas: true,
-    soCargos: ['governador', 'senador'],
+    cargos: 'Presidente e Vice-Presidente (por enquanto só CE), Governador (por enquanto AL, BA, CE, MA e SC) e Senador (CE e SC)', disponivel: true, rota: '/1950/ba/governador', semLocais: true, semZonas: true,
+    soCargos: ['presidente', 'vice-presidente', 'governador', 'senador'],
     fonte: 'TRE-BA, TRE-CE, TRE-SC e acervo Sigoli.TSE (por município)',
   },
   {
