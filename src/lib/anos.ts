@@ -65,7 +65,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
-    cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, GO, MA, MG, MS, MT, PA, PI, RJ, RN, RO, RS e SP; PI só no 2º turno e metade dos municípios), Senador (CE, MS, PA, RN, RO e RS; MA só com parte dos municípios) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, GO, MA, MG, MS, MT, PA, PI, RJ, RN, RO, RS e SP; PI só no 2º turno e metade dos municípios), Senador (CE, ES, MS, PA, RN, RO e RS; MA só com parte dos municípios e ES sem 3) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'Acervo Sigoli.TSE e TREs (por município)',
   },
