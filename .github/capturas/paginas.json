@@ -1,21 +1,6 @@
 {
-  "sp-1990-gov": "/1990/sp/governador",
-  "sp-1990-seletor": {
+  "sp-1990-verde": {
     "url": "/1990/sp/governador",
-    "cliques": [
-      ".lista > li:nth-child(2) .trocar-cor"
-    ]
-  },
-  "sp-1990-escolhida": {
-    "url": "/1990/sp/governador",
-    "local": {
-      "sigoli:cores": "{\"MDB\": [\"#F7D3D8\", \"#EFA8B2\", \"#E77C8B\", \"#DF5165\", \"#8E2A4E\", \"#79233F\", \"#641D33\", \"#4F1728\", \"#3A101D\", \"#1D080E\"]}"
-    }
-  },
-  "sp-1990-seletor@cel": {
-    "url": "/1990/sp/governador",
-    "cliques": [
-      ".lista > li:nth-child(1) .trocar-cor"
-    ]
+    "cliques": [".lista > li:nth-child(2) .trocar-cor", ".opcoes-cor li:nth-child(1) .opcao-cor"]
   }
 }

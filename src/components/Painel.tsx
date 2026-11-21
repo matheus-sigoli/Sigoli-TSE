@@ -423,13 +423,13 @@ function SeletorCor({ partido, atual, escolhidas, aoEscolher, aoRestaurarTodas, 
   const base = atual['50'].toUpperCase();
   const temEscolha = !!escolhidas[chave];
   const nEscolhidas = Object.keys(escolhidas).length;
-  const opcao = (o: OpcaoCor, padrao: boolean) => (
+  const opcao = (o: OpcaoCor) => (
     <li key={o.rotulo + o.faixas['50']}>
       <button
         type="button"
         className="opcao-cor"
         aria-pressed={o.faixas['50'].toUpperCase() === base}
-        onClick={() => aoEscolher(chave, padrao && o === proprias[0] ? null : faixasEmLista(o.faixas))}
+        onClick={() => aoEscolher(chave, faixasEmLista(o.faixas))}
       >
         <span className="degrade" aria-hidden>
           {faixasEmLista(o.faixas).map((c, i) => <i key={i} style={{ background: c }} />)}
@@ -447,11 +447,11 @@ function SeletorCor({ partido, atual, escolhidas, aoEscolher, aoRestaurarTodas, 
         </div>
         <p className="dica">Escolha uma faixa da tabela do degradê. Vale para este partido em todos os mapas (fica salvo neste navegador).</p>
         <h3>Cores do partido na tabela</h3>
-        <ul className="opcoes-cor">{proprias.map((o) => opcao(o, true))}</ul>
+        <ul className="opcoes-cor">{proprias.map(opcao)}</ul>
         <h3>Outras cores da tabela</h3>
-        <ul className="opcoes-cor">{outras.map((o) => opcao(o, false))}</ul>
+        <ul className="opcoes-cor">{outras.map(opcao)}</ul>
         <div className="seletor-acoes">
-          {temEscolha ? <button type="button" onClick={() => aoEscolher(chave, null)}>Voltar à cor padrão</button> : null}
+          {temEscolha ? <button type="button" onClick={() => aoEscolher(chave, null)}>Voltar à cor automática</button> : null}
           {nEscolhidas > (temEscolha ? 1 : 0) ? <button type="button" onClick={aoRestaurarTodas}>Restaurar todas as cores ({nEscolhidas})</button> : null}
         </div>
       </div>
