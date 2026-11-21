@@ -1,8 +1,6 @@
 {
   "go-1990-gov": "/1990/go/governador",
-  "es-1990-gov1": "/1990/es/governador",
-  "es-1990-sen": "/1990/es/senador",
-  "ba-1990-sen": "/1990/ba/senador",
-  "ce-1950-pres": "/1950/ce/presidente",
-  "br-1950-pres": "/1950/br/presidente"
+  "br-1950-pres": "/1950/br/presidente",
+  "br-1990-gov": "/1990/br/governador",
+  "sp-2022-pres@cel": "/2022/sp/presidente"
 }

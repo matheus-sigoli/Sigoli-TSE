@@ -2,12 +2,12 @@
 /**
  * Mapa em SVG (ADR 0010). Sem biblioteca de mapas: a malha do IBGE é projetada uma vez
  * (Mercator, src/lib/projecao.ts) e o zoom/arraste é uma transformação no <g> de cima.
- * Fundo #666666 e bordas brancas (ADR 0004). Camadas, de baixo para cima:
+ * Sem fundo (o mapa fica direto sobre a página), áreas sem informação em #BDBDBD e bordas brancas (ADR 0004). Camadas, de baixo para cima:
  *   fundo (cidade em cinza, no nível bairros) → áreas (cor do vencedor) → linhas (divisas)
  *   → círculos (bairros sem área) → contorno de hover e de seleção.
  */
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { BORDA_MUNICIPIO, FUNDO_MAPA, SEM_DADOS } from '@/lib/cores';
+import { BORDA_MUNICIPIO, SEM_DADOS } from '@/lib/cores';
 import type { Malha } from '@/lib/dados';
 import { caixa, caminho, criarProjecao, type Caixa } from '@/lib/projecao';
 
@@ -309,7 +309,6 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, s
         onPointerLeave={() => { setHover(null); setDica(null); }}
         onKeyDown={aoTeclar}
       >
-        <rect width="100%" height="100%" fill={FUNDO_MAPA} />
         <g transform={`translate(${vista.x},${vista.y}) scale(${vista.k})`}>
           {fundoD ? <path className={semContornoFundo ? 'mapa-fundo sem-contorno' : 'mapa-fundo'} d={fundoD} /> : null}
           <g className="mapa-areas" stroke={BORDA_MUNICIPIO} strokeWidth={traco} strokeOpacity={areas.length > 2000 ? 0.75 : 0.95}>
