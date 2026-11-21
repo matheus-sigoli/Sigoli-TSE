@@ -1,0 +1,1457 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+governador;1;5208707;17;PAULO ROBERTO CUNHA;PDC;115650;
+governador;1;5208707;13;VALDI CAMARCIO;PT;37241;
+governador;1;5208707;15;IRIS REZENDE MACHADO;PMDB;188908;S
+governador;1;5208707;12;IRAM DE ALMEIDA SARAIVA;PDT;23764;
+governador;1;5208707;#brancos;;;15316;
+governador;1;5208707;#nulos;;;40173;
+governador;1;5208707;#comparecimento;;;421052;
+governador;1;5201108;17;PAULO ROBERTO CUNHA;PDC;25415;
+governador;1;5201108;13;VALDI CAMARCIO;PT;4890;
+governador;1;5201108;15;IRIS REZENDE MACHADO;PMDB;50151;S
+governador;1;5201108;12;IRAM DE ALMEIDA SARAIVA;PDT;4605;
+governador;1;5201108;#brancos;;;7355;
+governador;1;5201108;#nulos;;;14783;
+governador;1;5201108;#comparecimento;;;107199;
+governador;1;5200209;17;PAULO ROBERTO CUNHA;PDC;390;
+governador;1;5200209;13;VALDI CAMARCIO;PT;9;
+governador;1;5200209;15;IRIS REZENDE MACHADO;PMDB;1033;S
+governador;1;5200209;12;IRAM DE ALMEIDA SARAIVA;PDT;13;
+governador;1;5200209;#brancos;;;49;
+governador;1;5200209;#nulos;;;65;
+governador;1;5200209;#comparecimento;;;1559;
+governador;1;5203906;17;PAULO ROBERTO CUNHA;PDC;2101;
+governador;1;5203906;13;VALDI CAMARCIO;PT;134;
+governador;1;5203906;15;IRIS REZENDE MACHADO;PMDB;3018;S
+governador;1;5203906;12;IRAM DE ALMEIDA SARAIVA;PDT;91;
+governador;1;5203906;#brancos;;;266;
+governador;1;5203906;#nulos;;;437;
+governador;1;5203906;#comparecimento;;;6047;
+governador;1;5215652;17;PAULO ROBERTO CUNHA;PDC;394;
+governador;1;5215652;13;VALDI CAMARCIO;PT;52;
+governador;1;5215652;15;IRIS REZENDE MACHADO;PMDB;1360;S
+governador;1;5215652;12;IRAM DE ALMEIDA SARAIVA;PDT;10;
+governador;1;5215652;#brancos;;;79;
+governador;1;5215652;#nulos;;;132;
+governador;1;5215652;#comparecimento;;;2027;
+governador;1;5204409;17;PAULO ROBERTO CUNHA;PDC;2984;
+governador;1;5204409;13;VALDI CAMARCIO;PT;159;
+governador;1;5204409;15;IRIS REZENDE MACHADO;PMDB;2796;S
+governador;1;5204409;12;IRAM DE ALMEIDA SARAIVA;PDT;52;
+governador;1;5204409;#brancos;;;263;
+governador;1;5204409;#nulos;;;469;
+governador;1;5204409;#comparecimento;;;6723;
+governador;1;5207253;17;PAULO ROBERTO CUNHA;PDC;1158;
+governador;1;5207253;13;VALDI CAMARCIO;PT;14;
+governador;1;5207253;15;IRIS REZENDE MACHADO;PMDB;1887;S
+governador;1;5207253;12;IRAM DE ALMEIDA SARAIVA;PDT;37;
+governador;1;5207253;#brancos;;;125;
+governador;1;5207253;#nulos;;;187;
+governador;1;5207253;#comparecimento;;;3408;
+governador;1;5218789;17;PAULO ROBERTO CUNHA;PDC;347;
+governador;1;5218789;13;VALDI CAMARCIO;PT;38;
+governador;1;5218789;15;IRIS REZENDE MACHADO;PMDB;950;S
+governador;1;5218789;12;IRAM DE ALMEIDA SARAIVA;PDT;38;
+governador;1;5218789;#brancos;;;74;
+governador;1;5218789;#nulos;;;141;
+governador;1;5218789;#comparecimento;;;1588;
+governador;1;5204508;17;PAULO ROBERTO CUNHA;PDC;2627;
+governador;1;5204508;13;VALDI CAMARCIO;PT;271;
+governador;1;5204508;15;IRIS REZENDE MACHADO;PMDB;5447;S
+governador;1;5204508;12;IRAM DE ALMEIDA SARAIVA;PDT;286;
+governador;1;5204508;#brancos;;;377;
+governador;1;5204508;#nulos;;;963;
+governador;1;5204508;#comparecimento;;;9971;
+governador;1;5212907;17;PAULO ROBERTO CUNHA;PDC;364;
+governador;1;5212907;13;VALDI CAMARCIO;PT;23;
+governador;1;5212907;15;IRIS REZENDE MACHADO;PMDB;605;S
+governador;1;5212907;12;IRAM DE ALMEIDA SARAIVA;PDT;14;
+governador;1;5212907;#brancos;;;34;
+governador;1;5212907;#nulos;;;50;
+governador;1;5212907;#comparecimento;;;1090;
+governador;1;5205109;17;PAULO ROBERTO CUNHA;PDC;4762;
+governador;1;5205109;13;VALDI CAMARCIO;PT;1186;
+governador;1;5205109;15;IRIS REZENDE MACHADO;PMDB;15302;S
+governador;1;5205109;12;IRAM DE ALMEIDA SARAIVA;PDT;953;
+governador;1;5205109;#brancos;;;1520;
+governador;1;5205109;#nulos;;;2928;
+governador;1;5205109;#comparecimento;;;26651;
+governador;1;5206909;17;PAULO ROBERTO CUNHA;PDC;801;
+governador;1;5206909;13;VALDI CAMARCIO;PT;18;
+governador;1;5206909;15;IRIS REZENDE MACHADO;PMDB;730;S
+governador;1;5206909;12;IRAM DE ALMEIDA SARAIVA;PDT;28;
+governador;1;5206909;#brancos;;;47;
+governador;1;5206909;#nulos;;;80;
+governador;1;5206909;#comparecimento;;;1704;
+governador;1;5215504;17;PAULO ROBERTO CUNHA;PDC;1155;
+governador;1;5215504;13;VALDI CAMARCIO;PT;143;
+governador;1;5215504;15;IRIS REZENDE MACHADO;PMDB;1278;S
+governador;1;5215504;12;IRAM DE ALMEIDA SARAIVA;PDT;105;
+governador;1;5215504;#brancos;;;164;
+governador;1;5215504;#nulos;;;290;
+governador;1;5215504;#comparecimento;;;3135;
+governador;1;5221304;17;PAULO ROBERTO CUNHA;PDC;303;
+governador;1;5221304;13;VALDI CAMARCIO;PT;36;
+governador;1;5221304;15;IRIS REZENDE MACHADO;PMDB;778;S
+governador;1;5221304;12;IRAM DE ALMEIDA SARAIVA;PDT;54;
+governador;1;5221304;#brancos;;;71;
+governador;1;5221304;#nulos;;;143;
+governador;1;5221304;#comparecimento;;;1385;
+governador;1;5205802;17;PAULO ROBERTO CUNHA;PDC;1701;
+governador;1;5205802;13;VALDI CAMARCIO;PT;213;
+governador;1;5205802;15;IRIS REZENDE MACHADO;PMDB;5683;S
+governador;1;5205802;12;IRAM DE ALMEIDA SARAIVA;PDT;154;
+governador;1;5205802;#brancos;;;1205;
+governador;1;5205802;#nulos;;;1464;
+governador;1;5205802;#comparecimento;;;10420;
+governador;1;5205901;17;PAULO ROBERTO CUNHA;PDC;997;
+governador;1;5205901;13;VALDI CAMARCIO;PT;69;
+governador;1;5205901;15;IRIS REZENDE MACHADO;PMDB;1848;S
+governador;1;5205901;12;IRAM DE ALMEIDA SARAIVA;PDT;61;
+governador;1;5205901;#brancos;;;117;
+governador;1;5205901;#nulos;;;208;
+governador;1;5205901;#comparecimento;;;3300;
+governador;1;5204003;17;PAULO ROBERTO CUNHA;PDC;1059;
+governador;1;5204003;13;VALDI CAMARCIO;PT;39;
+governador;1;5204003;15;IRIS REZENDE MACHADO;PMDB;1137;S
+governador;1;5204003;12;IRAM DE ALMEIDA SARAIVA;PDT;92;
+governador;1;5204003;#brancos;;;439;
+governador;1;5204003;#nulos;;;603;
+governador;1;5204003;#comparecimento;;;3369;
+governador;1;5207907;17;PAULO ROBERTO CUNHA;PDC;293;
+governador;1;5207907;13;VALDI CAMARCIO;PT;22;
+governador;1;5207907;15;IRIS REZENDE MACHADO;PMDB;1196;S
+governador;1;5207907;12;IRAM DE ALMEIDA SARAIVA;PDT;18;
+governador;1;5207907;#brancos;;;198;
+governador;1;5207907;#nulos;;;192;
+governador;1;5207907;#comparecimento;;;1919;
+governador;1;5208004;17;PAULO ROBERTO CUNHA;PDC;6928;
+governador;1;5208004;13;VALDI CAMARCIO;PT;842;
+governador;1;5208004;15;IRIS REZENDE MACHADO;PMDB;11684;S
+governador;1;5208004;12;IRAM DE ALMEIDA SARAIVA;PDT;1014;
+governador;1;5208004;#brancos;;;2548;
+governador;1;5208004;#nulos;;;3819;
+governador;1;5208004;#comparecimento;;;26835;
+governador;1;5214903;17;PAULO ROBERTO CUNHA;PDC;410;
+governador;1;5214903;13;VALDI CAMARCIO;PT;19;
+governador;1;5214903;15;IRIS REZENDE MACHADO;PMDB;964;S
+governador;1;5214903;12;IRAM DE ALMEIDA SARAIVA;PDT;10;
+governador;1;5214903;#brancos;;;115;
+governador;1;5214903;#nulos;;;130;
+governador;1;5214903;#comparecimento;;;1648;
+governador;1;5220009;17;PAULO ROBERTO CUNHA;PDC;679;
+governador;1;5220009;13;VALDI CAMARCIO;PT;73;
+governador;1;5220009;15;IRIS REZENDE MACHADO;PMDB;891;S
+governador;1;5220009;12;IRAM DE ALMEIDA SARAIVA;PDT;43;
+governador;1;5220009;#brancos;;;268;
+governador;1;5220009;#nulos;;;250;
+governador;1;5220009;#comparecimento;;;2204;
+governador;1;5207535;17;PAULO ROBERTO CUNHA;PDC;665;
+governador;1;5207535;13;VALDI CAMARCIO;PT;91;
+governador;1;5207535;15;IRIS REZENDE MACHADO;PMDB;2475;S
+governador;1;5207535;12;IRAM DE ALMEIDA SARAIVA;PDT;29;
+governador;1;5207535;#brancos;;;149;
+governador;1;5207535;#nulos;;;234;
+governador;1;5207535;#comparecimento;;;3643;
+governador;1;5208905;17;PAULO ROBERTO CUNHA;PDC;3850;
+governador;1;5208905;13;VALDI CAMARCIO;PT;792;
+governador;1;5208905;15;IRIS REZENDE MACHADO;PMDB;7393;S
+governador;1;5208905;12;IRAM DE ALMEIDA SARAIVA;PDT;241;
+governador;1;5208905;#brancos;;;702;
+governador;1;5208905;#nulos;;;1241;
+governador;1;5208905;#comparecimento;;;14219;
+governador;1;5202155;17;PAULO ROBERTO CUNHA;PDC;1354;
+governador;1;5202155;13;VALDI CAMARCIO;PT;157;
+governador;1;5202155;15;IRIS REZENDE MACHADO;PMDB;1336;S
+governador;1;5202155;12;IRAM DE ALMEIDA SARAIVA;PDT;50;
+governador;1;5202155;#brancos;;;188;
+governador;1;5202155;#nulos;;;269;
+governador;1;5202155;#comparecimento;;;3354;
+governador;1;5206800;17;PAULO ROBERTO CUNHA;PDC;668;
+governador;1;5206800;13;VALDI CAMARCIO;PT;81;
+governador;1;5206800;15;IRIS REZENDE MACHADO;PMDB;1716;S
+governador;1;5206800;12;IRAM DE ALMEIDA SARAIVA;PDT;61;
+governador;1;5206800;#brancos;;;115;
+governador;1;5206800;#nulos;;;203;
+governador;1;5206800;#comparecimento;;;2844;
+governador;1;5210000;17;PAULO ROBERTO CUNHA;PDC;6652;
+governador;1;5210000;13;VALDI CAMARCIO;PT;738;
+governador;1;5210000;15;IRIS REZENDE MACHADO;PMDB;8678;S
+governador;1;5210000;12;IRAM DE ALMEIDA SARAIVA;PDT;648;
+governador;1;5210000;#brancos;;;1050;
+governador;1;5210000;#nulos;;;2071;
+governador;1;5210000;#comparecimento;;;19837;
+governador;1;5204805;17;PAULO ROBERTO CUNHA;PDC;504;
+governador;1;5204805;13;VALDI CAMARCIO;PT;46;
+governador;1;5204805;15;IRIS REZENDE MACHADO;PMDB;1217;S
+governador;1;5204805;12;IRAM DE ALMEIDA SARAIVA;PDT;36;
+governador;1;5204805;#brancos;;;175;
+governador;1;5204805;#nulos;;;216;
+governador;1;5204805;#comparecimento;;;2194;
+governador;1;5210109;17;PAULO ROBERTO CUNHA;PDC;2475;
+governador;1;5210109;13;VALDI CAMARCIO;PT;328;
+governador;1;5210109;15;IRIS REZENDE MACHADO;PMDB;7320;S
+governador;1;5210109;12;IRAM DE ALMEIDA SARAIVA;PDT;161;
+governador;1;5210109;#brancos;;;587;
+governador;1;5210109;#nulos;;;1050;
+governador;1;5210109;#comparecimento;;;11921;
+governador;1;5209606;17;PAULO ROBERTO CUNHA;PDC;808;
+governador;1;5209606;13;VALDI CAMARCIO;PT;70;
+governador;1;5209606;15;IRIS REZENDE MACHADO;PMDB;947;S
+governador;1;5209606;12;IRAM DE ALMEIDA SARAIVA;PDT;18;
+governador;1;5209606;#brancos;;;83;
+governador;1;5209606;#nulos;;;123;
+governador;1;5209606;#comparecimento;;;2049;
+governador;1;5210406;17;PAULO ROBERTO CUNHA;PDC;3701;
+governador;1;5210406;13;VALDI CAMARCIO;PT;804;
+governador;1;5210406;15;IRIS REZENDE MACHADO;PMDB;6602;S
+governador;1;5210406;12;IRAM DE ALMEIDA SARAIVA;PDT;309;
+governador;1;5210406;#brancos;;;607;
+governador;1;5210406;#nulos;;;1100;
+governador;1;5210406;#comparecimento;;;13123;
+governador;1;5211503;17;PAULO ROBERTO CUNHA;PDC;16518;
+governador;1;5211503;13;VALDI CAMARCIO;PT;1288;
+governador;1;5211503;15;IRIS REZENDE MACHADO;PMDB;15386;S
+governador;1;5211503;12;IRAM DE ALMEIDA SARAIVA;PDT;969;
+governador;1;5211503;#brancos;;;2339;
+governador;1;5211503;#nulos;;;5385;
+governador;1;5211503;#comparecimento;;;41885;
+governador;1;5204250;17;PAULO ROBERTO CUNHA;PDC;1453;
+governador;1;5204250;13;VALDI CAMARCIO;PT;63;
+governador;1;5204250;15;IRIS REZENDE MACHADO;PMDB;2530;S
+governador;1;5204250;12;IRAM DE ALMEIDA SARAIVA;PDT;40;
+governador;1;5204250;#brancos;;;312;
+governador;1;5204250;#nulos;;;630;
+governador;1;5204250;#comparecimento;;;5028;
+governador;1;5211800;17;PAULO ROBERTO CUNHA;PDC;4831;
+governador;1;5211800;13;VALDI CAMARCIO;PT;385;
+governador;1;5211800;15;IRIS REZENDE MACHADO;PMDB;5794;S
+governador;1;5211800;12;IRAM DE ALMEIDA SARAIVA;PDT;562;
+governador;1;5211800;#brancos;;;642;
+governador;1;5211800;#nulos;;;1155;
+governador;1;5211800;#comparecimento;;;13369;
+governador;1;5219902;17;PAULO ROBERTO CUNHA;PDC;1531;
+governador;1;5219902;13;VALDI CAMARCIO;PT;86;
+governador;1;5219902;15;IRIS REZENDE MACHADO;PMDB;1855;S
+governador;1;5219902;12;IRAM DE ALMEIDA SARAIVA;PDT;59;
+governador;1;5219902;#brancos;;;220;
+governador;1;5219902;#nulos;;;414;
+governador;1;5219902;#comparecimento;;;4165;
+governador;1;5219357;17;PAULO ROBERTO CUNHA;PDC;757;
+governador;1;5219357;13;VALDI CAMARCIO;PT;60;
+governador;1;5219357;15;IRIS REZENDE MACHADO;PMDB;1159;S
+governador;1;5219357;12;IRAM DE ALMEIDA SARAIVA;PDT;21;
+governador;1;5219357;#brancos;;;92;
+governador;1;5219357;#nulos;;;141;
+governador;1;5219357;#comparecimento;;;2230;
+governador;1;5211909;17;PAULO ROBERTO CUNHA;PDC;12811;
+governador;1;5211909;13;VALDI CAMARCIO;PT;813;
+governador;1;5211909;15;IRIS REZENDE MACHADO;PMDB;12281;S
+governador;1;5211909;12;IRAM DE ALMEIDA SARAIVA;PDT;1048;
+governador;1;5211909;#brancos;;;1859;
+governador;1;5211909;#nulos;;;3415;
+governador;1;5211909;#comparecimento;;;32227;
+governador;1;5220504;17;PAULO ROBERTO CUNHA;PDC;1286;
+governador;1;5220504;13;VALDI CAMARCIO;PT;77;
+governador;1;5220504;15;IRIS REZENDE MACHADO;PMDB;1667;S
+governador;1;5220504;12;IRAM DE ALMEIDA SARAIVA;PDT;52;
+governador;1;5220504;#brancos;;;191;
+governador;1;5220504;#nulos;;;222;
+governador;1;5220504;#comparecimento;;;3495;
+governador;1;5212501;17;PAULO ROBERTO CUNHA;PDC;9262;
+governador;1;5212501;13;VALDI CAMARCIO;PT;3261;
+governador;1;5212501;15;IRIS REZENDE MACHADO;PMDB;22604;S
+governador;1;5212501;12;IRAM DE ALMEIDA SARAIVA;PDT;2141;
+governador;1;5212501;#brancos;;;7819;
+governador;1;5212501;#nulos;;;12454;
+governador;1;5212501;#comparecimento;;;57541;
+governador;1;5205455;17;PAULO ROBERTO CUNHA;PDC;912;
+governador;1;5205455;13;VALDI CAMARCIO;PT;151;
+governador;1;5205455;15;IRIS REZENDE MACHADO;PMDB;2118;S
+governador;1;5205455;12;IRAM DE ALMEIDA SARAIVA;PDT;80;
+governador;1;5205455;#brancos;;;151;
+governador;1;5205455;#nulos;;;260;
+governador;1;5205455;#comparecimento;;;3672;
+governador;1;5215702;17;PAULO ROBERTO CUNHA;PDC;3030;
+governador;1;5215702;13;VALDI CAMARCIO;PT;401;
+governador;1;5215702;15;IRIS REZENDE MACHADO;PMDB;4019;S
+governador;1;5215702;12;IRAM DE ALMEIDA SARAIVA;PDT;253;
+governador;1;5215702;#brancos;;;425;
+governador;1;5215702;#nulos;;;964;
+governador;1;5215702;#comparecimento;;;9092;
+governador;1;5213103;17;PAULO ROBERTO CUNHA;PDC;6971;
+governador;1;5213103;13;VALDI CAMARCIO;PT;312;
+governador;1;5213103;15;IRIS REZENDE MACHADO;PMDB;4992;S
+governador;1;5213103;12;IRAM DE ALMEIDA SARAIVA;PDT;377;
+governador;1;5213103;#brancos;;;1009;
+governador;1;5213103;#nulos;;;1628;
+governador;1;5213103;#comparecimento;;;15289;
+governador;1;5218102;17;PAULO ROBERTO CUNHA;PDC;635;
+governador;1;5218102;13;VALDI CAMARCIO;PT;26;
+governador;1;5218102;15;IRIS REZENDE MACHADO;PMDB;687;S
+governador;1;5218102;12;IRAM DE ALMEIDA SARAIVA;PDT;17;
+governador;1;5218102;#brancos;;;123;
+governador;1;5218102;#nulos;;;196;
+governador;1;5218102;#comparecimento;;;1684;
+governador;1;5219407;17;PAULO ROBERTO CUNHA;PDC;891;
+governador;1;5219407;13;VALDI CAMARCIO;PT;29;
+governador;1;5219407;15;IRIS REZENDE MACHADO;PMDB;987;S
+governador;1;5219407;12;IRAM DE ALMEIDA SARAIVA;PDT;38;
+governador;1;5219407;#brancos;;;152;
+governador;1;5219407;#nulos;;;209;
+governador;1;5219407;#comparecimento;;;2306;
+governador;1;5213806;17;PAULO ROBERTO CUNHA;PDC;5492;
+governador;1;5213806;13;VALDI CAMARCIO;PT;599;
+governador;1;5213806;15;IRIS REZENDE MACHADO;PMDB;7885;S
+governador;1;5213806;12;IRAM DE ALMEIDA SARAIVA;PDT;883;
+governador;1;5213806;#brancos;;;1066;
+governador;1;5213806;#nulos;;;2081;
+governador;1;5213806;#comparecimento;;;18006;
+governador;1;5215306;17;PAULO ROBERTO CUNHA;PDC;2270;
+governador;1;5215306;13;VALDI CAMARCIO;PT;556;
+governador;1;5215306;15;IRIS REZENDE MACHADO;PMDB;3336;S
+governador;1;5215306;12;IRAM DE ALMEIDA SARAIVA;PDT;91;
+governador;1;5215306;#brancos;;;323;
+governador;1;5215306;#nulos;;;430;
+governador;1;5215306;#comparecimento;;;7006;
+governador;1;5217104;17;PAULO ROBERTO CUNHA;PDC;4109;
+governador;1;5217104;13;VALDI CAMARCIO;PT;618;
+governador;1;5217104;15;IRIS REZENDE MACHADO;PMDB;6638;S
+governador;1;5217104;12;IRAM DE ALMEIDA SARAIVA;PDT;370;
+governador;1;5217104;#brancos;;;750;
+governador;1;5217104;#nulos;;;977;
+governador;1;5217104;#comparecimento;;;13462;
+governador;1;5217302;17;PAULO ROBERTO CUNHA;PDC;4395;
+governador;1;5217302;13;VALDI CAMARCIO;PT;335;
+governador;1;5217302;15;IRIS REZENDE MACHADO;PMDB;5571;S
+governador;1;5217302;12;IRAM DE ALMEIDA SARAIVA;PDT;171;
+governador;1;5217302;#brancos;;;702;
+governador;1;5217302;#nulos;;;1047;
+governador;1;5217302;#comparecimento;;;12221;
+governador;1;5217401;17;PAULO ROBERTO CUNHA;PDC;1905;
+governador;1;5217401;13;VALDI CAMARCIO;PT;167;
+governador;1;5217401;15;IRIS REZENDE MACHADO;PMDB;8648;S
+governador;1;5217401;12;IRAM DE ALMEIDA SARAIVA;PDT;193;
+governador;1;5217401;#brancos;;;597;
+governador;1;5217401;#nulos;;;1021;
+governador;1;5217401;#comparecimento;;;12531;
+governador;1;5220686;17;PAULO ROBERTO CUNHA;PDC;654;
+governador;1;5220686;13;VALDI CAMARCIO;PT;39;
+governador;1;5220686;15;IRIS REZENDE MACHADO;PMDB;1205;S
+governador;1;5220686;12;IRAM DE ALMEIDA SARAIVA;PDT;51;
+governador;1;5220686;#brancos;;;348;
+governador;1;5220686;#nulos;;;229;
+governador;1;5220686;#comparecimento;;;2526;
+governador;1;5209408;17;PAULO ROBERTO CUNHA;PDC;649;
+governador;1;5209408;13;VALDI CAMARCIO;PT;20;
+governador;1;5209408;15;IRIS REZENDE MACHADO;PMDB;1137;S
+governador;1;5209408;12;IRAM DE ALMEIDA SARAIVA;PDT;20;
+governador;1;5209408;#brancos;;;196;
+governador;1;5209408;#nulos;;;146;
+governador;1;5209408;#comparecimento;;;2168;
+governador;1;5209903;17;PAULO ROBERTO CUNHA;PDC;2093;
+governador;1;5209903;13;VALDI CAMARCIO;PT;58;
+governador;1;5209903;15;IRIS REZENDE MACHADO;PMDB;1512;S
+governador;1;5209903;12;IRAM DE ALMEIDA SARAIVA;PDT;72;
+governador;1;5209903;#brancos;;;693;
+governador;1;5209903;#nulos;;;345;
+governador;1;5209903;#comparecimento;;;4773;
+governador;1;5218300;17;PAULO ROBERTO CUNHA;PDC;4114;
+governador;1;5218300;13;VALDI CAMARCIO;PT;214;
+governador;1;5218300;15;IRIS REZENDE MACHADO;PMDB;3388;S
+governador;1;5218300;12;IRAM DE ALMEIDA SARAIVA;PDT;269;
+governador;1;5218300;#brancos;;;1119;
+governador;1;5218300;#nulos;;;979;
+governador;1;5218300;#comparecimento;;;10083;
+governador;1;5218805;17;PAULO ROBERTO CUNHA;PDC;25392;
+governador;1;5218805;13;VALDI CAMARCIO;PT;556;
+governador;1;5218805;15;IRIS REZENDE MACHADO;PMDB;17613;S
+governador;1;5218805;12;IRAM DE ALMEIDA SARAIVA;PDT;347;
+governador;1;5218805;#brancos;;;1604;
+governador;1;5218805;#nulos;;;2548;
+governador;1;5218805;#comparecimento;;;48060;
+governador;1;5220264;17;PAULO ROBERTO CUNHA;PDC;199;
+governador;1;5220264;13;VALDI CAMARCIO;PT;63;
+governador;1;5220264;15;IRIS REZENDE MACHADO;PMDB;1029;S
+governador;1;5220264;12;IRAM DE ALMEIDA SARAIVA;PDT;17;
+governador;1;5220264;#brancos;;;77;
+governador;1;5220264;#nulos;;;73;
+governador;1;5220264;#comparecimento;;;1458;
+governador;1;5220603;17;PAULO ROBERTO CUNHA;PDC;2395;
+governador;1;5220603;13;VALDI CAMARCIO;PT;247;
+governador;1;5220603;15;IRIS REZENDE MACHADO;PMDB;3708;S
+governador;1;5220603;12;IRAM DE ALMEIDA SARAIVA;PDT;156;
+governador;1;5220603;#brancos;;;344;
+governador;1;5220603;#nulos;;;803;
+governador;1;5220603;#comparecimento;;;7653;
+governador;1;5203302;17;PAULO ROBERTO CUNHA;PDC;2410;
+governador;1;5203302;13;VALDI CAMARCIO;PT;756;
+governador;1;5203302;15;IRIS REZENDE MACHADO;PMDB;4788;S
+governador;1;5203302;12;IRAM DE ALMEIDA SARAIVA;PDT;313;
+governador;1;5203302;#brancos;;;442;
+governador;1;5203302;#nulos;;;725;
+governador;1;5203302;#comparecimento;;;9434;
+governador;1;5201306;17;PAULO ROBERTO CUNHA;PDC;4261;
+governador;1;5201306;13;VALDI CAMARCIO;PT;446;
+governador;1;5201306;15;IRIS REZENDE MACHADO;PMDB;3503;S
+governador;1;5201306;12;IRAM DE ALMEIDA SARAIVA;PDT;313;
+governador;1;5201306;#brancos;;;470;
+governador;1;5201306;#nulos;;;752;
+governador;1;5201306;#comparecimento;;;9745;
+governador;1;5200852;17;PAULO ROBERTO CUNHA;PDC;1571;
+governador;1;5200852;13;VALDI CAMARCIO;PT;176;
+governador;1;5200852;15;IRIS REZENDE MACHADO;PMDB;1637;S
+governador;1;5200852;12;IRAM DE ALMEIDA SARAIVA;PDT;46;
+governador;1;5200852;#brancos;;;171;
+governador;1;5200852;#nulos;;;270;
+governador;1;5200852;#comparecimento;;;3871;
+governador;1;5201702;17;PAULO ROBERTO CUNHA;PDC;619;
+governador;1;5201702;13;VALDI CAMARCIO;PT;103;
+governador;1;5201702;15;IRIS REZENDE MACHADO;PMDB;3313;S
+governador;1;5201702;12;IRAM DE ALMEIDA SARAIVA;PDT;126;
+governador;1;5201702;#brancos;;;505;
+governador;1;5201702;#nulos;;;934;
+governador;1;5201702;#comparecimento;;;5600;
+governador;1;5203104;17;PAULO ROBERTO CUNHA;PDC;316;
+governador;1;5203104;13;VALDI CAMARCIO;PT;10;
+governador;1;5203104;15;IRIS REZENDE MACHADO;PMDB;622;S
+governador;1;5203104;12;IRAM DE ALMEIDA SARAIVA;PDT;14;
+governador;1;5203104;#brancos;;;64;
+governador;1;5203104;#nulos;;;90;
+governador;1;5203104;#comparecimento;;;1116;
+governador;1;5203401;17;PAULO ROBERTO CUNHA;PDC;1243;
+governador;1;5203401;13;VALDI CAMARCIO;PT;70;
+governador;1;5203401;15;IRIS REZENDE MACHADO;PMDB;1712;S
+governador;1;5203401;12;IRAM DE ALMEIDA SARAIVA;PDT;66;
+governador;1;5203401;#brancos;;;145;
+governador;1;5203401;#nulos;;;296;
+governador;1;5203401;#comparecimento;;;3532;
+governador;1;5206206;17;PAULO ROBERTO CUNHA;PDC;3940;
+governador;1;5206206;13;VALDI CAMARCIO;PT;202;
+governador;1;5206206;15;IRIS REZENDE MACHADO;PMDB;3949;S
+governador;1;5206206;12;IRAM DE ALMEIDA SARAIVA;PDT;340;
+governador;1;5206206;#brancos;;;1644;
+governador;1;5206206;#nulos;;;1406;
+governador;1;5206206;#comparecimento;;;11481;
+governador;1;5208509;17;PAULO ROBERTO CUNHA;PDC;892;
+governador;1;5208509;13;VALDI CAMARCIO;PT;244;
+governador;1;5208509;15;IRIS REZENDE MACHADO;PMDB;1775;S
+governador;1;5208509;12;IRAM DE ALMEIDA SARAIVA;PDT;117;
+governador;1;5208509;#brancos;;;162;
+governador;1;5208509;#nulos;;;338;
+governador;1;5208509;#comparecimento;;;3528;
+governador;1;5214804;17;PAULO ROBERTO CUNHA;PDC;659;
+governador;1;5214804;13;VALDI CAMARCIO;PT;40;
+governador;1;5214804;15;IRIS REZENDE MACHADO;PMDB;847;S
+governador;1;5214804;12;IRAM DE ALMEIDA SARAIVA;PDT;31;
+governador;1;5214804;#brancos;;;47;
+governador;1;5214804;#nulos;;;77;
+governador;1;5214804;#comparecimento;;;1701;
+governador;1;5209101;17;PAULO ROBERTO CUNHA;PDC;5009;
+governador;1;5209101;13;VALDI CAMARCIO;PT;360;
+governador;1;5209101;15;IRIS REZENDE MACHADO;PMDB;8027;S
+governador;1;5209101;12;IRAM DE ALMEIDA SARAIVA;PDT;340;
+governador;1;5209101;#brancos;;;723;
+governador;1;5209101;#nulos;;;1596;
+governador;1;5209101;#comparecimento;;;16055;
+governador;1;5220157;17;PAULO ROBERTO CUNHA;PDC;407;
+governador;1;5220157;13;VALDI CAMARCIO;PT;20;
+governador;1;5220157;15;IRIS REZENDE MACHADO;PMDB;1231;S
+governador;1;5220157;12;IRAM DE ALMEIDA SARAIVA;PDT;13;
+governador;1;5220157;#brancos;;;134;
+governador;1;5220157;#nulos;;;147;
+governador;1;5220157;#comparecimento;;;1952;
+governador;1;5209457;17;PAULO ROBERTO CUNHA;PDC;333;
+governador;1;5209457;13;VALDI CAMARCIO;PT;12;
+governador;1;5209457;15;IRIS REZENDE MACHADO;PMDB;1270;S
+governador;1;5209457;12;IRAM DE ALMEIDA SARAIVA;PDT;7;
+governador;1;5209457;#brancos;;;102;
+governador;1;5209457;#nulos;;;100;
+governador;1;5209457;#comparecimento;;;1824;
+governador;1;5209804;17;PAULO ROBERTO CUNHA;PDC;904;
+governador;1;5209804;13;VALDI CAMARCIO;PT;36;
+governador;1;5209804;15;IRIS REZENDE MACHADO;PMDB;1504;S
+governador;1;5209804;12;IRAM DE ALMEIDA SARAIVA;PDT;25;
+governador;1;5209804;#brancos;;;138;
+governador;1;5209804;#nulos;;;177;
+governador;1;5209804;#comparecimento;;;2784;
+governador;1;5210901;17;PAULO ROBERTO CUNHA;PDC;1682;
+governador;1;5210901;13;VALDI CAMARCIO;PT;124;
+governador;1;5210901;15;IRIS REZENDE MACHADO;PMDB;3743;S
+governador;1;5210901;12;IRAM DE ALMEIDA SARAIVA;PDT;68;
+governador;1;5210901;#brancos;;;470;
+governador;1;5210901;#nulos;;;454;
+governador;1;5210901;#comparecimento;;;6541;
+governador;1;5216908;17;PAULO ROBERTO CUNHA;PDC;405;
+governador;1;5216908;13;VALDI CAMARCIO;PT;27;
+governador;1;5216908;15;IRIS REZENDE MACHADO;PMDB;1348;S
+governador;1;5216908;12;IRAM DE ALMEIDA SARAIVA;PDT;15;
+governador;1;5216908;#brancos;;;174;
+governador;1;5216908;#nulos;;;125;
+governador;1;5216908;#comparecimento;;;2094;
+governador;1;5214606;17;PAULO ROBERTO CUNHA;PDC;2523;
+governador;1;5214606;13;VALDI CAMARCIO;PT;196;
+governador;1;5214606;15;IRIS REZENDE MACHADO;PMDB;9921;S
+governador;1;5214606;12;IRAM DE ALMEIDA SARAIVA;PDT;247;
+governador;1;5214606;#brancos;;;1180;
+governador;1;5214606;#nulos;;;2243;
+governador;1;5214606;#comparecimento;;;16310;
+governador;1;5220058;17;PAULO ROBERTO CUNHA;PDC;185;
+governador;1;5220058;13;VALDI CAMARCIO;PT;17;
+governador;1;5220058;15;IRIS REZENDE MACHADO;PMDB;948;S
+governador;1;5220058;12;IRAM DE ALMEIDA SARAIVA;PDT;5;
+governador;1;5220058;#brancos;;;55;
+governador;1;5220058;#nulos;;;25;
+governador;1;5220058;#comparecimento;;;1235;
+governador;1;5216403;17;PAULO ROBERTO CUNHA;PDC;1491;
+governador;1;5216403;13;VALDI CAMARCIO;PT;149;
+governador;1;5216403;15;IRIS REZENDE MACHADO;PMDB;2985;S
+governador;1;5216403;12;IRAM DE ALMEIDA SARAIVA;PDT;66;
+governador;1;5216403;#brancos;;;199;
+governador;1;5216403;#nulos;;;352;
+governador;1;5216403;#comparecimento;;;5242;
+governador;1;5217609;17;PAULO ROBERTO CUNHA;PDC;1015;
+governador;1;5217609;13;VALDI CAMARCIO;PT;852;
+governador;1;5217609;15;IRIS REZENDE MACHADO;PMDB;6554;S
+governador;1;5217609;12;IRAM DE ALMEIDA SARAIVA;PDT;1139;
+governador;1;5217609;#brancos;;;2333;
+governador;1;5217609;#nulos;;;2867;
+governador;1;5217609;#comparecimento;;;14760;
+governador;1;5200175;17;PAULO ROBERTO CUNHA;PDC;211;
+governador;1;5200175;13;VALDI CAMARCIO;PT;26;
+governador;1;5200175;15;IRIS REZENDE MACHADO;PMDB;904;S
+governador;1;5200175;12;IRAM DE ALMEIDA SARAIVA;PDT;22;
+governador;1;5200175;#brancos;;;180;
+governador;1;5200175;#nulos;;;129;
+governador;1;5200175;#comparecimento;;;1472;
+governador;1;5206503;17;PAULO ROBERTO CUNHA;PDC;650;
+governador;1;5206503;13;VALDI CAMARCIO;PT;116;
+governador;1;5206503;15;IRIS REZENDE MACHADO;PMDB;1677;S
+governador;1;5206503;12;IRAM DE ALMEIDA SARAIVA;PDT;81;
+governador;1;5206503;#brancos;;;105;
+governador;1;5206503;#nulos;;;136;
+governador;1;5206503;#comparecimento;;;2765;
+governador;1;5212600;17;PAULO ROBERTO CUNHA;PDC;507;
+governador;1;5212600;13;VALDI CAMARCIO;PT;56;
+governador;1;5212600;15;IRIS REZENDE MACHADO;PMDB;996;S
+governador;1;5212600;12;IRAM DE ALMEIDA SARAIVA;PDT;63;
+governador;1;5212600;#brancos;;;55;
+governador;1;5212600;#nulos;;;100;
+governador;1;5212600;#comparecimento;;;1777;
+governador;1;5217708;17;PAULO ROBERTO CUNHA;PDC;3986;
+governador;1;5217708;13;VALDI CAMARCIO;PT;276;
+governador;1;5217708;15;IRIS REZENDE MACHADO;PMDB;3768;S
+governador;1;5217708;12;IRAM DE ALMEIDA SARAIVA;PDT;160;
+governador;1;5217708;#brancos;;;312;
+governador;1;5217708;#nulos;;;556;
+governador;1;5217708;#comparecimento;;;9058;
+governador;1;5222054;17;PAULO ROBERTO CUNHA;PDC;499;
+governador;1;5222054;13;VALDI CAMARCIO;PT;19;
+governador;1;5222054;15;IRIS REZENDE MACHADO;PMDB;1603;S
+governador;1;5222054;12;IRAM DE ALMEIDA SARAIVA;PDT;407;
+governador;1;5222054;#brancos;;;161;
+governador;1;5222054;#nulos;;;285;
+governador;1;5222054;#comparecimento;;;2974;
+governador;1;5209150;17;PAULO ROBERTO CUNHA;PDC;855;
+governador;1;5209150;13;VALDI CAMARCIO;PT;28;
+governador;1;5209150;15;IRIS REZENDE MACHADO;PMDB;1252;S
+governador;1;5209150;12;IRAM DE ALMEIDA SARAIVA;PDT;22;
+governador;1;5209150;#brancos;;;115;
+governador;1;5209150;#nulos;;;196;
+governador;1;5209150;#comparecimento;;;2468;
+governador;1;5218508;17;PAULO ROBERTO CUNHA;PDC;8778;
+governador;1;5218508;13;VALDI CAMARCIO;PT;344;
+governador;1;5218508;15;IRIS REZENDE MACHADO;PMDB;7903;S
+governador;1;5218508;12;IRAM DE ALMEIDA SARAIVA;PDT;274;
+governador;1;5218508;#brancos;;;805;
+governador;1;5218508;#nulos;;;1502;
+governador;1;5218508;#comparecimento;;;19606;
+governador;1;5208301;17;PAULO ROBERTO CUNHA;PDC;647;
+governador;1;5208301;13;VALDI CAMARCIO;PT;45;
+governador;1;5208301;15;IRIS REZENDE MACHADO;PMDB;1050;S
+governador;1;5208301;12;IRAM DE ALMEIDA SARAIVA;PDT;22;
+governador;1;5208301;#brancos;;;230;
+governador;1;5208301;#nulos;;;179;
+governador;1;5208301;#comparecimento;;;2173;
+governador;1;5219803;17;PAULO ROBERTO CUNHA;PDC;1006;
+governador;1;5219803;13;VALDI CAMARCIO;PT;33;
+governador;1;5219803;15;IRIS REZENDE MACHADO;PMDB;2406;S
+governador;1;5219803;12;IRAM DE ALMEIDA SARAIVA;PDT;47;
+governador;1;5219803;#brancos;;;468;
+governador;1;5219803;#nulos;;;330;
+governador;1;5219803;#comparecimento;;;4290;
+governador;1;5204607;17;PAULO ROBERTO CUNHA;PDC;340;
+governador;1;5204607;13;VALDI CAMARCIO;PT;92;
+governador;1;5204607;15;IRIS REZENDE MACHADO;PMDB;1076;S
+governador;1;5204607;12;IRAM DE ALMEIDA SARAIVA;PDT;73;
+governador;1;5204607;#brancos;;;85;
+governador;1;5204607;#nulos;;;139;
+governador;1;5204607;#comparecimento;;;1805;
+governador;1;5221403;17;PAULO ROBERTO CUNHA;PDC;5288;
+governador;1;5221403;13;VALDI CAMARCIO;PT;1252;
+governador;1;5221403;15;IRIS REZENDE MACHADO;PMDB;11343;S
+governador;1;5221403;12;IRAM DE ALMEIDA SARAIVA;PDT;793;
+governador;1;5221403;#brancos;;;862;
+governador;1;5221403;#nulos;;;1972;
+governador;1;5221403;#comparecimento;;;21510;
+governador;1;5204706;17;PAULO ROBERTO CUNHA;PDC;1755;
+governador;1;5204706;13;VALDI CAMARCIO;PT;76;
+governador;1;5204706;15;IRIS REZENDE MACHADO;PMDB;2075;S
+governador;1;5204706;12;IRAM DE ALMEIDA SARAIVA;PDT;68;
+governador;1;5204706;#brancos;;;325;
+governador;1;5204706;#nulos;;;482;
+governador;1;5204706;#comparecimento;;;4781;
+governador;1;5221601;17;PAULO ROBERTO CUNHA;PDC;3340;
+governador;1;5221601;13;VALDI CAMARCIO;PT;384;
+governador;1;5221601;15;IRIS REZENDE MACHADO;PMDB;8118;S
+governador;1;5221601;12;IRAM DE ALMEIDA SARAIVA;PDT;340;
+governador;1;5221601;#brancos;;;1182;
+governador;1;5221601;#nulos;;;1471;
+governador;1;5221601;#comparecimento;;;14835;
+governador;1;5204656;17;PAULO ROBERTO CUNHA;PDC;820;
+governador;1;5204656;13;VALDI CAMARCIO;PT;36;
+governador;1;5204656;15;IRIS REZENDE MACHADO;PMDB;906;S
+governador;1;5204656;12;IRAM DE ALMEIDA SARAIVA;PDT;30;
+governador;1;5204656;#brancos;;;146;
+governador;1;5204656;#nulos;;;187;
+governador;1;5204656;#comparecimento;;;2125;
+governador;1;5206305;17;PAULO ROBERTO CUNHA;PDC;428;
+governador;1;5206305;13;VALDI CAMARCIO;PT;43;
+governador;1;5206305;15;IRIS REZENDE MACHADO;PMDB;1500;S
+governador;1;5206305;12;IRAM DE ALMEIDA SARAIVA;PDT;42;
+governador;1;5206305;#brancos;;;75;
+governador;1;5206305;#nulos;;;83;
+governador;1;5206305;#comparecimento;;;2171;
+governador;1;5215801;17;PAULO ROBERTO CUNHA;PDC;280;
+governador;1;5215801;13;VALDI CAMARCIO;PT;16;
+governador;1;5215801;15;IRIS REZENDE MACHADO;PMDB;978;S
+governador;1;5215801;12;IRAM DE ALMEIDA SARAIVA;PDT;15;
+governador;1;5215801;#brancos;;;58;
+governador;1;5215801;#nulos;;;86;
+governador;1;5215801;#comparecimento;;;1433;
+governador;1;5219209;17;PAULO ROBERTO CUNHA;PDC;447;
+governador;1;5219209;13;VALDI CAMARCIO;PT;32;
+governador;1;5219209;15;IRIS REZENDE MACHADO;PMDB;909;S
+governador;1;5219209;12;IRAM DE ALMEIDA SARAIVA;PDT;12;
+governador;1;5219209;#brancos;;;45;
+governador;1;5219209;#nulos;;;68;
+governador;1;5219209;#comparecimento;;;1513;
+governador;1;5201207;17;PAULO ROBERTO CUNHA;PDC;61;
+governador;1;5201207;13;VALDI CAMARCIO;PT;19;
+governador;1;5201207;15;IRIS REZENDE MACHADO;PMDB;459;S
+governador;1;5201207;12;IRAM DE ALMEIDA SARAIVA;PDT;14;
+governador;1;5201207;#brancos;;;18;
+governador;1;5201207;#nulos;;;23;
+governador;1;5201207;#comparecimento;;;594;
+governador;1;5206602;17;PAULO ROBERTO CUNHA;PDC;388;
+governador;1;5206602;13;VALDI CAMARCIO;PT;89;
+governador;1;5206602;15;IRIS REZENDE MACHADO;PMDB;1422;S
+governador;1;5206602;12;IRAM DE ALMEIDA SARAIVA;PDT;48;
+governador;1;5206602;#brancos;;;97;
+governador;1;5206602;#nulos;;;107;
+governador;1;5206602;#comparecimento;;;2151;
+governador;1;5200902;17;PAULO ROBERTO CUNHA;PDC;999;
+governador;1;5200902;13;VALDI CAMARCIO;PT;45;
+governador;1;5200902;15;IRIS REZENDE MACHADO;PMDB;1574;S
+governador;1;5200902;12;IRAM DE ALMEIDA SARAIVA;PDT;30;
+governador;1;5200902;#brancos;;;95;
+governador;1;5200902;#nulos;;;134;
+governador;1;5200902;#comparecimento;;;2877;
+governador;1;5207105;17;PAULO ROBERTO CUNHA;PDC;319;
+governador;1;5207105;13;VALDI CAMARCIO;PT;31;
+governador;1;5207105;15;IRIS REZENDE MACHADO;PMDB;1095;S
+governador;1;5207105;12;IRAM DE ALMEIDA SARAIVA;PDT;10;
+governador;1;5207105;#brancos;;;53;
+governador;1;5207105;#nulos;;;97;
+governador;1;5207105;#comparecimento;;;1605;
+governador;1;5210208;17;PAULO ROBERTO CUNHA;PDC;4025;
+governador;1;5210208;13;VALDI CAMARCIO;PT;938;
+governador;1;5210208;15;IRIS REZENDE MACHADO;PMDB;8292;S
+governador;1;5210208;12;IRAM DE ALMEIDA SARAIVA;PDT;151;
+governador;1;5210208;#brancos;;;688;
+governador;1;5210208;#nulos;;;856;
+governador;1;5210208;#comparecimento;;;14950;
+governador;1;5214507;17;PAULO ROBERTO CUNHA;PDC;2208;
+governador;1;5214507;13;VALDI CAMARCIO;PT;277;
+governador;1;5214507;15;IRIS REZENDE MACHADO;PMDB;5402;S
+governador;1;5214507;12;IRAM DE ALMEIDA SARAIVA;PDT;376;
+governador;1;5214507;#brancos;;;606;
+governador;1;5214507;#nulos;;;742;
+governador;1;5214507;#comparecimento;;;9611;
+governador;1;5215009;17;PAULO ROBERTO CUNHA;PDC;997;
+governador;1;5215009;13;VALDI CAMARCIO;PT;167;
+governador;1;5215009;15;IRIS REZENDE MACHADO;PMDB;3175;S
+governador;1;5215009;12;IRAM DE ALMEIDA SARAIVA;PDT;108;
+governador;1;5215009;#brancos;;;208;
+governador;1;5215009;#nulos;;;323;
+governador;1;5215009;#comparecimento;;;4978;
+governador;1;5218003;17;PAULO ROBERTO CUNHA;PDC;5361;
+governador;1;5218003;13;VALDI CAMARCIO;PT;529;
+governador;1;5218003;15;IRIS REZENDE MACHADO;PMDB;7823;S
+governador;1;5218003;12;IRAM DE ALMEIDA SARAIVA;PDT;266;
+governador;1;5218003;#brancos;;;1117;
+governador;1;5218003;#nulos;;;2436;
+governador;1;5218003;#comparecimento;;;17532;
+governador;1;5201801;17;PAULO ROBERTO CUNHA;PDC;1371;
+governador;1;5201801;13;VALDI CAMARCIO;PT;190;
+governador;1;5201801;15;IRIS REZENDE MACHADO;PMDB;2208;S
+governador;1;5201801;12;IRAM DE ALMEIDA SARAIVA;PDT;198;
+governador;1;5201801;#brancos;;;193;
+governador;1;5201801;#nulos;;;424;
+governador;1;5201801;#comparecimento;;;4584;
+governador;1;5209200;17;PAULO ROBERTO CUNHA;PDC;1976;
+governador;1;5209200;13;VALDI CAMARCIO;PT;290;
+governador;1;5209200;15;IRIS REZENDE MACHADO;PMDB;3086;S
+governador;1;5209200;12;IRAM DE ALMEIDA SARAIVA;PDT;369;
+governador;1;5209200;#brancos;;;290;
+governador;1;5209200;#nulos;;;724;
+governador;1;5209200;#comparecimento;;;6735;
+governador;1;5211404;17;PAULO ROBERTO CUNHA;PDC;2055;
+governador;1;5211404;13;VALDI CAMARCIO;PT;360;
+governador;1;5211404;15;IRIS REZENDE MACHADO;PMDB;2451;S
+governador;1;5211404;12;IRAM DE ALMEIDA SARAIVA;PDT;121;
+governador;1;5211404;#brancos;;;249;
+governador;1;5211404;#nulos;;;493;
+governador;1;5211404;#comparecimento;;;5729;
+governador;1;5221700;17;PAULO ROBERTO CUNHA;PDC;1382;
+governador;1;5221700;13;VALDI CAMARCIO;PT;384;
+governador;1;5221700;15;IRIS REZENDE MACHADO;PMDB;4697;S
+governador;1;5221700;12;IRAM DE ALMEIDA SARAIVA;PDT;111;
+governador;1;5221700;#brancos;;;224;
+governador;1;5221700;#nulos;;;541;
+governador;1;5221700;#comparecimento;;;7339;
+governador;1;5202601;17;PAULO ROBERTO CUNHA;PDC;608;
+governador;1;5202601;13;VALDI CAMARCIO;PT;93;
+governador;1;5202601;15;IRIS REZENDE MACHADO;PMDB;1842;S
+governador;1;5202601;12;IRAM DE ALMEIDA SARAIVA;PDT;49;
+governador;1;5202601;#brancos;;;105;
+governador;1;5202601;#nulos;;;199;
+governador;1;5202601;#comparecimento;;;2896;
+governador;1;5204201;17;PAULO ROBERTO CUNHA;PDC;507;
+governador;1;5204201;13;VALDI CAMARCIO;PT;14;
+governador;1;5204201;15;IRIS REZENDE MACHADO;PMDB;605;S
+governador;1;5204201;12;IRAM DE ALMEIDA SARAIVA;PDT;12;
+governador;1;5204201;#brancos;;;25;
+governador;1;5204201;#nulos;;;61;
+governador;1;5204201;#comparecimento;;;1224;
+governador;1;5221809;17;PAULO ROBERTO CUNHA;PDC;395;
+governador;1;5221809;13;VALDI CAMARCIO;PT;60;
+governador;1;5221809;15;IRIS REZENDE MACHADO;PMDB;1489;S
+governador;1;5221809;12;IRAM DE ALMEIDA SARAIVA;PDT;17;
+governador;1;5221809;#brancos;;;141;
+governador;1;5221809;#nulos;;;148;
+governador;1;5221809;#comparecimento;;;2250;
+governador;1;5222005;17;PAULO ROBERTO CUNHA;PDC;637;
+governador;1;5222005;13;VALDI CAMARCIO;PT;83;
+governador;1;5222005;15;IRIS REZENDE MACHADO;PMDB;3059;S
+governador;1;5222005;12;IRAM DE ALMEIDA SARAIVA;PDT;64;
+governador;1;5222005;#brancos;;;190;
+governador;1;5222005;#nulos;;;350;
+governador;1;5222005;#comparecimento;;;4383;
+governador;1;5209705;17;PAULO ROBERTO CUNHA;PDC;1539;
+governador;1;5209705;13;VALDI CAMARCIO;PT;324;
+governador;1;5209705;15;IRIS REZENDE MACHADO;PMDB;2794;S
+governador;1;5209705;12;IRAM DE ALMEIDA SARAIVA;PDT;345;
+governador;1;5209705;#brancos;;;259;
+governador;1;5209705;#nulos;;;463;
+governador;1;5209705;#comparecimento;;;5724;
+governador;1;5207808;17;PAULO ROBERTO CUNHA;PDC;1838;
+governador;1;5207808;13;VALDI CAMARCIO;PT;252;
+governador;1;5207808;15;IRIS REZENDE MACHADO;PMDB;3078;S
+governador;1;5207808;12;IRAM DE ALMEIDA SARAIVA;PDT;191;
+governador;1;5207808;#brancos;;;229;
+governador;1;5207808;#nulos;;;595;
+governador;1;5207808;#comparecimento;;;6183;
+governador;1;5214408;17;PAULO ROBERTO CUNHA;PDC;1640;
+governador;1;5214408;13;VALDI CAMARCIO;PT;112;
+governador;1;5214408;15;IRIS REZENDE MACHADO;PMDB;2058;S
+governador;1;5214408;12;IRAM DE ALMEIDA SARAIVA;PDT;151;
+governador;1;5214408;#brancos;;;197;
+governador;1;5214408;#nulos;;;378;
+governador;1;5214408;#comparecimento;;;4536;
+governador;1;5219100;17;PAULO ROBERTO CUNHA;PDC;1217;
+governador;1;5219100;13;VALDI CAMARCIO;PT;48;
+governador;1;5219100;15;IRIS REZENDE MACHADO;PMDB;1225;S
+governador;1;5219100;12;IRAM DE ALMEIDA SARAIVA;PDT;32;
+governador;1;5219100;#brancos;;;73;
+governador;1;5219100;#nulos;;;149;
+governador;1;5219100;#comparecimento;;;2744;
+governador;1;5216809;17;PAULO ROBERTO CUNHA;PDC;1727;
+governador;1;5216809;13;VALDI CAMARCIO;PT;148;
+governador;1;5216809;15;IRIS REZENDE MACHADO;PMDB;3887;S
+governador;1;5216809;12;IRAM DE ALMEIDA SARAIVA;PDT;135;
+governador;1;5216809;#brancos;;;282;
+governador;1;5216809;#nulos;;;632;
+governador;1;5216809;#comparecimento;;;6811;
+governador;1;5219506;17;PAULO ROBERTO CUNHA;PDC;821;
+governador;1;5219506;13;VALDI CAMARCIO;PT;44;
+governador;1;5219506;15;IRIS REZENDE MACHADO;PMDB;1356;S
+governador;1;5219506;12;IRAM DE ALMEIDA SARAIVA;PDT;62;
+governador;1;5219506;#brancos;;;114;
+governador;1;5219506;#nulos;;;220;
+governador;1;5219506;#comparecimento;;;2617;
+governador;1;5213004;17;PAULO ROBERTO CUNHA;PDC;1574;
+governador;1;5213004;13;VALDI CAMARCIO;PT;23;
+governador;1;5213004;15;IRIS REZENDE MACHADO;PMDB;1547;S
+governador;1;5213004;12;IRAM DE ALMEIDA SARAIVA;PDT;94;
+governador;1;5213004;#brancos;;;116;
+governador;1;5213004;#nulos;;;199;
+governador;1;5213004;#comparecimento;;;3553;
+governador;1;5219308;17;PAULO ROBERTO CUNHA;PDC;7287;
+governador;1;5219308;13;VALDI CAMARCIO;PT;278;
+governador;1;5219308;15;IRIS REZENDE MACHADO;PMDB;6347;S
+governador;1;5219308;12;IRAM DE ALMEIDA SARAIVA;PDT;469;
+governador;1;5219308;#brancos;;;869;
+governador;1;5219308;#nulos;;;1396;
+governador;1;5219308;#comparecimento;;;16646;
+governador;1;5203559;17;PAULO ROBERTO CUNHA;PDC;587;
+governador;1;5203559;13;VALDI CAMARCIO;PT;102;
+governador;1;5203559;15;IRIS REZENDE MACHADO;PMDB;1396;S
+governador;1;5203559;12;IRAM DE ALMEIDA SARAIVA;PDT;74;
+governador;1;5203559;#brancos;;;135;
+governador;1;5203559;#nulos;;;204;
+governador;1;5203559;#comparecimento;;;2498;
+governador;1;5212303;17;PAULO ROBERTO CUNHA;PDC;1138;
+governador;1;5212303;13;VALDI CAMARCIO;PT;94;
+governador;1;5212303;15;IRIS REZENDE MACHADO;PMDB;1862;S
+governador;1;5212303;12;IRAM DE ALMEIDA SARAIVA;PDT;109;
+governador;1;5212303;#brancos;;;197;
+governador;1;5212303;#nulos;;;304;
+governador;1;5212303;#comparecimento;;;3704;
+governador;1;5207352;17;PAULO ROBERTO CUNHA;PDC;637;
+governador;1;5207352;13;VALDI CAMARCIO;PT;56;
+governador;1;5207352;15;IRIS REZENDE MACHADO;PMDB;877;S
+governador;1;5207352;12;IRAM DE ALMEIDA SARAIVA;PDT;42;
+governador;1;5207352;#brancos;;;132;
+governador;1;5207352;#nulos;;;122;
+governador;1;5207352;#comparecimento;;;1866;
+governador;1;5207402;17;PAULO ROBERTO CUNHA;PDC;2175;
+governador;1;5207402;13;VALDI CAMARCIO;PT;205;
+governador;1;5207402;15;IRIS REZENDE MACHADO;PMDB;2235;S
+governador;1;5207402;12;IRAM DE ALMEIDA SARAIVA;PDT;140;
+governador;1;5207402;#brancos;;;199;
+governador;1;5207402;#nulos;;;357;
+governador;1;5207402;#comparecimento;;;5311;
+governador;1;5205406;17;PAULO ROBERTO CUNHA;PDC;4033;
+governador;1;5205406;13;VALDI CAMARCIO;PT;1051;
+governador;1;5205406;15;IRIS REZENDE MACHADO;PMDB;5764;S
+governador;1;5205406;12;IRAM DE ALMEIDA SARAIVA;PDT;119;
+governador;1;5205406;#brancos;;;626;
+governador;1;5205406;#nulos;;;774;
+governador;1;5205406;#comparecimento;;;12367;
+governador;1;5214861;17;PAULO ROBERTO CUNHA;PDC;909;
+governador;1;5214861;13;VALDI CAMARCIO;PT;233;
+governador;1;5214861;15;IRIS REZENDE MACHADO;PMDB;2536;S
+governador;1;5214861;12;IRAM DE ALMEIDA SARAIVA;PDT;55;
+governador;1;5214861;#brancos;;;252;
+governador;1;5214861;#nulos;;;400;
+governador;1;5214861;#comparecimento;;;4385;
+governador;1;5203203;17;PAULO ROBERTO CUNHA;PDC;2027;
+governador;1;5203203;13;VALDI CAMARCIO;PT;63;
+governador;1;5203203;15;IRIS REZENDE MACHADO;PMDB;2438;S
+governador;1;5203203;12;IRAM DE ALMEIDA SARAIVA;PDT;48;
+governador;1;5203203;#brancos;;;397;
+governador;1;5203203;#nulos;;;543;
+governador;1;5203203;#comparecimento;;;5516;
+governador;1;5208608;17;PAULO ROBERTO CUNHA;PDC;10445;
+governador;1;5208608;13;VALDI CAMARCIO;PT;337;
+governador;1;5208608;15;IRIS REZENDE MACHADO;PMDB;8480;S
+governador;1;5208608;12;IRAM DE ALMEIDA SARAIVA;PDT;299;
+governador;1;5208608;#brancos;;;1243;
+governador;1;5208608;#nulos;;;1946;
+governador;1;5208608;#comparecimento;;;22750;
+governador;1;5213855;17;PAULO ROBERTO CUNHA;PDC;244;
+governador;1;5213855;13;VALDI CAMARCIO;PT;20;
+governador;1;5213855;15;IRIS REZENDE MACHADO;PMDB;958;S
+governador;1;5213855;12;IRAM DE ALMEIDA SARAIVA;PDT;11;
+governador;1;5213855;#brancos;;;37;
+governador;1;5213855;#nulos;;;82;
+governador;1;5213855;#comparecimento;;;1352;
+governador;1;5214705;17;PAULO ROBERTO CUNHA;PDC;418;
+governador;1;5214705;13;VALDI CAMARCIO;PT;15;
+governador;1;5214705;15;IRIS REZENDE MACHADO;PMDB;873;S
+governador;1;5214705;12;IRAM DE ALMEIDA SARAIVA;PDT;17;
+governador;1;5214705;#brancos;;;69;
+governador;1;5214705;#nulos;;;82;
+governador;1;5214705;#comparecimento;;;1474;
+governador;1;5218904;17;PAULO ROBERTO CUNHA;PDC;2358;
+governador;1;5218904;13;VALDI CAMARCIO;PT;215;
+governador;1;5218904;15;IRIS REZENDE MACHADO;PMDB;4907;S
+governador;1;5218904;12;IRAM DE ALMEIDA SARAIVA;PDT;83;
+governador;1;5218904;#brancos;;;318;
+governador;1;5218904;#nulos;;;505;
+governador;1;5218904;#comparecimento;;;8386;
+governador;1;5211206;17;PAULO ROBERTO CUNHA;PDC;3865;
+governador;1;5211206;13;VALDI CAMARCIO;PT;2174;
+governador;1;5211206;15;IRIS REZENDE MACHADO;PMDB;7155;S
+governador;1;5211206;12;IRAM DE ALMEIDA SARAIVA;PDT;397;
+governador;1;5211206;#brancos;;;855;
+governador;1;5211206;#nulos;;;1447;
+governador;1;5211206;#comparecimento;;;15893;
+governador;1;5207600;17;PAULO ROBERTO CUNHA;PDC;1231;
+governador;1;5207600;13;VALDI CAMARCIO;PT;140;
+governador;1;5207600;15;IRIS REZENDE MACHADO;PMDB;2085;S
+governador;1;5207600;12;IRAM DE ALMEIDA SARAIVA;PDT;110;
+governador;1;5207600;#brancos;;;164;
+governador;1;5207600;#nulos;;;224;
+governador;1;5207600;#comparecimento;;;3954;
+governador;1;5215207;17;PAULO ROBERTO CUNHA;PDC;839;
+governador;1;5215207;13;VALDI CAMARCIO;PT;92;
+governador;1;5215207;15;IRIS REZENDE MACHADO;PMDB;1480;S
+governador;1;5215207;12;IRAM DE ALMEIDA SARAIVA;PDT;27;
+governador;1;5215207;#brancos;;;82;
+governador;1;5215207;#nulos;;;120;
+governador;1;5215207;#comparecimento;;;2640;
+governador;1;5205703;17;PAULO ROBERTO CUNHA;PDC;740;
+governador;1;5205703;13;VALDI CAMARCIO;PT;68;
+governador;1;5205703;15;IRIS REZENDE MACHADO;PMDB;1217;S
+governador;1;5205703;12;IRAM DE ALMEIDA SARAIVA;PDT;17;
+governador;1;5205703;#brancos;;;69;
+governador;1;5205703;#nulos;;;98;
+governador;1;5205703;#comparecimento;;;2209;
+governador;1;5220108;17;PAULO ROBERTO CUNHA;PDC;3848;
+governador;1;5220108;13;VALDI CAMARCIO;PT;411;
+governador;1;5220108;15;IRIS REZENDE MACHADO;PMDB;6909;S
+governador;1;5220108;12;IRAM DE ALMEIDA SARAIVA;PDT;357;
+governador;1;5220108;#brancos;;;716;
+governador;1;5220108;#nulos;;;1069;
+governador;1;5220108;#comparecimento;;;13310;
+governador;1;5213905;17;PAULO ROBERTO CUNHA;PDC;1051;
+governador;1;5213905;13;VALDI CAMARCIO;PT;388;
+governador;1;5213905;15;IRIS REZENDE MACHADO;PMDB;2451;S
+governador;1;5213905;12;IRAM DE ALMEIDA SARAIVA;PDT;86;
+governador;1;5213905;#brancos;;;192;
+governador;1;5213905;#nulos;;;309;
+governador;1;5213905;#comparecimento;;;4477;
+governador;1;5200159;17;PAULO ROBERTO CUNHA;PDC;764;
+governador;1;5200159;13;VALDI CAMARCIO;PT;25;
+governador;1;5200159;15;IRIS REZENDE MACHADO;PMDB;840;S
+governador;1;5200159;12;IRAM DE ALMEIDA SARAIVA;PDT;27;
+governador;1;5200159;#brancos;;;77;
+governador;1;5200159;#nulos;;;114;
+governador;1;5200159;#comparecimento;;;1847;
+governador;1;5216304;17;PAULO ROBERTO CUNHA;PDC;892;
+governador;1;5216304;13;VALDI CAMARCIO;PT;64;
+governador;1;5216304;15;IRIS REZENDE MACHADO;PMDB;2921;S
+governador;1;5216304;12;IRAM DE ALMEIDA SARAIVA;PDT;127;
+governador;1;5216304;#brancos;;;181;
+governador;1;5216304;#nulos;;;405;
+governador;1;5216304;#comparecimento;;;4590;
+governador;1;5220405;17;PAULO ROBERTO CUNHA;PDC;1543;
+governador;1;5220405;13;VALDI CAMARCIO;PT;174;
+governador;1;5220405;15;IRIS REZENDE MACHADO;PMDB;3156;S
+governador;1;5220405;12;IRAM DE ALMEIDA SARAIVA;PDT;106;
+governador;1;5220405;#brancos;;;456;
+governador;1;5220405;#nulos;;;883;
+governador;1;5220405;#comparecimento;;;6318;
+governador;1;5211701;17;PAULO ROBERTO CUNHA;PDC;965;
+governador;1;5211701;13;VALDI CAMARCIO;PT;69;
+governador;1;5211701;15;IRIS REZENDE MACHADO;PMDB;2385;S
+governador;1;5211701;12;IRAM DE ALMEIDA SARAIVA;PDT;58;
+governador;1;5211701;#brancos;;;141;
+governador;1;5211701;#nulos;;;232;
+governador;1;5211701;#comparecimento;;;3850;
+governador;1;5209952;17;PAULO ROBERTO CUNHA;PDC;1209;
+governador;1;5209952;13;VALDI CAMARCIO;PT;134;
+governador;1;5209952;15;IRIS REZENDE MACHADO;PMDB;2250;S
+governador;1;5209952;12;IRAM DE ALMEIDA SARAIVA;PDT;78;
+governador;1;5209952;#brancos;;;174;
+governador;1;5209952;#nulos;;;371;
+governador;1;5209952;#comparecimento;;;4216;
+governador;1;5204953;17;PAULO ROBERTO CUNHA;PDC;599;
+governador;1;5204953;13;VALDI CAMARCIO;PT;60;
+governador;1;5204953;15;IRIS REZENDE MACHADO;PMDB;2461;S
+governador;1;5204953;12;IRAM DE ALMEIDA SARAIVA;PDT;53;
+governador;1;5204953;#brancos;;;361;
+governador;1;5204953;#nulos;;;662;
+governador;1;5204953;#comparecimento;;;4196;
+governador;1;5206404;17;PAULO ROBERTO CUNHA;PDC;2353;
+governador;1;5206404;13;VALDI CAMARCIO;PT;152;
+governador;1;5206404;15;IRIS REZENDE MACHADO;PMDB;4577;S
+governador;1;5206404;12;IRAM DE ALMEIDA SARAIVA;PDT;95;
+governador;1;5206404;#brancos;;;550;
+governador;1;5206404;#nulos;;;727;
+governador;1;5206404;#comparecimento;;;8454;
+governador;1;5219704;17;PAULO ROBERTO CUNHA;PDC;1695;
+governador;1;5219704;13;VALDI CAMARCIO;PT;111;
+governador;1;5219704;15;IRIS REZENDE MACHADO;PMDB;4694;S
+governador;1;5219704;12;IRAM DE ALMEIDA SARAIVA;PDT;105;
+governador;1;5219704;#brancos;;;623;
+governador;1;5219704;#nulos;;;582;
+governador;1;5219704;#comparecimento;;;7810;
+governador;1;5214051;17;PAULO ROBERTO CUNHA;PDC;289;
+governador;1;5214051;13;VALDI CAMARCIO;PT;17;
+governador;1;5214051;15;IRIS REZENDE MACHADO;PMDB;1654;S
+governador;1;5214051;12;IRAM DE ALMEIDA SARAIVA;PDT;24;
+governador;1;5214051;#brancos;;;183;
+governador;1;5214051;#nulos;;;282;
+governador;1;5214051;#comparecimento;;;2449;
+governador;1;5214838;17;PAULO ROBERTO CUNHA;PDC;847;
+governador;1;5214838;13;VALDI CAMARCIO;PT;43;
+governador;1;5214838;15;IRIS REZENDE MACHADO;PMDB;1855;S
+governador;1;5214838;12;IRAM DE ALMEIDA SARAIVA;PDT;53;
+governador;1;5214838;#brancos;;;213;
+governador;1;5214838;#nulos;;;310;
+governador;1;5214838;#comparecimento;;;3321;
+governador;1;5210604;17;PAULO ROBERTO CUNHA;PDC;1256;
+governador;1;5210604;13;VALDI CAMARCIO;PT;268;
+governador;1;5210604;15;IRIS REZENDE MACHADO;PMDB;2133;S
+governador;1;5210604;12;IRAM DE ALMEIDA SARAIVA;PDT;65;
+governador;1;5210604;#brancos;;;206;
+governador;1;5210604;#nulos;;;351;
+governador;1;5210604;#comparecimento;;;4279;
+governador;1;5200308;17;PAULO ROBERTO CUNHA;PDC;1526;
+governador;1;5200308;13;VALDI CAMARCIO;PT;251;
+governador;1;5200308;15;IRIS REZENDE MACHADO;PMDB;3755;S
+governador;1;5200308;12;IRAM DE ALMEIDA SARAIVA;PDT;314;
+governador;1;5200308;#brancos;;;1008;
+governador;1;5200308;#nulos;;;1291;
+governador;1;5200308;#comparecimento;;;8145;
+governador;1;5212808;17;PAULO ROBERTO CUNHA;PDC;2978;
+governador;1;5212808;13;VALDI CAMARCIO;PT;92;
+governador;1;5212808;15;IRIS REZENDE MACHADO;PMDB;3702;S
+governador;1;5212808;12;IRAM DE ALMEIDA SARAIVA;PDT;144;
+governador;1;5212808;#brancos;;;528;
+governador;1;5212808;#nulos;;;863;
+governador;1;5212808;#comparecimento;;;8307;
+governador;1;5208400;17;PAULO ROBERTO CUNHA;PDC;1900;
+governador;1;5208400;13;VALDI CAMARCIO;PT;159;
+governador;1;5208400;15;IRIS REZENDE MACHADO;PMDB;3695;S
+governador;1;5208400;12;IRAM DE ALMEIDA SARAIVA;PDT;176;
+governador;1;5208400;#brancos;;;465;
+governador;1;5208400;#nulos;;;763;
+governador;1;5208400;#comparecimento;;;7158;
+governador;1;5200100;17;PAULO ROBERTO CUNHA;PDC;1305;
+governador;1;5200100;13;VALDI CAMARCIO;PT;166;
+governador;1;5200100;15;IRIS REZENDE MACHADO;PMDB;2302;S
+governador;1;5200100;12;IRAM DE ALMEIDA SARAIVA;PDT;99;
+governador;1;5200100;#brancos;;;415;
+governador;1;5200100;#nulos;;;567;
+governador;1;5200100;#comparecimento;;;4854;
+governador;1;5216007;17;PAULO ROBERTO CUNHA;PDC;1250;
+governador;1;5216007;13;VALDI CAMARCIO;PT;45;
+governador;1;5216007;15;IRIS REZENDE MACHADO;PMDB;1365;S
+governador;1;5216007;12;IRAM DE ALMEIDA SARAIVA;PDT;72;
+governador;1;5216007;#brancos;;;159;
+governador;1;5216007;#nulos;;;299;
+governador;1;5216007;#comparecimento;;;3190;
+governador;1;5200506;17;PAULO ROBERTO CUNHA;PDC;538;
+governador;1;5200506;13;VALDI CAMARCIO;PT;41;
+governador;1;5200506;15;IRIS REZENDE MACHADO;PMDB;844;S
+governador;1;5200506;12;IRAM DE ALMEIDA SARAIVA;PDT;33;
+governador;1;5200506;#brancos;;;63;
+governador;1;5200506;#nulos;;;92;
+governador;1;5200506;#comparecimento;;;1611;
+governador;1;5212105;17;PAULO ROBERTO CUNHA;PDC;1874;
+governador;1;5212105;13;VALDI CAMARCIO;PT;77;
+governador;1;5212105;15;IRIS REZENDE MACHADO;PMDB;1939;S
+governador;1;5212105;12;IRAM DE ALMEIDA SARAIVA;PDT;45;
+governador;1;5212105;#brancos;;;109;
+governador;1;5212105;#nulos;;;180;
+governador;1;5212105;#comparecimento;;;4224;
+governador;1;5215256;17;PAULO ROBERTO CUNHA;PDC;941;
+governador;1;5215256;13;VALDI CAMARCIO;PT;13;
+governador;1;5215256;15;IRIS REZENDE MACHADO;PMDB;709;S
+governador;1;5215256;12;IRAM DE ALMEIDA SARAIVA;PDT;7;
+governador;1;5215256;#brancos;;;61;
+governador;1;5215256;#nulos;;;98;
+governador;1;5215256;#comparecimento;;;1829;
+governador;1;5220207;17;PAULO ROBERTO CUNHA;PDC;2112;
+governador;1;5220207;13;VALDI CAMARCIO;PT;265;
+governador;1;5220207;15;IRIS REZENDE MACHADO;PMDB;5072;S
+governador;1;5220207;12;IRAM DE ALMEIDA SARAIVA;PDT;112;
+governador;1;5220207;#brancos;;;480;
+governador;1;5220207;#nulos;;;962;
+governador;1;5220207;#comparecimento;;;9003;
+governador;1;5219258;17;PAULO ROBERTO CUNHA;PDC;144;
+governador;1;5219258;13;VALDI CAMARCIO;PT;142;
+governador;1;5219258;15;IRIS REZENDE MACHADO;PMDB;1271;S
+governador;1;5219258;12;IRAM DE ALMEIDA SARAIVA;PDT;18;
+governador;1;5219258;#brancos;;;72;
+governador;1;5219258;#nulos;;;159;
+governador;1;5219258;#comparecimento;;;1806;
+governador;1;5203807;17;PAULO ROBERTO CUNHA;PDC;280;
+governador;1;5203807;13;VALDI CAMARCIO;PT;93;
+governador;1;5203807;15;IRIS REZENDE MACHADO;PMDB;1807;S
+governador;1;5203807;12;IRAM DE ALMEIDA SARAIVA;PDT;23;
+governador;1;5203807;#brancos;;;110;
+governador;1;5203807;#nulos;;;165;
+governador;1;5203807;#comparecimento;;;2478;
+governador;1;5212204;17;PAULO ROBERTO CUNHA;PDC;1563;
+governador;1;5212204;13;VALDI CAMARCIO;PT;438;
+governador;1;5212204;15;IRIS REZENDE MACHADO;PMDB;5603;S
+governador;1;5212204;12;IRAM DE ALMEIDA SARAIVA;PDT;199;
+governador;1;5212204;#brancos;;;463;
+governador;1;5212204;#nulos;;;930;
+governador;1;5212204;#comparecimento;;;9196;
+governador;1;5201504;17;PAULO ROBERTO CUNHA;PDC;371;
+governador;1;5201504;13;VALDI CAMARCIO;PT;30;
+governador;1;5201504;15;IRIS REZENDE MACHADO;PMDB;1433;S
+governador;1;5201504;12;IRAM DE ALMEIDA SARAIVA;PDT;18;
+governador;1;5201504;#brancos;;;157;
+governador;1;5201504;#nulos;;;304;
+governador;1;5201504;#comparecimento;;;2313;
+governador;1;5210802;17;PAULO ROBERTO CUNHA;PDC;912;
+governador;1;5210802;13;VALDI CAMARCIO;PT;47;
+governador;1;5210802;15;IRIS REZENDE MACHADO;PMDB;1643;S
+governador;1;5210802;12;IRAM DE ALMEIDA SARAIVA;PDT;28;
+governador;1;5210802;#brancos;;;129;
+governador;1;5210802;#nulos;;;193;
+governador;1;5210802;#comparecimento;;;2952;
+governador;1;5204102;17;PAULO ROBERTO CUNHA;PDC;1367;
+governador;1;5204102;13;VALDI CAMARCIO;PT;47;
+governador;1;5204102;15;IRIS REZENDE MACHADO;PMDB;2651;S
+governador;1;5204102;12;IRAM DE ALMEIDA SARAIVA;PDT;93;
+governador;1;5204102;#brancos;;;208;
+governador;1;5204102;#nulos;;;344;
+governador;1;5204102;#comparecimento;;;4710;
+governador;1;5221908;17;PAULO ROBERTO CUNHA;PDC;963;
+governador;1;5221908;13;VALDI CAMARCIO;PT;57;
+governador;1;5221908;15;IRIS REZENDE MACHADO;PMDB;1517;S
+governador;1;5221908;12;IRAM DE ALMEIDA SARAIVA;PDT;83;
+governador;1;5221908;#brancos;;;127;
+governador;1;5221908;#nulos;;;177;
+governador;1;5221908;#comparecimento;;;2924;
+governador;1;5200605;17;PAULO ROBERTO CUNHA;PDC;301;
+governador;1;5200605;13;VALDI CAMARCIO;PT;34;
+governador;1;5200605;15;IRIS REZENDE MACHADO;PMDB;741;S
+governador;1;5200605;12;IRAM DE ALMEIDA SARAIVA;PDT;99;
+governador;1;5200605;#brancos;;;119;
+governador;1;5200605;#nulos;;;123;
+governador;1;5200605;#comparecimento;;;1417;
+governador;1;5205521;17;PAULO ROBERTO CUNHA;PDC;230;
+governador;1;5205521;13;VALDI CAMARCIO;PT;23;
+governador;1;5205521;15;IRIS REZENDE MACHADO;PMDB;585;S
+governador;1;5205521;12;IRAM DE ALMEIDA SARAIVA;PDT;12;
+governador;1;5205521;#brancos;;;100;
+governador;1;5205521;#nulos;;;96;
+governador;1;5205521;#comparecimento;;;1046;
+governador;1;5221080;17;PAULO ROBERTO CUNHA;PDC;137;
+governador;1;5221080;13;VALDI CAMARCIO;PT;31;
+governador;1;5221080;15;IRIS REZENDE MACHADO;PMDB;429;S
+governador;1;5221080;12;IRAM DE ALMEIDA SARAIVA;PDT;49;
+governador;1;5221080;#brancos;;;85;
+governador;1;5221080;#nulos;;;76;
+governador;1;5221080;#comparecimento;;;807;
+governador;1;5205307;17;PAULO ROBERTO CUNHA;PDC;235;
+governador;1;5205307;13;VALDI CAMARCIO;PT;81;
+governador;1;5205307;15;IRIS REZENDE MACHADO;PMDB;887;S
+governador;1;5205307;12;IRAM DE ALMEIDA SARAIVA;PDT;247;
+governador;1;5205307;#brancos;;;242;
+governador;1;5205307;#nulos;;;194;
+governador;1;5205307;#comparecimento;;;1886;
+governador;1;5205000;17;PAULO ROBERTO CUNHA;PDC;1402;
+governador;1;5205000;13;VALDI CAMARCIO;PT;352;
+governador;1;5205000;15;IRIS REZENDE MACHADO;PMDB;3089;S
+governador;1;5205000;12;IRAM DE ALMEIDA SARAIVA;PDT;65;
+governador;1;5205000;#brancos;;;226;
+governador;1;5205000;#nulos;;;437;
+governador;1;5205000;#comparecimento;;;5571;
+governador;1;5203609;17;PAULO ROBERTO CUNHA;PDC;538;
+governador;1;5203609;13;VALDI CAMARCIO;PT;104;
+governador;1;5203609;15;IRIS REZENDE MACHADO;PMDB;1098;S
+governador;1;5203609;12;IRAM DE ALMEIDA SARAIVA;PDT;37;
+governador;1;5203609;#brancos;;;110;
+governador;1;5203609;#nulos;;;146;
+governador;1;5203609;#comparecimento;;;2033;
+governador;1;5205208;17;PAULO ROBERTO CUNHA;PDC;736;
+governador;1;5205208;13;VALDI CAMARCIO;PT;75;
+governador;1;5205208;15;IRIS REZENDE MACHADO;PMDB;1590;S
+governador;1;5205208;12;IRAM DE ALMEIDA SARAIVA;PDT;110;
+governador;1;5205208;#brancos;;;151;
+governador;1;5205208;#nulos;;;261;
+governador;1;5205208;#comparecimento;;;2923;
+governador;1;5208806;17;PAULO ROBERTO CUNHA;PDC;1412;
+governador;1;5208806;13;VALDI CAMARCIO;PT;286;
+governador;1;5208806;15;IRIS REZENDE MACHADO;PMDB;3505;S
+governador;1;5208806;12;IRAM DE ALMEIDA SARAIVA;PDT;233;
+governador;1;5208806;#brancos;;;356;
+governador;1;5208806;#nulos;;;678;
+governador;1;5208806;#comparecimento;;;6470;
+governador;1;5217203;17;PAULO ROBERTO CUNHA;PDC;2704;
+governador;1;5217203;13;VALDI CAMARCIO;PT;476;
+governador;1;5217203;15;IRIS REZENDE MACHADO;PMDB;2338;S
+governador;1;5217203;12;IRAM DE ALMEIDA SARAIVA;PDT;112;
+governador;1;5217203;#brancos;;;262;
+governador;1;5217203;#nulos;;;427;
+governador;1;5217203;#comparecimento;;;6319;
+governador;1;5202353;17;PAULO ROBERTO CUNHA;PDC;652;
+governador;1;5202353;13;VALDI CAMARCIO;PT;96;
+governador;1;5202353;15;IRIS REZENDE MACHADO;PMDB;1281;S
+governador;1;5202353;12;IRAM DE ALMEIDA SARAIVA;PDT;36;
+governador;1;5202353;#brancos;;;118;
+governador;1;5202353;#nulos;;;163;
+governador;1;5202353;#comparecimento;;;2346;
+governador;1;5201603;17;PAULO ROBERTO CUNHA;PDC;941;
+governador;1;5201603;13;VALDI CAMARCIO;PT;104;
+governador;1;5201603;15;IRIS REZENDE MACHADO;PMDB;1922;S
+governador;1;5201603;12;IRAM DE ALMEIDA SARAIVA;PDT;45;
+governador;1;5201603;#brancos;;;134;
+governador;1;5201603;#nulos;;;219;
+governador;1;5201603;#comparecimento;;;3365;
+governador;1;5202809;17;PAULO ROBERTO CUNHA;PDC;739;
+governador;1;5202809;13;VALDI CAMARCIO;PT;39;
+governador;1;5202809;15;IRIS REZENDE MACHADO;PMDB;1147;S
+governador;1;5202809;12;IRAM DE ALMEIDA SARAIVA;PDT;36;
+governador;1;5202809;#brancos;;;90;
+governador;1;5202809;#nulos;;;143;
+governador;1;5202809;#comparecimento;;;2194;
+governador;1;5204904;17;PAULO ROBERTO CUNHA;PDC;1888;
+governador;1;5204904;13;VALDI CAMARCIO;PT;218;
+governador;1;5204904;15;IRIS REZENDE MACHADO;PMDB;2820;S
+governador;1;5204904;12;IRAM DE ALMEIDA SARAIVA;PDT;135;
+governador;1;5204904;#brancos;;;679;
+governador;1;5204904;#nulos;;;634;
+governador;1;5204904;#comparecimento;;;6374;
+governador;1;5213509;17;PAULO ROBERTO CUNHA;PDC;738;
+governador;1;5213509;13;VALDI CAMARCIO;PT;25;
+governador;1;5213509;15;IRIS REZENDE MACHADO;PMDB;1604;S
+governador;1;5213509;12;IRAM DE ALMEIDA SARAIVA;PDT;32;
+governador;1;5213509;#brancos;;;271;
+governador;1;5213509;#nulos;;;271;
+governador;1;5213509;#comparecimento;;;2941;
+governador;1;5204300;17;PAULO ROBERTO CUNHA;PDC;2155;
+governador;1;5204300;13;VALDI CAMARCIO;PT;170;
+governador;1;5204300;15;IRIS REZENDE MACHADO;PMDB;2682;S
+governador;1;5204300;12;IRAM DE ALMEIDA SARAIVA;PDT;109;
+governador;1;5204300;#brancos;;;232;
+governador;1;5204300;#nulos;;;515;
+governador;1;5204300;#comparecimento;;;5863;
+governador;1;5211305;17;PAULO ROBERTO CUNHA;PDC;648;
+governador;1;5211305;13;VALDI CAMARCIO;PT;84;
+governador;1;5211305;15;IRIS REZENDE MACHADO;PMDB;1558;S
+governador;1;5211305;12;IRAM DE ALMEIDA SARAIVA;PDT;29;
+governador;1;5211305;#brancos;;;119;
+governador;1;5211305;#nulos;;;171;
+governador;1;5211305;#comparecimento;;;2609;
+governador;1;5211008;17;PAULO ROBERTO CUNHA;PDC;1286;
+governador;1;5211008;13;VALDI CAMARCIO;PT;191;
+governador;1;5211008;15;IRIS REZENDE MACHADO;PMDB;3044;S
+governador;1;5211008;12;IRAM DE ALMEIDA SARAIVA;PDT;152;
+governador;1;5211008;#brancos;;;180;
+governador;1;5211008;#nulos;;;355;
+governador;1;5211008;#comparecimento;;;5208;
+governador;1;5212956;17;PAULO ROBERTO CUNHA;PDC;308;
+governador;1;5212956;13;VALDI CAMARCIO;PT;32;
+governador;1;5212956;15;IRIS REZENDE MACHADO;PMDB;1209;S
+governador;1;5212956;12;IRAM DE ALMEIDA SARAIVA;PDT;13;
+governador;1;5212956;#brancos;;;80;
+governador;1;5212956;#nulos;;;132;
+governador;1;5212956;#comparecimento;;;1774;
+governador;1;5202502;17;PAULO ROBERTO CUNHA;PDC;593;
+governador;1;5202502;13;VALDI CAMARCIO;PT;56;
+governador;1;5202502;15;IRIS REZENDE MACHADO;PMDB;801;S
+governador;1;5202502;12;IRAM DE ALMEIDA SARAIVA;PDT;91;
+governador;1;5202502;#brancos;;;95;
+governador;1;5202502;#nulos;;;113;
+governador;1;5202502;#comparecimento;;;1749;
+governador;1;5214002;17;PAULO ROBERTO CUNHA;PDC;2072;
+governador;1;5214002;13;VALDI CAMARCIO;PT;126;
+governador;1;5214002;15;IRIS REZENDE MACHADO;PMDB;2217;S
+governador;1;5214002;12;IRAM DE ALMEIDA SARAIVA;PDT;113;
+governador;1;5214002;#brancos;;;264;
+governador;1;5214002;#nulos;;;401;
+governador;1;5214002;#comparecimento;;;5193;
+governador;1;5218607;17;PAULO ROBERTO CUNHA;PDC;1180;
+governador;1;5218607;13;VALDI CAMARCIO;PT;111;
+governador;1;5218607;15;IRIS REZENDE MACHADO;PMDB;2670;S
+governador;1;5218607;12;IRAM DE ALMEIDA SARAIVA;PDT;104;
+governador;1;5218607;#brancos;;;189;
+governador;1;5218607;#nulos;;;421;
+governador;1;5218607;#comparecimento;;;4675;
+governador;1;5218706;17;PAULO ROBERTO CUNHA;PDC;415;
+governador;1;5218706;13;VALDI CAMARCIO;PT;45;
+governador;1;5218706;15;IRIS REZENDE MACHADO;PMDB;1721;S
+governador;1;5218706;12;IRAM DE ALMEIDA SARAIVA;PDT;21;
+governador;1;5218706;#brancos;;;162;
+governador;1;5218706;#nulos;;;264;
+governador;1;5218706;#comparecimento;;;2628;
+governador;1;5219001;17;PAULO ROBERTO CUNHA;PDC;2006;
+governador;1;5219001;13;VALDI CAMARCIO;PT;416;
+governador;1;5219001;15;IRIS REZENDE MACHADO;PMDB;1955;S
+governador;1;5219001;12;IRAM DE ALMEIDA SARAIVA;PDT;105;
+governador;1;5219001;#brancos;;;207;
+governador;1;5219001;#nulos;;;282;
+governador;1;5219001;#comparecimento;;;4971;
+governador;1;5210562;17;PAULO ROBERTO CUNHA;PDC;645;
+governador;1;5210562;13;VALDI CAMARCIO;PT;82;
+governador;1;5210562;15;IRIS REZENDE MACHADO;PMDB;2069;S
+governador;1;5210562;12;IRAM DE ALMEIDA SARAIVA;PDT;42;
+governador;1;5210562;#brancos;;;129;
+governador;1;5210562;#nulos;;;240;
+governador;1;5210562;#comparecimento;;;3207;
+governador;1;5221007;17;PAULO ROBERTO CUNHA;PDC;910;
+governador;1;5221007;13;VALDI CAMARCIO;PT;73;
+governador;1;5221007;15;IRIS REZENDE MACHADO;PMDB;1518;S
+governador;1;5221007;12;IRAM DE ALMEIDA SARAIVA;PDT;42;
+governador;1;5221007;#brancos;;;89;
+governador;1;5221007;#nulos;;;143;
+governador;1;5221007;#comparecimento;;;2775;
+governador;1;5215900;17;PAULO ROBERTO CUNHA;PDC;696;
+governador;1;5215900;13;VALDI CAMARCIO;PT;49;
+governador;1;5215900;15;IRIS REZENDE MACHADO;PMDB;1347;S
+governador;1;5215900;12;IRAM DE ALMEIDA SARAIVA;PDT;47;
+governador;1;5215900;#brancos;;;101;
+governador;1;5215900;#nulos;;;148;
+governador;1;5215900;#comparecimento;;;2388;
+governador;1;5221502;17;PAULO ROBERTO CUNHA;PDC;1255;
+governador;1;5221502;13;VALDI CAMARCIO;PT;138;
+governador;1;5221502;15;IRIS REZENDE MACHADO;PMDB;1836;S
+governador;1;5221502;12;IRAM DE ALMEIDA SARAIVA;PDT;85;
+governador;1;5221502;#brancos;;;180;
+governador;1;5221502;#nulos;;;240;
+governador;1;5221502;#comparecimento;;;3734;
+governador;1;5207501;17;PAULO ROBERTO CUNHA;PDC;1106;
+governador;1;5207501;13;VALDI CAMARCIO;PT;59;
+governador;1;5207501;15;IRIS REZENDE MACHADO;PMDB;843;S
+governador;1;5207501;12;IRAM DE ALMEIDA SARAIVA;PDT;30;
+governador;1;5207501;#brancos;;;94;
+governador;1;5207501;#nulos;;;157;
+governador;1;5207501;#comparecimento;;;2289;
+governador;1;5214101;17;PAULO ROBERTO CUNHA;PDC;972;
+governador;1;5214101;13;VALDI CAMARCIO;PT;27;
+governador;1;5214101;15;IRIS REZENDE MACHADO;PMDB;1427;S
+governador;1;5214101;12;IRAM DE ALMEIDA SARAIVA;PDT;20;
+governador;1;5214101;#brancos;;;131;
+governador;1;5214101;#nulos;;;247;
+governador;1;5214101;#comparecimento;;;2824;
+governador;1;5210307;17;PAULO ROBERTO CUNHA;PDC;465;
+governador;1;5210307;13;VALDI CAMARCIO;PT;82;
+governador;1;5210307;15;IRIS REZENDE MACHADO;PMDB;1220;S
+governador;1;5210307;12;IRAM DE ALMEIDA SARAIVA;PDT;50;
+governador;1;5210307;#brancos;;;82;
+governador;1;5210307;#nulos;;;119;
+governador;1;5210307;#comparecimento;;;2018;
+governador;1;5212006;17;PAULO ROBERTO CUNHA;PDC;225;
+governador;1;5212006;13;VALDI CAMARCIO;PT;30;
+governador;1;5212006;15;IRIS REZENDE MACHADO;PMDB;1467;S
+governador;1;5212006;12;IRAM DE ALMEIDA SARAIVA;PDT;22;
+governador;1;5212006;#brancos;;;57;
+governador;1;5212006;#nulos;;;86;
+governador;1;5212006;#comparecimento;;;1887;
+governador;1;5213707;17;PAULO ROBERTO CUNHA;PDC;1152;
+governador;1;5213707;13;VALDI CAMARCIO;PT;100;
+governador;1;5213707;15;IRIS REZENDE MACHADO;PMDB;2160;S
+governador;1;5213707;12;IRAM DE ALMEIDA SARAIVA;PDT;55;
+governador;1;5213707;#brancos;;;191;
+governador;1;5213707;#nulos;;;274;
+governador;1;5213707;#comparecimento;;;3932;
+governador;1;5211602;17;PAULO ROBERTO CUNHA;PDC;505;
+governador;1;5211602;13;VALDI CAMARCIO;PT;66;
+governador;1;5211602;15;IRIS REZENDE MACHADO;PMDB;1562;S
+governador;1;5211602;12;IRAM DE ALMEIDA SARAIVA;PDT;15;
+governador;1;5211602;#brancos;;;81;
+governador;1;5211602;#nulos;;;121;
+governador;1;5211602;#comparecimento;;;2350;
+governador;1;5212709;17;PAULO ROBERTO CUNHA;PDC;481;
+governador;1;5212709;13;VALDI CAMARCIO;PT;47;
+governador;1;5212709;15;IRIS REZENDE MACHADO;PMDB;1877;S
+governador;1;5212709;12;IRAM DE ALMEIDA SARAIVA;PDT;45;
+governador;1;5212709;#brancos;;;433;
+governador;1;5212709;#nulos;;;186;
+governador;1;5212709;#comparecimento;;;3069;
+governador;1;5220702;17;PAULO ROBERTO CUNHA;PDC;170;
+governador;1;5220702;13;VALDI CAMARCIO;PT;1;
+governador;1;5220702;15;IRIS REZENDE MACHADO;PMDB;666;S
+governador;1;5220702;12;IRAM DE ALMEIDA SARAIVA;PDT;53;
+governador;1;5220702;#brancos;;;60;
+governador;1;5220702;#nulos;;;79;
+governador;1;5220702;#comparecimento;;;1029;
+governador;1;5203500;17;PAULO ROBERTO CUNHA;PDC;2746;
+governador;1;5203500;13;VALDI CAMARCIO;PT;127;
+governador;1;5203500;15;IRIS REZENDE MACHADO;PMDB;3957;S
+governador;1;5203500;12;IRAM DE ALMEIDA SARAIVA;PDT;760;
+governador;1;5203500;#brancos;;;707;
+governador;1;5203500;#nulos;;;718;
+governador;1;5203500;#comparecimento;;;9015;
+governador;1;5221452;17;PAULO ROBERTO CUNHA;PDC;847;
+governador;1;5221452;13;VALDI CAMARCIO;PT;52;
+governador;1;5221452;15;IRIS REZENDE MACHADO;PMDB;1867;S
+governador;1;5221452;12;IRAM DE ALMEIDA SARAIVA;PDT;50;
+governador;1;5221452;#brancos;;;225;
+governador;1;5221452;#nulos;;;257;
+governador;1;5221452;#comparecimento;;;3298;
+governador;1;5208103;17;PAULO ROBERTO CUNHA;PDC;1165;
+governador;1;5208103;13;VALDI CAMARCIO;PT;42;
+governador;1;5208103;15;IRIS REZENDE MACHADO;PMDB;1708;S
+governador;1;5208103;12;IRAM DE ALMEIDA SARAIVA;PDT;35;
+governador;1;5208103;#brancos;;;200;
+governador;1;5208103;#nulos;;;221;
+governador;1;5208103;#comparecimento;;;3371;
+governador;1;5219605;17;PAULO ROBERTO CUNHA;PDC;1107;
+governador;1;5219605;13;VALDI CAMARCIO;PT;39;
+governador;1;5219605;15;IRIS REZENDE MACHADO;PMDB;1248;S
+governador;1;5219605;12;IRAM DE ALMEIDA SARAIVA;PDT;31;
+governador;1;5219605;#brancos;;;143;
+governador;1;5219605;#nulos;;;245;
+governador;1;5219605;#comparecimento;;;2813;
+governador;1;5221551;17;PAULO ROBERTO CUNHA;PDC;538;
+governador;1;5221551;13;VALDI CAMARCIO;PT;15;
+governador;1;5221551;15;IRIS REZENDE MACHADO;PMDB;791;S
+governador;1;5221551;12;IRAM DE ALMEIDA SARAIVA;PDT;26;
+governador;1;5221551;#brancos;;;103;
+governador;1;5221551;#nulos;;;136;
+governador;1;5221551;#comparecimento;;;1609;
+governador;1;5200134;17;PAULO ROBERTO CUNHA;PDC;3033;
+governador;1;5200134;13;VALDI CAMARCIO;PT;178;
+governador;1;5200134;15;IRIS REZENDE MACHADO;PMDB;3223;S
+governador;1;5200134;12;IRAM DE ALMEIDA SARAIVA;PDT;226;
+governador;1;5200134;#brancos;;;397;
+governador;1;5200134;#nulos;;;563;
+governador;1;5200134;#comparecimento;;;7620;
+governador;1;5213087;17;PAULO ROBERTO CUNHA;PDC;2967;
+governador;1;5213087;13;VALDI CAMARCIO;PT;599;
+governador;1;5213087;15;IRIS REZENDE MACHADO;PMDB;6286;S
+governador;1;5213087;12;IRAM DE ALMEIDA SARAIVA;PDT;804;
+governador;1;5213087;#brancos;;;1627;
+governador;1;5213087;#nulos;;;2433;
+governador;1;5213087;#comparecimento;;;14716;
+governador;1;5213053;17;PAULO ROBERTO CUNHA;PDC;286;
+governador;1;5213053;13;VALDI CAMARCIO;PT;30;
+governador;1;5213053;15;IRIS REZENDE MACHADO;PMDB;1084;S
+governador;1;5213053;12;IRAM DE ALMEIDA SARAIVA;PDT;19;
+governador;1;5213053;#brancos;;;116;
+governador;1;5213053;#nulos;;;178;
+governador;1;5213053;#comparecimento;;;1713;
+governador;1;5215603;17;PAULO ROBERTO CUNHA;PDC;2015;
+governador;1;5215603;13;VALDI CAMARCIO;PT;307;
+governador;1;5215603;15;IRIS REZENDE MACHADO;PMDB;2591;S
+governador;1;5215603;12;IRAM DE ALMEIDA SARAIVA;PDT;173;
+governador;1;5215603;#brancos;;;564;
+governador;1;5215603;#nulos;;;979;
+governador;1;5215603;#comparecimento;;;6629;
+governador;1;5201405;17;PAULO ROBERTO CUNHA;PDC;8999;
+governador;1;5201405;13;VALDI CAMARCIO;PT;3092;
+governador;1;5201405;15;IRIS REZENDE MACHADO;PMDB;20669;S
+governador;1;5201405;12;IRAM DE ALMEIDA SARAIVA;PDT;2266;
+governador;1;5201405;#brancos;;;2429;
+governador;1;5201405;#nulos;;;5517;
+governador;1;5201405;#comparecimento;;;42972;
+governador;1;5220454;17;PAULO ROBERTO CUNHA;PDC;997;
+governador;1;5220454;13;VALDI CAMARCIO;PT;350;
+governador;1;5220454;15;IRIS REZENDE MACHADO;PMDB;1821;S
+governador;1;5220454;12;IRAM DE ALMEIDA SARAIVA;PDT;262;
+governador;1;5220454;#brancos;;;335;
+governador;1;5220454;#nulos;;;504;
+governador;1;5220454;#comparecimento;;;4269;
+governador;1;5215405;17;PAULO ROBERTO CUNHA;PDC;534;
+governador;1;5215405;13;VALDI CAMARCIO;PT;99;
+governador;1;5215405;15;IRIS REZENDE MACHADO;PMDB;1457;S
+governador;1;5215405;12;IRAM DE ALMEIDA SARAIVA;PDT;63;
+governador;1;5215405;#brancos;;;245;
+governador;1;5215405;#nulos;;;315;
+governador;1;5215405;#comparecimento;;;2713;
+governador;1;5219753;17;PAULO ROBERTO CUNHA;PDC;1003;
+governador;1;5219753;13;VALDI CAMARCIO;PT;572;
+governador;1;5219753;15;IRIS REZENDE MACHADO;PMDB;4917;S
+governador;1;5219753;12;IRAM DE ALMEIDA SARAIVA;PDT;353;
+governador;1;5219753;#brancos;;;1678;
+governador;1;5219753;#nulos;;;2724;
+governador;1;5219753;#comparecimento;;;11247;
+governador;1;5213756;17;PAULO ROBERTO CUNHA;PDC;989;
+governador;1;5213756;13;VALDI CAMARCIO;PT;22;
+governador;1;5213756;15;IRIS REZENDE MACHADO;PMDB;1816;S
+governador;1;5213756;12;IRAM DE ALMEIDA SARAIVA;PDT;27;
+governador;1;5213756;#brancos;;;128;
+governador;1;5213756;#nulos;;;159;
+governador;1;5213756;#comparecimento;;;3141;
