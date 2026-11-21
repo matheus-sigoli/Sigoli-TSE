@@ -13,8 +13,11 @@ const ctxDe = async (nome) => {
   return contextos[t];
 };
 const log = [];
-for (const [nome, url] of Object.entries(PAGINAS)) {
+// a página pode ser só a URL ou { url, local: {chave: valor do localStorage}, cliques: [seletores clicados em ordem] }
+for (const [nome, item] of Object.entries(PAGINAS)) {
+  const { url, local, cliques } = typeof item === 'string' ? { url: item } : item;
   const pg = await (await ctxDe(nome)).newPage();
+  if (local) await pg.addInitScript((l) => { for (const [k, v] of Object.entries(l)) localStorage.setItem(k, v); }, local);
   const erros = [];
   pg.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') erros.push(`${m.type()}: ${m.text()}`); });
   pg.on('pageerror', (e) => erros.push(`pageerror: ${e.message}`));
@@ -23,6 +26,10 @@ for (const [nome, url] of Object.entries(PAGINAS)) {
   await pg.goto(`http://localhost:3000${url}`, { waitUntil: 'networkidle', timeout: 120000 }).catch((e) => erros.push(`goto: ${e.message}`));
   await pg.waitForFunction(() => !document.querySelector('.carregando, [class*="Carregando"]'), null, { timeout: 90000 }).catch(() => erros.push('ainda carregando'));
   await pg.waitForTimeout(1500);
+  for (const sel of cliques ?? []) {
+    await pg.locator(sel).first().click({ force: true, timeout: 15000 }).catch((e) => erros.push(`clique ${sel}: ${e.message}`));
+    await pg.waitForTimeout(800);
+  }
   await pg.screenshot({ path: `capturas/${nome.replace('@', '-')}.png` });
   // largura maior que a tela = rolagem horizontal (problema de responsividade)
   const larg = await pg.evaluate(() => ({ doc: document.documentElement.scrollWidth, tela: window.innerWidth }));

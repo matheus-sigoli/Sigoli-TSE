@@ -234,12 +234,74 @@ const DITADURA: Record<string, Faixas[]> = {
   ARENA: ['#04368A', '#5F747A', '#7B2CBF'].map(gerarFaixas),
 };
 
+// ------------------------------------------------------------------ cores escolhidas pelo usuário
+/**
+ * O usuário pode trocar a cor de um partido por outra faixa da tabela do degradê (seletor no painel).
+ * A escolha vale por partido (sigla canônica do ano, ver chavePartido), fica no navegador e o partido
+ * passa a ser fixo: no conflito, quem troca de cor é o outro.
+ */
+let escolhidas: Record<string, string[]> = {};
+export const definirCoresEscolhidas = (m: Record<string, string[]>) => { escolhidas = m; };
+const escolhida = (k: string): Faixas | undefined => {
+  const c = escolhidas[k];
+  return Array.isArray(c) && c.length === 10 ? paraFaixas(c) : undefined;
+};
+export const faixasEmLista = (f: Faixas) => CHAVES.map((k) => f[k]);
+
+export interface OpcaoCor { rotulo: string; faixas: Faixas }
+/** Opções de cor de um partido: as dele na tabela (principal, extra, reservas) e as demais faixas da tabela. */
+export function opcoesDeCor(sigla: string): { chave: string; proprias: OpcaoCor[]; outras: OpcaoCor[] } {
+  const k = chavePartido(sigla);
+  const proprias: OpcaoCor[] = [];
+  const dit = DITADURA[k];
+  if (dit) dit.forEach((f, i) => proprias.push({ rotulo: `${i + 1}ª sublegenda`, faixas: f }));
+  else {
+    const pal = paletaDoPartido(sigla);
+    proprias.push({ rotulo: 'Principal', faixas: pal.principal });
+    if (pal.extra) proprias.push({ rotulo: 'Extra', faixas: pal.extra });
+    pal.reservas.forEach((f, i) => proprias.push({ rotulo: pal.reservas.length > 1 ? `Reserva ${i + 1}` : 'Reserva', faixas: f }));
+  }
+  const vistas = new Set(proprias.map((o) => o.faixas['50'].toUpperCase()));
+  const outras: OpcaoCor[] = [];
+  const por = (rotulo: string, f: Faixas | undefined) => {
+    if (!f) return;
+    const b = f['50'].toUpperCase();
+    if (vistas.has(b)) return;
+    vistas.add(b); outras.push({ rotulo, faixas: f });
+  };
+  for (const p of paleta.partidos as { sigla: string }[]) {
+    const kk = normaliza(p.sigla), d = TABELA.get(kk);
+    if (!d) continue;
+    const res = RESERVAS_BASE.get(kk) ?? [];
+    por(p.sigla, d.principal);
+    por(`${p.sigla} (extra)`, d.extra);
+    res.forEach((b, i) => por(`${p.sigla} (reserva${res.length > 1 ? ' ' + (i + 1) : ''})`, gerarFaixas(b)));
+  }
+  for (const [kk, cores] of Object.entries(POPULISTA_FAIXAS)) {
+    por(`${kk.replace(/45$/, '')} (1945–65)`, paraFaixas(cores[0]));
+    if (cores[1]) por(`${kk.replace(/45$/, '')} (1945–65, extra)`, paraFaixas(cores[1]));
+  }
+  por('MDB (1966–79)', DITADURA.MDB66[0]);
+  por('ARENA (1966–79)', DITADURA.ARENA[0]);
+  por('Roxo', EXTERNAS[0]);
+  por('Amarelo', EXTERNAS[1]);
+  NEUTRAS.forEach((f, i) => por(`Neutra ${i + 1}`, f));
+  return { chave: k, proprias, outras };
+}
+
 export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pinta?: boolean[]): Faixas[] {
   if (daltonico) return partidosEmOrdem.map((_, i) => gerarFaixas(DALTONICO[i % DALTONICO.length]));
   const chaves = partidosEmOrdem.map(chavePartido);
   const pals = partidosEmOrdem.map(paletaDoPartido);
   const escolha: Faixas[] = pals.map((p) => p.principal);
   const ativos: number[] = []; // já decididos e que pintam o mapa
+  // cor escolhida pelo usuário: vale para o mais votado do partido, que fica fixo
+  const doUsuario = new Set<number>();
+  chaves.forEach((k, i) => {
+    const f = escolhida(k);
+    if (f && !chaves.slice(0, i).includes(k)) { pals[i] = { principal: f, reservas: [] }; escolha[i] = f; doUsuario.add(i); }
+  });
+  const fixo = (i: number) => FIXOS.has(chaves[i]) || doUsuario.has(i);
 
   const parecidas = (fa: Faixas, a: number, fb: Faixas, b: number) => {
     if (fa === pals[a].principal && fb === pals[b].principal && COMPATIVEIS.has(`${chaves[a]}|${chaves[b]}`)) return false;
@@ -258,6 +320,18 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
   };
 
   for (let i = 0; i < pals.length; i++) {
+    if (doUsuario.has(i)) {
+      if (!pinta || pinta[i]) {
+        ativos.push(i);
+        const tentados = new Set<number>();
+        for (let j = conflito(escolha[i], i); j >= 0 && !tentados.has(j); j = conflito(escolha[i], i)) {
+          tentados.add(j);
+          if (fixo(j)) break; // duas cores fixas parecidas: escolha do usuário, fica assim
+          tirarDoCaminho(j);
+        }
+      }
+      continue;
+    }
     const dit = DITADURA[chaves[i]];
     if (dit) {
       const k = chaves.slice(0, i).filter((c) => c === chaves[i]).length;
@@ -282,7 +356,7 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
       const tentados = new Set<number>();
       for (let j = conflito(escolha[i], i); j >= 0 && !tentados.has(j); j = conflito(escolha[i], i)) {
         tentados.add(j);
-        if (FIXOS.has(chaves[j])) break; // dois fixos parecidos: não acontece com a paleta atual
+        if (fixo(j)) break; // dois fixos parecidos (ou cor escolhida pelo usuário)
         tirarDoCaminho(j);
       }
       continue;
@@ -292,7 +366,7 @@ export function atribuirCores(partidosEmOrdem: string[], daltonico = false, pint
       const mesmo = chaves[i] === chaves[j];
       const livreI = (f: Faixas) => f !== escolha[j] && conflito(f, i) < 0;
       // j troca só se ainda está na principal e a nova cor não bate com ninguém (nem com i)
-      const livreJ = (f: Faixas) => !mesmo && !FIXOS.has(chaves[j]) && escolha[j] === pals[j].principal && conflito(f, j) < 0 && !parecidas(f, j, escolha[i], i) && conflito(escolha[i], i, j) < 0;
+      const livreJ = (f: Faixas) => !mesmo && !fixo(j) && escolha[j] === pals[j].principal && conflito(f, j) < 0 && !parecidas(f, j, escolha[i], i) && conflito(escolha[i], i, j) < 0;
       // a cor extra (2ª cor oficial da tabela) vem antes das reservas, dos dois lados:
       // no Pará, PODE vira roxo e o MDB segue verde, mesmo o MDB tendo reservas
       const exI = pals[i].extra, exJ = pals[j].extra;

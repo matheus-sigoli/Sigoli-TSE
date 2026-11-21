@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
-import { textoSobre } from '@/lib/cores';
+import { faixasEmLista, opcoesDeCor, textoSobre, type Faixas, type OpcaoCor } from '@/lib/cores';
 import { preCarregar, urlResultadoNivel, type Local, type Nivel } from '@/lib/dados';
 import { temCargo } from '@/lib/anos';
 import { CARGOS, UFS, type Arquivo, type Cargo, type CargoSlug, type Turno } from '@/lib/dominio';
@@ -34,6 +34,10 @@ interface Props {
   turnoPossivel: (t: Turno) => boolean;
   aoMudarTurno: (t: Turno) => void;
   aoFocar: (chave: string | null) => void;
+  /** cores escolhidas pelo usuário (null no modo daltônico: o seletor some) */
+  coresEscolhidas: Record<string, string[]> | null;
+  aoEscolherCor: (chave: string, faixas: string[] | null) => void;
+  aoRestaurarCores: () => void;
 }
 
 const POR_PAGINA = 40;
@@ -43,6 +47,9 @@ function Painel(p: Props) {
   const { cargo, abr, turno, visao, arquivo, foco } = p;
   const [aba, setAba] = useState<'partidos' | 'candidatos'>('partidos');
   const [limite, setLimite] = useState(POR_PAGINA);
+  const [seletor, setSeletor] = useState<{ partido: string; atual: Faixas } | null>(null);
+  const abrirSeletor = useCallback((l: Linha) => setSeletor({ partido: l.partido, atual: l.faixas }), []);
+  const fecharSeletor = useCallback(() => setSeletor(null), []);
   useEffect(() => setLimite(POR_PAGINA), [cargo.slug, abr, p.nomeRecorte]);
 
   // gaveta (celular)
@@ -209,7 +216,18 @@ function Painel(p: Props) {
             focoChave={focoChave}
             aoFocar={p.aoFocar}
             mostrarSelos={!p.temSelecao}
+            aoTrocarCor={p.coresEscolhidas ? abrirSeletor : undefined}
           />
+          {seletor && p.coresEscolhidas ? (
+            <SeletorCor
+              partido={seletor.partido}
+              atual={seletor.atual}
+              escolhidas={p.coresEscolhidas}
+              aoEscolher={(chave, f) => { p.aoEscolherCor(chave, f); setSeletor(null); }}
+              aoRestaurarTodas={() => { p.aoRestaurarCores(); setSeletor(null); }}
+              aoFechar={fecharSeletor}
+            />
+          ) : null}
           {(prop && abaAtiva === 'partidos' ? visao.partidos : visao.candidatos).length > limite ? (
             <button className="mais" onClick={() => setLimite((l) => l + POR_PAGINA)}>
               Mostrar mais {Math.min(POR_PAGINA, (abaAtiva === 'partidos' && prop ? visao.partidos : visao.candidatos).length - limite)}
@@ -265,8 +283,10 @@ const iniciais = (l: Linha) => {
   return ((p[0]?.[0] ?? '') + (p.length > 1 ? p[p.length - 1][0] : '')).toUpperCase();
 };
 
-const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos, semLegenda }: {
+const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos, semLegenda, aoTrocarCor }: {
   linhas: Linha[];
+  /** abre o seletor de cor do partido da linha */
+  aoTrocarCor?: (l: Linha) => void;
   /** fonte sem voto de legenda (PDF do TRE): o total do partido é só a soma dos nominais */
   semLegenda?: boolean;
   focoChave: string | null;
@@ -318,6 +338,11 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos, se
                 <i style={{ background: cor, transform: `scaleX(${Math.min(1, l.pct)})` }} />
               </span>
             </button>
+            {aoTrocarCor && l.partido ? (
+              <button type="button" className="trocar-cor" title={`Trocar a cor do ${l.partido}`} aria-label={`Trocar a cor do ${l.partido}`} onClick={() => aoTrocarCor(l)}>
+                <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden><path d="M8 1.5a6.5 6.5 0 1 0 0 13c.9 0 1.4-.6 1.4-1.3 0-.4-.2-.7-.4-1-.2-.3-.4-.6-.4-1 0-.7.6-1.2 1.3-1.2h1.6A3 3 0 0 0 14.5 7C14.5 4 11.6 1.5 8 1.5Z" fill="currentColor" /><circle cx="4.6" cy="7.4" r="1.1" fill="var(--surface)" /><circle cx="6.8" cy="4.6" r="1.1" fill="var(--surface)" /><circle cx="10.2" cy="4.8" r="1.1" fill="var(--surface)" /></svg>
+              </button>
+            ) : null}
           </li>
         );
       })}
@@ -377,3 +402,59 @@ const MALHA_HISTORICA: Record<number, string> = {
 };
 
 export default memo(Painel);
+
+/** Seletor de cor do partido: as faixas dele na tabela do degradê e as demais faixas da tabela. */
+function SeletorCor({ partido, atual, escolhidas, aoEscolher, aoRestaurarTodas, aoFechar }: {
+  partido: string;
+  atual: Faixas;
+  escolhidas: Record<string, string[]>;
+  aoEscolher: (chave: string, faixas: string[] | null) => void;
+  aoRestaurarTodas: () => void;
+  aoFechar: () => void;
+}) {
+  const { chave, proprias, outras } = opcoesDeCor(partido);
+  const caixa = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    caixa.current?.focus();
+    const tecla = (e: KeyboardEvent) => { if (e.key === 'Escape') aoFechar(); };
+    window.addEventListener('keydown', tecla);
+    return () => window.removeEventListener('keydown', tecla);
+  }, [aoFechar]);
+  const base = atual['50'].toUpperCase();
+  const temEscolha = !!escolhidas[chave];
+  const nEscolhidas = Object.keys(escolhidas).length;
+  const opcao = (o: OpcaoCor) => (
+    <li key={o.rotulo + o.faixas['50']}>
+      <button
+        type="button"
+        className="opcao-cor"
+        aria-pressed={o.faixas['50'].toUpperCase() === base}
+        onClick={() => aoEscolher(chave, faixasEmLista(o.faixas))}
+      >
+        <span className="degrade" aria-hidden>
+          {faixasEmLista(o.faixas).map((c, i) => <i key={i} style={{ background: c }} />)}
+        </span>
+        <span className="opcao-rotulo">{o.rotulo}</span>
+      </button>
+    </li>
+  );
+  return (
+    <div className="seletor-fundo" onClick={aoFechar}>
+      <div className="seletor-cor" role="dialog" aria-modal="true" aria-label={`Cor do ${partido}`} tabIndex={-1} ref={caixa} onClick={(e) => e.stopPropagation()}>
+        <div className="seletor-topo">
+          <strong>Cor do {partido}</strong>
+          <button type="button" className="fechar" aria-label="Fechar" onClick={aoFechar}>×</button>
+        </div>
+        <p className="dica">Escolha uma faixa da tabela do degradê. Vale para este partido em todos os mapas (fica salvo neste navegador).</p>
+        <h3>Cores do partido na tabela</h3>
+        <ul className="opcoes-cor">{proprias.map(opcao)}</ul>
+        <h3>Outras cores da tabela</h3>
+        <ul className="opcoes-cor">{outras.map(opcao)}</ul>
+        <div className="seletor-acoes">
+          {temEscolha ? <button type="button" onClick={() => aoEscolher(chave, null)}>Voltar à cor automática</button> : null}
+          {nEscolhidas > (temEscolha ? 1 : 0) ? <button type="button" onClick={aoRestaurarTodas}>Restaurar todas as cores ({nEscolhidas})</button> : null}
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,6 +1,6 @@
 {
-  "go-1990-gov": "/1990/go/governador",
-  "br-1950-pres": "/1950/br/presidente",
-  "br-1990-gov": "/1990/br/governador",
-  "sp-2022-pres@cel": "/2022/sp/presidente"
+  "sp-1990-verde": {
+    "url": "/1990/sp/governador",
+    "cliques": [".lista > li:nth-child(2) .trocar-cor", ".opcoes-cor li:nth-child(1) .opcao-cor"]
+  }
 }

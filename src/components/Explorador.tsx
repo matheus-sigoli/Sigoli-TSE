@@ -17,7 +17,7 @@ import {
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
 import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
-import { definirAnoCores } from '@/lib/cores';
+import { definirAnoCores, definirCoresEscolhidas } from '@/lib/cores';
 import { ELEICOES, fonteDoAno, temCargo, temLocais, temZonas } from '@/lib/anos';
 import Filtros from './Filtros';
 import Painel from './Painel';
@@ -65,6 +65,27 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // preferências (o script do <head> já aplicou no <html>)
   const [daltonico, setDaltonico] = useState(false);
   const [tema, setTema] = useState<'escuro' | 'claro'>('escuro');
+  // cores de partido escolhidas pelo usuário (seletor no painel): sigla canônica → 10 faixas
+  const [coresEscolhidas, setCoresEscolhidas] = useState<Record<string, string[]>>({});
+  useEffect(() => {
+    try {
+      const salvo = JSON.parse(localStorage.getItem('sigoli:cores') || '{}');
+      if (salvo && typeof salvo === 'object') setCoresEscolhidas(salvo);
+    } catch {}
+  }, []);
+  const escolherCor = useCallback((chave: string, faixas: string[] | null) => {
+    setCoresEscolhidas((atual) => {
+      const novo = { ...atual };
+      if (faixas) novo[chave] = faixas;
+      else delete novo[chave];
+      try { localStorage.setItem('sigoli:cores', JSON.stringify(novo)); } catch {}
+      return novo;
+    });
+  }, []);
+  const restaurarCores = useCallback(() => {
+    setCoresEscolhidas({});
+    try { localStorage.removeItem('sigoli:cores'); } catch {}
+  }, []);
   useEffect(() => {
     setDaltonico(document.documentElement.dataset.daltonico === '1');
     setTema(document.documentElement.dataset.theme === 'claro' ? 'claro' : 'escuro');
@@ -285,8 +306,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     const base = resultadoEstado.dados;
     const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p, pintam: base.pintam } : undefined;
     definirAnoCores(ano);
+    definirCoresEscolhidas(coresEscolhidas);
     return calcularVisao(arq, { abr, municipios: recorteMunicipios, ano }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
-  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados, ano]);
+  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados, ano, coresEscolhidas]);
 
   // ---- nomes
   const nomeZona = useCallback(
@@ -566,6 +588,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         turnoPossivel={(t) => turnoDisponivel(cargo, abr, t, ano)}
         aoMudarTurno={(t) => atualizarBusca({ t: t === 2 ? '2' : null, foco: null })}
         aoFocar={(chave) => atualizarBusca({ foco: chave && params.get('foco') !== chave ? chave : null })}
+        coresEscolhidas={daltonico ? null : coresEscolhidas}
+        aoEscolherCor={escolherCor}
+        aoRestaurarCores={restaurarCores}
       />
     </div>
   );
