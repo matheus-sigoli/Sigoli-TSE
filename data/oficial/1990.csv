@@ -75,3 +75,32 @@ senador;1;pa;HELIO VIEIRA DOURADO;PSC;21925;;Wikipedia, "Eleições estaduais no
 senador;1;pa;#brancos;;441642;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
 senador;1;pa;#nulos;;104062;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
 senador;1;pa;#comparecimento;;1700539;;Wikipedia, "Eleições estaduais no Pará em 1990" (resultado do TRE)
+governador;1;go;IRIS REZENDE MACHADO;PMDB;889927;S;Wikipedia, "Eleições estaduais em Goiás em 1990" (resultado do TRE-GO, confere com o total geral impresso no boletim)
+governador;1;go;PAULO ROBERTO CUNHA;PDC;537111;;Wikipedia, "Eleições estaduais em Goiás em 1990" (resultado do TRE-GO, confere com o total geral impresso no boletim)
+governador;1;go;VALDI CAMARCIO;PT;88836;;Wikipedia, "Eleições estaduais em Goiás em 1990" (resultado do TRE-GO, confere com o total geral impresso no boletim)
+governador;1;go;IRAM DE ALMEIDA SARAIVA;PDT;62372;;Wikipedia, "Eleições estaduais em Goiás em 1990" (resultado do TRE-GO, confere com o total geral impresso no boletim)
+governador;1;go;#brancos;;107068;;Wikipedia, "Eleições estaduais em Goiás em 1990" (resultado do TRE-GO, confere com o total geral impresso no boletim)
+governador;1;go;#nulos;;189205;;Wikipedia, "Eleições estaduais em Goiás em 1990" (resultado do TRE-GO, confere com o total geral impresso no boletim)
+governador;1;go;#comparecimento;;1874519;;Wikipedia, "Eleições estaduais em Goiás em 1990" (resultado do TRE-GO, confere com o total geral impresso no boletim)
+governador;1;go;#eleitorado;;2244631;;Wikipedia, "Eleições estaduais em Goiás em 1990" (resultado do TRE-GO, confere com o total geral impresso no boletim)
+governador;1;es;ALBUÍNO AZEREDO;PDT;356694;2;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", 1º turno (PDF do acervo)
+governador;1;es;JOSÉ IGNÁCIO FERREIRA;PST;291196;2;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", 1º turno (PDF do acervo)
+governador;1;es;ROGÉRIO SARLO DE MEDEIROS;PT;127749;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", 1º turno (PDF do acervo)
+governador;1;es;JOÃO DE MEDEIROS CALMON;PMDB;39053;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", 1º turno (PDF do acervo)
+governador;1;es;#brancos;;210091;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", 1º turno (PDF do acervo)
+governador;1;es;#nulos;;208905;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", 1º turno (PDF do acervo)
+governador;1;es;#comparecimento;;1233688;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", 1º turno (PDF do acervo)
+senador;1;es;ÉLCIO ÁLVARES;PFL;290487;S;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos)
+senador;1;es;RENATO VIANA SOARES;PSB;149326;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos)
+senador;1;es;MAGNO PIRES DA SILVA;PT;72958;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos)
+senador;1;es;JOSÉ MORAES;PMDB;70972;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos)
+senador;1;es;JOÃO DALMÁCIO CASTELLO MIGUEL;PSDB;39063;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos)
+senador;1;es;FERDINAND BERREDO DE MENEZES;PRN;26264;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos)
+senador;1;es;JEFFERSON DE AGUIAR;PDS;15750;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos)
+senador;1;es;#comparecimento;;1233688;;SERPRO/TRE-ES, tela "Votação dos candidatos no estado", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos)
+senador;1;ba;JOSAPHAT RAMOS MARINHO;PFL;1179585;S;TRE-BA, demonstrativo da votação do candidato (VP-005), "votação total" de cada candidato a Senador
+senador;1;ba;JOACI FONSECA DE GOES;PSDB;648732;;TRE-BA, demonstrativo da votação do candidato (VP-005), "votação total" de cada candidato a Senador
+senador;1;ba;ELIZABETH MARIA SOUTO WAGNER;PCB;350218;;TRE-BA, demonstrativo da votação do candidato (VP-005), "votação total" de cada candidato a Senador
+senador;1;ba;JONAS PAULO DE OLIVEIRA NERES;PT;88938;;TRE-BA, demonstrativo da votação do candidato (VP-005), "votação total" de cada candidato a Senador
+senador;1;ba;SILVONEY SALES DE ALMEIDA;PSC;72588;;TRE-BA, demonstrativo da votação do candidato (VP-005), "votação total" de cada candidato a Senador
+senador;1;ba;CLINIO MAYRINCK MONTEIRO DE A NETO;PMN;63704;;TRE-BA, demonstrativo da votação do candidato (VP-005), "votação total" de cada candidato a Senador
