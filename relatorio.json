@@ -1,0 +1,68 @@
+[
+  {
+    "nome": "go-1990-gov",
+    "url": "/1990/go/governador",
+    "ms": 2550,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nGoiás\n\nGovernador, 1º turno. Por município: TRE-GO\n\nTotal do estado: resultado final oficial (Wikipedia). O mapa tem 208 municípios com resultado por município.\n\n1º turno\n2º turno\nComparecimento\n83,5%\nAbstenção\n16,5%\nBrancos\n5,7%\nNulos\n10,1%\n\nClique num nome para ver onde ele teve mais votos.\n\n15\nIris Rezende Machado (PMDB)Eleito\nPMDB / 15\n56,39%\n889.927 votos\n17\nPaulo Roberto Cunha (PDC)\nPDC / 17\n34,03%\n537.111 votos\n13\nValdi Camarcio (PT)\nPT / 13\n5,63%\n88.836 votos\n12\nIram de Almeida Saraiva (PDT)\nPDT / 12\n3,95%\n62.372 votos\nFonte: TRE-GO, totalização da eleição para Governador de 3 de outubro de 1990, por zona e município. Total do estado: Wikipedia, \"Eleições estaduais em Goiás em 1990\" (resultado do TRE-GO, confere com o total geral impresso no boletim). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1990\n1989\n1986\n1982\n1978\n1974\n1970\n1966\n1965\n1962\n1960\n1958\n1955\n1954\n1950\n1947\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nGoiânia\nItumbiara\nLuziânia - Águas Lindas de Goiás\nPorangatu - Uruaçu\nRio Verde\nSão Luís de Montes Belos - Iporá\nÁguas Lindas de Goiás\nAnápolis\nCaldas Novas-Morrinhos\nCatalão\nCeres - Rialma - Goianésia\nFlores de Goiás\nGoiânia\nGoiás - Itapuranga\nInhumas - Itaberaí - Anicuns\nIporá\nItumbiara\nJataí-Min",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-GO, totalização da eleição para Governador de 3 de outubro de 1990, por zona e município",
+    "areas": 212,
+    "circulos": 0
+  },
+  {
+    "nome": "es-1990-gov1",
+    "url": "/1990/es/governador",
+    "ms": 2336,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nEspírito Santo\n\nGovernador, 1º turno. Por município: SERPRO/TRE-ES\n\nTotal do estado: resultado final oficial (SERPRO/TRE-ES). O mapa tem 67 municípios com resultado por município.\n\n1º turno\n2º turno\nVotantes\n1.233.688\nBrancos\n17,0%\nNulos\n16,9%\n\nClique num nome para ver onde ele teve mais votos.\n\n12\nAlbuíno Azeredo (PDT)2º turno\nPDT / 12\n43,78%\n356.694 votos\n52\nJosé Ignácio Ferreira (PST)2º turno\nPST / 52\n35,74%\n291.196 votos\n13\nRogério Sarlo de Medeiros (PT)\nPT / 13\n15,68%\n127.749 votos\n15\nJoão de Medeiros Calmon (PMDB)\nPMDB / 15\n4,79%\n39.053 votos\nFonte: SERPRO/TRE-ES, totalização do 1º turno de 3 de outubro de 1990 (votação dos candidatos por município). Total do estado: SERPRO/TRE-ES, tela \"Votação dos candidatos no estado\", 1º turno (PDF do acervo). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1990\n1989\n1986\n1982\n1978\n1974\n1970\n1966\n1965\n1962\n1960\n1958\n1955\n1954\n1950\n1947\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nCachoeiro do Itapemirim\nColatina\nSão Mateus\nVitória\nAfonso Cláudio - Venda Nova do Imigrante - Santa Maria de Jetibá\nAlegre\nCachoeiro de Itapemirim\nColatina\nLinhares\nNova Venécia\nSão Mateus\nVitória\nRM da Grande Vitória\nSomar vários\nmunicípios ou locais: cada toque põe ou tira da soma (no computador",
+    "creditos": "Malha: IBGE 2025 · Resultados: SERPRO/TRE-ES, totalização do 1º turno de 3 de outubro de 1990 (votação dos candidatos por município)",
+    "areas": 68,
+    "circulos": 0
+  },
+  {
+    "nome": "es-1990-sen",
+    "url": "/1990/es/senador",
+    "ms": 2329,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nEspírito Santo\n\nSenador, 1º turno. Por município: SERPRO/TRE-ES\n\nTotal do estado: resultado final oficial (SERPRO/TRE-ES). O mapa tem 64 municípios com resultado por município.\n\nVotantes\n1.233.688\nBrancos e nulos\n46,1%\n\nClique num nome para ver onde ele teve mais votos.\n\nÉÁ\nÉlcio Álvares (PFL)Eleito\nPFL\n43,69%\n290.487 votos\nRS\nRenato Viana Soares (PSB)\nPSB\n22,46%\n149.326 votos\nMS\nMagno Pires da Silva (PT)\nPT\n10,97%\n72.958 votos\nJM\nJosé Moraes (PMDB)\nPMDB\n10,68%\n70.972 votos\nJM\nJoão Dalmácio Castello Miguel (PSDB)\nPSDB\n5,88%\n39.063 votos\nFM\nFerdinand Berredo de Menezes (PRN)\nPRN\n3,95%\n26.264 votos\nJA\nJefferson de Aguiar (PDS)\nPDS\n2,37%\n15.750 votos\nFonte: SERPRO/TRE-ES, totalização do 1º turno de 3 de outubro de 1990 (votação dos candidatos por município). Total do estado: SERPRO/TRE-ES, tela \"Votação dos candidatos no estado\", Senador, 1º turno (PDF do acervo, dígitos conferidos com os percentuais impressos). Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1990\n1989\n1986\n1982\n1978\n1974\n1970\n1966\n1965\n1962\n1960\n1958\n1955\n1954\n1950\n1947\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nCachoeiro do Itapemirim\nColatina\nSão Mateus\nVitória\nAfonso Cláudio - Venda Nova do Imigrante - Santa Maria de Jetibá\nAlegre\nCachoeiro de Itapemirim\nColatina\nLinhares\nNova Venécia\nSão Mateus\nVitória\nRM da Grande Vitória\nSomar vários\nmunicípios ou locais: cada toque põe ou tira da soma (no computador",
+    "creditos": "Malha: IBGE 2025 · Resultados: SERPRO/TRE-ES, totalização do 1º turno de 3 de outubro de 1990 (votação dos candidatos por município)",
+    "areas": 68,
+    "circulos": 0
+  },
+  {
+    "nome": "ba-1990-sen",
+    "url": "/1990/ba/senador",
+    "ms": 2401,
+    "erros": [],
+    "painel": "Governador\nSenador\nDep. Federal\nDep. Estadual\nBrasil\nBahia\n\nSenador, 1º turno. Por município: TRE-BA\n\nTotal do estado: resultado final oficial (TRE-BA). O mapa tem 415 municípios com resultado por município.\n\nVotantes\n4.732.158\nBrancos e nulos\n49,2%\n\nClique num nome para ver onde ele teve mais votos.\n\nJM\nJosaphat Ramos Marinho (PFL)Eleito\nPFL\n49,07%\n1.179.585 votos\nJG\nJoaci Fonseca de Goes (PSDB)\nPSDB\n26,99%\n648.732 votos\nEW\nElizabeth Maria Souto Wagner (PCB)\nPCB\n14,57%\n350.218 votos\nJN\nJonas Paulo de Oliveira Neres (PT)\nPT\n3,70%\n88.938 votos\nSA\nSilvoney Sales de Almeida (PSC)\nPSC\n3,02%\n72.588 votos\nCN\nClinio Mayrinck Monteiro de A Neto (PMN)\nPMN\n2,65%\n63.704 votos\nFonte: TRE-BA, demonstrativo da votação do candidato a Senador por município, eleições de 3/10/1990. Total do estado: TRE-BA, demonstrativo da votação do candidato (VP-005), \"votação total\" de cada candidato a Senador. Malha municipal: IBGE 2025. Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1990, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1990\n1989\n1986\n1982\n1978\n1974\n1970\n1966\n1965\n1962\n1960\n1958\n1955\n1954\n1950\n1947\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nRegião\nEstado inteiro\nBarreiras\nFeira de Santana\nGuanambi\nIlhéus - Itabuna\nIrecê\nJuazeiro\nPaulo Afonso\nSalvador\nSanto Antônio de Jesus\nVitória da Conquista\nAlagoinhas\nBarreiras\nBom Jesus da Lapa\nBrumado\nCamacan\nCícero Dantas\nConceição do Coité\nCruz das Almas\nEuclides da Cunha\nEunápolis - Porto Seguro\nFeira de Santana\nGu",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-BA, demonstrativo da votação do candidato a Senador por município, eleições de 3/10/1990",
+    "areas": 416,
+    "circulos": 0
+  },
+  {
+    "nome": "ce-1950-pres",
+    "url": "/1950/ce/presidente",
+    "ms": 2322,
+    "erros": [],
+    "painel": "Presidente\nVice-Presidente\nGovernador\nSenador\nBrasil\nCeará\n\nPresidente. Por município: TRE-CE\n\nVotantes\n476.258\nBrancos\n2,8%\nNulos\n2,0%\n\nClique num nome para ver onde ele teve mais votos.\n\nEG\nEduardo Gomes (UDN)\nUDN\n43,89%\n198.933 votos\nCM\nCristiano Machado (PSD)\nPSD\n32,36%\n146.667 votos\nGV\nGetúlio Vargas (PTB)Eleito\nPTB\n23,72%\n107.510 votos\nJM\nJoão Mangabeira (PSB)\nPSB\n0,02%\n105 votos\nFonte: TRE-CE, Seção de Estatísticas Eleitorais (resultado por zona e município). Malha municipal: IBGE, malha municipal histórica de 1950 (municípios da época). Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1950, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1990\n1989\n1986\n1982\n1978\n1974\n1970\n1966\n1965\n1962\n1960\n1958\n1955\n1954\n1950\n1947\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nExterior\nRegião\nEstado inteiro\nCrateús\nFortaleza\nIguatu\nJuazeiro do Norte\nQuixadá\nSobral\nAcaraú\nAracati\nBrejo Santo\nCamocim\nCanindé\nCrateús\nFortaleza\nIcó\nIguatu\nItapagé\nItapipoca\nJuazeiro do Norte\nQuixadá\nRedenção-Acarape\nRussas - Limoeiro do Norte\nSão Benedito - Ipu - Guaraciaba do Norte - Tianguá\nSobral\nTauá\nRM de For",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-CE, Seção de Estatísticas Eleitorais (resultado por zona e município)",
+    "areas": 81,
+    "circulos": 0
+  },
+  {
+    "nome": "br-1950-pres",
+    "url": "/1950/br/presidente",
+    "ms": 2316,
+    "erros": [],
+    "painel": "Presidente\nVice-Presidente\nGovernador\nSenador\nBrasil\n\nPresidente. Por município: TRE-CE\n\nTotal do Brasil: resultado final oficial (Wikipédia). O mapa tem 79 municípios com resultado por município.\n\nVotantes\n8.254.989\nBrancos\n2,6%\nNulos\n1,8%\n\nClique num nome para ver onde ele teve mais votos.\n\nGV\nGetúlio Vargas (PTB)Eleito\nPTB\n48,73%\n3.849.040 votos\nEG\nEduardo Gomes (UDN)\nUDN\n29,66%\n2.342.384 votos\nCM\nCristiano Machado (PSD)\nPSD\n21,49%\n1.697.193 votos\nJM\nJoão Mangabeira (PSB)\nPSB\n0,12%\n9.466 votos\nFonte: TRE-CE, Seção de Estatísticas Eleitorais (resultado por zona e município). Total do Brasil: Wikipédia, Eleição presidencial no Brasil em 1950 (TSE, via IBGE). Malha municipal: IBGE, malha municipal histórica de 1950 (municípios da época). Percentuais de candidatos sobre votos válidos.",
+    "filtros": "Sigoli\n.TSE\n\nEleições 1950, município por município\n\nEleição\n2026\n2022\n2018\n2014\n2010\n2006\n2002\n1998\n1994\n1990\n1989\n1986\n1982\n1978\n1974\n1970\n1966\n1965\n1962\n1960\n1958\n1955\n1954\n1950\n1947\nOnde\nBrasil\nAcre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins\nExterior\nRegiões do país\nNorte\nNordeste\nCentro-Oeste\nSudeste\nSul\n\nEscolha uma ou mais (ex.: Sul e Sudeste) para somar só elas.\n\nBuscar município\nVencedor no município\nGetúlio Vargas (PTB)\nEduardo Gomes (UDN)\nCristiano Machado (PSD)\nJoão Mangabeira (PSB)\n10%\n50%\n100%\n\nTom mais escuro: vitória mais folgada.\n\npor Matheus S",
+    "creditos": "Malha: IBGE 2025 · Resultados: TRE-CE, Seção de Estatísticas Eleitorais (resultado por zona e município)",
+    "areas": 1896,
+    "circulos": 0
+  }
+]
