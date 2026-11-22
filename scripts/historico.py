@@ -91,7 +91,9 @@ def ler_aba(ws, por_nome=None):
         if (cdg is None or not re.fullmatch(r'\d{7}(\.0)?', str(cdg))) and por_nome and i_mun is not None and r[i_mun]:
             # código quebrado (#REF!): procura pelo nome do município na UF
             u = str(r[i_uf]).strip().lower() if i_uf is not None and r[i_uf] else None
-            cdg = por_nome.get((u, sem_acento(str(r[i_mun])).replace('-', ' ').replace("'", ''))) or cdg
+            nm = sem_acento(str(r[i_mun])).replace('-', ' ').replace("'", '')
+            # grafia de época: Moji-Mirim → Mogi Mirim
+            cdg = por_nome.get((u, nm)) or por_nome.get((u, re.sub(r'\bMOJI\b', 'MOGI', nm))) or cdg
         if cdg is None or not re.fullmatch(r'\d{7}(\.0)?', str(cdg)): continue
         votos = [int(r[i] or 0) if i < len(r) and isinstance(r[i], (int, float)) else 0 for _, i in cand]
         t = {k: int(r[i] or 0) if isinstance(r[i], (int, float)) else 0 for k, i in tot.items()}
