@@ -1,7 +1,13 @@
 {
-  "rs-1978-sen": "/1978/rs/senador",
-  "sp-1990-seletor": {
-    "url": "/1990/sp/governador",
-    "cliques": [".lista > li:nth-child(2) .trocar-cor"]
-  }
+  "br-prefeito": "/2024/br/prefeito",
+  "br-vereador": "/2024/br/vereador",
+  "sp-prefeito": "/2024/sp/prefeito",
+  "sp-prefeito-t2": "/2024/sp/prefeito?t=2",
+  "sp-vereador": "/2024/sp/vereador",
+  "sp-capital-mun": "/2024/sp/prefeito?mun=3550308",
+  "sp-cidade-zonas": "/2024/sp/prefeito?cid=3550308&nivel=zonas",
+  "sp-cidade-bairros-t2": "/2024/sp/prefeito?cid=3550308&nivel=bairros&t=2",
+  "rj-cidade-locais": "/2024/rj/prefeito?cid=3304557&nivel=locais",
+  "sp-vereador-cidade": "/2024/sp/vereador?cid=3550308&nivel=zonas",
+  "ba-vereador-cidade": "/2024/ba/vereador?cid=2927408"
 }
