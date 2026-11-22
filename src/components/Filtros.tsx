@@ -4,7 +4,7 @@ import { memo, useDeferredValue, useEffect, useId, useMemo, useRef, useState } f
 import { FAIXAS_LEGENDA, type Faixas } from '@/lib/cores';
 import type { Local, Malha, Nivel, Regioes, TipoRegiao } from '@/lib/dados';
 import { CONTINENTES, REGIOES_PAIS, continentesDe, regioesDoPais } from '@/lib/dados';
-import { UFS, type Cargo, type Municipio } from '@/lib/dominio';
+import { UFS, abrangenciaValida, type Cargo, type Municipio } from '@/lib/dominio';
 import type { Linha } from '@/lib/resultados';
 import { semAcento, titulo } from '@/lib/formato';
 import { ELEICOES, temLocais, temZonas } from '@/lib/anos';
@@ -134,7 +134,9 @@ function Filtros(p: Props) {
     const l = gruposRegiao.filter((r) => atual.has(r.s)).map((r) => r.s);
     p.aoMudarRegiao(l.length && l.length < gruposRegiao.length ? l.join(',') : null);
   };
-  const comRegiao = !!p.regiaoSelecionada && !p.cidade && temLocais(p.ano);
+  const comRegiao = !!p.regiaoSelecionada && !p.cidade && temLocais(p.ano) && !p.cargo.municipal;
+  // eleição municipal: no estado só municípios; zonas, bairros e locais na visão da cidade
+  const niveis = p.cidade ? NIVEIS_CIDADE.filter((x) => x.n === 'zonas' || temLocais(p.ano)) : p.cargo.municipal ? [] : comRegiao ? NIVEIS_REGIAO : NIVEIS_ESTADO;
 
   return (
     <aside className="filtros" aria-label="Filtros">
@@ -160,7 +162,7 @@ function Filtros(p: Props) {
         <label htmlFor={idAbr}>Onde</label>
         <select id={idAbr} className="select" value={p.abr} onChange={(e) => p.aoMudarAbrangencia(e.target.value)}>
           <option value="br">Brasil</option>
-          {UFS_ORDENADAS.map(([uf, nome]) => <option key={uf} value={uf}>{nome}</option>)}
+          {UFS_ORDENADAS.filter(([uf]) => abrangenciaValida(uf, p.cargo)).map(([uf, nome]) => <option key={uf} value={uf}>{nome}</option>)}
           {p.cargo.slug === 'presidente' ? <option value="exterior">Exterior</option> : null}
         </select>
       </div>
@@ -174,16 +176,21 @@ function Filtros(p: Props) {
               {p.aoFecharCidade ? <button type="button" className="link-botao" onClick={p.aoFecharCidade}>Voltar ao estado</button> : null}
             </div>
           ) : null}
-          <span className="campo-rotulo" id="rot-nivel">Ver por</span>
-          <div className="segmentado nivel" role="group" aria-labelledby="rot-nivel">
-            {(p.cidade ? NIVEIS_CIDADE.filter((x) => x.n === 'zonas' || temLocais(p.ano)) : comRegiao ? NIVEIS_REGIAO : NIVEIS_ESTADO).map(({ n, rotulo }) => (
-              <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
-            ))}
-          </div>
+          {niveis.length ? (
+            <>
+              <span className="campo-rotulo" id="rot-nivel">Ver por</span>
+              <div className="segmentado nivel" role="group" aria-labelledby="rot-nivel">
+                {niveis.map(({ n, rotulo }) => (
+                  <button key={n} aria-pressed={p.nivel === n} onClick={() => p.aoMudarNivel(n)}>{rotulo}</button>
+                ))}
+              </div>
+            </>
+          ) : null}
           <p className="marca-sub dica-nivel" style={{ marginTop: 6 }}>
             {p.cidade ? DICA_CIDADE[p.nivel]
               : comRegiao && p.nivel === 'locais' ? 'Todos os locais de votação da região num mapa só. Clique num local para ver o resultado dele.'
               : comRegiao ? 'Em Locais, a região inteira aparece por local de votação. Dois cliques num município abrem só ele.'
+              : p.cargo.municipal ? `Cada município tem a cor do partido ${p.cargo.slug === 'prefeito' ? 'do candidato a prefeito mais votado' : 'mais votado para vereador'}. Dois cliques abrem a cidade, com zonas, bairros e locais de votação.`
               : 'Dois cliques num município abrem as zonas, os bairros e os locais de votação dele.'}
             {' '}Shift + clique soma várias áreas.
           </p>

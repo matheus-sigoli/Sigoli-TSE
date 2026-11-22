@@ -47,7 +47,8 @@ const DADOS = `public/data/${ANO}`;
 const GEO = (nome) => (ANO === 2026 ? `public/geo/${nome}` : `public/geo/${ANO}/${nome}`);
 const CDN = 'https://cdn.tse.jus.br/estatistica/sead/odsele';
 const TODAS = ['ac', 'al', 'am', 'ap', 'ba', 'ce', 'df', 'es', 'go', 'ma', 'mg', 'ms', 'mt', 'pa', 'pb', 'pe', 'pi', 'pr', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp', 'to'];
-const UFS = opt('uf').length ? opt('uf').map((u) => u.toLowerCase()) : TODAS;
+// o DF não tem eleição municipal (nem seções nos arquivos de 2024, 2020…)
+const UFS = (opt('uf').length ? opt('uf').map((u) => u.toLowerCase()) : TODAS).filter((u) => !(u === 'df' && ANO % 4 === 0 && ANO !== 2026 && ANO >= 1996));
 /**
  * Eleição municipal (2024, 2020…): Prefeito e Vereador. Cada cidade tem a sua disputa: a base é o arquivo da UF com
  * todos os candidatos (scripts/municipal-tse.mjs, em .cache/municipal/) e a saída é um arquivo por cidade com as

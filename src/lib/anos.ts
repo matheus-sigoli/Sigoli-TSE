@@ -31,6 +31,10 @@ export const ELEICOES: Eleicao[] = [
     cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2026/br/presidente?t=2',
   },
   {
+    ano: 2024, titulo: 'Eleições Municipais 2024', datas: '6 e 27 de outubro',
+    cargos: 'Prefeito e Vereador', disponivel: true, rota: '/2024/sp/prefeito', soCargos: ['prefeito', 'vereador'],
+  },
+  {
     ano: 2022, titulo: 'Eleições Gerais 2022', datas: '2 e 30 de outubro',
     cargos: 'Presidente, Governador, Senador, Deputados', disponivel: true, rota: '/2022/br/presidente?t=2',
   },
@@ -158,6 +162,9 @@ export const ELEICOES: Eleicao[] = [
   },
 ];
 
+/** ano de eleição municipal (Prefeito e Vereador) */
+export const anoMunicipal = (ano: number) => !!ELEICOES.find((e) => e.ano === ano)?.soCargos?.includes('prefeito');
+
 /** o ano tem locais de votação (visão Locais na cidade) */
 export const temLocais = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semLocais;
 
@@ -177,6 +184,7 @@ export const temCargo = (ano: number, cargo: string) => {
   if (cargo === 'vice-presidente' && ano > 1960) return false;
   const e = ELEICOES.find((x) => x.ano === ano);
   if (e?.soCargos) return e.soCargos.includes(cargo);
+  if (cargo === 'prefeito' || cargo === 'vereador') return false; // só nos anos de eleição municipal (soCargos)
   return cargo !== 'presidente' || !e?.semPresidente;
 };
 

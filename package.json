@@ -22,7 +22,8 @@
     "zonas": "node --max-old-space-size=6144 scripts/zonas-locais.mjs --baixar",
     "pintam": "node scripts/pintam.mjs",
     "build:cloudflare": "next build && rm -rf out/data out/geo",
-    "build:dados": "rm -rf dist-dados && mkdir -p dist-dados && cp -r public/data public/geo dist-dados/ && cp cloudflare/dados-headers dist-dados/_headers"
+    "build:dados": "rm -rf dist-dados && mkdir -p dist-dados && cp -r public/data public/geo dist-dados/ && rm -rf dist-dados/data/2024 dist-dados/geo/2024 && cp cloudflare/dados-headers dist-dados/_headers",
+    "build:municipal": "rm -rf dist-municipal && mkdir -p dist-municipal/data dist-municipal/geo && cp -r public/data/2024 dist-municipal/data/ && cp -r public/geo/2024 dist-municipal/geo/ && cp cloudflare/dados-headers dist-municipal/_headers"
   },
   "dependencies": {
     "lottie-web": "5.13.0",

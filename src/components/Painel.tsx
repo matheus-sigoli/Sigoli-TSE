@@ -45,12 +45,14 @@ const UNIDADE: Record<Nivel, string> = { municipios: 'município', zonas: 'zona'
 
 function Painel(p: Props) {
   const { cargo, abr, turno, visao, arquivo, foco } = p;
-  const [aba, setAba] = useState<'partidos' | 'candidatos'>('partidos');
+  const [aba, setAba] = useState<'partidos' | 'candidatos'>(cargo.slug === 'prefeito' ? 'candidatos' : 'partidos');
   const [limite, setLimite] = useState(POR_PAGINA);
   const [seletor, setSeletor] = useState<{ partido: string; atual: Faixas } | null>(null);
   const abrirSeletor = useCallback((l: Linha) => setSeletor({ partido: l.partido, atual: l.faixas }), []);
   const fecharSeletor = useCallback(() => setSeletor(null), []);
   useEffect(() => setLimite(POR_PAGINA), [cargo.slug, abr, p.nomeRecorte]);
+  // Prefeito: o arquivo do estado é por partido (cada cidade com a sua disputa), mas a lista abre nos candidatos
+  useEffect(() => setAba(cargo.slug === 'prefeito' ? 'candidatos' : 'partidos'), [cargo.slug]);
 
   // gaveta (celular)
   const [aberta, setAberta] = useState(false);
@@ -81,7 +83,8 @@ function Painel(p: Props) {
 
   const focoChave = foco ? `${foco.tipo}:${foco.idx}` : null;
   const prop = visao?.tipo === 'prop';
-  const porPartido = p.nivel !== 'municipios';
+  // eleição municipal: na cidade, a lista de candidatos é só a dela (cabe por zona, bairro e local)
+  const porPartido = p.nivel !== 'municipios' && !cargo.municipal;
   const abaAtiva = porPartido ? 'partidos' : aba;
   const t = visao?.totais;
   const votosPorEleitor = (arquivo && !arquivo.resumo && arquivo.votosPorEleitor) || 1;
@@ -111,7 +114,7 @@ function Painel(p: Props) {
             href={p.hrefCargo(c.slug)}
             aria-current={c.slug === cargo.slug ? 'page' : undefined}
             scroll={false}
-            onMouseEnter={() => preCarregar(urlResultadoNivel(p.ano, c.slug, 1, abr === 'exterior' ? 'br' : abr, p.nivel))}
+            onMouseEnter={() => (c.municipal || cargo.municipal) && p.nivel !== 'municipios' ? undefined : preCarregar(urlResultadoNivel(p.ano, c.slug, 1, abr === 'exterior' ? 'br' : abr, p.nivel))}
           >
             {c.curto}
           </Link>
@@ -155,7 +158,7 @@ function Painel(p: Props) {
                 key={n}
                 aria-pressed={turno === n}
                 disabled={!p.turnoPossivel(n)}
-                title={!p.turnoPossivel(n) ? 'Não houve 2º turno neste estado' : undefined}
+                title={!p.turnoPossivel(n) ? (cargo.municipal ? 'Não houve 2º turno nesta cidade' : 'Não houve 2º turno neste estado') : undefined}
                 onClick={() => p.aoMudarTurno(n)}
               >
                 {n}º turno
@@ -191,7 +194,9 @@ function Painel(p: Props) {
         </dl>
       ) : null}
 
-      {visao?.tipo === 'resumo' && visao.eleitosPorUf ? (
+      {visao?.tipo === 'resumo' && visao.bancadas ? (
+        <ResumoMunicipal ano={p.ano} visao={visao} cargo={cargo} turno={turno} />
+      ) : visao?.tipo === 'resumo' && visao.eleitosPorUf ? (
         <Resumo ano={p.ano} visao={visao} cargo={cargo} turno={turno} />
       ) : visao ? (
         <>
@@ -392,6 +397,35 @@ function Resumo({ ano, visao, cargo, turno }: { ano: number; visao: Visao; cargo
           )}
         </section>
       ))}
+    </>
+  );
+}
+
+/** Brasil numa eleição municipal: prefeitos (ou vereadores) eleitos por partido e o link de cada estado. */
+function ResumoMunicipal({ ano, visao, cargo, turno }: { ano: number; visao: Visao; cargo: Cargo; turno: Turno }) {
+  const corDe = new Map(visao.partidos.map((l) => [l.partido, l.faixas['50']]));
+  const total = visao.bancadas!.reduce((s, [, n]) => s + n, 0);
+  const ufs = Object.keys(UFS).filter((uf) => uf !== 'df').sort((a, b) => UFS[a].localeCompare(UFS[b], 'pt-BR'));
+  return (
+    <>
+      <h2 className="secao-titulo">{cargo.slug === 'prefeito' ? `Prefeitos eleitos no ${turno}º turno, por partido` : 'Vereadores eleitos por partido'} ({total.toLocaleString('pt-BR')})</h2>
+      <div className="bancada">
+        {visao.bancadas!.map(([sg, n]) => (
+          <span key={sg}>
+            <i className="tecla pequena" style={{ '--cor': corDe.get(sg) ?? '#888', color: textoSobre(corDe.get(sg) ?? '#888'), fontStyle: 'normal' } as React.CSSProperties}>{n.toLocaleString('pt-BR')}</i>
+            {sg}
+          </span>
+        ))}
+      </div>
+      <p className="dica">
+        No mapa, cada município tem a cor do partido {cargo.slug === 'prefeito' ? `do candidato a prefeito mais votado no ${turno}º turno` : 'mais votado para vereador'}. Escolha um estado para ver os candidatos de cada cidade.
+      </p>
+      <h2 className="secao-titulo">Por estado</h2>
+      <div className="bancada">
+        {ufs.map((uf) => (
+          <Link key={uf} href={`/${ano}/${uf}/${cargo.slug}${turno === 2 ? '?t=2' : ''}`} scroll={false}>{UFS[uf]}</Link>
+        ))}
+      </div>
     </>
   );
 }

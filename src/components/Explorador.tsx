@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useState, useTransition } from 'react';
 import {
-  cargoPorSlug, nomeAbrangencia, rotaDe, turnoDisponivel,
+  abrangenciaValida, cargoPorSlug, nomeAbrangencia, rotaDe, turnoDisponivel,
   type ArquivoResultado, type CargoSlug, type Turno,
 } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
@@ -39,7 +39,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const [, iniciarTransicao] = useTransition();
 
   const turnoPedido = (Number(params.get('t')) === 2 ? 2 : 1) as Turno;
-  const turno: Turno = turnoDisponivel(cargo, abr, turnoPedido, ano) ? turnoPedido : 1;
+  // eleição municipal: o 2º turno de Prefeito é por cidade (?cid=)
+  const cidPedida = params.get('cid');
+  const turno: Turno = turnoDisponivel(cargo, abr, turnoPedido, ano, cargo.municipal ? cidPedida : null) ? turnoPedido : 1;
   // seleção: uma unidade (?mun=id) ou várias somadas com shift + clique (?mun=id1,id2,...)
   const munParam = params.get('mun');
   const selecao = useMemo(() => (munParam ? munParam.split(',').filter(Boolean) : []), [munParam]);
@@ -58,7 +60,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const cid = abr !== 'br' && abr !== 'exterior' && comZonas ? params.get('cid') ?? cidadeUnica : null;
   const nivelUrl = lerNivel(params.get('nivel'), abr, !!cid, !!reg && !cid && comZonas);
   // ano sem locais (1998): a cidade abre por zonas (sem locais, sem bairros)
-  const nivel: Nivel = !comZonas ? 'municipios' : (nivelUrl === 'locais' || nivelUrl === 'bairros') && !temLocais(ano) ? (cid ? 'zonas' : 'municipios') : nivelUrl;
+  // eleição municipal: no estado só há municípios (zonas, bairros e locais ficam na visão da cidade, arquivo da cidade)
+  const nivel: Nivel = !comZonas || (cargo.municipal && !cid) ? 'municipios' : (nivelUrl === 'locais' || nivelUrl === 'bairros') && !temLocais(ano) ? (cid ? 'zonas' : 'municipios') : nivelUrl;
   // micro ou mesorregião vista por locais de votação: os locais de todas as cidades dela num mapa só
   const regiaoLocais = !cid && !!reg && nivel === 'locais';
 
@@ -156,7 +159,13 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         if (temCargo(outro, 'presidente')) return `${rotaDe(abr, 'presidente', outro)}${q ? `?${q}` : ''}`;
         // anos só com outro cargo (1978: Senador; 1982: Governador): o primeiro cargo do ano, na mesma abrangência
         const so = ELEICOES.find((e) => e.ano === outro)?.soCargos?.[0];
-        if (so) return rotaDe(abr === 'exterior' ? 'br' : abr, so as CargoSlug, outro);
+        if (so) {
+          const destino = cargoPorSlug(so)!;
+          // eleição municipal: a mesma cidade continua aberta (o DF não tem eleição municipal: vai para o Brasil)
+          const a = abr === 'exterior' || !abrangenciaValida(abr, destino) ? 'br' : abr;
+          const q2 = destino.municipal && cid && a === abr && cid !== cidadeUnica ? `?cid=${cid}${nivel !== 'municipios' ? `&nivel=${nivel}` : ''}` : '';
+          return rotaDe(a, so as CargoSlug, outro) + q2;
+        }
         return `${rotaDe(abr === 'br' || abr === 'exterior' ? 'sp' : abr, 'governador', outro)}${q ? `?${q}` : ''}`;
       }
       return `${rotaDe(abr, cargoSlug, outro)}${q ? `?${q}` : ''}`;
@@ -167,9 +176,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   // ---- dados
   // Na visão da cidade, cada nível tem seu arquivo por UF: zonas-cidade, bairros ou locais (ADRs 0009 e 0011)
   const nivelArquivo: NivelArquivo = cid ? (nivel === 'zonas' ? 'zonas-cidade' : nivel === 'locais' ? 'locais' : 'bairros') : regiaoLocais ? 'locais' : nivel === 'zonas' ? 'zonas' : 'municipios';
-  const resultado = useResultado(ano, cargoSlug, turno, abr, nivelArquivo);
+  const resultado = useResultado(ano, cargoSlug, turno, abr, nivelArquivo, cargo.municipal ? cid : null);
   // arquivo do mapa do estado: a ordem das cores sai dele, para cada candidato ter a mesma cor em todos os níveis
-  const resultadoEstado = useResultado(ano, cargoSlug, turno, abr, 'municipios');
+  // (eleição municipal: na cidade, os candidatos são só os dela; a ordem das cores sai do arquivo da cidade)
+  const resultadoEstado = useResultado(ano, cargoSlug, turno, abr, cargo.municipal && cid ? nivelArquivo : 'municipios', cargo.municipal ? cid : null);
   const malhaUf = useMalha(ano, abr, !cid && nivel === 'zonas' ? 'zonas' : 'municipios');
   const malhaCidade = useMalhaCidade(ano, cid ? abr : null, cid, cid ? (nivel as 'zonas' | 'bairros' | 'locais') : 'bairros');
   // mapa dos municípios de um estado: sem a linha externa (contorno do estado)
@@ -585,7 +595,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         erro={resultado.erro && !ausente ? resultado.erro.message : null}
         temSelecao={!!mun}
         hrefCargo={hrefCargo}
-        turnoPossivel={(t) => turnoDisponivel(cargo, abr, t, ano)}
+        turnoPossivel={(t) => turnoDisponivel(cargo, abr, t, ano, cargo.municipal ? cid : null)}
         aoMudarTurno={(t) => atualizarBusca({ t: t === 2 ? '2' : null, foco: null })}
         aoFocar={(chave) => atualizarBusca({ foco: chave && params.get('foco') !== chave ? chave : null })}
         coresEscolhidas={daltonico ? null : coresEscolhidas}

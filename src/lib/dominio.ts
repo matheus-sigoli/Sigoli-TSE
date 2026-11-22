@@ -1,6 +1,7 @@
 /** Vocabulário do Sigoli.TSE — ver CONTEXT.md. */
+import SEGUNDO_TURNO_2024 from './segundo-turno-prefeito-2024.json';
 
-export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual';
+export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador';
 export type Turno = 1 | 2;
 export type TipoCargo = 'maj' | 'prop';
 
@@ -11,6 +12,8 @@ export interface Cargo {
   tipo: TipoCargo;
   turnos: Turno[];
   federal: boolean;
+  /** eleição municipal: cada cidade tem a sua disputa (no estado, o município pinta com o partido mais votado) */
+  municipal?: boolean;
 }
 
 export const CARGOS: Cargo[] = [
@@ -21,7 +24,12 @@ export const CARGOS: Cargo[] = [
   { slug: 'senador', nome: 'Senador', curto: 'Senador', tipo: 'maj', turnos: [1], federal: false },
   { slug: 'deputado-federal', nome: 'Deputado Federal', curto: 'Dep. Federal', tipo: 'prop', turnos: [1], federal: false },
   { slug: 'deputado-estadual', nome: 'Deputado Estadual', curto: 'Dep. Estadual', tipo: 'prop', turnos: [1], federal: false },
+  { slug: 'prefeito', nome: 'Prefeito', curto: 'Prefeito', tipo: 'maj', turnos: [1, 2], federal: false, municipal: true },
+  { slug: 'vereador', nome: 'Vereador', curto: 'Vereador', tipo: 'prop', turnos: [1], federal: false, municipal: true },
 ];
+
+/** cidades com 2º turno de Prefeito, por ano e UF (public/data/{ano}/segundo-turno.json, scripts/municipal-tse.mjs) */
+export const SEGUNDO_TURNO_PREFEITO: Record<number, Record<string, string[]>> = { 2024: SEGUNDO_TURNO_2024 };
 
 export const cargoPorSlug = (s: string) => CARGOS.find((c) => c.slug === s);
 
@@ -56,10 +64,16 @@ export const nomeAbrangencia = (abr: string) =>
   abr === 'br' ? 'Brasil' : abr === 'exterior' ? 'Exterior' : UFS[abr] ?? abr.toUpperCase();
 
 export const abrangenciaValida = (abr: string, cargo: Cargo) =>
-  abr === 'br' || (abr === 'exterior' ? cargo.slug === 'presidente' : abr in UFS);
+  abr === 'br' || (abr === 'exterior' ? cargo.slug === 'presidente' : abr in UFS && !(cargo.municipal && abr === 'df'));
+/** o DF não tem eleição municipal (nem Prefeito nem Vereador) */
 
-export const turnoDisponivel = (cargo: Cargo, abr: string, turno: Turno, ano = 2026) => {
+export const turnoDisponivel = (cargo: Cargo, abr: string, turno: Turno, ano = 2026, cid?: string | null) => {
   if (!cargo.turnos.includes(turno)) return false;
+  if (turno === 2 && cargo.slug === 'prefeito') {
+    const porUf = SEGUNDO_TURNO_PREFEITO[ano] ?? {};
+    if (abr === 'br') return Object.keys(porUf).length > 0;
+    return cid ? (porUf[abr] ?? []).includes(cid) : (porUf[abr] ?? []).length > 0;
+  }
   // 2º turno só existe desde a Constituição de 1988 (República de 1946 e ditadura: turno único)
   if (turno === 2 && ano < 1989) return false;
   if (turno === 2 && cargo.slug === 'governador' && abr !== 'br') return (UFS_2T_GOVERNADOR[ano] ?? []).includes(abr);
@@ -88,6 +102,9 @@ export interface Candidato {
   /** coligação (nome) e composição, quando houver */
   col?: string;
   comp?: string;
+  /** eleição municipal: código IBGE (e TSE) da cidade do candidato */
+  mun?: string;
+  tse?: string;
 }
 
 export interface Partido {
@@ -129,6 +146,10 @@ export interface ArquivoResultado {
   votosPorEleitor?: number;
   /** total do estado tirado do resultado final oficial (os municípios do mapa podem estar incompletos; scripts/oficial.py) */
   oficial?: { fonte: string; municipios: number };
+  /** eleição municipal: no arquivo da UF, candidatos de todas as cidades (cada um com `mun`); no da cidade, só os dela */
+  municipal?: boolean;
+  /** arquivo da cidade (eleição municipal): UF da cidade */
+  uf?: string;
   resumo?: undefined;
 }
 
@@ -154,6 +175,9 @@ export interface ArquivoResumo {
   eleitos: Record<string, EleitoResumo[]>;
   /** ibge → [índice do partido, pct × 1000, nome do vencedor] */
   mun: Record<string, [number, number, string]>;
+  /** eleição municipal: prefeitos ou vereadores eleitos por partido (no lugar da lista de eleitos por UF) */
+  municipal?: boolean;
+  bancadas?: [string, number][];
 }
 
 export type Arquivo = ArquivoResultado | ArquivoResumo;

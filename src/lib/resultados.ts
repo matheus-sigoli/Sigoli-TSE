@@ -61,6 +61,8 @@ export interface Visao {
   legenda: { rotulo: string; faixas: Faixas }[];
   eleitosPorUf?: ArquivoResumo['eleitos'];
   partidosResumo?: string[];
+  /** eleição municipal (Brasil): prefeitos ou vereadores eleitos por partido */
+  bancadas?: [string, number][];
 }
 
 const zero = (): Totais => [0, 0, 0, 0, 0, 0];
@@ -238,6 +240,7 @@ function visaoResumo(arq: ArquivoResumo, recorte: Recorte, daltonico: boolean): 
     legenda: ordem.slice(0, 6).map((i) => ({ rotulo: arq.partidos[i], faixas: faixas[i] })),
     eleitosPorUf: arq.eleitos,
     partidosResumo: arq.partidos,
+    bancadas: arq.bancadas,
   };
 }
 
