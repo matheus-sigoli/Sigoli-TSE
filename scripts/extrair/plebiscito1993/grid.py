@@ -11,9 +11,39 @@ def endireita(ink):
     if abs(ang)<0.05: return ink
     H,W=ink.shape; M=cv2.getRotationMatrix2D((W/2,H/2),ang,1)
     return (cv2.warpAffine(ink*255,M,(W,H),flags=cv2.INTER_NEAREST)>127).astype(np.uint8)
+def altura(b):
+    d=cv2.dilate(b,np.ones((3,3),np.uint8))
+    n,lab,st,_=cv2.connectedComponentsWithStats(d,8)
+    h=st[1:,3]; w=st[1:,2]
+    hs=h[(h>=8)&(h<=60)&(w>=4)&(w<=h*1.3)]
+    return float(np.median(hs)) if len(hs)>=20 else None
+def entrelinha(ink):
+    r=ink.sum(1).astype(float); r-=r.mean()
+    ac=np.correlate(r,r,'full')[len(r)-1:]
+    H=len(r); lo=max(8,H//400); hi=H//20
+    k=lo+int(np.argmax(ac[lo:hi]))
+    # refina com o 4º múltiplo
+    j0=max(lo,4*k-8); j=j0+int(np.argmax(ac[j0:4*k+9]))
+    return j/4
+FORCA=None
 def limpa(path):
     im=cv2.imread(path,cv2.IMREAD_GRAYSCALE)
-    ink=endireita((im<128).astype(np.uint8))
+    b=(im<128).astype(np.uint8)
+    if max(b.shape)>2600:
+        f=2600/max(b.shape); b=(cv2.resize(b.astype(np.float32),None,fx=f,fy=f,interpolation=cv2.INTER_AREA)>0.3).astype(np.uint8)
+    p=altura(b)
+    if FORCA is not None:
+        if FORCA!=1.0: b=(cv2.resize(b.astype(np.float32),None,fx=FORCA,fy=FORCA,interpolation=cv2.INTER_AREA if FORCA<1 else cv2.INTER_LINEAR)>0.35).astype(np.uint8)
+    elif p and abs(p-17)>=1:
+        f=17/p; b=(cv2.resize(b.astype(np.float32),None,fx=f,fy=f,interpolation=cv2.INTER_AREA)>0.35).astype(np.uint8)
+    # tarjas pretas da digitalização (borda da página): colunas e linhas quase todas pretas
+    cm=b.mean(0); b[:,cm>0.6]=0
+    k=np.where(cm>0.6)[0]
+    if len(k):
+        # alarga a faixa (a borda da tarja é ruidosa)
+        for x in k: b[:,max(0,x-6):x+7]=0
+    rm=b.mean(1); b[rm>0.6,:]=0
+    ink=endireita(b)
     d=cv2.dilate(ink,np.ones((3,3),np.uint8))
     n,lab,st,_=cv2.connectedComponentsWithStats(d,8)
     big=[i for i in range(1,n) if st[i][2]>80 or st[i][3]>28]
