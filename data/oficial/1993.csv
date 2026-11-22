@@ -1,0 +1,13 @@
+cargo;turno;uf;candidato;partido;votos;eleito;fonte
+forma;1;br;REPÚBLICA;REPÚBLICA;43881747;S;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+forma;1;br;MONARQUIA;MONARQUIA;6790751;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+forma;1;br;#brancos;;6813179;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+forma;1;br;#nulos;;8741289;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+forma;1;br;#comparecimento;;66226966;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+forma;1;br;#eleitorado;;90256552;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+sistema;1;br;PRESIDENCIALISMO;PRESIDENCIALISMO;36685630;S;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+sistema;1;br;PARLAMENTARISMO;PARLAMENTARISMO;16415585;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+sistema;1;br;#brancos;;3193763;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+sistema;1;br;#nulos;;9606163;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+sistema;1;br;#comparecimento;;65901141;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
+sistema;1;br;#eleitorado;;90256552;;TSE, resultado do plebiscito de 21/04/1993 (Brasil)
