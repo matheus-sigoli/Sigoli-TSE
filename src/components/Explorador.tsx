@@ -341,6 +341,32 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     return l ? titulo(l.nome) : 'Local de votação';
   };
 
+  // eleições antigas: município que votou junto com outro (mesma zona eleitoral) tem o próprio polígono com "z" = de quem
+  // é o resultado; no mapa ele tem a mesma cor e é selecionado junto (o resultado conta uma vez só)
+  const juntoDe = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const f of malha.dados?.municipios.features ?? []) if (f.properties?.z) m.set(String(f.id), String(f.properties.z));
+    return m;
+  }, [malha.dados]);
+  const juntosCom = useMemo(() => {
+    const m = new Map<string, string[]>();
+    for (const [i, z] of juntoDe) m.set(z, [...(m.get(z) ?? []), i]);
+    return m;
+  }, [juntoDe]);
+  const comJuntos = (ids: string[]) => (juntosCom.size ? ids.flatMap((i) => [i, ...(juntosCom.get(i) ?? [])]) : ids);
+  const coresMapa = useMemo(() => {
+    const c = visao?.cores ?? null;
+    if (!c || !juntoDe.size) return c;
+    const n = new Map(c);
+    for (const [i, z] of juntoDe) { const cor = c.get(z); if (cor) n.set(i, cor); }
+    return n;
+  }, [visao?.cores, juntoDe]);
+  const nomeMunicipio = (id: string) => {
+    const m = indiceMunicipios.porIbge.get(id);
+    const f = m ? null : malha.dados?.municipios.features.find((x) => String(x.id) === id);
+    return m ? titulo(m.nome) : f?.properties?.n ? titulo(String(f.properties.n)) : id;
+  };
+
   const nomeRecorte = useMemo(() => {
     if (multi) {
       const rotulo = abr === 'exterior' ? 'lugares do exterior' : cid || regiaoLocais ? { zonas: 'zonas', bairros: 'bairros', locais: 'locais de votação' }[nivel as 'zonas' | 'bairros' | 'locais'] : nivel === 'zonas' ? 'zonas' : 'municípios';
@@ -352,12 +378,14 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     if (mun) {
       if (abr === 'exterior') return indiceMunicipios.porPais.get(mun)?.nome ?? nomeExterior(mun);
       const m = indiceMunicipios.porIbge.get(mun);
+      const juntos = juntosCom.get(mun);
+      if (juntos?.length) return `${m ? titulo(m.nome) : 'Município'} (com ${juntos.map(nomeMunicipio).join(', ')})`;
       return m ? titulo(m.nome) : 'Município';
     }
     if (nomeRegiao) return nomeRegiao;
     return nomeAbrangencia(abr);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mun, multi, selecao, abr, cid, nivel, regiaoLocais, nomeRegiao, indiceMunicipios, bairros.dados, locais.dados]);
+  }, [mun, multi, selecao, abr, cid, nivel, regiaoLocais, nomeRegiao, indiceMunicipios, bairros.dados, locais.dados, juntosCom]);
 
   // linha de contexto abaixo do título
   const contexto = useMemo(() => {
@@ -437,8 +465,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   );
 
   const aoSelecionar = useCallback(
-    (id: string | null, somar = false) => {
-      if (!id) return atualizarBusca({ mun: null });
+    (idClicado: string | null, somar = false) => {
+      if (!idClicado) return atualizarBusca({ mun: null });
+      // município que votou junto com outro: seleciona o resultado da zona
+      const id = juntoDe.get(idClicado) ?? idClicado;
       // shift + clique (ou o modo "somar vários"): põe ou tira a unidade da soma (não vale na visão Brasil)
       if ((somar || modoSoma) && abr !== 'br') {
         const nova = selecao.includes(id) ? selecao.filter((x) => x !== id) : [...selecao, id];
@@ -451,7 +481,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       atualizarBusca({ mun: id === mun ? null : id });
     },
-    [abr, ano, mun, selecao, cargoSlug, irPara, atualizarBusca, modoSoma],
+    [abr, ano, mun, selecao, cargoSlug, irPara, atualizarBusca, modoSoma, juntoDe],
   );
 
   // duplo clique num município (estado, sem zonas) abre a visão da cidade
@@ -480,7 +510,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       const nome = abr === 'exterior'
         ? indiceMunicipios.porPais.get(id)?.nome
-        : indiceMunicipios.porIbge.get(id) && `${titulo(indiceMunicipios.porIbge.get(id)!.nome)} (${indiceMunicipios.porIbge.get(id)!.uf.toUpperCase()})`;
+        : indiceMunicipios.porIbge.get(id) ? `${titulo(indiceMunicipios.porIbge.get(id)!.nome)} (${indiceMunicipios.porIbge.get(id)!.uf.toUpperCase()})`
+        : juntoDe.has(id) ? nomeMunicipio(id) : undefined;
       if (!nome) return null;
       if (arq.resumo) {
         const r = arq.mun[id];
@@ -488,13 +519,15 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         const quem = r[2] ? `${titulo(r[2])} (${arq.partidos[r[0]]})` : arq.partidos[r[0]];
         return { titulo: nome, linha: `${quem} · ${pct(r[1] / 1000)}` };
       }
+      const sede = juntoDe.get(id);
+      if (sede && arq.mun[sede]) return { titulo: nome, linha: `Votos junto com ${nomeMunicipio(sede)}: ${linhaVencedor(arq, [arq.mun[sede]])}` };
       const regs = abr === 'exterior' ? (indiceMunicipios.porPais.get(id)?.cidades ?? []).map((c) => arq.mun[c]).filter(Boolean) : [arq.mun[id]].filter(Boolean);
       if (!regs.length) return { titulo: nome, linha: 'Sem votos neste cargo' };
       const dica = abr !== 'br' && abr !== 'exterior' ? ' · dois cliques: zonas, bairros e locais' : '';
       return { titulo: nome, linha: linhaVencedor(arq, regs) + dica };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [resultado.dados, abr, indiceMunicipios, nivelArquivo, nomeZona, bairros.dados, locais.dados, regiaoLocais],
+    [resultado.dados, abr, indiceMunicipios, nivelArquivo, nomeZona, bairros.dados, locais.dados, regiaoLocais, juntoDe],
   );
 
   const mudarNivel = useCallback(
@@ -554,9 +587,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
             // no nível Locais as áreas do Atlas cobrem a cidade inteira: sem o contorno do município por baixo
             fundo={regiaoLocais ? malhaRegiao.dados?.fundo ?? null : cid && !(nivel === 'locais' && !malhaCidade.dados?.pontos.features.length) ? malhaCidade.dados?.fundo ?? null : null}
             pontos={malhaLocais ? malhaLocais.dados?.pontos ?? null : null}
-            cores={visao?.cores ?? null}
+            cores={coresMapa}
             selecionado={abr === 'exterior' && mun ? paisDe(mun) : mun}
-            selecionados={multi ? (abr === 'exterior' ? [...new Set(selecao.map(paisDe))] : selecao) : undefined}
+            selecionados={multi ? (abr === 'exterior' ? [...new Set(selecao.map(paisDe))] : comJuntos(selecao)) : mun && juntosCom.has(mun) ? comJuntos([mun]) : undefined}
             semContornoFundo={nivel === 'bairros'}
             destaque={exteriorRegiao?.paises ?? municipiosRegiao}
             mundo={abr === 'exterior'}

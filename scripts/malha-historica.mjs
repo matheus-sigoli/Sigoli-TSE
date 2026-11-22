@@ -174,10 +174,16 @@ for (const uf of nomesUf) {
     // (quem tem resultado próprio em algum cargo do ano nunca é juntado)
     for (const f of feats) if (grupo.has(f.id) && !comDado.has(f.id) && comDado.has(grupo.get(f.id))) dest.set(f.id, grupo.get(f.id));
     const nomeDe = new Map(feats.map((f) => [f.id, f.n]));
-    let juntos = 0;
+    // município que já existia na eleição e votou junto com outro (mesma zona, ou o vizinho): fica com o próprio
+    // polígono e ganha "z" = de quem é o resultado (o site pinta e seleciona os dois juntos); só o criado depois da
+    // eleição é fundido na origem
+    const naEpoca = new Set(anterior ? lerUf(anterior).map((f) => f.id) : []);
+    let juntos = 0, comZona = 0;
     feats = feats.map((f) => {
       const d = dest.get(f.id) ?? f.id;
-      if (d !== f.id) juntos++;
+      if (d === f.id) return f;
+      if (naEpoca.has(f.id) && !comDado.has(f.id)) { comZona++; return { ...f, z: d }; }
+      juntos++;
       return { ...f, id: d, n: nomeDe.get(d) ?? f.n };
     });
     if (fora) {
@@ -187,9 +193,9 @@ for (const uf of nomesUf) {
         if ([...comDado].every((k) => ids.has(k))) manterAntigo[uf] = velho;
       }
     }
-    process.stdout.write(`${ANO} ${uf}: ${escolha}, ${juntos} polígono(s) juntado(s) à origem, ${fora} com dado fora da malha${manterAntigo[uf] ? ' → fica a malha anterior (atual + fusões)' : ''}\n`);
+    process.stdout.write(`${ANO} ${uf}: ${escolha}, ${juntos} polígono(s) juntado(s) à origem, ${comZona} com o resultado de outro município, ${fora} com dado fora da malha${manterAntigo[uf] ? ' → fica a malha anterior (atual + fusões)' : ''}\n`);
   }
-  const features = feats.map((f) => ({ id: f.id, props: { n: f.n }, rings: f.coords.map((r) => Float64Array.from(r.flat())) }));
+  const features = feats.map((f) => ({ id: f.id, props: f.z ? { n: f.n, z: f.z } : { n: f.n }, rings: f.coords.map((r) => Float64Array.from(r.flat())) }));
   ufs.push({ uf, features, rgiNomes: [] });
 }
 
@@ -253,7 +259,7 @@ for (const u of ufs) {
   for (const g of geometries) {
     brMun.push({
       ...g,
-      properties: { n: g.properties.n, uf: u.uf },
+      properties: g.properties.z ? { n: g.properties.n, uf: u.uf, z: g.properties.z } : { n: g.properties.n, uf: u.uf },
       arcs: g.type === 'Polygon' ? g.arcs.map((ring) => ring.map(toBr)) : g.arcs.map((p) => p.map((ring) => ring.map(toBr))),
     });
   }
