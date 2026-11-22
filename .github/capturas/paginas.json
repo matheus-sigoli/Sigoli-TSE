@@ -1,6 +1,7 @@
 {
-  "sp-1990-verde": {
+  "rs-1978-sen": "/1978/rs/senador",
+  "sp-1990-seletor": {
     "url": "/1990/sp/governador",
-    "cliques": [".lista > li:nth-child(2) .trocar-cor", ".opcoes-cor li:nth-child(1) .opcao-cor"]
+    "cliques": [".lista > li:nth-child(2) .trocar-cor"]
   }
 }
