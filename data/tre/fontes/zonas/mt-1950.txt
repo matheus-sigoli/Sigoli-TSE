@@ -1,0 +1,28 @@
+# fonte: mapas "Limites das Zonas Eleitorais", Carlos H. da Graça e Daniel Galuch Junior (2015), base IBGE 2011, fonte TSE (imagens enviadas pelo usuário)
+# zona(s);municípios (nomes da época)
+1;Cuiabá,Aripuanã,Várzea Grande,Nossa Senhora do Livramento
+2;Santo Antônio do Leverger
+3;Rosário Oeste,Barra do Bugres
+4;Poconé
+5;Poxoréo
+6;Mato Grosso,Cáceres
+7;Corumbá
+8;Camapuã,Campo Grande,Rochedo,Ribas do Rio Pardo
+9;Três Lagoas
+10;Aquidauana,Bonito,Nioaque
+11;Rio Brilhante
+12;Coxim
+13;Paranaíba,Aparecida do Taboado
+14;Guiratinga
+15;Miranda
+16;Maracaju
+17;Bela Vista
+18;Dourados
+19;Ponta Porã,Amambai
+20;Porto Murtinho
+21;Diamantino
+22;Alto Araguaia
+23;Barra do Garças
+# Território do Guaporé (ro)
+ro:1;Porto Velho
+ro:2;Guajará-Mirim

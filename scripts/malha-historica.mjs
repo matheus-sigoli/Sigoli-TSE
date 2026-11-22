@@ -171,7 +171,8 @@ for (const uf of nomesUf) {
     const porVizinho = grupo.get('*') === 'vizinho';
     const existia = new Set(anterior && !porVizinho ? lerUf(anterior).map((f) => f.id) : []);
     const dest = destinos(feats, new Set([...comDado, ...feats.filter((f) => existia.has(f.id) && !grupo.has(f.id)).map((f) => f.id)]), ANO);
-    for (const f of feats) if (grupo.has(f.id) && comDado.has(grupo.get(f.id))) dest.set(f.id, grupo.get(f.id));
+    // (quem tem resultado próprio em algum cargo do ano nunca é juntado)
+    for (const f of feats) if (grupo.has(f.id) && !comDado.has(f.id) && comDado.has(grupo.get(f.id))) dest.set(f.id, grupo.get(f.id));
     const nomeDe = new Map(feats.map((f) => [f.id, f.n]));
     let juntos = 0;
     feats = feats.map((f) => {

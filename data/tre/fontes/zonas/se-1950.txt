@@ -1,0 +1,20 @@
+# fonte: mapas "Limites das Zonas Eleitorais", Carlos H. da Graça e Daniel Galuch Junior (2015), base IBGE 2011, fonte TSE (imagens enviadas pelo usuário)
+# zona(s);municípios (nomes da época)
+1,2;Aracaju
+3;Muribeca,Capela
+4;Estância,Santa Luzia do Itanhy,Indiaroba,Arauá
+5;Ribeirópolis,Frei Paulo
+6;Gararu,Canhoba,Porto da Folha
+7;Campo do Brito,Itabaiana
+8;Boquim,Cristinápolis,Itabaianinha
+9;Japaratuba,Carmópolis,Japoatã
+10;Lagarto,Salgado
+11;Laranjeiras,Cotinguiba
+12;Rosário do Catete,Maruim,Santo Amaro das Brotas
+13;Neópolis,Parapitinga
+14;Nossa Senhora da Glória,Nossa Senhora das Dores
+15;Siriri,Aquidabã,Darcilena,Propriá
+16;Itaporanga d'Ajuda,São Cristóvão
+17;Simão Dias
+18;Tobias Barreto,Riachão do Dantas
+19;Divina Pastora,Riachuelo

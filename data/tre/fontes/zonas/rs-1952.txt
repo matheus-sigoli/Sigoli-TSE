@@ -1,0 +1,84 @@
+# RS, zonas eleitorais de 1952: "Limites das Zonas Eleitorais de 1.952", mapa de Carlos H. da Graça e Daniel Galuch Junior (2015), base IBGE 2011, fonte TSE
+# zona(s);municípios (nomes da época)
+1,2,3,4,61,62;Porto Alegre
+5;Alegrete
+6;Antônio Prado
+7;Lavras do Sul,Bagé
+8;Bento Gonçalves,Garibaldi
+9;Caçapava do Sul
+10;Cachoeira do Sul
+11;Caí
+12;Camaquã
+13;Candelária
+14;Canguçu
+15;Carazinho
+16;Caxias do Sul,Farroupilha
+17;Cruz Alta
+18;Dom Pedrito
+19;Encruzilhada do Sul
+20;Erechim
+21;Estrela
+22;Guaporé
+23;Ijuí
+24;Itaqui
+25;Arroio Grande,Jaguarão
+26;Jaguari
+27;Júlio de Castilhos
+28;Lagoa Vermelha
+29;Arroio do Meio,Lajeado
+30;Livramento
+31;Montenegro
+32;Palmeira das Missões
+33;Passo Fundo
+34,60;Pelotas
+35;Pinheiro Machado
+36;Quaraí
+37;São José do Norte,Rio Grande
+38;Rio Pardo
+39;Rosário do Sul
+40;Santa Cruz do Sul,Venâncio Aires
+41;Santa Maria
+42;Santa Rosa
+43;Santa Vitória do Palmar
+44;Santiago
+45;Santo Ângelo
+46;Santo Antônio da Patrulha
+47;São Borja
+48;São Francisco de Paula
+49;São Gabriel
+50;Bom Jesus do Triunfo,São Jerônimo
+51;São Leopoldo
+52;São Luiz Gonzaga
+53;Sobradinho
+54;Soledade
+55;Taquara
+56;Taquari,General Câmara
+57;Uruguaiana
+58;Vacaria
+59;Guaíba,Viamão
+63;Aparados da Serra
+64;Cacequi
+65;Canela
+66;Canoas
+67;Encantado
+68;Flores da Cunha
+69;General Vargas
+70;Getúlio Vargas
+71;Gravataí
+72;Erval
+73;Iraí
+74;Marcelino Ramos
+75;Nova Prata
+76;Novo Hamburgo
+77;Osório
+78;Piratini
+79;São Francisco de Assis
+80;São Lourenço do Sul
+81;São Pedro do Sul
+82;São Sepé
+83;Sarandi
+84;Tapes
+85;Torres
+86;Três Passos
+87;Tupanciretã
+88;Veranópolis

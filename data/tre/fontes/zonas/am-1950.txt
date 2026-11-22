@@ -1,0 +1,26 @@
+# fonte: mapas "Limites das Zonas Eleitorais", Carlos H. da Graça e Daniel Galuch Junior (2015), base IBGE 2011, fonte TSE (imagens enviadas pelo usuário)
+# zona(s);municípios (nomes da época)
+1,2;Manaus
+3;Itacoatiara,Itapiranga,Urucurituba
+4;Parintins,Urucará,Barreirinha
+5;Maués
+6;Manacapuru
+7;Codajás
+8;Coari
+9;Tefé
+10;Fonte Boa,São Paulo de Olivença,Benjamin Constant
+11;Eirunepé,Carauari
+12;Lábrea
+13;Canutama
+14;Boca do Acre
+15;Borba
+16;Manicoré
+17;Humaitá
+18;Barcelos,Uaupés
+# Território do Acre (ac) e Território de Rio Branco (rr)
+ac:1;Rio Branco
+ac:2;Xapuri,Brasiléia
+ac:3;Sena Madureira,Feijó
+ac:4;Cruzeiro do Sul
+ac:5;Tarauacá
+rr:1;Boa Vista,Catrimâni
