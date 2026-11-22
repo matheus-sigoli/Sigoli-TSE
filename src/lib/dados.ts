@@ -20,11 +20,15 @@ export class ArquivoAusente extends Error {
 /** Na Cloudflare os resultados e as malhas (/data/..., /geo/...) ficam noutro Worker (limite de 20 mil arquivos por
  * Worker); na Vercel, no mesmo site */
 const BASE_DADOS = process.env.NEXT_PUBLIC_DADOS_URL ?? '';
+/** eleições municipais (um arquivo por cidade): Worker próprio, para não passar do limite de arquivos do outro */
+const BASE_MUNICIPAL = process.env.NEXT_PUBLIC_DADOS_MUNICIPAL_URL ?? BASE_DADOS;
+const MUNICIPAL = /^\/(data|geo)\/(1996|2000|2004|2008|2012|2016|2020|2024)\//;
+const urlDe = (url: string) => (MUNICIPAL.test(url) ? BASE_MUNICIPAL + url : url.startsWith('/data/') || url.startsWith('/geo/') ? BASE_DADOS + url : url);
 
 export function buscar<T>(url: string): Promise<T> {
   let p = cache.get(url) as Promise<T> | undefined;
   if (!p) {
-    p = fetch(url.startsWith('/data/') || url.startsWith('/geo/') ? BASE_DADOS + url : url).then(async (r) => {
+    p = fetch(urlDe(url)).then(async (r) => {
       if (r.status === 404) throw new ArquivoAusente(url);
       if (!r.ok) throw new Error(`Falha ao carregar ${url} (HTTP ${r.status})`);
       return r.json() as Promise<T>;
@@ -128,11 +132,14 @@ export const lerNivel = (s: string | null, abr: string, cidade: boolean, regiao 
   return s === 'zonas' ? 'zonas' : 'municipios';
 };
 
-export const urlResultadoNivel = (ano: number, cargo: CargoSlug, turno: Turno, abr: string, nivel: NivelArquivo) =>
-  nivel === 'municipios' ? urlResultadoParaTela(ano, cargo, turno, abr) : `/data/${ano}/${cargo}/${turno}/${nivel}/${abr}.json`;
+/** Eleição municipal: zonas, bairros e locais de uma cidade vêm num arquivo só da cidade (com os candidatos dela). */
+export const urlResultadoNivel = (ano: number, cargo: CargoSlug, turno: Turno, abr: string, nivel: NivelArquivo, cid?: string | null) =>
+  nivel === 'municipios' ? urlResultadoParaTela(ano, cargo, turno, abr)
+    : (cargo === 'prefeito' || cargo === 'vereador') && cid ? `/data/${ano}/${cargo}/${turno}/cidade/${cid}.json`
+      : `/data/${ano}/${cargo}/${turno}/${nivel}/${abr}.json`;
 
-export const useResultado = (ano: number, cargo: CargoSlug, turno: Turno, abr: string, nivel: NivelArquivo = 'municipios') => {
-  const url = urlResultadoNivel(ano, cargo, turno, abr, nivel);
+export const useResultado = (ano: number, cargo: CargoSlug, turno: Turno, abr: string, nivel: NivelArquivo = 'municipios', cid?: string | null) => {
+  const url = urlResultadoNivel(ano, cargo, turno, abr, nivel, cid);
   return useArquivo<Arquivo>(() => buscar<Arquivo>(url), url);
 };
 

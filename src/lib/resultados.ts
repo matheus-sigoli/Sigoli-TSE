@@ -36,6 +36,8 @@ export interface Linha {
   composicao?: string;
   /** federação do partido (proporcional) */
   federacao?: string;
+  /** eleição municipal, no estado: cidade do candidato (o % é sobre os válidos dela) */
+  cidade?: string;
   faixas: Faixas;
 }
 
@@ -61,6 +63,8 @@ export interface Visao {
   legenda: { rotulo: string; faixas: Faixas }[];
   eleitosPorUf?: ArquivoResumo['eleitos'];
   partidosResumo?: string[];
+  /** eleição municipal (Brasil): prefeitos ou vereadores eleitos por partido */
+  bancadas?: [string, number][];
 }
 
 const zero = (): Totais => [0, 0, 0, 0, 0, 0];
@@ -69,7 +73,8 @@ const somaT = (a: Totais, b: Totais) => { for (let i = 0; i < 6; i++) a[i] += b[
 /** Municípios do arquivo que pertencem à abrangência da tela. */
 export function chavesDaAbrangencia(arq: ArquivoResultado, abr: string, ano?: number): string[] {
   const todas = Object.keys(arq.mun);
-  if (abr === 'br' || abr === 'exterior' || arq.abr === abr) return todas;
+  // arquivo de uma cidade (eleição municipal): zonas, bairros e locais dela (os locais têm o código do TSE)
+  if (abr === 'br' || abr === 'exterior' || arq.abr === abr || (arq.municipal && arq.uf === abr)) return todas;
   return todas.filter((k) => ufDoIbge(k, ano) === abr);
 }
 
@@ -94,7 +99,10 @@ function visaoCompleta(
   const prop = arq.tipo === 'prop';
   const chavesTela = chavesDaAbrangencia(arq, recorte.abr, recorte.ano);
   const chavesRecorte = recorte.municipios ? chavesTela.filter((k) => recorte.municipios!.has(k)) : chavesTela;
-  const usaTotalOficial = !recorte.municipios && (arq.abr === recorte.abr || (recorte.abr === 'exterior' && arq.abr === 'zz'));
+  const usaTotalOficial = !recorte.municipios && (arq.abr === recorte.abr || (recorte.abr === 'exterior' && arq.abr === 'zz') || (!!arq.municipal && arq.uf === recorte.abr));
+  // eleição municipal, arquivo do estado: cada candidato disputa só a sua cidade (o % é sobre os válidos dela)
+  const porCidade = !!arq.municipal && !arq.uf;
+  const nomeCidade = porCidade && municipios ? new Map(municipios.map((m) => [m.ibge, m.nome])) : null;
 
   // ---- somas do recorte
   let totais: Totais;
@@ -148,7 +156,9 @@ function visaoCompleta(
     .map((i) => {
       const c = arq.cands[i];
       return {
-        chave: `c:${i}`, numero: c.n, nome: c.nome, partido: c.partido, votos: votosC[i], pct: votosC[i] / validos,
+        chave: `c:${i}`, numero: c.n, nome: c.nome, partido: c.partido, votos: votosC[i],
+        pct: porCidade && c.mun ? votosC[i] / (arq.mun[c.mun]?.t[3] || validos) : votosC[i] / validos,
+        ...(porCidade && c.mun && !(recorte.municipios?.size === 1) ? { cidade: nomeCidade?.get(c.mun) ?? c.mun } : {}),
         eleito: c.eleito, segundoTurno: /2º turno/i.test(c.situacao), vices: c.vices, anulado: c.anulado, coligacao: c.col, composicao: c.comp, faixas: coresC[i],
       };
     });
@@ -238,6 +248,7 @@ function visaoResumo(arq: ArquivoResumo, recorte: Recorte, daltonico: boolean): 
     legenda: ordem.slice(0, 6).map((i) => ({ rotulo: arq.partidos[i], faixas: faixas[i] })),
     eleitosPorUf: arq.eleitos,
     partidosResumo: arq.partidos,
+    bancadas: arq.bancadas,
   };
 }
 

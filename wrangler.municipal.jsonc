@@ -1,0 +1,12 @@
+// Eleições municipais (Prefeito e Vereador: public/data/{ano} e public/geo/{ano} dos anos municipais, um arquivo por cidade)
+// num Worker próprio de arquivos estáticos, com CORS para o site (NEXT_PUBLIC_DADOS_MUNICIPAL_URL). Fica fora do
+// sigoli-tse-dados porque o limite é de 20 mil arquivos por Worker. O build da Cloudflare roda "npm run build:municipal".
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sigoli-tse-municipal",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist-municipal",
+    "not_found_handling": "none"
+  }
+}
