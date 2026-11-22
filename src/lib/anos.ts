@@ -150,15 +150,15 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',
-    cargos: 'Presidente e Vice-Presidente (por enquanto só CE), Governador (por enquanto AL, BA, CE, MA e SC) e Senador (CE e SC)', disponivel: true, rota: '/1950/ba/governador', semLocais: true, semZonas: true,
+    cargos: 'Presidente e Vice-Presidente (por enquanto AL, AM, AP, CE, ES, MA, MT, PB, PE, PR, RJ, RN, RS, SC, SE e o Distrito Federal), Governador (por enquanto AL, BA, CE, MA e SC) e Senador (CE e SC)', disponivel: true, rota: '/1950/br/presidente', semLocais: true, semZonas: true,
     soCargos: ['presidente', 'vice-presidente', 'governador', 'senador'],
-    fonte: 'TRE-BA, TRE-CE, TRE-SC e acervo Sigoli.TSE (por município)',
+    fonte: 'TRE-BA, TRE-CE, TRE-SC e acervo Sigoli.TSE (banco de dados de Presidente e Vice e planilhas por município)',
   },
   {
     ano: 1947, titulo: 'Eleições 1947', datas: '19 de janeiro',
-    cargos: 'Governador (por enquanto BA, MG, PE, PR, SC e SP; MG, PE e SC por zona eleitoral) e Senador (PE, por zona eleitoral)', disponivel: true, rota: '/1947/mg/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (por enquanto AL, BA, MG, PE, PR, SC e SP; MG, PE e SC por zona eleitoral, AL por grupo de municípios) e Senador (PE, por zona eleitoral)', disponivel: true, rota: '/1947/mg/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador'],
-    fonte: 'TRE-MG, TRE-PE e TRE-SC (por zona eleitoral), TRE-BA e acervo Sigoli.TSE (por município)',
+    fonte: 'TRE-MG, TRE-PE e TRE-SC (por zona eleitoral), TRE-BA, Diário Oficial de Alagoas e acervo Sigoli.TSE (por município)',
   },
 ];
 

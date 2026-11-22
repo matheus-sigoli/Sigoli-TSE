@@ -1,7 +1,7 @@
 {
-  "sp-prefeito": "/2024/sp/prefeito",
-  "sp-cidade-zonas": "/2024/sp/prefeito?cid=3550308&nivel=zonas",
-  "rj-cidade-locais": "/2024/rj/prefeito?cid=3304557&nivel=locais",
-  "sp-vereador-cidade-cands": {"url": "/2024/sp/vereador?cid=3550308&nivel=zonas", "cliques": [".painel .segmentado[aria-label='Agrupar por'] button:nth-child(2)"]},
-  "go-2022-ano": "/2022/go/governador"
+  "br-1950-presidente": "/1950/br/presidente",
+  "rj-1950-presidente": "/1950/rj/presidente",
+  "se-1950-vice": "/1950/se/vice-presidente",
+  "al-1947-governador": "/1947/al/governador",
+  "sp-1958-mogi": "/1958/sp/governador?mun=3530805"
 }

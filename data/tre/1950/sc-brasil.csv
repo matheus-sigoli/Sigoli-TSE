@@ -1,0 +1,884 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+presidente;1;4201307;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1105;S
+presidente;1;4201307;_EDUARDOGOMES;EDUARDO GOMES;UDN;642;
+presidente;1;4201307;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;365;
+presidente;1;4201307;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4201307;#brancos;;;27;
+presidente;1;4201307;#nulos;;;9;
+presidente;1;4201307;#comparecimento;;;2148;
+presidente;1;4201307;#eleitorado;;;2957;
+presidente;1;4201406;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1025;S
+presidente;1;4201406;_EDUARDOGOMES;EDUARDO GOMES;UDN;2420;
+presidente;1;4201406;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1811;
+presidente;1;4201406;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;1;
+presidente;1;4201406;#brancos;;;73;
+presidente;1;4201406;#nulos;;;307;
+presidente;1;4201406;#comparecimento;;;5637;
+presidente;1;4201406;#eleitorado;;;6956;
+presidente;1;4202305;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;945;S
+presidente;1;4202305;_EDUARDOGOMES;EDUARDO GOMES;UDN;1496;
+presidente;1;4202305;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;645;
+presidente;1;4202305;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4202305;#brancos;;;37;
+presidente;1;4202305;#nulos;;;20;
+presidente;1;4202305;#comparecimento;;;3143;
+presidente;1;4202305;#eleitorado;;;4481;
+presidente;1;4202404;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;4144;S
+presidente;1;4202404;_EDUARDOGOMES;EDUARDO GOMES;UDN;4290;
+presidente;1;4202404;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1164;
+presidente;1;4202404;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;7;
+presidente;1;4202404;#brancos;;;104;
+presidente;1;4202404;#nulos;;;48;
+presidente;1;4202404;#comparecimento;;;9757;
+presidente;1;4202404;#eleitorado;;;13045;
+presidente;1;4202602;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1294;S
+presidente;1;4202602;_EDUARDOGOMES;EDUARDO GOMES;UDN;1703;
+presidente;1;4202602;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;511;
+presidente;1;4202602;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4202602;#brancos;;;81;
+presidente;1;4202602;#nulos;;;53;
+presidente;1;4202602;#comparecimento;;;3642;
+presidente;1;4202602;#eleitorado;;;4662;
+presidente;1;4202909;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2743;S
+presidente;1;4202909;_EDUARDOGOMES;EDUARDO GOMES;UDN;2226;
+presidente;1;4202909;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1382;
+presidente;1;4202909;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4202909;#brancos;;;71;
+presidente;1;4202909;#nulos;;;19;
+presidente;1;4202909;#comparecimento;;;6441;
+presidente;1;4202909;#eleitorado;;;8102;
+presidente;1;4203006;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;3187;S
+presidente;1;4203006;_EDUARDOGOMES;EDUARDO GOMES;UDN;1610;
+presidente;1;4203006;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;305;
+presidente;1;4203006;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4203006;#brancos;;;73;
+presidente;1;4203006;#nulos;;;25;
+presidente;1;4203006;#comparecimento;;;5200;
+presidente;1;4203006;#eleitorado;;;6828;
+presidente;1;4203204;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;800;S
+presidente;1;4203204;_EDUARDOGOMES;EDUARDO GOMES;UDN;931;
+presidente;1;4203204;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;130;
+presidente;1;4203204;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4203204;#brancos;;;22;
+presidente;1;4203204;#nulos;;;3;
+presidente;1;4203204;#comparecimento;;;1886;
+presidente;1;4203204;#eleitorado;;;2201;
+presidente;1;4203303;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;187;S
+presidente;1;4203303;_EDUARDOGOMES;EDUARDO GOMES;UDN;387;
+presidente;1;4203303;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;369;
+presidente;1;4203303;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4203303;#brancos;;;15;
+presidente;1;4203303;#nulos;;;11;
+presidente;1;4203303;#comparecimento;;;969;
+presidente;1;4203303;#eleitorado;;;1196;
+presidente;1;4203600;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2028;S
+presidente;1;4203600;_EDUARDOGOMES;EDUARDO GOMES;UDN;1407;
+presidente;1;4203600;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1227;
+presidente;1;4203600;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4203600;#brancos;;;127;
+presidente;1;4203600;#nulos;;;23;
+presidente;1;4203600;#comparecimento;;;4812;
+presidente;1;4203600;#eleitorado;;;6311;
+presidente;1;4203808;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;4147;S
+presidente;1;4203808;_EDUARDOGOMES;EDUARDO GOMES;UDN;2089;
+presidente;1;4203808;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;955;
+presidente;1;4203808;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4203808;#brancos;;;192;
+presidente;1;4203808;#nulos;;;23;
+presidente;1;4203808;#comparecimento;;;7406;
+presidente;1;4203808;#eleitorado;;;10507;
+presidente;1;4203907;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1031;S
+presidente;1;4203907;_EDUARDOGOMES;EDUARDO GOMES;UDN;989;
+presidente;1;4203907;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1010;
+presidente;1;4203907;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4203907;#brancos;;;38;
+presidente;1;4203907;#nulos;;;1;
+presidente;1;4203907;#comparecimento;;;3069;
+presidente;1;4203907;#eleitorado;;;3804;
+presidente;1;4204202;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;4518;S
+presidente;1;4204202;_EDUARDOGOMES;EDUARDO GOMES;UDN;2560;
+presidente;1;4204202;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;5259;
+presidente;1;4204202;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;1;
+presidente;1;4204202;#brancos;;;284;
+presidente;1;4204202;#nulos;;;703;
+presidente;1;4204202;#comparecimento;;;13325;
+presidente;1;4204202;#eleitorado;;;16589;
+presidente;1;4204301;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2772;S
+presidente;1;4204301;_EDUARDOGOMES;EDUARDO GOMES;UDN;1359;
+presidente;1;4204301;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;2298;
+presidente;1;4204301;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4204301;#brancos;;;131;
+presidente;1;4204301;#nulos;;;30;
+presidente;1;4204301;#comparecimento;;;6590;
+presidente;1;4204301;#eleitorado;;;8866;
+presidente;1;4204608;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;3104;S
+presidente;1;4204608;_EDUARDOGOMES;EDUARDO GOMES;UDN;2307;
+presidente;1;4204608;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1155;
+presidente;1;4204608;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4204608;#brancos;;;103;
+presidente;1;4204608;#nulos;;;27;
+presidente;1;4204608;#comparecimento;;;6696;
+presidente;1;4204608;#eleitorado;;;8967;
+presidente;1;4204806;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2906;S
+presidente;1;4204806;_EDUARDOGOMES;EDUARDO GOMES;UDN;1118;
+presidente;1;4204806;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;275;
+presidente;1;4204806;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4204806;#brancos;;;85;
+presidente;1;4204806;#nulos;;;16;
+presidente;1;4204806;#comparecimento;;;4400;
+presidente;1;4204806;#eleitorado;;;5992;
+presidente;1;4205407;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;9422;S
+presidente;1;4205407;_EDUARDOGOMES;EDUARDO GOMES;UDN;6910;
+presidente;1;4205407;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1131;
+presidente;1;4205407;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;13;
+presidente;1;4205407;#brancos;;;365;
+presidente;1;4205407;#nulos;;;289;
+presidente;1;4205407;#comparecimento;;;18130;
+presidente;1;4205407;#eleitorado;;;23223;
+presidente;1;4205902;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;421;S
+presidente;1;4205902;_EDUARDOGOMES;EDUARDO GOMES;UDN;1504;
+presidente;1;4205902;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;611;
+presidente;1;4205902;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4205902;#brancos;;;30;
+presidente;1;4205902;#nulos;;;12;
+presidente;1;4205902;#comparecimento;;;2578;
+presidente;1;4205902;#eleitorado;;;3320;
+presidente;1;4206504;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;601;S
+presidente;1;4206504;_EDUARDOGOMES;EDUARDO GOMES;UDN;1788;
+presidente;1;4206504;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1083;
+presidente;1;4206504;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4206504;#brancos;;;51;
+presidente;1;4206504;#nulos;;;46;
+presidente;1;4206504;#comparecimento;;;3569;
+presidente;1;4206504;#eleitorado;;;5128;
+presidente;1;4206900;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1389;S
+presidente;1;4206900;_EDUARDOGOMES;EDUARDO GOMES;UDN;1717;
+presidente;1;4206900;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;891;
+presidente;1;4206900;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4206900;#brancos;;;55;
+presidente;1;4206900;#nulos;;;71;
+presidente;1;4206900;#comparecimento;;;4123;
+presidente;1;4206900;#eleitorado;;;5660;
+presidente;1;4207205;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;411;S
+presidente;1;4207205;_EDUARDOGOMES;EDUARDO GOMES;UDN;714;
+presidente;1;4207205;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1618;
+presidente;1;4207205;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4207205;#brancos;;;42;
+presidente;1;4207205;#nulos;;;14;
+presidente;1;4207205;#comparecimento;;;2799;
+presidente;1;4207205;#eleitorado;;;3823;
+presidente;1;4207502;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1028;S
+presidente;1;4207502;_EDUARDOGOMES;EDUARDO GOMES;UDN;1993;
+presidente;1;4207502;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;945;
+presidente;1;4207502;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4207502;#brancos;;;28;
+presidente;1;4207502;#nulos;;;11;
+presidente;1;4207502;#comparecimento;;;4005;
+presidente;1;4207502;#eleitorado;;;5167;
+presidente;1;4208203;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;5089;S
+presidente;1;4208203;_EDUARDOGOMES;EDUARDO GOMES;UDN;4644;
+presidente;1;4208203;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1571;
+presidente;1;4208203;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4208203;#brancos;;;153;
+presidente;1;4208203;#nulos;;;68;
+presidente;1;4208203;#comparecimento;;;11525;
+presidente;1;4208203;#eleitorado;;;15428;
+presidente;1;4208104;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;975;S
+presidente;1;4208104;_EDUARDOGOMES;EDUARDO GOMES;UDN;671;
+presidente;1;4208104;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;849;
+presidente;1;4208104;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4208104;#brancos;;;62;
+presidente;1;4208104;#nulos;;;55;
+presidente;1;4208104;#comparecimento;;;2612;
+presidente;1;4208104;#eleitorado;;;3487;
+presidente;1;4208500;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;838;S
+presidente;1;4208500;_EDUARDOGOMES;EDUARDO GOMES;UDN;1810;
+presidente;1;4208500;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;805;
+presidente;1;4208500;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4208500;#brancos;;;52;
+presidente;1;4208500;#nulos;;;1;
+presidente;1;4208500;#comparecimento;;;3506;
+presidente;1;4208500;#eleitorado;;;4301;
+presidente;1;4208807;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;836;S
+presidente;1;4208807;_EDUARDOGOMES;EDUARDO GOMES;UDN;240;
+presidente;1;4208807;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;375;
+presidente;1;4208807;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4208807;#brancos;;;25;
+presidente;1;4208807;#nulos;;;10;
+presidente;1;4208807;#comparecimento;;;1486;
+presidente;1;4208807;#eleitorado;;;1855;
+presidente;1;4208906;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1716;S
+presidente;1;4208906;_EDUARDOGOMES;EDUARDO GOMES;UDN;2957;
+presidente;1;4208906;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;999;
+presidente;1;4208906;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4208906;#brancos;;;77;
+presidente;1;4208906;#nulos;;;324;
+presidente;1;4208906;#comparecimento;;;6073;
+presidente;1;4208906;#eleitorado;;;7954;
+presidente;1;4209003;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2821;S
+presidente;1;4209003;_EDUARDOGOMES;EDUARDO GOMES;UDN;3003;
+presidente;1;4209003;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;2042;
+presidente;1;4209003;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4209003;#brancos;;;115;
+presidente;1;4209003;#nulos;;;102;
+presidente;1;4209003;#comparecimento;;;8083;
+presidente;1;4209003;#eleitorado;;;10379;
+presidente;1;4209102;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;5282;S
+presidente;1;4209102;_EDUARDOGOMES;EDUARDO GOMES;UDN;5089;
+presidente;1;4209102;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;703;
+presidente;1;4209102;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;2;
+presidente;1;4209102;#brancos;;;66;
+presidente;1;4209102;#nulos;;;65;
+presidente;1;4209102;#comparecimento;;;11207;
+presidente;1;4209102;#eleitorado;;;14254;
+presidente;1;4209409;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;3379;S
+presidente;1;4209409;_EDUARDOGOMES;EDUARDO GOMES;UDN;2004;
+presidente;1;4209409;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1408;
+presidente;1;4209409;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;2;
+presidente;1;4209409;#brancos;;;92;
+presidente;1;4209409;#nulos;;;56;
+presidente;1;4209409;#comparecimento;;;6941;
+presidente;1;4209409;#eleitorado;;;9291;
+presidente;1;4209300;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;8789;S
+presidente;1;4209300;_EDUARDOGOMES;EDUARDO GOMES;UDN;3753;
+presidente;1;4209300;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;556;
+presidente;1;4209300;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4209300;#brancos;;;291;
+presidente;1;4209300;#nulos;;;141;
+presidente;1;4209300;#comparecimento;;;13530;
+presidente;1;4209300;#eleitorado;;;19221;
+presidente;1;4210100;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2842;S
+presidente;1;4210100;_EDUARDOGOMES;EDUARDO GOMES;UDN;723;
+presidente;1;4210100;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;627;
+presidente;1;4210100;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4210100;#brancos;;;125;
+presidente;1;4210100;#nulos;;;84;
+presidente;1;4210100;#comparecimento;;;4401;
+presidente;1;4210100;#eleitorado;;;5621;
+presidente;1;4211504;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;875;S
+presidente;1;4211504;_EDUARDOGOMES;EDUARDO GOMES;UDN;731;
+presidente;1;4211504;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;376;
+presidente;1;4211504;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4211504;#brancos;;;22;
+presidente;1;4211504;#nulos;;;22;
+presidente;1;4211504;#comparecimento;;;2026;
+presidente;1;4211504;#eleitorado;;;2660;
+presidente;1;4211702;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2050;S
+presidente;1;4211702;_EDUARDOGOMES;EDUARDO GOMES;UDN;904;
+presidente;1;4211702;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1523;
+presidente;1;4211702;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4211702;#brancos;;;64;
+presidente;1;4211702;#nulos;;;197;
+presidente;1;4211702;#comparecimento;;;4738;
+presidente;1;4211702;#eleitorado;;;5887;
+presidente;1;4211900;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1835;S
+presidente;1;4211900;_EDUARDOGOMES;EDUARDO GOMES;UDN;2847;
+presidente;1;4211900;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;2054;
+presidente;1;4211900;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4211900;#brancos;;;106;
+presidente;1;4211900;#nulos;;;103;
+presidente;1;4211900;#comparecimento;;;6945;
+presidente;1;4211900;#eleitorado;;;8939;
+presidente;1;4213104;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;648;S
+presidente;1;4213104;_EDUARDOGOMES;EDUARDO GOMES;UDN;787;
+presidente;1;4213104;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;696;
+presidente;1;4213104;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4213104;#brancos;;;34;
+presidente;1;4213104;#nulos;;;7;
+presidente;1;4213104;#comparecimento;;;2172;
+presidente;1;4213104;#eleitorado;;;3188;
+presidente;1;4213500;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;246;S
+presidente;1;4213500;_EDUARDOGOMES;EDUARDO GOMES;UDN;550;
+presidente;1;4213500;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;555;
+presidente;1;4213500;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4213500;#brancos;;;14;
+presidente;1;4213500;#nulos;;;13;
+presidente;1;4213500;#comparecimento;;;1378;
+presidente;1;4213500;#eleitorado;;;1889;
+presidente;1;4213609;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2713;S
+presidente;1;4213609;_EDUARDOGOMES;EDUARDO GOMES;UDN;1061;
+presidente;1;4213609;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;762;
+presidente;1;4213609;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;1;
+presidente;1;4213609;#brancos;;;95;
+presidente;1;4213609;#nulos;;;48;
+presidente;1;4213609;#comparecimento;;;4680;
+presidente;1;4213609;#eleitorado;;;6392;
+presidente;1;4214805;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;3338;S
+presidente;1;4214805;_EDUARDOGOMES;EDUARDO GOMES;UDN;4420;
+presidente;1;4214805;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;985;
+presidente;1;4214805;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4214805;#brancos;;;112;
+presidente;1;4214805;#nulos;;;70;
+presidente;1;4214805;#comparecimento;;;8925;
+presidente;1;4214805;#eleitorado;;;11973;
+presidente;1;4215109;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;90;S
+presidente;1;4215109;_EDUARDOGOMES;EDUARDO GOMES;UDN;2384;
+presidente;1;4215109;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;897;
+presidente;1;4215109;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4215109;#brancos;;;62;
+presidente;1;4215109;#nulos;;;7;
+presidente;1;4215109;#comparecimento;;;3440;
+presidente;1;4215109;#eleitorado;;;4442;
+presidente;1;4215802;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1202;S
+presidente;1;4215802;_EDUARDOGOMES;EDUARDO GOMES;UDN;1767;
+presidente;1;4215802;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;542;
+presidente;1;4215802;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4215802;#brancos;;;28;
+presidente;1;4215802;#nulos;;;30;
+presidente;1;4215802;#comparecimento;;;3569;
+presidente;1;4215802;#eleitorado;;;4524;
+presidente;1;4216206;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;2476;S
+presidente;1;4216206;_EDUARDOGOMES;EDUARDO GOMES;UDN;902;
+presidente;1;4216206;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;652;
+presidente;1;4216206;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4216206;#brancos;;;40;
+presidente;1;4216206;#nulos;;;29;
+presidente;1;4216206;#comparecimento;;;4099;
+presidente;1;4216206;#eleitorado;;;5362;
+presidente;1;4216503;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1561;S
+presidente;1;4216503;_EDUARDOGOMES;EDUARDO GOMES;UDN;2295;
+presidente;1;4216503;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1264;
+presidente;1;4216503;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4216503;#brancos;;;129;
+presidente;1;4216503;#nulos;;;277;
+presidente;1;4216503;#comparecimento;;;5526;
+presidente;1;4216503;#eleitorado;;;7455;
+presidente;1;4216602;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1195;S
+presidente;1;4216602;_EDUARDOGOMES;EDUARDO GOMES;UDN;1382;
+presidente;1;4216602;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1132;
+presidente;1;4216602;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4216602;#brancos;;;55;
+presidente;1;4216602;#nulos;;;59;
+presidente;1;4216602;#comparecimento;;;3823;
+presidente;1;4216602;#eleitorado;;;5373;
+presidente;1;4217808;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;484;S
+presidente;1;4217808;_EDUARDOGOMES;EDUARDO GOMES;UDN;1450;
+presidente;1;4217808;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;432;
+presidente;1;4217808;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4217808;#brancos;;;28;
+presidente;1;4217808;#nulos;;;2;
+presidente;1;4217808;#comparecimento;;;2396;
+presidente;1;4217808;#eleitorado;;;3062;
+presidente;1;4217907;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;749;S
+presidente;1;4217907;_EDUARDOGOMES;EDUARDO GOMES;UDN;1073;
+presidente;1;4217907;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;722;
+presidente;1;4217907;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4217907;#brancos;;;30;
+presidente;1;4217907;#nulos;;;27;
+presidente;1;4217907;#comparecimento;;;2601;
+presidente;1;4217907;#eleitorado;;;3621;
+presidente;1;4218004;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1211;S
+presidente;1;4218004;_EDUARDOGOMES;EDUARDO GOMES;UDN;2207;
+presidente;1;4218004;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;2082;
+presidente;1;4218004;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4218004;#brancos;;;82;
+presidente;1;4218004;#nulos;;;70;
+presidente;1;4218004;#comparecimento;;;5652;
+presidente;1;4218004;#eleitorado;;;7416;
+presidente;1;4218202;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;633;S
+presidente;1;4218202;_EDUARDOGOMES;EDUARDO GOMES;UDN;2125;
+presidente;1;4218202;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1154;
+presidente;1;4218202;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4218202;#brancos;;;42;
+presidente;1;4218202;#nulos;;;5;
+presidente;1;4218202;#comparecimento;;;3959;
+presidente;1;4218202;#eleitorado;;;4829;
+presidente;1;4218707;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;3285;S
+presidente;1;4218707;_EDUARDOGOMES;EDUARDO GOMES;UDN;3863;
+presidente;1;4218707;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;4527;
+presidente;1;4218707;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4218707;#brancos;;;115;
+presidente;1;4218707;#nulos;;;109;
+presidente;1;4218707;#comparecimento;;;11899;
+presidente;1;4218707;#eleitorado;;;14704;
+presidente;1;4218806;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;915;S
+presidente;1;4218806;_EDUARDOGOMES;EDUARDO GOMES;UDN;1240;
+presidente;1;4218806;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1580;
+presidente;1;4218806;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4218806;#brancos;;;50;
+presidente;1;4218806;#nulos;;;19;
+presidente;1;4218806;#comparecimento;;;3804;
+presidente;1;4218806;#eleitorado;;;5000;
+presidente;1;4219002;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1455;S
+presidente;1;4219002;_EDUARDOGOMES;EDUARDO GOMES;UDN;1578;
+presidente;1;4219002;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1322;
+presidente;1;4219002;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4219002;#brancos;;;79;
+presidente;1;4219002;#nulos;;;280;
+presidente;1;4219002;#comparecimento;;;4714;
+presidente;1;4219002;#eleitorado;;;6226;
+presidente;1;4219309;_GETULIOVARGAS;GETÚLIO VARGAS;PTB;1662;S
+presidente;1;4219309;_EDUARDOGOMES;EDUARDO GOMES;UDN;766;
+presidente;1;4219309;_CRISTIANOMACHADO;CRISTIANO MACHADO;PSD;1169;
+presidente;1;4219309;_JOAOMANGABEIRA;JOÃO MANGABEIRA;PSB;0;
+presidente;1;4219309;#brancos;;;75;
+presidente;1;4219309;#nulos;;;24;
+presidente;1;4219309;#comparecimento;;;3696;
+presidente;1;4219309;#eleitorado;;;5177;
+vice-presidente;1;4201307;_CAFEFILHO;CAFÉ FILHO;PSP;87;S
+vice-presidente;1;4201307;_ODILONBRAGA;ODILON BRAGA;UDN;712;
+vice-presidente;1;4201307;_ALTINOARANTES;ALTINO ARANTES;PSD;1135;
+vice-presidente;1;4201307;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4201307;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4201307;#brancos;;;208;
+vice-presidente;1;4201307;#nulos;;;6;
+vice-presidente;1;4201307;#comparecimento;;;2148;
+vice-presidente;1;4201307;#eleitorado;;;2957;
+vice-presidente;1;4201406;_CAFEFILHO;CAFÉ FILHO;PSP;108;S
+vice-presidente;1;4201406;_ODILONBRAGA;ODILON BRAGA;UDN;2653;
+vice-presidente;1;4201406;_ALTINOARANTES;ALTINO ARANTES;PSD;2343;
+vice-presidente;1;4201406;_VITORINOFREIRE;VITORINO FREIRE;PST;6;
+vice-presidente;1;4201406;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;1;
+vice-presidente;1;4201406;#brancos;;;229;
+vice-presidente;1;4201406;#nulos;;;297;
+vice-presidente;1;4201406;#comparecimento;;;5637;
+vice-presidente;1;4201406;#eleitorado;;;6956;
+vice-presidente;1;4202305;_CAFEFILHO;CAFÉ FILHO;PSP;187;S
+vice-presidente;1;4202305;_ODILONBRAGA;ODILON BRAGA;UDN;1526;
+vice-presidente;1;4202305;_ALTINOARANTES;ALTINO ARANTES;PSD;1209;
+vice-presidente;1;4202305;_VITORINOFREIRE;VITORINO FREIRE;PST;12;
+vice-presidente;1;4202305;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4202305;#brancos;;;188;
+vice-presidente;1;4202305;#nulos;;;21;
+vice-presidente;1;4202305;#comparecimento;;;3143;
+vice-presidente;1;4202305;#eleitorado;;;4481;
+vice-presidente;1;4202404;_CAFEFILHO;CAFÉ FILHO;PSP;793;S
+vice-presidente;1;4202404;_ODILONBRAGA;ODILON BRAGA;UDN;4345;
+vice-presidente;1;4202404;_ALTINOARANTES;ALTINO ARANTES;PSD;2646;
+vice-presidente;1;4202404;_VITORINOFREIRE;VITORINO FREIRE;PST;2;
+vice-presidente;1;4202404;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4202404;#brancos;;;1909;
+vice-presidente;1;4202404;#nulos;;;62;
+vice-presidente;1;4202404;#comparecimento;;;9757;
+vice-presidente;1;4202404;#eleitorado;;;13045;
+vice-presidente;1;4202602;_CAFEFILHO;CAFÉ FILHO;PSP;127;S
+vice-presidente;1;4202602;_ODILONBRAGA;ODILON BRAGA;UDN;1694;
+vice-presidente;1;4202602;_ALTINOARANTES;ALTINO ARANTES;PSD;1296;
+vice-presidente;1;4202602;_VITORINOFREIRE;VITORINO FREIRE;PST;5;
+vice-presidente;1;4202602;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4202602;#brancos;;;473;
+vice-presidente;1;4202602;#nulos;;;47;
+vice-presidente;1;4202602;#comparecimento;;;3642;
+vice-presidente;1;4202602;#eleitorado;;;4662;
+vice-presidente;1;4202909;_CAFEFILHO;CAFÉ FILHO;PSP;82;S
+vice-presidente;1;4202909;_ODILONBRAGA;ODILON BRAGA;UDN;2895;
+vice-presidente;1;4202909;_ALTINOARANTES;ALTINO ARANTES;PSD;1680;
+vice-presidente;1;4202909;_VITORINOFREIRE;VITORINO FREIRE;PST;2;
+vice-presidente;1;4202909;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4202909;#brancos;;;1762;
+vice-presidente;1;4202909;#nulos;;;20;
+vice-presidente;1;4202909;#comparecimento;;;6441;
+vice-presidente;1;4202909;#eleitorado;;;8102;
+vice-presidente;1;4203006;_CAFEFILHO;CAFÉ FILHO;PSP;555;S
+vice-presidente;1;4203006;_ODILONBRAGA;ODILON BRAGA;UDN;2232;
+vice-presidente;1;4203006;_ALTINOARANTES;ALTINO ARANTES;PSD;2031;
+vice-presidente;1;4203006;_VITORINOFREIRE;VITORINO FREIRE;PST;3;
+vice-presidente;1;4203006;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4203006;#brancos;;;361;
+vice-presidente;1;4203006;#nulos;;;18;
+vice-presidente;1;4203006;#comparecimento;;;5200;
+vice-presidente;1;4203006;#eleitorado;;;6828;
+vice-presidente;1;4203204;_CAFEFILHO;CAFÉ FILHO;PSP;7;S
+vice-presidente;1;4203204;_ODILONBRAGA;ODILON BRAGA;UDN;942;
+vice-presidente;1;4203204;_ALTINOARANTES;ALTINO ARANTES;PSD;903;
+vice-presidente;1;4203204;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4203204;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4203204;#brancos;;;29;
+vice-presidente;1;4203204;#nulos;;;5;
+vice-presidente;1;4203204;#comparecimento;;;1886;
+vice-presidente;1;4203204;#eleitorado;;;2201;
+vice-presidente;1;4203303;_CAFEFILHO;CAFÉ FILHO;PSP;25;S
+vice-presidente;1;4203303;_ODILONBRAGA;ODILON BRAGA;UDN;444;
+vice-presidente;1;4203303;_ALTINOARANTES;ALTINO ARANTES;PSD;426;
+vice-presidente;1;4203303;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4203303;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4203303;#brancos;;;59;
+vice-presidente;1;4203303;#nulos;;;15;
+vice-presidente;1;4203303;#comparecimento;;;969;
+vice-presidente;1;4203303;#eleitorado;;;1196;
+vice-presidente;1;4203600;_CAFEFILHO;CAFÉ FILHO;PSP;68;S
+vice-presidente;1;4203600;_ODILONBRAGA;ODILON BRAGA;UDN;1659;
+vice-presidente;1;4203600;_ALTINOARANTES;ALTINO ARANTES;PSD;2135;
+vice-presidente;1;4203600;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4203600;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4203600;#brancos;;;928;
+vice-presidente;1;4203600;#nulos;;;22;
+vice-presidente;1;4203600;#comparecimento;;;4812;
+vice-presidente;1;4203600;#eleitorado;;;6311;
+vice-presidente;1;4203808;_CAFEFILHO;CAFÉ FILHO;PSP;1051;S
+vice-presidente;1;4203808;_ODILONBRAGA;ODILON BRAGA;UDN;2598;
+vice-presidente;1;4203808;_ALTINOARANTES;ALTINO ARANTES;PSD;2220;
+vice-presidente;1;4203808;_VITORINOFREIRE;VITORINO FREIRE;PST;17;
+vice-presidente;1;4203808;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4203808;#brancos;;;1513;
+vice-presidente;1;4203808;#nulos;;;7;
+vice-presidente;1;4203808;#comparecimento;;;7406;
+vice-presidente;1;4203808;#eleitorado;;;10507;
+vice-presidente;1;4203907;_CAFEFILHO;CAFÉ FILHO;PSP;11;S
+vice-presidente;1;4203907;_ODILONBRAGA;ODILON BRAGA;UDN;1035;
+vice-presidente;1;4203907;_ALTINOARANTES;ALTINO ARANTES;PSD;1388;
+vice-presidente;1;4203907;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4203907;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4203907;#brancos;;;633;
+vice-presidente;1;4203907;#nulos;;;2;
+vice-presidente;1;4203907;#comparecimento;;;3069;
+vice-presidente;1;4203907;#eleitorado;;;3804;
+vice-presidente;1;4204202;_CAFEFILHO;CAFÉ FILHO;PSP;97;S
+vice-presidente;1;4204202;_ODILONBRAGA;ODILON BRAGA;UDN;3928;
+vice-presidente;1;4204202;_ALTINOARANTES;ALTINO ARANTES;PSD;5435;
+vice-presidente;1;4204202;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4204202;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4204202;#brancos;;;3120;
+vice-presidente;1;4204202;#nulos;;;745;
+vice-presidente;1;4204202;#comparecimento;;;13325;
+vice-presidente;1;4204202;#eleitorado;;;16589;
+vice-presidente;1;4204301;_CAFEFILHO;CAFÉ FILHO;PSP;259;S
+vice-presidente;1;4204301;_ODILONBRAGA;ODILON BRAGA;UDN;2480;
+vice-presidente;1;4204301;_ALTINOARANTES;ALTINO ARANTES;PSD;2757;
+vice-presidente;1;4204301;_VITORINOFREIRE;VITORINO FREIRE;PST;23;
+vice-presidente;1;4204301;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4204301;#brancos;;;1051;
+vice-presidente;1;4204301;#nulos;;;20;
+vice-presidente;1;4204301;#comparecimento;;;6590;
+vice-presidente;1;4204301;#eleitorado;;;8866;
+vice-presidente;1;4204608;_CAFEFILHO;CAFÉ FILHO;PSP;247;S
+vice-presidente;1;4204608;_ODILONBRAGA;ODILON BRAGA;UDN;2695;
+vice-presidente;1;4204608;_ALTINOARANTES;ALTINO ARANTES;PSD;1965;
+vice-presidente;1;4204608;_VITORINOFREIRE;VITORINO FREIRE;PST;192;
+vice-presidente;1;4204608;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4204608;#brancos;;;1571;
+vice-presidente;1;4204608;#nulos;;;26;
+vice-presidente;1;4204608;#comparecimento;;;6696;
+vice-presidente;1;4204608;#eleitorado;;;8967;
+vice-presidente;1;4204806;_CAFEFILHO;CAFÉ FILHO;PSP;36;S
+vice-presidente;1;4204806;_ODILONBRAGA;ODILON BRAGA;UDN;1362;
+vice-presidente;1;4204806;_ALTINOARANTES;ALTINO ARANTES;PSD;1621;
+vice-presidente;1;4204806;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4204806;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4204806;#brancos;;;1365;
+vice-presidente;1;4204806;#nulos;;;16;
+vice-presidente;1;4204806;#comparecimento;;;4400;
+vice-presidente;1;4204806;#eleitorado;;;5992;
+vice-presidente;1;4205407;_CAFEFILHO;CAFÉ FILHO;PSP;4193;S
+vice-presidente;1;4205407;_ODILONBRAGA;ODILON BRAGA;UDN;6873;
+vice-presidente;1;4205407;_ALTINOARANTES;ALTINO ARANTES;PSD;4096;
+vice-presidente;1;4205407;_VITORINOFREIRE;VITORINO FREIRE;PST;1457;
+vice-presidente;1;4205407;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;6;
+vice-presidente;1;4205407;#brancos;;;1210;
+vice-presidente;1;4205407;#nulos;;;295;
+vice-presidente;1;4205407;#comparecimento;;;18130;
+vice-presidente;1;4205407;#eleitorado;;;23223;
+vice-presidente;1;4205902;_CAFEFILHO;CAFÉ FILHO;PSP;8;S
+vice-presidente;1;4205902;_ODILONBRAGA;ODILON BRAGA;UDN;1502;
+vice-presidente;1;4205902;_ALTINOARANTES;ALTINO ARANTES;PSD;850;
+vice-presidente;1;4205902;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4205902;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4205902;#brancos;;;201;
+vice-presidente;1;4205902;#nulos;;;17;
+vice-presidente;1;4205902;#comparecimento;;;2578;
+vice-presidente;1;4205902;#eleitorado;;;3320;
+vice-presidente;1;4206504;_CAFEFILHO;CAFÉ FILHO;PSP;44;S
+vice-presidente;1;4206504;_ODILONBRAGA;ODILON BRAGA;UDN;1830;
+vice-presidente;1;4206504;_ALTINOARANTES;ALTINO ARANTES;PSD;1350;
+vice-presidente;1;4206504;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4206504;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4206504;#brancos;;;268;
+vice-presidente;1;4206504;#nulos;;;77;
+vice-presidente;1;4206504;#comparecimento;;;3569;
+vice-presidente;1;4206504;#eleitorado;;;5128;
+vice-presidente;1;4206900;_CAFEFILHO;CAFÉ FILHO;PSP;13;S
+vice-presidente;1;4206900;_ODILONBRAGA;ODILON BRAGA;UDN;1699;
+vice-presidente;1;4206900;_ALTINOARANTES;ALTINO ARANTES;PSD;1142;
+vice-presidente;1;4206900;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4206900;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4206900;#brancos;;;1198;
+vice-presidente;1;4206900;#nulos;;;71;
+vice-presidente;1;4206900;#comparecimento;;;4123;
+vice-presidente;1;4206900;#eleitorado;;;5660;
+vice-presidente;1;4207205;_CAFEFILHO;CAFÉ FILHO;PSP;1;S
+vice-presidente;1;4207205;_ODILONBRAGA;ODILON BRAGA;UDN;788;
+vice-presidente;1;4207205;_ALTINOARANTES;ALTINO ARANTES;PSD;1909;
+vice-presidente;1;4207205;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4207205;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4207205;#brancos;;;87;
+vice-presidente;1;4207205;#nulos;;;14;
+vice-presidente;1;4207205;#comparecimento;;;2799;
+vice-presidente;1;4207205;#eleitorado;;;3823;
+vice-presidente;1;4207502;_CAFEFILHO;CAFÉ FILHO;PSP;71;S
+vice-presidente;1;4207502;_ODILONBRAGA;ODILON BRAGA;UDN;2000;
+vice-presidente;1;4207502;_ALTINOARANTES;ALTINO ARANTES;PSD;1713;
+vice-presidente;1;4207502;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4207502;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4207502;#brancos;;;210;
+vice-presidente;1;4207502;#nulos;;;11;
+vice-presidente;1;4207502;#comparecimento;;;4005;
+vice-presidente;1;4207502;#eleitorado;;;5167;
+vice-presidente;1;4208203;_CAFEFILHO;CAFÉ FILHO;PSP;1930;S
+vice-presidente;1;4208203;_ODILONBRAGA;ODILON BRAGA;UDN;4969;
+vice-presidente;1;4208203;_ALTINOARANTES;ALTINO ARANTES;PSD;3617;
+vice-presidente;1;4208203;_VITORINOFREIRE;VITORINO FREIRE;PST;4;
+vice-presidente;1;4208203;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4208203;#brancos;;;927;
+vice-presidente;1;4208203;#nulos;;;78;
+vice-presidente;1;4208203;#comparecimento;;;11525;
+vice-presidente;1;4208203;#eleitorado;;;15428;
+vice-presidente;1;4208104;_CAFEFILHO;CAFÉ FILHO;PSP;85;S
+vice-presidente;1;4208104;_ODILONBRAGA;ODILON BRAGA;UDN;829;
+vice-presidente;1;4208104;_ALTINOARANTES;ALTINO ARANTES;PSD;1339;
+vice-presidente;1;4208104;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4208104;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4208104;#brancos;;;320;
+vice-presidente;1;4208104;#nulos;;;39;
+vice-presidente;1;4208104;#comparecimento;;;2612;
+vice-presidente;1;4208104;#eleitorado;;;3487;
+vice-presidente;1;4208500;_CAFEFILHO;CAFÉ FILHO;PSP;9;S
+vice-presidente;1;4208500;_ODILONBRAGA;ODILON BRAGA;UDN;1812;
+vice-presidente;1;4208500;_ALTINOARANTES;ALTINO ARANTES;PSD;1220;
+vice-presidente;1;4208500;_VITORINOFREIRE;VITORINO FREIRE;PST;13;
+vice-presidente;1;4208500;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4208500;#brancos;;;452;
+vice-presidente;1;4208500;#comparecimento;;;3506;
+vice-presidente;1;4208500;#eleitorado;;;4301;
+vice-presidente;1;4208807;_CAFEFILHO;CAFÉ FILHO;PSP;22;S
+vice-presidente;1;4208807;_ODILONBRAGA;ODILON BRAGA;UDN;276;
+vice-presidente;1;4208807;_ALTINOARANTES;ALTINO ARANTES;PSD;888;
+vice-presidente;1;4208807;_VITORINOFREIRE;VITORINO FREIRE;PST;25;
+vice-presidente;1;4208807;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4208807;#brancos;;;268;
+vice-presidente;1;4208807;#nulos;;;7;
+vice-presidente;1;4208807;#comparecimento;;;1486;
+vice-presidente;1;4208807;#eleitorado;;;1855;
+vice-presidente;1;4208906;_CAFEFILHO;CAFÉ FILHO;PSP;409;S
+vice-presidente;1;4208906;_ODILONBRAGA;ODILON BRAGA;UDN;2997;
+vice-presidente;1;4208906;_ALTINOARANTES;ALTINO ARANTES;PSD;1988;
+vice-presidente;1;4208906;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4208906;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4208906;#brancos;;;353;
+vice-presidente;1;4208906;#nulos;;;326;
+vice-presidente;1;4208906;#comparecimento;;;6073;
+vice-presidente;1;4208906;#eleitorado;;;7954;
+vice-presidente;1;4209003;_CAFEFILHO;CAFÉ FILHO;PSP;448;S
+vice-presidente;1;4209003;_ODILONBRAGA;ODILON BRAGA;UDN;3621;
+vice-presidente;1;4209003;_ALTINOARANTES;ALTINO ARANTES;PSD;2701;
+vice-presidente;1;4209003;_VITORINOFREIRE;VITORINO FREIRE;PST;4;
+vice-presidente;1;4209003;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4209003;#brancos;;;1222;
+vice-presidente;1;4209003;#nulos;;;87;
+vice-presidente;1;4209003;#comparecimento;;;8083;
+vice-presidente;1;4209003;#eleitorado;;;10379;
+vice-presidente;1;4209102;_CAFEFILHO;CAFÉ FILHO;PSP;3107;S
+vice-presidente;1;4209102;_ODILONBRAGA;ODILON BRAGA;UDN;5748;
+vice-presidente;1;4209102;_ALTINOARANTES;ALTINO ARANTES;PSD;1751;
+vice-presidente;1;4209102;_VITORINOFREIRE;VITORINO FREIRE;PST;20;
+vice-presidente;1;4209102;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4209102;#brancos;;;494;
+vice-presidente;1;4209102;#nulos;;;87;
+vice-presidente;1;4209102;#comparecimento;;;11207;
+vice-presidente;1;4209102;#eleitorado;;;14254;
+vice-presidente;1;4209409;_CAFEFILHO;CAFÉ FILHO;PSP;1412;S
+vice-presidente;1;4209409;_ODILONBRAGA;ODILON BRAGA;UDN;2080;
+vice-presidente;1;4209409;_ALTINOARANTES;ALTINO ARANTES;PSD;2386;
+vice-presidente;1;4209409;_VITORINOFREIRE;VITORINO FREIRE;PST;25;
+vice-presidente;1;4209409;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4209409;#brancos;;;993;
+vice-presidente;1;4209409;#nulos;;;45;
+vice-presidente;1;4209409;#comparecimento;;;6941;
+vice-presidente;1;4209409;#eleitorado;;;9291;
+vice-presidente;1;4209300;_CAFEFILHO;CAFÉ FILHO;PSP;867;S
+vice-presidente;1;4209300;_ODILONBRAGA;ODILON BRAGA;UDN;4122;
+vice-presidente;1;4209300;_ALTINOARANTES;ALTINO ARANTES;PSD;6431;
+vice-presidente;1;4209300;_VITORINOFREIRE;VITORINO FREIRE;PST;6;
+vice-presidente;1;4209300;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4209300;#brancos;;;1990;
+vice-presidente;1;4209300;#nulos;;;114;
+vice-presidente;1;4209300;#comparecimento;;;13530;
+vice-presidente;1;4209300;#eleitorado;;;19221;
+vice-presidente;1;4210100;_CAFEFILHO;CAFÉ FILHO;PSP;965;S
+vice-presidente;1;4210100;_ODILONBRAGA;ODILON BRAGA;UDN;967;
+vice-presidente;1;4210100;_ALTINOARANTES;ALTINO ARANTES;PSD;1813;
+vice-presidente;1;4210100;_VITORINOFREIRE;VITORINO FREIRE;PST;3;
+vice-presidente;1;4210100;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4210100;#brancos;;;568;
+vice-presidente;1;4210100;#nulos;;;85;
+vice-presidente;1;4210100;#comparecimento;;;4401;
+vice-presidente;1;4210100;#eleitorado;;;5621;
+vice-presidente;1;4211504;_CAFEFILHO;CAFÉ FILHO;PSP;0;S
+vice-presidente;1;4211504;_ODILONBRAGA;ODILON BRAGA;UDN;1019;
+vice-presidente;1;4211504;_ALTINOARANTES;ALTINO ARANTES;PSD;760;
+vice-presidente;1;4211504;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4211504;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4211504;#brancos;;;238;
+vice-presidente;1;4211504;#nulos;;;9;
+vice-presidente;1;4211504;#comparecimento;;;2026;
+vice-presidente;1;4211504;#eleitorado;;;2660;
+vice-presidente;1;4211702;_CAFEFILHO;CAFÉ FILHO;PSP;6;S
+vice-presidente;1;4211702;_ODILONBRAGA;ODILON BRAGA;UDN;1399;
+vice-presidente;1;4211702;_ALTINOARANTES;ALTINO ARANTES;PSD;1632;
+vice-presidente;1;4211702;_VITORINOFREIRE;VITORINO FREIRE;PST;2;
+vice-presidente;1;4211702;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4211702;#brancos;;;1513;
+vice-presidente;1;4211702;#nulos;;;186;
+vice-presidente;1;4211702;#comparecimento;;;4738;
+vice-presidente;1;4211702;#eleitorado;;;5887;
+vice-presidente;1;4211900;_CAFEFILHO;CAFÉ FILHO;PSP;95;S
+vice-presidente;1;4211900;_ODILONBRAGA;ODILON BRAGA;UDN;2791;
+vice-presidente;1;4211900;_ALTINOARANTES;ALTINO ARANTES;PSD;3295;
+vice-presidente;1;4211900;_VITORINOFREIRE;VITORINO FREIRE;PST;74;
+vice-presidente;1;4211900;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4211900;#brancos;;;586;
+vice-presidente;1;4211900;#nulos;;;104;
+vice-presidente;1;4211900;#comparecimento;;;6945;
+vice-presidente;1;4211900;#eleitorado;;;8939;
+vice-presidente;1;4213104;_CAFEFILHO;CAFÉ FILHO;PSP;78;S
+vice-presidente;1;4213104;_ODILONBRAGA;ODILON BRAGA;UDN;1017;
+vice-presidente;1;4213104;_ALTINOARANTES;ALTINO ARANTES;PSD;904;
+vice-presidente;1;4213104;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4213104;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4213104;#brancos;;;153;
+vice-presidente;1;4213104;#nulos;;;20;
+vice-presidente;1;4213104;#comparecimento;;;2172;
+vice-presidente;1;4213104;#eleitorado;;;3188;
+vice-presidente;1;4213500;_CAFEFILHO;CAFÉ FILHO;PSP;11;S
+vice-presidente;1;4213500;_ODILONBRAGA;ODILON BRAGA;UDN;552;
+vice-presidente;1;4213500;_ALTINOARANTES;ALTINO ARANTES;PSD;714;
+vice-presidente;1;4213500;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4213500;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4213500;#brancos;;;81;
+vice-presidente;1;4213500;#nulos;;;20;
+vice-presidente;1;4213500;#comparecimento;;;1378;
+vice-presidente;1;4213500;#eleitorado;;;1889;
+vice-presidente;1;4213609;_CAFEFILHO;CAFÉ FILHO;PSP;696;S
+vice-presidente;1;4213609;_ODILONBRAGA;ODILON BRAGA;UDN;1287;
+vice-presidente;1;4213609;_ALTINOARANTES;ALTINO ARANTES;PSD;1400;
+vice-presidente;1;4213609;_VITORINOFREIRE;VITORINO FREIRE;PST;3;
+vice-presidente;1;4213609;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;1;
+vice-presidente;1;4213609;#brancos;;;1250;
+vice-presidente;1;4213609;#nulos;;;43;
+vice-presidente;1;4213609;#comparecimento;;;4680;
+vice-presidente;1;4213609;#eleitorado;;;6392;
+vice-presidente;1;4214805;_CAFEFILHO;CAFÉ FILHO;PSP;278;S
+vice-presidente;1;4214805;_ODILONBRAGA;ODILON BRAGA;UDN;4627;
+vice-presidente;1;4214805;_ALTINOARANTES;ALTINO ARANTES;PSD;2712;
+vice-presidente;1;4214805;_VITORINOFREIRE;VITORINO FREIRE;PST;3;
+vice-presidente;1;4214805;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;2;
+vice-presidente;1;4214805;#brancos;;;1232;
+vice-presidente;1;4214805;#nulos;;;71;
+vice-presidente;1;4214805;#comparecimento;;;8925;
+vice-presidente;1;4214805;#eleitorado;;;11973;
+vice-presidente;1;4215109;_CAFEFILHO;CAFÉ FILHO;PSP;0;S
+vice-presidente;1;4215109;_ODILONBRAGA;ODILON BRAGA;UDN;2371;
+vice-presidente;1;4215109;_ALTINOARANTES;ALTINO ARANTES;PSD;968;
+vice-presidente;1;4215109;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4215109;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4215109;#brancos;;;94;
+vice-presidente;1;4215109;#nulos;;;7;
+vice-presidente;1;4215109;#comparecimento;;;3440;
+vice-presidente;1;4215109;#eleitorado;;;4442;
+vice-presidente;1;4215802;_CAFEFILHO;CAFÉ FILHO;PSP;279;S
+vice-presidente;1;4215802;_ODILONBRAGA;ODILON BRAGA;UDN;1975;
+vice-presidente;1;4215802;_ALTINOARANTES;ALTINO ARANTES;PSD;789;
+vice-presidente;1;4215802;_VITORINOFREIRE;VITORINO FREIRE;PST;1;
+vice-presidente;1;4215802;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4215802;#brancos;;;497;
+vice-presidente;1;4215802;#nulos;;;28;
+vice-presidente;1;4215802;#comparecimento;;;3569;
+vice-presidente;1;4215802;#eleitorado;;;4524;
+vice-presidente;1;4216206;_CAFEFILHO;CAFÉ FILHO;PSP;1681;S
+vice-presidente;1;4216206;_ODILONBRAGA;ODILON BRAGA;UDN;1105;
+vice-presidente;1;4216206;_ALTINOARANTES;ALTINO ARANTES;PSD;1034;
+vice-presidente;1;4216206;_VITORINOFREIRE;VITORINO FREIRE;PST;2;
+vice-presidente;1;4216206;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4216206;#brancos;;;243;
+vice-presidente;1;4216206;#nulos;;;34;
+vice-presidente;1;4216206;#comparecimento;;;4099;
+vice-presidente;1;4216206;#eleitorado;;;5362;
+vice-presidente;1;4216503;_CAFEFILHO;CAFÉ FILHO;PSP;8;S
+vice-presidente;1;4216503;_ODILONBRAGA;ODILON BRAGA;UDN;2694;
+vice-presidente;1;4216503;_ALTINOARANTES;ALTINO ARANTES;PSD;1965;
+vice-presidente;1;4216503;_VITORINOFREIRE;VITORINO FREIRE;PST;20;
+vice-presidente;1;4216503;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4216503;#brancos;;;562;
+vice-presidente;1;4216503;#nulos;;;277;
+vice-presidente;1;4216503;#comparecimento;;;5526;
+vice-presidente;1;4216503;#eleitorado;;;7455;
+vice-presidente;1;4216602;_CAFEFILHO;CAFÉ FILHO;PSP;214;S
+vice-presidente;1;4216602;_ODILONBRAGA;ODILON BRAGA;UDN;1385;
+vice-presidente;1;4216602;_ALTINOARANTES;ALTINO ARANTES;PSD;1751;
+vice-presidente;1;4216602;_VITORINOFREIRE;VITORINO FREIRE;PST;75;
+vice-presidente;1;4216602;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4216602;#brancos;;;333;
+vice-presidente;1;4216602;#nulos;;;65;
+vice-presidente;1;4216602;#comparecimento;;;3823;
+vice-presidente;1;4216602;#eleitorado;;;5373;
+vice-presidente;1;4217808;_CAFEFILHO;CAFÉ FILHO;PSP;2;S
+vice-presidente;1;4217808;_ODILONBRAGA;ODILON BRAGA;UDN;1440;
+vice-presidente;1;4217808;_ALTINOARANTES;ALTINO ARANTES;PSD;762;
+vice-presidente;1;4217808;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4217808;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4217808;#brancos;;;190;
+vice-presidente;1;4217808;#nulos;;;2;
+vice-presidente;1;4217808;#comparecimento;;;2396;
+vice-presidente;1;4217808;#eleitorado;;;3062;
+vice-presidente;1;4217907;_CAFEFILHO;CAFÉ FILHO;PSP;59;S
+vice-presidente;1;4217907;_ODILONBRAGA;ODILON BRAGA;UDN;1427;
+vice-presidente;1;4217907;_ALTINOARANTES;ALTINO ARANTES;PSD;880;
+vice-presidente;1;4217907;_VITORINOFREIRE;VITORINO FREIRE;PST;2;
+vice-presidente;1;4217907;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4217907;#brancos;;;220;
+vice-presidente;1;4217907;#nulos;;;13;
+vice-presidente;1;4217907;#comparecimento;;;2601;
+vice-presidente;1;4217907;#eleitorado;;;3621;
+vice-presidente;1;4218004;_CAFEFILHO;CAFÉ FILHO;PSP;87;S
+vice-presidente;1;4218004;_ODILONBRAGA;ODILON BRAGA;UDN;2323;
+vice-presidente;1;4218004;_ALTINOARANTES;ALTINO ARANTES;PSD;2695;
+vice-presidente;1;4218004;_VITORINOFREIRE;VITORINO FREIRE;PST;2;
+vice-presidente;1;4218004;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4218004;#brancos;;;491;
+vice-presidente;1;4218004;#nulos;;;54;
+vice-presidente;1;4218004;#comparecimento;;;5652;
+vice-presidente;1;4218004;#eleitorado;;;7416;
+vice-presidente;1;4218202;_CAFEFILHO;CAFÉ FILHO;PSP;2;S
+vice-presidente;1;4218202;_ODILONBRAGA;ODILON BRAGA;UDN;2125;
+vice-presidente;1;4218202;_ALTINOARANTES;ALTINO ARANTES;PSD;1687;
+vice-presidente;1;4218202;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4218202;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4218202;#brancos;;;140;
+vice-presidente;1;4218202;#nulos;;;5;
+vice-presidente;1;4218202;#comparecimento;;;3959;
+vice-presidente;1;4218202;#eleitorado;;;4829;
+vice-presidente;1;4218707;_CAFEFILHO;CAFÉ FILHO;PSP;231;S
+vice-presidente;1;4218707;_ODILONBRAGA;ODILON BRAGA;UDN;4430;
+vice-presidente;1;4218707;_ALTINOARANTES;ALTINO ARANTES;PSD;4129;
+vice-presidente;1;4218707;_VITORINOFREIRE;VITORINO FREIRE;PST;903;
+vice-presidente;1;4218707;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4218707;#brancos;;;2105;
+vice-presidente;1;4218707;#nulos;;;101;
+vice-presidente;1;4218707;#comparecimento;;;11899;
+vice-presidente;1;4218707;#eleitorado;;;14704;
+vice-presidente;1;4218806;_CAFEFILHO;CAFÉ FILHO;PSP;4;S
+vice-presidente;1;4218806;_ODILONBRAGA;ODILON BRAGA;UDN;1564;
+vice-presidente;1;4218806;_ALTINOARANTES;ALTINO ARANTES;PSD;2021;
+vice-presidente;1;4218806;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4218806;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4218806;#brancos;;;189;
+vice-presidente;1;4218806;#nulos;;;26;
+vice-presidente;1;4218806;#comparecimento;;;3804;
+vice-presidente;1;4218806;#eleitorado;;;5000;
+vice-presidente;1;4219002;_CAFEFILHO;CAFÉ FILHO;PSP;50;S
+vice-presidente;1;4219002;_ODILONBRAGA;ODILON BRAGA;UDN;2068;
+vice-presidente;1;4219002;_ALTINOARANTES;ALTINO ARANTES;PSD;1892;
+vice-presidente;1;4219002;_VITORINOFREIRE;VITORINO FREIRE;PST;6;
+vice-presidente;1;4219002;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4219002;#brancos;;;425;
+vice-presidente;1;4219002;#nulos;;;273;
+vice-presidente;1;4219002;#comparecimento;;;4714;
+vice-presidente;1;4219002;#eleitorado;;;6226;
+vice-presidente;1;4219309;_CAFEFILHO;CAFÉ FILHO;PSP;294;S
+vice-presidente;1;4219309;_ODILONBRAGA;ODILON BRAGA;UDN;1311;
+vice-presidente;1;4219309;_ALTINOARANTES;ALTINO ARANTES;PSD;1388;
+vice-presidente;1;4219309;_VITORINOFREIRE;VITORINO FREIRE;PST;0;
+vice-presidente;1;4219309;_ALIPIOCORREIANETO;ALÍPIO CORREIA NETO;PSB;0;
+vice-presidente;1;4219309;#brancos;;;683;
+vice-presidente;1;4219309;#nulos;;;20;
+vice-presidente;1;4219309;#comparecimento;;;3696;
+vice-presidente;1;4219309;#eleitorado;;;5177;
