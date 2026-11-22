@@ -67,6 +67,7 @@ TOT = (('Votos Brancos', '#brancos'), ('Votos Nulos', '#nulos'), ('Compareciment
 soma = {c: collections.defaultdict(collections.Counter) for c in CANDS}
 movidos, sem = [], []
 ufs_banco = collections.defaultdict(set)
+sem_eleitorado = set()
 
 # ---- banco de dados
 wb = openpyxl.load_workbook(os.path.join(a.pasta, 'BANCODEDADOS1950.xlsx'), data_only=True)
@@ -82,6 +83,8 @@ for aba, cargo in (('Presidente', 'presidente'), ('Vice', 'vice-presidente')):
         num = lambda h: int(r[col[h]]) if isinstance(r[col[h]], (int, float)) else 0
         votos = tuple(num(sg) for sg, _, _ in CANDS[cargo])
         obs = str(r[col['Obs']] or '')
+        # "Eleitores incluídos no município de X": o eleitorado de X conta os dois; sem como separar, a UF fica sem eleitorado
+        if 'Eleitores inclu' in obs: sem_eleitorado.add((cargo, uf))
         if 'inclui os votos' in obs:
             k = (uf, votos)
             if k in vistos: continue  # o mesmo resultado repetido nos municípios que votaram juntos
@@ -139,6 +142,7 @@ for cargo, por in soma.items():
         for sg, nome, part in CANDS[cargo]:
             linhas[uf].append((cargo, 1, cod, '_' + chave(nome), nome, part, s[sg])); tot[nome] += s[sg]
         for h, n in TOT:
+            if h == 'Eleitorado' and (cargo, uf) in sem_eleitorado: continue
             if s[h]: linhas[uf].append((cargo, 1, cod, n, '', '', s[h]))
     print(cargo, dict(tot))
 os.makedirs('data/tre/1950', exist_ok=True)
