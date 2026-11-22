@@ -1,0 +1,22 @@
+# fonte: mapas "Limites das Zonas Eleitorais", Carlos H. da Graça e Daniel Galuch Junior (2015), base IBGE 2011, fonte TSE (imagens enviadas pelo usuário)
+# zona(s);municípios (nomes da época)
+1,2;Maceió
+3;Água Branca,Mata Grande
+4;Anadia,Limoeiro de Anadia,Arapiraca,Junqueiro
+5;Viçosa,Capela
+6;Atalaia
+7;Coruripe
+8;Pilar,Marechal Deodoro
+9;Murici
+10;Palmeira dos Índios,Quebrangulo
+11;Pão de Açúcar,Piranhas,Batalha
+12;Passo de Camaragibe,Porto de Pedras
+13;Penedo,Igreja Nova,Piaçabuçu
+14;Porto Calvo,Maragogi,Colônia Leopoldina
+15;Rio Largo
+16;São José da Laje
+17;São Luís do Quitunde
+18;São Miguel dos Campos
+19;Santana do Ipanema,Major Isidoro
+20;Traipu,São Brás,Porto Real do Colégio
+21;União dos Palmares

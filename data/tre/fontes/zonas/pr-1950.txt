@@ -1,0 +1,60 @@
+# fonte: mapas "Limites das Zonas Eleitorais", Carlos H. da Graça e Daniel Galuch Junior (2015), base IBGE 2011, fonte TSE (imagens enviadas pelo usuário)
+# zona(s);municípios (nomes da época). Células ilegíveis na imagem ficaram de fora (zonas 1–4, 10, 20 e uma da 42).
+2;Rio Branco do Sul
+3;Piraquara
+5;Guaraqueçaba,Paranaguá,Guaratuba
+6;Antonina
+7;Cerro Azul
+8;São José dos Pinhais
+9;Campo Largo
+11;Rio Negro
+12;São Mateus do Sul
+13;Palmeira,Porto Amazonas
+14,15;Ponta Grossa
+16;Castro
+17;Tibagi
+18;Jaguariaíva
+19;Tomazina
+21;Siqueira Campos
+22;Santo Antônio da Platina,Ribeirão do Pinhal,Cinzas,Abatiá
+23;Ribeirão Claro
+24;Jacarezinho
+25;Cambará
+26;Cornélio Procópio
+27;Piraí do Sul
+28;Apucarana
+29;Ibaiti,Imbituva
+30;Prudentópolis
+31;Campo Mourão
+32;Mangueirinha,Palmas
+33;União da Vitória
+34;Irati
+35;Jataizinho,Uraí,Assaí
+36;Ipiranga
+37;Mallet
+38;Pitanga
+39;Reserva
+40;Sertanópolis
+41,42;Londrina
+42;Ibiporã
+43,44;Guarapuava
+45;Laranjeiras do Sul
+46;Foz do Iguaçu
+47;Clevelândia
+48;Bocaiúva do Sul
+50;Araucária
+51;Morretes
+52;São João do Triunfo
+53;Teixeira Soares
+54;Sengés
+55;Joaquim Távora,Quatiguá
+56;Carlópolis
+57;Andirá
+58;Santa Mariana,Bandeirantes
+59;Rolândia
+60;Mandaguari
+61;Arapongas
+62;Rebouças,Rio Azul
+63;Congonhinhas,Araiporanga,Curiúva
+64;Jaguapitã
+65;Porecatu

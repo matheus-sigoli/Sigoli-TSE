@@ -1,0 +1,53 @@
+# fonte: mapas "Limites das Zonas Eleitorais", Carlos H. da Graça e Daniel Galuch Junior (2015), base IBGE 2011, fonte TSE (imagens enviadas pelo usuário)
+# zona(s);municípios (nomes da época)
+1,2;Goiânia
+2;Guapó
+3;Anápolis,Nerópolis
+4;Chapéu,Arraias
+5;Buriti Alegre
+6;Iporá,Caiapônia
+7;Caldas Novas
+8;Catalão
+9;Corumbá de Goiás
+10;Corumbaíba
+11;Cavalcante,Formosa
+12;Goiás
+13;Itauçu,Inhumas
+14;Ipameri,Urutaí
+15;Itaberaí
+16;Itumbiara
+17;Jaraguá,Uruana,Petrolina de Goiás
+18;Jataí
+19;Luziânia
+20;Palmeiras de Goiás,Edéia
+21;Mineiros
+22;Morrinhos
+23;Orizona
+24;Pedro Afonso,Miracema do Norte,Araguacema
+25;Piracanjuba
+26;Pirenópolis
+27;Pires do Rio
+28;Porto Nacional,Peixe
+29;Posse,Sítio d'Abadia
+30;Rio Verde,Santa Helena de Goiás
+31;Silvânia,Leopoldo de Bulhões,Vianópolis
+32;Suçuapara,Hidrolândia
+33;Itaguatins,Araguatins,Tocantinópolis,Filadélfia
+34;Nazário,Firminópolis,Anicuns
+35;Baliza
+36;Cristalina
+37;Goiandira
+38;Goiatuba
+39;Itapaci
+40;Natividade
+41;Niquelândia
+42;Paranã
+43;Aurilândia,Paraúna
+44;Planaltina
+45;Pontalina
+46;Quirinópolis
+47;São Domingos
+48;Dianópolis,Taguatinga
+49;Trindade
+50;Porangatu,Uruaçu
+51;Santa Cruz de Goiás

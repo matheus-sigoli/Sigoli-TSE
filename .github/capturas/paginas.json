@@ -1,7 +1,6 @@
 {
-  "br-1950-presidente": "/1950/br/presidente",
-  "rj-1950-presidente": "/1950/rj/presidente",
-  "se-1950-vice": "/1950/se/vice-presidente",
-  "al-1947-governador": "/1947/al/governador",
-  "sp-1958-mogi": "/1958/sp/governador?mun=3530805"
+  "se-1950-presidente": "/1950/se/presidente",
+  "mt-1950-presidente": "/1950/mt/presidente",
+  "go-1955-presidente": "/1955/go/presidente",
+  "mt-1954-senador": "/1954/mt/senador"
 }

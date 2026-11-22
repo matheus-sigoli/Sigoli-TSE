@@ -1,0 +1,29 @@
+# fonte: mapas "Limites das Zonas Eleitorais", Carlos H. da Graça e Daniel Galuch Junior (2015), base IBGE 2011, fonte TSE (imagens enviadas pelo usuário)
+# zona(s);municípios (nomes da época)
+1;Vitória
+2;Cachoeiro de Itapemirim,Itapoama
+3;Castelo
+4;Alegre
+5;Mimoso do Sul,Muqui
+6;Colatina
+7;Baixo Guandu
+8;Afonso Cláudio
+9;Santa Leopoldina
+10;São José do Calçado
+11;Santa Teresa
+12;Alfredo Chaves,Iconha
+13;Guaçuí
+14;Ibiraçu,Fundão
+15;Domingos Martins
+16;Itaguaçu
+17;Anchieta
+18;Iúna
+19;Muniz Freire
+20;Aracruz
+21;São Mateus
+22;Itapemirim
+23;Barra de São Francisco
+24;Guarapari
+25;Linhares
+26;Serra,Cariacica,Jabaeté,Espírito Santo
+27;Conceição da Barra
