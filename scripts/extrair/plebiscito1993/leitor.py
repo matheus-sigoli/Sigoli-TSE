@@ -1,8 +1,7 @@
-import os
 import sys, re, json, pickle, os, numpy as np
 AQUI=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,AQUI)
 from grid import limpa, linhas, celulas, vec
-CLF=pickle.load(open(os.path.join(AQUI,'clf.pkl'),'rb'))
+CLF=pickle.load(open(os.environ.get('CLF',os.path.join(AQUI,'clf.pkl')),'rb'))
 def linhas_texto(f):
     ink=limpa(f); L=linhas(ink); C=celulas(ink,L)
     out=[]
@@ -28,7 +27,7 @@ def partes(t):
     """[(rótulo, texto dos valores até o próximo rótulo)]"""
     toks=re.split(r'\s{2,}',t.strip()); out=[]
     for tk in toks:
-        if tk.count('L')>=4 and not re.match(r'^\(?\d',tk): out.append([tk,''])
+        if tk.count('L')>=4 and (not re.match(r'^\(?\d',tk) or tk.count('L')>=0.6*len(tk.replace(' ',''))): out.append([tk,''])
         elif out: out[-1][1]+=' '+tk
     return out
 def valor(txt):
@@ -36,7 +35,7 @@ def valor(txt):
 CLN=pickle.load(open(os.path.join(AQUI,'clfn.pkl'),'rb'))
 def nome_de(linha):
     ab,cells,t=linha
-    m=re.search(r'(?:^|\s)\S{4} \S{2} \S{9}[.:]+',t)
+    m=re.search(r'(?:^|\s)\S{4} \S{2} \S{9}\s*[.:]+',t)
     if not m: return ''
     cs=cells[m.end():]
     idx=[i for i,(x,c) in enumerate(cs) if c.sum()>6]
@@ -84,7 +83,7 @@ def ler1(f):
     r['eleit'],r['comp'],r['naoc']=(vals+[None]*3)[:3]
     r['nome_linha']=None
     for j in range(st-1,-1,-1):
-        if re.search(r'(?:^|\s)\S{4} \S{2} \S{9}[.:]{3,}',S[j]): r['nome_linha']=j; break
+        if re.search(r'(?:^|\s)\S{4} \S{2} \S{9}(?:[.:]{3,}|\s+[.:]\s*\S)',S[j]): r['nome_linha']=j; break
     r['nome']=nome_de(T[r['nome_linha']]) if r['nome_linha'] is not None else ''
     return r
 import grid as _g
@@ -96,6 +95,7 @@ def ler(f):
         except Exception: r=None
         _g.FORCA=None
         if r is None: continue
+        r['escala']=fz
         if ok(r): return r
         if melhor is None: melhor=r
         t=dict(r)
@@ -136,11 +136,11 @@ def coringa(r):
     if C is None: return
     def pct_ok(F,C):
         # os outros números da conta têm de bater com o % impresso (sobre o comparecimento ou sobre os válidos)
-        val=lambda a,b: (r[a] or 0)+(r[b] or 0)
+        val=lambda a,b: (r[a]+r[b]) if isinstance(r.get(a),int) and isinstance(r.get(b),int) else None
         for k in F:
             p=r.get(k+'%'); v=r.get(k)
             if not isinstance(v,int) or not isinstance(p,float): continue
-            bases=[C, val(F[0],F[1])]
+            bases=[C, val(*(K1[:2] if k in K1 else K2[:2]))]
             if not any(B and abs(v/B*100-p)<=0.0051 for B in bases): return False
         return True
     for F in (K1,K2):

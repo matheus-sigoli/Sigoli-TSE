@@ -1,5 +1,25 @@
 [
 {
+"ibge": "4200051",
+"nome_lido": "ABDGN BATISTA",
+"pagina": "p-008.png",
+"mon": 122,
+"rep": 1229,
+"br1": 322,
+"nu1": 234,
+"parl": 280,
+"pres": 1172,
+"br2": 207,
+"nu2": 248,
+"eleit": 2408,
+"comp": 1907,
+"naoc": 501,
+"reparo": {
+"br2": 207,
+"nu2": 248
+}
+},
+{
 "ibge": "4200101",
 "nome_lido": "ABELARDD LUZ",
 "pagina": "p-009.png",
@@ -143,6 +163,22 @@
 }
 },
 {
+"ibge": "4200903",
+"nome_lido": "ANGELINA",
+"pagina": "p-018.png",
+"mon": 240,
+"rep": 2272,
+"br1": 507,
+"nu1": 608,
+"parl": 484,
+"pres": 2185,
+"br2": 284,
+"nu2": 674,
+"eleit": 4620,
+"comp": 3627,
+"naoc": 993
+},
+{
 "ibge": "4201000",
 "nome_lido": "ANITA GARIBALDI",
 "pagina": "p-019.png",
@@ -157,6 +193,26 @@
 "eleit": 7826,
 "comp": 5483,
 "naoc": 2343
+},
+{
+"ibge": "4201109",
+"nome_lido": "ANITAPDLIS",
+"pagina": "p-020.png",
+"mon": 164,
+"rep": 1225,
+"br1": 304,
+"nu1": 348,
+"parl": 345,
+"pres": 1131,
+"br2": 187,
+"nu2": 378,
+"eleit": 2695,
+"comp": 2041,
+"naoc": 654,
+"reparo": {
+"br2": 187,
+"nu2": 378
+}
 },
 {
 "ibge": "4201208",
@@ -245,6 +301,26 @@
 "naoc": 5926
 },
 {
+"ibge": "4201505",
+"nome_lido": "ARMAZEM",
+"pagina": "p-026.png",
+"mon": 249,
+"rep": 2412,
+"br1": 422,
+"nu1": 378,
+"parl": 518,
+"pres": 2254,
+"br2": 268,
+"nu2": 421,
+"eleit": 4394,
+"comp": 3461,
+"naoc": 933,
+"reparo": {
+"br2": 268,
+"nu2": 421
+}
+},
+{
 "ibge": "4201604",
 "nome_lido": "ARRGIG TRINTA",
 "pagina": "p-027.png",
@@ -259,6 +335,27 @@
 "eleit": 2528,
 "comp": 2063,
 "naoc": 465
+},
+{
+"ibge": "4201703",
+"nome_lido": "ASCURRA",
+"pagina": "p-029.png",
+"mon": 495,
+"rep": 2152,
+"br1": 339,
+"nu1": 758,
+"parl": 722,
+"pres": 2019,
+"br2": 210,
+"nu2": 793,
+"eleit": 4384,
+"comp": 3744,
+"naoc": 640,
+"reparo": {
+"br2": 210,
+"nu2": 793,
+"naoc": 640
+}
 },
 {
 "ibge": "4201802",
@@ -793,6 +890,42 @@
 "naoc": 884
 },
 {
+"ibge": "4204251",
+"nome_lido": "CGCAL DD SUL",
+"pagina": "p-063.png",
+"mon": 658,
+"rep": 4063,
+"br1": 561,
+"nu1": 780,
+"parl": 1500,
+"pres": 3415,
+"br2": 299,
+"nu2": 848,
+"eleit": 6954,
+"comp": 6062,
+"naoc": 892,
+"reparo": {
+"br2": 299,
+"nu2": 848
+}
+},
+{
+"ibge": "4204301",
+"nome_lido": "CGNCGRDIA",
+"pagina": "p-064.png",
+"mon": 2571,
+"rep": 24575,
+"br1": 3013,
+"nu1": 3656,
+"parl": 6651,
+"pres": 21630,
+"br2": 1577,
+"nu2": 3957,
+"eleit": 38881,
+"comp": 33815,
+"naoc": 5066
+},
+{
 "ibge": "4204350",
 "nome_lido": "CGRDILHEIRA ALTA",
 "pagina": "p-065.png",
@@ -1088,6 +1221,25 @@
 "eleit": 9290,
 "comp": 8179,
 "naoc": 1111
+},
+{
+"ibge": "4205506",
+"nome_lido": "FRAIBURGG",
+"pagina": "p-082.png",
+"mon": 1479,
+"rep": 9869,
+"br1": 1739,
+"nu1": 1990,
+"parl": 3131,
+"pres": 8858,
+"br2": 881,
+"nu2": 2207,
+"eleit": 17891,
+"comp": 15077,
+"naoc": 2814,
+"reparo": {
+"nu2": 2207
+}
 },
 {
 "ibge": "4205605",
@@ -1405,6 +1557,46 @@
 "naoc": 3941
 },
 {
+"ibge": "4207304",
+"nome_lido": "IMBITUBA",
+"pagina": "p-101.png",
+"mon": 1676,
+"rep": 10544,
+"br1": 1509,
+"nu1": 2627,
+"parl": 3712,
+"pres": 8962,
+"br2": 808,
+"nu2": 2874,
+"eleit": 20626,
+"comp": 16356,
+"naoc": 4270,
+"reparo": {
+"br2": 808,
+"nu2": 2874,
+"eleit": 20626
+}
+},
+{
+"ibge": "4207502",
+"nome_lido": "INDAIAL",
+"pagina": "p-103.png",
+"mon": 2004,
+"rep": 10534,
+"br1": 1324,
+"nu1": 3442,
+"parl": 3975,
+"pres": 8941,
+"br2": 826,
+"nu2": 3562,
+"eleit": 19632,
+"comp": 17304,
+"naoc": 2328,
+"reparo": {
+"nu2": 3562
+}
+},
+{
 "ibge": "4207601",
 "nome_lido": "IPIRA",
 "pagina": "p-104.png",
@@ -1680,6 +1872,22 @@
 }
 },
 {
+"ibge": "4209003",
+"nome_lido": "JGACABA",
+"pagina": "p-124.png",
+"mon": 1848,
+"rep": 10886,
+"br1": 1377,
+"nu1": 2004,
+"parl": 4892,
+"pres": 8328,
+"br2": 718,
+"nu2": 2177,
+"eleit": 18818,
+"comp": 16115,
+"naoc": 2703
+},
+{
 "ibge": "4209102",
 "nome_lido": "JGINVILLE",
 "pagina": "p-125.png",
@@ -1764,6 +1972,22 @@
 "eleit": 1230,
 "comp": 1025,
 "naoc": 205
+},
+{
+"ibge": "4209508",
+"nome_lido": "LAURENTING",
+"pagina": "p-131.png",
+"mon": 326,
+"rep": 1751,
+"br1": 268,
+"nu1": 509,
+"parl": 614,
+"pres": 1511,
+"br2": 257,
+"nu2": 472,
+"eleit": 3364,
+"comp": 2854,
+"naoc": 510
 },
 {
 "ibge": "4209607",
@@ -2405,6 +2629,22 @@
 "eleit": 4964,
 "comp": 3426,
 "naoc": 1538
+},
+{
+"ibge": "4212403",
+"nome_lido": "PEDRAS GRANDES",
+"pagina": "p-173.png",
+"mon": 313,
+"rep": 1859,
+"br1": 476,
+"nu1": 594,
+"parl": 618,
+"pres": 1684,
+"br2": 296,
+"nu2": 644,
+"eleit": 4152,
+"comp": 3242,
+"naoc": 910
 },
 {
 "ibge": "4212502",
@@ -3100,6 +3340,22 @@
 }
 },
 {
+"ibge": "4215901",
+"nome_lido": "SAG BGNIFACID",
+"pagina": "p-216.png",
+"mon": 133,
+"rep": 1169,
+"br1": 293,
+"nu1": 458,
+"parl": 297,
+"pres": 1080,
+"br2": 194,
+"nu2": 482,
+"eleit": 2484,
+"comp": 2053,
+"naoc": 431
+},
+{
 "ibge": "4216057",
 "nome_lido": "SAD CRISTDVAD DD SDL",
 "pagina": "p-217.png",
@@ -3132,6 +3388,25 @@
 "naoc": 2766,
 "reparo": {
 "nu2": 579
+}
+},
+{
+"ibge": "4216206",
+"nome_lido": "SAG FRANCISCD DD SUL",
+"pagina": "p-220.png",
+"mon": 2174,
+"rep": 8379,
+"br1": 1187,
+"nu1": 1728,
+"parl": 3616,
+"pres": 7287,
+"br2": 668,
+"nu2": 1897,
+"eleit": 16845,
+"comp": 13468,
+"naoc": 3377,
+"reparo": {
+"br2": 668
 }
 },
 {
@@ -3285,6 +3560,26 @@
 }
 },
 {
+"ibge": "4217154",
+"nome_lido": "SAG MIGUEL DA BDA VISTA",
+"pagina": "p-233.png",
+"mon": 80,
+"rep": 891,
+"br1": 175,
+"nu1": 181,
+"parl": 170,
+"pres": 864,
+"br2": 98,
+"nu2": 195,
+"eleit": 1689,
+"comp": 1327,
+"naoc": 362,
+"reparo": {
+"br2": 98,
+"nu2": 195
+}
+},
+{
 "ibge": "4217204",
 "nome_lido": "SAG MIGUEL DTDESTE",
 "pagina": "p-232.png",
@@ -3336,6 +3631,25 @@
 "naoc": 352,
 "reparo": {
 "br2": 1026
+}
+},
+{
+"ibge": "4217501",
+"nome_lido": "SEARA",
+"pagina": "p-236.png",
+"mon": 740,
+"rep": 5983,
+"br1": 924,
+"nu1": 864,
+"parl": 1668,
+"pres": 5380,
+"br2": 546,
+"nu2": 917,
+"eleit": 9988,
+"comp": 8511,
+"naoc": 1477,
+"reparo": {
+"nu2": 917
 }
 },
 {
@@ -3448,6 +3762,25 @@
 "eleit": 8136,
 "comp": 6711,
 "naoc": 1425
+},
+{
+"ibge": "4218004",
+"nome_lido": "TIJUCAS",
+"pagina": "p-243.png",
+"mon": 1235,
+"rep": 6321,
+"br1": 1164,
+"nu1": 2069,
+"parl": 2317,
+"pres": 5632,
+"br2": 633,
+"nu2": 2207,
+"eleit": 13935,
+"comp": 10789,
+"naoc": 3146,
+"reparo": {
+"nu2": 2207
+}
 },
 {
 "ibge": "4218103",
@@ -3764,5 +4097,21 @@
 "eleit": 22724,
 "comp": 18433,
 "naoc": 4291
+},
+{
+"ibge": "4219705",
+"nome_lido": "XARIM",
+"pagina": "p-267.png",
+"mon": 940,
+"rep": 7704,
+"br1": 1165,
+"nu1": 1397,
+"parl": 1996,
+"pres": 7044,
+"br2": 591,
+"nu2": 1575,
+"eleit": 13634,
+"comp": 11206,
+"naoc": 2428
 }
 ]
