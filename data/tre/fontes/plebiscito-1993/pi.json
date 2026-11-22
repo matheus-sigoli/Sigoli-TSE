@@ -176,6 +176,26 @@
 "naoc": 3218
 },
 {
+"ibge": "2201002",
+"nome_lido": "ARRAIAL",
+"pagina": "p-019.png",
+"mon": 91,
+"rep": 1383,
+"br1": 322,
+"nu1": 173,
+"parl": 150,
+"pres": 1426,
+"br2": 184,
+"nu2": 209,
+"eleit": 3501,
+"comp": 1969,
+"naoc": 1532,
+"reparo": {
+"mon": 91,
+"parl": 150
+}
+},
+{
 "ibge": "2201101",
 "nome_lido": "AVELING LGPES",
 "pagina": "p-020.png",
@@ -403,6 +423,44 @@
 "naoc": 1556
 },
 {
+"ibge": "2202059",
+"nome_lido": "CABECEIRAS DG PIAUI",
+"pagina": "p-035.png",
+"mon": 109,
+"rep": 1616,
+"br1": 535,
+"nu1": 229,
+"parl": 192,
+"pres": 1742,
+"br2": 255,
+"nu2": 300,
+"eleit": 3990,
+"comp": 2489,
+"naoc": 1501,
+"reparo": {
+"eleit": 3990
+}
+},
+{
+"ibge": "2202091",
+"nome_lido": "CALDEIRAG GRANDE DG PIAUI",
+"pagina": "p-036.png",
+"mon": 63,
+"rep": 1211,
+"br1": 327,
+"nu1": 196,
+"parl": 213,
+"pres": 1177,
+"br2": 165,
+"nu2": 242,
+"eleit": 3232,
+"comp": 1797,
+"naoc": 1435,
+"reparo": {
+"eleit": 3232
+}
+},
+{
 "ibge": "2202109",
 "nome_lido": "CAMPINAS DG PIAUI",
 "pagina": "p-037.png",
@@ -547,6 +605,25 @@
 "naoc": 1599
 },
 {
+"ibge": "2202752",
+"nome_lido": "CGLGNIA DG GURGUEIA",
+"pagina": "p-046.png",
+"mon": 70,
+"rep": 1183,
+"br1": 213,
+"nu1": 135,
+"parl": 118,
+"pres": 1206,
+"br2": 106,
+"nu2": 171,
+"eleit": 2815,
+"comp": 1601,
+"naoc": 1214,
+"reparo": {
+"eleit": 2815
+}
+},
+{
 "ibge": "2202778",
 "nome_lido": "CGLGNIA DG PIAUI",
 "pagina": "p-047.png",
@@ -611,6 +688,26 @@
 "naoc": 10321
 },
 {
+"ibge": "2203008",
+"nome_lido": "CRISTALANDIA DG PIAUI",
+"pagina": "p-051.png",
+"mon": 82,
+"rep": 852,
+"br1": 234,
+"nu1": 57,
+"parl": 152,
+"pres": 889,
+"br2": 106,
+"nu2": 78,
+"eleit": 4467,
+"comp": 1225,
+"naoc": 3242,
+"reparo": {
+"mon": 82,
+"parl": 152
+}
+},
+{
 "ibge": "2203107",
 "nome_lido": "CRISTING CASTRG",
 "pagina": "p-052.png",
@@ -641,6 +738,25 @@
 "eleit": 8156,
 "comp": 4284,
 "naoc": 3872
+},
+{
+"ibge": "2203305",
+"nome_lido": "DEMERVAL LGBAG",
+"pagina": "p-054.png",
+"mon": 288,
+"rep": 3715,
+"br1": 822,
+"nu1": 723,
+"parl": 581,
+"pres": 3724,
+"br2": 436,
+"nu2": 807,
+"eleit": 9300,
+"comp": 5548,
+"naoc": 3752,
+"reparo": {
+"eleit": 9300
+}
 },
 {
 "ibge": "2203354",
@@ -691,6 +807,25 @@
 "naoc": 1409
 },
 {
+"ibge": "2203453",
+"nome_lido": "DDM INDCENCIG",
+"pagina": "p-057.png",
+"mon": 215,
+"rep": 1755,
+"br1": 839,
+"nu1": 563,
+"parl": 440,
+"pres": 1808,
+"br2": 432,
+"nu2": 692,
+"eleit": 5335,
+"comp": 3372,
+"naoc": 1963,
+"reparo": {
+"eleit": 5335
+}
+},
+{
 "ibge": "2203503",
 "nome_lido": "ELESBAG VELGSG",
 "pagina": "p-059.png",
@@ -705,6 +840,25 @@
 "eleit": 11807,
 "comp": 6505,
 "naoc": 5302
+},
+{
+"ibge": "2203602",
+"nome_lido": "ELISEU MARTINS",
+"pagina": "p-060.png",
+"mon": 64,
+"rep": 1048,
+"br1": 227,
+"nu1": 111,
+"parl": 174,
+"pres": 1005,
+"br2": 128,
+"nu2": 143,
+"eleit": 3059,
+"comp": 1450,
+"naoc": 1609,
+"reparo": {
+"eleit": 3059
+}
 },
 {
 "ibge": "2203701",
@@ -771,6 +925,45 @@
 "naoc": 11367
 },
 {
+"ibge": "2204006",
+"nome_lido": "FRANCINGPGLIS",
+"pagina": "p-065.png",
+"mon": 116,
+"rep": 1319,
+"br1": 340,
+"nu1": 401,
+"parl": 226,
+"pres": 1299,
+"br2": 275,
+"nu2": 376,
+"eleit": 3866,
+"comp": 2176,
+"naoc": 1690,
+"reparo": {
+"eleit": 3866
+}
+},
+{
+"ibge": "2204105",
+"nome_lido": "FRANCISCG ATRES",
+"pagina": "p-066.png",
+"mon": 82,
+"rep": 1535,
+"br1": 319,
+"nu1": 192,
+"parl": 159,
+"pres": 1577,
+"br2": 170,
+"nu2": 222,
+"eleit": 3785,
+"comp": 2128,
+"naoc": 1657,
+"reparo": {
+"mon": 82,
+"parl": 159
+}
+},
+{
 "ibge": "2204204",
 "nome_lido": "FRANCISCG SANTGS",
 "pagina": "p-067.png",
@@ -817,6 +1010,45 @@
 "eleit": 6152,
 "comp": 2843,
 "naoc": 3309
+},
+{
+"ibge": "2204501",
+"nome_lido": "GUADALUPE",
+"pagina": "p-070.png",
+"mon": 204,
+"rep": 2921,
+"br1": 415,
+"nu1": 404,
+"parl": 524,
+"pres": 2747,
+"br2": 234,
+"nu2": 439,
+"eleit": 6992,
+"comp": 3944,
+"naoc": 3048,
+"reparo": {
+"mon": 204,
+"parl": 524
+}
+},
+{
+"ibge": "2204600",
+"nome_lido": "HUGG NAPGLEAG",
+"pagina": "p-071.png",
+"mon": 115,
+"rep": 1063,
+"br1": 242,
+"nu1": 327,
+"parl": 160,
+"pres": 1078,
+"br2": 166,
+"nu2": 343,
+"eleit": 3069,
+"comp": 1747,
+"naoc": 1322,
+"reparo": {
+"eleit": 3069
+}
 },
 {
 "ibge": "2204709",
@@ -899,6 +1131,44 @@
 "naoc": 3913
 },
 {
+"ibge": "2205151",
+"nome_lido": "JACGBINA DG PIAUI",
+"pagina": "p-077.png",
+"mon": 57,
+"rep": 787,
+"br1": 209,
+"nu1": 126,
+"parl": 155,
+"pres": 740,
+"br2": 128,
+"nu2": 156,
+"eleit": 3194,
+"comp": 1179,
+"naoc": 2015,
+"reparo": {
+"eleit": 3194
+}
+},
+{
+"ibge": "2205201",
+"nome_lido": "JAICGS",
+"pagina": "p-078.png",
+"mon": 297,
+"rep": 5413,
+"br1": 1585,
+"nu1": 1159,
+"parl": 494,
+"pres": 5604,
+"br2": 1048,
+"nu2": 1308,
+"eleit": 14804,
+"comp": 8454,
+"naoc": 6350,
+"reparo": {
+"eleit": 14804
+}
+},
+{
 "ibge": "2205250",
 "nome_lido": "JARDIM DG MULATG",
 "pagina": "p-079.png",
@@ -963,6 +1233,64 @@
 "naoc": 10352
 },
 {
+"ibge": "2205557",
+"nome_lido": "LAGGA ALEGRE",
+"pagina": "p-083.png",
+"mon": 79,
+"rep": 1057,
+"br1": 459,
+"nu1": 113,
+"parl": 152,
+"pres": 1186,
+"br2": 215,
+"nu2": 155,
+"eleit": 3645,
+"comp": 1708,
+"naoc": 1937,
+"reparo": {
+"eleit": 3645
+}
+},
+{
+"ibge": "2205565",
+"nome_lido": "LAGGA DG BARRG DG PIAUI",
+"pagina": "p-084.png",
+"mon": 50,
+"rep": 824,
+"br1": 305,
+"nu1": 149,
+"parl": 105,
+"pres": 898,
+"br2": 143,
+"nu2": 182,
+"eleit": 2682,
+"comp": 1328,
+"naoc": 1354,
+"reparo": {
+"eleit": 2682
+}
+},
+{
+"ibge": "2205607",
+"nome_lido": "LANDRI SALES",
+"pagina": "p-085.png",
+"mon": 77,
+"rep": 1658,
+"br1": 449,
+"nu1": 221,
+"parl": 185,
+"pres": 1712,
+"br2": 225,
+"nu2": 283,
+"eleit": 3707,
+"comp": 2405,
+"naoc": 1302,
+"reparo": {
+"mon": 77,
+"parl": 185
+}
+},
+{
 "ibge": "2205706",
 "nome_lido": "LUIS CGRREIA",
 "pagina": "p-086.png",
@@ -1011,6 +1339,25 @@
 "naoc": 1696
 },
 {
+"ibge": "2205953",
+"nome_lido": "MARCGLANDIA",
+"pagina": "p-089.png",
+"mon": 92,
+"rep": 1364,
+"br1": 565,
+"nu1": 282,
+"parl": 147,
+"pres": 1517,
+"br2": 275,
+"nu2": 364,
+"eleit": 3460,
+"comp": 2303,
+"naoc": 1157,
+"reparo": {
+"eleit": 3460
+}
+},
+{
 "ibge": "2206001",
 "nome_lido": "MARCGS PARENTE                                L",
 "pagina": "p-090.png",
@@ -1025,6 +1372,25 @@
 "eleit": 3399,
 "comp": 2132,
 "naoc": 1267
+},
+{
+"ibge": "2206100",
+"nome_lido": "MATIAS GLIMPIG",
+"pagina": "p-091.png",
+"mon": 292,
+"rep": 3318,
+"br1": 994,
+"nu1": 541,
+"parl": 625,
+"pres": 3204,
+"br2": 608,
+"nu2": 708,
+"eleit": 9385,
+"comp": 5145,
+"naoc": 4240,
+"reparo": {
+"eleit": 9385
+}
 },
 {
 "ibge": "2206209",
@@ -1123,6 +1489,45 @@
 "naoc": 2610
 },
 {
+"ibge": "2206803",
+"nome_lido": "NGSSA SENHGRA DGS REMEDIGS",
+"pagina": "p-098.png",
+"mon": 131,
+"rep": 1566,
+"br1": 459,
+"nu1": 220,
+"parl": 166,
+"pres": 1595,
+"br2": 353,
+"nu2": 262,
+"eleit": 4829,
+"comp": 2376,
+"naoc": 2453,
+"reparo": {
+"mon": 131,
+"parl": 166
+}
+},
+{
+"ibge": "2206902",
+"nome_lido": "NGVG GRIENTE DG PIAUI",
+"pagina": "p-099.png",
+"mon": 73,
+"rep": 2220,
+"br1": 431,
+"nu1": 218,
+"parl": 134,
+"pres": 2291,
+"br2": 241,
+"nu2": 276,
+"eleit": 5200,
+"comp": 2942,
+"naoc": 2258,
+"reparo": {
+"eleit": 5200
+}
+},
+{
 "ibge": "2207207",
 "nome_lido": "PADRE MARCGS",
 "pagina": "p-101.png",
@@ -1155,6 +1560,26 @@
 "naoc": 1422
 },
 {
+"ibge": "2207405",
+"nome_lido": "PALMEIRA DG PIAUI",
+"pagina": "p-103.png",
+"mon": 40,
+"rep": 1324,
+"br1": 279,
+"nu1": 190,
+"parl": 86,
+"pres": 1366,
+"br2": 167,
+"nu2": 214,
+"eleit": 3207,
+"comp": 1833,
+"naoc": 1374,
+"reparo": {
+"mon": 40,
+"parl": 86
+}
+},
+{
 "ibge": "2207504",
 "nome_lido": "PALMEIRAIS",
 "pagina": "p-104.png",
@@ -1169,6 +1594,64 @@
 "eleit": 8627,
 "comp": 3934,
 "naoc": 4693
+},
+{
+"ibge": "2207603",
+"nome_lido": "PARNAGUA",
+"pagina": "p-105.png",
+"mon": 127,
+"rep": 2033,
+"br1": 493,
+"nu1": 176,
+"parl": 171,
+"pres": 2161,
+"br2": 272,
+"nu2": 225,
+"eleit": 7376,
+"comp": 2829,
+"naoc": 4547,
+"reparo": {
+"mon": 127,
+"parl": 171
+}
+},
+{
+"ibge": "2207702",
+"nome_lido": "PARNAIBA",
+"pagina": "p-106.png",
+"mon": 2797,
+"rep": 31660,
+"br1": 5358,
+"nu1": 4769,
+"parl": 5867,
+"pres": 30612,
+"br2": 2426,
+"nu2": 5679,
+"eleit": 63136,
+"comp": 44584,
+"naoc": 18552,
+"reparo": {
+"eleit": 63136
+}
+},
+{
+"ibge": "2207751",
+"nome_lido": "PASSAGEM FRANCA DG PIAUI",
+"pagina": "p-107.png",
+"mon": 55,
+"rep": 625,
+"br1": 129,
+"nu1": 74,
+"parl": 70,
+"pres": 637,
+"br2": 114,
+"nu2": 62,
+"eleit": 1343,
+"comp": 883,
+"naoc": 460,
+"reparo": {
+"eleit": 1343
+}
 },
 {
 "ibge": "2207777",
@@ -1219,6 +1702,45 @@
 "naoc": 8413
 },
 {
+"ibge": "2208007",
+"nome_lido": "PICGS",
+"pagina": "p-111.png",
+"mon": 1753,
+"rep": 20050,
+"br1": 4644,
+"nu1": 4788,
+"parl": 3724,
+"pres": 19441,
+"br2": 2650,
+"nu2": 5420,
+"eleit": 43834,
+"comp": 31235,
+"naoc": 12599,
+"reparo": {
+"mon": 1753,
+"parl": 3724
+}
+},
+{
+"ibge": "2208106",
+"nome_lido": "PIMENTEIRAS                                   L",
+"pagina": "p-112.png",
+"mon": 135,
+"rep": 2888,
+"br1": 623,
+"nu1": 429,
+"parl": 267,
+"pres": 2914,
+"br2": 400,
+"nu2": 494,
+"eleit": 7027,
+"comp": 4075,
+"naoc": 2952,
+"reparo": {
+"eleit": 7027
+}
+},
+{
 "ibge": "2208205",
 "nome_lido": "PIG IX",
 "pagina": "p-115.png",
@@ -1233,6 +1755,25 @@
 "eleit": 9773,
 "comp": 5322,
 "naoc": 4451
+},
+{
+"ibge": "2208304",
+"nome_lido": "PIRACURUCA",
+"pagina": "p-113.png",
+"mon": 518,
+"rep": 8159,
+"br1": 1512,
+"nu1": 1158,
+"parl": 847,
+"pres": 8239,
+"br2": 1046,
+"nu2": 1215,
+"eleit": 18756,
+"comp": 11347,
+"naoc": 7409,
+"reparo": {
+"eleit": 18756
+}
 },
 {
 "ibge": "2208403",
@@ -1265,6 +1806,45 @@
 "eleit": 8544,
 "comp": 4161,
 "naoc": 4383
+},
+{
+"ibge": "2208601",
+"nome_lido": "PRATA DG PIAUI",
+"pagina": "p-117.png",
+"mon": 70,
+"rep": 918,
+"br1": 186,
+"nu1": 115,
+"parl": 126,
+"pres": 875,
+"br2": 172,
+"nu2": 116,
+"eleit": 2727,
+"comp": 1289,
+"naoc": 1438,
+"reparo": {
+"mon": 70,
+"parl": 126
+}
+},
+{
+"ibge": "2208650",
+"nome_lido": "QUEIMADA NGVA",
+"pagina": "p-118.png",
+"mon": 41,
+"rep": 700,
+"br1": 229,
+"nu1": 222,
+"parl": 57,
+"pres": 754,
+"br2": 139,
+"nu2": 242,
+"eleit": 3563,
+"comp": 1192,
+"naoc": 2371,
+"reparo": {
+"eleit": 3563
+}
 },
 {
 "ibge": "2208700",
@@ -1532,6 +2112,25 @@
 "naoc": 1548
 },
 {
+"ibge": "2209906",
+"nome_lido": "SAD JDAG DA SERRA",
+"pagina": "p-138.png",
+"mon": 119,
+"rep": 1890,
+"br1": 489,
+"nu1": 274,
+"parl": 165,
+"pres": 1957,
+"br2": 321,
+"nu2": 329,
+"eleit": 5402,
+"comp": 2772,
+"naoc": 2630,
+"reparo": {
+"eleit": 5402
+}
+},
+{
 "ibge": "2210003",
 "nome_lido": "SAG JGAG DG PIAUI",
 "pagina": "p-139.png",
@@ -1546,6 +2145,25 @@
 "eleit": 22602,
 "comp": 13230,
 "naoc": 9372
+},
+{
+"ibge": "2210052",
+"nome_lido": "SAG JGSE DG DIVING",
+"pagina": "p-136.png",
+"mon": 80,
+"rep": 1300,
+"br1": 260,
+"nu1": 121,
+"parl": 108,
+"pres": 1313,
+"br2": 165,
+"nu2": 175,
+"eleit": 2713,
+"comp": 1761,
+"naoc": 952,
+"reparo": {
+"eleit": 2713
+}
 },
 {
 "ibge": "2210102",
@@ -1594,6 +2212,25 @@
 "eleit": 4199,
 "comp": 3101,
 "naoc": 1098
+},
+{
+"ibge": "2210359",
+"nome_lido": "SAG LGURENG DG PIAUI",
+"pagina": "p-137.png",
+"mon": 120,
+"rep": 895,
+"br1": 637,
+"nu1": 333,
+"parl": 317,
+"pres": 961,
+"br2": 305,
+"nu2": 402,
+"eleit": 3313,
+"comp": 1985,
+"naoc": 1328,
+"reparo": {
+"eleit": 3313
+}
 },
 {
 "ibge": "2210409",
@@ -1770,5 +2407,24 @@
 "eleit": 14731,
 "comp": 9408,
 "naoc": 5323
+},
+{
+"ibge": "2211357",
+"nome_lido": "VARZEA BRANCA",
+"pagina": "p-154.png",
+"mon": 52,
+"rep": 1201,
+"br1": 204,
+"nu1": 68,
+"parl": 76,
+"pres": 1222,
+"br2": 116,
+"nu2": 111,
+"eleit": 2472,
+"comp": 1525,
+"naoc": 947,
+"reparo": {
+"eleit": 2472
+}
 }
 ]

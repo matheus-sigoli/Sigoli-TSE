@@ -1982,6 +1982,27 @@
 "naoc": 872
 },
 {
+"ibge": "4210605",
+"nome_lido": "MASSARANDUBA",
+"pagina": "p-145.png",
+"mon": 955,
+"rep": 4270,
+"br1": 570,
+"nu1": 1375,
+"parl": 1523,
+"pres": 3800,
+"br2": 453,
+"nu2": 1394,
+"eleit": 8015,
+"comp": 7170,
+"naoc": 845,
+"reparo": {
+"br2": 453,
+"nu2": 1394,
+"naoc": 845
+}
+},
+{
 "ibge": "4210704",
 "nome_lido": "MATCS CGSTA",
 "pagina": "p-146.png",
@@ -2233,6 +2254,26 @@
 "naoc": 518
 },
 {
+"ibge": "4211702",
+"nome_lido": "GRLEANS",
+"pagina": "p-161.png",
+"mon": 1177,
+"rep": 6709,
+"br1": 1171,
+"nu1": 1780,
+"parl": 2334,
+"pres": 5920,
+"br2": 718,
+"nu2": 1865,
+"eleit": 12922,
+"comp": 10837,
+"naoc": 2085,
+"reparo": {
+"br2": 718,
+"nu2": 1865
+}
+},
+{
 "ibge": "4211850",
 "nome_lido": "GURG VERDE",
 "pagina": "p-164.png",
@@ -2330,6 +2371,26 @@
 }
 },
 {
+"ibge": "4212270",
+"nome_lido": "PASSDS MAIA",
+"pagina": "p-171.png",
+"mon": 88,
+"rep": 766,
+"br1": 205,
+"nu1": 145,
+"parl": 223,
+"pres": 709,
+"br2": 104,
+"nu2": 168,
+"eleit": 1798,
+"comp": 1204,
+"naoc": 594,
+"reparo": {
+"br2": 104,
+"nu2": 168
+}
+},
+{
 "ibge": "4212304",
 "nome_lido": "PAULC LGPES",
 "pagina": "p-172.png",
@@ -2378,6 +2439,26 @@
 "naoc": 317,
 "reparo": {
 "nu2": 339
+}
+},
+{
+"ibge": "4212700",
+"nome_lido": "PETRDLANDIA",
+"pagina": "p-176.png",
+"mon": 191,
+"rep": 2585,
+"br1": 388,
+"nu1": 681,
+"parl": 450,
+"pres": 2462,
+"br2": 193,
+"nu2": 740,
+"eleit": 4504,
+"comp": 3845,
+"naoc": 659,
+"reparo": {
+"br2": 193,
+"nu2": 740
 }
 },
 {
@@ -2779,6 +2860,26 @@
 }
 },
 {
+"ibge": "4214904",
+"nome_lido": "RIG FGRTUNA",
+"pagina": "p-200.png",
+"mon": 222,
+"rep": 1465,
+"br1": 357,
+"nu1": 707,
+"parl": 416,
+"pres": 1350,
+"br2": 249,
+"nu2": 736,
+"eleit": 3188,
+"comp": 2751,
+"naoc": 437,
+"reparo": {
+"br2": 249,
+"nu2": 736
+}
+},
+{
 "ibge": "4215000",
 "nome_lido": "RID NEGRINHG",
 "pagina": "p-201.png",
@@ -2920,6 +3021,26 @@
 "eleit": 1519,
 "comp": 1256,
 "naoc": 263
+},
+{
+"ibge": "4215653",
+"nome_lido": "SANTA RGSA DG SUL",
+"pagina": "p-212.png",
+"mon": 249,
+"rep": 2673,
+"br1": 566,
+"nu1": 335,
+"parl": 707,
+"pres": 2378,
+"br2": 344,
+"nu2": 394,
+"eleit": 4789,
+"comp": 3823,
+"naoc": 966,
+"reparo": {
+"br2": 344,
+"nu2": 394
+}
 },
 {
 "ibge": "4215679",
@@ -3290,6 +3411,26 @@
 "naoc": 483,
 "reparo": {
 "br2": 154
+}
+},
+{
+"ibge": "4217808",
+"nome_lido": "TAIG",
+"pagina": "p-241.png",
+"mon": 760,
+"rep": 5773,
+"br1": 763,
+"nu1": 1517,
+"parl": 1735,
+"pres": 5018,
+"br2": 437,
+"nu2": 1623,
+"eleit": 10792,
+"comp": 8813,
+"naoc": 1979,
+"reparo": {
+"br2": 437,
+"nu2": 1623
 }
 },
 {

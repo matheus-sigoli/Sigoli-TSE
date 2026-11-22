@@ -69,7 +69,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1993, titulo: 'Plebiscito de 1993', datas: '21 de abril',
-    cargos: 'Forma de governo (República ou Monarquia) e sistema de governo (Presidencialismo ou Parlamentarismo); por município: UFS_PLEBISCITO',
+    cargos: 'Forma de governo (República ou Monarquia) e sistema de governo (Presidencialismo ou Parlamentarismo); por município: SP, GO, DF, BA, SC e PI (os outros estados só no total do Brasil)',
     disponivel: true, rota: '/1993/br/forma', semLocais: true, semZonas: true,
     soCargos: ['forma', 'sistema'],
     fonte: 'TSE, relatórios "Resultado do Município" do plebiscito, do acervo (por município)',
