@@ -275,7 +275,9 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     // local com ponto conhecido) — o total da cidade fica igual nas visões Zonas e Locais
     const ids = new Set((malhaCidade.dados?.malha.municipios.features ?? []).map((f) => String(f.id)));
     const arq = resultado.dados;
-    if (arq && !arq.resumo) for (const k of Object.keys(arq.mun)) if (k.startsWith(`${cid}-`)) ids.add(k);
+    // (só ids de zona, "{ibge}-{zona}": no arquivo de uma cidade da eleição municipal também há "{ibge}-t-nome" de bairro)
+    const ehZona = new RegExp(`^${cid}-\\d+$`);
+    if (arq && !arq.resumo) for (const k of Object.keys(arq.mun)) if (ehZona.test(k)) ids.add(k);
     return ids;
   }, [cid, nivel, bairros.dados, locais.dados, malhaCidade.dados, resultado.dados]);
 

@@ -220,7 +220,7 @@ function Painel(p: Props) {
             linhas={(prop && abaAtiva === 'partidos' ? visao.partidos : visao.candidatos).slice(0, limite)}
             focoChave={focoChave}
             aoFocar={p.aoFocar}
-            mostrarSelos={!p.temSelecao}
+            mostrarSelos={!p.temSelecao || !!cargo.municipal}
             aoTrocarCor={p.coresEscolhidas ? abrirSeletor : undefined}
           />
           {seletor && p.coresEscolhidas ? (
@@ -322,7 +322,7 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos, se
                   {l.anulado ? <span className="selo anulado" title={`Destinação do voto no TSE: ${l.anulado}`}>Votos anulados</span> : null}
                 </span>
                 <span className="linha-meta">
-                  {candidato ? (l.numero ? `${l.partido} / ${l.numero}` : l.partido) : l.federacao ? `${l.federacao} / ${l.numero}` : semLegenda ? `Nominais / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
+                  {l.cidade ? `${titulo(l.cidade)} · ` : ''}{candidato ? (l.numero ? `${l.partido} / ${l.numero}` : l.partido) : l.federacao ? `${l.federacao} / ${l.numero}` : semLegenda ? `Nominais / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
                 </span>
                 {l.vices?.length ? (
                   <span className="linha-meta">
