@@ -48,6 +48,12 @@ const GEO = (nome) => (ANO === 2026 ? `public/geo/${nome}` : `public/geo/${ANO}/
 const CDN = 'https://cdn.tse.jus.br/estatistica/sead/odsele';
 const TODAS = ['ac', 'al', 'am', 'ap', 'ba', 'ce', 'df', 'es', 'go', 'ma', 'mg', 'ms', 'mt', 'pa', 'pb', 'pe', 'pi', 'pr', 'rj', 'rn', 'ro', 'rr', 'rs', 'sc', 'se', 'sp', 'to'];
 const UFS = opt('uf').length ? opt('uf').map((u) => u.toLowerCase()) : TODAS;
+/**
+ * Eleição municipal (2024, 2020…): Prefeito e Vereador. Cada cidade tem a sua disputa: a base é o arquivo da UF com
+ * todos os candidatos (scripts/municipal-tse.mjs, em .cache/municipal/) e a saída é um arquivo por cidade com as
+ * zonas da cidade, os bairros e os locais de votação juntos ({cargo}/{t}/cidade/{ibge}.json), com os candidatos só dela.
+ */
+const MUNICIPAL = ANO % 4 === 0 && ANO !== 2026 && ANO >= 1996;
 
 // zonas desenhadas por cidade para um ano (ZMBRA_{ano}.json, enviado pelo usuário: cada feição = zona × município,
 // nas cidades com mais de uma zona). Onde cobre todas as zonas da cidade, substitui o Voronoi.
@@ -70,6 +76,7 @@ const ordinaria = (dt) => new RegExp(`^\\d{2}/${ANO === 1994 ? "1[01]" : "10"}/$
 
 // código do cargo + turno → [slug, turno] (vale para qualquer ano: não depende do código da eleição)
 function cargoDe(cdCargo, turno) {
+  if (MUNICIPAL) { const m = { 11: 'prefeito', 13: 'vereador' }[cdCargo]; return m && (turno === 1 || turno === 2) ? [m, turno] : null; }
   const c = { 1: 'presidente', 3: 'governador', 5: 'senador', 6: 'deputado-federal', 7: 'deputado-estadual', 8: 'deputado-estadual' }[cdCargo];
   return c && (turno === 1 || turno === 2) ? [c, turno] : null;
 }
@@ -170,7 +177,7 @@ const zipVotos = (UF) => join(CACHE, `votacao_secao_${ANO}_${UF}.zip`);
 if (argv.includes('--baixar')) {
   await baixar(SEM_CADASTRO ? `${CDN}/detalhe_votacao_secao/detalhe_votacao_secao_${ANO}.zip` : `${CDN}/eleitorado_locais_votacao/eleitorado_local_votacao_${ANO}.zip`, zipLocais);
   // BR = Presidente (todas as UFs); cada UF = cargos estaduais
-  for (const UF of ['BR', ...UFS.map((u) => u.toUpperCase())]) await baixar(`${CDN}/votacao_secao/votacao_secao_${ANO}_${UF}.zip`, zipVotos(UF));
+  for (const UF of [...(MUNICIPAL ? [] : ['BR']), ...UFS.map((u) => u.toUpperCase())]) await baixar(`${CDN}/votacao_secao/votacao_secao_${ANO}_${UF}.zip`, zipVotos(UF));
 }
 // locais geocodificados de 2006 a 2024 (Hidalgo et al., github.com/fdhidalgo/geocode_br_polling_stations, v0.16):
 // nome, endereço e ponto de cada local por eleição — ponto do TSE quando há, senão o do modelo (conf_dist_km = erro)
@@ -188,7 +195,7 @@ function novaUf(uf) {
 function lerBase(E, cargo, t) {
   const k = `${cargo}/${t}`;
   if (!E.base.has(k)) {
-    const p = join(DADOS, cargo, String(t), cargo === 'presidente' ? 'br.json' : `${E.uf}.json`);
+    const p = MUNICIPAL ? join('.cache/municipal', String(ANO), cargo, String(t), `${E.uf}.json`) : join(DADOS, cargo, String(t), cargo === 'presidente' ? 'br.json' : `${E.uf}.json`);
     E.base.set(k, existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : null);
   }
   return E.base.get(k);
@@ -197,6 +204,7 @@ function lerBase(E, cargo, t) {
 /** Soma uma linha de votação por seção nos acumuladores da UF. */
 function somarLinha(E, f, c) {
   if (!ordinaria(f[c.DT_ELEICAO])) return;
+  if (MUNICIPAL) return somarLinhaMunicipal(E, f, c);
   const cg = cargoDe(num(f[c.CD_CARGO]), num(f[c.NR_TURNO]));
   if (!cg) return;
   const [cargo, t] = cg;
@@ -267,6 +275,123 @@ function somarLinha(E, f, c) {
       }
     }
   }
+}
+
+/** Eleição municipal: candidatos pela cidade (número + município), votos por candidato também no Vereador. */
+function somarLinhaMunicipal(E, f, c) {
+  const cg = cargoDe(num(f[c.CD_CARGO]), num(f[c.NR_TURNO]));
+  if (!cg) return;
+  const [cargo, t] = cg;
+  const chaveCargo = `${cargo}/${t}`;
+  let a = E.acc.get(chaveCargo);
+  if (!a) {
+    const b = lerBase(E, cargo, t);
+    if (!b) return;
+    const chaveCand = (x) => `${x.tse}|${num(x.n)}`;
+    a = {
+      b, zonasCidade: new Map(), bairros: new Map(), locais: new Map(),
+      idxC: new Map(b.cands.map((x, i) => [chaveCand(x), i])),
+      anulados: new Set(b.cands.filter((x) => x.anulado).map(chaveCand)),
+      validoC: new Set(b.cands.filter((x, i) => (b.total?.c?.[i] ?? 1) > 0).map(chaveCand)),
+      idxP: new Map(b.partidos.map((x, i) => [String(num(x.n)), i])),
+      prop: cargo === 'vereador', vagas: 1,
+    };
+    E.acc.set(chaveCargo, a);
+  }
+  const turno = num(f[c.NR_TURNO]);
+  const mun = pad5(f[c.CD_MUNICIPIO]);
+  const zona = num(f[c.NR_ZONA]);
+  const secao = num(f[c.NR_SECAO]);
+  const chaveSecao = `${turno}|${mun}-${zona}-${secao}`;
+  const localId = E.secaoLocal.get(chaveSecao) ?? `${mun}-${zona}-${num(f[c.NR_LOCAL_VOTACAO])}`;
+  const votavel = num(f[c.NR_VOTAVEL]);
+  const votos = num(f[c.QT_VOTOS]);
+  const ibgeMun = ibgeDe.get(mun) ?? mun;
+  const bairroId = E.bairroDoLocal.get(localId) ?? `${ibgeMun}-t-sem-bairro`;
+  const k = `${mun}|${votavel}`;
+  for (const [sigla, mapa, id] of [['zc', a.zonasCidade, `${ibgeMun}-${zona}`], ['b', a.bairros, bairroId], ['l', a.locais, localId]]) {
+    let r = mapa.get(id);
+    if (!r) {
+      r = { t: [0, 0, 0, 0, 0, 0], cm: new Map(), p: a.prop ? new Array(a.b.partidos.length).fill(0) : null, votosTotais: 0, mun: ibgeMun };
+      if (a.prop) r.an = new Array(a.b.partidos.length).fill(0);
+      mapa.set(id, r);
+    }
+    const marca = `${chaveCargo}|${sigla}|${chaveSecao}`;
+    if (!E.contadas.has(marca)) { E.contadas.add(marca); r.t[0] += E.eleitoradoSecao.get(chaveSecao) ?? 0; }
+    r.votosTotais += votos;
+    if (votavel === 95) { r.t[4] += votos; continue; }
+    if (votavel === 96 || votavel === 97) { r.t[5] += votos; continue; }
+    if (a.prop) {
+      if (a.anulados.has(k)) {
+        const ia = a.idxP.get(String(votavel).slice(0, 2));
+        if (ia !== undefined) r.an[ia] += votos;
+        continue;
+      }
+      if (String(votavel).length > 2 && !a.validoC.has(k)) { r.t[5] += votos; continue; }
+      const i = a.idxP.get(String(votavel).slice(0, 2));
+      if (i === undefined) { r.t[5] += votos; continue; }
+      r.p[i] += votos; r.t[3] += votos;
+      const ic = String(votavel).length > 2 ? a.idxC.get(k) : undefined;
+      if (ic !== undefined) r.cm.set(ic, (r.cm.get(ic) ?? 0) + votos);
+    } else {
+      const i = a.idxC.get(k);
+      if (i === undefined) { r.t[5] += votos; continue; } // candidatura cancelada: nulo, como no TSE
+      r.cm.set(i, (r.cm.get(i) ?? 0) + votos);
+      if (!a.anulados.has(k)) r.t[3] += votos;
+    }
+  }
+}
+
+/** Grava um arquivo por cidade (eleição municipal): zonas da cidade, bairros e locais, com os candidatos só dela. */
+function gravarCidades(E, chaveCargo, a, gravar) {
+  for (const mapa of [a.zonasCidade, a.bairros, a.locais]) if (a.prop) conciliar(a, mapa);
+  const b = a.b;
+  const porCidade = new Map();
+  for (const mapa of [a.zonasCidade, a.bairros, a.locais]) for (const [id, r] of mapa) {
+    if (!porCidade.has(r.mun)) porCidade.set(r.mun, []);
+    porCidade.get(r.mun).push([id, r]);
+  }
+  let n = 0;
+  for (const [ibge, unidades] of porCidade) {
+    const base = b.mun?.[ibge];
+    if (!base) continue;
+    const votoBase = new Map();
+    for (let i = 0; i < base.c.length; i += 2) votoBase.set(base.c[i], base.c[i + 1]);
+    // candidatos da cidade (com voto ou eleitos), na ordem de votos; partidos com voto na cidade
+    const idxs = b.cands.map((x, i) => i).filter((i) => b.cands[i].mun === ibge && (votoBase.get(i) > 0 || b.cands[i].eleito))
+      .sort((x, y) => (votoBase.get(y) ?? 0) - (votoBase.get(x) ?? 0));
+    const novoC = new Map(idxs.map((i, j) => [i, j]));
+    const idxsP = b.partidos.map((x, i) => i).filter((i) => (base.p?.[i] ?? 0) > 0).sort((x, y) => base.p[y] - base.p[x]);
+    const novoP = new Map(idxsP.map((i, j) => [i, j]));
+    const cands = idxs.map((i) => { const { mun: _m, tse: _t, ...x } = b.cands[i]; void _m; void _t; return x; });
+    const mun = {};
+    for (const [id, r] of unidades) {
+      const t = [...r.t];
+      t[1] = r.votosTotais;
+      t[2] = Math.max(0, t[0] - t[1]);
+      if (a.prop) {
+        const c = [];
+        for (const [i, v] of [...r.cm].sort((x, y) => y[1] - x[1])) if (novoC.has(i) && v > 0) c.push(novoC.get(i), v);
+        mun[id] = { t, c, p: idxsP.map((i) => r.p[i]) };
+      } else {
+        const c = new Array(idxs.length).fill(0);
+        for (const [i, v] of r.cm) if (novoC.has(i)) c[novoC.get(i)] = v;
+        mun[id] = { t, c };
+      }
+    }
+    const total = {
+      t: [...base.t],
+      c: idxs.map((i) => votoBase.get(i) ?? 0),
+      p: idxsP.map((i) => base.p[i]),
+    };
+    gravar(`${chaveCargo}/cidade/${ibge}.json`, {
+      v: 1, cargo: b.cargo, turno: b.turno, abr: ibge, uf: E.uf, tipo: a.prop ? 'prop' : 'maj', municipal: true,
+      vagas: cands.filter((x) => x.eleito).length || 1, atualizado: b.atualizado,
+      cands, partidos: idxsP.map((i) => b.partidos[i]), total, mun,
+    });
+    n++;
+  }
+  return n;
 }
 
 const estados = new Map(UFS.map((uf) => [uf, novaUf(uf)]));
@@ -411,7 +536,9 @@ for (const E of estados.values()) {
 }
 
 // 3) Presidente: arquivo nacional, lido uma vez e distribuído por UF
-if (existsSync(zipVotos('BR'))) {
+if (MUNICIPAL) {
+  // eleição municipal: não há arquivo nacional
+} else if (existsSync(zipVotos('BR'))) {
   await lerCsvDoZip(zipVotos('BR'), (n) => n.endsWith('.csv'), (f, c) => {
     const E = estados.get(String(f[c.SG_UF]).toLowerCase());
     if (E) somarLinha(E, f, c);
@@ -429,6 +556,7 @@ for (const E of estados.values()) {
     writeFileSync(p, JSON.stringify(obj));
   };
   for (const [chaveCargo, a] of E.acc) {
+    if (MUNICIPAL) { console.log(`${uf} ${chaveCargo}: ${gravarCidades(E, chaveCargo, a, gravar)} cidades`); continue; }
     for (const [nivel, chaveAcc] of [['zonas', 'zonas'], ['zonas-cidade', 'zonasCidade'], ['bairros', 'bairros'], ['locais', 'locais']]) {
       if (a.prop) conciliar(a, a[chaveAcc]);
       const mun = {};

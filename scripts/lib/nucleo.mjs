@@ -29,6 +29,12 @@ export const CARGOS = [
   { slug: 'deputado-estadual', nome: 'Deputado Estadual', cd: 7, cdDF: 8, eleicao: 'estadual', tipo: 'prop', turnos: [1] },
 ];
 
+/** Eleições municipais (scripts/municipal-tse.mjs): fora de CARGOS, que é a lista da coleta de 2026. */
+export const CARGOS_MUNICIPAIS = [
+  { slug: 'prefeito', nome: 'Prefeito', cd: 11, eleicao: 'municipal', tipo: 'maj', turnos: [1, 2] },
+  { slug: 'vereador', nome: 'Vereador', cd: 13, eleicao: 'municipal', tipo: 'prop', turnos: [1] },
+];
+
 export const UFS = [
   'ac', 'al', 'ap', 'am', 'ba', 'ce', 'df', 'es', 'go', 'ma', 'mt', 'ms', 'mg', 'pa',
   'pb', 'pr', 'pe', 'pi', 'rj', 'rn', 'rs', 'ro', 'rr', 'sc', 'sp', 'se', 'to',
