@@ -227,10 +227,10 @@ const EXTERNAS = ['#7B2CBF', '#F5C400'].map(gerarFaixas);
  */
 /**
  * Bipartidarismo (1966–1979), definido com o usuário: cada partido tinha até 3 candidatos (sublegendas),
- * e a cor vai pela ordem de votos dentro do partido. MDB: vermelho, verde, amarelo. ARENA: azul e cinza do PP, roxo.
+ * e a cor vai pela ordem de votos dentro do partido. MDB: vinho (#8E1F1E), verde, amarelo. ARENA: azul e cinza do PP, roxo.
  */
 const DITADURA: Record<string, Faixas[]> = {
-  MDB66: ['#D62828', '#00AA4F', '#FFC401'].map(gerarFaixas),
+  MDB66: ['#8E1F1E', '#00AA4F', '#FFC401'].map(gerarFaixas),
   ARENA: ['#04368A', '#5F747A', '#7B2CBF'].map(gerarFaixas),
 };
 
