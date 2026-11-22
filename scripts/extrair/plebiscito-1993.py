@@ -24,10 +24,6 @@ OPC = {
     'sistema': [('parl', 'PARLAMENTARISMO'), ('pres', 'PRESIDENCIALISMO')],
 }
 TOT = {'forma': ('br1', 'nu1'), 'sistema': ('br2', 'nu2')}
-NOME_UF = {'ac': 'Acre', 'al': 'Alagoas', 'am': 'Amazonas', 'ba': 'Bahia', 'df': 'Distrito Federal', 'go': 'Goiás',
-           'ma': 'Maranhão', 'mg': 'Minas Gerais', 'ms': 'Mato Grosso do Sul', 'pb': 'Paraíba', 'pe': 'Pernambuco',
-           'pi': 'Piauí', 'pr': 'Paraná', 'rj': 'Rio de Janeiro', 'rs': 'Rio Grande do Sul', 'sc': 'Santa Catarina',
-           'se': 'Sergipe', 'sp': 'São Paulo'}
 os.makedirs('data/tre/1993', exist_ok=True)
 for arq in sorted(glob.glob('data/tre/fontes/plebiscito-1993/*.json')):
     uf = os.path.basename(arq)[:-5]
@@ -43,5 +39,5 @@ for arq in sorted(glob.glob('data/tre/fontes/plebiscito-1993/*.json')):
                        (cargo, 1, r['ibge'], '#eleitorado', '', '', r['eleit'])]
     # no estado, quem venceu (não há eleito em plebiscito; a marca fica com a opção vencedora no Brasil)
     gravar(f'data/tre/1993/{uf}.csv', linhas, {('forma', '_' + chave('REPÚBLICA')): 'S', ('sistema', '_' + chave('PRESIDENCIALISMO')): 'S'},
-           fonte=f'TSE, relatórios "Resultado do Município" do plebiscito de 21/04/1993 ({NOME_UF.get(uf, uf.upper())}), do acervo')
+           fonte='TSE, relatórios "Resultado do Município" do plebiscito de 21/04/1993, do acervo')
     print(uf, len(regs), 'municípios')
