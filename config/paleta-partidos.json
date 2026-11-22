@@ -264,7 +264,8 @@
         "100": "#002210"
       },
       "reservas": [
-        "#FFC401", "#8E1F1E"
+        "#FFC401",
+        "#8E1F1E"
       ]
     },
     {
@@ -1127,6 +1128,82 @@
       },
       "reservas": [],
       "ano": 1994
+    },
+    {
+      "chave": "REPUBLICA",
+      "sigla": "REPÚBLICA",
+      "numero": null,
+      "nome": "República (plebiscito de 1993)",
+      "principal": {
+        "10": "#D2E8DA",
+        "20": "#A5D1B5",
+        "30": "#78BA8F",
+        "40": "#4BA36A",
+        "50": "#1E8C45",
+        "60": "#1A783B",
+        "70": "#156331",
+        "80": "#114F27",
+        "90": "#0D3B1D",
+        "100": "#061D0E"
+      },
+      "reservas": []
+    },
+    {
+      "chave": "MONARQUIA",
+      "sigla": "MONARQUIA",
+      "numero": null,
+      "nome": "Monarquia (plebiscito de 1993)",
+      "principal": {
+        "10": "#E1D5E9",
+        "20": "#C3ABD3",
+        "30": "#A680BD",
+        "40": "#8856A7",
+        "50": "#6A2C91",
+        "60": "#5B267C",
+        "70": "#4B1F67",
+        "80": "#3C1952",
+        "90": "#2D123D",
+        "100": "#16091E"
+      },
+      "reservas": []
+    },
+    {
+      "chave": "PRESIDENCIALISMO",
+      "sigla": "PRESIDENCIALISMO",
+      "numero": null,
+      "nome": "Presidencialismo (plebiscito de 1993)",
+      "principal": {
+        "10": "#D2DEED",
+        "20": "#A5BDDB",
+        "30": "#799CCA",
+        "40": "#4C7BB8",
+        "50": "#1F5AA6",
+        "60": "#1B4D8E",
+        "70": "#164076",
+        "80": "#12335E",
+        "90": "#0D2646",
+        "100": "#071323"
+      },
+      "reservas": []
+    },
+    {
+      "chave": "PARLAMENTARISMO",
+      "sigla": "PARLAMENTARISMO",
+      "numero": null,
+      "nome": "Parlamentarismo (plebiscito de 1993)",
+      "principal": {
+        "10": "#F9E5CC",
+        "20": "#F3CA99",
+        "30": "#ECB066",
+        "40": "#E69533",
+        "50": "#E07B00",
+        "60": "#C06900",
+        "70": "#9F5700",
+        "80": "#7F4500",
+        "90": "#5E3400",
+        "100": "#2F1A00"
+      },
+      "reservas": []
     }
   ],
   "neutro": {

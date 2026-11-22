@@ -1,7 +1,7 @@
 /** Vocabulário do Sigoli.TSE — ver CONTEXT.md. */
 import SEGUNDO_TURNO_2024 from './segundo-turno-prefeito-2024.json';
 
-export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador';
+export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador' | 'forma' | 'sistema';
 export type Turno = 1 | 2;
 export type TipoCargo = 'maj' | 'prop';
 
@@ -14,6 +14,8 @@ export interface Cargo {
   federal: boolean;
   /** eleição municipal: cada cidade tem a sua disputa (no estado, o município pinta com o partido mais votado) */
   municipal?: boolean;
+  /** plebiscito (1993): pergunta com opções no lugar de candidatos */
+  plebiscito?: boolean;
 }
 
 export const CARGOS: Cargo[] = [
@@ -26,6 +28,9 @@ export const CARGOS: Cargo[] = [
   { slug: 'deputado-estadual', nome: 'Deputado Estadual', curto: 'Dep. Estadual', tipo: 'prop', turnos: [1], federal: false },
   { slug: 'prefeito', nome: 'Prefeito', curto: 'Prefeito', tipo: 'maj', turnos: [1, 2], federal: false, municipal: true },
   { slug: 'vereador', nome: 'Vereador', curto: 'Vereador', tipo: 'prop', turnos: [1], federal: false, municipal: true },
+  // plebiscito de 21 de abril de 1993: as duas perguntas são os "cargos" e as opções, os "candidatos"
+  { slug: 'forma', nome: 'Forma de governo', curto: 'Forma de governo', tipo: 'maj', turnos: [1], federal: true, plebiscito: true },
+  { slug: 'sistema', nome: 'Sistema de governo', curto: 'Sistema de governo', tipo: 'maj', turnos: [1], federal: true, plebiscito: true },
 ];
 
 /** cidades com 2º turno de Prefeito, por ano e UF (public/data/{ano}/segundo-turno.json, scripts/municipal-tse.mjs) */

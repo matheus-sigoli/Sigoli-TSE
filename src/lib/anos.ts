@@ -68,6 +68,13 @@ export const ELEICOES: Eleicao[] = [
     zonasSo: { cargos: ['presidente'], ufs: ['ac', 'al', 'am', 'ap', 'ba', 'go', 'ma', 'ms', 'pb', 'pe', 'pi', 'ro', 'rs', 'sc', 'se', 'sp', 'to'] },
   },
   {
+    ano: 1993, titulo: 'Plebiscito de 1993', datas: '21 de abril',
+    cargos: 'Forma de governo (República ou Monarquia) e sistema de governo (Presidencialismo ou Parlamentarismo); por município: SP, GO, DF, BA, SC e PI (os outros estados só no total do Brasil)',
+    disponivel: true, rota: '/1993/br/forma', semLocais: true, semZonas: true,
+    soCargos: ['forma', 'sistema'],
+    fonte: 'TSE, relatórios "Resultado do Município" do plebiscito, do acervo (por município)',
+  },
+  {
     ano: 1990, titulo: 'Eleições 1990', datas: '3 de outubro e 25 de novembro',
     cargos: 'Governador (por enquanto AC, AL, AP, BA, CE, ES, GO, MA, MG, MS, MT, PA, PI, RJ, RN, RO, RS e SP; PI só no 2º turno e metade dos municípios), Senador (BA, CE, ES, MS, PA, RN, RO e RS; MA só com parte dos municípios e ES sem 3) e Deputados (CE, MS, RN, RO e RS)', disponivel: true, rota: '/1990/sp/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
@@ -185,6 +192,7 @@ export const temCargo = (ano: number, cargo: string) => {
   const e = ELEICOES.find((x) => x.ano === ano);
   if (e?.soCargos) return e.soCargos.includes(cargo);
   if (cargo === 'prefeito' || cargo === 'vereador') return false; // só nos anos de eleição municipal (soCargos)
+  if (cargo === 'forma' || cargo === 'sistema') return false; // só no plebiscito de 1993 (soCargos)
   return cargo !== 'presidente' || !e?.semPresidente;
 };
 

@@ -1,0 +1,13 @@
+cargo;turno;ibge;numero;nome;partido;votos;eleito
+forma;1;5300108;_MONARQUIA;MONARQUIA;MONARQUIA;69552;
+forma;1;5300108;_REPUBLICA;REPÚBLICA;REPÚBLICA;550285;S
+forma;1;5300108;#brancos;;;49418;
+forma;1;5300108;#nulos;;;94667;
+forma;1;5300108;#comparecimento;;;763922;
+forma;1;5300108;#eleitorado;;;908429;
+sistema;1;5300108;_PARLAMENTARISMO;PARLAMENTARISMO;PARLAMENTARISMO;233792;
+sistema;1;5300108;_PRESIDENCIALISMO;PRESIDENCIALISMO;PRESIDENCIALISMO;404739;S
+sistema;1;5300108;#brancos;;;21430;
+sistema;1;5300108;#nulos;;;103961;
+sistema;1;5300108;#comparecimento;;;763922;
+sistema;1;5300108;#eleitorado;;;908429;

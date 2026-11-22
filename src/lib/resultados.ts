@@ -216,7 +216,7 @@ function visaoCompleta(
     candidatos,
     partidos,
     cores,
-    legenda: lideres.map((l) => ({ rotulo: prop ? l.partido : `${l.nome} (${l.partido})`, faixas: l.faixas })),
+    legenda: lideres.map((l) => ({ rotulo: prop || l.nome === l.partido ? l.partido : `${l.nome} (${l.partido})`, faixas: l.faixas })),
   };
 }
 

@@ -221,6 +221,7 @@ function Painel(p: Props) {
             focoChave={focoChave}
             aoFocar={p.aoFocar}
             mostrarSelos={!p.temSelecao || !!cargo.municipal}
+            rotuloEleito={cargo.plebiscito ? 'Venceu no Brasil' : 'Eleito'}
             aoTrocarCor={p.coresEscolhidas ? abrirSeletor : undefined}
           />
           {seletor && p.coresEscolhidas ? (
@@ -288,8 +289,9 @@ const iniciais = (l: Linha) => {
   return ((p[0]?.[0] ?? '') + (p.length > 1 ? p[p.length - 1][0] : '')).toUpperCase();
 };
 
-const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos, semLegenda, aoTrocarCor }: {
+const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos, semLegenda, aoTrocarCor, rotuloEleito = 'Eleito' }: {
   linhas: Linha[];
+  rotuloEleito?: string;
   /** abre o seletor de cor do partido da linha */
   aoTrocarCor?: (l: Linha) => void;
   /** fonte sem voto de legenda (PDF do TRE): o total do partido é só a soma dos nominais */
@@ -317,12 +319,12 @@ const Lista = memo(function Lista({ linhas, focoChave, aoFocar, mostrarSelos, se
               <span className="linha-info">
                 <span className="linha-nome">
                   {candidato && l.nome !== l.partido ? `${titulo(l.nome)} (${l.partido})` : l.partido}
-                  {mostrarSelos && l.eleito ? <span className="selo eleito">Eleito</span> : null}
+                  {mostrarSelos && l.eleito ? <span className="selo eleito">{rotuloEleito}</span> : null}
                   {mostrarSelos && !l.eleito && l.segundoTurno ? <span className="selo segundo">2º turno</span> : null}
                   {l.anulado ? <span className="selo anulado" title={`Destinação do voto no TSE: ${l.anulado}`}>Votos anulados</span> : null}
                 </span>
                 <span className="linha-meta">
-                  {l.cidade ? `${titulo(l.cidade)} · ` : ''}{candidato ? (l.numero ? `${l.partido} / ${l.numero}` : l.partido) : l.federacao ? `${l.federacao} / ${l.numero}` : semLegenda ? `Nominais / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
+                  {l.cidade ? `${titulo(l.cidade)} · ` : ''}{candidato ? (l.numero ? `${l.partido} / ${l.numero}` : l.nome === l.partido ? '' : l.partido) : l.federacao ? `${l.federacao} / ${l.numero}` : semLegenda ? `Nominais / ${l.numero}` : `Nominais + legenda / ${l.numero}`}
                 </span>
                 {l.vices?.length ? (
                   <span className="linha-meta">
