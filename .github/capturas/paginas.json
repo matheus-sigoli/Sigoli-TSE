@@ -1,6 +1,7 @@
 {
   "se-1950-presidente": "/1950/se/presidente",
-  "mt-1950-presidente": "/1950/mt/presidente",
-  "go-1955-presidente": "/1955/go/presidente",
-  "mt-1954-senador": "/1954/mt/senador"
+  "se-1950-sel-membro": "/1950/se/presidente?mun=2804003",
+  "mg-1947-governador": "/1947/mg/governador",
+  "sp-1955-presidente": "/1955/sp/presidente",
+  "rs-2022-regressao": "/2022/rs/governador"
 }
