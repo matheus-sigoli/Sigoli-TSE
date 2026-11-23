@@ -1,6 +1,7 @@
 {
-  "rs-1947-governador": "/1947/rs/governador",
-  "rs-1950-governador": "/1950/rs/governador",
-  "rs-1950-senador": "/1950/rs/senador",
-  "rs-1950-presidente": "/1950/rs/presidente"
+  "br-2022-presidente-estados": "/2022/br/presidente?t=2&det=uf",
+  "br-1950-presidente-estados": "/1950/br/presidente?det=uf",
+  "br-2022-governador-estados": "/2022/br/governador?det=uf&reg=S,SE",
+  "br-1993-forma-estados-sp": "/1993/br/forma?det=uf&mun=sp",
+  "br-2022-presidente-sul": "/2022/br/presidente?reg=S"
 }

@@ -32,6 +32,8 @@ interface Props {
   /** duplo clique (ou toque duplo) numa área: abrir o detalhe dela */
   aoAbrir?: (id: string) => void;
   descrever: (id: string) => { titulo: string; linha: string } | null;
+  /** nome do arquivo SVG baixado (sem a extensão) */
+  nomeArquivo?: string;
 }
 
 interface Vista { k: number; x: number; y: number }
@@ -50,7 +52,7 @@ const margens = () =>
 const reduzirMovimento = () =>
   typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
-function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, selecionados, destaque, mundo, semContornoFundo = false, aoSelecionar, aoAbrir, descrever }: Props) {
+function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, selecionados, destaque, mundo, semContornoFundo = false, aoSelecionar, aoAbrir, descrever, nomeArquivo = 'sigoli-mapa' }: Props) {
   const raiz = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const [tam, setTam] = useState({ w: 0, h: 0 });
@@ -59,6 +61,9 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, s
   vistaRef.current = vista;
   const [hover, setHover] = useState<string | null>(null);
   const [dica, setDica] = useState<{ x: number; y: number; titulo: string; linha: string } | null>(null);
+  // com uma região escolhida: esconder o resto do mapa (em vez de deixá-lo apagado), também no SVG baixado
+  const [soRegiao, setSoRegiao] = useState(false);
+  const recortar = soRegiao && !!destaque;
   const cb = useRef({ aoSelecionar, aoAbrir, descrever });
   cb.current = { aoSelecionar, aoAbrir, descrever };
   const ultimoClique = useRef<{ id: string | null; t: number }>({ id: null, t: 0 });
@@ -266,7 +271,7 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, s
 
   // ---- camadas (memorizadas: zoom e hover não redesenham milhares de caminhos)
   const camadaAreas = useMemo(
-    () => areas.map((a) => (
+    () => areas.filter((a) => !recortar || destaque!.has(a.id)).map((a) => (
       <path
         key={a.id}
         data-id={a.id}
@@ -275,8 +280,53 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, s
         fillOpacity={destaque && !destaque.has(a.id) ? 0.28 : 1}
       />
     )),
-    [areas, cores, destaque],
+    [areas, cores, destaque, recortar],
   );
+  // só a região: as divisas (ex.: entre estados) ficam recortadas no contorno dela
+  const dRegiao = useMemo(() => (recortar ? areas.filter((a) => destaque!.has(a.id)).map((a) => a.d).join('') : ''), [areas, destaque, recortar]);
+
+  // ---- SVG para baixar: o que está no mapa (região sozinha, se for o caso), enquadrado, sem o contorno de seleção
+  const baixarSvg = useCallback(() => {
+    const visiveis = recortar ? areas.filter((a) => destaque!.has(a.id)) : areas;
+    const c = caixaDe(recortar ? destaque : null);
+    if (!c || !visiveis.length) return;
+    const w = c[2] - c[0], h = c[3] - c[1];
+    const folga = Math.max(w, h) * 0.02;
+    const larg = Math.max(w, h);
+    // bordas proporcionais ao tamanho do desenho (no site elas crescem com o zoom)
+    const tracoArea = larg * (areas.length > 2000 ? 0.00025 : 0.0007);
+    const esc = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+    const partes: string[] = [];
+    partes.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${(c[0] - folga).toFixed(2)} ${(c[1] - folga).toFixed(2)} ${(w + 2 * folga).toFixed(2)} ${(h + 2 * folga).toFixed(2)}" width="${Math.round(1600 * (w + 2 * folga) / larg)}" height="${Math.round(1600 * (h + 2 * folga) / larg)}">`);
+    partes.push(`<title>${esc(nomeArquivo)}</title>`);
+    if (recortar) partes.push(`<defs><clipPath id="regiao"><path d="${dRegiao}"/></clipPath></defs>`);
+    if (fundoD && !recortar) partes.push(`<path d="${fundoD}" fill="${SEM_DADOS}" stroke="${semContornoFundo ? 'none' : BORDA_MUNICIPIO}" stroke-width="${tracoArea}"/>`);
+    partes.push(`<g fill-rule="evenodd" stroke="${BORDA_MUNICIPIO}" stroke-width="${tracoArea.toFixed(4)}" stroke-linejoin="round">`);
+    for (const a of visiveis) {
+      const op = destaque && !destaque.has(a.id) ? ' fill-opacity="0.28"' : '';
+      partes.push(`<path id="a${esc(a.id)}" d="${a.d}" fill="${cores?.get(a.id) ?? SEM_DADOS}"${op}/>`);
+    }
+    partes.push('</g>');
+    if (linhas) partes.push(`<path d="${linhas}" fill="none" stroke="${BORDA_MUNICIPIO}" stroke-width="${(tracoArea * 3).toFixed(4)}" stroke-linejoin="round"${recortar ? ' clip-path="url(#regiao)"' : ''}/>`);
+    if (circulos.length) {
+      const k = kBase.current || 1;
+      partes.push(`<g stroke="${BORDA_MUNICIPIO}" stroke-width="${(tracoArea * 0.6).toFixed(4)}" fill-opacity="0.88">`);
+      for (const p of circulos) {
+        if (recortar && !destaque!.has(p.id)) continue;
+        partes.push(`<circle cx="${p.cx.toFixed(2)}" cy="${p.cy.toFixed(2)}" r="${(Math.max(2.5, Math.min(24, 0.045 * Math.sqrt(p.e))) / k).toFixed(3)}" fill="${cores?.get(p.id) ?? SEM_DADOS}"/>`);
+      }
+      partes.push('</g>');
+    }
+    partes.push('</svg>');
+    const url = URL.createObjectURL(new Blob([partes.join('\n')], { type: 'image/svg+xml' }));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${nomeArquivo}.svg`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }, [areas, linhas, circulos, cores, destaque, recortar, dRegiao, caixaDe, fundoD, semContornoFundo, nomeArquivo]);
 
   // largura das bordas cresce devagar com o zoom
   const z = vista.k / (kBase.current || 1);
@@ -310,14 +360,15 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, s
         onKeyDown={aoTeclar}
       >
         <g transform={`translate(${vista.x},${vista.y}) scale(${vista.k})`}>
-          {fundoD ? <path className={semContornoFundo ? 'mapa-fundo sem-contorno' : 'mapa-fundo'} d={fundoD} /> : null}
-          <g className="mapa-areas" stroke={BORDA_MUNICIPIO} strokeWidth={traco} strokeOpacity={areas.length > 2000 ? 0.75 : 0.95}>
+          {recortar ? <defs><clipPath id="mapa-regiao"><path d={dRegiao} /></clipPath></defs> : null}
+          {fundoD && !recortar ? <path className={semContornoFundo ? 'mapa-fundo sem-contorno' : 'mapa-fundo'} d={fundoD} /> : null}
+          <g className="mapa-areas" fillRule="evenodd" stroke={BORDA_MUNICIPIO} strokeWidth={traco} strokeOpacity={areas.length > 2000 ? 0.75 : 0.95}>
             {camadaAreas}
           </g>
-          {linhas ? <path className="mapa-linhas" d={linhas} stroke={BORDA_MUNICIPIO} strokeWidth={Math.min(3, 1.1 * Math.sqrt(z))} /> : null}
+          {linhas ? <path className="mapa-linhas" d={linhas} stroke={BORDA_MUNICIPIO} strokeWidth={Math.min(3, 1.1 * Math.sqrt(z))} clipPath={recortar ? 'url(#mapa-regiao)' : undefined} /> : null}
           {circulos.length ? (
             <g className="mapa-pontos" stroke={BORDA_MUNICIPIO} strokeWidth={1}>
-              {circulos.map((c) => (
+              {circulos.filter((c) => !recortar || destaque!.has(c.id)).map((c) => (
                 <circle
                   key={c.id}
                   data-id={c.id}
@@ -343,6 +394,14 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, s
         <button type="button" aria-label="Afastar" onClick={() => zoomEm(tam.w / 2, tam.h / 2, 1 / 1.6, true)}>−</button>
         <button type="button" aria-label="Ver tudo" onClick={() => enquadrar(caixaDe(destaque), true)}>
           <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" strokeWidth="1.6" /></svg>
+        </button>
+        {destaque ? (
+          <button type="button" aria-pressed={soRegiao} aria-label={soRegiao ? 'Mostrar o mapa inteiro' : 'Mostrar só a região escolhida'} title={soRegiao ? 'Mostrar o mapa inteiro' : 'Mostrar só a região escolhida'} onClick={() => setSoRegiao((x) => !x)}>
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden><path d="M4 1v11h11M1 4h11v11" fill="none" stroke="currentColor" strokeWidth="1.6" /></svg>
+          </button>
+        ) : null}
+        <button type="button" aria-label="Baixar o mapa em SVG" title="Baixar o mapa em SVG" onClick={baixarSvg}>
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11" fill="none" stroke="currentColor" strokeWidth="1.6" /></svg>
         </button>
       </div>
 

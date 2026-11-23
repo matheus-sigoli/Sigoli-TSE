@@ -122,7 +122,8 @@ export function useArquivo<T>(carregar: (() => Promise<T>) | null, chave: string
  */
 export type Nivel = 'municipios' | 'zonas' | 'bairros' | 'locais';
 /** Arquivo de resultado por UF de cada nível. */
-export type NivelArquivo = 'municipios' | 'zonas' | 'zonas-cidade' | 'bairros' | 'locais';
+/** 'estados': Brasil por estado (um resultado por UF, scripts/estados.py) */
+export type NivelArquivo = 'municipios' | 'zonas' | 'zonas-cidade' | 'bairros' | 'locais' | 'estados';
 
 /** `regiao`: há micro ou mesorregião escolhida no estado, que também pode ser vista por locais de votação */
 export const lerNivel = (s: string | null, abr: string, cidade: boolean, regiao = false): Nivel => {
@@ -134,7 +135,8 @@ export const lerNivel = (s: string | null, abr: string, cidade: boolean, regiao 
 
 /** Eleição municipal: zonas, bairros e locais de uma cidade vêm num arquivo só da cidade (com os candidatos dela). */
 export const urlResultadoNivel = (ano: number, cargo: CargoSlug, turno: Turno, abr: string, nivel: NivelArquivo, cid?: string | null) =>
-  nivel === 'municipios' ? urlResultadoParaTela(ano, cargo, turno, abr)
+  nivel === 'estados' ? `/data/${ano}/${cargo}/${turno}/estados.json`
+    : nivel === 'municipios' ? urlResultadoParaTela(ano, cargo, turno, abr)
     : (cargo === 'prefeito' || cargo === 'vereador') && cid ? `/data/${ano}/${cargo}/${turno}/cidade/${cid}.json`
       : `/data/${ano}/${cargo}/${turno}/${nivel}/${abr}.json`;
 
@@ -158,6 +160,24 @@ function buscarMalhaZonas(ano: number, uf: string): Promise<Malha> {
   }
   return p;
 }
+
+/**
+ * Malha dos estados do ano (Brasil "por estado"): o contorno de cada UF tirado da malha municipal do ano
+ * (scripts/estados-malha.py), na mesma pasta do br.json que o ano usa.
+ */
+function buscarMalhaEstados(ano: number): Promise<Malha> {
+  const k = `estados:${ano}`;
+  let p = malhas.get(k);
+  if (!p) {
+    p = urlMalha('br', ano).then((url) => buscar<GeoJSON.FeatureCollection>(url.replace(/br\.json$/, 'estados.json')))
+      .then((fc) => ({ municipios: fc, linhas: { type: 'FeatureCollection' as const, features: [] }, bbox: fc.bbox?.length === 4 ? (fc.bbox as [number, number, number, number]) : caixaGeo(fc) }));
+    p.catch(() => malhas.delete(k));
+    malhas.set(k, p);
+  }
+  return p;
+}
+export const useMalhaEstados = (ano: number, ativo: boolean) =>
+  useArquivo<Malha>(ativo ? () => buscarMalhaEstados(ano) : null, `malha-estados:${ano}:${ativo ? 1 : 0}`);
 
 export const useMalha = (ano: number, abr: string, nivel: 'municipios' | 'zonas' = 'municipios') =>
   useArquivo<Malha>(() => (nivel === 'zonas' ? buscarMalhaZonas(ano, abr) : buscarMalha(abr, ano)), `malha:${ano}:${abr}:${nivel === 'zonas' ? 'z' : 'm'}`);

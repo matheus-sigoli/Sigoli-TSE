@@ -13,18 +13,21 @@ import {
 } from '@/lib/dominio';
 import { pct, titulo, votos } from '@/lib/formato';
 import {
-  ArquivoAusente, lerNivel, naRegiao, NOME_TIPO_REGIAO, nomeRegioesPais, regioesDoPais, continentesDe, continenteDe, nomeLista, useBairros, useLocais, useMalha, useMalhaCidade, useMalhaRegiao, useMunicipios, useRegioes, useResultado,
+  ArquivoAusente, lerNivel, naRegiao, useMalhaEstados, NOME_TIPO_REGIAO, nomeRegioesPais, regioesDoPais, continentesDe, continenteDe, nomeLista, useBairros, useLocais, useMalha, useMalhaCidade, useMalhaRegiao, useMunicipios, useRegioes, useResultado,
   type Local, type Nivel, type NivelArquivo,
 } from '@/lib/dados';
-import { agruparLocais, calcularVisao, ufDoIbge, type Foco } from '@/lib/resultados';
+import { agruparLocais, calcularVisao, CODIGO_UF, ufDoIbge, type Foco } from '@/lib/resultados';
 import { definirAnoCores, definirCoresEscolhidas } from '@/lib/cores';
-import { ELEICOES, fonteDoAno, temCargo, temLocais, temZonas } from '@/lib/anos';
+import { ELEICOES, fonteDoAno, soEstados, temCargo, temLocais, temZonas } from '@/lib/anos';
 import Filtros from './Filtros';
 import Painel from './Painel';
 import Carregando from './Carregando';
 
 // O mapa (SVG, ADR 0010) só entra no navegador: depende do tamanho da janela.
 const Mapa = dynamic(() => import('./Mapa'), { ssr: false, loading: () => <div className="mapa-canvas" /> });
+
+/** sigla da UF → código do IBGE (o 1º dígito é a grande região) */
+const CODIGO_DA_UF: Record<string, string> = Object.fromEntries(Object.entries(CODIGO_UF).map(([c, uf]) => [uf, c]));
 
 function lerFoco(s: string | null): Foco {
   const m = s?.match(/^(c|p):(\d+)$/);
@@ -64,6 +67,10 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const nivel: Nivel = !comZonas || (cargo.municipal && !cid) ? 'municipios' : (nivelUrl === 'locais' || nivelUrl === 'bairros') && !temLocais(ano) ? (cid ? 'zonas' : 'municipios') : nivelUrl;
   // micro ou mesorregião vista por locais de votação: os locais de todas as cidades dela num mapa só
   const regiaoLocais = !cid && !!reg && nivel === 'locais';
+  // Brasil por estado (?det=uf): uma área por UF, com o resultado do estado inteiro (anos antigos, sem todos os
+  // municípios; ou anos só com o resultado por estado, `soEstados`)
+  const soUf = soEstados(ano);
+  const porEstado = abr === 'br' && !cargo.municipal && (soUf || params.get('det') === 'uf');
 
   // preferências (o script do <head> já aplicou no <html>)
   const [daltonico, setDaltonico] = useState(false);
@@ -140,11 +147,12 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       const p = new URLSearchParams();
       if (turno === 2 && turnoDisponivel(destino, a, 2, ano)) p.set('t', '2');
       if (cid && a === abr) p.set('cid', cid);
+      if (porEstado && a === 'br' && !soUf) p.set('det', 'uf');
       if (nivel !== 'municipios' && a === abr) p.set('nivel', nivel);
       const q = p.toString();
       return `${rotaDe(a, c, ano)}${q ? `?${q}` : ''}`;
     },
-    [abr, turno, nivel, cid, ano],
+    [abr, turno, nivel, cid, ano, porEstado, soUf],
   );
   // outro ano: mesmo cargo, lugar e nível; a seleção (mun, foco) é do arquivo do ano e fica para trás
   const hrefAno = useCallback(
@@ -153,6 +161,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       if (turno === 2 && turnoDisponivel(cargo, abr, 2, outro)) p.set('t', '2');
       if (cid && cid !== cidadeUnica) p.set('cid', cid);
       if (nivel !== 'municipios') p.set('nivel', nivel);
+      if (porEstado && !soUf) p.set('det', 'uf');
       const q = p.toString();
       // 1998 não tem Presidente: vai para Governador (no Brasil, São Paulo); 1989 só tem Presidente
       if (!temCargo(outro, cargoSlug)) {
@@ -170,17 +179,18 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       return `${rotaDe(abr, cargoSlug, outro)}${q ? `?${q}` : ''}`;
     },
-    [abr, cargo, cargoSlug, turno, nivel, cid, cidadeUnica],
+    [abr, cargo, cargoSlug, turno, nivel, cid, cidadeUnica, porEstado, soUf],
   );
 
   // ---- dados
   // Na visão da cidade, cada nível tem seu arquivo por UF: zonas-cidade, bairros ou locais (ADRs 0009 e 0011)
-  const nivelArquivo: NivelArquivo = cid ? (nivel === 'zonas' ? 'zonas-cidade' : nivel === 'locais' ? 'locais' : 'bairros') : regiaoLocais ? 'locais' : nivel === 'zonas' ? 'zonas' : 'municipios';
+  const nivelArquivo: NivelArquivo = porEstado ? 'estados' : cid ? (nivel === 'zonas' ? 'zonas-cidade' : nivel === 'locais' ? 'locais' : 'bairros') : regiaoLocais ? 'locais' : nivel === 'zonas' ? 'zonas' : 'municipios';
   const resultado = useResultado(ano, cargoSlug, turno, abr, nivelArquivo, cargo.municipal ? cid : null);
   // arquivo do mapa do estado: a ordem das cores sai dele, para cada candidato ter a mesma cor em todos os níveis
   // (eleição municipal: na cidade, os candidatos são só os dela; a ordem das cores sai do arquivo da cidade)
   const resultadoEstado = useResultado(ano, cargoSlug, turno, abr, cargo.municipal && cid ? nivelArquivo : 'municipios', cargo.municipal ? cid : null);
   const malhaUf = useMalha(ano, abr, !cid && nivel === 'zonas' ? 'zonas' : 'municipios');
+  const malhaEstados = useMalhaEstados(ano, porEstado);
   const malhaCidade = useMalhaCidade(ano, cid ? abr : null, cid, cid ? (nivel as 'zonas' | 'bairros' | 'locais') : 'bairros');
   // mapa dos municípios de um estado: sem a linha externa (contorno do estado)
   const malhaEstado = useMemo(
@@ -192,18 +202,26 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const regioes = useRegioes();
   // municípios da micro ou mesorregião escolhida (os da malha do ano)
   const cidadesRegiao = useMemo(() => {
+    // por estado: as UFs das grandes regiões escolhidas
+    if (porEstado) {
+      const pais = regioesDoPais(reg);
+      if (!pais || !malhaEstados.dados) return null;
+      const ids = malhaEstados.dados.municipios.features.map((f) => String(f.id)).filter((u) => pais.some((r) => r.d === CODIGO_DA_UF[u]?.[0]));
+      return ids.length ? ids.sort() : null;
+    }
     if (!reg || cid || !malhaUf.dados || abr === 'exterior' || nivel === 'zonas') return null;
     // no Brasil só as grandes regiões; nos estados, as do IBGE (precisam do regioes.json)
     if (abr === 'br' ? !regioesDoPais(reg) : !regioes.dados) return null;
     const ids = malhaUf.dados.municipios.features.map((f) => String((f.properties as { id?: string } | null)?.id ?? f.id)).filter((i) => naRegiao(regioes.dados, i, reg));
     return ids.length ? ids.sort() : null;
-  }, [reg, cid, regioes.dados, malhaUf.dados, abr, nivel]);
+  }, [reg, cid, regioes.dados, malhaUf.dados, abr, nivel, porEstado, malhaEstados.dados]);
   const malhaRegiao = useMalhaRegiao(ano, regiaoLocais ? abr : null, reg, regiaoLocais ? cidadesRegiao : null);
   // a visão por locais (cidade ou região) usa a mesma malha montada: áreas, círculos e fundo
   const malhaLocais = cid ? malhaCidade : regiaoLocais ? malhaRegiao : null;
-  const malha = malhaLocais
-    ? { dados: malhaLocais.dados?.malha ?? null, carregando: malhaLocais.carregando || (regiaoLocais && !cidadesRegiao) }
-    : { dados: malhaEstado, carregando: malhaUf.carregando };
+  const malha = porEstado ? { dados: malhaEstados.dados, carregando: malhaEstados.carregando }
+    : malhaLocais
+      ? { dados: malhaLocais.dados?.malha ?? null, carregando: malhaLocais.carregando || (regiaoLocais && !cidadesRegiao) }
+      : { dados: malhaEstado, carregando: malhaUf.carregando };
   const bairros = useBairros(ano, cid || regiaoLocais ? abr : null);
   const locais = useLocais(ano, nivel === 'zonas' || cid || regiaoLocais ? abr : null);
   // zona → municípios que ela cobre (para os nomes)
@@ -376,6 +394,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     if (regiaoLocais) return mun ? nomeUnidade(mun) : nomeRegiao ?? nomeAbrangencia(abr);
     if (mun && nivel === 'zonas') return `Zona ${mun}`;
     if (mun) {
+      if (porEstado) return nomeAbrangencia(mun);
       if (abr === 'exterior') return indiceMunicipios.porPais.get(mun)?.nome ?? nomeExterior(mun);
       const m = indiceMunicipios.porIbge.get(mun);
       const juntos = juntosCom.get(mun);
@@ -385,7 +404,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     if (nomeRegiao) return nomeRegiao;
     return nomeAbrangencia(abr);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mun, multi, selecao, abr, cid, nivel, regiaoLocais, nomeRegiao, indiceMunicipios, bairros.dados, locais.dados, juntosCom]);
+  }, [mun, multi, selecao, abr, cid, nivel, regiaoLocais, nomeRegiao, indiceMunicipios, bairros.dados, locais.dados, juntosCom, porEstado]);
 
   // linha de contexto abaixo do título
   const contexto = useMemo(() => {
@@ -467,6 +486,11 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const aoSelecionar = useCallback(
     (idClicado: string | null, somar = false) => {
       if (!idClicado) return atualizarBusca({ mun: null });
+      if (porEstado) {
+        // cargo estadual: o estado abre com os municípios dele; cargo nacional: o resultado do estado aparece aqui
+        if (resultado.dados?.resumo) return irPara(idClicado);
+        return atualizarBusca({ mun: idClicado === mun ? null : idClicado });
+      }
       // município que votou junto com outro: seleciona o resultado da zona
       const id = juntoDe.get(idClicado) ?? idClicado;
       // shift + clique (ou o modo "somar vários"): põe ou tira a unidade da soma (não vale na visão Brasil)
@@ -481,7 +505,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       }
       atualizarBusca({ mun: id === mun ? null : id });
     },
-    [abr, ano, mun, selecao, cargoSlug, irPara, atualizarBusca, modoSoma, juntoDe],
+    [abr, ano, mun, selecao, cargoSlug, irPara, atualizarBusca, modoSoma, juntoDe, porEstado, resultado.dados],
   );
 
   // duplo clique num município (estado, sem zonas) abre a visão da cidade
@@ -497,6 +521,17 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     (id: string): { titulo: string; linha: string } | null => {
       const arq = resultado.dados;
       if (!arq) return null;
+      if (porEstado) {
+        const nome = nomeAbrangencia(id);
+        if (arq.resumo) {
+          const r = arq.mun[id];
+          if (!r) return { titulo: nome, linha: 'Sem dados' };
+          const quem = r[2] ? `${titulo(r[2])} (${arq.partidos[r[0]]})` : arq.partidos[r[0]];
+          return { titulo: nome, linha: `${quem} · ${pct(r[1] / 1000)} · clique para abrir o estado` };
+        }
+        const r = arq.mun[id];
+        return { titulo: nome, linha: r ? linhaVencedor(arq, [r]) : 'Sem dados' };
+      }
       if (nivelArquivo !== 'municipios' && !arq.resumo) {
         let tituloDica: string;
         if (nivelArquivo === 'zonas') {
@@ -527,7 +562,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       return { titulo: nome, linha: linhaVencedor(arq, regs) + dica };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [resultado.dados, abr, indiceMunicipios, nivelArquivo, nomeZona, bairros.dados, locais.dados, regiaoLocais, juntoDe],
+    [resultado.dados, abr, indiceMunicipios, nivelArquivo, nomeZona, bairros.dados, locais.dados, regiaoLocais, juntoDe, porEstado],
   );
 
   const mudarNivel = useCallback(
@@ -538,7 +573,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
 
   const carregando = resultado.carregando || malha.carregando || bairros.carregando || locais.carregando;
   const ausente = resultado.erro instanceof ArquivoAusente;
-  const chaveMapa = cid ? `${abr}:${cid}:${nivel}` : regiaoLocais ? `${abr}:regiao:${reg}` : nivel === 'zonas' ? `${abr}:zonas` : abr;
+  const chaveMapa = porEstado ? 'br:estados' : cid ? `${abr}:${cid}:${nivel}` : regiaoLocais ? `${abr}:regiao:${reg}` : nivel === 'zonas' ? `${abr}:zonas` : abr;
   // município selecionado no estado: oferece abrir a cidade (no toque não há duplo clique óbvio)
   const cidadeSelecionada = !cid && nivel === 'municipios' && mun && abr !== 'br' && abr !== 'exterior' ? mun : null;
 
@@ -550,7 +585,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         abr={abr}
         cargo={cargo}
         regiaoSelecionada={reg}
-        regioesPais={(abr === 'br' && !cid && nivel === 'municipios' && !!resultado.dados && !resultado.dados.resumo) || (abr === 'exterior' && !!resultado.dados)}
+        regioesPais={(abr === 'br' && !cid && nivel === 'municipios' && !!resultado.dados && (porEstado || !resultado.dados.resumo)) || (abr === 'exterior' && !!resultado.dados)}
+        detalheEstado={abr === 'br' && !cargo.municipal ? { ativo: porEstado, fixo: soUf, aoMudar: (v) => atualizarBusca({ det: v ? 'uf' : null, mun: null, foco: null }) } : null}
         malha={malhaUf.dados}
         regioes={regioes.dados}
         municipios={municipios.dados}
@@ -595,12 +631,14 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
             mundo={abr === 'exterior'}
             aoSelecionar={aoSelecionar}
             aoAbrir={aoAbrir}
+            nomeArquivo={`sigoli-${ano}-${cargoSlug}${turno === 2 ? '-2turno' : ''}-${cid ?? abr}${porEstado ? '-estados' : ''}${nivel !== 'municipios' ? `-${nivel}` : ''}${reg ? `-${reg.replace(/,/g, '-')}` : ''}`}
             descrever={descreverFeicao}
           />
         ) : null}
         {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">
           Malha: IBGE{cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
+          {porEstado ? ' · Mapa por estado (resultado de cada estado inteiro)' : ''}
           {nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
           {cid && nivel === 'bairros' ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}
           {(cid || regiaoLocais) && nivel === 'locais'
