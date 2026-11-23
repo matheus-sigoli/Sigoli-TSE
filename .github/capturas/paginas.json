@@ -1,7 +1,6 @@
 {
-  "br-1993-forma": "/1993/br/forma",
-  "br-1993-sistema": "/1993/br/sistema",
-  "sp-1993-forma": "/1993/sp/forma",
-  "ba-1993-sistema": "/1993/ba/sistema",
-  "sc-1993-forma": "/1993/sc/forma"
+  "rs-1947-governador": "/1947/rs/governador",
+  "rs-1950-governador": "/1950/rs/governador",
+  "rs-1950-senador": "/1950/rs/senador",
+  "rs-1950-presidente": "/1950/rs/presidente"
 }
