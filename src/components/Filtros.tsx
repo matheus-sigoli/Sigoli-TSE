@@ -45,6 +45,8 @@ interface Props {
   /** "somar vários": cada toque no mapa ou na busca põe ou tira da soma (no celular não há shift) */
   modoSoma: boolean;
   aoAlternarSoma?: () => void;
+  /** Brasil: mapa por município ou por estado (fixo: o ano só tem resultado por estado) */
+  detalheEstado?: { ativo: boolean; fixo: boolean; aoMudar: (porEstado: boolean) => void } | null;
 }
 
 const NIVEIS_ESTADO: { n: Nivel; rotulo: string }[] = [
@@ -166,6 +168,25 @@ function Filtros(p: Props) {
           {p.cargo.slug === 'presidente' ? <option value="exterior">Exterior</option> : null}
         </select>
       </div>
+
+      {p.detalheEstado ? (
+        <div className="campo campo-nivel">
+          <span className="campo-rotulo" id="rot-detalhe">Ver por</span>
+          {p.detalheEstado.fixo ? null : (
+            <div className="segmentado nivel" role="group" aria-labelledby="rot-detalhe">
+              <button type="button" aria-pressed={!p.detalheEstado.ativo} onClick={() => p.detalheEstado!.aoMudar(false)}>Municípios</button>
+              <button type="button" aria-pressed={p.detalheEstado.ativo} onClick={() => p.detalheEstado!.aoMudar(true)}>Estados</button>
+            </div>
+          )}
+          <p className="marca-sub dica-nivel" style={{ marginTop: 6 }}>
+            {p.detalheEstado.fixo
+              ? 'Esta eleição só tem o resultado por estado. Cada estado tem a cor de quem venceu nele.'
+              : p.detalheEstado.ativo
+                ? `Cada estado tem a cor de quem venceu nele${p.cargo.federal ? '; clique num estado para ver o resultado dele' : '; clique num estado para abri-lo'}. Bom para os anos em que nem todo município tem resultado.`
+                : 'Em Estados, o mapa mostra o resultado de cada estado inteiro.'}
+          </p>
+        </div>
+      ) : null}
 
       {p.abr !== 'br' && p.abr !== 'exterior' && temZonas(p.ano, p.cargo.slug, p.abr) ? (
         <div className="campo campo-nivel">

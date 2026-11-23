@@ -112,6 +112,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
 .mapa-zoom button + button { border-top: 1px solid var(--line); }
 .mapa-zoom button:hover { background: var(--surface-2); }
 .mapa-zoom button:focus-visible { outline: 2px solid var(--text); outline-offset: -2px; }
+.mapa-zoom button[aria-pressed='true'] { background: var(--surface-2); color: var(--confirma); }
 
 /* ------------------------------------------------------------ marca */
 .marca { display: flex; align-items: baseline; gap: 2px; text-decoration: none; color: var(--text); }
@@ -342,7 +343,7 @@ button, a, select, input { touch-action: manipulation; -webkit-tap-highlight-col
   color: #fff; font-size: var(--fs-3); font-weight: 500; text-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
 }
 .carregando-anim { width: 120px; height: 90px; }
-.creditos-mapa { position: absolute; right: 8px; bottom: 6px; z-index: 4; font-size: 11px; color: rgb(255 255 255 / 0.85); text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
+.creditos-mapa { position: absolute; right: 56px; left: 8px; text-align: right; bottom: 6px; z-index: 4; font-size: 11px; color: rgb(255 255 255 / 0.85); text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
 
 /* ------------------------------------------------------------ celular: mapa + gaveta */
 .puxador { display: none; }

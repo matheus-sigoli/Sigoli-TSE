@@ -23,6 +23,8 @@ export interface Eleicao {
   soCargos?: string[];
   /** de onde vêm os resultados, quando não é o TSE por município */
   fonte?: string;
+  /** só resultado por estado (planilha, sem nada por município): o Brasil abre direto no mapa por estado */
+  soEstados?: boolean;
 }
 
 export const ELEICOES: Eleicao[] = [
@@ -195,6 +197,9 @@ export const temCargo = (ano: number, cargo: string) => {
   if (cargo === 'forma' || cargo === 'sistema') return false; // só no plebiscito de 1993 (soCargos)
   return cargo !== 'presidente' || !e?.semPresidente;
 };
+
+/** o ano só tem resultado por estado */
+export const soEstados = (ano: number) => !!ELEICOES.find((e) => e.ano === ano)?.soEstados;
 
 /** fonte dos resultados do ano, quando não é o TSE por município */
 export const fonteDoAno = (ano: number) => ELEICOES.find((e) => e.ano === ano)?.fonte ?? null;
