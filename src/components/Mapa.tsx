@@ -148,7 +148,9 @@ function Mapa({ chave, malha, fundo = null, pontos = null, cores, selecionado, s
     if (!c) return;
     const m = margens();
     kBase.current = Math.min((tam.w - m.l - m.r) / (c[2] - c[0]), (tam.h - m.t - m.b) / (c[3] - c[1]));
-    enquadrar(c, false);
+    // com uma região já escolhida (link aberto com ?reg=), começa nela
+    const cr = destaque ? caixaDe(destaque) : null;
+    if (cr) enquadrar(cr, false, 16); else enquadrar(c, false);
     setHover(null); setDica(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chave, tam.w > 0, mundo]);

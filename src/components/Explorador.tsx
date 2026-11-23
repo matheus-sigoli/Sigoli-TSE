@@ -337,8 +337,11 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     const totalCores = base && !base.resumo ? { c: base.total.c, p: base.total.p, pintam: base.pintam } : undefined;
     definirAnoCores(ano);
     definirCoresEscolhidas(coresEscolhidas);
-    return calcularVisao(arq, { abr, municipios: recorteMunicipios, ano }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
-  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados, ano, coresEscolhidas]);
+    const v = calcularVisao(arq, { abr, municipios: recorteMunicipios, ano }, { daltonico, foco: focoValido, municipios: municipios.dados ?? undefined, totalCores });
+    // por estado, com grandes regiões escolhidas: a lista de eleitos só das UFs delas
+    if (porEstado && v.eleitosPorUf && recorteMunicipios) v.eleitosPorUf = Object.fromEntries(Object.entries(v.eleitosPorUf).filter(([uf]) => recorteMunicipios.has(uf)));
+    return v;
+  }, [resultado.dados, resultadoEstado.dados, gruposAreas, abr, recorteMunicipios, daltonico, foco, municipios.dados, ano, coresEscolhidas, porEstado]);
 
   // ---- nomes
   const nomeZona = useCallback(
@@ -418,7 +421,8 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     }
     // região sem nada escolhido: tipo, municípios e locais
     if (reg && !cid && !mun && nomeRegiao && cidadesRegiao) {
-      const partes = [abr === 'br' ? tipoRegiao : `${tipoRegiao} · ${abr.toUpperCase()}`, `${cidadesRegiao.length} ${cidadesRegiao.length === 1 ? 'município' : 'municípios'}`];
+      const unidade = porEstado ? ['estado', 'estados'] : ['município', 'municípios'];
+      const partes = [abr === 'br' ? tipoRegiao : `${tipoRegiao} · ${abr.toUpperCase()}`, `${cidadesRegiao.length} ${cidadesRegiao.length === 1 ? unidade[0] : unidade[1]}`];
       if (regiaoLocais && locaisRegiao) partes.push(`${locaisRegiao.length} locais de votação`);
       return partes.join(' · ');
     }
@@ -451,7 +455,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     return [b ? (b.origem === 't' ? titulo(b.nome) : b.nome) : l.bairro && titulo(l.bairro), nomeCidade(l.ibge), `Zona ${l.zona}`, `${votos(l.eleitorado)} eleitores`]
       .filter(Boolean).join(' · ');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mun, multi, selecao, nivel, cid, abr, reg, regiaoLocais, nomeRegiao, tipoRegiao, cidadesRegiao, locaisRegiao, unidadesDaCidade, nomeZona, bairros.dados, locais.dados, indiceMunicipios, modoSoma]);
+  }, [mun, multi, selecao, nivel, cid, abr, reg, regiaoLocais, nomeRegiao, tipoRegiao, cidadesRegiao, locaisRegiao, unidadesDaCidade, nomeZona, bairros.dados, locais.dados, indiceMunicipios, modoSoma, porEstado]);
 
   // locais de votação da zona, do bairro ou da área do Atlas selecionada (lista no painel)
   const locaisDaUnidade = useMemo(() => {
