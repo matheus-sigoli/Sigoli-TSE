@@ -27,7 +27,11 @@ import Carregando from './Carregando';
 const Mapa = dynamic(() => import('./Mapa'), { ssr: false, loading: () => <div className="mapa-canvas" /> });
 
 /** sigla da UF → código do IBGE (o 1º dígito é a grande região) */
-const CODIGO_DA_UF: Record<string, string> = Object.fromEntries(Object.entries(CODIGO_UF).map(([c, uf]) => [uf, c]));
+const CODIGO_DA_UF: Record<string, string> = {
+  ...Object.fromEntries(Object.entries(CODIGO_UF).map(([c, uf]) => [uf, c])),
+  // unidades que não existem mais: Guanabara, territórios de Ponta Porã e do Iguaçu, Fernando de Noronha
+  gb: '33', pp: '50', ig: '41', fn: '26',
+};
 
 function lerFoco(s: string | null): Foco {
   const m = s?.match(/^(c|p):(\d+)$/);

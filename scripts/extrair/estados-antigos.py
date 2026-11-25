@@ -24,6 +24,8 @@ UF = {'Acre': 'ac', 'Território do Acre': 'ac', 'Alagoas': 'al', 'Amapá': 'ap'
 # nomes como ficam no site
 NOMES = {'Artur Bernades': 'Artur Bernardes', 'Washignton Luís': 'Washington Luís', 'Justiano Chermont': 'Justo Chermont',
          'Mangabeira': 'João Mangabeira', 'Rolim Teles': 'Mário Rolim Teles', 'Yedo Fiúza': 'Yedo Fiúza'}
+# 1930: Getúlio Vargas e João Pessoa, os dois da Aliança Liberal, com a cor dela
+PARTIDO = {(1930, 'PR-RS (AL)'): 'AL', (1930, 'PR-PB'): 'AL'}
 NO_SITE = {1950}  # anos que já estão no site por município: só as linhas das UFs
 FONTE = 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)'
 
@@ -52,7 +54,7 @@ for ws in wb:
             if h == 'Votos' and p in ('Brancos', 'Nulos'): cols.append((i, '#' + p.lower(), '')); continue
             if legis and not h and p: cols.append((i, p, p)); continue
             if h == 'Outros': cols.append((i, 'Outros', 'Outros')); continue
-            if h: cols.append((i, NOMES.get(h, h), p))
+            if h: cols.append((i, NOMES.get(h, h), PARTIDO.get((ano, p), p)))
         votos, conf = {}, None
         for r in rows[4:]:
             nome = r[ini]
