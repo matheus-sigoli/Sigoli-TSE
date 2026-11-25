@@ -26,6 +26,9 @@ for arq in sorted(glob.glob('data/oficial/*.csv')):
     for r in csv.DictReader(open(arq, encoding='utf8'), delimiter=';'):
         grupos[(r['cargo'], int(r['turno']), r['uf'].lower())].append(r)
     for (cargo, turno, uf), rs in grupos.items():
+        # Presidente/Vice por UF (planilha por estado): só para o mapa "por estado" (scripts/estados.py); o arquivo da UF
+        # continua com a soma dos municípios dela
+        if uf != 'br' and cargo in ('presidente', 'vice-presidente'): continue
         p = f'public/data/{ano}/{cargo}/{turno}/{uf}.json'
         if not os.path.exists(p):
             # resultado só por estado (planilha): cargo estadual sem nada por município ganha o arquivo da UF, sem
