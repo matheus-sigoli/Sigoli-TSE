@@ -112,7 +112,7 @@ else:
         alvos.append((arq, int(d) if d.isdigit() else 2026, os.path.join(os.path.dirname(arq), 'estados.json')))
 def historica(ano):
     """malha estadual da época (data/malhas-estaduais/, scripts/extrair/malha-estadual.py), até 1998"""
-    for lim, f in ((1889, '1872'), (1904, '1900'), (1919, '1911'), (1945, '1920'), (1946, '1945'), (1960, '1950'), (1970, '1960'),
+    for lim, f in ((1850, '1835'), (1889, '1872'), (1904, '1900'), (1919, '1911'), (1945, '1920'), (1946, '1945'), (1960, '1950'), (1970, '1960'),
                    (1978, '1970'), (1989, '1980'), (2002, '1991')):
         if ano < lim:
             p = f'data/malhas-estaduais/{f}.json'

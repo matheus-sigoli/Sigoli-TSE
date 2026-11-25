@@ -28,14 +28,14 @@ for arq in sorted(glob.glob('data/oficial/*.csv')):
     for (cargo, turno, uf), rs in grupos.items():
         # Presidente/Vice por UF (planilha por estado): só para o mapa "por estado" (scripts/estados.py); o arquivo da UF
         # continua com a soma dos municípios dela
-        if uf != 'br' and cargo in ('presidente', 'vice-presidente'): continue
+        if uf != 'br' and cargo in ('presidente', 'vice-presidente', 'regente'): continue
         p = f'public/data/{ano}/{cargo}/{turno}/{uf}.json'
         if not os.path.exists(p):
             # resultado só por estado (planilha): cargo estadual sem nada por município ganha o arquivo da UF, sem
             # municípios (o painel mostra o total; o Brasil "por estado" pinta a UF, scripts/estados.py). Cargo nacional
             # por UF fica para o estados.py (o arquivo do Presidente é um só, o br.json).
-            if uf == 'br' or cargo in ('presidente', 'vice-presidente', 'forma', 'sistema') or all(r['votos'] == '' for r in rs):
-                if uf == 'br' or cargo not in ('presidente', 'vice-presidente', 'forma', 'sistema'): print(f'  ⚠ {p} não existe')
+            if uf == 'br' or cargo in ('presidente', 'vice-presidente', 'forma', 'sistema', 'regente') or all(r['votos'] == '' for r in rs):
+                if uf == 'br' or cargo not in ('presidente', 'vice-presidente', 'forma', 'sistema', 'regente'): print(f'  ⚠ {p} não existe')
                 continue
             os.makedirs(os.path.dirname(p), exist_ok=True)
             json.dump({'v': 1, 'cargo': cargo, 'turno': turno, 'abr': uf, 'tipo': 'maj',

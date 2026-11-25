@@ -99,6 +99,10 @@ const ANTIGOS_FAIXAS: Record<string, string[][]> = {
 const ANTIGOS_BASE: Record<string, string> = {
   PRCONMGRV: '#004FA4', INDEPENDENTERV: '#6D4C41', PNBRV: '#00838F', PRPARV: '#8E24AA', PRPBRV: '#00695C', PRMARV: '#7B1FA2',
   PRDBARV: '#EF6C00', PCBRV: '#7F0000', OUTROSRV: '#9C8AA5',
+  // 1835, Regente: não havia partidos; uma cor por candidato (provisórias, a confirmar com o dono do projeto)
+  FEIJORV: '#FFC300', HOLANDACAVALCANTIRV: '#004FA4', ARAUJOLIMARV: '#009643', COSTACARVALHORV: '#8E24AA',
+  PAISDEANDRADERV: '#D50000', LIMAESILVARV: '#6D4C41', VASCONCELOSRV: '#00695C', ARCEBISPODABAHIARV: '#5E35B1',
+  BARATARV: '#EF6C00', CARAVELASRV: '#00838F', RODRIGUESTORRESRV: '#AD1457', JOSEBONIFACIORV: '#558B2F', ALENCARRV: '#F06292',
 };
 const ANTIGOS_CACHE = new Map<string, EntradaPaleta>();
 const antigo = (k: string): EntradaPaleta | undefined => {
