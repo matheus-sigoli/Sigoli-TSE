@@ -94,8 +94,8 @@ def so_estados(ano, cargo, turno, ofi):
     for r in br:
         if r['candidato'] in TOT: continue
         if r['partido'] and r['partido'] not in partidos: partidos.append(r['partido'])
-        cands.append({'nome': r['candidato'], 'partido': r['partido'], 'n': '', 'eleito': r['eleito'] == 'S',
-                      'situacao': 'Eleito' if r['eleito'] == 'S' else ''})
+        cands.append({'id': '_' + chave(r['candidato']), 'n': '', 'nome': r['candidato'], 'partido': r['partido'],
+                      'eleito': r['eleito'] == 'S', 'situacao': 'Eleito' if r['eleito'] == 'S' else 'Não eleito'})
     def reg(rs):
         t, c = [0] * 6, [0] * len(cands)
         for r in rs:
@@ -104,9 +104,9 @@ def so_estados(ano, cargo, turno, ofi):
             if i is not None: c[i] = int(r['votos'])
         t[3] = sum(c)
         if not t[1]: t[1] = t[3] + t[4] + t[5]
-        return {'t': t, 'c': c}
+        return {'t': t, 'c': c, 'p': []}
     d = {'v': 1, 'cargo': cargo, 'turno': turno, 'abr': 'br', 'tipo': 'maj', 'vagas': 1, 'atualizado': '', 'cands': cands,
-         'partidos': [{'sg': p} for p in partidos], 'total': reg(br), 'mun': {uf: reg(rs) for uf, rs in ofi.items() if uf != 'br'},
+         'partidos': [], 'total': reg(br), 'mun': {uf: reg(rs) for uf, rs in ofi.items() if uf != 'br'},
          'fonte': br[0].get('fonte', ''), 'soEstados': True}
     return d
 
@@ -155,9 +155,13 @@ for ano in sorted(anos):
             d = so_estados(ano, cargo, turno, rs)
             if not d: continue
             os.makedirs(f'{dir_ano}/{cargo}/{turno}', exist_ok=True)
+
             for nome in ('estados.json', 'br.json'):  # o br.json é o mesmo: o Brasil do ano só existe por estado
                 with open(f'{dir_ano}/{cargo}/{turno}/{nome}', 'w', encoding='utf8') as f: json.dump(d, f, ensure_ascii=False, separators=(',', ':'))
             print(f'{ano} {cargo} {turno}º: {len(d["mun"])} UFs (só por estado)')
+    # ano só por estado: o site lê a lista de municípios do ano (vazia)
+    if os.path.isdir(dir_ano) and not os.path.exists(f'{dir_ano}/municipios.json'):
+        open(f'{dir_ano}/municipios.json', 'w').write('[]')
     for dir_t in sorted(glob.glob(f'{dir_ano}/*/[12]')):
         cargo, turno = dir_t.split('/')[-2], int(dir_t.split('/')[-1])
         if cargo in MUNICIPAIS: continue
