@@ -1,10 +1,7 @@
 {
   "br-1835-regente": "/1835/br/regente",
   "br-1835-regente-estados": "/1835/br/regente?det=uf",
-  "mg-1835-regente": "/1835/mg/regente",
-  "br-1950-presidente": "/1950/br/presidente",
-  "mg-1950-presidente": "/1950/mg/presidente",
+  "pe-1835-regente": "/1835/pe/regente",
   "mg-1950-vice": "/1950/mg/vice-presidente",
-  "br-1950-presidente-estados": "/1950/br/presidente?det=uf",
-  "br-1886-camara": "/1886/br/camara"
+  "br-1950-presidente-estados": "/1950/br/presidente?det=uf"
 }

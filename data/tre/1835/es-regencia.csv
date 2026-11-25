@@ -1,31 +1,29 @@
 cargo;turno;ibge;numero;nome;partido;votos;eleito
-regente;1;3200409;_DIOGOANTONIOFEIJO;Diogo Antônio Feijó;Feijó;6;S
-regente;1;3200409;_ANTONIOFRANCISCODEPAULAHOLANDACAVALCANTI;Antônio Francisco de Paula Holanda Cavalcanti;Holanda Cavalcanti;5;
-regente;1;3200409;_PEDRODEARAUJOLIMA;Pedro de Araújo Lima;Araújo Lima;1;
-regente;1;3200409;_JOSEDACOSTACARVALHO;José da Costa Carvalho;Costa Carvalho;0;
-regente;1;3200409;_MANUELDECARVALHOPAISDEANDRADE;Manuel de Carvalho Pais de Andrade;Pais de Andrade;2;
-regente;1;3200409;_FRANCISCODELIMAESILVA;Francisco de Lima e Silva;Lima e Silva;1;
-regente;1;3200409;_BERNARDOPEREIRADEVASCONCELOS;Bernardo Pereira de Vasconcelos;Vasconcelos;0;
-regente;1;3200409;_ARCEBISPODABAHIADROMUALDODESEIXAS;Arcebispo da Bahia (D. Romualdo de Seixas);Arcebispo da Bahia;0;
-regente;1;3200409;_CIPRIANOBARATA;Cipriano Barata;Barata;0;
-regente;1;3200409;_MARQUESDECARAVELAS;Marquês de Caravelas;Caravelas;0;
-regente;1;3200409;_JOSEJOAQUIMRODRIGUESTORRES;José Joaquim Rodrigues Torres;Rodrigues Torres;0;
-regente;1;3200409;_JOSEBONIFACIODEANDRADAESILVA;José Bonifácio de Andrada e Silva;José Bonifácio;0;
-regente;1;3200409;_JOSEMARTINIANODEALENCAR;José Martiniano de Alencar;Alencar;0;
+regente;1;3200409;_DIOGOANTONIOFEIJO;Diogo Antônio Feijó;Diogo Antônio Feijó;6;S
+regente;1;3200409;_ANTONIOFRANCISCODEPAULAHOLANDACAVALCANTI;Antônio Francisco de Paula Holanda Cavalcanti;Antônio Francisco de Paula Holanda Cavalcanti;5;
+regente;1;3200409;_PEDRODEARAUJOLIMA;Pedro de Araújo Lima;Pedro de Araújo Lima;1;
+regente;1;3200409;_JOSEDACOSTACARVALHO;José da Costa Carvalho;José da Costa Carvalho;0;
+regente;1;3200409;_MANUELDECARVALHOPAISDEANDRADE;Manuel de Carvalho Pais de Andrade;Manuel de Carvalho Pais de Andrade;2;
+regente;1;3200409;_FRANCISCODELIMAESILVA;Francisco de Lima e Silva;Francisco de Lima e Silva;1;
+regente;1;3200409;_BERNARDOPEREIRADEVASCONCELOS;Bernardo Pereira de Vasconcelos;Bernardo Pereira de Vasconcelos;0;
+regente;1;3200409;_ARCEBISPODABAHIADROMUALDODESEIXAS;Arcebispo da Bahia (D. Romualdo de Seixas);Arcebispo da Bahia (D. Romualdo de Seixas);0;
+regente;1;3200409;_CIPRIANOBARATA;Cipriano Barata;Cipriano Barata;0;
+regente;1;3200409;_MARQUESDECARAVELAS;Marquês de Caravelas;Marquês de Caravelas;0;
+regente;1;3200409;_JOSEJOAQUIMRODRIGUESTORRES;José Joaquim Rodrigues Torres;José Joaquim Rodrigues Torres;0;
+regente;1;3200409;_JOSEBONIFACIODEANDRADAESILVA;José Bonifácio de Andrada e Silva;José Bonifácio de Andrada e Silva;0;
+regente;1;3200409;_JOSEMARTINIANODEALENCAR;José Martiniano de Alencar;José Martiniano de Alencar;0;
 regente;1;3200409;_OUTROS;Outros;Outros;11;
-regente;1;3200409;#comparecimento;;;26;
-regente;1;3205309;_DIOGOANTONIOFEIJO;Diogo Antônio Feijó;Feijó;26;S
-regente;1;3205309;_ANTONIOFRANCISCODEPAULAHOLANDACAVALCANTI;Antônio Francisco de Paula Holanda Cavalcanti;Holanda Cavalcanti;24;
-regente;1;3205309;_PEDRODEARAUJOLIMA;Pedro de Araújo Lima;Araújo Lima;13;
-regente;1;3205309;_JOSEDACOSTACARVALHO;José da Costa Carvalho;Costa Carvalho;0;
-regente;1;3205309;_MANUELDECARVALHOPAISDEANDRADE;Manuel de Carvalho Pais de Andrade;Pais de Andrade;1;
-regente;1;3205309;_FRANCISCODELIMAESILVA;Francisco de Lima e Silva;Lima e Silva;0;
-regente;1;3205309;_BERNARDOPEREIRADEVASCONCELOS;Bernardo Pereira de Vasconcelos;Vasconcelos;1;
-regente;1;3205309;_ARCEBISPODABAHIADROMUALDODESEIXAS;Arcebispo da Bahia (D. Romualdo de Seixas);Arcebispo da Bahia;0;
-regente;1;3205309;_CIPRIANOBARATA;Cipriano Barata;Barata;0;
-regente;1;3205309;_MARQUESDECARAVELAS;Marquês de Caravelas;Caravelas;0;
-regente;1;3205309;_JOSEJOAQUIMRODRIGUESTORRES;José Joaquim Rodrigues Torres;Rodrigues Torres;0;
-regente;1;3205309;_JOSEBONIFACIODEANDRADAESILVA;José Bonifácio de Andrada e Silva;José Bonifácio;0;
-regente;1;3205309;_JOSEMARTINIANODEALENCAR;José Martiniano de Alencar;Alencar;0;
+regente;1;3205309;_DIOGOANTONIOFEIJO;Diogo Antônio Feijó;Diogo Antônio Feijó;26;S
+regente;1;3205309;_ANTONIOFRANCISCODEPAULAHOLANDACAVALCANTI;Antônio Francisco de Paula Holanda Cavalcanti;Antônio Francisco de Paula Holanda Cavalcanti;24;
+regente;1;3205309;_PEDRODEARAUJOLIMA;Pedro de Araújo Lima;Pedro de Araújo Lima;13;
+regente;1;3205309;_JOSEDACOSTACARVALHO;José da Costa Carvalho;José da Costa Carvalho;0;
+regente;1;3205309;_MANUELDECARVALHOPAISDEANDRADE;Manuel de Carvalho Pais de Andrade;Manuel de Carvalho Pais de Andrade;1;
+regente;1;3205309;_FRANCISCODELIMAESILVA;Francisco de Lima e Silva;Francisco de Lima e Silva;0;
+regente;1;3205309;_BERNARDOPEREIRADEVASCONCELOS;Bernardo Pereira de Vasconcelos;Bernardo Pereira de Vasconcelos;1;
+regente;1;3205309;_ARCEBISPODABAHIADROMUALDODESEIXAS;Arcebispo da Bahia (D. Romualdo de Seixas);Arcebispo da Bahia (D. Romualdo de Seixas);0;
+regente;1;3205309;_CIPRIANOBARATA;Cipriano Barata;Cipriano Barata;0;
+regente;1;3205309;_MARQUESDECARAVELAS;Marquês de Caravelas;Marquês de Caravelas;0;
+regente;1;3205309;_JOSEJOAQUIMRODRIGUESTORRES;José Joaquim Rodrigues Torres;José Joaquim Rodrigues Torres;0;
+regente;1;3205309;_JOSEBONIFACIODEANDRADAESILVA;José Bonifácio de Andrada e Silva;José Bonifácio de Andrada e Silva;0;
+regente;1;3205309;_JOSEMARTINIANODEALENCAR;José Martiniano de Alencar;José Martiniano de Alencar;0;
 regente;1;3205309;_OUTROS;Outros;Outros;33;
-regente;1;3205309;#comparecimento;;;98;

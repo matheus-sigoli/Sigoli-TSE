@@ -5,8 +5,10 @@ Eleição Regencial de 1835.xlsx" (cópia em data/tre/fontes/1835/). Uma aba por
 eleitorais (as vilas onde os eleitores votaram); cada linha = um nome e os votos dele em cada colégio (a última coluna, o
 total, é ignorada: o total sai da soma). Cada eleitor votava em dois nomes, então a soma é de votos, não de eleitores.
 
-- Nomes: a mesma pessoa aparece de vários jeitos ("Feijó", "Diogo Antônio Feijó", "D. A. Feijó"…): NOMES junta; quem não
-  está em NOMES vai para "Outros". O "partido" de cada um é o próprio nome curto (não havia partidos; a cor é por candidato).
+- Nomes: a mesma pessoa aparece de vários jeitos ("Feijó", "Diogo Antônio Feijó", "D. A. Feijó"…): CANDIDATOS junta; quem
+  não está lá vai para "Outros". Não havia partidos: o "partido" de cada um é o próprio nome (o site mostra só o nome e a
+  cor é por candidato, src/lib/cores.ts).
+- Sem comparecimento: cada eleitor votava em dois nomes e a planilha não diz quantos eleitores eram.
 - Colégio → município de hoje onde fica a vila (COLEGIOS); colégio que não deu para identificar fica só no total da
   província. O município de hoje sem polígono na malha de 1950 soma no polígono de 1950 onde fica a sua sede.
 - Províncias da época: o Paraná (Curitiba, Paranaguá, Castro) estava em São Paulo e o Amazonas no Pará; a cidade do Rio de
@@ -24,7 +26,7 @@ from comum import gravar, chave, ibge_por_nome
 ABA = {'São Pedro do Sul': 'rs', 'São Paulo': 'sp', 'Santa Catharina': 'sc', 'Minas Geraes': 'mg', 'Rio de Janeiro': 'rj',
        'Goyaz': 'go', 'Matto Grosso': 'mt', 'Espírito Santo': 'es', 'Alagôas': 'al', 'Rio Grande do Norte': 'rn', 'Sergipe': 'se',
        'Bahia': 'ba', 'Pernambuco': 'pe', 'Parahyba do Norte': 'pb', 'Piauhy': 'pi', 'Ceará': 'ce', 'Maranhão': 'ma', 'Pará': 'pa'}
-# (nome no site, "partido" = nome curto, para a cor) ← grafias da planilha
+# (nome no site, nome curto) ← grafias da planilha
 CANDIDATOS = [
     ('Diogo Antônio Feijó', 'Feijó', ['Diogo Antônio Feijó', 'Feijó', 'D. A. Feijó', 'A. D. Feijó', 'Antônio Diogo Feijó']),
     ('Antônio Francisco de Paula Holanda Cavalcanti', 'Holanda Cavalcanti',
@@ -163,7 +165,7 @@ for ws in wb:
             por_prov[p][k] += v
             if i in destino: por_mun[destino[i]][k] += v
 
-nomes = [(n, p) for n, p, _ in CANDIDATOS] + [('Outros', 'Outros')]
+nomes = [(n, n) for n, _, _ in CANDIDATOS] + [('Outros', 'Outros')]
 br = [sum(v[k] for v in por_prov.values()) for k in range(OUTROS + 1)]
 venc = max(range(OUTROS), key=lambda k: br[k])
 eleitos = {('regente', '_' + chave(nomes[venc][0])): 'S'}
@@ -174,7 +176,6 @@ linhas = collections.defaultdict(list)
 for cod, v in sorted(por_mun.items()):
     for (n, p), x in zip(nomes, v):
         linhas[UF[cod[:2]]].append(('regente', 1, cod, '_' + chave(n), n, p, x))
-    linhas[UF[cod[:2]]].append(('regente', 1, cod, '#comparecimento', '', '', sum(v)))
 os.makedirs('data/tre/1835', exist_ok=True)
 for f in glob.glob('data/tre/1835/*-regencia.*'): os.remove(f)
 for uf, ls in sorted(linhas.items()):
