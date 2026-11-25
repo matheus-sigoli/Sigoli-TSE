@@ -658,7 +658,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         ) : null}
         {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">
-          Malha: IBGE{porEstado && ano < 1960 ? ' (estados da época, montados sobre a malha municipal histórica de 1950)' : cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
+          Malha: {porEstado && ano < 2002 ? 'limites estaduais da época (acervo Sigoli.TSE)' : 'IBGE'}{porEstado && ano < 2002 ? '' : cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
           {porEstado ? ' · Mapa por estado (resultado de cada estado inteiro)' : ''}
           {nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
           {cid && nivel === 'bairros' ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}
