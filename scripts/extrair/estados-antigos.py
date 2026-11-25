@@ -51,7 +51,7 @@ for ws in wb:
             p = par[i] or ''
             if h == 'Votos' and p in ('Brancos', 'Nulos'): cols.append((i, '#' + p.lower(), '')); continue
             if legis and not h and p: cols.append((i, p, p)); continue
-            if h == 'Outros': cols.append((i, 'Outros', 'OUTROS')); continue
+            if h == 'Outros': cols.append((i, 'Outros', 'Outros')); continue
             if h: cols.append((i, NOMES.get(h, h), p))
         votos, conf = {}, None
         for r in rows[4:]:

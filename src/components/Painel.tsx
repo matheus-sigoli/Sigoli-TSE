@@ -142,7 +142,7 @@ function Painel(p: Props) {
         ) : null}
         <p className="subtitulo">
           {cargo.nome}{p.ano >= 1989 ? `, ${turno}º turno` : ''}
-          {arquivo && !arquivo.resumo && arquivo.fonte ? `. ${/zona eleitoral/.test(arquivo.fonte) ? 'Por zona eleitoral (os municípios de cada zona aparecem juntos)' : 'Por município'}: ${arquivo.fonte.split(',')[0]}`
+          {arquivo && !arquivo.resumo && arquivo.fonte ? `. ${(arquivo as { soEstados?: boolean }).soEstados ? 'Por estado' : /zona eleitoral/.test(arquivo.fonte) ? 'Por zona eleitoral (os municípios de cada zona aparecem juntos)' : 'Por município'}: ${(arquivo as { soEstados?: boolean }).soEstados ? arquivo.fonte.replace(/ \(votos por estado\)$/, '') : arquivo.fonte.split(',')[0]}`
             : p.ano < 1989 || p.ano === 1990 ? `. ${arquivo && !arquivo.resumo && !arquivo.semTotais && arquivo.total.t[1] ? 'Por' : 'Votos válidos, por'} município: acervo Sigoli.TSE` : p.ano === 1989 ? '. Totalização final, por município: Geografia do Voto' : p.ano !== 2026 ? '. Totalização final do TSE' : arquivo && !arquivo.resumo && arquivo.atualizado ? `. Dados do TSE de ${arquivo.atualizado.split(' ')[0]}` : ''}
         </p>
         {arquivo && !arquivo.resumo && arquivo.oficial && (!cargo.federal || p.abr === 'br') ? (
