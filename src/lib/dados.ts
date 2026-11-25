@@ -169,7 +169,9 @@ function buscarMalhaEstados(ano: number): Promise<Malha> {
   const k = `estados:${ano}`;
   let p = malhas.get(k);
   if (!p) {
-    p = urlMalha('br', ano).then((url) => buscar<GeoJSON.FeatureCollection>(url.replace(/br\.json$/, 'estados.json')))
+    const url = ano === 2026 ? Promise.resolve('/geo/estados.json')
+      : buscar<string[]>(`/geo/${ano}/malhas.json`).catch((): string[] => []).then((l) => (l.includes('estados.json') ? `/geo/${ano}/estados.json` : '/geo/estados.json'));
+    p = url.then((u) => buscar<GeoJSON.FeatureCollection>(u))
       .then((fc) => ({ municipios: fc, linhas: { type: 'FeatureCollection' as const, features: [] }, bbox: fc.bbox?.length === 4 ? (fc.bbox as [number, number, number, number]) : caixaGeo(fc) }));
     p.catch(() => malhas.delete(k));
     malhas.set(k, p);

@@ -163,6 +163,11 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       if (nivel !== 'municipios') p.set('nivel', nivel);
       if (porEstado && !soUf) p.set('det', 'uf');
       const q = p.toString();
+      // ano só por estado: sempre o Brasil, no mesmo cargo se o ano tiver, senão no primeiro cargo dele
+      if (soEstados(outro)) {
+        const so = temCargo(outro, cargoSlug) ? cargoSlug : (ELEICOES.find((e) => e.ano === outro)?.soCargos?.[0] ?? 'presidente');
+        return rotaDe('br', so as CargoSlug, outro);
+      }
       // 1998 não tem Presidente: vai para Governador (no Brasil, São Paulo); 1989 só tem Presidente
       if (!temCargo(outro, cargoSlug)) {
         if (temCargo(outro, 'presidente')) return `${rotaDe(abr, 'presidente', outro)}${q ? `?${q}` : ''}`;
@@ -191,6 +196,14 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
   const resultadoEstado = useResultado(ano, cargoSlug, turno, abr, cargo.municipal && cid ? nivelArquivo : 'municipios', cargo.municipal ? cid : null);
   const malhaUf = useMalha(ano, abr, !cid && nivel === 'zonas' ? 'zonas' : 'municipios');
   const malhaEstados = useMalhaEstados(ano, porEstado);
+  // nome da UF na época (Território do Guaporé, Município Neutro…), da própria malha dos estados
+  const nomeEstado = useCallback(
+    (uf: string) => {
+      const f = malhaEstados.dados?.municipios.features.find((x) => String(x.id) === uf);
+      return (f?.properties as { n?: string } | null)?.n ?? nomeAbrangencia(uf);
+    },
+    [malhaEstados.dados],
+  );
   const malhaCidade = useMalhaCidade(ano, cid ? abr : null, cid, cid ? (nivel as 'zonas' | 'bairros' | 'locais') : 'bairros');
   // mapa dos municípios de um estado: sem a linha externa (contorno do estado)
   const malhaEstado = useMemo(
@@ -397,7 +410,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     if (regiaoLocais) return mun ? nomeUnidade(mun) : nomeRegiao ?? nomeAbrangencia(abr);
     if (mun && nivel === 'zonas') return `Zona ${mun}`;
     if (mun) {
-      if (porEstado) return nomeAbrangencia(mun);
+      if (porEstado) return nomeEstado(mun);
       if (abr === 'exterior') return indiceMunicipios.porPais.get(mun)?.nome ?? nomeExterior(mun);
       const m = indiceMunicipios.porIbge.get(mun);
       const juntos = juntosCom.get(mun);
@@ -407,7 +420,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
     if (nomeRegiao) return nomeRegiao;
     return nomeAbrangencia(abr);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mun, multi, selecao, abr, cid, nivel, regiaoLocais, nomeRegiao, indiceMunicipios, bairros.dados, locais.dados, juntosCom, porEstado]);
+  }, [mun, multi, selecao, abr, cid, nivel, regiaoLocais, nomeRegiao, indiceMunicipios, bairros.dados, locais.dados, juntosCom, porEstado, nomeEstado]);
 
   // linha de contexto abaixo do título
   const contexto = useMemo(() => {
@@ -526,7 +539,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       const arq = resultado.dados;
       if (!arq) return null;
       if (porEstado) {
-        const nome = nomeAbrangencia(id);
+        const nome = nomeEstado(id);
         if (arq.resumo) {
           const r = arq.mun[id];
           if (!r) return { titulo: nome, linha: 'Sem dados' };
@@ -566,7 +579,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
       return { titulo: nome, linha: linhaVencedor(arq, regs) + dica };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [resultado.dados, abr, indiceMunicipios, nivelArquivo, nomeZona, bairros.dados, locais.dados, regiaoLocais, juntoDe, porEstado],
+    [resultado.dados, abr, indiceMunicipios, nivelArquivo, nomeZona, bairros.dados, locais.dados, regiaoLocais, juntoDe, porEstado, nomeEstado],
   );
 
   const mudarNivel = useCallback(
@@ -641,7 +654,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         ) : null}
         {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">
-          Malha: IBGE{cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
+          Malha: IBGE{porEstado && ano < 1960 ? ' (estados da época, montados sobre a malha municipal histórica de 1950)' : cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
           {porEstado ? ' · Mapa por estado (resultado de cada estado inteiro)' : ''}
           {nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
           {cid && nivel === 'bairros' ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}

@@ -1,7 +1,7 @@
 /** Vocabulário do Sigoli.TSE — ver CONTEXT.md. */
 import SEGUNDO_TURNO_2024 from './segundo-turno-prefeito-2024.json';
 
-export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador' | 'forma' | 'sistema';
+export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador' | 'forma' | 'sistema' | 'camara';
 export type Turno = 1 | 2;
 export type TipoCargo = 'maj' | 'prop';
 
@@ -31,6 +31,8 @@ export const CARGOS: Cargo[] = [
   // plebiscito de 21 de abril de 1993: as duas perguntas são os "cargos" e as opções, os "candidatos"
   { slug: 'forma', nome: 'Forma de governo', curto: 'Forma de governo', tipo: 'maj', turnos: [1], federal: true, plebiscito: true },
   { slug: 'sistema', nome: 'Sistema de governo', curto: 'Sistema de governo', tipo: 'maj', turnos: [1], federal: true, plebiscito: true },
+  // Império (1884, 1886): eleições para a Câmara dos Deputados, só os votos por partido em cada província
+  { slug: 'camara', nome: 'Câmara dos Deputados (votos por partido)', curto: 'Câmara dos Deputados', tipo: 'maj', turnos: [1], federal: true, plebiscito: true },
 ];
 
 /** cidades com 2º turno de Prefeito, por ano e UF (public/data/{ano}/segundo-turno.json, scripts/municipal-tse.mjs) */

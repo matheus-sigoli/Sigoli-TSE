@@ -23,7 +23,8 @@ export interface Eleicao {
   soCargos?: string[];
   /** de onde vêm os resultados, quando não é o TSE por município */
   fonte?: string;
-  /** só resultado por estado (planilha, sem nada por município): o Brasil abre direto no mapa por estado */
+  /** só resultado por estado (planilha, sem nada por município): o Brasil abre direto no mapa por estado e não há
+   *  página por estado */
   soEstados?: boolean;
 }
 
@@ -169,6 +170,102 @@ export const ELEICOES: Eleicao[] = [
     soCargos: ['governador', 'senador'],
     fonte: 'TRE-MG, TRE-PE e TRE-SC (por zona eleitoral), TRE-BA, Diário Oficial de Alagoas e acervo Sigoli.TSE (por município), NUPERGS/UFRGS (RS, por junta apuradora)',
   },
+  {
+    ano: 1945, titulo: 'Eleição Presidencial de 1945', datas: '2 de dezembro',
+    cargos: 'Presidente (só por estado; inclui os territórios de 1943–1946)', disponivel: true, rota: '/1945/br/presidente',
+    soCargos: ['presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1930, titulo: 'Eleição Presidencial de 1930', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1930/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1926, titulo: 'Eleição Presidencial de 1926', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1926/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1922, titulo: 'Eleição Presidencial de 1922', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1922/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1920, titulo: 'Eleição Suplementar de 1920', datas: '',
+    cargos: 'Vice-Presidente (suplementar; só por estado)', disponivel: true, rota: '/1920/br/vice-presidente',
+    soCargos: ['vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1919, titulo: 'Eleição Suplementar de 1919', datas: '13 de abril',
+    cargos: 'Presidente (suplementar; só por estado)', disponivel: true, rota: '/1919/br/presidente',
+    soCargos: ['presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1918, titulo: 'Eleição Presidencial de 1918', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1918/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1914, titulo: 'Eleição Presidencial de 1914', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1914/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1910, titulo: 'Eleição Presidencial de 1910', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1910/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1906, titulo: 'Eleição Presidencial de 1906', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1906/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1903, titulo: 'Eleição Suplementar de 1903', datas: '',
+    cargos: 'Vice-Presidente (suplementar; só por estado)', disponivel: true, rota: '/1903/br/vice-presidente',
+    soCargos: ['vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1902, titulo: 'Eleição Presidencial de 1902', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1902/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1898, titulo: 'Eleição Presidencial de 1898', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado)', disponivel: true, rota: '/1898/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1894, titulo: 'Eleição Presidencial de 1894', datas: '1º de março',
+    cargos: 'Presidente e Vice-Presidente (só por estado; PR, SC e RS em guerra, sem eleição)', disponivel: true, rota: '/1894/br/presidente',
+    soCargos: ['presidente', 'vice-presidente'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1886, titulo: 'Eleições Gerais de 1886 (Império)', datas: '15 de janeiro',
+    cargos: 'Câmara dos Deputados, votos por partido em cada província (Conservadores 97 deputados, Liberais 17)', disponivel: true, rota: '/1886/br/camara',
+    soCargos: ['camara'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
+  {
+    ano: 1884, titulo: 'Eleições Gerais de 1884 (Império)', datas: '1º de dezembro',
+    cargos: 'Câmara dos Deputados, votos por partido (só 5 províncias na planilha)', disponivel: true, rota: '/1884/br/camara',
+    soCargos: ['camara'], soEstados: true, semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
+  },
 ];
 
 /** ano de eleição municipal (Prefeito e Vereador) */
@@ -195,6 +292,7 @@ export const temCargo = (ano: number, cargo: string) => {
   if (e?.soCargos) return e.soCargos.includes(cargo);
   if (cargo === 'prefeito' || cargo === 'vereador') return false; // só nos anos de eleição municipal (soCargos)
   if (cargo === 'forma' || cargo === 'sistema') return false; // só no plebiscito de 1993 (soCargos)
+  if (cargo === 'camara') return false; // só no Império (soCargos)
   return cargo !== 'presidente' || !e?.semPresidente;
 };
 

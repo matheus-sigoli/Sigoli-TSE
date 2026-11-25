@@ -25,6 +25,7 @@ TOT = {'#eleitorado': 0, '#comparecimento': 1, '#abstencao': 2, '#brancos': 4, '
 
 
 def uf_da_epoca(ibge, ano):
+    if str(ibge) == '3304557' and ano <= 1974: return 'df' if ano < 1960 else 'gb'  # a cidade do Rio: DF e Guanabara
     uf = CODIGO_UF.get(str(ibge)[:2])
     if uf == 'ms' and ano < 1979: return 'mt'
     if uf == 'to' and ano < 1989: return 'go'
@@ -85,6 +86,31 @@ def nacional(ano, cargo, turno, br, ofi):
     return d
 
 
+def so_estados(ano, cargo, turno, ofi):
+    """ano sem nada por município (planilha): o arquivo sai todo das linhas oficiais (UFs + a linha do Brasil)"""
+    br = ofi.get('br')
+    if not br: return None
+    cands, partidos = [], []
+    for r in br:
+        if r['candidato'] in TOT: continue
+        if r['partido'] and r['partido'] not in partidos: partidos.append(r['partido'])
+        cands.append({'id': '_' + chave(r['candidato']), 'n': '', 'nome': r['candidato'], 'partido': r['partido'],
+                      'eleito': r['eleito'] == 'S', 'situacao': 'Eleito' if r['eleito'] == 'S' else 'Não eleito'})
+    def reg(rs):
+        t, c = [0] * 6, [0] * len(cands)
+        for r in rs:
+            if r['candidato'] in TOT: t[TOT[r['candidato']]] = int(r['votos']); continue
+            i = next((k for k, x in enumerate(cands) if x['nome'] == r['candidato']), None)
+            if i is not None: c[i] = int(r['votos'])
+        t[3] = sum(c)
+        if not t[1]: t[1] = t[3] + t[4] + t[5]
+        return {'t': t, 'c': c, 'p': []}
+    d = {'v': 1, 'cargo': cargo, 'turno': turno, 'abr': 'br', 'tipo': 'maj', 'vagas': 1, 'atualizado': '', 'cands': cands,
+         'partidos': [], 'total': reg(br), 'mun': {uf: reg(rs) for uf, rs in ofi.items() if uf != 'br'},
+         'fonte': br[0].get('fonte', ''), 'soEstados': True}
+    return d
+
+
 def estadual(ano, cargo, turno):
     partidos, mun, eleitos = [], {}, {}
     total = [0] * 6
@@ -118,15 +144,35 @@ def estadual(ano, cargo, turno):
 
 
 a = argparse.ArgumentParser(); a.add_argument('--ano', type=int); a = a.parse_args()
-for dir_ano in sorted(glob.glob('public/data/[0-9]*')):
-    ano = int(os.path.basename(dir_ano))
+anos = {int(os.path.basename(d)) for d in glob.glob('public/data/[0-9]*')} | {int(os.path.basename(p)[:4]) for p in glob.glob('data/oficial/[0-9]*.csv')}
+for ano in sorted(anos):
     if a.ano and ano != a.ano: continue
+    dir_ano = f'public/data/{ano}'
     ofi = oficiais(ano)
+    # cargo que só existe nas linhas oficiais (ano só por estado): cria a pasta
+    for (cargo, turno), rs in ofi.items():
+        if cargo not in MUNICIPAIS and 'br' in rs and not glob.glob(f'{dir_ano}/{cargo}/{turno}/*.json'):
+            d = so_estados(ano, cargo, turno, rs)
+            if not d: continue
+            os.makedirs(f'{dir_ano}/{cargo}/{turno}', exist_ok=True)
+
+            for nome in ('estados.json', 'br.json'):  # o br.json é o mesmo: o Brasil do ano só existe por estado
+                with open(f'{dir_ano}/{cargo}/{turno}/{nome}', 'w', encoding='utf8') as f: json.dump(d, f, ensure_ascii=False, separators=(',', ':'))
+            print(f'{ano} {cargo} {turno}º: {len(d["mun"])} UFs (só por estado)')
+    # ano só por estado: o site lê a lista de municípios do ano (vazia)
+    if os.path.isdir(dir_ano) and not os.path.exists(f'{dir_ano}/municipios.json'):
+        open(f'{dir_ano}/municipios.json', 'w').write('[]')
     for dir_t in sorted(glob.glob(f'{dir_ano}/*/[12]')):
         cargo, turno = dir_t.split('/')[-2], int(dir_t.split('/')[-1])
         if cargo in MUNICIPAIS: continue
         br_p = f'{dir_t}/br.json'
         br = json.load(open(br_p, encoding='utf8')) if os.path.exists(br_p) else None
+        if br and br.get('soEstados'):
+            d = so_estados(ano, cargo, turno, ofi.get((cargo, turno), {}))
+            if d:
+                for nome in ('estados.json', 'br.json'):
+                    with open(f'{dir_t}/{nome}', 'w', encoding='utf8') as f: json.dump(d, f, ensure_ascii=False, separators=(',', ':'))
+            continue
         if cargo in NACIONAIS or (br and not br.get('resumo')):
             if not br: continue
             d = nacional(ano, cargo, turno, br, ofi.get((cargo, turno), {}))

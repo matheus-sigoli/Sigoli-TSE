@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import Explorador from '@/components/Explorador';
-import { ELEICOES, temCargo } from '@/lib/anos';
+import { ELEICOES, soEstados, temCargo } from '@/lib/anos';
 import { CARGOS, UFS, abrangenciaValida, cargoPorSlug, nomeAbrangencia, type CargoSlug } from '@/lib/dominio';
 
 type Params = { ano: string; abr: string; cargo: string };
@@ -14,7 +14,7 @@ const ANOS = ELEICOES.filter((e) => e.disponivel).map((e) => String(e.ano));
 
 export function generateStaticParams(): Params[] {
   const abrs = ['br', 'exterior', ...Object.keys(UFS)];
-  return ANOS.flatMap((ano) => CARGOS.filter((c) => temCargo(Number(ano), c.slug)).flatMap((c) => abrs.filter((a) => abrangenciaValida(a, c)).map((abr) => ({ ano, abr, cargo: c.slug }))));
+  return ANOS.flatMap((ano) => CARGOS.filter((c) => temCargo(Number(ano), c.slug)).flatMap((c) => abrs.filter((a) => abrangenciaValida(a, c) && (a === 'br' || !soEstados(Number(ano)))).map((abr) => ({ ano, abr, cargo: c.slug }))));
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
