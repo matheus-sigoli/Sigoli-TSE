@@ -1,5 +1,8 @@
 {
+  "br-1930-presidente": "/1930/br/presidente",
   "br-1886-camara": "/1886/br/camara",
-  "br-1894-presidente": "/1894/br/presidente",
-  "br-1930-vice-mg": "/1930/br/vice-presidente?mun=mg"
+  "br-1945-presidente": "/1945/br/presidente",
+  "br-1910-presidente": "/1910/br/presidente",
+  "br-1960-presidente-estados": "/1960/br/presidente?det=uf"
 }
+

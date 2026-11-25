@@ -110,8 +110,25 @@ else:
         d = os.path.basename(os.path.dirname(arq))
         if d == '2024' or not os.path.exists(arq): continue
         alvos.append((arq, int(d) if d.isdigit() else 2026, os.path.join(os.path.dirname(arq), 'estados.json')))
+def historica(ano):
+    """malha estadual da época (data/malhas-estaduais/, scripts/extrair/malha-estadual.py), até 1998"""
+    for lim, f in ((1889, '1872'), (1904, '1900'), (1919, '1911'), (1945, '1920'), (1946, '1945'), (1960, '1950'), (1970, '1960'),
+                   (1978, '1970'), (1989, '1980'), (2002, '1991')):
+        if ano < lim:
+            p = f'data/malhas-estaduais/{f}.json'
+            return p if os.path.exists(p) else None
+    return None
+
+
 for arq, ano, dest in alvos:
-    fc = estados(json.load(open(arq, encoding='utf8')), *regras(ano))
+    h = historica(ano)
+    if h:
+        fc = json.load(open(h, encoding='utf8'))
+        for ft in fc['features']:
+            if ft['id'] == 'ro' and 1956 <= ano < 1982: ft['properties']['n'] = 'Território de Rondônia'
+            if ft['id'] == 'rr' and 1962 <= ano < 1990: ft['properties']['n'] = 'Território de Roraima'
+    else:
+        fc = estados(json.load(open(arq, encoding='utf8')), *regras(ano))
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     with open(dest, 'w', encoding='utf8') as f: json.dump(fc, f, ensure_ascii=False, separators=(',', ':'))
     # o site acha a malha dos estados do ano pela lista de malhas trocadas da pasta

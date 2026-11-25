@@ -27,7 +27,11 @@ import Carregando from './Carregando';
 const Mapa = dynamic(() => import('./Mapa'), { ssr: false, loading: () => <div className="mapa-canvas" /> });
 
 /** sigla da UF → código do IBGE (o 1º dígito é a grande região) */
-const CODIGO_DA_UF: Record<string, string> = Object.fromEntries(Object.entries(CODIGO_UF).map(([c, uf]) => [uf, c]));
+const CODIGO_DA_UF: Record<string, string> = {
+  ...Object.fromEntries(Object.entries(CODIGO_UF).map(([c, uf]) => [uf, c])),
+  // unidades que não existem mais: Guanabara, territórios de Ponta Porã e do Iguaçu, Fernando de Noronha
+  gb: '33', pp: '50', ig: '41', fn: '26',
+};
 
 function lerFoco(s: string | null): Foco {
   const m = s?.match(/^(c|p):(\d+)$/);
@@ -654,7 +658,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         ) : null}
         {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">
-          Malha: IBGE{porEstado && ano < 1960 ? ' (estados da época, montados sobre a malha municipal histórica de 1950)' : cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
+          Malha: {porEstado && ano < 2002 ? 'limites estaduais da época (acervo Sigoli.TSE)' : 'IBGE'}{porEstado && ano < 2002 ? '' : cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
           {porEstado ? ' · Mapa por estado (resultado de cada estado inteiro)' : ''}
           {nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
           {cid && nivel === 'bairros' ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}

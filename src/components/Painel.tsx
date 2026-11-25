@@ -274,7 +274,7 @@ function Painel(p: Props) {
           : p.ano === 1989 ? <><a href="https://geografiadovoto.com/fontes/" target="_blank" rel="noreferrer">Geografia do Voto</a> (IpeaData com correções), conferido com o <a href="https://dadosabertos.tse.jus.br/dataset/resultados-1989" target="_blank" rel="noreferrer">TSE por UF</a>; exterior por país: livros do TSE <i>Eleições 89</i>, Turnos I e II</>
           : <><a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noreferrer">TSE, dados abertos {p.ano}</a>{p.ano === 1994 && p.cargo.slug === 'presidente' ? <>; exterior por país: relatório do TSE <i>Eleições 1994, Exterior</i> (totalização de 12/10/1994)</> : null}</>}.
         {arquivo && !arquivo.resumo && arquivo.oficial?.fonte && (!cargo.federal || p.abr === 'br') ? <> Total do {cargo.federal ? 'Brasil' : 'estado'}: {arquivo.oficial.fonte}.</> : null}
-        {' '}Malha municipal: {MALHA_HISTORICA[p.ano] ? `IBGE, malha municipal histórica de ${MALHA_HISTORICA[p.ano]} (municípios da época)` : 'IBGE 2025'}. Percentuais de candidatos sobre votos válidos.
+        {' '}{(p.arquivo as { soEstados?: boolean } | null)?.soEstados ? 'Malha: limites estaduais da época (acervo Sigoli.TSE)' : <>Malha municipal: {MALHA_HISTORICA[p.ano] ? `IBGE, malha municipal histórica de ${MALHA_HISTORICA[p.ano]} (municípios da época)` : 'IBGE 2025'}</>}. Percentuais de candidatos sobre votos válidos.
       </footer>
     </aside>
   );

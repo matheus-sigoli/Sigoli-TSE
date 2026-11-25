@@ -74,21 +74,40 @@ const POPULISTA_FAIXAS: Record<string, string[][]> = {
 };
 const POPULISTA_BASE = POPULISTA_FAIXAS; // siglas da época (chavePartido)
 
-// Império e República Velha (até 1930) e o PAN de 1945: partidos só da planilha por estado. Cores PROVISÓRIAS, à espera
-// da tabela do dono do projeto; as faixas saem da cor-base (gerarFaixas). Chave = sigla normalizada + 'RV'.
+// Império e República Velha (até 1930) e o PAN de 1945: partidos só da planilha por estado. Chave = sigla normalizada
+// + 'RV'. Tabela do dono do projeto (11/2026), 10 faixas por partido; PR-RJ e PR-RS têm cor principal e extra.
+// Os que não estão na tabela saem de uma cor-base (gerarFaixas).
+const ANTIGOS_FAIXAS: Record<string, string[][]> = {
+  PRPRV: [['#DDDDDD', '#BCBCBC', '#9A9A9A', '#797979', '#575757', '#4A4A4A', '#3D3D3D', '#303030', '#232323', '#111111']],
+  PRCONRV: [['#CCDCED', '#99B9DB', '#6695C8', '#3372B6', '#004FA4', '#00438C', '#003772', '#002B5A', '#002042', '#001021']],
+  ALRV: [['#FFF1CC', '#FFE299', '#FFD466', '#FFC533', '#FFB700', '#D99C00', '#B28000', '#8C6400', '#664900', '#332500']],
+  PRMRV: [['#F1CCCC', '#E39999', '#D56666', '#C73333', '#B90000', '#9D0000', '#810000', '#660000', '#4A0000', '#250000']],
+  PRLIBERALRV: [['#FFF0CC', '#FFE199', '#FFD266', '#FFC333', '#FFB400', '#D99900', '#B27E00', '#8C6300', '#664800', '#332400']],
+  PRFEDERALRV: [['#CCE9D8', '#99D3B1', '#66BD8A', '#33A763', '#00913C', '#007B33', '#00652A', '#005021', '#003A18', '#001D0C']],
+  PRRJRV: [['#CCE8F4', '#99D1E9', '#66BADE', '#33A3D3', '#008CC8', '#0077AA', '#00628C', '#004D6E', '#003850', '#001C28'],
+    ['#FFE3DE', '#FFC7BE', '#FFAA9D', '#FF8E7D', '#FF725C', '#D9614E', '#B25040', '#8C3F33', '#662E25', '#331712']],
+  PRDPRRV: [['#CCE9DC', '#99D3B9', '#66BC96', '#33A673', '#009050', '#007B44', '#006538', '#004F2C', '#003A20', '#001D10']],
+  PRBARV: [['#FFCCCC', '#FF9999', '#FF6666', '#FF3333', '#FF0000', '#D90000', '#B20000', '#8C0000', '#660000', '#330000']],
+  PRPERV: [['#CCDEED', '#99BCDB', '#669BC8', '#3379B6', '#0058A4', '#004B8C', '#003D72', '#00305A', '#002342', '#001221']],
+  PANRV: [['#FFFDD1', '#FFFBA3', '#FFF875', '#FFF647', '#FFF419', '#D9D015', '#B2AA11', '#8C860E', '#66620A', '#333105']],
+  PRRSRV: [['#CCEADC', '#99D5B8', '#66C195', '#33AC71', '#00974E', '#008042', '#006936', '#00532B', '#003C1F', '#001E10'],
+    ['#FFFDD4', '#FFFBA8', '#FFF87D', '#FFF651', '#FFF426', '#D9D020', '#B2AA1B', '#8C8615', '#66620F', '#333108']],
+  PARTIDOLIBERALRV: [['#FFF3CC', '#FFE799', '#FFDB66', '#FFCF33', '#FFC300', '#D9A600', '#B28800', '#8C6B00', '#664E00', '#332700']],
+  PARTIDOCONSERVADORRV: [['#CCEAD9', '#99D5B4', '#66C08E', '#33AB69', '#009643', '#008039', '#00692F', '#005225', '#003C1B', '#001E0D']],
+  PARTIDOREPUBLICANORV: [['#FFCCCC', '#FF9999', '#FF6666', '#FF3333', '#FF0000', '#D90000', '#B20000', '#8C0000', '#660000', '#330000']],
+};
 const ANTIGOS_BASE: Record<string, string> = {
-  PARTIDOLIBERALRV: '#C62828', PARTIDOCONSERVADORRV: '#1F3A93', PARTIDOREPUBLICANORV: '#2E7D32', OUTROSRV: '#9E9E9E',
-  PRFEDERALRV: '#F9A825', PRPRV: '#2E7D32', PRMRV: '#B71C1C', PRCONMGRV: '#1565C0', PRCONRV: '#1565C0',
-  INDEPENDENTERV: '#6D4C41', PNBRV: '#00838F', PRPARV: '#8E24AA', PRRSRV: '#E65100', PRPERV: '#AD1457', PRRJRV: '#0277BD',
-  PRDPRRV: '#5D4037', PRBARV: '#283593', PRLIBERALRV: '#F57F17', PRPBRV: '#00695C', PRMARV: '#7B1FA2', PRDBARV: '#EF6C00',
-  PRRSALRV: '#D32F2F', PCBRV: '#7F0000', PANRV: '#795548',
+  PRCONMGRV: '#004FA4', INDEPENDENTERV: '#6D4C41', PNBRV: '#00838F', PRPARV: '#8E24AA', PRPBRV: '#00695C', PRMARV: '#7B1FA2',
+  PRDBARV: '#EF6C00', PCBRV: '#7F0000', OUTROSRV: '#9C8AA5',
 };
 const ANTIGOS_CACHE = new Map<string, EntradaPaleta>();
 const antigo = (k: string): EntradaPaleta | undefined => {
-  const base = ANTIGOS_BASE[k];
-  if (!base) return undefined;
   let e = ANTIGOS_CACHE.get(k);
-  if (!e) ANTIGOS_CACHE.set(k, (e = { principal: gerarFaixas(base), reservas: [] }));
+  if (e) return e;
+  const f = ANTIGOS_FAIXAS[k];
+  if (f) e = { principal: paraFaixas(f[0]), extra: f[1] ? paraFaixas(f[1]) : undefined, reservas: [] };
+  else if (ANTIGOS_BASE[k]) e = { principal: gerarFaixas(ANTIGOS_BASE[k]), reservas: [] };
+  if (e) ANTIGOS_CACHE.set(k, e);
   return e;
 };
 const POPULISTA_CACHE = new Map<string, EntradaPaleta>();
@@ -143,7 +162,7 @@ const cacheGerado = new Map<string, EntradaPaleta>();
 export const chavePartido = (sigla: string) => {
   const k = normaliza(sigla);
   // Império e República Velha (e o PAN de 1945): paleta própria, acima
-  if (anoCores < 1945 && ANTIGOS_BASE[`${k}RV`]) return `${k}RV`;
+  if (anoCores < 1945 && (ANTIGOS_FAIXAS[`${k}RV`] || ANTIGOS_BASE[`${k}RV`])) return `${k}RV`;
   if (anoCores < 1950 && k === 'PAN') return 'PANRV';
   // República de 1946 (até 1965): partidos da época com a paleta própria (POPULISTA_FAIXAS, acima)
   if (anoCores < 1966 && POPULISTA_BASE[`${k}45`]) return `${k}45`;
