@@ -146,7 +146,7 @@ function Filtros(p: Props) {
         <Link href="/" className="marca" aria-label="Sigoli.TSE, página inicial">
           <b>Sigoli</b><span>.TSE</span>
         </Link>
-        <p className="marca-sub">Eleições {p.ano}, município por município</p>
+        <p className="marca-sub">Eleições {p.ano}, {p.detalheEstado?.fixo ? 'estado por estado' : 'município por município'}</p>
       </div>
 
       {ANOS_NO_AR.length > 1 ? (
@@ -164,8 +164,8 @@ function Filtros(p: Props) {
         <label htmlFor={idAbr}>Onde</label>
         <select id={idAbr} className="select" value={p.abr} onChange={(e) => p.aoMudarAbrangencia(e.target.value)}>
           <option value="br">Brasil</option>
-          {UFS_ORDENADAS.filter(([uf]) => abrangenciaValida(uf, p.cargo)).map(([uf, nome]) => <option key={uf} value={uf}>{nome}</option>)}
-          {p.cargo.slug === 'presidente' ? <option value="exterior">Exterior</option> : null}
+          {UFS_ORDENADAS.filter(([uf]) => abrangenciaValida(uf, p.cargo) && !p.detalheEstado?.fixo).map(([uf, nome]) => <option key={uf} value={uf}>{nome}</option>)}
+          {p.cargo.slug === 'presidente' && !p.detalheEstado?.fixo ? <option value="exterior">Exterior</option> : null}
         </select>
       </div>
 
@@ -180,7 +180,7 @@ function Filtros(p: Props) {
           )}
           <p className="marca-sub dica-nivel" style={{ marginTop: 6 }}>
             {p.detalheEstado.fixo
-              ? 'Esta eleição só tem o resultado por estado. Cada estado tem a cor de quem venceu nele.'
+              ? 'Esta eleição só tem o resultado por estado. Cada estado tem a cor de quem venceu nele; clique num estado para ver o resultado dele.'
               : p.detalheEstado.ativo
                 ? `Cada estado tem a cor de quem venceu nele${p.cargo.federal ? '; clique num estado para ver o resultado dele' : '; clique num estado para abri-lo'}. Bom para os anos em que nem todo município tem resultado.`
                 : 'Em Estados, o mapa mostra o resultado de cada estado inteiro.'}

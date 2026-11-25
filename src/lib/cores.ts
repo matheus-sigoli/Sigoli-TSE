@@ -73,6 +73,24 @@ const POPULISTA_FAIXAS: Record<string, string[][]> = {
   PSB45: [['#FEF5CC', '#FEEB99', '#FEE166', '#FED733', '#FECD00', '#D8AE00', '#B18F00', '#8B7000', '#655200', '#322900'], ['#F9D1D2', '#F3A3A6', '#EE7579', '#E8474D', '#E31921', '#C1151C', '#9E1117', '#7C0D12', '#5A0A0D', '#2D0506']],
 };
 const POPULISTA_BASE = POPULISTA_FAIXAS; // siglas da época (chavePartido)
+
+// Império e República Velha (até 1930) e o PAN de 1945: partidos só da planilha por estado. Cores PROVISÓRIAS, à espera
+// da tabela do dono do projeto; as faixas saem da cor-base (gerarFaixas). Chave = sigla normalizada + 'RV'.
+const ANTIGOS_BASE: Record<string, string> = {
+  PARTIDOLIBERALRV: '#C62828', PARTIDOCONSERVADORRV: '#1F3A93', PARTIDOREPUBLICANORV: '#2E7D32', OUTROSRV: '#9E9E9E',
+  PRFEDERALRV: '#F9A825', PRPRV: '#2E7D32', PRMRV: '#B71C1C', PRCONMGRV: '#1565C0', PRCONRV: '#1565C0',
+  INDEPENDENTERV: '#6D4C41', PNBRV: '#00838F', PRPARV: '#8E24AA', PRRSRV: '#E65100', PRPERV: '#AD1457', PRRJRV: '#0277BD',
+  PRDPRRV: '#5D4037', PRBARV: '#283593', PRLIBERALRV: '#F57F17', PRPBRV: '#00695C', PRMARV: '#7B1FA2', PRDBARV: '#EF6C00',
+  PRRSALRV: '#D32F2F', PCBRV: '#7F0000', PANRV: '#795548',
+};
+const ANTIGOS_CACHE = new Map<string, EntradaPaleta>();
+const antigo = (k: string): EntradaPaleta | undefined => {
+  const base = ANTIGOS_BASE[k];
+  if (!base) return undefined;
+  let e = ANTIGOS_CACHE.get(k);
+  if (!e) ANTIGOS_CACHE.set(k, (e = { principal: gerarFaixas(base), reservas: [] }));
+  return e;
+};
 const POPULISTA_CACHE = new Map<string, EntradaPaleta>();
 const paraFaixas = (cores: string[]) => Object.fromEntries(CHAVES.map((k, i) => [k, cores[i]])) as Faixas;
 const populista = (k: string): EntradaPaleta | undefined => {
@@ -124,6 +142,9 @@ const cacheGerado = new Map<string, EntradaPaleta>();
 /** Sigla canônica (apelidos do TSE resolvidos): é o que identifica "o mesmo partido". */
 export const chavePartido = (sigla: string) => {
   const k = normaliza(sigla);
+  // Império e República Velha (e o PAN de 1945): paleta própria, acima
+  if (anoCores < 1945 && ANTIGOS_BASE[`${k}RV`]) return `${k}RV`;
+  if (anoCores < 1950 && k === 'PAN') return 'PANRV';
   // República de 1946 (até 1965): partidos da época com a paleta própria (POPULISTA_FAIXAS, acima)
   if (anoCores < 1966 && POPULISTA_BASE[`${k}45`]) return `${k}45`;
   if (k === 'PSD' && anoCores < 2011) return 'PSD41';
@@ -137,7 +158,7 @@ export const chavePartido = (sigla: string) => {
 
 export function paletaDoPartido(sigla: string): EntradaPaleta {
   const k = chavePartido(sigla);
-  const pop = populista(k);
+  const pop = populista(k) ?? antigo(k);
   if (pop) return pop;
   const direto = TABELA.get(k);
   if (direto) {
