@@ -15,17 +15,21 @@ SEDE = {z: 'Recife' for z in range(1, 10)}
 SEDE.update(dict(enumerate(lista, start=10)))
 SEDE[59] = 'Correntes'
 SEN = [('APOLÔNIO SALES', 'PSD'), ('BARROS CARVALHO', 'PTB')]
-mun = collections.defaultdict(lambda: [0] * 4); fora = []
-for l in open('data/tre/fontes/pe-1958/senador.txt', encoding='utf8'):
-    if l.startswith('#') or not l.strip(): continue
-    r = list(map(int, l.strip().split(';'))); ib = achar(SEDE.get(r[0]) or '')
-    if not ib: fora.append(r[0]); continue
-    for j in range(4): mun[ib][j] += r[1 + j]
-out = []
-for ib, v in mun.items():
-    for (n, p), x in zip(SEN, v[:2]): out.append(('senador', 1, ib, '_' + chave(n), n, p, x))
-    out += [('senador', 1, ib, '#brancos', '', '', v[2]), ('senador', 1, ib, '#nulos', '', '', v[3])]
+# Vice-Governador (p. 1793): Pelópidas Silveira (PSB, na chapa das Oposições com Cid Sampaio, eleito); José do Rêgo Maciel
+# sem partido confirmado (N/I)
+VICE = [('JOSÉ DO RÊGO MACIEL', 'N/I'), ('PELÓPIDAS SILVEIRA', 'PSB')]
+out = []; fora = []
+for arq, cargo, cands in (('senador', 'senador', SEN), ('vice-governador', 'vice-governador', VICE)):
+    mun = collections.defaultdict(lambda: [0] * 4)
+    for l in open(f'data/tre/fontes/pe-1958/{arq}.txt', encoding='utf8'):
+        if l.startswith('#') or not l.strip(): continue
+        r = list(map(int, l.strip().split(';'))); ib = achar(SEDE.get(r[0]) or '')
+        if not ib: fora.append(r[0]); continue
+        for j in range(4): mun[ib][j] += r[1 + j]
+    for ib, v in mun.items():
+        for (n, p), x in zip(cands, v[:2]): out.append((cargo, 1, ib, '_' + chave(n), n, p, x))
+        out += [(cargo, 1, ib, '#brancos', '', '', v[2]), (cargo, 1, ib, '#nulos', '', '', v[3])]
 os.makedirs('data/tre/1958', exist_ok=True)
-gravar('data/tre/1958/pe.csv', out, {('senador', '_' + chave('BARROS CARVALHO')): 'S'},
-       fonte='TRE-PE, relatório das eleições de 3 de outubro de 1958 (Senado por zona eleitoral)')
+gravar('data/tre/1958/pe.csv', out, {('senador', '_' + chave('BARROS CARVALHO')): 'S', ('vice-governador', '_' + chave('PELÓPIDAS SILVEIRA')): 'S'},
+       fonte='TRE-PE, relatório das eleições de 3 de outubro de 1958 (Senado e Vice-Governador por zona eleitoral)')
 print('zonas sem sede:', fora)

@@ -130,37 +130,37 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1962, titulo: 'Eleições 1962', datas: '7 de outubro',
-    cargos: 'Governador e Senador (ES, PE e RS; PE por zona eleitoral) e Deputados (RS)', disponivel: true, rota: '/1962/pe/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador e Senador (ES, PE e RS; PE por zona eleitoral) Vice-Governador (CE, só o total do estado) e Deputados (RS)', disponivel: true, rota: '/1962/pe/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'TRE-RS e TRE-ES (por município) e TRE-PE, Relatório Final das Eleições de 1962 (por zona eleitoral)',
   },
   {
     ano: 1960, titulo: 'Eleições 1960', datas: '3 de outubro',
-    cargos: 'Presidente e Vice-Presidente (todo o Brasil, menos Amapá e Rio Branco) e Governador (por enquanto AL, MG, PR e SC)', disponivel: true, rota: '/1960/br/presidente', semLocais: true, semZonas: true,
+    cargos: 'Presidente e Vice-Presidente (todo o Brasil, menos Amapá e Rio Branco) Governador (por enquanto AL, MG, PR e SC) e Vice-Governador (MG)', disponivel: true, rota: '/1960/br/presidente', semLocais: true, semZonas: true,
     soCargos: ['presidente', 'vice-presidente', 'governador'],
     fonte: 'Acervo Sigoli.TSE (mapas de apuração de Presidente e Vice por município), TRE-MG, TRE-PR e TRE-SC (por município); total do Brasil pelo IBGE',
   },
   {
     ano: 1958, titulo: 'Eleições 1958', datas: '3 de outubro',
-    cargos: 'Governador (BA, CE, RS e SP), Senador (BA, CE, PE e RS; PE por zona eleitoral) e Deputados (RS)', disponivel: true, rota: '/1958/ba/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (BA, CE, RS e SP), Senador (BA, CE, PE e RS; PE por zona eleitoral) Vice-Governador (BA, CE e PE; PE por zona eleitoral) e Deputados (RS)', disponivel: true, rota: '/1958/ba/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'TRE-RS, TRE-BA, TRE-CE, TRE-PE e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1955, titulo: 'Eleições 1955', datas: '3 de outubro',
-    cargos: 'Presidente e Vice-Presidente (todo o Brasil) e Governador (por enquanto AL, MG, MT, PR e SC; MG por zona eleitoral)', disponivel: true, rota: '/1955/br/presidente', semLocais: true, semZonas: true,
+    cargos: 'Presidente e Vice-Presidente (todo o Brasil) e Governador (por enquanto AL, MG, MT, PR e SC; MG por zona eleitoral) e Vice-Governador (MG e MT; MG por zona eleitoral, MT por junta apuradora)', disponivel: true, rota: '/1955/br/presidente', semLocais: true, semZonas: true,
     soCargos: ['presidente', 'vice-presidente', 'governador'],
     fonte: 'Acervo Sigoli.TSE (banco de dados de Presidente e Vice por município), TRE-MG (por zona eleitoral), TRE-PR e TRE-SC (por município)',
   },
   {
     ano: 1954, titulo: 'Eleições 1954', datas: '3 de outubro',
-    cargos: 'Governador (BA, CE, ES, PE, RJ e RS), Senador (BA, CE, ES, MT, PE, RJ e RS; PE por zona eleitoral, MT por junta apuradora) e Deputados (RS)', disponivel: true, rota: '/1954/ba/governador', semLocais: true, semZonas: true,
+    cargos: 'Governador (BA, CE, ES, PE, RJ e RS), Senador (BA, CE, ES, MT, PE, RJ e RS; PE por zona eleitoral, MT por junta apuradora) Vice-Governador (CE e RJ) e Deputados (RS)', disponivel: true, rota: '/1954/ba/governador', semLocais: true, semZonas: true,
     soCargos: ['governador', 'senador', 'deputado-federal', 'deputado-estadual'],
     fonte: 'TRE-RS, TRE-BA, TRE-CE, TRE-ES, TRE-RJ, TRE-PE (por zona) e acervo Sigoli.TSE (por município)',
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',
-    cargos: 'Presidente e Vice-Presidente (por enquanto AL, AM, AP, CE, ES, MA, MG, MT, PB, PE, PR, RJ, RN, RS, SC, SE e o Distrito Federal; MG por zona eleitoral), Governador (por enquanto AL, BA, CE, MA, MG, RS e SC; MG por zona eleitoral, RS por junta apuradora) e Senador (CE, RS e SC)', disponivel: true, rota: '/1950/br/presidente', semLocais: true, semZonas: true,
+    cargos: 'Presidente e Vice-Presidente (por enquanto AL, AM, AP, CE, ES, MA, MG, MT, PB, PE, PR, RJ, RN, RS, SC, SE e o Distrito Federal; MG por zona eleitoral), Governador (por enquanto AL, BA, CE, MA, MG, RS e SC; MG por zona eleitoral, RS por junta apuradora) e Senador (CE, RS e SC) e Vice-Governador (CE e MG; MG por zona eleitoral)', disponivel: true, rota: '/1950/br/presidente', semLocais: true, semZonas: true,
     soCargos: ['presidente', 'vice-presidente', 'governador', 'senador'],
     fonte: 'TRE-BA, TRE-CE, TRE-SC, TRE-MG (por zona eleitoral) e acervo Sigoli.TSE (banco de dados de Presidente e Vice e planilhas por município), NUPERGS/UFRGS (RS, por junta apuradora)',
   },
@@ -290,6 +290,9 @@ export const temZonas = (ano: number, cargo?: string, abr?: string) => {
 /** o ano tem o Presidente por município */
 export const temPresidente = (ano: number) => !ELEICOES.find((e) => e.ano === ano)?.semPresidente;
 
+/** anos com Vice-Governador (eleição própria) no site: MG, CE, RJ, PE, MT e BA (scripts/extrair/*) */
+const ANOS_VICE_GOVERNADOR = [1950, 1954, 1955, 1958, 1960, 1962];
+
 /** o ano tem o cargo (1998 sem Presidente; 1989 só Presidente) */
 export const temCargo = (ano: number, cargo: string) => {
   // o vice-presidente só tinha eleição própria até 1960; depois é eleito com o presidente
@@ -299,6 +302,8 @@ export const temCargo = (ano: number, cargo: string) => {
   if (cargo === 'prefeito' || cargo === 'vereador') return false; // só nos anos de eleição municipal (soCargos)
   if (cargo === 'forma' || cargo === 'sistema') return false; // só no plebiscito de 1993 (soCargos)
   if (cargo === 'camara' || cargo === 'regente') return false; // só no Império (soCargos)
+  // Vice-Governador eleito à parte (República de 1946): só nos anos com algum estado no site
+  if (cargo === 'vice-governador') return ANOS_VICE_GOVERNADOR.includes(ano);
   return cargo !== 'presidente' || !e?.semPresidente;
 };
 
