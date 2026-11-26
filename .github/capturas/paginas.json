@@ -1,7 +1,9 @@
 {
+  "mg-1950-governador": "/1950/mg/governador",
+  "mg-1955-governador": "/1955/mg/governador",
+  "br-1955-governador": "/1955/br/governador",
+  "mg-1947-governador": "/1947/mg/governador",
+  "sp-1947-governador": "/1947/sp/governador",
   "br-1835-regente": "/1835/br/regente",
-  "br-1835-regente-estados": "/1835/br/regente?det=uf",
-  "pe-1835-regente": "/1835/pe/regente",
-  "mg-1950-vice": "/1950/mg/vice-presidente",
-  "br-1950-presidente-estados": "/1950/br/presidente?det=uf"
+  "sp-1835-regente": "/1835/sp/regente"
 }
