@@ -160,9 +160,9 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',
-    cargos: 'Presidente e Vice-Presidente (por enquanto AL, AM, AP, CE, ES, MA, MG, MT, PB, PE, PR, RJ, RN, RS, SC, SE e o Distrito Federal; MG por zona eleitoral), Governador (por enquanto AL, BA, CE, MA, RS e SC; RS por junta apuradora) e Senador (CE, RS e SC)', disponivel: true, rota: '/1950/br/presidente', semLocais: true, semZonas: true,
+    cargos: 'Presidente e Vice-Presidente (por enquanto AL, AM, AP, CE, ES, MA, MG, MT, PB, PE, PR, RJ, RN, RS, SC, SE e o Distrito Federal; MG por zona eleitoral), Governador (por enquanto AL, BA, CE, MA, MG, RS e SC; MG por zona eleitoral, RS por junta apuradora) e Senador (CE, RS e SC)', disponivel: true, rota: '/1950/br/presidente', semLocais: true, semZonas: true,
     soCargos: ['presidente', 'vice-presidente', 'governador', 'senador'],
-    fonte: 'TRE-BA, TRE-CE, TRE-SC e acervo Sigoli.TSE (banco de dados de Presidente e Vice e planilhas por município), NUPERGS/UFRGS (RS, por junta apuradora)',
+    fonte: 'TRE-BA, TRE-CE, TRE-SC, TRE-MG (por zona eleitoral) e acervo Sigoli.TSE (banco de dados de Presidente e Vice e planilhas por município), NUPERGS/UFRGS (RS, por junta apuradora)',
   },
   {
     ano: 1947, titulo: 'Eleições 1947', datas: '19 de janeiro',

@@ -119,8 +119,9 @@ for ano, uf, cargo, arq, aba, cab, cands, tots, fonte in FONTES:
         for c, (n, p) in cands.items():
             linhas.append((cargo, 1, ib, '_' + chave(n), n, p, num(c))); soma[c] += num(c)
         for c, t in tots.items(): linhas.append((cargo, 1, ib, t, '', '', num(c)))
-    # 1955: a malha do ano é a de 1955 por município (Presidente e Vice por município em todo o Brasil), sem juntar zonas
-    if (ano, uf) in ZONA and ano != 1955:
+    # 1955: Presidente e Vice por município em todo o Brasil; a lista da zona só junta o município no Governador
+    # (scripts/juntos.py) e o resto vai para o vizinho
+    if (ano, uf) in ZONA:
         os.makedirs('data/malhas-historicas/agrupar', exist_ok=True)
         with open(f'data/malhas-historicas/agrupar/{ano}-{uf}.csv', 'w', encoding='utf8') as g:
             g.write('ibge;sede\n')
@@ -132,6 +133,7 @@ for ano, uf, cargo, arq, aba, cab, cands, tots, fonte in FONTES:
                     ib = achar(zr[1])
                     if zr[0]: sede_z = ib
                     elif ib and sede_z and ib != sede_z: g.write(f'{ib};{sede_z}\n')
+                if ano == 1955: g.write('*;vizinho\n')
     if (ano, cargo) in SUBLEGENDA:
         pp = collections.Counter()
         for c, (n, p) in cands.items(): pp[p] += soma[c]

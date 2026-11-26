@@ -381,11 +381,14 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
 
   // eleições antigas: município que votou junto com outro (mesma zona eleitoral) tem o próprio polígono com "z" = de quem
   // é o resultado; no mapa ele tem a mesma cor e é selecionado junto (o resultado conta uma vez só)
+  const juntosArquivo = (resultado.dados as { juntos?: Record<string, string> } | null)?.juntos;
   const juntoDe = useMemo(() => {
     const m = new Map<string, string>();
     for (const f of malha.dados?.municipios.features ?? []) if (f.properties?.z) m.set(String(f.id), String(f.properties.z));
+    // e os do cargo (scripts/juntos.py): votou junto neste cargo, mas tem resultado próprio em outro do ano
+    if (!porEstado) for (const [i, z] of Object.entries(juntosArquivo ?? {})) if (!m.has(i)) m.set(i, z);
     return m;
-  }, [malha.dados]);
+  }, [malha.dados, juntosArquivo, porEstado]);
   const juntosCom = useMemo(() => {
     const m = new Map<string, string[]>();
     for (const [i, z] of juntoDe) m.set(z, [...(m.get(z) ?? []), i]);

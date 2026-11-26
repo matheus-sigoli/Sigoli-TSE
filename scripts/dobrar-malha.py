@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """
 Sigoli.TSE — resultado por município de hoje → município da época, para os anos cuja malha é de depois da eleição
-(1947 usa a malha do IBGE de 1950; em 1960, municípios instalados logo depois da eleição). Planilhas do acervo às vezes dão o voto já repartido pelos municípios de hoje
+(1835 usa a malha de 1872 e 1947 a de 1940, do acervo, scripts/extrair/malha-municipal-acervo.py; em 1960, municípios instalados logo depois da eleição). Planilhas do acervo às vezes dão o voto já repartido pelos municípios de hoje
 (ex.: Osasco em 1947, que era distrito de São Paulo); aqui cada município que não está na malha do ano soma no
 polígono da malha que contém o seu ponto interior (pela malha do IBGE de 1985). Rodar depois de tre.py/oficial.py e
 antes de resumo-br.mjs/pintam.mjs. Uso: python3 scripts/dobrar-malha.py [--ano 1947]
 """
 import argparse, glob, gzip, json, os
-MALHA = {1947: 'BR1950', 1960: 'BR1960'}
+MALHA = {1835: 'BR1872', 1947: 'BR1940', 1960: 'BR1960'}
 a = argparse.ArgumentParser(); a.add_argument('--ano', type=int); a = a.parse_args()
 H = 'data/malhas-historicas'
+CODIGO_UF = {'11': 'ro', '12': 'ac', '13': 'am', '14': 'rr', '15': 'pa', '16': 'ap', '17': 'to', '21': 'ma', '22': 'pi', '23': 'ce',
+             '24': 'rn', '25': 'pb', '26': 'pe', '27': 'al', '28': 'se', '29': 'ba', '31': 'mg', '32': 'es', '33': 'rj', '35': 'sp',
+             '41': 'pr', '42': 'sc', '43': 'rs', '50': 'ms', '51': 'mt', '52': 'go', '53': 'df'}
 
 def aneis(geom):
     c = geom['coordinates']
@@ -46,13 +49,17 @@ for ano, m in MALHA.items():
         alvo = feats(m, uf); ids = {str(f['id']) for f in alvo}
         fora = [k for k in d['mun'] if k not in ids]
         if not fora or not alvo: continue
-        hoje = {str(f['id']): aneis(f['geometry']) for f in feats('BR1985', uf)}
+        # (pela UF do código: o arquivo pode ser o da UF da época, ex.: Macapá no Pará em 1835)
+        hoje = {str(f['id']): aneis(f['geometry']) for u in {uf} | {CODIGO_UF.get(k[:2], uf) for k in fora} for f in feats('BR1985', u)}
         movidos = []
         for k in fora:
             if k not in hoje: print(f'  ⚠ {arq}: {k} sem polígono de 1985'); continue
             pt = ponto(hoje[k])
             dest = next((str(f['id']) for f in alvo if dentro(pt, aneis(f['geometry']))), None)
-            if not dest: print(f'  ⚠ {arq}: {k} fora da malha {m}'); continue
+            if not dest:  # fora da UF na malha da época (ex.: Mantena, na região contestada com o ES): o polígono mais perto
+                perto = lambda f: min((p[0] - pt[0]) ** 2 + (p[1] - pt[1]) ** 2 for r in aneis(f['geometry']) for p in r[::5])
+                dest = str(min(alvo, key=perto)['id'])
+                print(f'  ⚠ {arq}: {k} fora da malha {m}, vai para o polígono mais perto ({dest})')
             a1, b1 = d['mun'].pop(k), d['mun'].setdefault(dest, {'t': [0] * 6, 'c': [0] * len(d['cands'])})
             b1['t'] = [(x or 0) + (y or 0) for x, y in zip(b1['t'], a1['t'])]
             b1['c'] = [x + y for x, y in zip(b1['c'] + [0] * (len(a1['c']) - len(b1['c'])), a1['c'] + [0] * (len(b1['c']) - len(a1['c'])))]
