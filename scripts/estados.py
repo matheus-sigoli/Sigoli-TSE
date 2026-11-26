@@ -16,7 +16,7 @@ Uso: python3 scripts/estados.py [--ano 1950]
 """
 import argparse, collections, csv, difflib, glob, json, os, re, unicodedata
 
-NACIONAIS = {'presidente', 'vice-presidente', 'forma', 'sistema'}
+NACIONAIS = {'presidente', 'vice-presidente', 'forma', 'sistema', 'regente'}
 MUNICIPAIS = {'prefeito', 'vereador'}
 CODIGO_UF = {'11': 'ro', '12': 'ac', '13': 'am', '14': 'rr', '15': 'pa', '16': 'ap', '17': 'to', '21': 'ma', '22': 'pi',
              '23': 'ce', '24': 'rn', '25': 'pb', '26': 'pe', '27': 'al', '28': 'se', '29': 'ba', '31': 'mg', '32': 'es',
@@ -29,6 +29,9 @@ def uf_da_epoca(ibge, ano):
     uf = CODIGO_UF.get(str(ibge)[:2])
     if uf == 'ms' and ano < 1979: return 'mt'
     if uf == 'to' and ano < 1989: return 'go'
+    if uf == 'pr' and ano < 1853: return 'sp'  # a província do Paraná é de 1853 e a do Amazonas, de 1850
+    if uf == 'am' and ano < 1850: return 'pa'
+    if uf == 'ap' and ano < 1943: return 'pa'
     return uf
 
 
@@ -160,8 +163,11 @@ for ano in sorted(anos):
                 with open(f'{dir_ano}/{cargo}/{turno}/{nome}', 'w', encoding='utf8') as f: json.dump(d, f, ensure_ascii=False, separators=(',', ':'))
             print(f'{ano} {cargo} {turno}º: {len(d["mun"])} UFs (só por estado)')
     # ano só por estado: o site lê a lista de municípios do ano (vazia)
-    if os.path.isdir(dir_ano) and not os.path.exists(f'{dir_ano}/municipios.json'):
-        open(f'{dir_ano}/municipios.json', 'w').write('[]')
+    # (ano com resultado por município, sem a lista: a de hoje sem o exterior, como nos outros anos antigos)
+    if os.path.isdir(dir_ano) and (not os.path.exists(f'{dir_ano}/municipios.json') or open(f'{dir_ano}/municipios.json').read() == '[]'):
+        tem_mun = any(not p.endswith(('/br.json', '/estados.json')) for p in glob.glob(f'{dir_ano}/*/[12]/[a-z][a-z].json'))
+        lista = [m for m in json.load(open('public/data/2026/municipios.json', encoding='utf8')) if m['uf'] != 'zz'] if tem_mun else []
+        with open(f'{dir_ano}/municipios.json', 'w', encoding='utf8') as f: json.dump(lista, f, ensure_ascii=False, separators=(',', ':'))
     for dir_t in sorted(glob.glob(f'{dir_ano}/*/[12]')):
         cargo, turno = dir_t.split('/')[-2], int(dir_t.split('/')[-1])
         if cargo in MUNICIPAIS: continue

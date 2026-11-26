@@ -160,7 +160,7 @@ export const ELEICOES: Eleicao[] = [
   },
   {
     ano: 1950, titulo: 'Eleições 1950', datas: '3 de outubro',
-    cargos: 'Presidente e Vice-Presidente (por enquanto AL, AM, AP, CE, ES, MA, MT, PB, PE, PR, RJ, RN, RS, SC, SE e o Distrito Federal), Governador (por enquanto AL, BA, CE, MA, RS e SC; RS por junta apuradora) e Senador (CE, RS e SC)', disponivel: true, rota: '/1950/br/presidente', semLocais: true, semZonas: true,
+    cargos: 'Presidente e Vice-Presidente (por enquanto AL, AM, AP, CE, ES, MA, MG, MT, PB, PE, PR, RJ, RN, RS, SC, SE e o Distrito Federal; MG por zona eleitoral), Governador (por enquanto AL, BA, CE, MA, RS e SC; RS por junta apuradora) e Senador (CE, RS e SC)', disponivel: true, rota: '/1950/br/presidente', semLocais: true, semZonas: true,
     soCargos: ['presidente', 'vice-presidente', 'governador', 'senador'],
     fonte: 'TRE-BA, TRE-CE, TRE-SC e acervo Sigoli.TSE (banco de dados de Presidente e Vice e planilhas por município), NUPERGS/UFRGS (RS, por junta apuradora)',
   },
@@ -266,6 +266,12 @@ export const ELEICOES: Eleicao[] = [
     soCargos: ['camara'], soEstados: true, semLocais: true, semZonas: true,
     fonte: 'Planilha "Eleições Presidenciais por Estado (1881-1930)" do acervo Sigoli.TSE (votos por estado)',
   },
+  {
+    ano: 1835, titulo: 'Eleição do Regente de 1835 (Império)', datas: '7 de abril',
+    cargos: 'Regente do Império (Regência Una), votos por colégio eleitoral (cada eleitor votava em dois nomes); por município (a vila de cada colégio) e por província', disponivel: true, rota: '/1835/br/regente',
+    soCargos: ['regente'], semLocais: true, semZonas: true,
+    fonte: 'Planilha "Eleição Regencial de 1835" do acervo Sigoli.TSE (votos por colégio eleitoral)',
+  },
 ];
 
 /** ano de eleição municipal (Prefeito e Vereador) */
@@ -292,7 +298,7 @@ export const temCargo = (ano: number, cargo: string) => {
   if (e?.soCargos) return e.soCargos.includes(cargo);
   if (cargo === 'prefeito' || cargo === 'vereador') return false; // só nos anos de eleição municipal (soCargos)
   if (cargo === 'forma' || cargo === 'sistema') return false; // só no plebiscito de 1993 (soCargos)
-  if (cargo === 'camara') return false; // só no Império (soCargos)
+  if (cargo === 'camara' || cargo === 'regente') return false; // só no Império (soCargos)
   return cargo !== 'presidente' || !e?.semPresidente;
 };
 

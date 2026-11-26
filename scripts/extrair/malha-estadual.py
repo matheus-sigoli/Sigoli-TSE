@@ -5,6 +5,7 @@ graus, simplificado), base do mapa "por estado" (scripts/estados-malha.py).
 
 - Shapefiles (limite de província 1872; limite estadual 1900, 1911, 1920, 1950, 1960, 1970, 1980 e 1991), projeção
   policônica (SIRGAS 2000, meridiano central −54°): lidos e desprojetados aqui mesmo (malha_estadual/shp.py), sem GDAL.
+- 1835: a de 1872 com o Paraná junto de São Paulo e o Amazonas junto do Pará (malha_estadual/juntar.py).
 - 1945 (com os territórios de Ponta Porã e do Iguaçu): o SVG do acervo ("1945_Brazilian_Election_Map…"), sem
   coordenadas. Ele é georreferenciado pelos estados que não mudaram entre 1945 e 1950 (centro e extremos de cada um contra
   a malha de 1950), com um ajuste de 2º grau; o erro médio fica em ~0,04° (uns 4 km).
@@ -15,6 +16,7 @@ import numpy as np
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'malha_estadual'))
 from shp import dbf, shp, inv
 from svgpath import parse
+from juntar import juntar
 
 def chave(s): return re.sub(r'[^A-Z]', '', ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn').upper())
 UF = {
@@ -64,13 +66,20 @@ def salvar(feicoes, dest):
     json.dump(fc, open(dest, 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
     print(dest, len(fc['features']), 'UFs,', os.path.getsize(dest) // 1024, 'KB')
 
-def de_shapefile(base, tol=900):
-    feicoes = {}
+def de_shapefile(base, tol=900, juntas=None):
+    """juntas: {uf: uf de destino} — províncias que ainda não existiam (1835: Paraná em São Paulo, Amazonas no Pará)"""
+    brutos, nomes = {}, {}
     for reg, g in zip(dbf(base + '.dbf'), shp(base + '.shp')):
         nome = re.sub(r'\s+', ' ', reg['nome']).strip(); uf = UF[chave(nome)]
-        f = feicoes.setdefault(uf, {'n': NOME.get(uf) or nome.replace('De Rondônia', 'de Rondônia'), 'aneis': []})
-        if uf == 'df': f['n'] = 'Município Neutro (Corte)' if 'neutro' in nome.lower() else 'Distrito Federal'
-        for r in g:
+        nomes[uf] = NOME.get(uf) or nome.replace('De Rondônia', 'de Rondônia')
+        if uf == 'df': nomes[uf] = 'Município Neutro (Corte)' if 'neutro' in nome.lower() else 'Distrito Federal'
+        brutos.setdefault(uf, []).extend([[tuple(p) for p in r] for r in g])
+    for de, para in (juntas or {}).items():
+        brutos[para] = juntar(brutos[para], brutos.pop(de))
+    feicoes = {}
+    for uf, aneis in brutos.items():
+        f = feicoes[uf] = {'n': nomes[uf], 'aneis': []}
+        for r in aneis:
             r = simplificar(r, tol)
             if len(r) >= 4: f['aneis'].append([inv(x, y) for x, y in r])
     return feicoes
@@ -86,6 +95,8 @@ for s in sorted(glob.glob(os.path.join(tmp, '*', '*.shp'))):
     f = de_shapefile(s[:-4])
     if ano == '1950': ref1950 = f
     salvar(f, f'data/malhas-estaduais/{ano}.json')
+    if ano == '1872':  # 1835 (eleição do Regente): ainda sem as províncias do Amazonas (1850) e do Paraná (1853)
+        salvar(de_shapefile(s[:-4], juntas={'pr': 'sp', 'am': 'pa'}), 'data/malhas-estaduais/1835.json')
 
 # ---- 1945, do SVG
 svgs = glob.glob(os.path.join(a.pasta, '1945*.svg'))

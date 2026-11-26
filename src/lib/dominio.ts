@@ -1,7 +1,7 @@
 /** Vocabulário do Sigoli.TSE — ver CONTEXT.md. */
 import SEGUNDO_TURNO_2024 from './segundo-turno-prefeito-2024.json';
 
-export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador' | 'forma' | 'sistema' | 'camara';
+export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador' | 'forma' | 'sistema' | 'camara' | 'regente';
 export type Turno = 1 | 2;
 export type TipoCargo = 'maj' | 'prop';
 
@@ -32,6 +32,8 @@ export const CARGOS: Cargo[] = [
   { slug: 'forma', nome: 'Forma de governo', curto: 'Forma de governo', tipo: 'maj', turnos: [1], federal: true, plebiscito: true },
   { slug: 'sistema', nome: 'Sistema de governo', curto: 'Sistema de governo', tipo: 'maj', turnos: [1], federal: true, plebiscito: true },
   // Império (1884, 1886): eleições para a Câmara dos Deputados, só os votos por partido em cada província
+  // Império, 1835: eleição do Regente (Regência Una), votos por colégio eleitoral
+  { slug: 'regente', nome: 'Regente do Império', curto: 'Regente', tipo: 'maj', turnos: [1], federal: true },
   { slug: 'camara', nome: 'Câmara dos Deputados (votos por partido)', curto: 'Câmara dos Deputados', tipo: 'maj', turnos: [1], federal: true, plebiscito: true },
 ];
 

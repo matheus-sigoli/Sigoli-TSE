@@ -434,6 +434,7 @@ function ResumoMunicipal({ ano, visao, cargo, turno }: { ano: number; visao: Vis
 
 /** anos com a malha histórica do IBGE (scripts/malha-historica.mjs): escolhida por UF entre as de 1950 a 1985 */
 const MALHA_HISTORICA: Record<number, string> = {
+  1835: '1950',
   1947: '1950', 1950: '1950', 1954: '1950', 1955: '1955', 1958: '1960', 1960: '1960', 1965: '1960 e 1970', 1962: '1960', 1966: '1970', 1970: '1970', 1974: '1975', 1978: '1975', 1982: '1980 e 1985', 1986: '1985',
 };
 
