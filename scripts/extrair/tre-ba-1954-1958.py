@@ -45,6 +45,13 @@ for m, v in blocos('data/tre/fontes/ba-1958/majoritarias.txt', 11):
     for (n, p), x in zip([('JURACY MAGALHÃES', 'UDN'), ('FARANI PEDREIRA DE FREITAS', 'PSD'), ('TARCILO VIEIRA DE MELLO', 'PDC')], v[5:8]):
         s.append(('governador', 1, i, '_' + chave(n), n, p, x))
     s += [('governador', 1, i, '#brancos', '', '', v[8]), ('governador', 1, i, '#nulos', '', '', v[9])]
-gravar('data/tre/1958/ba.csv', s, {('governador', '_' + chave('JURACY MAGALHÃES')): 'S', ('senador', '_' + chave('OCTÁVIO MANGABEIRA')): 'S'},
+# Vice-Governador (eleito à parte): Orlando Moscozo (eleito) e Hélio Machado sem partido confirmado (N/I); Rômulo Almeida, PTB
+VICE58 = [('ORLANDO MOSCOZO BARRETTO DE ARAÚJO', 'N/I'), ('RÔMULO ALMEIDA', 'PTB'), ('HÉLIO FERREIRA MACHADO', 'N/I')]
+for m, v in blocos('data/tre/fontes/ba-1958/vice-governador.txt', 5):
+    i = ib(m)
+    for (n, p), x in zip(VICE58, v[:3]): s.append(('vice-governador', 1, i, '_' + chave(n), n, p, x))
+    s += [('vice-governador', 1, i, '#brancos', '', '', v[3]), ('vice-governador', 1, i, '#nulos', '', '', v[4])]
+gravar('data/tre/1958/ba.csv', s, {('governador', '_' + chave('JURACY MAGALHÃES')): 'S', ('senador', '_' + chave('OCTÁVIO MANGABEIRA')): 'S',
+                                   ('vice-governador', '_' + chave('ORLANDO MOSCOZO BARRETTO DE ARAÚJO')): 'S'},
        fonte='TRE-BA, Resultado final das eleições de 3 de outubro de 1958 (por município)')
 print('sem código:', sorted(fora))

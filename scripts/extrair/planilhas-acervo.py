@@ -49,6 +49,11 @@ FONTES = [
     (1960, 'mg', 'governador', f'{XLSX}/1960 - MG - Governador e Vice.xlsx', 'Governador', 3,
      {1: ('JOSÉ DE MAGALHÃES PINTO', 'UDN'), 2: ('TANCREDO NEVES', 'PSD'), 3: ('RIBEIRO PENA', 'PSP')},
      {5: '#brancos', 6: '#nulos', 7: '#comparecimento', 8: '#abstencao', 9: '#eleitorado'}, 'TRE-MG, eleições de 1960 por município'),
+    # Vice-Governador (chapa à parte): Clóvis Salgado (PR), San Tiago Dantas (PTB), José Maria Alkmim (PSD); Nelson Thibau sem
+    # partido confirmado (N/I)
+    (1960, 'mg', 'vice-governador', f'{XLSX}/1960 - MG - Governador e Vice.xlsx', 'Vice-Governador', 5,
+     {1: ('CLÓVIS SALGADO', 'PR'), 2: ('SAN TIAGO DANTAS', 'PTB'), 3: ('NELSON LUIZ THIBAU', 'N/I'), 4: ('JOSÉ MARIA ALKMIM', 'PSD')},
+     {6: '#brancos', 7: '#nulos', 8: '#comparecimento', 9: '#abstencao', 10: '#eleitorado'}, 'TRE-MG, eleições de 1960 por município'),
     (1965, 'mg', 'governador', f'{XLSX}/1965 - MG - Governador.xlsx', 'governador', 2,
      {1: ('PEDRO GOMES DE OLIVEIRA', 'MTR'), 2: ('ISRAEL PINHEIRO', 'PSD'), 3: ('ROBERTO RESENDE', 'UDN')},
      {5: '#brancos', 6: '#nulos', 7: '#comparecimento', 8: '#abstencao', 9: '#eleitorado'}, 'TRE-MG, eleições de 1965 por município'),
@@ -83,6 +88,11 @@ FONTES += [
     (1955, 'mg', 'governador', f'{XLSX}/1955 - MG - Governador e Vice - Por ZE.xlsx', 'GOVERNADOR', 5,
      {2: ('JOSÉ FRANCISCO BIAS FORTES', 'PSD'), 3: ('OLAVO BILAC PINTO', 'UDN'), 4: ('GENTIL NASCIMENTO', 'PTB')},
      {6: '#brancos', 7: '#nulos', 14: '#comparecimento', 15: '#abstencao', 16: '#eleitorado'}, 'TRE-MG, eleições de 1955 por zona eleitoral'),
+    # Vice-Governador de 1955 (mesma aba): Arthur Bernardes Filho (PR, na chapa de Bias Fortes), Oswaldo Pieruccetti (UDN, na de
+    # Bilac Pinto); José Raimundo sem partido confirmado (N/I)
+    (1955, 'mg', 'vice-governador', f'{XLSX}/1955 - MG - Governador e Vice - Por ZE.xlsx', 'GOVERNADOR', 5,
+     {8: ('ARTHUR BERNARDES FILHO', 'PR'), 9: ('JOSÉ RAIMUNDO', 'N/I'), 10: ('OSWALDO PIERUCCETTI', 'UDN')},
+     {12: '#brancos', 13: '#nulos', 14: '#comparecimento', 15: '#abstencao', 16: '#eleitorado'}, 'TRE-MG, eleições de 1955 por zona eleitoral'),
     (1947, 'mg', 'governador', f'{XLSX}/1947 MG.xlsx', None, 3,
      {2: ('JOSÉ FRANCISCO BIAS FORTES', 'PSD'), 3: ('MILTON SOARES CAMPOS', 'UDN')},
      {5: '#nulos', 6: '#brancos', 7: '#comparecimento', 8: '#abstencao', 9: '#eleitorado'}, 'TRE-MG, eleições de 1947 por zona eleitoral'),

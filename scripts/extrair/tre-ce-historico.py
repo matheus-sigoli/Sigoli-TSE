@@ -93,15 +93,20 @@ ANOS = {}
 s = []
 transposto('1950/Governador - Resultado por Município.xlsx', 'governador', {chave('RAUL BARBOSA'): 'PSD', chave('EDGAR CAVALCANTE DE ARRUDA'): 'UDN'}, s)
 transposto('1950/Senador - Resultado por Município.xlsx', 'senador', {chave('ONOFRE MUNIZ GOMES DE LIMA'): 'PSD', chave('MANUEL DO NASCIMENTO FERNANDES TAVORA'): 'UDN'}, s)
+# Vice-Governador (eleito à parte): Stênio Gomes (PSD) × Fausto Cabral (UDN)
+transposto('1950/Vice-Governador - Resultado por Município.xlsx', 'vice-governador', {chave('STENIO GOMES DA SILVA'): 'PSD', chave('FAUSTO AUGUSTO GOMES CABRAL'): 'UDN'}, s)
 ANOS[1950] = (s, 1)
 # 1954 e 1958: por zona
 s = []
 por_zona('1954/Governador - Resultado por Município e Zona.xlsx', 'governador', [('Paulo Sarasate', 'UDN'), ('Armando Falcão', 'PSD')], s)
 por_zona('1954/Senador - Resultado por Município e Zona.xlsx', 'senador', [('Fernandes Távora', 'UDN'), ('Parsifal Barroso', 'PTB'), ('Olavo Oliveira', 'PSP'), ('Raul Barbosa', 'PSD')], s)
+# Vice: Flávio Marcílio (PTB) × Raimundo Ivan Barroso de Oliveira (partido não confirmado)
+por_zona('1954/Vice-Governador - Resultado por Município e Zona.xlsx', 'vice-governador', [('Flávio Portela Marcílio', 'PTB'), ('Raimundo Ivan Barroso de Oliveira', 'N/I')], s)
 ANOS[1954] = (s, 2)
 s = []
 por_zona('1958/Governador - Resultado por Município e Zona.xlsx', 'governador', [('Parsifal Barroso', 'PTB'), ('Virgílio Távora', 'UDN')], s)
 por_zona('1958/Senador - Resultado por Município e Zona.xlsx', 'senador', [('Menezes Pimentel', 'PSD'), ('Olavo Oliveira', 'PSP')], s)
+por_zona('1958/Vice-Governador - Resultado por Município e Zona.xlsx', 'vice-governador', [('Wilson Gonçalves', 'PSD'), ('Acrísio Moreira da Rocha', 'N/I')], s)
 ANOS[1958] = (s, 1)
 # 1966: Senado com duas eleições (vaga de 8 e de 4 anos), aqui somadas como dois votos por eleitor
 s = []
@@ -128,6 +133,7 @@ for ano, (s, nsen) in ANOS.items():
     if not s: continue
     el = {}
     if any(l[0] == 'governador' for l in s): el.update(eleitos_por_voto(s, 'governador', 1))
+    if any(l[0] == 'vice-governador' for l in s): el.update(eleitos_por_voto(s, 'vice-governador', 1))
     if any(l[0] == 'senador' for l in s): el.update(eleitos_por_voto(s, 'senador', nsen))
     for cargo, por_partido in DEP.get(ano, {}).items():
         soma = collections.Counter(); part = {}

@@ -1,9 +1,12 @@
 {
-  "mg-1950-governador": "/1950/mg/governador",
-  "mg-1955-governador": "/1955/mg/governador",
-  "br-1955-governador": "/1955/br/governador",
-  "mg-1947-governador": "/1947/mg/governador",
-  "sp-1947-governador": "/1947/sp/governador",
-  "br-1835-regente": "/1835/br/regente",
-  "sp-1835-regente": "/1835/sp/regente"
+  "mg-1950-vice-gov": "/1950/mg/vice-governador",
+  "mg-1955-vice-gov": "/1955/mg/vice-governador",
+  "mg-1960-vice-gov": "/1960/mg/vice-governador",
+  "mt-1955-vice-gov": "/1955/mt/vice-governador",
+  "ba-1958-vice-gov": "/1958/ba/vice-governador",
+  "pe-1958-vice-gov": "/1958/pe/vice-governador",
+  "rj-1954-vice-gov": "/1954/rj/vice-governador",
+  "ce-1962-vice-gov": "/1962/ce/vice-governador",
+  "br-1958-vice-gov": "/1958/br/vice-governador?det=uf"
 }
+ 

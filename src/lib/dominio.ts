@@ -1,7 +1,7 @@
 /** Vocabulário do Sigoli.TSE — ver CONTEXT.md. */
 import SEGUNDO_TURNO_2024 from './segundo-turno-prefeito-2024.json';
 
-export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador' | 'forma' | 'sistema' | 'camara' | 'regente';
+export type CargoSlug = 'presidente' | 'vice-presidente' | 'governador' | 'vice-governador' | 'senador' | 'deputado-federal' | 'deputado-estadual' | 'prefeito' | 'vereador' | 'forma' | 'sistema' | 'camara' | 'regente';
 export type Turno = 1 | 2;
 export type TipoCargo = 'maj' | 'prop';
 
@@ -23,6 +23,8 @@ export const CARGOS: Cargo[] = [
   // República de 1946: o Vice-Presidente tinha eleição própria (1945–1960)
   { slug: 'vice-presidente', nome: 'Vice-Presidente', curto: 'Vice-Presidente', tipo: 'maj', turnos: [1], federal: true },
   { slug: 'governador', nome: 'Governador', curto: 'Governador', tipo: 'maj', turnos: [1, 2], federal: false },
+  // República Velha e de 1946: o vice-governador era eleito à parte (em chapa própria) em vários estados
+  { slug: 'vice-governador', nome: 'Vice-Governador', curto: 'Vice-Governador', tipo: 'maj', turnos: [1], federal: false },
   { slug: 'senador', nome: 'Senador', curto: 'Senador', tipo: 'maj', turnos: [1], federal: false },
   { slug: 'deputado-federal', nome: 'Deputado Federal', curto: 'Dep. Federal', tipo: 'prop', turnos: [1], federal: false },
   { slug: 'deputado-estadual', nome: 'Deputado Estadual', curto: 'Dep. Estadual', tipo: 'prop', turnos: [1], federal: false },

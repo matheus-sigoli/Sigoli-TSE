@@ -15,7 +15,7 @@ Uso: python3 scripts/tre.py [--ano 1990] [--uf ms]
 """
 import argparse, collections, csv, glob, json, os
 
-VAGAS_GOV = {'governador': 1, 'presidente': 1, 'vice-presidente': 1, 'regente': 1}
+VAGAS_GOV = {'governador': 1, 'vice-governador': 1, 'presidente': 1, 'vice-presidente': 1, 'regente': 1}
 PROP = {'deputado-federal', 'deputado-estadual'}
 TOT = {'#eleitorado': 0, '#comparecimento': 1, '#abstencao': 2, '#brancos': 4, '#nulos': 5}
 
