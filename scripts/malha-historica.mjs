@@ -79,7 +79,7 @@ function idsComDado(ano) {
       const dir = join(base, cargo, turno);
       if (!statSync(dir).isDirectory()) continue;
       for (const f of readdirSync(dir)) {
-        if (!f.endsWith('.json') || f.startsWith('br')) continue;
+        if (!/^[a-z]{2}\.json$/.test(f) || f === 'br.json' || f === 'zz.json') continue; // (não o estados.json)
         const d = JSON.parse(readFileSync(join(dir, f), 'utf8'));
         const s = (r[f.slice(0, 2)] ??= new Set());
         for (const k of Object.keys(d.mun ?? {})) s.add(k);
@@ -151,6 +151,8 @@ for (const uf of nomesUf) {
   if (comDado?.size) {
     let melhor = null;
     for (const m of Object.keys(TODAS)) {
+      // as malhas do acervo de antes de 1950 (1872, 1940) só valem para o ano delas (anos.json), nunca como alternativa
+      if (m !== PADRAO && Number(m.slice(2)) < 1950) continue;
       const fs = lerUf(m);
       if (!fs.length) continue;
       const ids = new Set(fs.map((f) => f.id));
@@ -161,9 +163,8 @@ for (const uf of nomesUf) {
     }
     escolha = melhor.m; feats = melhor.fs; fora = melhor.fo;
     // município que já existia na eleição (está na malha do IBGE de antes dela) e ficou sem dado: fica no mapa, sem cor
-    // 1947: não há malha do IBGE de antes; a de 1950 é a mais parecida com os municípios da época (os de 1940 eram
-    // bem menos), então os polígonos de 1950 sem dado ficam no mapa, sem cor, em vez de voltarem para a origem
-    const anterior = Object.keys(TODAS).filter((m) => Number(m.slice(2)) <= Math.max(Number(ANO), 1950)).sort().pop();
+    // antes de 1950 (malhas do acervo): a própria malha da época; depois, a mais nova até a eleição (1947 usava a de 1950)
+    const anterior = Number(PADRAO.slice(2)) < 1950 ? PADRAO : Object.keys(TODAS).filter((m) => Number(m.slice(2)) <= Math.max(Number(ANO), 1950) && Number(m.slice(2)) >= 1950).sort().pop();
     // resultado por zona eleitoral (data/malhas-historicas/agrupar/{ano}-{uf}.csv): cada município vai para a sede da
     // zona; "*;vizinho" = sem a lista, os municípios sem dado vão para o vizinho com dado de maior divisa
     const arqGrupo = `data/malhas-historicas/agrupar/${ANO}-${uf}.csv`;

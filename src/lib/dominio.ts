@@ -159,6 +159,9 @@ export interface ArquivoResultado {
   municipal?: boolean;
   /** arquivo da cidade (eleição municipal): UF da cidade */
   uf?: string;
+  /** eleições antigas: município sem resultado neste cargo que votou junto com outro (mesma zona) → de quem é o resultado
+   *  (scripts/juntos.py; o "z" da malha vale para todos os cargos do ano, este só para o cargo do arquivo) */
+  juntos?: Record<string, string>;
   resumo?: undefined;
 }
 
@@ -187,6 +190,8 @@ export interface ArquivoResumo {
   /** eleição municipal: prefeitos ou vereadores eleitos por partido (no lugar da lista de eleitos por UF) */
   municipal?: boolean;
   bancadas?: [string, number][];
+  /** (como no ArquivoResultado) */
+  juntos?: Record<string, string>;
 }
 
 export type Arquivo = ArquivoResultado | ArquivoResumo;

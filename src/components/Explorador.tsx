@@ -381,11 +381,14 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
 
   // eleições antigas: município que votou junto com outro (mesma zona eleitoral) tem o próprio polígono com "z" = de quem
   // é o resultado; no mapa ele tem a mesma cor e é selecionado junto (o resultado conta uma vez só)
+  const juntosArquivo = (resultado.dados as { juntos?: Record<string, string> } | null)?.juntos;
   const juntoDe = useMemo(() => {
     const m = new Map<string, string>();
     for (const f of malha.dados?.municipios.features ?? []) if (f.properties?.z) m.set(String(f.id), String(f.properties.z));
+    // e os do cargo (scripts/juntos.py): votou junto neste cargo, mas tem resultado próprio em outro do ano
+    if (!porEstado) for (const [i, z] of Object.entries(juntosArquivo ?? {})) if (!m.has(i)) m.set(i, z);
     return m;
-  }, [malha.dados]);
+  }, [malha.dados, juntosArquivo, porEstado]);
   const juntosCom = useMemo(() => {
     const m = new Map<string, string[]>();
     for (const [i, z] of juntoDe) m.set(z, [...(m.get(z) ?? []), i]);
@@ -658,7 +661,7 @@ export default function Explorador({ ano, abr, cargo: cargoSlug }: { ano: number
         ) : null}
         {carregando ? <Carregando texto={`Carregando ${cargo.nome.toLowerCase()}, ${cid ? nomeCidade(cid) : nomeAbrangencia(abr)}…`} /> : null}
         <p className="creditos-mapa">
-          Malha: {porEstado && ano < 2002 ? 'limites estaduais da época (acervo Sigoli.TSE)' : 'IBGE'}{porEstado && ano < 2002 ? '' : cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1954 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
+          Malha: {porEstado && ano < 2002 ? 'limites estaduais da época (acervo Sigoli.TSE)' : ano < 1950 ? `municipal de ${ano < 1872 ? 1872 : 1940} (acervo Sigoli.TSE, municípios da época)` : 'IBGE'}{porEstado && ano < 2002 ? '' : ano < 1950 ? '' : cid && nivel === 'bairros' ? ' (bairros: Censo 2022)' : ano <= 1986 && ano >= 1950 ? ' (histórica, municípios da época)' : ' 2025'} · Resultados: {(resultado.dados && !resultado.dados.resumo && resultado.dados.fonte) || fonteDoAno(ano) || 'TSE'}
           {porEstado ? ' · Mapa por estado (resultado de cada estado inteiro)' : ''}
           {nivel === 'zonas' ? ' · Áreas das zonas aproximadas pelos locais de votação' : ''}
           {cid && nivel === 'bairros' ? ' · Círculos: bairros do cadastro do TSE, sem área no IBGE' : ''}

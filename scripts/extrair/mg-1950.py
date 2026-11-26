@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Presidente e Vice-Presidente 1950 em Minas Gerais, por zona eleitoral: quadros datilografados do TRE-MG do acervo
-("Resultados sobre o Brasil geral/1950 Presidente e Vice/", Presidente: Serviço de Controle do Eleitorado, 1978; Vice:
-6ª Seção, 1951, com os dados do Departamento Estadual de Estatística), transcritos em data/tre/fontes/mg-1950/
-(presidente.txt e vice.txt; cada linha confere: candidatos + brancos + nulos = comparecimento, e a soma das zonas = o total
-do estado do quadro).
+Presidente, Vice-Presidente e Governador 1950 em Minas Gerais, por zona eleitoral: quadros datilografados do TRE-MG do
+acervo ("Resultados sobre o Brasil geral/1950 Presidente e Vice/", Presidente: Serviço de Controle do Eleitorado, 1978;
+Vice: 6ª Seção, 1951, com os dados do Departamento Estadual de Estatística; Governador: "Mapas/MG/Resultados/1950.pdf"),
+transcritos em data/tre/fontes/mg-1950/ (presidente.txt, vice.txt e governador.txt; cada linha confere: candidatos +
+brancos + nulos = comparecimento, e a soma das zonas = o total do estado do quadro).
 - Zona = nome do município-sede; "=Fulano" = município que votou incluído em outra zona (vira grupo explícito).
 - Município de hoje sem polígono na malha de 1950 soma no polígono de 1950 onde fica a sede.
 - Os outros municípios de 1950 (sem zona própria) ficam com o vizinho que tem dado (agrupar "*;vizinho"): o quadro não
   diz que municípios formavam cada zona.
-Saída: data/tre/1950/mg-brasil.csv e data/malhas-historicas/agrupar/1950-mg.csv.
+Saída: data/tre/1950/mg-brasil.csv (Presidente e Vice), data/tre/1950/mg.csv (Governador) e data/malhas-historicas/agrupar/1950-mg.csv.
 Uso: python3 scripts/extrair/mg-1950.py
 """
 import collections, glob, gzip, json, os, sys
@@ -25,8 +25,9 @@ CANDS = {
     'presidente': [('CRISTIANO MACHADO', 'PSD'), ('EDUARDO GOMES', 'UDN'), ('GETÚLIO VARGAS', 'PTB'), ('JOÃO MANGABEIRA', 'PSB')],
     'vice-presidente': [('ALÍPIO CORREIA NETO', 'PSB'), ('ALTINO ARANTES', 'PSD'), ('CAFÉ FILHO', 'PSP'), ('ODILON BRAGA', 'UDN'),
                         ('VITORINO FREIRE', 'PST')],
+    'governador': [('GABRIEL DE RESENDE PASSOS', 'UDN'), ('JUSCELINO KUBITSCHEK', 'PSD')],
 }
-ELEITOS = {('presidente', '_GETULIOVARGAS'): 'S', ('vice-presidente', '_CAFEFILHO'): 'S'}
+ELEITOS = {('presidente', '_GETULIOVARGAS'): 'S', ('vice-presidente', '_CAFEFILHO'): 'S', ('governador', '_JUSCELINOKUBITSCHEK'): 'S'}
 
 malha = {}
 for ft in json.load(gzip.open('data/malhas-historicas/BR1950/mg.geojson.gz'))['features']:
@@ -61,7 +62,7 @@ def codigo(nome):
     return alvo
 
 linhas, grupos, conf = [], {}, {}
-for arq, cargo in (('presidente.txt', 'presidente'), ('vice.txt', 'vice-presidente')):
+for arq, cargo in (('presidente.txt', 'presidente'), ('vice.txt', 'vice-presidente'), ('governador.txt', 'governador')):
     n = len(CANDS[cargo]); sem_secoes = cargo == 'presidente'
     tot = collections.Counter()
     for l in open(os.path.join(FONTES, arq), encoding='utf8'):
@@ -81,8 +82,10 @@ for arq, cargo in (('presidente.txt', 'presidente'), ('vice.txt', 'vice-presiden
                    (cargo, 1, cod, '#comparecimento', '', '', sum(cand) + br + nu)]
         tot['#brancos'] += br; tot['#nulos'] += nu
     print(cargo, dict(tot))
-gravar('data/tre/1950/mg-brasil.csv', linhas, ELEITOS,
+gravar('data/tre/1950/mg-brasil.csv', [r for r in linhas if r[0] != 'governador'], ELEITOS,
        fonte='Acervo Sigoli.TSE, quadros do TRE-MG da eleição de 1950 para Presidente e Vice-Presidente (por zona eleitoral)')
+gravar('data/tre/1950/mg.csv', [r for r in linhas if r[0] == 'governador'], ELEITOS,
+       fonte='TRE-MG, quadro geral da eleição de 1950 para Governador do Estado (por zona eleitoral), do acervo Sigoli.TSE')
 with open('data/malhas-historicas/agrupar/1950-mg.csv', 'w') as f:
     f.write('ibge;sede\n*;vizinho\n' + ''.join(f'{k};{v}\n' for k, v in sorted(grupos.items())))
 print(len(grupos), 'municípios incluídos em outra zona;', len({r[2] for r in linhas}), 'zonas no mapa;', len(malha), 'polígonos em 1950')

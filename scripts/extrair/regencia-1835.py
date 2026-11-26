@@ -10,11 +10,12 @@ total, é ignorada: o total sai da soma). Cada eleitor votava em dois nomes, ent
   cor é por candidato, src/lib/cores.ts).
 - Sem comparecimento: cada eleitor votava em dois nomes e a planilha não diz quantos eleitores eram.
 - Colégio → município de hoje onde fica a vila (COLEGIOS); colégio que não deu para identificar fica só no total da
-  província. O município de hoje sem polígono na malha de 1950 soma no polígono de 1950 onde fica a sua sede.
+  província. O município de hoje sem polígono na malha de 1950 soma no polígono de 1950 onde fica a sua sede; depois,
+  scripts/dobrar-malha.py passa tudo para a malha municipal de 1872 do acervo (a mais antiga que há).
 - Províncias da época: o Paraná (Curitiba, Paranaguá, Castro) estava em São Paulo e o Amazonas no Pará; a cidade do Rio de
   Janeiro (Município Neutro, a Corte) vai à parte, como "df".
 Saída: data/tre/1835/{uf}-regencia.csv (por município, a UF de hoje do código do IBGE) e data/oficial/1835.csv (total de
-cada província e do Brasil, para o mapa por estado e o total). Depois: tre.py, presidente-br.py --cargo regente,
+cada província e do Brasil, para o mapa por estado e o total). Depois: tre.py, dobrar-malha.py, presidente-br.py --cargo regente,
 oficial.py, estados.py, malha-historica.mjs, estados-malha.py, pintam.mjs (todos com --ano 1835).
 Uso: python3 scripts/extrair/regencia-1835.py [--xlsx data/tre/fontes/1835/Eleição\\ Regencial\\ de\\ 1835.xlsx]
 """
@@ -173,9 +174,11 @@ UF = {'11': 'ro', '12': 'ac', '13': 'am', '14': 'rr', '15': 'pa', '16': 'ap', '1
       '25': 'pb', '26': 'pe', '27': 'al', '28': 'se', '29': 'ba', '31': 'mg', '32': 'es', '33': 'rj', '35': 'sp', '41': 'pr', '42': 'sc',
       '43': 'rs', '50': 'ms', '51': 'mt', '52': 'go', '53': 'df'}
 linhas = collections.defaultdict(list)
+EPOCA = {'ap': 'pa', 'to': 'go'}  # Macapá era do Pará e o norte de Goiás (TO) era Goiás: o arquivo é o da UF da malha de 1872
 for cod, v in sorted(por_mun.items()):
+    uf = EPOCA.get(UF[cod[:2]], UF[cod[:2]])
     for (n, p), x in zip(nomes, v):
-        linhas[UF[cod[:2]]].append(('regente', 1, cod, '_' + chave(n), n, p, x))
+        linhas[uf].append(('regente', 1, cod, '_' + chave(n), n, p, x))
 os.makedirs('data/tre/1835', exist_ok=True)
 for f in glob.glob('data/tre/1835/*-regencia.*'): os.remove(f)
 for uf, ls in sorted(linhas.items()):
